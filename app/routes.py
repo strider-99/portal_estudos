@@ -25,10 +25,24 @@ def admin_required(func):
         return func(*args, **kwargs)
     return wrapper
 
+# ---------- Healthcheck (Render usa HEAD /) ----------
+@bp.route("/health")
+def health():
+    # não toca no Mongo para passar liveness mesmo com DB fora
+    return jsonify({"status": "ok"}), 200
+
 # ---------- Páginas públicas ----------
 @bp.route("/")
 def index():
-    materias = list(mongo.db.materias.find())
+    try:
+        materias = list(mongo.db.materias.find())
+    except Exception as e:
+        # Falha de conexão Atlas (SSL, timeout) -> não derruba o deploy
+        current_app.logger.error(f"Mongo error em /: {e}")
+        # HEAD do Render deve retornar 200, não 500
+        if request.method == "HEAD":
+            return "", 200
+        return render_template("index.html", materias_por_area={}, progresso_map={}, mongo_error=str(e)), 503
     materias.sort(key=lambda m: extrair_modulo(m['titulo']) if 'Módulo' in m['titulo'] else 0)
     areas = set(m['area'] for m in materias if m['area'] != "outros") if materias else set()
     materias_por_area = {}
@@ -37,13 +51,20 @@ def index():
 
     progresso_map = {}
     if current_user.is_authenticated:
-        progresso_map = get_progresso_map(current_user.get_id())
+        try:
+            progresso_map = get_progresso_map(current_user.get_id())
+        except Exception:
+            progresso_map = {}
 
     return render_template("index.html", materias_por_area=materias_por_area, progresso_map=progresso_map)
 
 @bp.route("/materia/<slug>")
 def materia(slug):
-    materia = mongo.db.materias.find_one({"slug": slug})
+    try:
+        materia = mongo.db.materias.find_one({"slug": slug})
+    except Exception as e:
+        current_app.logger.error(f"Mongo error em /materia/{slug}: {e}")
+        return render_template("index.html", materias_por_area={}, progresso_map={}, mongo_error=f"Falha ao conectar no MongoDB: {e} - verifique MONGO_URI e IP allowlist no Atlas"), 503
     if not materia:
         abort(404)
     # Busca questões da coleção questoes (LMS) + fallback legado materias.questoes
