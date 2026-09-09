@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "A Administração de Materiais tem como objetivo principal:",
+    "alternativas": [
+      "a) Maximizar os lucros da empresa por meio da redução de impostos",
+      "b) Garantir o abastecimento adequado no momento certo e com o menor custo possível",
+      "c) Reduzir o quadro de funcionários do almoxarifado",
+      "d) Aumentar os preços de venda dos produtos finais",
+      "e) Centralizar todas as decisões no setor financeiro"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "A etapa inicial do processo de compras é:",
+    "alternativas": [
+      "a) Emissão do pedido",
+      "b) Negociação com fornecedores",
+      "c) Identificação da necessidade",
+      "d) Recebimento e conferência",
+      "e) Pagamento ao fornecedor"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "A requisição de compras é um documento que deve conter, entre outros itens:",
+    "alternativas": [
+      "a) Apenas o nome do fornecedor",
+      "b) A descrição do material, quantidade e justificativa",
+      "c) O valor total da nota fiscal",
+      "d) A data de entrega já confirmada pelo fornecedor",
+      "e) O número do contrato de trabalho do solicitante"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Na curva ABC, os itens da classe ________ representam alto valor e baixa quantidade, exigindo controle rigoroso.",
+    "alternativas": [
+      "a) A",
+      "b) B",
+      "c) C",
+      "d) D",
+      "e) E"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "O ponto de pedido é calculado com base em:",
+    "alternativas": [
+      "a) Estoque máximo + Estoque mínimo",
+      "b) (Consumo médio × Tempo de reposição) + Estoque de segurança",
+      "c) Vendas totais / Número de fornecedores",
+      "d) Custos fixos + Custos variáveis",
+      "e) Receita total – Despesas totais"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "O controle de validade e as condições de temperatura e umidade são práticas relacionadas à função de:",
+    "alternativas": [
+      "a) Compras",
+      "b) Requisição",
+      "c) Conservação",
+      "d) Reposição",
+      "e) Distribuição"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "O método que prioriza a utilização dos materiais mais antigos em estoque é conhecido como:",
+    "alternativas": [
+      "a) UEPS",
+      "b) PEPS",
+      "c) Curva ABC",
+      "d) Lote econômico",
+      "e) Just-in-time"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Atribuir localizações fixas (prateleiras, boxes) para facilitar a localização dos materiais é chamado de:",
+    "alternativas": [
+      "a) Endereçamento",
+      "b) Codificação",
+      "c) Classificação por valor",
+      "d) Layout funcional",
+      "e) Inventário"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "A verificação da qualidade e das especificações técnicas do material recebido é denominada conferência:",
+    "alternativas": [
+      "a) Quantitativa",
+      "b) Qualitativa",
+      "c) Fiscal",
+      "d) Contábil",
+      "e) Documental"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "O indicador que mede a frequência de renovação dos estoques em um período é o:",
+    "alternativas": [
+      "a) Ponto de pedido",
+      "b) Estoque mínimo",
+      "c) Giro de estoques",
+      "d) Lote econômico",
+      "e) Custo de armazenagem"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Na conferência de recebimento, a contagem física dos itens entregues corresponde à conferência:",
+    "alternativas": [
+      "a) Qualitativa",
+      "b) Documental",
+      "c) Quantitativa",
+      "d) Técnica",
+      "e) Ambiental"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Materiais inflamáveis, corrosivos ou tóxicos exigem, além dos cuidados normais, procedimentos especiais de:",
+    "alternativas": [
+      "a) Compra",
+      "b) Armazenagem e segurança",
+      "c) Negociação",
+      "d) Avaliação de desempenho",
+      "e) Marketing"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "O Lote Econômico de Compra (LEC) busca equilibrar:",
+    "alternativas": [
+      "a) Os custos de pedido e os custos de armazenagem",
+      "b) Os custos fixos e os custos variáveis",
+      "c) O preço de compra e o preço de venda",
+      "d) A quantidade em estoque e o número de fornecedores",
+      "e) O prazo de entrega e a qualidade do material"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre o processo de compras e assinale a sequência correta: ( ) A negociação com fornecedores ocorre antes da emissão do pedido de compra. ( ) A identificação da necessidade é a última etapa do ciclo de compras. ( ) O acompanhamento do pedido (follow-up) é dispensável se o fornecedor for confiável. ( ) O pagamento ao fornecedor encerra o processo de compras.",
+    "alternativas": [
+      "a) V – F – F – V",
+      "b) F – V – V – F",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre estoques e Curva ABC e assinale a sequência correta: ( ) O estoque de segurança serve para cobrir variações no consumo ou atrasos na entrega. ( ) Na Curva ABC, a classe C é a que merece o controle mais rigoroso. ( ) O estoque máximo é o limite superior que a empresa deseja manter. ( ) O giro de estoques é calculado dividindo o estoque médio pelo consumo total.",
+    "alternativas": [
+      "a) V – F – V – F",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "A codificação de materiais tem como principal finalidade:",
+    "alternativas": [
+      "a) Aumentar o custo dos produtos",
+      "b) Identificar de forma única cada item, facilitando o controle e a localização",
+      "c) Substituir a descrição dos materiais nos documentos fiscais",
+      "d) Reduzir o número de fornecedores",
+      "e) Classificar os materiais por cor"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "No setor público, a Lei 14.133/2021 regula as compras por meio de modalidades como:",
+    "alternativas": [
+      "a) Concorrência e Pregão",
+      "b) PEPS e UEPS",
+      "c) Curva ABC e Just-in-time",
+      "d) Lote econômico e ponto de pedido",
+      "e) Endereçamento e codificação"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "A requisição de compras, antes de ser enviada ao setor de compras, deve passar pela:",
+    "alternativas": [
+      "a) Aprovação do fornecedor",
+      "b) Aprovação hierárquica (chefia)",
+      "c) Conferência qualitativa",
+      "d) Emissão da nota fiscal",
+      "e) Cotação de preços"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "A obsolescência de um material ocorre quando ele:",
+    "alternativas": [
+      "a) É consumido rapidamente",
+      "b) Perde utilidade devido a avanços tecnológicos ou mudanças de processo",
+      "c) Tem seu preço reduzido no mercado",
+      "d) É transferido para outro almoxarifado",
+      "e) É adquirido em grande quantidade"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "O estoque mínimo (de segurança) tem a função de:",
+    "alternativas": [
+      "a) Aumentar o lucro da empresa",
+      "b) Cobrir imprevistos como atrasos de fornecedores ou aumento de consumo",
+      "c) Substituir o estoque máximo",
+      "d) Reduzir a necessidade de compras",
+      "e) Aumentar o giro de estoques"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre armazenagem e conservação e assinale a sequência correta: ( ) O layout do almoxarifado deve colocar os itens de maior rotatividade próximos à saída. ( ) O ponto de pedido dispensa o uso de estoque de segurança. ( ) A conferência qualitativa verifica se a quantidade entregue está correta. ( ) A manutenção preventiva de equipamentos evita acidentes e danos aos materiais.",
+    "alternativas": [
+      "a) V – F – F – V",
+      "b) F – V – V – F",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "O sistema de reposição que dispara a compra com base em intervalos de tempo fixos (ex.: a cada 30 dias) é chamado de:",
+    "alternativas": [
+      "a) Reposição contínua",
+      "b) Reposição periódica",
+      "c) Curva ABC",
+      "d) Lote econômico",
+      "e) PEPS"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "No processo de compras, a etapa de 'pesquisa e seleção de fornecedores' ocorre:",
+    "alternativas": [
+      "a) Após o recebimento do material",
+      "b) Antes da emissão do pedido de compra",
+      "c) Durante a conferência qualitativa",
+      "d) No momento do pagamento",
+      "e) Após a identificação da necessidade e antes da negociação"
+    ],
+    "gabarito": "E",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Administração de Materiais e assinale a sequência correta: ( ) O giro de estoques elevado indica que a empresa está vendendo ou consumindo rapidamente seus materiais. ( ) Na Curva ABC, a classe A deve ter o controle mais simplificado. ( ) A conservação de materiais envolve controle de validade, umidade e temperatura. ( ) O lote econômico de compra não considera os custos de armazenagem.",
+    "alternativas": [
+      "a) V – F – V – F",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "O método PEPS (Primeiro que Entra, Primeiro que Sai) é recomendado para:",
+    "alternativas": [
+      "a) Materiais com prazo de validade",
+      "b) Materiais de baixo custo",
+      "c) Materiais de alto valor",
+      "d) Materiais que não perdem a qualidade",
+      "e) Materiais de reposição automática"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "O recebimento de materiais deve incluir a conferência:",
+    "alternativas": [
+      "a) Apenas quantitativa",
+      "b) Apenas qualitativa",
+      "c) Quantitativa e qualitativa",
+      "d) Apenas documental",
+      "e) Apenas fiscal"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "A gestão de estoques na administração de materiais visa, EXCETO:",
+    "alternativas": [
+      "a) Garantir o abastecimento adequado",
+      "b) Minimizar custos de armazenagem",
+      "c) Evitar a falta de materiais",
+      "d) Aumentar o volume de estoque sem necessidade",
+      "e) Assegurar a qualidade e conservação"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "O tempo de reposição (lead time) é o período entre:",
+    "alternativas": [
+      "a) A emissão do pedido e o pagamento ao fornecedor",
+      "b) A emissão do pedido e o recebimento do material",
+      "c) O recebimento do material e a armazenagem",
+      "d) A identificação da necessidade e a emissão do pedido",
+      "e) O pagamento e a nota fiscal"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "A função de compras no setor público é regida pela Lei:",
+    "alternativas": [
+      "a) 14.133/2021",
+      "b) 8.080/90",
+      "c) 8.142/90",
+      "d) 10.741/2003",
+      "e) 13.146/2015"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "No processo de compras, o 'follow-up' refere-se ao(à):",
+    "alternativas": [
+      "a) Acompanhamento do pedido junto ao fornecedor",
+      "b) Pagamento ao fornecedor",
+      "c) Emissão da nota fiscal",
+      "d) Identificação da necessidade",
+      "e) Armazenamento do material"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_materiais"
+  }
+]

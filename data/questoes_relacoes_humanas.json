@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "O pesquisador responsável pelas experiências de Hawthorne, que deram origem à Teoria das Relações Humanas, foi:",
+    "alternativas": [
+      "a) Frederick Taylor",
+      "b) Henri Fayol",
+      "c) Elton Mayo",
+      "d) Max Weber",
+      "e) Peter Drucker"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "A diferença básica entre relações humanas e relações interpessoais é que:",
+    "alternativas": [
+      "a) As relações humanas ocorrem apenas no ambiente familiar, e as interpessoais no trabalho",
+      "b) As relações humanas são mais amplas e abrangem o contexto organizacional, enquanto as interpessoais focam no vínculo direto entre indivíduos",
+      "c) As relações interpessoais são estudadas apenas pela psicologia, e as humanas pela administração",
+      "d) Não há diferença; os termos são sinônimos",
+      "e) As relações humanas são sempre positivas, enquanto as interpessoais são sempre conflituosas"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "São barreiras à comunicação eficaz, EXCETO:",
+    "alternativas": [
+      "a) Ruídos",
+      "b) Filtros emocionais",
+      "c) Feedback construtivo",
+      "d) Percepções distorcidas",
+      "e) Uso de jargões"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "Sobre a escuta ativa, é correto afirmar que:",
+    "alternativas": [
+      "a) Consiste em interromper o falante para dar respostas rápidas",
+      "b) Envolve parafrasear o conteúdo para confirmar o entendimento",
+      "c) Dispensa contato visual, pois isso pode intimidar",
+      "d) É uma técnica usada apenas em psicoterapia",
+      "e) Prioriza a fala do ouvinte em detrimento da do emissor"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "O viés que leva uma pessoa a generalizar uma característica positiva para toda a personalidade de alguém é chamado de:",
+    "alternativas": [
+      "a) Efeito Halo",
+      "b) Profecia autorrealizável",
+      "c) Estereótipo",
+      "d) Efeito Hawthorne",
+      "e) Viés de confirmação"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "Segundo Daniel Goleman, o pilar que envolve a capacidade de compreender as emoções e perspectivas alheias é a:",
+    "alternativas": [
+      "a) Autoconsciência",
+      "b) Autocontrole",
+      "c) Automotivação",
+      "d) Empatia",
+      "e) Habilidade social"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "O estilo de gestão de conflitos caracterizado por alta assertividade e baixa cooperação, buscando vencer a qualquer custo, é o:",
+    "alternativas": [
+      "a) Colaborar",
+      "b) Comprometer",
+      "c) Competir",
+      "d) Evitar",
+      "e) Acomodar"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "O clima organizacional é influenciado, entre outros fatores, pelo(a):",
+    "alternativas": [
+      "a) Estilo de liderança e qualidade das relações interpessoais",
+      "b) Endividamento da empresa",
+      "c) Margem de lucro anual",
+      "d) Tecnologia utilizada na produção",
+      "e) Número de filiais da organização"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "O conceito de sinergia no trabalho em equipe significa que:",
+    "alternativas": [
+      "a) O resultado do grupo é igual à soma dos esforços individuais",
+      "b) O resultado do grupo é menor que a soma dos esforços individuais",
+      "c) O resultado do grupo é maior que a soma dos esforços individuais",
+      "d) Não existe relação entre esforço individual e resultado coletivo",
+      "e) A equipe deve evitar conflitos a todo custo"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "A comunicação não-verbal inclui, entre outros elementos:",
+    "alternativas": [
+      "a) Palavras escritas em relatórios",
+      "b) Tom de voz, expressões faciais e gestos",
+      "c) Apenas a comunicação por e-mail",
+      "d) Textos de contratos e manuais",
+      "e) Conversas formais em reuniões"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "As experiências de Hawthorne concluíram que:",
+    "alternativas": [
+      "a) A iluminação é o fator mais importante para a produtividade",
+      "b) Os fatores psicológicos e sociais têm grande impacto na produtividade",
+      "c) O pagamento por produção é o único motivador eficaz",
+      "d) A hierarquia rígida é essencial para o desempenho",
+      "e) A especialização do trabalho aumenta a satisfação"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "Um feedback eficaz deve ser:",
+    "alternativas": [
+      "a) Vago, para não constranger o colaborador",
+      "b) Específico, construtivo e tempestivo",
+      "c) Dado apenas em avaliações anuais",
+      "d) Focado exclusivamente em aspectos negativos",
+      "e) Feito em público para dar exemplo"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "Quando uma expectativa positiva faz com que uma pessoa se comporte de modo a confirmá-la, ocorre o fenômeno chamado de:",
+    "alternativas": [
+      "a) Efeito Halo",
+      "b) Profecia autorrealizável",
+      "c) Estereótipo",
+      "d) Percepção seletiva",
+      "e) Projeção"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre a Teoria das Relações Humanas e assinale a sequência correta: ( ) Surgiu como crítica à abordagem mecanicista da Teoria Clássica. ( ) O grupo informal não influencia o comportamento dos trabalhadores. ( ) O Efeito Hawthorne demonstrou que a atenção recebida melhora a produtividade. ( ) Elton Mayo foi o precursor da Teoria X e Y.",
+    "alternativas": [
+      "a) V – F – V – F",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Inteligência Emocional (Goleman) e assinale a sequência correta: ( ) A autoconsciência é a capacidade de reconhecer as próprias emoções. ( ) A empatia é um pilar que envolve apenas sentir pena do outro. ( ) As habilidades sociais incluem a capacidade de influenciar e liderar. ( ) O autocontrole refere-se a suprimir completamente as emoções.",
+    "alternativas": [
+      "a) V – F – V – F",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "O grupo que surge espontaneamente no ambiente de trabalho, baseado em amizades e afinidades, sem estar previsto no organograma, é chamado de:",
+    "alternativas": [
+      "a) Grupo formal",
+      "b) Grupo informal",
+      "c) Equipe de projeto",
+      "d) Comitê executivo",
+      "e) Departamento funcional"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "Assinale a alternativa que NÃO está diretamente relacionada à melhoria do clima organizacional:",
+    "alternativas": [
+      "a) Comunicação transparente",
+      "b) Reconhecimento de boas práticas",
+      "c) Aumento da carga horária sem justificativa",
+      "d) Estímulo ao trabalho colaborativo",
+      "e) Liderança participativa"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "A escuta ativa envolve, entre outras ações:",
+    "alternativas": [
+      "a) Interromper o falante para dar conselhos",
+      "b) Manter contato visual e fazer perguntas para esclarecer",
+      "c) Concordar com tudo que o outro diz para evitar conflitos",
+      "d) Falar mais do que ouvir",
+      "e) Mudar de assunto rapidamente"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "Para que uma equipe atinja a sinergia, é essencial que:",
+    "alternativas": [
+      "a) Todos tenham a mesma opinião sobre todos os assuntos",
+      "b) Os membros confiem uns nos outros e compartilhem objetivos comuns",
+      "c) O líder tome todas as decisões sozinho",
+      "d) Não haja nenhum tipo de conflito",
+      "e) As tarefas sejam realizadas individualmente e depois somadas"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "No contexto das relações interpessoais, assédio moral caracteriza-se por:",
+    "alternativas": [
+      "a) Conduta ética e respeitosa",
+      "b) Exposição de colaboradores a situações humilhantes e constrangedoras",
+      "c) Feedback construtivo para melhoria do desempenho",
+      "d) Competição saudável entre colegas",
+      "e) Estabelecimento de metas desafiadoras"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "A tendência a julgar os outros com base em características superficiais, como aparência ou sotaque, é um exemplo de:",
+    "alternativas": [
+      "a) Efeito Halo",
+      "b) Estereótipo",
+      "c) Profecia autorrealizável",
+      "d) Empatia",
+      "e) Comunicação não-violenta"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "Segundo a teoria das relações humanas, a produtividade é fortemente influenciada por:",
+    "alternativas": [
+      "a) Apenas pelo salário oferecido",
+      "b) Fatores emocionais, sociais e de reconhecimento",
+      "c) Exclusivamente pelas condições físicas do ambiente",
+      "d) Pela quantidade de horas trabalhadas",
+      "e) Pelo tamanho da organização"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "Sobre clima organizacional, analise as afirmativas e assinale a sequência correta: ( ) É a percepção compartilhada pelos colaboradores sobre o ambiente de trabalho. ( ) Não sofre influência do estilo de liderança. ( ) Um clima positivo reduz o absenteísmo. ( ) Políticas de reconhecimento podem melhorar o clima.",
+    "alternativas": [
+      "a) V – F – V – V",
+      "b) F – V – F – F",
+      "c) V – V – F – V",
+      "d) F – F – V – F",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "O conceito de 'homem social', que valoriza as relações e o reconhecimento no trabalho, é um dos pilares da:",
+    "alternativas": [
+      "a) Teoria Clássica da Administração",
+      "b) Teoria das Relações Humanas",
+      "c) Teoria da Burocracia",
+      "d) Administração Científica",
+      "e) Teoria Contingencial"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "A habilidade de reconhecer e gerenciar as próprias emoções, segundo a inteligência emocional, é chamada de:",
+    "alternativas": [
+      "a) Autoconsciência",
+      "b) Autocontrole",
+      "c) Automotivação",
+      "d) Empatia",
+      "e) Habilidade social"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "O estilo de gestão de conflitos que busca uma solução ganha-ganha, com alta assertividade e alta cooperação, é o:",
+    "alternativas": [
+      "a) Competir",
+      "b) Colaborar",
+      "c) Comprometer",
+      "d) Evitar",
+      "e) Acomodar"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "A comunicação que flui dos subordinados para os superiores, contendo sugestões e relatórios, é denominada:",
+    "alternativas": [
+      "a) Descendente",
+      "b) Ascendente",
+      "c) Horizontal",
+      "d) Diagonal",
+      "e) Informal"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "O princípio da Teoria das Relações Humanas que destaca a importância dos grupos informais na organização é:",
+    "alternativas": [
+      "a) A hierarquia rígida é essencial para a produtividade",
+      "b) O trabalhador é motivado apenas por incentivos financeiros",
+      "c) Os grupos informais exercem forte influência sobre o comportamento dos trabalhadores",
+      "d) A especialização do trabalho é o fator mais importante",
+      "e) A liderança autocrática é a mais eficaz"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "O feedback construtivo deve ser, EXCETO:",
+    "alternativas": [
+      "a) Baseado em fatos observáveis",
+      "b) Focado em melhoria",
+      "c) Tempestivo",
+      "d) Genérico e vago",
+      "e) Específico"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_relacoes_humanas"
+  },
+  {
+    "enunciado": "A teoria de Maslow, na hierarquia das necessidades, coloca como necessidade mais básica:",
+    "alternativas": [
+      "a) Autorrealização",
+      "b) Estima",
+      "c) Sociais",
+      "d) Segurança",
+      "e) Fisiológicas"
+    ],
+    "gabarito": "E",
+    "slug_materia": "apostila_relacoes_humanas"
+  }
+]

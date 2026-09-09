@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title %}{{ materia.titulo }}{% endblock %}
+
+{% block content %}
+<h2>{{ materia.titulo }}</h2>
+<p>{{ materia.subtitulo or '' }}</p>
+
+<div class="materia-actions">
+    {% if current_user.is_authenticated %}
+        <button id="btn-concluido" class="btn-concluido {% if concluida %}concluido{% endif %}" data-slug="{{ materia.slug }}">
+            {% if concluida %}✅ Concluída{% else %}☐ Marcar como concluída{% endif %}
+        </button>
+        <span id="concluido-msg" class="concluido-msg"></span>
+    {% else %}
+        <a href="{{ url_for('main.login') }}" class="btn-concluido secondary">🔒 Entre para salvar progresso</a>
+    {% endif %}
+
+    {% if current_user.is_authenticated and current_user.is_admin %}
+        <button id="btn-importar-open" class="btn-importar">📤 Importar Questões</button>
+    {% endif %}
+</div>
+
+<div id="book-container">
+    <div id="page-content"></div>
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn">⬅ Voltar</button>
+        <a href="{{ url_for('main.index') }}" class="nav-btn menu-btn">🏠 Menu</a>
+        <span class="page-indicator" id="pageIndicator">Página 1 de {{ materia.total_paginas or 1 }}</span>
+        <button class="nav-btn" id="nextBtn">Avançar ➡</button>
+    </div>
+</div>
+
+<script id="pages-data" type="application/json">
+    {{ materia.paginas | tojson }}
+</script>
+<script id="questoes-data" type="application/json">
+    {{ questoes | tojson }}
+</script>
+<script id="materia-slug" type="text/plain">{{ materia.slug }}</script>
+
+<!-- SEÇÃO DE QUESTÕES INTERATIVAS (última página apenas) -->
+<div id="questions-section" style="display: none;">
+    <hr>
+    <h2>📝 Responda às Questões</h2>
+    {% if questoes %}
+    <form id="quiz-form">
+        {% for questao in questoes %}
+        {% set q_index = loop.index %}
+        <div class="questao-item" data-gabarito="{{ questao.gabarito }}">
+            <p><b>{{ q_index }}.</b> {{ questao.enunciado }}</p>
+            <div class="alternativas">
+                {% for alt in questao.alternativas %}
+                {% set letra = "ABCDE"[loop.index0] if loop.index0 < 5 else loop.index0|string %}
+                <label>
+                    <input type="radio" name="q{{ q_index }}" value="{{ letra }}">
+                    {{ alt }}
+                </label><br>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+        <button type="button" id="corrigir-btn" class="btn-corrigir">✅ Corrigir</button>
+    </form>
+    <div id="resultado" style="display:none;"></div>
+    {% if historico_usuario %}
+    <div class="historico-mini">
+        <h4>📊 Suas últimas tentativas nesta matéria</h4>
+        <ul>
+        {% for h in historico_usuario %}
+            <li>{{ h.created_at.strftime('%d/%m %H:%M') if h.created_at else '' }} — {{ h.acertos }}/{{ h.total }} (Nota {{ h.nota }})</li>
+        {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    {% else %}
+    <p>Nenhuma questão cadastrada para esta matéria. {% if current_user.is_authenticated and current_user.is_admin %}Use o botão “Importar Questões”.{% endif %}</p>
+    {% endif %}
+</div>
+
+{% if current_user.is_authenticated and current_user.is_admin %}
+<!-- MODAL IMPORTAR QUESTÕES -->
+<div id="import-modal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="modal-close" id="import-modal-close">&times;</span>
+        <h3>📤 Importar Questões — {{ materia.titulo }}</h3>
+        <p>Envie um JSON no formato:</p>
+        <pre class="import-exemplo">[
+  {
+    "enunciado": "texto",
+    "alternativas": ["a) ...", "b) ...", "c) ...", "d) ...", "e) ..."],
+    "gabarito": "A",
+    "slug_materia": "{{ materia.slug }}"
+  }
+]</pre>
+        <p><small>Todas as questões existentes da matéria serão sobrescritas.</small></p>
+        <form id="import-form" enctype="multipart/form-data">
+            <input type="file" id="import-file" name="arquivo" accept=".json,application/json">
+            <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+        <div id="import-result" style="display:none; margin-top:15px;"></div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if current_user.is_authenticated and current_user.is_admin %}
+<script>
+window.IS_ADMIN = true;
+</script>
+{% endif %}
+{% endblock %}

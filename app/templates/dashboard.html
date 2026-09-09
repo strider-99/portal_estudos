@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - Portal{% endblock %}
+{% block content %}
+<h2>📊 Seu Dashboard</h2>
+
+<div class="dashboard-grid">
+  <div class="dash-card">
+    <h3>Progresso Geral</h3>
+    <div class="progress-bar"><div class="progress-fill" style="width: {{ progresso_geral_pct }}%"></div></div>
+    <p><b>{{ qtd_concluidas }}</b> de <b>{{ total_materias }}</b> concluídas — <b>{{ progresso_geral_pct }}%</b></p>
+  </div>
+  <div class="dash-card">
+    <h3>Matérias Estudadas</h3>
+    {% if materias_estudadas %}
+      <ul class="dash-list">
+      {% for m in materias_estudadas %}
+        <li>✅ <a href="{{ url_for('main.materia', slug=m.slug) }}">{{ m.titulo }}</a> <small>({{ m.area }})</small></li>
+      {% endfor %}
+      </ul>
+    {% else %}
+      <p>Nenhuma matéria concluída ainda. Clique em “Marcar como concluída” nas apostilas.</p>
+    {% endif %}
+  </div>
+</div>
+
+<h3>📈 Progresso por Área</h3>
+<div class="area-progress-grid">
+  {% for item in progresso_por_area %}
+  <div class="area-progress-card">
+    <h4>{{ item.area|capitalize }}</h4>
+    <div class="progress-bar small"><div class="progress-fill" style="width: {{ item.pct }}%"></div></div>
+    <p>{{ item.concluidas }}/{{ item.total }} — {{ item.pct }}%</p>
+  </div>
+  {% endfor %}
+</div>
+
+<h3>🧠 Histórico de Desempenho</h3>
+{% if historico %}
+<table class="historico-table">
+  <thead><tr><th>Data</th><th>Matéria</th><th>Acertos</th><th>Nota</th></tr></thead>
+  <tbody>
+  {% for h in historico %}
+    <tr>
+      <td>{{ h.created_at.strftime('%d/%m/%Y %H:%M') if h.created_at else '-' }}</td>
+      <td><a href="{{ url_for('main.materia', slug=h.slug_materia) }}">{{ h.titulo_materia }}</a></td>
+      <td>{{ h.acertos }}/{{ h.total }}</td>
+      <td><span class="badge-nota">{{ h.nota }}</span></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% else %}
+  <p>Nenhuma tentativa registrada. Responda as questões na última página de uma matéria.</p>
+{% endif %}
+
+{% endblock %}

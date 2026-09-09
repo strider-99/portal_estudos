@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "O princípio arquivístico que determina que os documentos de um mesmo arquivo não podem ser misturados aos de outros é o da:",
+    "alternativas": [
+      "a) Organicidade",
+      "b) Proveniência",
+      "c) Indivisibilidade",
+      "d) Autenticidade",
+      "e) Cumulatividade"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O arquivo que guarda documentos com uso menos frequente, aguardando prescrição ou destinação final, é o:",
+    "alternativas": [
+      "a) Arquivo corrente",
+      "b) Arquivo intermediário",
+      "c) Arquivo permanente",
+      "d) Arquivo especial",
+      "e) Arquivo privado"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "A fase do arquivamento que consiste em atribuir um código ou assunto com base no plano de classificação é a:",
+    "alternativas": [
+      "a) Recepção",
+      "b) Ordenação",
+      "c) Classificação",
+      "d) Acondicionamento",
+      "e) Destinação"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O método de arquivamento que utiliza a ordem alfabética diretamente (sem necessidade de índice) é o:",
+    "alternativas": [
+      "a) Numérico",
+      "b) Dígito-terminal",
+      "c) Geográfico",
+      "d) Alfabético",
+      "e) Unitermo"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "Segundo as regras de ordenação alfabética, o nome 'Ana Paula de Oliveira' deve ser ordenado por:",
+    "alternativas": [
+      "a) Ana Paula",
+      "b) Oliveira, Ana Paula de",
+      "c) Paula, Ana de Oliveira",
+      "d) De Oliveira, Ana Paula",
+      "e) Ana, Paula de Oliveira"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O sistema de arquivamento que utiliza um índice para localizar o documento, como o numérico, é classificado como:",
+    "alternativas": [
+      "a) Direto",
+      "b) Indireto",
+      "c) Aberto",
+      "d) Fechado",
+      "e) Variável"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "Os documentos cartográficos, filmográficos e sonoros são classificados em arquivos do tipo:",
+    "alternativas": [
+      "a) Textual",
+      "b) Especial",
+      "c) Corrente",
+      "d) Intermediário",
+      "e) Privado"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "A transferência de um documento do arquivo intermediário para o arquivo permanente é chamada de:",
+    "alternativas": [
+      "a) Eliminação",
+      "b) Recolhimento",
+      "c) Empréstimo",
+      "d) Classificação",
+      "e) Ordenação"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O método dígito-terminal é uma variação do sistema de arquivamento:",
+    "alternativas": [
+      "a) Alfabético",
+      "b) Geográfico",
+      "c) Numérico",
+      "d) Ideográfico",
+      "e) Unitermo"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "A Tabela de Temporalidade e Destinação de Documentos define, entre outros itens:",
+    "alternativas": [
+      "a) O valor monetário dos documentos",
+      "b) Os prazos de guarda e a destinação final (eliminação ou recolhimento)",
+      "c) O tipo de suporte a ser utilizado",
+      "d) A cor das pastas de arquivo",
+      "e) O nome dos funcionários do arquivo"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O princípio que estabelece que os documentos refletem a estrutura e as funções da entidade que os produziu é o da:",
+    "alternativas": [
+      "a) Proveniência",
+      "b) Organicidade",
+      "c) Indivisibilidade",
+      "d) Autenticidade",
+      "e) Cumulatividade"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "A ordenação por país, estado, cidade e bairro é característica do método:",
+    "alternativas": [
+      "a) Alfabético",
+      "b) Numérico",
+      "c) Geográfico",
+      "d) Cronológico",
+      "e) Mnemônico"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "A etapa de preparação do documento para guarda (pastas, caixas, encadernação) é a:",
+    "alternativas": [
+      "a) Classificação",
+      "b) Ordenação",
+      "c) Acondicionamento",
+      "d) Arquivamento",
+      "e) Destinação"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre princípios e tipos de arquivo e assinale a sequência correta: ( ) O princípio da proveniência determina que cada arquivo deve ser mantido separado. ( ) O arquivo corrente guarda documentos de valor histórico permanente. ( ) O arquivo intermediário recebe documentos com uso menos frequente. ( ) A organicidade refere-se à capacidade de o documento ser autêntico.",
+    "alternativas": [
+      "a) V – F – V – F",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O método de arquivamento que utiliza códigos fáceis de lembrar, como siglas, é o:",
+    "alternativas": [
+      "a) Unitermo",
+      "b) Numérico",
+      "c) Mnemônico",
+      "d) Geográfico",
+      "e) Alfabético"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O Arquivo Nacional e os arquivos estaduais são exemplos de arquivos:",
+    "alternativas": [
+      "a) Privados",
+      "b) Públicos",
+      "c) Especiais",
+      "d) Intermediários",
+      "e) Correntes"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "Na ordenação alfabética de nomes compostos, a preposição 'da' ou 'de':",
+    "alternativas": [
+      "a) Deve ser considerada como primeiro elemento",
+      "b) Não é considerada para fins de ordenação",
+      "c) É sempre colocada no final",
+      "d) É substituída por um número",
+      "e) Deve ser mantida inalterada"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O instrumento que define os prazos de guarda e a destinação final dos documentos é a:",
+    "alternativas": [
+      "a) Tabela de Temporalidade e Destinação (TTDD)",
+      "b) Plano de Classificação",
+      "c) Código de Ética",
+      "d) Lei de Acesso à Informação",
+      "e) Portaria Ministerial"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre arquivo e assinale a sequência correta: ( ) O princípio da indivisibilidade determina que os documentos de um fundo devem ser mantidos juntos. ( ) O arquivo intermediário é também chamado de arquivo histórico. ( ) A classificação é a fase em que se atribui um código ao documento. ( ) O método alfabético é um sistema indireto.",
+    "alternativas": [
+      "a) V – F – V – F",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "Os arquivos que guardam documentos em suportes como filmes, fitas e fotografias são chamados de:",
+    "alternativas": [
+      "a) Arquivos correntes",
+      "b) Arquivos intermediários",
+      "c) Arquivos especiais",
+      "d) Arquivos permanentes",
+      "e) Arquivos privados"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O método que agrupa documentos por temas ou assuntos, exigindo um dicionário de indexação, é o:",
+    "alternativas": [
+      "a) Alfabético",
+      "b) Numérico",
+      "c) Geográfico",
+      "d) Ideográfico",
+      "e) Mnemônico"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "A saída temporária de um documento para consulta, com controle de devolução, ocorre na fase de:",
+    "alternativas": [
+      "a) Classificação",
+      "b) Ordenação",
+      "c) Guarda",
+      "d) Consulta/Empréstimo",
+      "e) Destinação"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre arquivo e assinale a sequência correta: ( ) O princípio da proveniência é também conhecido como 'respeito aos fundos'. ( ) O arquivo corrente é utilizado para documentos de consulta diária. ( ) O método numérico é um sistema direto de arquivamento. ( ) A Tabela de Temporalidade determina o prazo de guarda e a destinação final.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O método de arquivamento que utiliza palavras-chave para indexar documentos, permitindo múltiplas entradas, é o:",
+    "alternativas": [
+      "a) Unitermo",
+      "b) Numérico",
+      "c) Geográfico",
+      "d) Ideográfico",
+      "e) Alfabético"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "A fase do arquivamento em que o documento é colocado fisicamente no local adequado é a:",
+    "alternativas": [
+      "a) Classificação",
+      "b) Ordenação",
+      "c) Acondicionamento",
+      "d) Arquivamento / Guarda",
+      "e) Destinação"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O sistema de arquivamento que permite a consulta direta, sem necessidade de índice, é chamado de:",
+    "alternativas": [
+      "a) Direto",
+      "b) Indireto",
+      "c) Aberto",
+      "d) Fechado",
+      "e) Variável"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "A ordenação por data (do mais antigo para o mais recente) é característica do método:",
+    "alternativas": [
+      "a) Alfabético",
+      "b) Numérico",
+      "c) Geográfico",
+      "d) Cronológico",
+      "e) Mnemônico"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O arquivo que guarda documentos de valor histórico, probatório ou informativo, com preservação indefinida, é o:",
+    "alternativas": [
+      "a) Arquivo corrente",
+      "b) Arquivo intermediário",
+      "c) Arquivo permanente",
+      "d) Arquivo especial",
+      "e) Arquivo privado"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "A etapa de decisão final sobre o documento (eliminação ou recolhimento) é a:",
+    "alternativas": [
+      "a) Classificação",
+      "b) Ordenação",
+      "c) Acondicionamento",
+      "d) Arquivamento",
+      "e) Destinação"
+    ],
+    "gabarito": "E",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O método que combina letras e números (ex.: A1, A2, B1, B2) é o:",
+    "alternativas": [
+      "a) Alfabético",
+      "b) Numérico",
+      "c) Geográfico",
+      "d) Alfanumérico",
+      "e) Mnemônico"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_arquivo"
+  }
+]

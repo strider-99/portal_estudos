@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Início - Portal de Estudos{% endblock %}
+
+{% block content %}
+<h2>📖 Nossas Disciplinas</h2>
+
+<!-- Barra de pesquisa e filtros -->
+<div class="filtros">
+    <input type="text" id="search-input" placeholder="🔍 Pesquisar matéria..." class="search-input">
+    <div class="filtros-areas">
+        <button class="filtro-btn active" data-area="all">📚 Todas</button>
+        <button class="filtro-btn" data-area="administracao">📊 Administração</button>
+        <button class="filtro-btn" data-area="portugues">📝 Português</button>
+        <button class="filtro-btn" data-area="sus">⚖️ SUS</button>
+    </div>
+</div>
+
+{% if materias_por_area %}
+    {% for area, materias in materias_por_area.items() %}
+        <section class="area-section" data-area="{{ area }}">
+            <h3>{{ area|capitalize }}</h3>
+            <div class="card-grid">
+                {% for materia in materias %}
+                {% set prog = progresso_map.get(materia.slug) if progresso_map else None %}
+                <div class="card card-area-{{ materia.area }}" data-area="{{ materia.area }}">
+                    <div class="icon">{{ materia.icone or '📄' }}</div>
+                    <h4>{{ materia.titulo }}</h4>
+                    {% if prog and prog.concluida %}
+                        <span class="badge-concluida">✅ Concluída</span>
+                    {% endif %}
+                    {% if prog and prog.ultima_nota is defined %}
+                        <small class="nota-preview">Nota: {{ prog.ultima_nota }}/10</small>
+                    {% endif %}
+                    <a href="{{ url_for('main.materia', slug=materia.slug) }}" class="btn-abrir">📂 Acessar</a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    {% endfor %}
+{% else %}
+    <p>Nenhuma matéria cadastrada ainda. Execute o script de importação.</p>
+    <p><small>Dica: verifique se o banco MongoDB está populado e se a consulta está retornando dados.</small></p>
+{% endif %}
+{% endblock %}

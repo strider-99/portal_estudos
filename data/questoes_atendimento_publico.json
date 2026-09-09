@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "Atendimento de excelência significa, principalmente:",
+    "alternativas": [
+      "a) Atender rapidamente, mesmo que não resolva o problema",
+      "b) Superar as expectativas do cidadão, oferecendo uma experiência resolutiva e positiva",
+      "c) Falar apenas o necessário, sem dar muitas informações",
+      "d) Ser educado apenas com cidadãos bem vestidos",
+      "e) Transferir o cidadão para outro setor o mais rápido possível"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "São pilares do atendimento de qualidade, EXCETO:",
+    "alternativas": [
+      "a) Resolutividade",
+      "b) Cortesia e Urbanidade",
+      "c) Impessoalidade total (tratar todos como números)",
+      "d) Clareza na comunicação",
+      "e) Empatia"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "A escuta ativa envolve, entre outras ações:",
+    "alternativas": [
+      "a) Interromper o cidadão para dar a resposta rapidamente",
+      "b) Parafrasear o conteúdo para confirmar o entendimento",
+      "c) Falar mais do que ouvir",
+      "d) Manter-se em silêncio absoluto sem qualquer reação",
+      "e) Concordar com tudo que o cidadão diz"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "Ao atender um cidadão na recepção, a primeira etapa correta é:",
+    "alternativas": [
+      "a) Perguntar o que ele quer sem cumprimentar",
+      "b) Receber com sorriso e saudação cordial, perguntando como pode ajudar",
+      "c) Pedir para ele preencher um formulário sem olhar para ele",
+      "d) Falar ao telefone enquanto o atende",
+      "e) Encaminhar imediatamente para outro setor"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "Ao atender uma ligação, a primeira ação correta é:",
+    "alternativas": [
+      "a) Dizer 'Alô' e esperar",
+      "b) Identificar-se com o nome do setor e do atendente",
+      "c) Colocar o cidadão em espera imediatamente",
+      "d) Perguntar quem está falando antes de se identificar",
+      "e) Transferir a ligação sem explicação"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "Ao lidar com um cidadão irritado, a atitude recomendada é:",
+    "alternativas": [
+      "a) Discutir para provar que você está certo",
+      "b) Ouvir sem interromper, demonstrar empatia e focar na solução",
+      "c) Desligar o telefone ou ignorar o cidadão",
+      "d) Falar mais alto que o cidadão",
+      "e) Pedir para ele se acalmar de forma autoritária"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "A habilidade de controlar as próprias emoções, especialmente em situações de estresse, é chamada de:",
+    "alternativas": [
+      "a) Proatividade",
+      "b) Flexibilidade",
+      "c) Inteligência Emocional",
+      "d) Ética",
+      "e) Comunicação não verbal"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "A Lei 13.460/2017, que trata da defesa do usuário dos serviços públicos, está relacionada diretamente à qualidade do atendimento e é conhecida como:",
+    "alternativas": [
+      "a) Código de Defesa do Usuário dos Serviços Públicos",
+      "b) Lei de Responsabilidade Fiscal",
+      "c) Lei de Acesso à Informação",
+      "d) Código de Ética do Servidor",
+      "e) Lei Geral de Proteção de Dados"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "A tríade do atendimento é composta pelas dimensões:",
+    "alternativas": [
+      "a) Técnica, Comportamental e Ambiental",
+      "b) Econômica, Social e Ambiental",
+      "c) Formal, Informal e Estrutural",
+      "d) Cognitiva, Afetiva e Motora",
+      "e) Planejamento, Execução e Controle"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "Colocar um cidadão em espera ao telefone exige que o atendente:",
+    "alternativas": [
+      "a) Faça isso sem avisar, para ganhar tempo",
+      "b) Peça licença, explique o motivo e retorne em tempo razoável",
+      "c) Deixe-o esperando por mais de 5 minutos sem retorno",
+      "d) Transfira a ligação enquanto ele está em espera",
+      "e) Nunca coloque ninguém em espera"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "Na etapa de despedida do atendimento presencial, é recomendado:",
+    "alternativas": [
+      "a) Encerrar a conversa abruptamente",
+      "b) Agradecer, perguntar se há mais alguma necessidade e encerrar de forma cordial",
+      "c) Dar as costas ao cidadão imediatamente",
+      "d) Ignorar o que foi falado",
+      "e) Falar sobre assuntos pessoais"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "A técnica de repetir com outras palavras o que o cidadão disse para confirmar o entendimento é chamada de:",
+    "alternativas": [
+      "a) Paráfrase",
+      "b) Projeção",
+      "c) Subjetivação",
+      "d) Escuta passiva",
+      "e) Comunicação vertical"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "No serviço público, a excelência no atendimento está diretamente vinculada ao princípio constitucional da:",
+    "alternativas": [
+      "a) Legalidade",
+      "b) Impessoalidade",
+      "c) Moralidade",
+      "d) Eficiência",
+      "e) Publicidade"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre os pilares do atendimento e assinale a sequência correta: ( ) A resolutividade é mais importante do que a cortesia no atendimento, pois o cidadão quer resultados. ( ) A comunicação não verbal (postura, sorriso) é irrelevante no atendimento presencial. ( ) A escuta ativa envolve não interromper o cidadão e fazer perguntas para esclarecer. ( ) A proatividade significa antecipar necessidades e buscar soluções.",
+    "alternativas": [
+      "a) V – F – V – V",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre atendimento telefônico e assinale a sequência correta: ( ) No atendimento telefônico, o tom de voz é um dos principais elementos de comunicação. ( ) Pode-se transferir uma ligação sem explicar ao cidadão para agilizar o atendimento. ( ) Prometer retorno e não cumprir é uma prática que prejudica a imagem da organização. ( ) Ao atender, deve-se falar rapidamente para não tomar muito tempo do cidadão.",
+    "alternativas": [
+      "a) V – F – V – F",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "A habilidade de se adaptar a diferentes perfis de cidadãos e situações imprevistas é a:",
+    "alternativas": [
+      "a) Proatividade",
+      "b) Flexibilidade",
+      "c) Inteligência Emocional",
+      "d) Comunicação assertiva",
+      "e) Ética"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "Ao atender um cidadão na recepção, o atendente deve evitar:",
+    "alternativas": [
+      "a) Manter contato visual",
+      "b) Usar o celular durante o atendimento",
+      "c) Falar com clareza",
+      "d) Demonstrar empatia",
+      "e) Manter postura ereta"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "O atendente deve atender a ligação em até:",
+    "alternativas": [
+      "a) 1 toque",
+      "b) 3 toques",
+      "c) 5 toques",
+      "d) 10 toques",
+      "e) Qualquer número de toques"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "A dimensão ambiental do atendimento refere-se a:",
+    "alternativas": [
+      "a) Conhecimento técnico do atendente",
+      "b) Condições físicas do local (limpeza, conforto, sinalização)",
+      "c) Habilidade de comunicação",
+      "d) Capacidade de ouvir",
+      "e) Inteligência emocional"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre atendimento e assinale a sequência correta: ( ) A empatia é fundamental para estabelecer uma conexão positiva com o cidadão. ( ) A agilidade no atendimento justifica a falta de cortesia. ( ) O sigilo das informações do cidadão é um dever ético do atendente. ( ) No serviço público, o atendente deve tratar todos os cidadãos com igualdade.",
+    "alternativas": [
+      "a) V – F – V – V",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "A técnica que consiste em oferecer ao cidadão duas ou mais alternativas de solução é recomendada para:",
+    "alternativas": [
+      "a) Aumentar a confusão",
+      "b) Dar poder de escolha ao cidadão e facilitar a resolução",
+      "c) Evitar resolver o problema",
+      "d) Demonstrar autoridade",
+      "e) Reduzir o tempo de atendimento"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "O princípio da eficiência, previsto na CF/88, exige que o atendente:",
+    "alternativas": [
+      "a) Atue com rapidez, qualidade e resolutividade",
+      "b) Siga estritamente a lei, mesmo que o atendimento seja prejudicado",
+      "c) Priorize apenas os cidadãos mais educados",
+      "d) Trabalhe apenas o horário mínimo",
+      "e) Ignore as reclamações dos cidadãos"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre etiqueta telefônica e assinale a sequência correta: ( ) Comer ou mascar chiclete durante uma ligação é aceitável, pois o cidadão não vê. ( ) O atendente deve evitar o uso de gírias e expressões informais demais. ( ) Deixar o cidadão em espera por mais de 5 minutos sem retorno é uma boa prática. ( ) Ao transferir a ligação, o atendente deve explicar o motivo ao cidadão.",
+    "alternativas": [
+      "a) F – V – F – V",
+      "b) V – F – V – F",
+      "c) F – V – V – F",
+      "d) V – V – F – V",
+      "e) F – F – V – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Atendimento ao Público e assinale a sequência correta: ( ) A escuta ativa é uma técnica que consiste em ouvir com atenção e confirmar o entendimento. ( ) No atendimento presencial, a postura corporal e o sorriso são irrelevantes. ( ) A Lei 13.460/2017 estabelece direitos dos usuários dos serviços públicos. ( ) A resolutividade é a capacidade de resolver o problema do cidadão.",
+    "alternativas": [
+      "a) V – F – V – V",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "A primeira impressão no atendimento presencial é formada por:",
+    "alternativas": [
+      "a) Apenas pela fala do atendente",
+      "b) Ambiente, aparência do atendente e sua postura",
+      "c) Apenas pelo uniforme",
+      "d) Apenas pela sinalização do local",
+      "e) Apenas pelo tempo de espera"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "A comunicação não verbal no atendimento presencial inclui:",
+    "alternativas": [
+      "a) Apenas a fala",
+      "b) Postura, expressão facial, gestos e contato visual",
+      "c) Apenas o sorriso",
+      "d) Apenas a vestimenta",
+      "e) Apenas a altura do atendente"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "No atendimento telefônico, a comunicação é exclusivamente:",
+    "alternativas": [
+      "a) Verbal",
+      "b) Não verbal",
+      "c) Visual",
+      "d) Gestual",
+      "e) Escrita"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "A técnica dos 3 passos para lidar com reclamações é:",
+    "alternativas": [
+      "a) Ignorar, transferir e encerrar",
+      "b) Ouvir, validar e oferecer solução",
+      "c) Discutir, provar e vencer",
+      "d) Anotar, arquivar e esquecer",
+      "e) Encaminhar, delegar e desligar"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "A postura profissional no atendimento presencial inclui, EXCETO:",
+    "alternativas": [
+      "a) Manter contato visual",
+      "b) Falar com clareza e educação",
+      "c) Usar roupas informais e desleixadas",
+      "d) Demonstrar empatia",
+      "e) Manter postura ereta"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_atendimento_publico"
+  },
+  {
+    "enunciado": "O sigilo das informações do cidadão é um dever ético do atendente, pois:",
+    "alternativas": [
+      "a) Protege a imagem da organização",
+      "b) Garante a privacidade e a confiança do cidadão",
+      "c) Aumenta a burocracia",
+      "d) Reduz o tempo de atendimento",
+      "e) Facilita a transferência de ligações"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_atendimento_publico"
+  }
+]

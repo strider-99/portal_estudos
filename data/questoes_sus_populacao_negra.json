@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "A Política Nacional de Saúde Integral da População Negra (PNSIPN) foi instituída pela:",
+    "alternativas": [
+      "a) Lei 8.080/90",
+      "b) Portaria nº 992/GM/MS, de 13 de maio de 2009",
+      "c) Portaria nº 2.836/2011",
+      "d) Lei 10.741/2003",
+      "e) Portaria nº 230/2023"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "O objetivo geral da PNSIPN é:",
+    "alternativas": [
+      "a) Promover a saúde integral da população negra, priorizando a redução das desigualdades étnico-raciais",
+      "b) Garantir o acesso da população negra apenas à atenção básica",
+      "c) Combater o racismo exclusivamente nos hospitais públicos",
+      "d) Promover a saúde da população negra apenas em áreas urbanas",
+      "e) Reduzir a morbimortalidade infantil da população negra"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN reconhece como determinantes sociais das condições de saúde da população negra:",
+    "alternativas": [
+      "a) Apenas fatores genéticos",
+      "b) O racismo, as desigualdades étnico-raciais e o racismo institucional",
+      "c) Apenas as condições econômicas",
+      "d) Apenas a localização geográfica",
+      "e) Apenas o nível de escolaridade"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "São diretrizes da PNSIPN, EXCETO:",
+    "alternativas": [
+      "a) Inclusão dos temas Racismo e Saúde da População Negra na formação dos trabalhadores",
+      "b) Ampliação da participação do Movimento Social Negro no controle social",
+      "c) Incentivo à produção do conhecimento científico em saúde da população negra",
+      "d) Centralização das ações no Ministério da Saúde",
+      "e) Desenvolvimento de processos de informação e comunicação que desconstruam estigmas"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "É um objetivo específico da PNSIPN:",
+    "alternativas": [
+      "a) Garantir o acesso da população negra apenas a medicamentos",
+      "b) Incluir o quesito cor em todos os instrumentos de coleta de dados do SUS",
+      "c) Reduzir o número de profissionais negros na saúde",
+      "d) Centralizar as decisões sobre saúde da população negra no nível federal",
+      "e) Excluir a população quilombola do acesso ao SUS"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN prevê a garantia de acesso à saúde para a população negra:",
+    "alternativas": [
+      "a) Apenas em áreas urbanas",
+      "b) Em áreas urbanas, do campo e da floresta, com destaque para quilombolas",
+      "c) Apenas em áreas rurais",
+      "d) Apenas para a população quilombola",
+      "e) Apenas para a população jovem"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "Um dos objetivos específicos da PNSIPN é aprimorar os sistemas de informação em saúde por meio da:",
+    "alternativas": [
+      "a) Exclusão do quesito cor",
+      "b) Inclusão do quesito cor em todos os instrumentos de coleta de dados",
+      "c) Centralização dos dados no Ministério da Saúde",
+      "d) Redução do número de sistemas de informação",
+      "e) Eliminação dos dados desagregados por raça"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN está embasada nos seguintes princípios constitucionais, EXCETO:",
+    "alternativas": [
+      "a) Cidadania",
+      "b) Dignidade da pessoa humana",
+      "c) Repúdio ao racismo",
+      "d) Promoção do bem de todos, sem preconceitos",
+      "e) Centralização administrativa"
+    ],
+    "gabarito": "E",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "Entre as estratégias da PNSIPN, destaca-se o fortalecimento da atenção à saúde mental de:",
+    "alternativas": [
+      "a) Apenas crianças negras",
+      "b) Apenas idosos negros",
+      "c) Mulheres e homens negros, em especial aqueles com transtornos decorrentes do uso de álcool e outras drogas",
+      "d) Apenas adolescentes negros",
+      "e) Apenas mulheres negras"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN estabelece ações específicas para a redução das disparidades étnico-raciais em diversas condições de saúde, EXCETO:",
+    "alternativas": [
+      "a) Doença falciforme",
+      "b) DST/HIV/aids",
+      "c) Tuberculose",
+      "d) Hanseníase",
+      "e) Diabetes tipo 2"
+    ],
+    "gabarito": "E",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "O Comitê Técnico de Saúde da População Negra foi instituído pelo Ministério da Saúde por meio da Portaria:",
+    "alternativas": [
+      "a) nº 1.678/GM, de 13 de agosto de 2004",
+      "b) nº 992/GM/MS, de 13 de maio de 2009",
+      "c) nº 2.836, de 1º de dezembro de 2011",
+      "d) nº 230, de 7 de março de 2023",
+      "e) nº 1.526, de 11 de outubro de 2023"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "O Programa Brasil Quilombola foi criado pelo Decreto nº 4.887, de 20 de novembro de:",
+    "alternativas": [
+      "a) 1988",
+      "b) 2003",
+      "c) 2009",
+      "d) 2011",
+      "e) 2015"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN prevê a ampliação e o fortalecimento da participação do Movimento Social Negro nas instâncias de:",
+    "alternativas": [
+      "a) Controle social das políticas de saúde",
+      "b) Apenas na gestão financeira do SUS",
+      "c) Apenas na elaboração de orçamentos",
+      "d) Apenas na fiscalização de contratos",
+      "e) Apenas na nomeação de gestores"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre a PNSIPN e assinale a sequência correta: ( ) A PNSIPN reconhece o racismo como determinante social da saúde. ( ) A política prevê a inclusão do quesito cor nos sistemas de informação do SUS. ( ) A PNSIPN é restrita à atenção básica. ( ) A política incentiva a produção de conhecimento científico sobre saúde da população negra.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN prevê o fortalecimento da atenção à saúde da mulher negra em todas as fases do ciclo da vida. Essa afirmação é:",
+    "alternativas": [
+      "a) Verdadeira, pois a política prevê ações específicas para a mulher negra",
+      "b) Falsa, pois a política não contempla a saúde da mulher negra",
+      "c) Verdadeira, mas apenas para mulheres em idade fértil",
+      "d) Falsa, pois a política é restrita à atenção básica",
+      "e) Verdadeira, mas apenas para mulheres grávidas"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN prevê a criação de Núcleos de Prevenção à Violência e Promoção da Saúde. Essa afirmação é:",
+    "alternativas": [
+      "a) Verdadeira, pois a política prevê esse dispositivo",
+      "b) Falsa, pois a política não prevê esse dispositivo",
+      "c) Verdadeira, mas apenas para mulheres",
+      "d) Falsa, pois a política é restrita à atenção básica",
+      "e) Verdadeira, mas apenas para crianças"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN está fundamentada no princípio da equidade, que significa:",
+    "alternativas": [
+      "a) Tratar todos de forma idêntica",
+      "b) Reconhecer as desigualdades e agir estrategicamente para superá-las",
+      "c) Ignorar as diferenças raciais",
+      "d) Centralizar as ações no nível federal",
+      "e) Reduzir o acesso da população negra aos serviços de saúde"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN prevê o combate a situações de abuso, exploração e violência, incluindo:",
+    "alternativas": [
+      "a) Assédio moral no ambiente de trabalho",
+      "b) Apenas violência física",
+      "c) Apenas violência sexual",
+      "d) Apenas violência psicológica",
+      "e) Apenas violência patrimonial"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN prevê a melhoria dos sistemas de informação do SUS com dados desagregados por:",
+    "alternativas": [
+      "a) Raça, cor e etnia",
+      "b) Apenas idade",
+      "c) Apenas gênero",
+      "d) Apenas escolaridade",
+      "e) Apenas renda"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN prevê a inclusão das demandas específicas da população negra nos processos de regulação do:",
+    "alternativas": [
+      "a) Sistema de saúde suplementar",
+      "b) Sistema de previdência social",
+      "c) Sistema de assistência social",
+      "d) Sistema de educação",
+      "e) Sistema de segurança pública"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN prevê o monitoramento e a avaliação das mudanças na cultura institucional para garantir princípios:",
+    "alternativas": [
+      "a) Antirracistas e não discriminatórios",
+      "b) Apenas de eficiência",
+      "c) Apenas de economicidade",
+      "d) Apenas de transparência",
+      "e) Apenas de legalidade"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre a PNSIPN e assinale a sequência correta: ( ) A PNSIPN foi aprovada pelo Conselho Nacional de Saúde (CNS). ( ) A política foi pactuada na Comissão Intergestores Tripartite (CIT). ( ) A PNSIPN não prevê a participação do Movimento Social Negro. ( ) A política incentiva o reconhecimento dos saberes e práticas populares de saúde.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN prevê o fortalecimento da atenção à saúde integral da população negra em todas as fases do ciclo da vida, incluindo:",
+    "alternativas": [
+      "a) Jovens, adolescentes e adultos em conflito com a lei",
+      "b) Apenas crianças",
+      "c) Apenas idosos",
+      "d) Apenas mulheres",
+      "e) Apenas homens"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN prevê a definição e pactuação, junto às três esferas de governo, de:",
+    "alternativas": [
+      "a) Indicadores e metas para a promoção da equidade étnico-racial na saúde",
+      "b) Apenas indicadores financeiros",
+      "c) Apenas metas de redução de custos",
+      "d) Apenas indicadores de produção",
+      "e) Apenas metas de contratação"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN prevê o incentivo à organização de redes integradas de atenção às mulheres negras em situação de:",
+    "alternativas": [
+      "a) Violência sexual, doméstica e intrafamiliar",
+      "b) Apenas violência sexual",
+      "c) Apenas violência doméstica",
+      "d) Apenas violência intrafamiliar",
+      "e) Apenas violência no trabalho"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "Analise as afirmativas finais sobre a PNSIPN e assinale a sequência correta: ( ) A PNSIPN foi instituída pela Portaria 992/2009. ( ) O objetivo geral da política é promover a saúde integral da população negra. ( ) A política reconhece o racismo como determinante social da saúde. ( ) A PNSIPN não prevê a inclusão do quesito cor nos sistemas de informação.",
+    "alternativas": [
+      "a) V – V – V – F",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – F – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN foi instituída pela Portaria nº 992/GM/MS, de 13 de maio de 2009. Essa portaria foi publicada pelo:",
+    "alternativas": [
+      "a) Ministério da Saúde",
+      "b) Conselho Nacional de Saúde",
+      "c) Ministério da Igualdade Racial",
+      "d) Secretaria de Atenção à Saúde",
+      "e) Agência Nacional de Vigilância Sanitária"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN estabelece ações específicas para a redução das disparidades étnico-raciais em condições de saúde como a doença falciforme. A doença falciforme é:",
+    "alternativas": [
+      "a) Uma doença genética que afeta principalmente a população negra",
+      "b) Uma doença infecciosa que afeta a população em geral",
+      "c) Uma doença crônica não transmissível",
+      "d) Uma doença que afeta apenas a população branca",
+      "e) Uma doença que não tem relação com a raça"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN prevê a implementação de ações de combate ao racismo institucional e redução das iniquidades raciais, com metas específicas no:",
+    "alternativas": [
+      "a) Plano Nacional de Saúde",
+      "b) Plano Plurianual (PPA)",
+      "c) Lei de Diretrizes Orçamentárias (LDO)",
+      "d) Plano de Carreira dos Servidores",
+      "e) Estatuto da Igualdade Racial"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_populacao_negra"
+  },
+  {
+    "enunciado": "A PNSIPN prevê a qualificação e humanização da atenção à saúde da mulher negra, com ênfase em:",
+    "alternativas": [
+      "a) Apenas no ciclo gravídico-puerperal",
+      "b) Todas as fases do ciclo da vida",
+      "c) Apenas no climatério",
+      "d) Apenas na adolescência",
+      "e) Apenas na terceira idade"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_populacao_negra"
+  }
+]

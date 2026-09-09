@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "O Programa Nacional de Equidade de Gênero, Raça e Valorização das Trabalhadoras no SUS foi instituído pela:",
+    "alternativas": [
+      "a) Portaria GM/MS nº 230, de 7 de março de 2023",
+      "b) Portaria nº 2.836/2011",
+      "c) Lei 8.080/90",
+      "d) Portaria nº 992/2009",
+      "e) Lei 13.146/2015"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O objetivo geral do Programa é:",
+    "alternativas": [
+      "a) Promover a equidade de gênero e raça no SUS, modificando as estruturas machista e racista",
+      "b) Garantir o acesso da população negra aos serviços de saúde",
+      "c) Combater a discriminação contra a população LGBT",
+      "d) Promover a saúde da mulher",
+      "e) Reduzir a mortalidade infantil"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "É um objetivo específico do Programa, segundo o Art. 2º da Portaria 230/2023:",
+    "alternativas": [
+      "a) Fortalecer a participação das mulheres em cargos de liderança no SUS",
+      "b) Excluir as mulheres dos cargos de gestão",
+      "c) Reduzir o número de trabalhadoras negras no SUS",
+      "d) Centralizar as ações no nível federal",
+      "e) Eliminar a participação social"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "São princípios do Programa, EXCETO:",
+    "alternativas": [
+      "a) Equidade",
+      "b) Interseccionalidade",
+      "c) Participação Social",
+      "d) Centralização das decisões",
+      "e) Valorização do Trabalho"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Eixo 1 do Programa trata da:",
+    "alternativas": [
+      "a) Valorização das Trabalhadoras",
+      "b) Produção de Conhecimento",
+      "c) Monitoramento e Avaliação",
+      "d) Enfrentamento das Violências",
+      "e) Articulação Intersetorial"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Eixo 2 do Programa trata do:",
+    "alternativas": [
+      "a) Enfrentamento das Violências de Gênero e Raça",
+      "b) Valorização das Trabalhadoras",
+      "c) Produção de Conhecimento",
+      "d) Monitoramento e Avaliação",
+      "e) Articulação Intersetorial"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Programa tem como público-alvo prioritário:",
+    "alternativas": [
+      "a) Mulheres trabalhadoras do SUS, especialmente as negras, indígenas e de outros grupos étnico-raciais",
+      "b) Apenas os homens trabalhadores do SUS",
+      "c) Apenas as mulheres brancas",
+      "d) Apenas os gestores do SUS",
+      "e) Apenas os usuários do SUS"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Programa reconhece a existência de estruturas que operam na divisão do trabalho na saúde, EXCETO:",
+    "alternativas": [
+      "a) Machista",
+      "b) Racista",
+      "c) Igualitária",
+      "d) Discriminatória",
+      "e) Sexista"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Eixo 3 do Programa trata da:",
+    "alternativas": [
+      "a) Produção de Conhecimento e Formação",
+      "b) Valorização das Trabalhadoras",
+      "c) Enfrentamento das Violências",
+      "d) Monitoramento e Avaliação",
+      "e) Articulação Intersetorial"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Eixo 4 do Programa trata do:",
+    "alternativas": [
+      "a) Monitoramento e Avaliação",
+      "b) Valorização das Trabalhadoras",
+      "c) Enfrentamento das Violências",
+      "d) Produção de Conhecimento",
+      "e) Articulação Intersetorial"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Programa se articula com as seguintes políticas, EXCETO:",
+    "alternativas": [
+      "a) Política Nacional de Saúde Integral da População Negra",
+      "b) Política Nacional de Saúde Integral LGBT",
+      "c) HumanizaSUS",
+      "d) Política Nacional de Atenção Básica",
+      "e) Política Nacional de Saúde Mental"
+    ],
+    "gabarito": "E",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Programa prevê a produção de dados desagregados por:",
+    "alternativas": [
+      "a) Sexo, raça/cor e ocupação",
+      "b) Apenas sexo",
+      "c) Apenas raça/cor",
+      "d) Apenas ocupação",
+      "e) Apenas idade"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O princípio da interseccionalidade, no Programa, reconhece que:",
+    "alternativas": [
+      "a) As opressões de gênero, raça, classe e outras se cruzam, gerando desigualdades específicas",
+      "b) As desigualdades de gênero e raça são independentes",
+      "c) Apenas a raça é relevante para a equidade",
+      "d) Apenas o gênero é relevante para a equidade",
+      "e) As desigualdades não se relacionam"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre o Programa e assinale a sequência correta: ( ) A Portaria 230/2023 institui o Programa Nacional de Equidade de Gênero, Raça e Valorização das Trabalhadoras no SUS. ( ) O Programa tem como objetivo modificar as estruturas machista e racista no SUS. ( ) O Programa não prevê o enfrentamento do assédio moral e sexual. ( ) A valorização das trabalhadoras é um objetivo do Programa.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O princípio da equidade, no Programa, significa:",
+    "alternativas": [
+      "a) Reconhecer as desigualdades históricas e agir para superá-las",
+      "b) Tratar todos de forma idêntica",
+      "c) Ignorar as diferenças de gênero e raça",
+      "d) Centralizar as ações no nível federal",
+      "e) Reduzir o acesso das mulheres aos serviços de saúde"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Programa prevê o enfrentamento de violências, incluindo:",
+    "alternativas": [
+      "a) Assédio moral e sexual",
+      "b) Apenas assédio moral",
+      "c) Apenas assédio sexual",
+      "d) Apenas discriminação racial",
+      "e) Apenas violência física"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Programa tem abrangência:",
+    "alternativas": [
+      "a) Nacional",
+      "b) Apenas federal",
+      "c) Apenas estadual",
+      "d) Apenas municipal",
+      "e) Apenas regional"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Programa prevê a participação social por meio do envolvimento de:",
+    "alternativas": [
+      "a) Conselhos de Saúde e movimentos sociais",
+      "b) Apenas Conselhos de Saúde",
+      "c) Apenas movimentos sociais",
+      "d) Apenas Ouvidorias",
+      "e) Apenas Sindicatos"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Programa reconhece que a divisão do trabalho na saúde é marcada por estruturas:",
+    "alternativas": [
+      "a) Machista e racista",
+      "b) Igualitária e democrática",
+      "c) Apenas machista",
+      "d) Apenas racista",
+      "e) Apenas classista"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre o Programa e assinale a sequência correta: ( ) O Programa foi instituído pela Portaria 230/2023. ( ) O Programa tem como objetivo modificar as estruturas machista e racista. ( ) O Programa não prevê a valorização das trabalhadoras. ( ) O Programa prevê a produção de dados desagregados por sexo, raça/cor e ocupação.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O princípio da interseccionalidade reconhece que as opressões de gênero e raça:",
+    "alternativas": [
+      "a) Se cruzam, gerando desigualdades específicas",
+      "b) São independentes",
+      "c) Não se relacionam",
+      "d) São exclusivas do ambiente de trabalho",
+      "e) São exclusivas do SUS"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Programa prevê a qualificação das trabalhadoras do SUS, com especial atenção a:",
+    "alternativas": [
+      "a) Mulheres negras, indígenas e de outros grupos étnico-raciais",
+      "b) Apenas mulheres negras",
+      "c) Apenas mulheres indígenas",
+      "d) Apenas mulheres brancas",
+      "e) Apenas homens"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Programa prevê a inclusão da temática de gênero, raça e equidade nos processos de:",
+    "alternativas": [
+      "a) Formação e educação permanente",
+      "b) Apenas na formação inicial",
+      "c) Apenas na educação continuada",
+      "d) Apenas na pós-graduação",
+      "e) Apenas nos cursos técnicos"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "Analise as afirmativas finais sobre o Programa e assinale a sequência correta: ( ) O Programa Nacional de Equidade de Gênero, Raça e Valorização das Trabalhadoras no SUS foi instituído pela Portaria 230/2023. ( ) O Programa tem como objetivo promover a equidade de gênero e raça no SUS. ( ) O Programa prevê o enfrentamento do assédio moral e sexual. ( ) O Programa não prevê a produção de dados desagregados por raça/cor.",
+    "alternativas": [
+      "a) V – V – V – F",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – F – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "A Portaria 230/2023 foi publicada em:",
+    "alternativas": [
+      "a) 7 de março de 2023",
+      "b) 13 de maio de 2009",
+      "c) 1º de dezembro de 2011",
+      "d) 6 de julho de 2015",
+      "e) 11 de outubro de 2023"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Programa Nacional de Equidade de Gênero, Raça e Valorização das Trabalhadoras no SUS foi instituído pelo:",
+    "alternativas": [
+      "a) Ministério da Saúde",
+      "b) Conselho Nacional de Saúde",
+      "c) Ministério da Mulher, da Família e dos Direitos Humanos",
+      "d) Secretaria de Atenção à Saúde",
+      "e) Agência Nacional de Vigilância Sanitária"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Programa prevê o fortalecimento da participação das mulheres em cargos de liderança, gestão e direção no SUS. Essa afirmação é:",
+    "alternativas": [
+      "a) Verdadeira, pois é um objetivo específico do Programa",
+      "b) Falsa, pois o Programa não prevê esse fortalecimento",
+      "c) Verdadeira, mas apenas para mulheres brancas",
+      "d) Falsa, pois o Programa é restrito à atenção básica",
+      "e) Verdadeira, mas apenas para mulheres negras"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Programa prevê a promoção da valorização e qualificação das trabalhadoras do SUS, especialmente as mulheres negras, indígenas e de outros grupos étnico-raciais. Essa afirmação é:",
+    "alternativas": [
+      "a) Verdadeira, pois é um objetivo específico do Programa",
+      "b) Falsa, pois o Programa não prevê essa qualificação",
+      "c) Verdadeira, mas apenas para mulheres negras",
+      "d) Falsa, pois o Programa é restrito à atenção básica",
+      "e) Verdadeira, mas apenas para mulheres indígenas"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Programa prevê o enfrentamento do assédio moral e sexual, da discriminação e outras violências de gênero e raça no ambiente de trabalho. Essa afirmação é:",
+    "alternativas": [
+      "a) Verdadeira, pois é um objetivo específico do Programa",
+      "b) Falsa, pois o Programa não prevê esse enfrentamento",
+      "c) Verdadeira, mas apenas para o assédio moral",
+      "d) Falsa, pois o Programa é restrito à atenção básica",
+      "e) Verdadeira, mas apenas para o assédio sexual"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  },
+  {
+    "enunciado": "O Programa prevê a produção de dados desagregados por sexo, raça/cor e ocupação nos sistemas de informação do SUS. Essa afirmação é:",
+    "alternativas": [
+      "a) Verdadeira, pois é um objetivo específico do Programa",
+      "b) Falsa, pois o Programa não prevê essa produção",
+      "c) Verdadeira, mas apenas para sexo",
+      "d) Falsa, pois o Programa é restrito à atenção básica",
+      "e) Verdadeira, mas apenas para raça/cor"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_equidade_genero_raca"
+  }
+]

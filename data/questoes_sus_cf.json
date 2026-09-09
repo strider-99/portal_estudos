@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "O Art. 196 da Constituição Federal estabelece que a saúde é:",
+    "alternativas": [
+      "a) Direito de todos e dever do Estado",
+      "b) Direito apenas dos cidadãos que contribuem para a previdência",
+      "c) Dever exclusivo da família e da sociedade",
+      "d) Direito condicionado à disponibilidade orçamentária",
+      "e) Um serviço essencial, mas não obrigatório"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "O Art. 196 garante o acesso universal e igualitário às ações e serviços de saúde, o que significa que:",
+    "alternativas": [
+      "a) Apenas os brasileiros natos têm direito à saúde",
+      "b) Todos têm direito à saúde, sem discriminação",
+      "c) O acesso à saúde é restrito a quem paga impostos",
+      "d) O sistema de saúde é exclusivamente privado",
+      "e) Apenas os trabalhadores formais têm direito à saúde"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "O Art. 197 da CF/88 estabelece que as ações e serviços de saúde são de:",
+    "alternativas": [
+      "a) Interesse privado",
+      "b) Relevância pública",
+      "c) Competência exclusiva da União",
+      "d) Dever da sociedade civil",
+      "e) Natureza comercial"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "Segundo o Art. 197, a execução das ações e serviços de saúde pode ser feita:",
+    "alternativas": [
+      "a) Apenas pelo Poder Público",
+      "b) Apenas pela iniciativa privada",
+      "c) Diretamente pelo Estado ou por terceiros, inclusive pessoa física ou jurídica de direito privado",
+      "d) Apenas por hospitais filantrópicos",
+      "e) Exclusivamente por meio de convênios internacionais"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "O Art. 198 estabelece que as ações e serviços públicos de saúde integram uma rede:",
+    "alternativas": [
+      "a) Centralizada e verticalizada",
+      "b) Regionalizada e hierarquizada",
+      "c) Descentralizada e horizontalizada",
+      "d) Municipalizada e estadualizada",
+      "e) Federalizada e privada"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "São diretrizes do SUS, segundo o Art. 198, EXCETO:",
+    "alternativas": [
+      "a) Descentralização",
+      "b) Atendimento integral",
+      "c) Participação da comunidade",
+      "d) Centralização político-administrativa",
+      "e) Regionalização e hierarquização"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "O Art. 199 estabelece que a assistência à saúde é:",
+    "alternativas": [
+      "a) Exclusiva do Poder Público",
+      "b) Livre à iniciativa privada",
+      "c) Vedada à iniciativa privada",
+      "d) Restrita a entidades filantrópicas",
+      "e) Proibida para empresas com fins lucrativos"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "Segundo o § 1º do Art. 199, as instituições privadas poderão participar do SUS de forma:",
+    "alternativas": [
+      "a) Substitutiva",
+      "b) Complementar",
+      "c) Exclusiva",
+      "d) Prioritária",
+      "e) Obrigatória"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "O § 2º do Art. 199 veda a destinação de recursos públicos para auxílio ou subvenção a:",
+    "alternativas": [
+      "a) Instituições filantrópicas",
+      "b) Instituições privadas com fins lucrativos",
+      "c) Hospitais universitários",
+      "d) Santas Casas de Misericórdia",
+      "e) Organizações não governamentais"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "De acordo com o Art. 200, compete ao SUS, entre outras atribuições:",
+    "alternativas": [
+      "a) Administrar o sistema prisional",
+      "b) Executar ações de vigilância sanitária e epidemiológica",
+      "c) Regular o comércio exterior",
+      "d) Controlar a produção de armas",
+      "e) Gerir o sistema de previdência social"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "O Art. 200, inciso VI, atribui ao SUS a competência para fiscalizar e inspecionar:",
+    "alternativas": [
+      "a) Medicamentos e vacinas",
+      "b) Alimentos, bebidas e águas para consumo humano",
+      "c) Equipamentos hospitalares",
+      "d) Produtos químicos",
+      "e) Materiais de construção"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "A descentralização do SUS, prevista no Art. 198, significa que:",
+    "alternativas": [
+      "a) A União centraliza todas as decisões",
+      "b) As ações de saúde são executadas prioritariamente pelos municípios",
+      "c) Os estados têm competência exclusiva",
+      "d) A iniciativa privada assume a gestão",
+      "e) O Ministério da Saúde não tem atribuições"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "O inciso VIII do Art. 200 estabelece que o SUS deve colaborar na proteção do:",
+    "alternativas": [
+      "a) Meio ambiente",
+      "b) Patrimônio histórico",
+      "c) Patrimônio cultural",
+      "d) Sistema financeiro",
+      "e) Mercado de trabalho"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre os Arts. 196 e 197 e assinale a sequência correta: ( ) O Art. 196 estabelece que a saúde é direito de todos e dever do Estado. ( ) O Art. 197 considera as ações de saúde como de relevância pública. ( ) A execução das ações de saúde, segundo o Art. 197, só pode ser feita pelo Estado. ( ) O acesso universal e igualitário é garantido pelo Art. 196.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "A participação complementar da iniciativa privada no SUS, segundo o Art. 199, deve ser feita mediante:",
+    "alternativas": [
+      "a) Contrato de direito público ou convênio",
+      "b) Contrato de direito privado",
+      "c) Apenas por meio de doações",
+      "d) Por meio de parcerias internacionais",
+      "e) Apenas por meio de filantropia"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "A diretriz da descentralização do SUS, prevista no Art. 198, implica que:",
+    "alternativas": [
+      "a) O Ministério da Saúde executa todas as ações",
+      "b) Os municípios são os principais executores das ações de saúde",
+      "c) Os estados têm direção única sobre os municípios",
+      "d) A União não tem nenhuma atribuição",
+      "e) A iniciativa privada substitui o Estado"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "O Art. 196 menciona que a saúde é garantida mediante políticas sociais e econômicas que visem à redução do risco de doença. Isso significa que:",
+    "alternativas": [
+      "a) A saúde depende apenas de ações médicas",
+      "b) Fatores como saneamento, alimentação e trabalho influenciam a saúde",
+      "c) O Estado não tem responsabilidade sobre os determinantes sociais da saúde",
+      "d) A saúde é uma questão exclusivamente biológica",
+      "e) As políticas de saúde são restritas ao atendimento hospitalar"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "O inciso VII do Art. 200 confere ao SUS a competência para controlar:",
+    "alternativas": [
+      "a) A produção, a comercialização e a utilização de produtos, substâncias e equipamentos de interesse para a saúde",
+      "b) A importação de veículos",
+      "c) A produção de armas de fogo",
+      "d) O comércio de bens de consumo não duráveis",
+      "e) A exploração de recursos minerais"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre os Arts. 198 e 199 e assinale a sequência correta: ( ) O Art. 198 estabelece a descentralização como diretriz do SUS. ( ) O Art. 199 veda totalmente a participação da iniciativa privada na saúde. ( ) O atendimento integral, segundo o Art. 198, prioriza as atividades preventivas. ( ) A participação da comunidade é uma diretriz do SUS, segundo o Art. 198.",
+    "alternativas": [
+      "a) V – F – V – V",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "Segundo o § 3º do Art. 199, as instituições privadas que participarem do SUS deverão obedecer aos seus:",
+    "alternativas": [
+      "a) Princípios e diretrizes",
+      "b) Apenas às regras de faturamento",
+      "c) Apenas às regras de contratação",
+      "d) Apenas às regras de auditoria",
+      "e) Apenas às regras de licitação"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "O atendimento integral, previsto no Art. 198, combina ações:",
+    "alternativas": [
+      "a) Preventivas e curativas",
+      "b) Apenas curativas",
+      "c) Apenas preventivas",
+      "d) Apenas de reabilitação",
+      "e) Apenas de promoção"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "O inciso III do Art. 200 estabelece que o SUS deve ordenar a formação de:",
+    "alternativas": [
+      "a) Recursos humanos na área de saúde",
+      "b) Recursos financeiros",
+      "c) Equipamentos hospitalares",
+      "d) Medicamentos essenciais",
+      "e) Políticas de saneamento"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre o Art. 200 e assinale a sequência correta: ( ) Compete ao SUS controlar e fiscalizar produtos e substâncias de interesse para a saúde. ( ) O SUS deve ordenar a formação de recursos humanos na área de saúde. ( ) O SUS não tem competência para atuar em saneamento básico. ( ) O SUS deve fiscalizar e inspecionar alimentos e águas para consumo humano.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre a Constituição Federal e o SUS e assinale a sequência correta: ( ) O Art. 196 estabelece o direito à saúde como um direito social fundamental. ( ) O Art. 199 permite a atuação da iniciativa privada na saúde de forma complementar. ( ) O Art. 198 prevê a centralização como diretriz do SUS. ( ) O Art. 200 inclui a vigilância sanitária como competência do SUS.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "O Art. 196 estabelece que a saúde é garantida mediante políticas sociais e econômicas que visem à redução do risco de doença. Isso está diretamente relacionado ao conceito de:",
+    "alternativas": [
+      "a) Determinantes sociais da saúde",
+      "b) Atenção primária à saúde",
+      "c) Vigilância sanitária",
+      "d) Saúde suplementar",
+      "e) Medicina preventiva"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "A participação da comunidade, prevista no Art. 198, é exercida por meio de:",
+    "alternativas": [
+      "a) Conselhos de Saúde e Conferências de Saúde",
+      "b) Secretarias Municipais de Saúde",
+      "c) Ministério da Saúde",
+      "d) Agências Reguladoras",
+      "e) Tribunais de Contas"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "O Art. 199, § 1º, estabelece que as instituições privadas com fins lucrativos:",
+    "alternativas": [
+      "a) Têm preferência na participação no SUS",
+      "b) Não podem receber recursos públicos para auxílio ou subvenção",
+      "c) Podem participar do SUS mediante contrato de direito público",
+      "d) Estão proibidas de atuar na saúde",
+      "e) São obrigadas a atuar como filantrópicas"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "O Art. 200, inciso II, estabelece que o SUS deve executar ações de vigilância:",
+    "alternativas": [
+      "a) Sanitária e epidemiológica",
+      "b) Ambiental e do trabalhador",
+      "c) Nutricional e farmacológica",
+      "d) Social e comunitária",
+      "e) Educacional e cultural"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "A diretriz da regionalização do SUS, prevista no Art. 198, organiza os serviços de saúde em níveis de complexidade, sendo a porta de entrada do SUS geralmente a:",
+    "alternativas": [
+      "a) Atenção Primária à Saúde (APS)",
+      "b) Urgência e emergência",
+      "c) Atenção hospitalar",
+      "d) Atenção domiciliar",
+      "e) Serviços de reabilitação"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_cf"
+  },
+  {
+    "enunciado": "Analise as afirmativas finais sobre a Constituição e o SUS e assinale a sequência correta: ( ) O Art. 196 estabelece que a saúde é dever do Estado e direito de todos. ( ) O Art. 198 prevê a participação da comunidade como diretriz do SUS. ( ) O Art. 199 veda a participação da iniciativa privada na saúde. ( ) O Art. 200 inclui a vigilância epidemiológica como competência do SUS.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_cf"
+  }
+]

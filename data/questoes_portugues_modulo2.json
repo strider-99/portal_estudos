@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "Com o Novo Acordo Ortográfico, o trema (¨) foi:",
+    "alternativas": [
+      "a) Mantido em todas as palavras",
+      "b) Abolido nas palavras da língua portuguesa, permanecendo em nomes próprios e estrangeirismos",
+      "c) Substituído pelo acento agudo",
+      "d) Mantido apenas nos verbos",
+      "e) Eliminado completamente"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "Assinale a palavra que é acentuada pela regra das paroxítonas:",
+    "alternativas": [
+      "a) Café",
+      "b) Médico",
+      "c) Tórax",
+      "d) Ninguém",
+      "e) Amém"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "As palavras 'sessão', 'seção' e 'cessão' são exemplos de:",
+    "alternativas": [
+      "a) Parônimos",
+      "b) Homônimos homófonos",
+      "c) Homônimos homógrafos",
+      "d) Polissêmicos",
+      "e) Sinônimos"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "'O juiz deve _______ a sentença' e 'O réu precisa _______ a acusação'. As palavras que completam corretamente as lacunas são, respectivamente:",
+    "alternativas": [
+      "a) Retificar / Ratificar",
+      "b) Ratificar / Retificar",
+      "c) Retificar / Retificar",
+      "d) Ratificar / Ratificar",
+      "e) Ratificar / Retificar"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "A palavra 'ponto' pode significar: sinal gráfico, local, momento, costura, etc. Esse fenômeno é chamado de:",
+    "alternativas": [
+      "a) Homonímia",
+      "b) Paronímia",
+      "c) Polissemia",
+      "d) Sinonímia",
+      "e) Antonímia"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "Assinale a alternativa em que todas as palavras estão corretamente grafadas:",
+    "alternativas": [
+      "a) Exceção, ascenção, compreensão",
+      "b) Exceção, ascensão, compreensão",
+      "c) Exceção, ascensão, compreção",
+      "d) Exceção, ascenção, compreção",
+      "e) Excesão, ascensão, compreensão"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "A palavra 'herói', segundo o Novo Acordo Ortográfico, é acentuada porque:",
+    "alternativas": [
+      "a) É proparoxítona",
+      "b) É oxítona terminada em 'i'",
+      "c) É paroxítona terminada em ditongo aberto",
+      "d) É oxítona terminada em ditongo aberto (ói)",
+      "e) Não é acentuada"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "'Ele foi à ______ da empresa' e 'A ______ do documento é de 10 páginas'. As palavras que preenchem corretamente as lacunas são:",
+    "alternativas": [
+      "a) Sede / sede",
+      "b) Sede / cede",
+      "c) Sede / seção",
+      "d) Seção / sessão",
+      "e) Cessão / seção"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "Assinale a alternativa em que todas as palavras estão corretamente acentuadas:",
+    "alternativas": [
+      "a) Pólen, hífen, tórax, ônus",
+      "b) Pólen, hifen, torax, onus",
+      "c) Polen, hífen, torax, ônus",
+      "d) Polen, hifen, torax, onus",
+      "e) Pólen, hífen, tórax, onus"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "O trânsito intenso nas grandes cidades é chamado de:",
+    "alternativas": [
+      "a) Tráfico",
+      "b) Tráfego",
+      "c) Tráfico de pessoas",
+      "d) Tráfego de drogas",
+      "e) Tráfego de influência"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "A palavra 'banco' é polissêmica. Qual dos significados abaixo NÃO está relacionado à mesma raiz semântica de 'banco' (assento)?",
+    "alternativas": [
+      "a) Instituição financeira",
+      "b) Assento de praça",
+      "c) Conjunto de peixes",
+      "d) Reservatório de sangue",
+      "e) Base de apoio"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "A palavra 'compreensão' é grafada com 'SS' porque:",
+    "alternativas": [
+      "a) Deriva de um verbo terminado em -der",
+      "b) Deriva de um verbo terminado em -ter",
+      "c) Deriva de um verbo terminado em -ver",
+      "d) É uma palavra de origem estrangeira",
+      "e) É uma exceção à regra"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "Assinale a alternativa em que o acento diferencial foi utilizado corretamente:",
+    "alternativas": [
+      "a) Ele pode ir à festa",
+      "b) Ele pôde ir à festa",
+      "c) Ele pode ir à festa?",
+      "d) Ele pôde vir, mas não veio",
+      "e) Ele pode vir, mas não pôde"
+    ],
+    "gabarito": "E",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre ortografia e assinale a sequência correta: ( ) O trema foi abolido do português, exceto em nomes próprios. ( ) O alfabeto brasileiro passou a ter 26 letras com o Novo Acordo. ( ) Usa-se 'X' após ditongo (ex.: caixa, peixe). ( ) A palavra 'asseio' é grafada com 'SS'.",
+    "alternativas": [
+      "a) V – V – V – F",
+      "b) F – V – F – V",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – F – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre acentuação e assinale a sequência correta: ( ) Todas as proparoxítonas são acentuadas. ( ) As oxítonas terminadas em 'A', 'E', 'O' são acentuadas. ( ) As paroxítonas terminadas em 'R' são acentuadas. ( ) O acento diferencial foi totalmente abolido.",
+    "alternativas": [
+      "a) V – V – V – F",
+      "b) V – F – V – F",
+      "c) F – V – F – V",
+      "d) V – V – F – F",
+      "e) F – F – V – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "A palavra 'ideia', segundo o Novo Acordo Ortográfico:",
+    "alternativas": [
+      "a) Não é acentuada",
+      "b) É acentuada por ser proparoxítona",
+      "c) É acentuada por ser oxítona",
+      "d) É acentuada por ser paroxítona terminada em ditongo",
+      "e) É acentuada com acento diferencial"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "A palavra 'cabeça' pode significar parte do corpo, líder, extremidade de ferramenta, capacidade mental. Esse fenômeno é classificado como:",
+    "alternativas": [
+      "a) Homonímia",
+      "b) Paronímia",
+      "c) Polissemia",
+      "d) Sinonímia",
+      "e) Antonímia"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "A palavra 'ascensão' é grafada com 'SC' e não com 'SS' porque:",
+    "alternativas": [
+      "a) Deriva de um verbo terminado em -der",
+      "b) Deriva de um verbo terminado em -ter",
+      "c) Deriva de um verbo terminado em -ver",
+      "d) É uma palavra de origem grega",
+      "e) É uma exceção à regra"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "Assinale a alternativa em que a palavra NÃO é acentuada:",
+    "alternativas": [
+      "a) Pólen",
+      "b) Hífen",
+      "c) Tórax",
+      "d) Item",
+      "e) Ônus"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "'O professor fez a ______ do fenômeno' e 'É necessário ______ entre o certo e o errado'. As palavras que completam corretamente as lacunas são:",
+    "alternativas": [
+      "a) Descrição / discrição",
+      "b) Descrição / descrição",
+      "c) Discrição / descrição",
+      "d) Discrição / discrição",
+      "e) Descrição / discriminação"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre homônimos e parônimos e assinale a sequência correta: ( ) 'Descrição' e 'discrição' são parônimos. ( ) 'Sessão', 'seção' e 'cessão' são homônimos homógrafos. ( ) Homônimos perfeitos têm mesma grafia e mesma pronúncia. ( ) Parônimos têm grafia e pronúncia semelhantes, mas significados diferentes.",
+    "alternativas": [
+      "a) V – F – V – V",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre uso da língua e assinale a sequência correta: ( ) A palavra 'têm' é acentuada para indicar a terceira pessoa do plural. ( ) 'Por que' (separado e sem acento) é usado em perguntas. ( ) 'Ratificar' significa 'corrigir'. ( ) A polissemia ocorre quando uma palavra tem vários significados relacionados.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "A palavra 'exceção' é grafada com:",
+    "alternativas": [
+      "a) Exceção",
+      "b) Exceção",
+      "c) Exseção",
+      "d) Exceção",
+      "e) Exceção"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "'A ______ de documentos foi autorizada' e 'A ______ de cinema foi emocionante'. As palavras são, respectivamente:",
+    "alternativas": [
+      "a) Cessão / sessão",
+      "b) Sessão / cessão",
+      "c) Seção / sessão",
+      "d) Cessão / seção",
+      "e) Sessão / seção"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre ortografia e semântica e assinale a sequência correta: ( ) Os parônimos têm significados iguais. ( ) A acentuação das oxítonas terminadas em 'U' não ocorre. ( ) A polissemia é um recurso muito usado em textos literários e propagandas. ( ) A palavra 'beneficiente' é grafada com 'C'.",
+    "alternativas": [
+      "a) V – F – V – V",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "O acento diferencial é utilizado para distinguir:",
+    "alternativas": [
+      "a) Apenas palavras homônimas",
+      "b) Palavras que têm a mesma grafia, mas significados diferentes",
+      "c) Palavras que têm a mesma pronúncia",
+      "d) Apenas verbos",
+      "e) Palavras parônimas"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "A palavra 'pólen' é acentuada por ser:",
+    "alternativas": [
+      "a) Oxítona terminada em 'N'",
+      "b) Paroxítona terminada em 'N'",
+      "c) Proparoxítona",
+      "d) Oxítona terminada em 'L'",
+      "e) Paroxítona terminada em 'L'"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "A palavra 'imagem' é acentuada por ser:",
+    "alternativas": [
+      "a) Oxítona terminada em 'M'",
+      "b) Paroxítona terminada em 'M'",
+      "c) Proparoxítona",
+      "d) Oxítona terminada em 'E'",
+      "e) Paroxítona terminada em 'E'"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "A palavra 'fácil' é acentuada por ser:",
+    "alternativas": [
+      "a) Oxítona terminada em 'L'",
+      "b) Paroxítona terminada em 'L'",
+      "c) Proparoxítona",
+      "d) Oxítona terminada em 'I'",
+      "e) Paroxítona terminada em 'I'"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo2"
+  },
+  {
+    "enunciado": "A palavra 'você' é acentuada por ser:",
+    "alternativas": [
+      "a) Oxítona terminada em 'E'",
+      "b) Paroxítona terminada em 'E'",
+      "c) Proparoxítona",
+      "d) Oxítona terminada em 'O'",
+      "e) Paroxítona terminada em 'O'"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo2"
+  }
+]
