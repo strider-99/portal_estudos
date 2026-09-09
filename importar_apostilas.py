@@ -40,6 +40,7 @@ MAPEAMENTO_AREA = {
     "sus_estatuto_deficiencia": "sus",
     "sus_equidade_genero_raca": "sus",
     "sus_pnaispd_rcpd": "sus",
+    "informatica_windows": "informatica",
 }
 
 def extrair_dados(arquivo_path):
