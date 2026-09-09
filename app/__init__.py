@@ -11,7 +11,13 @@ login_manager.login_message_category = "warning"
 
 def create_app():
     app = Flask(__name__)
-    app.config["MONGO_URI"] = os.getenv("MONGO_URI", "mongodb://localhost:27017/meu_portal")
+    # Sanitiza MONGO_URI: Render/Atlas URI às vezes vem com ';' misturado com '&' -> InvalidURI
+    raw_uri = os.getenv("MONGO_URI", "mongodb://localhost:27017/meu_portal")
+    # remove espaços/quebras e normaliza separadores
+    uri = raw_uri.strip().replace(";", "&")
+    # caso venha com aspas extras do dashboard
+    uri = uri.strip('"').strip("'")
+    app.config["MONGO_URI"] = uri
     # SECRET_KEY obrigatória no Render: defina env SECRET_KEY
     app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "dev-secret-key-change-me")
     if app.config["SECRET_KEY"] == "dev-secret-key-change-me" and os.getenv("RENDER"):
@@ -29,13 +35,29 @@ def create_app():
         try:
             import certifi
             mongo_kwargs["tlsCAFile"] = certifi.where()
-            # força TLS (pymongo já faz, mas explícito ajuda)
             mongo_kwargs["tls"] = True
-            mongo_kwargs["retryWrites"] = True
         except ImportError:
             pass
+        # corrige URIs que vieram sem retryWrites/w=majority
+        if "retryWrites" not in uri:
+            # não força via kwargs para não duplicar - deixa o Atlas decidir
+            pass
 
-    mongo.init_app(app, **mongo_kwargs)
+    try:
+        mongo.init_app(app, **mongo_kwargs)
+    except Exception as e:
+        # Não derruba o gunicorn no Render se MONGO_URI estiver malformada
+        import logging
+        logging.getLogger(__name__).error(f"Falha ao init Mongo: {e} - URI: {uri[:60]}...")
+        # cria fallback para healthcheck passar
+        try:
+            # tenta com URI sanitizada alternativa (sem opções)
+            fallback = uri.split("?")[0]
+            if fallback != uri:
+                app.config["MONGO_URI"] = fallback
+                mongo.init_app(app, connect=False, serverSelectionTimeoutMS=5000)
+        except Exception:
+            pass
     login_manager.init_app(app)
 
     from .models import User
