@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "A Resolução CNS nº 330/2003 aplica os princípios e diretrizes da:",
+    "alternativas": [
+      "a) Lei 8.080/90",
+      "b) Norma Operacional Básica de Recursos Humanos para o SUS (NOB/RH-SUS)",
+      "c) Política Nacional de Humanização",
+      "d) Lei 8.142/90",
+      "e) Política Nacional de Atenção Básica"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A Resolução CNS nº 330 foi aprovada no ano de:",
+    "alternativas": [
+      "a) 1988",
+      "b) 1990",
+      "c) 2003",
+      "d) 2009",
+      "e) 2015"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A Resolução 330/2003 estabelece a Política Nacional de:",
+    "alternativas": [
+      "a) Humanização",
+      "b) Gestão do Trabalho e da Educação em Saúde",
+      "c) Saúde da Família",
+      "d) Vigilância Sanitária",
+      "e) Saúde Mental"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "São princípios da NOB/RH-SUS, EXCETO:",
+    "alternativas": [
+      "a) Integralidade",
+      "b) Equidade",
+      "c) Centralização",
+      "d) Descentralização",
+      "e) Participação social"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A diretriz que estabelece a articulação entre gestão do trabalho e educação em saúde busca:",
+    "alternativas": [
+      "a) Separar a formação da prática",
+      "b) Alinhar a oferta de profissionais com a demanda dos serviços",
+      "c) Centralizar as decisões no Ministério da Saúde",
+      "d) Reduzir a participação dos trabalhadores",
+      "e) Eliminar a educação continuada"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A valorização das profissões de saúde inclui, entre outros:",
+    "alternativas": [
+      "a) Planos de cargos, carreiras e salários (PCCS)",
+      "b) Redução de salários",
+      "c) Aumento da carga horária sem compensação",
+      "d) Eliminação de direitos trabalhistas",
+      "e) Centralização das decisões"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "Os Programas de Educação Permanente em Saúde (PEPS) são dispositivos para:",
+    "alternativas": [
+      "a) Formação inicial dos profissionais",
+      "b) Formação continuada e transformação das práticas",
+      "c) Substituir a formação universitária",
+      "d) Reduzir o número de profissionais",
+      "e) Fiscalizar a atuação profissional"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "O princípio da equidade, na NOB/RH-SUS, significa que:",
+    "alternativas": [
+      "a) Todos os trabalhadores devem receber o mesmo tratamento",
+      "b) As políticas de gestão do trabalho devem reduzir desigualdades regionais e sociais",
+      "c) A gestão do trabalho deve ser centralizada",
+      "d) A participação social não é relevante",
+      "e) Os trabalhadores não têm direito a formação"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A Resolução 330/2003 se articula com o HumanizaSUS por meio, entre outros, do princípio da:",
+    "alternativas": [
+      "a) Valorização do trabalhador",
+      "b) Centralização das decisões",
+      "c) Exclusão dos usuários",
+      "d) Redução da participação social",
+      "e) Eliminação da educação permanente"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A diretriz que trata da promoção da saúde dos trabalhadores inclui:",
+    "alternativas": [
+      "a) Prevenção de doenças ocupacionais e atenção à saúde mental",
+      "b) Apenas a prevenção de acidentes",
+      "c) Apenas a atenção à saúde mental",
+      "d) Apenas a promoção de atividades físicas",
+      "e) Apenas a alimentação saudável"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A NOB/RH-SUS foi desenvolvida pelo:",
+    "alternativas": [
+      "a) Ministério da Saúde",
+      "b) Conselho Nacional de Saúde",
+      "c) Ministério da Educação",
+      "d) Agência Nacional de Saúde Suplementar",
+      "e) Ministério do Trabalho"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "As Comissões de Gestão do Trabalho são estruturas para:",
+    "alternativas": [
+      "a) Implementar a política de gestão do trabalho",
+      "b) Fiscalizar a atuação dos profissionais",
+      "c) Contratar novos profissionais",
+      "d) Reduzir os salários dos trabalhadores",
+      "e) Eliminar os direitos trabalhistas"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "São objetivos da Política Nacional de Gestão do Trabalho e da Educação em Saúde, EXCETO:",
+    "alternativas": [
+      "a) Garantir a qualidade da atenção",
+      "b) Fortalecer o SUS",
+      "c) Reduzir as desigualdades",
+      "d) Privatizar a gestão do trabalho",
+      "e) Valorizar os trabalhadores"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre princípios e diretrizes da NOB/RH-SUS e assinale a sequência correta: ( ) A integralidade é um princípio da NOB/RH-SUS. ( ) A descentralização é uma diretriz da política de gestão do trabalho. ( ) A educação permanente em saúde é uma estratégia da NOB/RH-SUS. ( ) A participação social não está prevista na Resolução 330/2003.",
+    "alternativas": [
+      "a) V – V – V – F",
+      "b) F – V – F – V",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – F – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A diretriz que estabelece a transversalidade da política de recursos humanos significa que:",
+    "alternativas": [
+      "a) A política é restrita à Atenção Básica",
+      "b) A política perpassa todas as áreas do SUS, em todos os níveis",
+      "c) A política é exclusiva do nível federal",
+      "d) A política se aplica apenas aos hospitais",
+      "e) A política não se articula com outras áreas"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A valorização do trabalhador, prevista na NOB/RH-SUS, inclui a garantia de:",
+    "alternativas": [
+      "a) Apenas salários justos",
+      "b) Direitos trabalhistas, condições dignas de trabalho e oportunidades de desenvolvimento",
+      "c) Apenas oportunidades de desenvolvimento",
+      "d) Apenas condições dignas de trabalho",
+      "e) Apenas a redução da carga horária"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A NOB/RH-SUS foi validada pelo Conselho Nacional de Saúde por meio da Resolução:",
+    "alternativas": [
+      "a) 330/2003",
+      "b) 992/2009",
+      "c) 2.836/2011",
+      "d) 230/2023",
+      "e) 1.526/2023"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "As políticas de saúde do trabalhador, no âmbito da NOB/RH-SUS, visam:",
+    "alternativas": [
+      "a) Apenas a prevenção de acidentes",
+      "b) A atenção à saúde física e mental dos profissionais do SUS",
+      "c) Apenas a atenção à saúde mental",
+      "d) Apenas a prevenção de doenças ocupacionais",
+      "e) Apenas a promoção da atividade física"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A NOB/RH-SUS e o HumanizaSUS compartilham os princípios da:",
+    "alternativas": [
+      "a) Integralidade, equidade e participação social",
+      "b) Centralização, exclusão e verticalização",
+      "c) Competição, individualismo e privatização",
+      "d) Burocracia, hierarquia e autoritarismo",
+      "e) Desigualdade, discriminação e preconceito"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre a Resolução 330/2003 e assinale a sequência correta: ( ) A Resolução 330/2003 é anterior ao HumanizaSUS. ( ) A NOB/RH-SUS estabelece a educação permanente em saúde como estratégia. ( ) A gestão participativa é uma diretriz da política de recursos humanos. ( ) A NOB/RH-SUS não prevê a participação dos trabalhadores.",
+    "alternativas": [
+      "a) F – V – V – F",
+      "b) V – F – V – F",
+      "c) F – V – F – V",
+      "d) V – V – F – V",
+      "e) F – F – V – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A educação permanente em saúde, na NOB/RH-SUS, é caracterizada como um processo:",
+    "alternativas": [
+      "a) Contínuo, integrando ensino, serviço e comunidade",
+      "b) Pontual, restrito a cursos de curta duração",
+      "c) Obrigatório, com carga horária definida",
+      "d) Exclusivo para médicos e enfermeiros",
+      "e) Voluntário, sem impacto na prática"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A Política Nacional de Gestão do Trabalho e da Educação em Saúde busca, entre outros, garantir:",
+    "alternativas": [
+      "a) A qualidade da atenção e o fortalecimento do SUS",
+      "b) A privatização dos serviços de saúde",
+      "c) A redução do número de profissionais",
+      "d) A centralização das decisões",
+      "e) A exclusão dos usuários"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "O princípio da descentralização, na NOB/RH-SUS, implica que:",
+    "alternativas": [
+      "a) As decisões são exclusivas do nível federal",
+      "b) As esferas municipal, estadual e federal têm autonomia na gestão do trabalho",
+      "c) Os municípios não têm responsabilidade sobre a gestão do trabalho",
+      "d) A União centraliza todas as ações",
+      "e) Os estados são os únicos responsáveis pela gestão do trabalho"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "Analise as afirmativas finais sobre a Resolução 330/2003 e assinale a sequência correta: ( ) A Resolução 330/2003 aplica os princípios da NOB/RH-SUS como Política Nacional de Gestão do Trabalho e da Educação em Saúde. ( ) A integralidade é um dos princípios da NOB/RH-SUS. ( ) A educação permanente em saúde é uma estratégia da NOB/RH-SUS. ( ) A Resolução 330/2003 não se articula com o HumanizaSUS.",
+    "alternativas": [
+      "a) V – V – V – F",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – F – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "O Programa de Educação Permanente em Saúde (PEPS) é um dispositivo da NOB/RH-SUS que visa:",
+    "alternativas": [
+      "a) Apenas a formação inicial dos profissionais",
+      "b) A formação continuada e a transformação das práticas de saúde",
+      "c) A fiscalização dos serviços de saúde",
+      "d) A redução do número de profissionais",
+      "e) A centralização das decisões"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A NOB/RH-SUS estabelece como diretriz a valorização das profissões de saúde, por meio de:",
+    "alternativas": [
+      "a) Planos de cargos, carreiras e salários (PCCS)",
+      "b) Redução de salários",
+      "c) Aumento da carga horária sem compensação",
+      "d) Eliminação de direitos trabalhistas",
+      "e) Centralização das decisões"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A Resolução CNS nº 330/2003 é um instrumento que estabelece as bases para a gestão de:",
+    "alternativas": [
+      "a) Recursos financeiros do SUS",
+      "b) Recursos humanos no SUS",
+      "c) Materiais e insumos do SUS",
+      "d) Infraestrutura hospitalar",
+      "e) Tecnologia da informação"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A NOB/RH-SUS foi desenvolvida para orientar a implementação de políticas de gestão do trabalho e educação em saúde em:",
+    "alternativas": [
+      "a) Apenas no nível federal",
+      "b) Apenas no nível estadual",
+      "c) Apenas no nível municipal",
+      "d) Todas as esferas de governo",
+      "e) Apenas na iniciativa privada"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A Resolução CNS nº 330/2003 foi aprovada pelo Conselho Nacional de Saúde em:",
+    "alternativas": [
+      "a) 4 de novembro de 2003",
+      "b) 13 de maio de 2009",
+      "c) 1º de dezembro de 2011",
+      "d) 7 de março de 2023",
+      "e) 11 de outubro de 2023"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_nobrh"
+  },
+  {
+    "enunciado": "A NOB/RH-SUS prevê a articulação entre gestão do trabalho e educação em saúde, visando:",
+    "alternativas": [
+      "a) Alinhar a oferta de profissionais com a demanda dos serviços",
+      "b) Separar a formação da prática",
+      "c) Centralizar as decisões no Ministério da Saúde",
+      "d) Reduzir a participação dos trabalhadores",
+      "e) Eliminar a educação continuada"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_nobrh"
+  }
+]

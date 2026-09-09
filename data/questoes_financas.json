@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "A administração financeira tem como objetivo principal:",
+    "alternativas": [
+      "a) Maximizar o lucro da empresa a qualquer custo",
+      "b) Garantir a liquidez, solvência e rentabilidade da organização",
+      "c) Reduzir o número de funcionários",
+      "d) Aumentar a carga tributária",
+      "e) Centralizar todas as decisões financeiras"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "O orçamento que se adapta às mudanças no volume de atividades é denominado:",
+    "alternativas": [
+      "a) Orçamento estático",
+      "b) Orçamento flexível",
+      "c) Orçamento base-zero",
+      "d) Orçamento estratégico",
+      "e) Orçamento operacional"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "Assinale a alternativa que contém APENAS saídas de caixa:",
+    "alternativas": [
+      "a) Vendas à vista, recebimento de duplicatas",
+      "b) Pagamento de fornecedores, salários, impostos",
+      "c) Aporte de capital, empréstimos obtidos",
+      "d) Despesas operacionais, vendas a prazo",
+      "e) Recebimento de aluguéis, pagamento de fornecedores"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "O indicador que mede a capacidade de pagamento da empresa no curto prazo é a:",
+    "alternativas": [
+      "a) Margem de lucro",
+      "b) Liquidez corrente",
+      "c) Rentabilidade sobre o patrimônio (ROE)",
+      "d) Endividamento",
+      "e) Giro de estoque"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "Os custos que variam proporcionalmente ao volume de produção são chamados de:",
+    "alternativas": [
+      "a) Custos fixos",
+      "b) Custos indiretos",
+      "c) Custos variáveis",
+      "d) Custos semivariáveis",
+      "e) Custos operacionais"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "O processo que visa suprir lacunas de competências para o cargo atual, com foco no curto prazo, é o:",
+    "alternativas": [
+      "a) Desenvolvimento",
+      "b) Recrutamento",
+      "c) Treinamento",
+      "d) Avaliação de desempenho",
+      "e) Sucessão"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "A avaliação de desempenho que envolve a opinião de pares, subordinados, clientes e do próprio avaliado é chamada de:",
+    "alternativas": [
+      "a) Autoavaliação",
+      "b) Avaliação 360°",
+      "c) Avaliação funcional",
+      "d) Avaliação por competências",
+      "e) Avaliação gerencial"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "Segundo a hierarquia de necessidades de Maslow, a necessidade de reconhecimento e prestígio está no nível de:",
+    "alternativas": [
+      "a) Necessidades fisiológicas",
+      "b) Segurança",
+      "c) Sociais",
+      "d) Estima",
+      "e) Autorrealização"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "O método de classificação de estoques que divide os itens em classes A, B e C com base no valor financeiro é a:",
+    "alternativas": [
+      "a) Curva de Pareto",
+      "b) Curva ABC",
+      "c) Matriz SWOT",
+      "d) Diagrama de Ishikawa",
+      "e) Método PEPS"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "O nível de estoque que aciona uma nova compra é denominado:",
+    "alternativas": [
+      "a) Estoque máximo",
+      "b) Estoque mínimo",
+      "c) Ponto de pedido",
+      "d) Lote econômico",
+      "e) Giro de estoque"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "Na curva ABC, os itens de classe ________ representam alto valor e baixa quantidade, exigindo controle rigoroso.",
+    "alternativas": [
+      "a) A",
+      "b) B",
+      "c) C",
+      "d) D",
+      "e) E"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "O fluxo de caixa é importante porque:",
+    "alternativas": [
+      "a) Mostra o lucro contábil da empresa",
+      "b) Indica a movimentação real de entradas e saídas de dinheiro",
+      "c) Substitui a demonstração de resultados",
+      "d) Mede o endividamento da empresa",
+      "e) Avalia o desempenho dos colaboradores"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "São benefícios oferecidos pelas organizações, EXCETO:",
+    "alternativas": [
+      "a) Vale-transporte",
+      "b) Plano de saúde",
+      "c) Participação nos lucros",
+      "d) Salário-base",
+      "e) Seguro de vida"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "O processo de compras inicia-se com:",
+    "alternativas": [
+      "a) Emissão do pedido",
+      "b) Pesquisa de fornecedores",
+      "c) Identificação da necessidade",
+      "d) Recebimento do material",
+      "e) Pagamento ao fornecedor"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Administração Financeira e assinale a sequência correta: ( ) O orçamento base-zero exige que cada despesa seja justificada a cada novo período. ( ) O fluxo de caixa registra apenas as saídas de dinheiro. ( ) A margem de lucro é calculada dividindo o lucro líquido pela receita total. ( ) O endividamento mede a relação entre passivo total e ativo total.",
+    "alternativas": [
+      "a) V – F – V – V",
+      "b) F – V – F – F",
+      "c) V – V – F – V",
+      "d) F – F – V – F",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Gestão de Pessoas e assinale a sequência correta: ( ) O recrutamento interno busca candidatos no mercado externo. ( ) Treinamento e desenvolvimento são sinônimos e têm o mesmo objetivo. ( ) O clima organizacional é influenciado pela liderança e pelas relações interpessoais. ( ) A avaliação 360° envolve múltiplas fontes de feedback.",
+    "alternativas": [
+      "a) V – V – F – F",
+      "b) F – F – V – V",
+      "c) F – V – V – F",
+      "d) V – F – F – V",
+      "e) F – F – F – V"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "O ROE (Return on Equity) é calculado da seguinte forma:",
+    "alternativas": [
+      "a) Lucro Líquido / Ativo Total",
+      "b) Lucro Líquido / Patrimônio Líquido",
+      "c) Receita Total / Ativo Circulante",
+      "d) Passivo Total / Patrimônio Líquido",
+      "e) Lucro Bruto / Vendas"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "A teoria de Herzberg classifica os fatores que evitam insatisfação como:",
+    "alternativas": [
+      "a) Fatores motivacionais",
+      "b) Fatores higiênicos",
+      "c) Fatores intrínsecos",
+      "d) Fatores de autorrealização",
+      "e) Fatores sociais"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "No processo de compras, a etapa que ocorre imediatamente após a pesquisa de fornecedores é:",
+    "alternativas": [
+      "a) Identificação da necessidade",
+      "b) Recebimento do material",
+      "c) Negociação e pedido",
+      "d) Conferência da nota fiscal",
+      "e) Armazenamento"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "Um fluxo de caixa com saldo negativo frequente indica:",
+    "alternativas": [
+      "a) Alta rentabilidade",
+      "b) Possível problema de liquidez",
+      "c) Baixo endividamento",
+      "d) Ótimo controle de custos",
+      "e) Superávit financeiro"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "O desenvolvimento de pessoas tem foco no:",
+    "alternativas": [
+      "a) Curto prazo e cargo atual",
+      "b) Longo prazo e preparação para futuras funções",
+      "c) Cumprimento de normas trabalhistas",
+      "d) Redução de custos com pessoal",
+      "e) Terceirização de atividades"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "A função que planeja, coordena e controla o fluxo de materiais desde a aquisição até o consumo é a:",
+    "alternativas": [
+      "a) Administração financeira",
+      "b) Gestão de pessoas",
+      "c) Administração de materiais",
+      "d) Marketing",
+      "e) Produção"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "Sobre indicadores financeiros, analise as afirmativas e assinale a sequência correta: ( ) A liquidez corrente ideal é sempre inferior a 1,0. ( ) Quanto maior o endividamento, maior o risco financeiro. ( ) A margem de lucro líquida considera todas as despesas e impostos.",
+    "alternativas": [
+      "a) F – V – V",
+      "b) V – F – F",
+      "c) F – V – F",
+      "d) V – F – V",
+      "e) F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "O recrutamento que aproveita talentos já existentes na própria organização é o:",
+    "alternativas": [
+      "a) Recrutamento externo",
+      "b) Recrutamento interno",
+      "c) Recrutamento misto",
+      "d) Recrutamento terceirizado",
+      "e) Recrutamento virtual"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "O estoque de segurança também é conhecido como:",
+    "alternativas": [
+      "a) Estoque ativo",
+      "b) Estoque mínimo",
+      "c) Estoque máximo",
+      "d) Estoque de reposição",
+      "e) Estoque sazonal"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "O orçamento base-zero é caracterizado por:",
+    "alternativas": [
+      "a) Ser fixo e não se ajustar às variações",
+      "b) Adaptar-se às mudanças no volume de atividades",
+      "c) Exigir que cada despesa seja justificada do zero a cada período",
+      "d) Ser elaborado apenas para o setor de produção",
+      "e) Não exigir revisão anual"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "Na gestão de pessoas, o termo 'clima organizacional' refere-se:",
+    "alternativas": [
+      "a) À temperatura do ambiente de trabalho",
+      "b) Ao ambiente psicológico da empresa, influenciado pela liderança e relações interpessoais",
+      "c) Ao número de funcionários da organização",
+      "d) À estrutura hierárquica da empresa",
+      "e) Ao salário dos colaboradores"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "A armazenagem adequada de materiais tem como objetivo, EXCETO:",
+    "alternativas": [
+      "a) Proteger os materiais contra danos físicos",
+      "b) Otimizar o espaço físico",
+      "c) Facilitar o acesso e a movimentação",
+      "d) Aumentar o custo de armazenagem",
+      "e) Preservar a qualidade dos materiais"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "O indicador de rentabilidade que mede o retorno para os acionistas é o:",
+    "alternativas": [
+      "a) ROE (Return on Equity)",
+      "b) ROA (Return on Assets)",
+      "c) Margem Bruta",
+      "d) Giro do Ativo",
+      "e) Liquidez Seca"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  },
+  {
+    "enunciado": "O recrutamento externo é caracterizado por:",
+    "alternativas": [
+      "a) Buscar candidatos dentro da própria organização",
+      "b) Buscar candidatos no mercado externo",
+      "c) Ser mais barato que o recrutamento interno",
+      "d) Ser sempre mais eficaz que o recrutamento interno",
+      "e) Utilizar apenas indicações de funcionários"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_financas_pessoas_materiais"
+  }
+]

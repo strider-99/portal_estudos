@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "Na palavra 'infelizmente', a sequência dos elementos mórficos é:",
+    "alternativas": [
+      "a) Prefixo + radical + vogal temática + sufixo",
+      "b) Radical + sufixo + prefixo",
+      "c) Prefixo + radical + sufixo",
+      "d) Radical + desinência + sufixo",
+      "e) Prefixo + vogal temática + radical"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "A palavra 'planalto' é formada pelo processo de:",
+    "alternativas": [
+      "a) Derivação prefixal",
+      "b) Derivação sufixal",
+      "c) Composição por justaposição",
+      "d) Composição por aglutinação",
+      "e) Onomatopeia"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "A palavra 'felicidade' pertence à classe dos:",
+    "alternativas": [
+      "a) Adjetivos",
+      "b) Substantivos",
+      "c) Verbos",
+      "d) Advérbios",
+      "e) Pronomes"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "A derivação que ocorre quando uma palavra muda de classe gramatical sem alteração de forma é chamada de:",
+    "alternativas": [
+      "a) Derivação prefixal",
+      "b) Derivação sufixal",
+      "c) Derivação parassintética",
+      "d) Derivação regressiva",
+      "e) Derivação imprópria"
+    ],
+    "gabarito": "E",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "A flexão verbal indica, entre outros aspectos:",
+    "alternativas": [
+      "a) Gênero e número",
+      "b) Número, pessoa, tempo e modo",
+      "c) Grau e número",
+      "d) Gênero e grau",
+      "e) Apenas o modo"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "O radical da palavra 'pedreiro' é:",
+    "alternativas": [
+      "a) pedr-",
+      "b) pedre-",
+      "c) -eiro",
+      "d) pedr-eiro",
+      "e) pedr- + -eiro"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "A palavra 'muito' pode ser classificada como:",
+    "alternativas": [
+      "a) Substantivo",
+      "b) Advérbio",
+      "c) Adjetivo",
+      "d) Pronome indefinido",
+      "e) Todas as anteriores, dependendo do contexto"
+    ],
+    "gabarito": "E",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "A palavra 'desleal' é formada por:",
+    "alternativas": [
+      "a) Derivação sufixal",
+      "b) Derivação prefixal",
+      "c) Derivação parassintética",
+      "d) Composição por justaposição",
+      "e) Composição por aglutinação"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "A palavra 'meninos' apresenta as seguintes desinências:",
+    "alternativas": [
+      "a) '-o' (masculino) e '-s' (plural)",
+      "b) '-a' (feminino) e '-s' (plural)",
+      "c) '-o' (masculino) e '-os' (plural)",
+      "d) '-a' (feminino) e '-as' (plural)",
+      "e) '-ino' e '-os'"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "A palavra 'porque' (causal) pertence à classe das:",
+    "alternativas": [
+      "a) Preposições",
+      "b) Conjunções",
+      "c) Advérbios",
+      "d) Pronomes",
+      "e) Substantivos"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "'Girassol' é um exemplo de:",
+    "alternativas": [
+      "a) Derivação sufixal",
+      "b) Derivação prefixal",
+      "c) Composição por justaposição",
+      "d) Composição por aglutinação",
+      "e) Hibridismo"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "No verbo 'cantávamos', a desinência 'mos' indica:",
+    "alternativas": [
+      "a) 1ª pessoa do plural",
+      "b) 3ª pessoa do plural",
+      "c) 2ª pessoa do singular",
+      "d) 3ª pessoa do singular",
+      "e) 1ª pessoa do singular"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "A palavra 'ou' é uma conjunção:",
+    "alternativas": [
+      "a) Aditiva",
+      "b) Adversativa",
+      "c) Alternativa",
+      "d) Conclusiva",
+      "e) Explicativa"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre estrutura de palavras e assinale a sequência correta: ( ) Radical é a parte da palavra que contém seu significado básico. ( ) A vogal temática do verbo 'partir' é 'e'. ( ) Prefixos são elementos colocados depois do radical. ( ) As desinências nominais indicam gênero e número.",
+    "alternativas": [
+      "a) V – F – F – V",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre formação de palavras e assinale a sequência correta: ( ) A derivação parassintética ocorre quando se adiciona prefixo e sufixo simultaneamente. ( ) A onomatopeia é um processo de composição. ( ) A composição por aglutinação ocorre quando os radicais se juntam sem alteração. ( ) O hibridismo é a formação de palavras com elementos de línguas diferentes.",
+    "alternativas": [
+      "a) V – F – F – V",
+      "b) F – V – V – F",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "Assinale a alternativa em que a palavra sublinhada é um pronome:",
+    "alternativas": [
+      "a) Ele chegou tarde",
+      "b) Feliz aniversário",
+      "c) Dois livros foram lidos",
+      "d) Correndo, ele chegou",
+      "e) Muito obrigado"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "A palavra 'ameaça' (substantivo derivado do verbo ameaçar) é formada por:",
+    "alternativas": [
+      "a) Derivação prefixal",
+      "b) Derivação sufixal",
+      "c) Derivação regressiva",
+      "d) Derivação parassintética",
+      "e) Composição por aglutinação"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "A flexão de grau do adjetivo 'alto' em 'altíssimo' é um exemplo de superlativo:",
+    "alternativas": [
+      "a) Relativo",
+      "b) Absoluto sintético",
+      "c) Absoluto analítico",
+      "d) Relativo de inferioridade",
+      "e) Relativo de superioridade"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "'Excelência' em 'Vossa Excelência' é um pronome de tratamento, mas originalmente é um:",
+    "alternativas": [
+      "a) Substantivo",
+      "b) Adjetivo",
+      "c) Verbo",
+      "d) Advérbio",
+      "e) Conjunção"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre classes de palavras e assinale a sequência correta: ( ) A interjeição expressa emoções. ( ) A preposição liga dois termos e é variável. ( ) O artigo define ou indefere o substantivo. ( ) O numeral indica quantidade, ordem, fração ou multiplicação.",
+    "alternativas": [
+      "a) V – F – V – V",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "Na palavra 'desagradável', os elementos 'des-' e '-ável' são, respectivamente:",
+    "alternativas": [
+      "a) Prefixo e sufixo",
+      "b) Sufixo e prefixo",
+      "c) Radical e desinência",
+      "d) Vogal temática e radical",
+      "e) Ambos são prefixos"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "A palavra 'cidadão' e 'cidadania' são, respectivamente:",
+    "alternativas": [
+      "a) Primitiva e derivada",
+      "b) Derivada e primitiva",
+      "c) Ambas primitivas",
+      "d) Ambas derivadas",
+      "e) Não há relação entre elas"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "Assinale a alternativa com o verbo corretamente flexionado no pretérito perfeito:",
+    "alternativas": [
+      "a) Ele cantou",
+      "b) Ele cantava",
+      "c) Ele cantará",
+      "d) Ele cante",
+      "e) Ele cantasse"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre morfologia e assinale a sequência correta: ( ) A derivação imprópria ocorre quando a palavra muda de classe gramatical. ( ) Os advérbios são palavras invariáveis. ( ) A conjugação verbal é composta por radical, vogal temática e desinências. ( ) A palavra 'cardume' é um substantivo concreto.",
+    "alternativas": [
+      "a) V – V – V – V",
+      "b) V – F – V – F",
+      "c) F – V – F – V",
+      "d) V – V – F – F",
+      "e) F – F – V – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "A vogal temática do verbo 'estudar' é:",
+    "alternativas": [
+      "a) A",
+      "b) E",
+      "c) I",
+      "d) O",
+      "e) U"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "O tema da palavra 'amávamos' é:",
+    "alternativas": [
+      "a) am-",
+      "b) amá-",
+      "c) amava-",
+      "d) am- + -a-",
+      "e) -vamos"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "A palavra 'giz' é um exemplo de:",
+    "alternativas": [
+      "a) Substantivo concreto",
+      "b) Substantivo abstrato",
+      "c) Adjetivo",
+      "d) Advérbio",
+      "e) Interjeição"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "O sufixo '-mente' é utilizado para formar:",
+    "alternativas": [
+      "a) Substantivos",
+      "b) Adjetivos",
+      "c) Advérbios",
+      "d) Verbos",
+      "e) Pronomes"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "A palavra 'livro' e 'livreto' são, respectivamente:",
+    "alternativas": [
+      "a) Primitiva e derivada",
+      "b) Derivada e primitiva",
+      "c) Ambas primitivas",
+      "d) Ambas derivadas",
+      "e) Não há relação entre elas"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo3"
+  },
+  {
+    "enunciado": "A desinência nominal '-a' em 'casa' indica:",
+    "alternativas": [
+      "a) Gênero feminino",
+      "b) Gênero masculino",
+      "c) Número plural",
+      "d) Grau aumentativo",
+      "e) Grau diminutivo"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo3"
+  }
+]

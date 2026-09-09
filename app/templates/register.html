@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Cadastrar - Portal{% endblock %}
+{% block content %}
+<div class="auth-container">
+  <h2>📝 Criar conta</h2>
+  <p class="auth-hint">O primeiro cadastro vira administrador automaticamente.</p>
+  <form method="post" class="auth-form">
+    <label>E-mail
+      <input type="email" name="email" required placeholder="seu@email.com">
+    </label>
+    <label>Senha
+      <input type="password" name="password" required placeholder="mín. 6 caracteres">
+    </label>
+    <label>Confirmar senha
+      <input type="password" name="password2" required>
+    </label>
+    <button type="submit" class="btn-primary">Cadastrar</button>
+  </form>
+  <p class="auth-link">Já tem conta? <a href="{{ url_for('main.login') }}">Entrar</a></p>
+</div>
+{% endblock %}

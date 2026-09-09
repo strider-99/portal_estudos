@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "A diferença fundamental entre compreensão e interpretação de texto é que:",
+    "alternativas": [
+      "a) Compreensão é o ato de ler rapidamente, e interpretação é ler devagar",
+      "b) Compreensão capta o explícito; interpretação extrai o implícito",
+      "c) Interpretação é mais fácil que compreensão",
+      "d) Compreensão e interpretação são sinônimos",
+      "e) Interpretação dispensa a leitura atenta"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "O texto que tem como objetivo contar uma história, com personagens, enredo e conflito, é classificado como:",
+    "alternativas": [
+      "a) Descrição",
+      "b) Dissertação",
+      "c) Narração",
+      "d) Injunção",
+      "e) Exposição"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "O uso de pronomes para retomar termos já mencionados é um recurso de coesão do tipo:",
+    "alternativas": [
+      "a) Sequencial",
+      "b) Referencial",
+      "c) Temporal",
+      "d) Espacial",
+      "e) Semântica"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "Um texto que apresenta contradições internas ou ideias que não se complementam carece de:",
+    "alternativas": [
+      "a) Coesão",
+      "b) Coerência",
+      "c) Concisão",
+      "d) Clareza",
+      "e) Norma culta"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A linguagem utilizada em documentos oficiais, discursos formais e textos acadêmicos é classificada como:",
+    "alternativas": [
+      "a) Informal",
+      "b) Coloquial",
+      "c) Formal (norma culta)",
+      "d) Técnica",
+      "e) Regional"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "Na frase 'Amanhã vai chover', a função da linguagem predominante é a:",
+    "alternativas": [
+      "a) Emotiva",
+      "b) Conativa",
+      "c) Referencial",
+      "d) Poética",
+      "e) Fática"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "O elemento da comunicação que consiste no meio físico pelo qual a mensagem trafega é o:",
+    "alternativas": [
+      "a) Emissor",
+      "b) Receptor",
+      "c) Canal",
+      "d) Código",
+      "e) Contexto"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "O trecho 'A casa era antiga, com paredes de pedra e um jardim cheio de flores silvestres' é um exemplo de:",
+    "alternativas": [
+      "a) Narração",
+      "b) Descrição",
+      "c) Dissertação",
+      "d) Injunção",
+      "e) Diálogo"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A palavra 'portanto' estabelece uma relação semântica de:",
+    "alternativas": [
+      "a) Adição",
+      "b) Oposição",
+      "c) Causa",
+      "d) Consequência",
+      "e) Finalidade"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A frase 'Compre aqui o seu novo celular!' é um exemplo da função:",
+    "alternativas": [
+      "a) Emotiva",
+      "b) Referencial",
+      "c) Conativa",
+      "d) Fática",
+      "e) Metalinguística"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "Leia o trecho: 'Ela chegou atrasada, com os olhos vermelhos e o cabelo desgrenhado.' A interpretação mais provável é que ela:",
+    "alternativas": [
+      "a) Estava feliz",
+      "b) Havia chorado ou estava cansada",
+      "c) Havia acabado de acordar",
+      "d) Estava com pressa",
+      "e) Estava doente"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A expressão 'tá beleza?' em uma conversa informal é um exemplo de:",
+    "alternativas": [
+      "a) Norma culta",
+      "b) Linguagem formal",
+      "c) Linguagem coloquial",
+      "d) Jargão técnico",
+      "e) Linguagem literária"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A estrutura típica do texto dissertativo-argumentativo é:",
+    "alternativas": [
+      "a) Início, meio e fim",
+      "b) Introdução, desenvolvimento e conclusão",
+      "c) Descrição, narração e conclusão",
+      "d) Tese, antítese e síntese",
+      "e) Contexto, ação e desfecho"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre coesão e coerência e assinale a sequência correta: ( ) A coesão se refere à lógica interna do texto. ( ) A coerência é a ligação linguística entre as partes do texto. ( ) Um texto pode ser coeso, mas incoerente. ( ) Conectivos como 'e' e 'além disso' estabelecem relação de adição.",
+    "alternativas": [
+      "a) V – F – F – V",
+      "b) F – V – F – V",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – F – V – F"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A variedade geográfica refere-se a:",
+    "alternativas": [
+      "a) Diferenças regionais da língua",
+      "b) Diferenças associadas a grupos sociais",
+      "c) Mudanças da língua ao longo do tempo",
+      "d) Adequação da linguagem ao contexto",
+      "e) Diferenças de gênero na fala"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A função metalinguística da linguagem ocorre quando:",
+    "alternativas": [
+      "a) O emissor expressa suas emoções",
+      "b) O código explica o próprio código",
+      "c) A mensagem busca persuadir o receptor",
+      "d) O foco está no canal de comunicação",
+      "e) A ênfase recai sobre a forma da mensagem"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A coesão referencial é obtida por meio de:",
+    "alternativas": [
+      "a) Conectivos como 'portanto' e 'porém'",
+      "b) Pronomes, sinônimos e hiperônimos",
+      "c) Repetição de palavras-chave",
+      "d) Uso de gírias",
+      "e) Frases curtas"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A adequação linguística consiste em:",
+    "alternativas": [
+      "a) Usar sempre a norma culta",
+      "b) Escolher o nível de linguagem apropriado para cada situação",
+      "c) Evitar qualquer tipo de variação linguística",
+      "d) Usar gírias em todas as situações",
+      "e) Falar apenas na língua padrão"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "O texto descritivo caracteriza-se pelo uso predominante de:",
+    "alternativas": [
+      "a) Verbos de ação no passado",
+      "b) Adjetivos e verbos de estado (ser, estar, parecer)",
+      "c) Conectivos lógicos e argumentos",
+      "d) Verbos no imperativo",
+      "e) Pronomes indefinidos"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A função fática da linguagem tem como foco:",
+    "alternativas": [
+      "a) O emissor",
+      "b) O receptor",
+      "c) O canal de comunicação",
+      "d) A mensagem",
+      "e) O contexto"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A coesão sequencial é garantida pelo uso de:",
+    "alternativas": [
+      "a) Pronomes e sinônimos",
+      "b) Conectivos (conjunções, advérbios)",
+      "c) Repetição de palavras",
+      "d) Figuras de linguagem",
+      "e) Metáforas"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A coerência pragmática refere-se à:",
+    "alternativas": [
+      "a) Lógica interna das ideias",
+      "b) Adequação do texto à situação comunicativa",
+      "c) Ligação entre as palavras",
+      "d) Correção gramatical",
+      "e) Estrutura dos parágrafos"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A linguagem técnica ou jargão é caracterizada por:",
+    "alternativas": [
+      "a) Ser usada em situações informais",
+      "b) Ser especializada de uma área do conhecimento",
+      "c) Utilizar gírias e expressões populares",
+      "d) Ser compreendida por todos",
+      "e) Ser sinônimo de linguagem coloquial"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A função poética da linguagem enfatiza:",
+    "alternativas": [
+      "a) O conteúdo informativo",
+      "b) A forma da mensagem",
+      "c) O canal de comunicação",
+      "d) O emissor",
+      "e) O receptor"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "O texto dissertativo-argumentativo tem como objetivo principal:",
+    "alternativas": [
+      "a) Contar uma história",
+      "b) Descrever um objeto ou pessoa",
+      "c) Defender uma tese por meio de argumentos",
+      "d) Dar instruções ou orientações",
+      "e) Expressar emoções e sentimentos"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A compreensão literal de um texto envolve:",
+    "alternativas": [
+      "a) Captar o que está explícito",
+      "b) Inferir informações implícitas",
+      "c) Interpretar as intenções do autor",
+      "d) Estabelecer relações com outros textos",
+      "e) Fazer juízos de valor"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A variedade histórica da língua refere-se a:",
+    "alternativas": [
+      "a) Diferenças regionais",
+      "b) Mudanças da língua ao longo do tempo",
+      "c) Diferenças entre grupos sociais",
+      "d) Adequação ao contexto",
+      "e) Diferenças de gênero"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A inferência é uma habilidade de interpretação que consiste em:",
+    "alternativas": [
+      "a) Localizar informações explícitas",
+      "b) Deduzir informações não ditas a partir do texto",
+      "c) Identificar a estrutura do texto",
+      "d) Reconhecer as classes gramaticais",
+      "e) Aplicar regras de acentuação"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "O ruído na comunicação é:",
+    "alternativas": [
+      "a) O conteúdo da mensagem",
+      "b) Qualquer interferência que atrapalhe a comunicação",
+      "c) O meio físico de transmissão",
+      "d) O sistema de signos utilizado",
+      "e) O receptor da mensagem"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  },
+  {
+    "enunciado": "A coesão textual pode ser classificada em referencial e sequencial. A coesão referencial é realizada por meio de:",
+    "alternativas": [
+      "a) Conjunções e advérbios",
+      "b) Pronomes, sinônimos e hiperônimos",
+      "c) Repetição de estruturas sintáticas",
+      "d) Uso de figuras de linguagem",
+      "e) Organização dos parágrafos"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_portugues_modulo1"
+  }
+]

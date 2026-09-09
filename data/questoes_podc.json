@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "O processo administrativo, conhecido pelo mnemônico PODC, é composto pelas seguintes funções:",
+    "alternativas": [
+      "a) Produção, Organização, Distribuição e Controle",
+      "b) Planejamento, Orientação, Direção e Coordenação",
+      "c) Planejamento, Organização, Direção e Controle",
+      "d) Previsão, Organização, Desempenho e Controle",
+      "e) Planejamento, Orçamento, Direção e Correção"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "A função administrativa que define objetivos e decide sobre os recursos e as tarefas necessárias para alcançá-los adequadamente é:",
+    "alternativas": [
+      "a) Organização",
+      "b) Direção",
+      "c) Controle",
+      "d) Planejamento",
+      "e) Coordenação"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "A função administrativa que consiste em repartir as tarefas, especificar as atribuições e agrupar atividades semelhantes em órgãos e cargos é:",
+    "alternativas": [
+      "a) Planejamento",
+      "b) Organização",
+      "c) Direção",
+      "d) Controle",
+      "e) Liderança"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "Qual é a única função administrativa (PODC) cujo foco principal são as pessoas e o comportamento humano?",
+    "alternativas": [
+      "a) Planejamento",
+      "b) Organização",
+      "c) Direção",
+      "d) Controle",
+      "e) Estratégia"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "A função administrativa que monitora e avalia as atividades e os resultados alcançados para assegurar que o planejamento seja cumprido é:",
+    "alternativas": [
+      "a) Planejamento",
+      "b) Organização",
+      "c) Direção",
+      "d) Controle",
+      "e) Motivação"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "O planejamento de longo prazo, feito pela alta administração e que envolve toda a organização, é denominado:",
+    "alternativas": [
+      "a) Planejamento tático",
+      "b) Planejamento operacional",
+      "c) Planejamento estratégico",
+      "d) Planejamento funcional",
+      "e) Planejamento setorial"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "O planejamento de médio prazo, realizado pelos gerentes e que aborda de forma distinta cada parte da organização, é chamado de:",
+    "alternativas": [
+      "a) Planejamento estratégico",
+      "b) Planejamento tático",
+      "c) Planejamento operacional",
+      "d) Planejamento normativo",
+      "e) Planejamento contingencial"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "O planejamento de curto prazo, com conteúdo altamente detalhado e foco em operações diárias, é o:",
+    "alternativas": [
+      "a) Planejamento estratégico",
+      "b) Planejamento tático",
+      "c) Planejamento operacional",
+      "d) Planejamento corporativo",
+      "e) Planejamento institucional"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "Assinale a alternativa que apresenta a sequência correta das etapas da função controle:",
+    "alternativas": [
+      "a) Medição do desempenho → Estabelecimento de padrões → Comparação → Ação corretiva",
+      "b) Estabelecimento de padrões → Medição do desempenho → Comparação → Ação corretiva",
+      "c) Comparação → Estabelecimento de padrões → Medição do desempenho → Ação corretiva",
+      "d) Ação corretiva → Estabelecimento de padrões → Medição → Comparação",
+      "e) Estabelecimento de padrões → Comparação → Medição → Ação corretiva"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "São elementos da função direção, EXCETO:",
+    "alternativas": [
+      "a) Liderança",
+      "b) Motivação",
+      "c) Comunicação",
+      "d) Orçamento",
+      "e) Coordenação"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "Sobre o ciclo PODC, é correto afirmar que:",
+    "alternativas": [
+      "a) As funções ocorrem de forma isolada e independente",
+      "b) O controle é a primeira função a ser executada",
+      "c) As funções são interligadas e se retroalimentam em um ciclo contínuo",
+      "d) A direção não se relaciona com as demais funções",
+      "e) O planejamento é a única função que requer análise de ambiente"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "Assinale a alternativa que NÃO corresponde a um princípio do planejamento:",
+    "alternativas": [
+      "a) Viabilidade",
+      "b) Exatidão",
+      "c) Flexibilidade",
+      "d) Rigidez",
+      "e) Unidade"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "A habilidade de lidar com pessoas, liderar e motivar equipes é classificada como:",
+    "alternativas": [
+      "a) Habilidade técnica",
+      "b) Habilidade humana",
+      "c) Habilidade conceitual",
+      "d) Habilidade operacional",
+      "e) Habilidade funcional"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "O controle realizado antes da execução das atividades, com o objetivo de prevenir problemas, é denominado:",
+    "alternativas": [
+      "a) Controle concorrente",
+      "b) Controle posterior",
+      "c) Controle prévio",
+      "d) Controle corretivo",
+      "e) Controle reativo"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "Segundo a Teoria Neoclássica, o processo administrativo é explicado a partir da integração das funções:",
+    "alternativas": [
+      "a) Produção, Finanças, Marketing e Recursos Humanos",
+      "b) Planejamento, Organização, Direção e Controle",
+      "c) Previsão, Comando, Coordenação e Controle",
+      "d) Planejamento, Execução, Verificação e Ação",
+      "e) Estratégia, Estrutura, Sistemas e Estilo"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "A estrutura organizacional resultante da função organização pode ser representada por meio de:",
+    "alternativas": [
+      "a) Fluxogramas",
+      "b) Organogramas",
+      "c) Cronogramas",
+      "d) Diagramas de Pareto",
+      "e) Histogramas"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "A função direção envolve, entre outros aspectos:",
+    "alternativas": [
+      "a) Definir objetivos e metas",
+      "b) Distribuir tarefas e recursos",
+      "c) Liderar, motivar e coordenar pessoas",
+      "d) Monitorar e avaliar resultados",
+      "e) Elaborar orçamentos"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "O controle que ocorre durante a execução das atividades, com acompanhamento em tempo real, é o:",
+    "alternativas": [
+      "a) Controle prévio",
+      "b) Controle concorrente",
+      "c) Controle posterior",
+      "d) Controle estratégico",
+      "e) Contorno tático"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "A ferramenta de planejamento que analisa Forças, Fraquezas, Oportunidades e Ameaças é conhecida como:",
+    "alternativas": [
+      "a) 5W2H",
+      "b) Análise SWOT",
+      "c) Matriz BCG",
+      "d) Diagrama de Ishikawa",
+      "e) PDCA"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "No processo administrativo, a função que antecede a direção e sucede o planejamento é:",
+    "alternativas": [
+      "a) Controle",
+      "b) Organização",
+      "c) Coordenação",
+      "d) Avaliação",
+      "e) Execução"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "O estilo de liderança que centraliza as decisões e impõe ordens é o:",
+    "alternativas": [
+      "a) Democrático",
+      "b) Laissez-faire",
+      "c) Autocrático",
+      "d) Transformacional",
+      "e) Situacional"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "O princípio do planejamento que garante que o plano esteja coerente com a realidade da empresa é a:",
+    "alternativas": [
+      "a) Flexibilidade",
+      "b) Exatidão",
+      "c) Viabilidade",
+      "d) Unidade",
+      "e) Continuidade"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "A organização como função administrativa envolve, entre outras atividades:",
+    "alternativas": [
+      "a) Definir metas e objetivos",
+      "b) Alocar recursos e estruturar tarefas",
+      "c) Motivar e liderar equipes",
+      "d) Monitorar o desempenho",
+      "e) Elaborar o orçamento"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "O controle posterior, também chamado de controle por feedback, ocorre:",
+    "alternativas": [
+      "a) Antes da execução das atividades",
+      "b) Durante a execução das atividades",
+      "c) Após a execução das atividades",
+      "d) Em todas as fases do processo",
+      "e) Apenas em situações de emergência"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "A habilidade conceitual, necessária ao administrador, refere-se à capacidade de:",
+    "alternativas": [
+      "a) Lidar com pessoas e equipes",
+      "b) Executar tarefas técnicas específicas",
+      "c) Compreender a organização como um todo sistêmico",
+      "d) Operar máquinas e equipamentos",
+      "e) Realizar cálculos financeiros"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "O ciclo PDCA, amplamente utilizado na gestão da qualidade, está diretamente relacionado à função de:",
+    "alternativas": [
+      "a) Planejamento",
+      "b) Organização",
+      "c) Direção",
+      "d) Controle",
+      "e) Todas as funções do PODC"
+    ],
+    "gabarito": "E",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "Na função direção, a comunicação organizacional pode fluir nos seguintes sentidos, EXCETO:",
+    "alternativas": [
+      "a) Descendente",
+      "b) Ascendente",
+      "c) Horizontal",
+      "d) Transversal",
+      "e) Diagonal"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "O planejamento tático é caracterizado por:",
+    "alternativas": [
+      "a) Ser abrangente e envolver toda a organização",
+      "b) Ser detalhado e focado em operações diárias",
+      "c) Ser de médio prazo e voltado para departamentos específicos",
+      "d) Ser de longo prazo e estratégico",
+      "e) Ser informal e não documentado"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "A departamentalização é um processo relacionado à função de:",
+    "alternativas": [
+      "a) Planejamento",
+      "b) Organização",
+      "c) Direção",
+      "d) Controle",
+      "e) Avaliação"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_podc"
+  },
+  {
+    "enunciado": "O controle, no processo administrativo, tem como principal finalidade:",
+    "alternativas": [
+      "a) Definir objetivos e metas",
+      "b) Estruturar a organização",
+      "c) Assegurar que o planejamento seja cumprido",
+      "d) Liderar e motivar as pessoas",
+      "e) Elaborar o orçamento"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_podc"
+  }
+]

@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "O serviço responsável pelo recebimento, classificação, registro e distribuição de documentos é o:",
+    "alternativas": [
+      "a) Arquivo",
+      "b) Protocolo",
+      "c) Expedição",
+      "d) Almoxarifado",
+      "e) Ouvidoria"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "Na teoria das três idades, os documentos em uso frequente, mantidos no local de trabalho, estão na fase:",
+    "alternativas": [
+      "a) Corrente",
+      "b) Intermediária",
+      "c) Permanente",
+      "d) Histórica",
+      "e) Descartável"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "A primeira atividade realizada no protocolo, que consiste em conferir o envelope e anotar a data de chegada, é a:",
+    "alternativas": [
+      "a) Classificação",
+      "b) Registro",
+      "c) Distribuição",
+      "d) Recepção",
+      "e) Arquivamento"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "O documento que comprova o recebimento de uma correspondência pelos Correios é o:",
+    "alternativas": [
+      "a) Protocolo",
+      "b) AR – Aviso de Recebimento",
+      "c) SEI",
+      "d) Despacho",
+      "e) Ofício"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "O número de protocolo atribuído a um documento tem como principal função:",
+    "alternativas": [
+      "a) Identificar o assunto do documento",
+      "b) Garantir a individualização e a rastreabilidade do documento",
+      "c) Indicar o valor do documento",
+      "d) Substituir a assinatura digital",
+      "e) Classificar o documento por cor"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "O arquivo destinado aos documentos da 2ª idade (uso menos frequente) é o:",
+    "alternativas": [
+      "a) Arquivo corrente",
+      "b) Arquivo intermediário",
+      "c) Arquivo permanente",
+      "d) Arquivo histórico",
+      "e) Arquivo morto"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "A ferramenta que garante autenticidade, integridade e não repúdio a documentos eletrônicos é a:",
+    "alternativas": [
+      "a) Digitalização",
+      "b) Assinatura digital (ICP-Brasil)",
+      "c) Backup",
+      "d) Migração",
+      "e) Emulação"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "Na expedição de correspondência, a verificação da integridade e do endereçamento correto ocorre na etapa de:",
+    "alternativas": [
+      "a) Registro",
+      "b) Preparação",
+      "c) Envio",
+      "d) Recebimento do material",
+      "e) Comprovação"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "A atribuição de um código ou assunto ao documento, conforme plano de classificação, é a atividade de:",
+    "alternativas": [
+      "a) Registro",
+      "b) Distribuição",
+      "c) Classificação",
+      "d) Arquivamento",
+      "e) Expedição"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "O SEI (Sistema Eletrônico de Informações) é um exemplo de:",
+    "alternativas": [
+      "a) Sistema de gestão financeira",
+      "b) Sistema eletrônico de gestão documental e processos",
+      "c) Programa de controle de estoques",
+      "d) Software de recursos humanos",
+      "e) Banco de dados contábil"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "O percurso do documento entre os setores até a conclusão do processo é chamado de:",
+    "alternativas": [
+      "a) Distribuição",
+      "b) Tramitação",
+      "c) Registro",
+      "d) Classificação",
+      "e) Arquivamento"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "A migração de dados para novas mídias ou formatos, evitando a obsolescência tecnológica, é uma técnica de:",
+    "alternativas": [
+      "a) Preservação digital",
+      "b) Distribuição",
+      "c) Classificação",
+      "d) Protocolo",
+      "e) Digitalização"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "O malote interno é um meio de expedição utilizado para:",
+    "alternativas": [
+      "a) Envio de documentos via Correios",
+      "b) Distribuição interna entre setores da mesma organização",
+      "c) Envio de documentos para órgãos externos",
+      "d) Comunicação com clientes",
+      "e) Envio de mercadorias"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre o ciclo de vida dos documentos e assinale a sequência correta: ( ) A fase permanente destina-se a documentos de valor histórico ou probatório. ( ) Documentos da fase corrente ficam no arquivo intermediário. ( ) A eliminação de documentos é sempre proibida. ( ) A destinação pode ser eliminação ou recolhimento para arquivo permanente.",
+    "alternativas": [
+      "a) V – F – F – V",
+      "b) F – V – V – F",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Protocolo e assinale a sequência correta: ( ) O protocolo é responsável apenas pela expedição de documentos. ( ) A classificação é atribuir um código ou assunto ao documento. ( ) O registro de um documento pode ser feito sem data. ( ) A distribuição encaminha o documento ao setor responsável.",
+    "alternativas": [
+      "a) V – V – F – F",
+      "b) F – V – F – V",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) F – V – V – F"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "O arquivo que guarda documentos de valor histórico, que devem ser preservados indefinidamente, é o:",
+    "alternativas": [
+      "a) Arquivo corrente",
+      "b) Arquivo intermediário",
+      "c) Arquivo permanente",
+      "d) Arquivo administrativo",
+      "e) Arquivo de segurança"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "Ao expedir uma correspondência via Correios, o atendente deve registrar, entre outras informações:",
+    "alternativas": [
+      "a) Apenas o nome do remetente",
+      "b) Data de saída, destinatário e número do documento",
+      "c) Apenas o valor do frete",
+      "d) O conteúdo completo do documento",
+      "e) A cor do envelope"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "O plano de classificação de documentos e a tabela de temporalidade são estabelecidos no serviço público pelo:",
+    "alternativas": [
+      "a) IBGE",
+      "b) CONARQ – Conselho Nacional de Arquivos",
+      "c) STF – Supremo Tribunal Federal",
+      "d) Ministério da Economia",
+      "e) Câmara dos Deputados"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "O controle de tramitação, que permite saber onde está o documento, é possível graças ao:",
+    "alternativas": [
+      "a) Registro e histórico de movimentação",
+      "b) Arquivo permanente",
+      "c) Expedição",
+      "d) Malote interno",
+      "e) Digitalização"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Gestão de Documentos e assinale a sequência correta: ( ) A digitalização substitui completamente a gestão de documentos físicos. ( ) O protocolo recebe, classifica, registra e distribui documentos. ( ) A expedição cuida do envio de documentos para destinatários. ( ) Documentos da fase corrente ficam no arquivo permanente.",
+    "alternativas": [
+      "a) F – V – V – F",
+      "b) V – F – F – V",
+      "c) F – V – F – V",
+      "d) V – V – V – F",
+      "e) F – F – V – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "A Lei 12.682/2012 trata da:",
+    "alternativas": [
+      "a) Criação do SEI",
+      "b) Elaboração e arquivamento de documentos em meios eletrônicos",
+      "c) Instituição da CIPA",
+      "d) Regulamentação dos Correios",
+      "e) Criação do CONARQ"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "Na recepção de documentos, a abertura de correspondências deve ser feita, EXCETO quando:",
+    "alternativas": [
+      "a) O documento for sigiloso ou pessoal",
+      "b) O envelope estiver danificado",
+      "c) For uma correspondência oficial",
+      "d) For um processo administrativo",
+      "e) For um ofício comum"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "No serviço público, o e-SEDEX é uma modalidade dos Correios que oferece:",
+    "alternativas": [
+      "a) Entrega no mesmo dia",
+      "b) Rastreamento e comprovante de entrega",
+      "c) Envio exclusivo para o exterior",
+      "d) Isenção de impostos",
+      "e) Entrega aos domingos"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Gestão de Documentos e assinale a sequência correta: ( ) A fase intermediária é também chamada de pré-arquivo. ( ) A classificação serve para facilitar a recuperação da informação. ( ) A expedição não exige registro dos documentos enviados. ( ) A preservação digital inclui técnicas como migração e emulação.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "O protocolo é responsável pelo controle de:",
+    "alternativas": [
+      "a) Apenas a entrada de documentos",
+      "b) Apenas a saída de documentos",
+      "c) Entrada, classificação, registro e distribuição de documentos",
+      "d) Apenas o arquivamento",
+      "e) Apenas a expedição"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "A fase do ciclo de vida dos documentos em que eles são consultados com pouca frequência, mas ainda aguardam destinação, é a:",
+    "alternativas": [
+      "a) Corrente",
+      "b) Intermediária",
+      "c) Permanente",
+      "d) Histórica",
+      "e) Descartável"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "O documento que registra a decisão de uma autoridade sobre um processo é o:",
+    "alternativas": [
+      "a) Ofício",
+      "b) Memorando",
+      "c) Despacho",
+      "d) Portaria",
+      "e) Circular"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "A Tabela de Temporalidade e Destinação de Documentos (TTDD) define:",
+    "alternativas": [
+      "a) O valor monetário dos documentos",
+      "b) Os prazos de guarda e a destinação final dos documentos",
+      "c) O tipo de suporte a ser utilizado",
+      "d) A cor das pastas de arquivo",
+      "e) O nome dos funcionários do arquivo"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "Na expedição de correspondência, o AR (Aviso de Recebimento) é utilizado para:",
+    "alternativas": [
+      "a) Comprovar o envio do documento",
+      "b) Comprovar o recebimento do documento pelo destinatário",
+      "c) Calcular o frete",
+      "d) Registrar a data de expedição",
+      "e) Identificar o remetente"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_gestao_documentos"
+  },
+  {
+    "enunciado": "O princípio da proveniência, na arquivística, determina que:",
+    "alternativas": [
+      "a) Os documentos devem ser organizados por assunto",
+      "b) Os documentos de um mesmo arquivo não podem ser misturados aos de outros",
+      "c) Os documentos devem ser preservados em sua forma original",
+      "d) Os documentos devem ser digitalizados",
+      "e) Os documentos devem ser eliminados após certo prazo"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_gestao_documentos"
+  }
+]

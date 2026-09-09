@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "A Portaria GM/MS nº 1.526/2023 dispõe sobre a:",
+    "alternativas": [
+      "a) Política Nacional de Atenção Integral à Saúde da Pessoa com Deficiência (PNAISPD) e a Rede de Cuidados à Pessoa com Deficiência (RCPD)",
+      "b) Política Nacional de Saúde Integral LGBT",
+      "c) Política Nacional de Saúde Integral da População Negra",
+      "d) Programa Nacional de Equidade de Gênero e Raça",
+      "e) Lei 13.146/2015"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "A Portaria 1.526/2023 altera as Portarias de Consolidação GM/MS nºs 2, 3 e 6, de 28 de setembro de:",
+    "alternativas": [
+      "a) 2015",
+      "b) 2017",
+      "c) 2019",
+      "d) 2021",
+      "e) 2023"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "O objetivo geral da PNAISPD é:",
+    "alternativas": [
+      "a) Promover a saúde integral da pessoa com deficiência, com atenção em todas as fases do ciclo da vida",
+      "b) Garantir o acesso da pessoa com deficiência apenas à atenção básica",
+      "c) Reduzir o número de pessoas com deficiência no Brasil",
+      "d) Centralizar as ações no Ministério da Saúde",
+      "e) Excluir a pessoa com deficiência do SUS"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "São princípios da PNAISPD, EXCETO:",
+    "alternativas": [
+      "a) Universalidade",
+      "b) Integralidade",
+      "c) Equidade",
+      "d) Centralização",
+      "e) Participação Social"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "A Rede de Cuidados à Pessoa com Deficiência (RCPD) tem como objetivo:",
+    "alternativas": [
+      "a) Garantir a atenção integral à pessoa com deficiência em todos os níveis de complexidade",
+      "b) Substituir a Atenção Básica",
+      "c) Excluir a pessoa com deficiência do SUS",
+      "d) Centralizar os serviços no nível federal",
+      "e) Reduzir o número de serviços de reabilitação"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "São componentes da RCPD, EXCETO:",
+    "alternativas": [
+      "a) Atenção Básica",
+      "b) Atenção Especializada",
+      "c) Atenção Hospitalar",
+      "d) Atenção Domiciliar",
+      "e) Atenção Psiquiátrica"
+    ],
+    "gabarito": "E",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "A Portaria de Consolidação nº 2 trata da:",
+    "alternativas": [
+      "a) Organização e financiamento das ações e serviços de saúde",
+      "b) Programas e políticas de saúde específicas",
+      "c) Gestão do trabalho e educação em saúde",
+      "d) Atenção à saúde indígena",
+      "e) Vigilância sanitária"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "A Portaria de Consolidação nº 3 trata de:",
+    "alternativas": [
+      "a) Programas e políticas de saúde específicas",
+      "b) Organização e financiamento das ações e serviços de saúde",
+      "c) Gestão do trabalho e educação em saúde",
+      "d) Atenção à saúde indígena",
+      "e) Vigilância sanitária"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "A Portaria de Consolidação nº 6 trata da:",
+    "alternativas": [
+      "a) Gestão do trabalho e educação em saúde",
+      "b) Organização e financiamento das ações e serviços de saúde",
+      "c) Programas e políticas de saúde específicas",
+      "d) Atenção à saúde indígena",
+      "e) Vigilância sanitária"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "A PNAISPD prevê a garantia de acessibilidade nos serviços de saúde, incluindo:",
+    "alternativas": [
+      "a) Adaptações arquitetônicas, comunicacionais e atitudinais",
+      "b) Apenas adaptações arquitetônicas",
+      "c) Apenas adaptações comunicacionais",
+      "d) Apenas adaptações atitudinais",
+      "e) Apenas adaptações tecnológicas"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "Os Centros Especializados em Reabilitação (CER) são serviços de referência para:",
+    "alternativas": [
+      "a) Reabilitação física, auditiva, visual, intelectual e mental",
+      "b) Apenas reabilitação física",
+      "c) Apenas reabilitação auditiva",
+      "d) Apenas reabilitação visual",
+      "e) Apenas reabilitação intelectual"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "O Programa Melhor em Casa é um serviço de atenção domiciliar que atende:",
+    "alternativas": [
+      "a) Pessoas com deficiência com dificuldade de locomoção",
+      "b) Apenas idosos",
+      "c) Apenas crianças",
+      "d) Apenas gestantes",
+      "e) Apenas pessoas com doenças crônicas"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "A PNAISPD fundamenta-se, entre outros, na:",
+    "alternativas": [
+      "a) Convenção sobre os Direitos das Pessoas com Deficiência (ONU)",
+      "b) Lei 8.080/90",
+      "c) Lei 8.142/90",
+      "d) Lei 10.741/2003",
+      "e) Portaria 230/2023"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre a PNAISPD e assinale a sequência correta: ( ) A Portaria 1.526/2023 institui a PNAISPD e a RCPD. ( ) A PNAISPD tem como objetivo promover a saúde integral da pessoa com deficiência. ( ) A RCPD substitui a Atenção Básica. ( ) A Portaria 1.526/2023 altera a Portaria de Consolidação nº 6.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "São diretrizes da RCPD, EXCETO:",
+    "alternativas": [
+      "a) Integralidade",
+      "b) Humanização",
+      "c) Acessibilidade",
+      "d) Centralização",
+      "e) Equidade"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "A Portaria de Consolidação nº 3 foi alterada para atualizar as diretrizes da:",
+    "alternativas": [
+      "a) Política Nacional de Atenção à Saúde da Pessoa com Deficiência",
+      "b) Política Nacional de Atenção Básica",
+      "c) Política Nacional de Saúde Mental",
+      "d) Política Nacional de Saúde da Família",
+      "e) Política Nacional de Vigilância Sanitária"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "A acessibilidade nos serviços de saúde inclui a eliminação de barreiras:",
+    "alternativas": [
+      "a) Arquitetônicas, comunicacionais e atitudinais",
+      "b) Apenas arquitetônicas",
+      "c) Apenas comunicacionais",
+      "d) Apenas atitudinais",
+      "e) Apenas tecnológicas"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "O Serviço de Atendimento Móvel de Urgência (SAMU) é um serviço que faz parte da RCPD no componente de:",
+    "alternativas": [
+      "a) Urgência e Emergência",
+      "b) Atenção Básica",
+      "c) Atenção Especializada",
+      "d) Atenção Domiciliar",
+      "e) Atenção Hospitalar"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "O Programa Melhor em Casa é um serviço de:",
+    "alternativas": [
+      "a) Atenção Domiciliar",
+      "b) Atenção Hospitalar",
+      "c) Atenção Básica",
+      "d) Atenção Especializada",
+      "e) Urgência e Emergência"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre a PNAISPD e assinale a sequência correta: ( ) A Portaria 1.526/2023 altera a Portaria de Consolidação nº 2, que trata da organização e financiamento. ( ) A Portaria 1.526/2023 altera a Portaria de Consolidação nº 3, que trata de programas e políticas de saúde. ( ) A Portaria 1.526/2023 não altera a Portaria de Consolidação nº 6. ( ) A Portaria 1.526/2023 institui a RCPD.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "Os Centros Especializados em Reabilitação (CER) são serviços de:",
+    "alternativas": [
+      "a) Atenção Especializada",
+      "b) Atenção Básica",
+      "c) Atenção Hospitalar",
+      "d) Atenção Domiciliar",
+      "e) Urgência e Emergência"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "O princípio da integralidade, na PNAISPD, significa:",
+    "alternativas": [
+      "a) Cuidado biopsicossocial, com ações de promoção, prevenção, reabilitação e manutenção",
+      "b) Apenas ações curativas",
+      "c) Apenas ações preventivas",
+      "d) Apenas ações de reabilitação",
+      "e) Apenas ações de promoção"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "A primeira Política Nacional de Atenção à Saúde da Pessoa com Deficiência foi instituída pela Portaria GM/MS nº 1.060/GM, no ano de:",
+    "alternativas": [
+      "a) 2003",
+      "b) 2009",
+      "c) 2011",
+      "d) 2015",
+      "e) 2023"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "Analise as afirmativas finais sobre a PNAISPD e assinale a sequência correta: ( ) A Portaria 1.526/2023 institui a PNAISPD e a RCPD. ( ) A RCPD é uma rede temática do SUS. ( ) A PNAISPD tem como princípio a centralização das decisões. ( ) A Portaria 1.526/2023 altera a Portaria de Consolidação nº 6.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "A Portaria 1.526/2023 foi publicada em:",
+    "alternativas": [
+      "a) 11 de outubro de 2023",
+      "b) 7 de março de 2023",
+      "c) 13 de maio de 2009",
+      "d) 1º de dezembro de 2011",
+      "e) 6 de julho de 2015"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "A PNAISPD foi instituída pelo:",
+    "alternativas": [
+      "a) Ministério da Saúde",
+      "b) Conselho Nacional de Saúde",
+      "c) Secretaria de Atenção à Saúde",
+      "d) Agência Nacional de Vigilância Sanitária",
+      "e) Ministério da Mulher, da Família e dos Direitos Humanos"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "A RCPD é composta por diferentes pontos de atenção, organizados em níveis de complexidade. A Atenção Básica é um desses componentes e inclui:",
+    "alternativas": [
+      "a) Unidades Básicas de Saúde (UBS), Equipes de Saúde da Família (ESF) e Núcleo de Apoio à Saúde da Família (NASF)",
+      "b) Apenas Unidades Básicas de Saúde (UBS)",
+      "c) Apenas Equipes de Saúde da Família (ESF)",
+      "d) Apenas Núcleo de Apoio à Saúde da Família (NASF)",
+      "e) Apenas hospitais"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "A RCPD tem como diretriz a integralidade, que significa:",
+    "alternativas": [
+      "a) Ações de promoção, prevenção, reabilitação e manutenção da saúde",
+      "b) Apenas ações de promoção",
+      "c) Apenas ações de prevenção",
+      "d) Apenas ações de reabilitação",
+      "e) Apenas ações de manutenção"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "A RCPD tem como diretriz a humanização, que envolve:",
+    "alternativas": [
+      "a) Atendimento respeitoso, com acolhimento e escuta qualificada",
+      "b) Apenas atendimento rápido",
+      "c) Apenas atendimento técnico",
+      "d) Apenas atendimento burocrático",
+      "e) Apenas atendimento administrativo"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  },
+  {
+    "enunciado": "A RCPD tem como diretriz a acessibilidade, que envolve:",
+    "alternativas": [
+      "a) Adaptações arquitetônicas, comunicacionais e atitudinais",
+      "b) Apenas adaptações arquitetônicas",
+      "c) Apenas adaptações comunicacionais",
+      "d) Apenas adaptações atitudinais",
+      "e) Apenas adaptações tecnológicas"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_pnaispd_rcpd"
+  }
+]

@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "O HumanizaSUS é a política nacional de:",
+    "alternativas": [
+      "a) Atenção Básica",
+      "b) Humanização da Atenção e Gestão do SUS",
+      "c) Saúde da Família",
+      "d) Vigilância Sanitária",
+      "e) Saúde Mental"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "O HumanizaSUS foi criado pelo Ministério da Saúde no ano de:",
+    "alternativas": [
+      "a) 1988",
+      "b) 1990",
+      "c) 2003",
+      "d) 2011",
+      "e) 2015"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "São objetivos do HumanizaSUS, EXCETO:",
+    "alternativas": [
+      "a) Valorizar os trabalhadores do SUS",
+      "b) Garantir o protagonismo dos usuários",
+      "c) Fortalecer a gestão participativa",
+      "d) Centralizar as decisões no nível federal",
+      "e) Humanizar as relações entre profissionais e usuários"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "O princípio do HumanizaSUS que se refere à responsabilidade compartilhada entre gestores, trabalhadores e usuários é a:",
+    "alternativas": [
+      "a) Autonomia",
+      "b) Corresponsabilidade",
+      "c) Solidariedade",
+      "d) Transversalidade",
+      "e) Inclusão"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "A diretriz da PNH que se refere à recepção do usuário com escuta qualificada e classificação de risco é o:",
+    "alternativas": [
+      "a) Acolhimento",
+      "b) Ambiência",
+      "c) Clínica Ampliada",
+      "d) Gestão Participativa",
+      "e) Valorização do Trabalhador"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "A diretriz que busca criar espaços saudáveis, acolhedores e confortáveis nos serviços de saúde é a:",
+    "alternativas": [
+      "a) Acolhimento",
+      "b) Ambiência",
+      "c) Clínica Ampliada",
+      "d) Gestão Participativa",
+      "e) Defesa dos Direitos dos Usuários"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "Os Grupos de Trabalho de Humanização (GTH) são dispositivos que:",
+    "alternativas": [
+      "a) Substituem os Conselhos de Saúde",
+      "b) Implementam a PNH nos serviços de saúde",
+      "c) Realizam a gestão financeira do SUS",
+      "d) Fiscalizam as ações de vigilância sanitária",
+      "e) Coordenam a Atenção Básica"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "O princípio da transversalidade, no HumanizaSUS, significa que:",
+    "alternativas": [
+      "a) A humanização deve permear todas as ações e serviços do SUS",
+      "b) A humanização é um programa isolado",
+      "c) A humanização é restrita à atenção hospitalar",
+      "d) A humanização é uma ação exclusiva da gestão federal",
+      "e) A humanização se aplica apenas aos trabalhadores"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "São macro-objetivos da PNH, EXCETO:",
+    "alternativas": [
+      "a) Valorização do trabalho",
+      "b) Transformação dos modos de gestão",
+      "c) Fortalecimento da atenção integral",
+      "d) Privatização dos serviços de saúde",
+      "e) Inclusão e equidade"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "A Clínica Ampliada, como diretriz do HumanizaSUS, propõe uma abordagem que considera o sujeito em sua:",
+    "alternativas": [
+      "a) Totalidade (biológica, psicológica, social e cultural)",
+      "b) Dimensão biológica apenas",
+      "c) Dimensão psicológica apenas",
+      "d) Dimensão social apenas",
+      "e) Dimensão cultural apenas"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "O Projeto de Acolhimento com Classificação de Risco organiza o fluxo de atendimento com base na:",
+    "alternativas": [
+      "a) Ordem de chegada",
+      "b) Gravidade do estado do usuário",
+      "c) Idade do usuário",
+      "d) Profissão do usuário",
+      "e) Local de residência"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "O HumanizaSUS busca fortalecer a gestão participativa, envolvendo:",
+    "alternativas": [
+      "a) Apenas os gestores",
+      "b) Apenas os trabalhadores",
+      "c) Trabalhadores e usuários nos processos decisórios",
+      "d) Apenas os conselheiros de saúde",
+      "e) Apenas os prestadores de serviços"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "A diretriz que trata da defesa dos direitos dos usuários inclui, entre outros:",
+    "alternativas": [
+      "a) Garantia de acesso, informação, sigilo, autonomia e participação",
+      "b) Apenas garantia de acesso",
+      "c) Apenas garantia de sigilo",
+      "d) Apenas garantia de autonomia",
+      "e) Apenas garantia de informação"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre princípios e diretrizes do HumanizaSUS e assinale a sequência correta: ( ) A corresponsabilidade é um princípio do HumanizaSUS. ( ) O acolhimento é uma diretriz da PNH. ( ) A transversalidade significa que a humanização é restrita à atenção hospitalar. ( ) A Clínica Ampliada considera o sujeito em sua totalidade.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "A diretriz do HumanizaSUS que envolve a abordagem integral do sujeito por equipes multiprofissionais é a:",
+    "alternativas": [
+      "a) Acolhimento",
+      "b) Ambiência",
+      "c) Clínica Ampliada",
+      "d) Gestão Participativa",
+      "e) Valorização do Trabalhador"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "O HumanizaSUS foi instituído por qual portaria?",
+    "alternativas": [
+      "a) Portaria GM/MS nº 881, de 19 de maio de 2003",
+      "b) Portaria GM/MS nº 992, de 13 de maio de 2009",
+      "c) Portaria GM/MS nº 2.836, de 1º de dezembro de 2011",
+      "d) Portaria GM/MS nº 230, de 7 de março de 2023",
+      "e) Portaria GM/MS nº 1.526, de 11 de outubro de 2023"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "O princípio que reconhece a capacidade de cada pessoa de decidir sobre sua vida e seu cuidado é a:",
+    "alternativas": [
+      "a) Autonomia",
+      "b) Corresponsabilidade",
+      "c) Solidariedade",
+      "d) Transversalidade",
+      "e) Inclusão"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "As Rodas de Conversa e Grupos de Escuta são dispositivos que promovem:",
+    "alternativas": [
+      "a) O diálogo entre trabalhadores, usuários e gestores",
+      "b) A avaliação de desempenho dos servidores",
+      "c) A fiscalização financeira do SUS",
+      "d) A contratação de novos profissionais",
+      "e) A distribuição de medicamentos"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre o HumanizaSUS e assinale a sequência correta: ( ) O HumanizaSUS valoriza a diversidade e combate a discriminação. ( ) O acolhimento envolve apenas a recepção cordial do usuário. ( ) A ambiência é uma diretriz que trata da infraestrutura dos serviços. ( ) A PNH é uma política transversal do SUS.",
+    "alternativas": [
+      "a) V – F – V – V",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "A gestão participativa, como diretriz do HumanizaSUS, envolve a criação de espaços como:",
+    "alternativas": [
+      "a) Conselhos de Saúde e Ouvidorias",
+      "b) Apenas os Conselhos de Saúde",
+      "c) Apenas as Ouvidorias",
+      "d) Apenas as Conferências de Saúde",
+      "e) Apenas os Sindicatos"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "O HumanizaSUS busca transformar os modos de gestão, promovendo uma gestão:",
+    "alternativas": [
+      "a) Autoritária e centralizada",
+      "b) Democrática, compartilhada e transparente",
+      "c) Exclusivamente técnica",
+      "d) Baseada em interesses privados",
+      "e) Verticalizada"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "As visitas abertas e o incentivo à presença de acompanhantes são práticas que promovem:",
+    "alternativas": [
+      "a) O isolamento do usuário",
+      "b) A humanização do atendimento",
+      "c) A redução de custos",
+      "d) A burocratização dos serviços",
+      "e) A centralização do cuidado"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "Analise as afirmativas finais sobre o HumanizaSUS e assinale a sequência correta: ( ) O HumanizaSUS é uma política exclusiva do nível federal. ( ) A Clínica Ampliada é uma diretriz da PNH. ( ) A valorização do trabalhador é um macro-objetivo do HumanizaSUS. ( ) O acolhimento envolve a classificação de risco.",
+    "alternativas": [
+      "a) F – V – V – V",
+      "b) V – F – V – F",
+      "c) F – V – F – V",
+      "d) V – V – F – V",
+      "e) F – F – V – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "O HumanizaSUS foi criado com o objetivo de efetivar os princípios do SUS no cotidiano das práticas de:",
+    "alternativas": [
+      "a) Atenção e gestão",
+      "b) Apenas atenção",
+      "c) Apenas gestão",
+      "d) Apenas vigilância",
+      "e) Apenas educação"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "A Resolução CNS nº 330/2003, que trata da NOB/RH-SUS, está relacionada ao HumanizaSUS por meio da:",
+    "alternativas": [
+      "a) Valorização do trabalhador",
+      "b) Centralização das decisões",
+      "c) Exclusão dos usuários",
+      "d) Redução da participação social",
+      "e) Eliminação da educação permanente"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "O acolhimento no HumanizaSUS envolve, além da recepção, a:",
+    "alternativas": [
+      "a) Classificação de risco e escuta qualificada",
+      "b) Apenas a recepção cordial",
+      "c) Apenas a classificação de risco",
+      "d) Apenas a escuta qualificada",
+      "e) Apenas o encaminhamento para outro setor"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "A PNH (Política Nacional de Humanização) é uma política do SUS que visa:",
+    "alternativas": [
+      "a) Apenas melhorar a infraestrutura dos hospitais",
+      "b) Transformar a cultura de atenção e gestão, colocando as pessoas no centro do cuidado",
+      "c) Reduzir o número de funcionários do SUS",
+      "d) Excluir os usuários da gestão",
+      "e) Centralizar as decisões no Ministério da Saúde"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "Os projetos de ambiência no HumanizaSUS buscam:",
+    "alternativas": [
+      "a) Criar espaços saudáveis, acolhedores e confortáveis",
+      "b) Reduzir o número de leitos",
+      "c) Aumentar a burocracia",
+      "d) Eliminar a privacidade dos usuários",
+      "e) Reduzir o atendimento"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "O HumanizaSUS defende um SUS que reconhece e respeita a diversidade, oferecendo:",
+    "alternativas": [
+      "a) O mesmo tratamento com distinção de raça, cor, origem ou orientação sexual",
+      "b) O mesmo tratamento sem distinção de raça, cor, origem ou orientação sexual",
+      "c) Tratamento diferenciado para cada grupo",
+      "d) Apenas atendimento a grupos específicos",
+      "e) Exclusão de grupos vulneráveis"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_humanizasus"
+  },
+  {
+    "enunciado": "O HumanizaSUS foi instituído pela Portaria GM/MS nº 881, de 19 de maio de 2003. Essa portaria é conhecida por:",
+    "alternativas": [
+      "a) Instituir a Política Nacional de Humanização",
+      "b) Criar o Programa Brasil sem Homofobia",
+      "c) Instituir a Política Nacional de Saúde Integral LGBT",
+      "d) Criar a Rede de Cuidados à Pessoa com Deficiência",
+      "e) Instituir o Programa Nacional de Equidade de Gênero"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_humanizasus"
+  }
+]

@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "O Estatuto da Pessoa com Deficiência (Lei 13.146/2015) é também conhecido como:",
+    "alternativas": [
+      "a) Lei Brasileira de Inclusão",
+      "b) Lei de Acessibilidade",
+      "c) Lei de Direitos Humanos",
+      "d) Lei de Proteção Social",
+      "e) Lei da Pessoa com Deficiência"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "O Art. 2º da Lei 13.146/2015 define pessoa com deficiência como aquela que tem impedimento de longo prazo de natureza:",
+    "alternativas": [
+      "a) Física, mental, intelectual ou sensorial",
+      "b) Apenas física",
+      "c) Apenas mental",
+      "d) Apenas sensorial",
+      "e) Apenas intelectual"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "São consideradas barreiras, segundo a Lei 13.146/2015, EXCETO:",
+    "alternativas": [
+      "a) Arquitetônicas",
+      "b) Atitudinais",
+      "c) Comunicacionais",
+      "d) Tecnológicas",
+      "e) Econômicas"
+    ],
+    "gabarito": "E",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "São princípios da Lei Brasileira de Inclusão, EXCETO:",
+    "alternativas": [
+      "a) Igualdade e não discriminação",
+      "b) Autonomia e independência",
+      "c) Acessibilidade",
+      "d) Centralização das políticas",
+      "e) Participação social"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "O Art. 24 da Lei 13.146/2015 assegura à pessoa com deficiência o direito à saúde por meio de:",
+    "alternativas": [
+      "a) Políticas públicas que garantam atenção integral",
+      "b) Apenas atendimento emergencial",
+      "c) Apenas medicamentos gratuitos",
+      "d) Apenas hospitais privados",
+      "e) Apenas tratamento no exterior"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "O Art. 25 garante à pessoa com deficiência a atenção integral à saúde, por intermédio do:",
+    "alternativas": [
+      "a) SUS",
+      "b) Sistema de Saúde Suplementar",
+      "c) Ministério da Saúde",
+      "d) Secretaria de Assistência Social",
+      "e) Conselho Nacional de Saúde"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "O Art. 26 determina que a pessoa com deficiência seja incluída na:",
+    "alternativas": [
+      "a) Rede de Cuidados à Pessoa com Deficiência (RCPD)",
+      "b) Rede de Atenção Psicossocial (RAPS)",
+      "c) Rede de Urgência e Emergência",
+      "d) Rede de Atenção Básica",
+      "e) Rede de Atenção Hospitalar"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "O conceito de acessibilidade, segundo a Lei 13.146/2015, inclui, entre outras dimensões:",
+    "alternativas": [
+      "a) Arquitetônica, urbanística e comunicacional",
+      "b) Apenas arquitetônica",
+      "c) Apenas urbanística",
+      "d) Apenas comunicacional",
+      "e) Apenas tecnológica"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "A tecnologia assistiva, segundo a Lei 13.146/2015, tem como objetivo:",
+    "alternativas": [
+      "a) Aumentar a funcionalidade e autonomia da pessoa com deficiência",
+      "b) Substituir completamente a pessoa com deficiência",
+      "c) Reduzir o acesso da pessoa com deficiência aos serviços",
+      "d) Excluir a pessoa com deficiência do mercado de trabalho",
+      "e) Apenas fornecer próteses"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "O Art. 27 da Lei 13.146/2015 garante à pessoa com deficiência o direito à:",
+    "alternativas": [
+      "a) Educação inclusiva em todos os níveis de ensino",
+      "b) Apenas educação especial",
+      "c) Apenas educação básica",
+      "d) Apenas educação superior",
+      "e) Apenas educação infantil"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "O Art. 34 da Lei 13.146/2015 garante à pessoa com deficiência o direito ao trabalho em:",
+    "alternativas": [
+      "a) Igualdade de oportunidades",
+      "b) Apenas em empresas públicas",
+      "c) Apenas em empresas privadas",
+      "d) Apenas em cooperativas",
+      "e) Apenas em trabalho voluntário"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "O Art. 35 da Lei 13.146/2015 veda à pessoa com deficiência o tratamento:",
+    "alternativas": [
+      "a) Desumano, degradante ou discriminatório",
+      "b) Apenas desumano",
+      "c) Apenas degradante",
+      "d) Apenas discriminatório",
+      "e) Apenas abusivo"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "A Lei 13.146/2015 garante à pessoa surda o acesso à comunicação por meio da:",
+    "alternativas": [
+      "a) Língua Brasileira de Sinais (Libras)",
+      "b) Apenas leitura labial",
+      "c) Apenas linguagem escrita",
+      "d) Apenas interpretação simultânea",
+      "e) Apenas comunicação gestual"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre a Lei 13.146/2015 e assinale a sequência correta: ( ) A Lei é conhecida como Lei Brasileira de Inclusão. ( ) O princípio da autonomia garante à pessoa com deficiência o direito de tomar suas próprias decisões. ( ) O Art. 24 garante à pessoa com deficiência o direito à saúde apenas em hospitais privados. ( ) A acessibilidade é um dos princípios da Lei.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "A acessibilidade, segundo a Lei 13.146/2015, é obrigatória em:",
+    "alternativas": [
+      "a) Edificações públicas e privadas de uso coletivo",
+      "b) Apenas em edifícios públicos",
+      "c) Apenas em edifícios privados",
+      "d) Apenas em espaços urbanos",
+      "e) Apenas em transportes"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "A Rede de Cuidados à Pessoa com Deficiência (RCPD) foi instituída no âmbito do SUS por meio da:",
+    "alternativas": [
+      "a) Lei 13.146/2015",
+      "b) Portaria GM/MS nº 1.526, de 11 de outubro de 2023",
+      "c) Portaria nº 2.836/2011",
+      "d) Lei 8.080/90",
+      "e) Portaria nº 992/2009"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "São direitos garantidos pela Lei 13.146/2015 à pessoa com deficiência, EXCETO:",
+    "alternativas": [
+      "a) Educação inclusiva",
+      "b) Trabalho em igualdade de oportunidades",
+      "c) Participação social e cultural",
+      "d) Isenção de impostos",
+      "e) Acessibilidade em espaços públicos"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "A Lei 13.146/2015 garante à pessoa com deficiência o acesso à comunicação por meio de:",
+    "alternativas": [
+      "a) Libras, legenda, audiodescrição e Braille",
+      "b) Apenas Libras",
+      "c) Apenas legenda",
+      "d) Apenas audiodescrição",
+      "e) Apenas Braille"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "A Lei 13.146/2015 veda a discriminação da pessoa com deficiência na:",
+    "alternativas": [
+      "a) Contratação, permanência e promoção no trabalho",
+      "b) Apenas na contratação",
+      "c) Apenas na permanência",
+      "d) Apenas na promoção",
+      "e) Apenas na rescisão"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre a Lei 13.146/2015 e assinale a sequência correta: ( ) A Lei foi inspirada na Convenção sobre os Direitos das Pessoas com Deficiência da ONU. ( ) O Art. 26 determina a inclusão da pessoa com deficiência na Rede de Cuidados à Pessoa com Deficiência. ( ) A Lei não prevê a distribuição gratuita de tecnologia assistiva. ( ) A acessibilidade comunicacional é garantida pela Lei.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "As barreiras atitudinais, segundo a Lei 13.146/2015, são:",
+    "alternativas": [
+      "a) Preconceitos, estigmas e comportamentos discriminatórios",
+      "b) Apenas barreiras físicas",
+      "c) Apenas barreiras tecnológicas",
+      "d) Apenas barreiras comunicacionais",
+      "e) Apenas barreiras urbanísticas"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "O princípio da autonomia, na Lei 13.146/2015, garante à pessoa com deficiência:",
+    "alternativas": [
+      "a) O direito de tomar suas próprias decisões e exercer sua capacidade civil",
+      "b) Apenas o direito de expressar sua opinião",
+      "c) Apenas o direito de escolher seu tratamento",
+      "d) Apenas o direito de escolher seu local de trabalho",
+      "e) Apenas o direito de escolher sua moradia"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "A Lei 13.146/2015 garante à pessoa com deficiência o direito à participação em:",
+    "alternativas": [
+      "a) Atividades culturais, esportivas e de lazer",
+      "b) Apenas atividades culturais",
+      "c) Apenas atividades esportivas",
+      "d) Apenas atividades de lazer",
+      "e) Apenas atividades religiosas"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "Analise as afirmativas finais sobre a Lei 13.146/2015 e assinale a sequência correta: ( ) A Lei é conhecida como Estatuto da Pessoa com Deficiência. ( ) O Art. 25 garante à pessoa com deficiência a atenção integral à saúde por meio do SUS. ( ) A Lei prevê a distribuição gratuita de medicamentos para pessoas com deficiência. ( ) A acessibilidade arquitetônica é obrigatória em edificações públicas e privadas de uso coletivo.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "A Lei 13.146/2015 foi sancionada em:",
+    "alternativas": [
+      "a) 6 de julho de 2015",
+      "b) 1º de outubro de 2003",
+      "c) 13 de maio de 2009",
+      "d) 1º de dezembro de 2011",
+      "e) 7 de março de 2023"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "O Art. 24 da Lei 13.146/2015 estabelece que o direito à saúde da pessoa com deficiência será assegurado por meio de políticas públicas que garantam a atenção integral, em todos os níveis de complexidade. Essa atenção deve ser:",
+    "alternativas": [
+      "a) Apenas curativa",
+      "b) Apenas preventiva",
+      "c) Apenas de reabilitação",
+      "d) Integral, incluindo promoção, prevenção, reabilitação e manutenção da saúde",
+      "e) Apenas de urgência e emergência"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "A Lei 13.146/2015 prevê a inclusão do quesito deficiência nos sistemas de informação do SUS. Essa afirmação é:",
+    "alternativas": [
+      "a) Verdadeira, pois a lei prevê a coleta de dados sobre deficiência",
+      "b) Falsa, pois a lei não prevê essa inclusão",
+      "c) Verdadeira, mas apenas para pessoas com deficiência física",
+      "d) Falsa, pois a lei é restrita à atenção básica",
+      "e) Verdadeira, mas apenas para pessoas com deficiência visual"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "A Lei 13.146/2015 prevê a formação de recursos humanos para o atendimento à pessoa com deficiência. Essa afirmação é:",
+    "alternativas": [
+      "a) Verdadeira, pois a lei prevê a qualificação dos profissionais",
+      "b) Falsa, pois a lei não prevê essa formação",
+      "c) Verdadeira, mas apenas para médicos",
+      "d) Falsa, pois a lei é restrita à atenção básica",
+      "e) Verdadeira, mas apenas para enfermeiros"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "O Art. 26 da Lei 13.146/2015 determina que a pessoa com deficiência seja incluída nas redes de atenção à saúde, especialmente na Rede de Cuidados à Pessoa com Deficiência (RCPD), no âmbito do SUS. Essa rede deve garantir:",
+    "alternativas": [
+      "a) Apenas a articulação entre os serviços",
+      "b) A atenção integral, com ações de promoção, prevenção, reabilitação e manutenção da saúde",
+      "c) Apenas a reabilitação",
+      "d) Apenas a prevenção de doenças",
+      "e) Apenas a promoção da saúde"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  },
+  {
+    "enunciado": "A Lei 13.146/2015 garante à pessoa com deficiência o direito a atendimento prioritário e acompanhante durante a internação. Essa afirmação é:",
+    "alternativas": [
+      "a) Verdadeira, pois a lei prevê esses direitos",
+      "b) Falsa, pois a lei não prevê esses direitos",
+      "c) Verdadeira, mas apenas para pessoas com deficiência grave",
+      "d) Falsa, pois a lei é restrita à atenção básica",
+      "e) Verdadeira, mas apenas para pessoas com deficiência visual"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_estatuto_deficiencia"
+  }
+]

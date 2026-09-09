@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "A Lei 8.080/90 é conhecida como:",
+    "alternativas": [
+      "a) Lei Orgânica da Saúde",
+      "b) Lei de Diretrizes e Bases da Saúde",
+      "c) Código de Saúde",
+      "d) Estatuto da Saúde",
+      "e) Lei de Organização Sanitária"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "De acordo com o Art. 5º da Lei 8.080/90, são objetivos do SUS, EXCETO:",
+    "alternativas": [
+      "a) Identificar e divulgar fatores determinantes da saúde",
+      "b) Formular política de saúde para redução de riscos",
+      "c) Promover a assistência integral à saúde",
+      "d) Centralizar todas as decisões no nível federal",
+      "e) Realizar ações de promoção, proteção e recuperação da saúde"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "O princípio da equidade, no SUS, significa:",
+    "alternativas": [
+      "a) Oferecer o mesmo tratamento a todos, sem distinção",
+      "b) Reduzir as desigualdades regionais e sociais",
+      "c) Garantir acesso universal aos serviços de saúde",
+      "d) Integrar ações preventivas e curativas",
+      "e) Descentralizar a gestão para os municípios"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "Assinale a alternativa que NÃO corresponde a uma diretriz organizacional do SUS prevista no Art. 7º da Lei 8.080/90:",
+    "alternativas": [
+      "a) Descentralização",
+      "b) Regionalização e hierarquização",
+      "c) Participação da comunidade",
+      "d) Centralização político-administrativa",
+      "e) Resolução dos serviços"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "A direção única do SUS em cada esfera de governo é exercida por:",
+    "alternativas": [
+      "a) Ministério da Saúde, Secretarias Estaduais e Municipais de Saúde",
+      "b) Conselhos de Saúde",
+      "c) Conferências de Saúde",
+      "d) Agências Reguladoras",
+      "e) Fundações de Saúde"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "À União cabe, entre outras atribuições, segundo a Lei 8.080/90:",
+    "alternativas": [
+      "a) Gestão de serviços estaduais de saúde",
+      "b) Planejamento municipal das ações de saúde",
+      "c) Formulação e coordenação da Política Nacional de Saúde",
+      "d) Execução de ações de vigilância sanitária no município",
+      "e) Participação no controle social do SUS"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "A Lei 13.097/2015 alterou a Lei 8.080/90 para permitir:",
+    "alternativas": [
+      "a) A criação do subsistema de saúde indígena",
+      "b) A participação de capitais estrangeiros na assistência à saúde",
+      "c) O atendimento a mulheres vítimas de violência",
+      "d) A incorporação de novas tecnologias",
+      "e) A criação da ANVISA"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "A integralidade, como princípio do SUS, significa que:",
+    "alternativas": [
+      "a) A saúde é direito de todos e dever do Estado",
+      "b) A assistência à saúde deve ser descentralizada",
+      "c) As ações e serviços devem ser preventivos e curativos, em todos os níveis",
+      "d) Os usuários devem participar da gestão da saúde",
+      "e) O SUS deve ser regionalizado e hierarquizado"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "A Lei 8.080/90 estabelece que o SUS atua em áreas como vigilância sanitária, saúde do trabalhador e:",
+    "alternativas": [
+      "a) Controle de alimentos e medicamentos",
+      "b) Formulação da política de saneamento básico",
+      "c) Financiamento da previdência social",
+      "d) Gestão do sistema prisional",
+      "e) Controle de trânsito"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "A descentralização político-administrativa do SUS enfatiza a gestão municipal, com:",
+    "alternativas": [
+      "a) Direção única em cada esfera de governo",
+      "b) Centralização das decisões no Ministério da Saúde",
+      "c) Eliminação da participação dos estados",
+      "d) Redução do financiamento municipal",
+      "e) Criação de hospitais privados"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "O controle social no SUS é exercido por meio de:",
+    "alternativas": [
+      "a) Conselhos de Saúde e Conferências de Saúde",
+      "b) Secretarias Estaduais de Saúde",
+      "c) Ministério da Saúde",
+      "d) Agências Reguladoras",
+      "e) Tribunais de Contas"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "O SUS é financiado com recursos do:",
+    "alternativas": [
+      "a) Orçamento da seguridade social, da União, estados e municípios",
+      "b) Apenas do orçamento federal",
+      "c) Apenas do orçamento estadual",
+      "d) Apenas do orçamento municipal",
+      "e) Doações de organismos internacionais"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "São atribuições comuns de todas as esferas de governo, de acordo com o Art. 15 da Lei 8.080/90:",
+    "alternativas": [
+      "a) Definir e executar políticas de saúde",
+      "b) Realizar ações de vigilância sanitária",
+      "c) Participar da execução de ações de saneamento básico",
+      "d) Todas as alternativas estão corretas",
+      "e) Nenhuma das alternativas está correta"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre os princípios do SUS e assinale a sequência correta: ( ) A universalidade de acesso garante que todos tenham acesso aos serviços de saúde. ( ) A equidade significa oferecer o mesmo tratamento a todos. ( ) A integralidade abrange ações preventivas e curativas. ( ) A descentralização visa centralizar as decisões no Ministério da Saúde.",
+    "alternativas": [
+      "a) V – F – V – F",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "A Lei 13.685/2018 incluiu na Lei 8.080/90 o atendimento à saúde de:",
+    "alternativas": [
+      "a) Pessoas com deficiência",
+      "b) Mulheres vítimas de violência doméstica e familiar",
+      "c) População LGBT",
+      "d) População negra",
+      "e) Pessoas idosas"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "O princípio da universalidade no SUS significa que:",
+    "alternativas": [
+      "a) Todos têm direito ao acesso aos serviços de saúde em todos os níveis",
+      "b) A saúde é dever do Estado e direito da família",
+      "c) Os serviços de saúde devem ser oferecidos apenas para quem contribui",
+      "d) O acesso à saúde é restrito a urgências e emergências",
+      "e) A saúde é um direito condicionado à disponibilidade financeira"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "A regionalização e hierarquização organizam a rede de serviços em níveis de complexidade, sendo a porta de entrada do SUS geralmente:",
+    "alternativas": [
+      "a) Unidades de Pronto Atendimento (UPA)",
+      "b) Atenção Primária à Saúde (APS)",
+      "c) Hospitais terciários",
+      "d) Centros de Reabilitação",
+      "e) Serviços de urgência e emergência"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "A coordenação da política estadual de saúde é atribuição do(s):",
+    "alternativas": [
+      "a) Ministério da Saúde",
+      "b) Secretaria Estadual de Saúde",
+      "c) Secretaria Municipal de Saúde",
+      "d) Conselho Estadual de Saúde",
+      "e) Agência Nacional de Saúde"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre a Lei 8.080/90 e assinale a sequência correta: ( ) A Lei 8.080/90 é anterior à Constituição Federal de 1988. ( ) O SUS tem como princípio a equidade, que busca reduzir desigualdades. ( ) A União é responsável apenas pela normatização, sem financiamento. ( ) A Lei 13.097/2015 permitiu a participação de capitais estrangeiros na saúde.",
+    "alternativas": [
+      "a) F – V – F – V",
+      "b) V – F – V – F",
+      "c) F – V – V – F",
+      "d) V – V – F – V",
+      "e) F – F – V – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "Segundo o Art. 5º da Lei 8.080/90, é objetivo do SUS:",
+    "alternativas": [
+      "a) Reduzir a participação popular na gestão da saúde",
+      "b) Centralizar as decisões no Ministério da Saúde",
+      "c) Formular política de saúde para redução de riscos",
+      "d) Excluir a iniciativa privada da assistência à saúde",
+      "e) Criar subsistemas estaduais independentes"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "O SUS é financiado com recursos dos orçamentos da seguridade social, da União, dos estados, do Distrito Federal e dos municípios. Esse modelo de financiamento é caracterizado como:",
+    "alternativas": [
+      "a) Exclusivamente federal",
+      "b) Tripartite",
+      "c) Bipartite",
+      "d) Municipalista",
+      "e) Centralizado"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "A Lei 14.721/2023 alterou a Lei 8.080/90 para:",
+    "alternativas": [
+      "a) Criar a Política Nacional de Saúde Integral LGBT",
+      "b) Estabelecer novas diretrizes para a gestão do SUS",
+      "c) Instituir o Estatuto da Pessoa Idosa",
+      "d) Criar a Rede de Cuidados à Pessoa com Deficiência",
+      "e) Instituir o Programa Nacional de Equidade de Gênero"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre competências na Lei 8.080/90 e assinale a sequência correta: ( ) A União formula a Política Nacional de Saúde. ( ) Os estados coordenam a política estadual de saúde. ( ) Os municípios apenas executam ações, sem participação no planejamento. ( ) O SUS tem direção única em cada esfera de governo.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "Analise as afirmativas finais sobre a Lei 8.080/90 e assinale a sequência correta: ( ) A Lei 8.080/90 é conhecida como Lei Orgânica da Saúde. ( ) A integralidade da assistência é um dos princípios do SUS. ( ) A União tem direção única no SUS em nível municipal. ( ) A Lei 9.782/1999 criou a ANVISA e a ANS.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "A Lei 8.080/90, em seu Art. 7º, estabelece como princípio do SUS a 'resolução dos serviços', que significa:",
+    "alternativas": [
+      "a) A capacidade de resolver os problemas de saúde da população",
+      "b) A descentralização das ações de saúde",
+      "c) A participação da comunidade na gestão",
+      "d) A regionalização da rede de serviços",
+      "e) A hierarquização dos níveis de atenção"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "A Lei 8.080/90 foi sancionada em:",
+    "alternativas": [
+      "a) 1988",
+      "b) 1990",
+      "c) 1992",
+      "d) 1994",
+      "e) 1996"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "A Lei 8.080/90, no Art. 6º, estabelece que o SUS atua no campo da:",
+    "alternativas": [
+      "a) Vigilância sanitária",
+      "b) Saúde do trabalhador",
+      "c) Assistência farmacêutica",
+      "d) Todas as alternativas estão corretas",
+      "e) Nenhuma das alternativas está correta"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "A Lei 8.080/90, no Art. 9º, estabelece que a direção do SUS em cada esfera de governo é exercida pelo seguinte órgão no nível federal:",
+    "alternativas": [
+      "a) Ministério da Saúde",
+      "b) Conselho Nacional de Saúde",
+      "c) Agência Nacional de Vigilância Sanitária",
+      "d) Ministério da Previdência Social",
+      "e) Secretaria de Atenção à Saúde"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "A Lei 8.080/90, no Art. 16, estabelece como competência da União:",
+    "alternativas": [
+      "a) Gerir os serviços estaduais de saúde",
+      "b) Coordenar a política estadual de saúde",
+      "c) Formular a Política Nacional de Saúde",
+      "d) Planejar a execução das ações de saúde no município",
+      "e) Promover a integração entre os municípios"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_sus_lei8080"
+  },
+  {
+    "enunciado": "A Lei 8.080/90, no Art. 17, estabelece como competência dos Estados:",
+    "alternativas": [
+      "a) Formular a Política Nacional de Saúde",
+      "b) Coordenar a política estadual de saúde",
+      "c) Planejar a execução das ações de saúde no município",
+      "d) Gerir os serviços municipais de saúde",
+      "e) Normatizar as ações de vigilância sanitária"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_sus_lei8080"
+  }
+]

@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "Segurança do Trabalho é o conjunto de medidas que visam:",
+    "alternativas": [
+      "a) Aumentar a produção a qualquer custo",
+      "b) Prevenir acidentes e doenças ocupacionais, protegendo a integridade do trabalhador",
+      "c) Reduzir os salários dos funcionários",
+      "d) Eliminar todos os equipamentos de proteção",
+      "e) Aumentar a jornada de trabalho"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "A ciência que estuda a adaptação do trabalho às características humanas é chamada de:",
+    "alternativas": [
+      "a) Antropometria",
+      "b) Ergonomia",
+      "c) Fisiologia",
+      "d) Psicologia organizacional",
+      "e) Biomecânica"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "A NR-17 trata especificamente de:",
+    "alternativas": [
+      "a) Equipamentos de Proteção Individual",
+      "b) Ergonomia",
+      "c) CIPA",
+      "d) Prevenção de incêndios",
+      "e) Programa de Prevenção de Riscos Ambientais"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "No mapa de riscos, a cor amarela indica riscos do grupo:",
+    "alternativas": [
+      "a) Físicos",
+      "b) Químicos",
+      "c) Biológicos",
+      "d) Ergonômicos",
+      "e) Mecânicos"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "São exemplos de Equipamentos de Proteção Individual (EPIs), EXCETO:",
+    "alternativas": [
+      "a) Capacete de segurança",
+      "b) Extintor de incêndio",
+      "c) Luvas de proteção",
+      "d) Óculos de segurança",
+      "e) Protetor auricular"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "A CIPA é composta por representantes:",
+    "alternativas": [
+      "a) Apenas do empregador",
+      "b) Apenas dos empregados",
+      "c) Do empregador e dos empregados",
+      "d) De sindicatos externos",
+      "e) Do Ministério do Trabalho"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "O documento que deve ser emitido para comunicar um acidente de trabalho à Previdência Social é a:",
+    "alternativas": [
+      "a) CAT – Comunicação de Acidente de Trabalho",
+      "b) NR – Norma Regulamentadora",
+      "c) EPI – Equipamento de Proteção Individual",
+      "d) PPRA – Programa de Prevenção de Riscos Ambientais",
+      "e) CIPA – Comissão Interna de Prevenção de Acidentes"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "A NR-17 recomenda pausas de ________ a cada ________ minutos de trabalho intensivo (ex.: digitação).",
+    "alternativas": [
+      "a) 5 minutos / 60 minutos",
+      "b) 10 minutos / 90 minutos",
+      "c) 15 minutos / 120 minutos",
+      "d) 20 minutos / 180 minutos",
+      "e) 30 minutos / 60 minutos"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "Os riscos físicos incluem, entre outros:",
+    "alternativas": [
+      "a) Vírus e bactérias",
+      "b) Ruído e temperaturas extremas",
+      "c) Postura inadequada e monotonia",
+      "d) Máquinas sem proteção",
+      "e) Poeiras e fumos"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "A adaptação do mobiliário (cadeiras, mesas) às dimensões do corpo humano utiliza como base a ciência da:",
+    "alternativas": [
+      "a) Antropometria",
+      "b) Psicologia",
+      "c) Sociologia",
+      "d) Física",
+      "e) Química"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "Uma condição insegura é, por exemplo:",
+    "alternativas": [
+      "a) Usar EPIs corretamente",
+      "b) Piso escorregadio ou fiação exposta",
+      "c) Realizar ginástica laboral",
+      "d) Participar da CIPA",
+      "e) Seguir as normas de segurança"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "A NR-5 institui a obrigatoriedade da:",
+    "alternativas": [
+      "a) CIPA",
+      "b) PPRA",
+      "c) PCMSO",
+      "d) PCMAT",
+      "e) NR-17"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "São exemplos de Equipamentos de Proteção Coletiva (EPCs):",
+    "alternativas": [
+      "a) Luvas e óculos",
+      "b) Extintores e sinalização",
+      "c) Capacete e protetor auricular",
+      "d) Cinto de segurança e máscara",
+      "e) Apenas os EPIs individuais"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Segurança e Ergonomia e assinale a sequência correta: ( ) A CIPA tem mandato anual e é composta por representantes do empregador e dos empregados. ( ) Os riscos biológicos são representados pela cor verde no mapa de riscos. ( ) A ginástica laboral é uma prática recomendada para prevenir doenças ocupacionais. ( ) A NR-6 regulamenta os Equipamentos de Proteção Individual.",
+    "alternativas": [
+      "a) V – F – V – V",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre o Mapa de Riscos e assinale a sequência correta: ( ) O mapa de riscos utiliza círculos coloridos para representar os riscos. ( ) O tamanho do círculo indica a gravidade do risco. ( ) A cor vermelha representa riscos físicos. ( ) A cor azul representa riscos mecânicos.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "Em uma estação de trabalho com computador, a recomendação ergonômica para o monitor é:",
+    "alternativas": [
+      "a) Ficar abaixo da linha dos olhos",
+      "b) Ficar na altura dos olhos (topo do monitor alinhado com os olhos)",
+      "c) Ficar acima da cabeça",
+      "d) Ficar de lado em relação ao usuário",
+      "e) Qualquer posição é aceitável"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "Os riscos ergonômicos incluem, EXCETO:",
+    "alternativas": [
+      "a) Postura inadequada",
+      "b) Esforço repetitivo",
+      "c) Monotonia",
+      "d) Vírus e bactérias",
+      "e) Estresse"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "O Programa de Prevenção de Riscos Ambientais (PPRA) é regulamentado pela NR:",
+    "alternativas": [
+      "a) NR-5",
+      "b) NR-9",
+      "c) NR-17",
+      "d) NR-6",
+      "e) NR-23"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "A ginástica laboral tem como principal objetivo:",
+    "alternativas": [
+      "a) Aumentar a jornada de trabalho",
+      "b) Substituir os EPIs",
+      "c) Aliviar tensões e prevenir lesões musculares",
+      "d) Reduzir o salário dos funcionários",
+      "e) Eliminar as pausas"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "A análise de um acidente de trabalho deve considerar:",
+    "alternativas": [
+      "a) Apenas o erro do trabalhador",
+      "b) Apenas as condições do ambiente",
+      "c) Atos inseguros, condições inseguras e fatores pessoais de insegurança",
+      "d) Apenas os custos financeiros",
+      "e) Apenas a opinião do fornecedor"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre as Normas Regulamentadoras e assinale a sequência correta: ( ) A NR-1 estabelece disposições gerais sobre segurança do trabalho. ( ) A NR-23 trata de proteção contra incêndios. ( ) A NR-5 institui o PPRA. ( ) A NR-17 trata de ergonomia.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "A temperatura recomendada para conforto térmico em ambientes de trabalho administrativo (NR-17) é de:",
+    "alternativas": [
+      "a) 10°C a 15°C",
+      "b) 20°C a 24°C",
+      "c) 30°C a 35°C",
+      "d) 40°C a 45°C",
+      "e) 5°C a 10°C"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "A rotação de tarefas é uma estratégia para:",
+    "alternativas": [
+      "a) Aumentar a monotonia",
+      "b) Prevenir o esforço repetitivo e a fadiga",
+      "c) Reduzir a produtividade",
+      "d) Substituir os EPIs",
+      "e) Eliminar a necessidade de pausas"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Segurança e Ergonomia e assinale a sequência correta: ( ) LER e DORT são doenças ocupacionais relacionadas a esforços repetitivos. ( ) O mapa de riscos é uma ferramenta de comunicação visual sobre os riscos do ambiente. ( ) A ergonomia busca adaptar o homem ao trabalho, independentemente de suas características. ( ) A CIPA tem como função principal investigar e prevenir acidentes.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "O EPI (Equipamento de Proteção Individual) é de uso:",
+    "alternativas": [
+      "a) Coletivo",
+      "b) Individual",
+      "c) Opcional",
+      "d) Apenas em situações de risco grave",
+      "e) Apenas para trabalhadores terceirizados"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "A NR-6 regulamenta a obrigatoriedade do fornecimento gratuito dos EPIs pelo:",
+    "alternativas": [
+      "a) Trabalhador",
+      "b) Empregador",
+      "c) Governo",
+      "d) Sindicato",
+      "e) Ministério Público"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "O ato inseguro é caracterizado por:",
+    "alternativas": [
+      "a) Condição física inadequada do ambiente",
+      "b) Comportamento inadequado do trabalhador",
+      "c) Falta de EPIs",
+      "d) Iluminação insuficiente",
+      "e) Ruído excessivo"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "A ginástica laboral é uma prática que visa:",
+    "alternativas": [
+      "a) Aumentar a carga horária",
+      "b) Melhorar a circulação e prevenir lesões",
+      "c) Substituir as pausas",
+      "d) Reduzir o número de funcionários",
+      "e) Aumentar o estresse"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "No mapa de riscos, a cor verde representa riscos:",
+    "alternativas": [
+      "a) Físicos",
+      "b) Químicos",
+      "c) Biológicos",
+      "d) Ergonômicos",
+      "e) Mecânicos"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  },
+  {
+    "enunciado": "A investigação de acidentes de trabalho tem como objetivo:",
+    "alternativas": [
+      "a) Punir o trabalhador",
+      "b) Identificar causas e implementar medidas corretivas",
+      "c) Reduzir os custos da empresa",
+      "d) Aumentar a produção",
+      "e) Demitir os responsáveis"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_seguranca_ergonomia"
+  }
+]

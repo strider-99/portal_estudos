@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "O Comportamento Organizacional (CO) estuda, principalmente, o impacto de três níveis no comportamento das pessoas. São eles:",
+    "alternativas": [
+      "a) Individual, grupal e organizacional",
+      "b) Técnico, humano e conceitual",
+      "c) Estrutural, funcional e operacional",
+      "d) Cognitivo, afetivo e comportamental",
+      "e) Formal, informal e estrutural"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "Os grupos que surgem naturalmente no ambiente de trabalho, baseados em amizades ou interesses comuns, são chamados de:",
+    "alternativas": [
+      "a) Grupos formais",
+      "b) Grupos informais",
+      "c) Equipes autônomas",
+      "d) Comitês executivos",
+      "e) Departamentos funcionais"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "O fluxo de comunicação que vai dos subordinados para a alta administração é denominado:",
+    "alternativas": [
+      "a) Descendente",
+      "b) Ascendente",
+      "c) Horizontal",
+      "d) Diagonal",
+      "e) Informal"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "O estilo de liderança que centraliza decisões e impõe ordens é o:",
+    "alternativas": [
+      "a) Democrático",
+      "b) Laissez-faire",
+      "c) Autocrático",
+      "d) Transformacional",
+      "e) Situacional"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "Segundo French e Raven, o poder baseado na capacidade de oferecer benefícios (como aumento ou elogios) é o poder de:",
+    "alternativas": [
+      "a) Coerção",
+      "b) Recompensa",
+      "c) Legítimo",
+      "d) Referência",
+      "e) Especialista"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "O conflito que estimula a inovação e melhora o desempenho é classificado como:",
+    "alternativas": [
+      "a) Disfuncional",
+      "b) Funcional",
+      "c) Estrutural",
+      "d) Irreversível",
+      "e) Pessoal"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "A negociação que busca ampliar os recursos para atender ambas as partes, gerando ganha-ganha, é a:",
+    "alternativas": [
+      "a) Distributiva",
+      "b) Integrativa",
+      "c) Competitiva",
+      "d) Coercitiva",
+      "e) Arbitrada"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "A comunicação informal que circula por canais não oficiais, muitas vezes associada a fofocas e rumores, é conhecida como:",
+    "alternativas": [
+      "a) Rede formal",
+      "b) Grapevine (parreiral)",
+      "c) Fluxo diagonal",
+      "d) Comunicação escrita",
+      "e) Feedback"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "A teoria de liderança que defende que a eficácia do líder depende das características da situação é a:",
+    "alternativas": [
+      "a) Teoria dos traços",
+      "b) Teoria comportamental",
+      "c) Teoria situacional (contingencial)",
+      "d) Teoria da troca líder-membro",
+      "e) Teoria da atribuição"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "O empoderamento (empowerment) consiste em:",
+    "alternativas": [
+      "a) Centralizar ainda mais as decisões na alta direção",
+      "b) Compartilhar poder e autonomia com os subordinados",
+      "c) Reduzir o número de líderes na organização",
+      "d) Aumentar o poder coercitivo",
+      "e) Eliminar os grupos informais"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "O grau de atração entre os membros do grupo e a força dos vínculos que os unem é chamado de:",
+    "alternativas": [
+      "a) Status",
+      "b) Papel",
+      "c) Norma",
+      "d) Coesão",
+      "e) Sinergia"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "No processo de conflito, a etapa em que as partes decidem como agir (competir, colaborar, evitar, etc.) refere-se às:",
+    "alternativas": [
+      "a) Intenções",
+      "b) Comportamentos",
+      "c) Cognições",
+      "d) Condições antecedentes",
+      "e) Resultados"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "A liderança que inspira os seguidores a superarem interesses próprios em prol do grupo, promovendo mudanças profundas, é a:",
+    "alternativas": [
+      "a) Transacional",
+      "b) Transformacional",
+      "c) Autocrática",
+      "d) Laissez-faire",
+      "e) Situacional"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Pessoas e Grupos e assinale a sequência correta: ( ) Os grupos formais são definidos pela estrutura organizacional. ( ) A coesão elevada em um grupo sempre leva a um aumento da produtividade. ( ) Os papéis são comportamentos esperados de uma pessoa em função de sua posição. ( ) O status é irrelevante para a dinâmica de grupo.",
+    "alternativas": [
+      "a) V – F – V – F",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Comunicação e assinale a sequência correta: ( ) O feedback é uma etapa essencial no processo de comunicação. ( ) A comunicação descendente flui dos subordinados para os superiores. ( ) A percepção seletiva é uma barreira à comunicação eficaz. ( ) A comunicação informal nunca deve ser usada nas organizações.",
+    "alternativas": [
+      "a) V – F – V – F",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "O poder baseado na admiração, respeito ou identificação com a pessoa é o poder:",
+    "alternativas": [
+      "a) Coercitivo",
+      "b) De recompensa",
+      "c) Legítimo",
+      "d) De referência",
+      "e) De especialista"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "O estilo de gestão de conflitos caracterizado por baixa assertividade e alta cooperação, sacrificando os próprios interesses, é o:",
+    "alternativas": [
+      "a) Competir",
+      "b) Colaborar",
+      "c) Comprometer",
+      "d) Evitar",
+      "e) Acomodar"
+    ],
+    "gabarito": "E",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "A comunicação que segue a hierarquia e os canais oficiais da organização é a:",
+    "alternativas": [
+      "a) Formal",
+      "b) Informal",
+      "c) Grapevine",
+      "d) Não verbal",
+      "e) Diagonal"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "O estilo de liderança que dá total liberdade ao grupo, interferindo minimamente, é o:",
+    "alternativas": [
+      "a) Autocrático",
+      "b) Democrático",
+      "c) Laissez-faire",
+      "d) Transformacional",
+      "e) Transacional"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Poder e Política e assinale a sequência correta: ( ) O poder coercitivo baseia-se no medo de punições. ( ) A política organizacional é sempre negativa e prejudicial. ( ) O poder legítimo deriva da posição hierárquica formal. ( ) O empoderamento (empowerment) centraliza o poder na alta direção.",
+    "alternativas": [
+      "a) V – F – V – F",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "Na negociação, o termo BATNA (Best Alternative to a Negotiated Agreement) refere-se à:",
+    "alternativas": [
+      "a) Melhor oferta inicial",
+      "b) Melhor alternativa caso não haja acordo",
+      "c) Pior resultado possível",
+      "d) Estratégia de competição",
+      "e) Técnica de persuasão"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "O conflito disfuncional é caracterizado por:",
+    "alternativas": [
+      "a) Estimular a criatividade",
+      "b) Prejudicar o desempenho e gerar hostilidade",
+      "c) Melhorar a tomada de decisão",
+      "d) Aumentar a coesão do grupo",
+      "e) Promover mudanças positivas"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Negociação e Conflito e assinale a sequência correta: ( ) A negociação distributiva busca o ganha-ganha. ( ) O estilo 'colaborar' busca solucionar o conflito com alta assertividade e alta cooperação. ( ) O conflito pode ser funcional ou disfuncional. ( ) Evitar o conflito é sempre a melhor estratégia.",
+    "alternativas": [
+      "a) F – V – V – F",
+      "b) V – F – F – V",
+      "c) F – V – F – V",
+      "d) V – V – V – F",
+      "e) F – F – V – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Comportamento Organizacional e assinale a sequência correta: ( ) O CO estuda o comportamento humano em três níveis: individual, grupal e organizacional. ( ) O poder referente baseia-se no conhecimento técnico especializado. ( ) A liderança situacional considera que não existe um único estilo ideal para todas as situações. ( ) A comunicação ascendente flui dos níveis superiores para os inferiores.",
+    "alternativas": [
+      "a) V – F – V – F",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "A motivação, segundo a hierarquia de necessidades de Maslow, é dividida em níveis. O nível que inclui a necessidade de reconhecimento e prestígio é:",
+    "alternativas": [
+      "a) Fisiológicas",
+      "b) Segurança",
+      "c) Sociais",
+      "d) Estima",
+      "e) Autorrealização"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "A comunicação horizontal ocorre entre:",
+    "alternativas": [
+      "a) Subordinados e superiores",
+      "b) Colegas do mesmo nível hierárquico",
+      "c) Diferentes níveis hierárquicos",
+      "d) Apenas no ambiente informal",
+      "e) Apenas entre departamentos"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "A teoria da liderança que se baseia na ideia de que os líderes nascem com características específicas é a:",
+    "alternativas": [
+      "a) Teoria dos traços",
+      "b) Teoria comportamental",
+      "c) Teoria situacional",
+      "d) Teoria da troca líder-membro",
+      "e) Teoria da atribuição"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "A política organizacional pode ser definida como:",
+    "alternativas": [
+      "a) Atividades não oficiais para ganhar poder e influenciar decisões",
+      "b) A estrutura formal da organização",
+      "c) O conjunto de normas e regras da empresa",
+      "d) A comunicação oficial entre departamentos",
+      "e) O planejamento estratégico da organização"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "A sinergia no trabalho em equipe ocorre quando:",
+    "alternativas": [
+      "a) Cada membro trabalha isoladamente",
+      "b) O resultado do grupo é maior que a soma das partes individuais",
+      "c) O resultado do grupo é igual à soma das partes individuais",
+      "d) O grupo evita conflitos a todo custo",
+      "e) O líder toma todas as decisões"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_comportamento_organizacional"
+  },
+  {
+    "enunciado": "A negociação distributiva é caracterizada por:",
+    "alternativas": [
+      "a) Buscar o ganha-ganha",
+      "b) Disputar recursos fixos (eu ganho, você perde)",
+      "c) Ampliar os recursos para ambas as partes",
+      "d) Ser sempre mais eficaz que a integrativa",
+      "e) Não envolver conflitos"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_comportamento_organizacional"
+  }
+]

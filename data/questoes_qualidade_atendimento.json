@@ -1,0 +1,362 @@
+[
+  {
+    "enunciado": "O ciclo PDCA, criado por Deming, é composto pelas etapas:",
+    "alternativas": [
+      "a) Planejar, Executar, Corrigir, Padronizar",
+      "b) Planejar, Fazer, Verificar, Agir",
+      "c) Planejar, Organizar, Dirigir, Controlar",
+      "d) Prever, Desenvolver, Checar, Ajustar",
+      "e) Produzir, Distribuir, Controlar, Avaliar"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "O Diagrama de Causa e Efeito, também conhecido como 'Espinha de Peixe', foi criado por:",
+    "alternativas": [
+      "a) W. Edwards Deming",
+      "b) Joseph Juran",
+      "c) Kaoru Ishikawa",
+      "d) Philip Crosby",
+      "e) Peter Drucker"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "O princípio de Pareto (80/20) afirma que:",
+    "alternativas": [
+      "a) 80% dos lucros vêm de 80% dos clientes",
+      "b) 20% das causas são responsáveis por 80% dos problemas",
+      "c) 20% dos problemas são causados por 80% das causas",
+      "d) 80% dos funcionários produzem 20% dos resultados",
+      "e) A qualidade é gratuita"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "São princípios da ISO 9001, EXCETO:",
+    "alternativas": [
+      "a) Foco no cliente",
+      "b) Engajamento das pessoas",
+      "c) Abordagem de processos",
+      "d) Maximização de lucros a curto prazo",
+      "e) Tomada de decisão baseada em evidências"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "O pilar do bom atendimento que significa 'colocar-se no lugar do outro' é a:",
+    "alternativas": [
+      "a) Eficiência",
+      "b) Empatia",
+      "c) Impessoalidade",
+      "d) Legalidade",
+      "e) Publicidade"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "Ao atender uma ligação, a primeira atitude correta é:",
+    "alternativas": [
+      "a) Dizer 'alô' e esperar o outro falar",
+      "b) Identificar-se com o nome do setor e do atendente",
+      "c) Perguntar imediatamente 'o que você quer?'",
+      "d) Colocar o cidadão em espera",
+      "e) Transferir a ligação sem explicação"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "A ferramenta 5W2H é utilizada para:",
+    "alternativas": [
+      "a) Analisar causas de problemas",
+      "b) Elaborar planos de ação detalhados",
+      "c) Classificar estoques",
+      "d) Avaliar o clima organizacional",
+      "e) Calcular custos de produção"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "O princípio constitucional da administração pública que está diretamente relacionado à qualidade e à entrega de resultados é a:",
+    "alternativas": [
+      "a) Legalidade",
+      "b) Impessoalidade",
+      "c) Moralidade",
+      "d) Publicidade",
+      "e) Eficiência"
+    ],
+    "gabarito": "E",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "Na etapa de despedida do atendimento presencial, é recomendado:",
+    "alternativas": [
+      "a) Encerrar a conversa abruptamente",
+      "b) Perguntar se há mais alguma necessidade e encerrar de forma cordial",
+      "c) Dar as costas ao cidadão imediatamente",
+      "d) Ignorar o que foi falado",
+      "e) Falar sobre assuntos pessoais"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "Philip Crosby é conhecido por defender que:",
+    "alternativas": [
+      "a) A qualidade é gratuita",
+      "b) A qualidade não tem custo",
+      "c) A qualidade é um luxo",
+      "d) A qualidade aumenta os custos",
+      "e) A qualidade deve ser ignorada"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "No Diagrama de Ishikawa, os '6Ms' são utilizados para agrupar causas. Um desses 'Ms' é:",
+    "alternativas": [
+      "a) Marketing",
+      "b) Métodos",
+      "c) Motivação",
+      "d) Mercado",
+      "e) Manutenção"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "Ao lidar com um cidadão irritado ao telefone, o atendente deve:",
+    "alternativas": [
+      "a) Discutir com o cidadão para provar que está certo",
+      "b) Manter a calma, ouvir e focar na solução do problema",
+      "c) Desligar o telefone imediatamente",
+      "d) Transferir a ligação sem avisar",
+      "e) Falar mais alto que o cidadão"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "A Gestão da Qualidade Total (TQM) envolve:",
+    "alternativas": [
+      "a) Apenas o setor de produção",
+      "b) Apenas o setor de vendas",
+      "c) Toda a organização e todos os colaboradores",
+      "d) Apenas a alta direção",
+      "e) Apenas os clientes externos"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Qualidade e assinale a sequência correta: ( ) O PDCA é um ciclo de melhoria contínua. ( ) O Diagrama de Pareto classifica os problemas por frequência ou impacto. ( ) A ISO 9001 não se aplica a organizações públicas. ( ) Deming é conhecido como o pai do Controle Estatístico da Qualidade.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Atendimento e assinale a sequência correta: ( ) A empatia é essencial para um bom atendimento ao público. ( ) No atendimento telefônico, o tom de voz não é relevante. ( ) O sigilo das informações do cidadão deve ser respeitado. ( ) A resolutividade significa encaminhar o problema para outro setor sem retorno.",
+    "alternativas": [
+      "a) V – F – V – F",
+      "b) F – V – F – V",
+      "c) V – V – F – F",
+      "d) F – F – V – V",
+      "e) V – F – F – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "A Trilogia da Qualidade, proposta por Juran, é composta por:",
+    "alternativas": [
+      "a) Planejamento, Controle e Melhoria",
+      "b) Planejamento, Organização e Direção",
+      "c) Inspeção, Prevenção e Melhoria",
+      "d) Qualidade, Produtividade e Lucro",
+      "e) Projeto, Produção e Pós-venda"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "Uma postura profissional no atendimento presencial inclui:",
+    "alternativas": [
+      "a) Usar roupas informais e desleixadas",
+      "b) Manter contato visual, falar com clareza e ser educado",
+      "c) Atender vários cidadãos ao mesmo tempo",
+      "d) Ignorar perguntas que não sabe responder",
+      "e) Usar gírias e expressões coloquiais"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "A ferramenta 5W2H é composta por perguntas que começam com as letras W e H. Qual das opções abaixo NÃO faz parte do 5W2H?",
+    "alternativas": [
+      "a) What? (O quê?)",
+      "b) Who? (Quem?)",
+      "c) Why? (Por quê?)",
+      "d) How Much? (Quanto custa?)",
+      "e) Which? (Qual?)"
+    ],
+    "gabarito": "E",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "'Fazer certo da primeira vez' é um conceito associado a:",
+    "alternativas": [
+      "a) Zero Defeitos (Crosby)",
+      "b) Ciclo PDCA (Deming)",
+      "c) Diagrama de Pareto (Juran)",
+      "d) Espinha de Peixe (Ishikawa)",
+      "e) Gestão de processos"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "Ao transferir uma ligação, é correto:",
+    "alternativas": [
+      "a) Transferir sem avisar, para agilizar",
+      "b) Explicar ao cidadão o motivo da transferência e para quem está encaminhando",
+      "c) Desligar a ligação e ligar de volta depois",
+      "d) Pedir para o cidadão ligar novamente mais tarde",
+      "e) Anotar o número e retornar em até 30 dias"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Qualidade e Atendimento e assinale a sequência correta: ( ) O Diagrama de Ishikawa é usado para identificar a causa raiz de um problema. ( ) O atendimento ao público deve ser pautado pela cortesia e pela eficiência. ( ) A qualidade no serviço público não está relacionada à satisfação do cidadão. ( ) O PDCA é um ciclo que termina na etapa 'Act'.",
+    "alternativas": [
+      "a) V – V – F – V",
+      "b) F – V – V – F",
+      "c) V – F – V – F",
+      "d) F – F – V – V",
+      "e) V – V – V – F"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "O princípio da ISO 9001 que trata da gestão de atividades como processos interligados é a:",
+    "alternativas": [
+      "a) Abordagem de processos",
+      "b) Liderança",
+      "c) Foco no cliente",
+      "d) Melhoria",
+      "e) Gestão de relacionamento"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "Um dos pilares do bom atendimento é a resolutividade, que significa:",
+    "alternativas": [
+      "a) Atender rapidamente, mesmo que não resolva o problema",
+      "b) Resolver o problema do cidadão ou encaminhá-lo corretamente",
+      "c) Transferir a responsabilidade para outro setor",
+      "d) Ignorar as reclamações complexas",
+      "e) Dar respostas vagas e genéricas"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "Analise as afirmativas sobre Qualidade e Atendimento e assinale a sequência correta: ( ) A Gestão da Qualidade Total (TQM) envolve apenas a área de produção. ( ) No atendimento telefônico, é recomendado manter um tom de voz cordial e pausado. ( ) O princípio da eficiência na administração pública está previsto na Constituição Federal. ( ) O 5W2H é uma ferramenta utilizada exclusivamente para controle de estoques.",
+    "alternativas": [
+      "a) F – V – V – F",
+      "b) V – F – F – V",
+      "c) F – V – F – V",
+      "d) V – V – V – F",
+      "e) F – F – V – V"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "A escuta ativa é fundamental no atendimento e envolve:",
+    "alternativas": [
+      "a) Interromper o falante para dar respostas rápidas",
+      "b) Parafrasear o conteúdo para confirmar o entendimento",
+      "c) Falar mais do que ouvir",
+      "d) Concordar com tudo que o cidadão diz",
+      "e) Mudar de assunto rapidamente"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "O princípio da ISO 9001 que valoriza e capacita os colaboradores é o:",
+    "alternativas": [
+      "a) Foco no cliente",
+      "b) Engajamento das pessoas",
+      "c) Abordagem de processos",
+      "d) Melhoria",
+      "e) Gestão de relacionamento"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "No atendimento presencial, a etapa de acolhimento envolve:",
+    "alternativas": [
+      "a) Encaminhar o cidadão imediatamente para outro setor",
+      "b) Receber com sorriso e saudação cordial, identificando a demanda",
+      "c) Ignorar o cidadão enquanto atende o telefone",
+      "d) Pedir para o cidadão preencher formulários sem orientação",
+      "e) Falar sobre assuntos pessoais"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "A ferramenta da qualidade que ajuda a priorizar problemas com base no princípio 80/20 é o:",
+    "alternativas": [
+      "a) Diagrama de Ishikawa",
+      "b) Diagrama de Pareto",
+      "c) Ciclo PDCA",
+      "d) 5W2H",
+      "e) Fluxograma"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "No atendimento telefônico, o atendente deve atender a ligação em até:",
+    "alternativas": [
+      "a) 1 toque",
+      "b) 3 toques",
+      "c) 5 toques",
+      "d) 10 toques",
+      "e) Qualquer número de toques"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_qualidade_atendimento"
+  },
+  {
+    "enunciado": "A dimensão ambiental do atendimento refere-se a:",
+    "alternativas": [
+      "a) Conhecimento técnico do atendente",
+      "b) Condições físicas do local (limpeza, conforto, sinalização)",
+      "c) Habilidade de comunicação",
+      "d) Capacidade de ouvir",
+      "e) Inteligência emocional"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_qualidade_atendimento"
+  }
+]
