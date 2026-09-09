@@ -3,6 +3,12 @@
 {% block title %}Início - Portal de Estudos{% endblock %}
 
 {% block content %}
+{% if mongo_error %}
+<div class="flash flash-danger">
+  <b>⚠️ Erro de conexão com MongoDB:</b> {{ mongo_error }}<br>
+  <small>No Render, verifique <code>MONGO_URI</code> (Atlas) e libere <code>0.0.0.0/0</code> em Network Access. Veja logs do gunicorn.</small>
+</div>
+{% endif %}
 <h2>📖 Nossas Disciplinas</h2>
 
 <!-- Barra de pesquisa e filtros -->
