@@ -1,0 +1,422 @@
+[
+  {
+    "enunciado": "O atalho de teclado para abrir o Menu Iniciar é:",
+    "alternativas": [
+      "a) Ctrl + Esc",
+      "b) Win",
+      "c) Alt + Tab",
+      "d) Ctrl + Alt + Del",
+      "e) Win + D"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "Para abrir o Gerenciador de Tarefas diretamente, usa-se:",
+    "alternativas": [
+      "a) Ctrl + Alt + Del",
+      "b) Ctrl + Shift + Esc",
+      "c) Win + E",
+      "d) Alt + F4",
+      "e) Win + X"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "Os gadgets no Windows 10/11 foram substituídos por:",
+    "alternativas": [
+      "a) Mini-aplicativos",
+      "b) Widgets",
+      "c) Aplicativos da área de trabalho",
+      "d) Barras de ferramentas",
+      "e) Gadgets ainda existem"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "Qual é a tecla usada para renomear um arquivo selecionado?",
+    "alternativas": [
+      "a) F1",
+      "b) F2",
+      "c) F3",
+      "d) F4",
+      "e) F5"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "O que faz o atalho Win + D?",
+    "alternativas": [
+      "a) Abre o Menu Iniciar",
+      "b) Mostra a área de trabalho",
+      "c) Abre o Explorador de Arquivos",
+      "d) Abre o Gerenciador de Tarefas",
+      "e) Bloqueia o computador"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "Onde ficam armazenados os arquivos excluídos temporariamente?",
+    "alternativas": [
+      "a) Painel de Controle",
+      "b) Lixeira",
+      "c) Downloads",
+      "d) Documentos",
+      "e) Área de Trabalho"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "Qual atalho exclui um arquivo permanentemente, sem enviar para a Lixeira?",
+    "alternativas": [
+      "a) Delete",
+      "b) Shift + Delete",
+      "c) Ctrl + D",
+      "d) Alt + F4",
+      "e) Win + Delete"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "A barra de tarefas geralmente fica localizada:",
+    "alternativas": [
+      "a) No topo da tela",
+      "b) Na parte inferior da tela",
+      "c) No centro da tela",
+      "d) Na lateral esquerda",
+      "e) Na lateral direita"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "Qual ferramenta do Windows permite visualizar o uso de CPU, memória e disco?",
+    "alternativas": [
+      "a) Painel de Controle",
+      "b) Gerenciador de Tarefas",
+      "c) Explorador de Arquivos",
+      "d) Configurações",
+      "e) Lixeira"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "O que é um atalho no Windows?",
+    "alternativas": [
+      "a) Um arquivo original",
+      "b) Um link que aponta para um arquivo ou programa",
+      "c) Um arquivo criptografado",
+      "d) Um programa executável",
+      "e) Um arquivo oculto"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "Qual caractere NÃO é permitido em nomes de arquivos no Windows?",
+    "alternativas": [
+      "a) _ (sublinhado)",
+      "b) - (hífen)",
+      "c) : (dois-pontos)",
+      "d) . (ponto)",
+      "e) (espaço)"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "Para copiar um arquivo, usa-se o atalho:",
+    "alternativas": [
+      "a) Ctrl + X",
+      "b) Ctrl + C",
+      "c) Ctrl + V",
+      "d) Ctrl + Z",
+      "e) Ctrl + A"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "O que acontece ao pressionar Alt + Tab?",
+    "alternativas": [
+      "a) Fecha a janela atual",
+      "b) Abre o Gerenciador de Tarefas",
+      "c) Alterna entre janelas abertas",
+      "d) Abre o Menu Iniciar",
+      "e) Mostra a área de trabalho"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "A Lixeira pode ser usada para:",
+    "alternativas": [
+      "a) Armazenar arquivos permanentemente",
+      "b) Recuperar arquivos excluídos",
+      "c) Criptografar arquivos",
+      "d) Criar atalhos",
+      "e) Organizar pastas"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "O que é o Painel de Controle?",
+    "alternativas": [
+      "a) Uma ferramenta para gerenciar arquivos",
+      "b) Uma central de configurações do sistema",
+      "c) Um local para excluir programas",
+      "d) Um editor de textos",
+      "e) Um navegador de internet"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "Qual é o atalho para abrir o Explorador de Arquivos?",
+    "alternativas": [
+      "a) Win + E",
+      "b) Win + D",
+      "c) Win + S",
+      "d) Win + I",
+      "e) Win + X"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "Para desfazer a última ação, usa-se:",
+    "alternativas": [
+      "a) Ctrl + Z",
+      "b) Ctrl + Y",
+      "c) Ctrl + C",
+      "d) Ctrl + V",
+      "e) Ctrl + X"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "O que significa a extensão de um arquivo (ex: .txt, .docx)?",
+    "alternativas": [
+      "a) O nome do arquivo",
+      "b) O tipo e formato do arquivo",
+      "c) O tamanho do arquivo",
+      "d) A data de criação",
+      "e) O local do arquivo"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "O Windows 10/11 diferencia maiúsculas de minúsculas em nomes de arquivos?",
+    "alternativas": [
+      "a) Sim, diferencia",
+      "b) Não, não diferencia",
+      "c) Apenas para extensões",
+      "d) Apenas para pastas",
+      "e) Depende da configuração"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "O que é a Área de Trabalho?",
+    "alternativas": [
+      "a) Uma pasta de documentos",
+      "b) A tela principal do Windows",
+      "c) Um programa de edição",
+      "d) Um dispositivo de hardware",
+      "e) Um tipo de arquivo"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "Para ocultar um arquivo, deve-se:",
+    "alternativas": [
+      "a) Excluí-lo",
+      "b) Renomeá-lo",
+      "c) Marcar como oculto nas propriedades",
+      "d) Criptografá-lo",
+      "e) Mover para a Lixeira"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "O que faz o atalho Win + S?",
+    "alternativas": [
+      "a) Abre o Menu Iniciar",
+      "b) Abre a pesquisa do Windows",
+      "c) Abre as configurações",
+      "d) Abre o Explorador de Arquivos",
+      "e) Bloqueia o computador"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "O que são widgets no Windows 11?",
+    "alternativas": [
+      "a) Mini-aplicativos da área de trabalho",
+      "b) Painéis com informações dinâmicas (clima, notícias, etc.)",
+      "c) Arquivos ocultos",
+      "d) Programas de edição",
+      "e) Dispositivos de hardware"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "Para exibir a Área de Trabalho rapidamente, usa-se:",
+    "alternativas": [
+      "a) Win + M",
+      "b) Win + D",
+      "c) Win + E",
+      "d) Win + S",
+      "e) Win + I"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "O que é um arquivo oculto?",
+    "alternativas": [
+      "a) Um arquivo excluído",
+      "b) Um arquivo que não aparece na visualização padrão",
+      "c) Um arquivo criptografado",
+      "d) Um arquivo corrompido",
+      "e) Um arquivo de sistema"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "O Gerenciador de Tarefas permite, EXCETO:",
+    "alternativas": [
+      "a) Finalizar tarefas",
+      "b) Visualizar desempenho",
+      "c) Definir programas de inicialização",
+      "d) Desinstalar programas",
+      "e) Ver usuários ativos"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "A tecla F5 no Windows tem a função de:",
+    "alternativas": [
+      "a) Renomear",
+      "b) Atualizar a tela",
+      "c) Abrir o menu de contexto",
+      "d) Fechar a janela",
+      "e) Abrir a ajuda"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "Qual das opções abaixo é um caractere permitido em nomes de arquivos no Windows?",
+    "alternativas": [
+      "a) ?",
+      "b) *",
+      "c) :",
+      "d) _",
+      "e) \""
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "O que é a Barra de Tarefas?",
+    "alternativas": [
+      "a) Uma barra com menus de programas",
+      "b) Uma barra que exibe programas em execução e opções do sistema",
+      "c) Uma barra de ferramentas do Word",
+      "d) Uma barra de navegação",
+      "e) Uma barra de status"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "A Lixeira pode ser esvaziada para:",
+    "alternativas": [
+      "a) Recuperar arquivos",
+      "b) Liberar espaço em disco",
+      "c) Criptografar arquivos",
+      "d) Criar atalhos",
+      "e) Renomear arquivos"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "O atalho para criar um atalho de um arquivo é:",
+    "alternativas": [
+      "a) Botão direito → Criar Atalho",
+      "b) Ctrl + Shift + N",
+      "c) Alt + F4",
+      "d) Win + S",
+      "e) F5"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "O que é o Explorador de Arquivos?",
+    "alternativas": [
+      "a) Um navegador de internet",
+      "b) Um gerenciador de arquivos e pastas",
+      "c) Um editor de textos",
+      "d) Um programa de e-mail",
+      "e) Um antivírus"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "Para selecionar todos os arquivos de uma pasta, usa-se:",
+    "alternativas": [
+      "a) Ctrl + A",
+      "b) Ctrl + C",
+      "c) Ctrl + V",
+      "d) Ctrl + X",
+      "e) Ctrl + Z"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "A opção 'Abrir com' permite:",
+    "alternativas": [
+      "a) Excluir o arquivo",
+      "b) Escolher um programa específico para abrir o arquivo",
+      "c) Renomear o arquivo",
+      "d) Copiar o arquivo",
+      "e) Mover o arquivo"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_windows"
+  },
+  {
+    "enunciado": "O que é um arquivo com extensão .exe?",
+    "alternativas": [
+      "a) Um arquivo de texto",
+      "b) Um arquivo de imagem",
+      "c) Um arquivo executável (programa)",
+      "d) Um arquivo de som",
+      "e) Um arquivo de vídeo"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_informatica_windows"
+  }
+]
