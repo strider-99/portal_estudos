@@ -23,6 +23,13 @@ MAPEAMENTO_AREA = {
     "etica": "administracao",
     "atendimento_publico": "administracao",
     "recursos_patrimoniais_logistica": "administracao",
+    "administracao_publica": "administracao",
+    "administracao_geral": "administracao",
+    "recursos_humanos": "administracao",
+    "materiais_patrimonio": "administracao",
+    "financeira_orcamentaria": "administracao",
+    "legislacao_normas": "administracao",
+    "planejamento_controle": "administracao",
     "redacao_oficial": "administracao",
     "portugues_modulo1": "portugues",
     "portugues_modulo2": "portugues",
@@ -30,6 +37,7 @@ MAPEAMENTO_AREA = {
     "portugues_modulo4": "portugues",
     "portugues_modulo5": "portugues",
     "portugues_modulo6": "portugues",
+    "matematica_modulo1": "matematica",
     "sus_cf": "sus",
     "sus_lei8080": "sus",
     "sus_humanizasus": "sus",
@@ -41,6 +49,9 @@ MAPEAMENTO_AREA = {
     "sus_equidade_genero_raca": "sus",
     "sus_pnaispd_rcpd": "sus",
     "informatica_windows": "informatica",
+    "informatica_word": "informatica",
+    "informatica_excel": "informatica",
+    "informatica_navegadores": "informatica",
 }
 
 def extrair_dados(arquivo_path):
@@ -156,5 +167,5 @@ def importar_apostilas(pasta):
     print("\n🎉 Importação concluída!")
 
 if __name__ == "__main__":
-    PASTA_APOSTILAS = "/home/strider-99/Documentos/Concurso/SESRJ/Específicas/web/"
+    PASTA_APOSTILAS = "/home/strider-99/Documentos/Dev/Python/meu_portal_estudos/apostilas/"
     importar_apostilas(PASTA_APOSTILAS)

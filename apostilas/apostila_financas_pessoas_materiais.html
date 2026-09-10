@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Adm. Financeira, Gestão de Pessoas e Materiais</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #e9ecef;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a3c6e;
+            text-align: center;
+            border-bottom: 3px solid #1a3c6e;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a3c6e;
+            background-color: #e6f0fa;
+            padding: 10px 15px;
+            border-left: 6px solid #1a3c6e;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #2a4c7e;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d9e3f0;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fff3cd;
+            border-left: 6px solid #ffc107;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #856404;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f8f9fa;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #1a3c6e;
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        /* Navegação por páginas */
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.6; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a3c6e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #2a5a9e;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📘 ADMINISTRAÇÃO FINANCEIRA, GESTÃO DE PESSOAS E MATERIAIS</h1>
+    <p style="text-align:center; font-size:18px; color:#1a3c6e;"><b>Apostila completa com 25 questões</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução                                    -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO GERAL</h2>
+        <p>A administração moderna exige que o gestor domine três áreas essenciais para o bom funcionamento de qualquer organização: <b>Finanças</b>, <b>Pessoas</b> e <b>Materiais</b>. Estas áreas, embora distintas, são interdependentes e impactam diretamente a eficiência, a produtividade e a sustentabilidade do negócio.</p>
+        <p>Nesta apostila, abordaremos os conceitos fundamentais de cada uma dessas áreas, com linguagem clara e objetiva, voltada para concursos públicos e rotinas administrativas.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo:</b> Ao final deste material, você será capaz de compreender os princípios da gestão financeira, as práticas de gestão de pessoas e os processos logísticos de materiais, além de resolver 25 questões sobre o tema.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Noções de Administração Financeira (págs. 2 a 4)</li>
+            <li><b>Módulo II:</b> Noções de Gestão de Pessoas (págs. 5 a 6)</li>
+            <li><b>Módulo III:</b> Noções de Administração de Materiais (págs. 7 a 8)</li>
+            <li><b>Questões:</b> 25 questões objetivas e V/F (págs. 9 a 10)</li>
+        </ul>
+        <p style="margin-top:20px;">Use os botões abaixo para navegar pelas páginas deste material.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Administração Financeira – Parte 1                  -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – ADMINISTRAÇÃO FINANCEIRA</h2>
+        <h3>2.1. Conceito e Importância</h3>
+        <p>A <b>administração financeira</b> é a área da gestão que trata da captação, aplicação e controle dos recursos financeiros da organização. Seu objetivo principal é maximizar o valor da empresa e garantir sua liquidez, solvência e rentabilidade.</p>
+        <p>Ela envolve decisões sobre investimentos, financiamentos e distribuição de resultados, sempre buscando o equilíbrio entre risco e retorno.</p>
+
+        <h3>2.2. Orçamento Empresarial</h3>
+        <p>O <b>orçamento</b> é um plano financeiro que estima receitas e despesas para um período futuro. Funciona como um mapa que orienta as operações e permite o controle dos gastos.</p>
+        <ul>
+            <li><b>Orçamento estático:</b> fixo, não se ajusta às variações.</li>
+            <li><b>Orçamento flexível:</b> adapta-se às mudanças no volume de atividades.</li>
+            <li><b>Orçamento base-zero:</b> cada despesa precisa ser justificada do zero a cada período.</li>
+        </ul>
+
+        <h3>2.3. Fluxo de Caixa</h3>
+        <p>O <b>fluxo de caixa</b> é o registro de todas as entradas (recebimentos) e saídas (pagamentos) de dinheiro em um determinado período. É ferramenta vital para a gestão da liquidez.</p>
+        <ul>
+            <li><b>Entradas:</b> vendas à vista, recebimento de duplicatas, aportes de capital, etc.</li>
+            <li><b>Saídas:</b> pagamento de fornecedores, salários, impostos, despesas operacionais, etc.</li>
+            <li><b>Saldo:</b> diferença entre entradas e saídas. Saldo positivo = superávit; negativo = déficit.</li>
+        </ul>
+        <div class="dica">
+            <b>💡 Dica:</b> Um fluxo de caixa bem gerido evita a necessidade de empréstimos de curto prazo e ajuda a planejar investimentos.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Administração Financeira – Parte 2                  -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>ADMINISTRAÇÃO FINANCEIRA (continuação)</h2>
+        <h3>2.4. Análise de Custos</h3>
+        <p>Compreender a estrutura de custos é essencial para a formação de preços e para a tomada de decisão. Os custos podem ser classificados em:</p>
+        <table>
+            <tr><th>Classificação</th><th>Definição</th><th>Exemplo</th></tr>
+            <tr><td><b>Custos Fixos</b></td><td>Não variam com o volume de produção</td><td>Aluguel, salários administrativos</td></tr>
+            <tr><td><b>Custos Variáveis</b></td><td>Variam proporcionalmente à produção</td><td>Matéria-prima, insumos</td></tr>
+            <tr><td><b>Custos Diretos</b></td><td>Identificáveis diretamente ao produto</td><td>Material usado no produto</td></tr>
+            <tr><td><b>Custos Indiretos</b></td><td>Não são diretamente alocados</td><td>Depreciação, energia elétrica</td></tr>
+        </table>
+
+        <h3>2.5. Indicadores Financeiros Essenciais</h3>
+        <ul>
+            <li><b>Liquidez Corrente:</b> (Ativo Circulante / Passivo Circulante) – mede a capacidade de pagamento no curto prazo.</li>
+            <li><b>Rentabilidade sobre o Patrimônio (ROE):</b> (Lucro Líquido / Patrimônio Líquido) – retorno para os acionistas.</li>
+            <li><b>Margem de Lucro:</b> (Lucro Líquido / Receita Total) – eficiência operacional.</li>
+            <li><b>Endividamento:</b> (Passivo Total / Ativo Total) – nível de dependência de capitais de terceiros.</li>
+        </ul>
+        <div class="dica">
+            <b>📊 Interpretação:</b> Quanto maior a liquidez, maior a segurança financeira. Quanto maior o ROE, mais atrativo é o negócio para investidores.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Gestão de Pessoas – Parte 1                         -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO II – GESTÃO DE PESSOAS</h2>
+        <h3>3.1. Conceito e Evolução</h3>
+        <p>A <b>gestão de pessoas</b> (ou Administração de Recursos Humanos) é o conjunto de políticas e práticas que visam administrar o capital humano da organização, alinhando os objetivos individuais aos organizacionais. Evoluiu de um enfoque meramente burocrático (departamento pessoal) para uma visão estratégica, onde as pessoas são vistas como parceiras e fonte de vantagem competitiva.</p>
+
+        <h3>3.2. Principais Processos de Gestão de Pessoas</h3>
+        <ul>
+            <li><b>Recrutamento e Seleção:</b>
+                <ul>
+                    <li><b>Recrutamento interno:</b> aproveitamento de talentos já existentes na empresa.</li>
+                    <li><b>Recrutamento externo:</b> busca de candidatos no mercado.</li>
+                    <li><b>Seleção:</b> escolha do candidato mais adequado por meio de entrevistas, testes e dinâmicas.</li>
+                </ul>
+            </li>
+            <li><b>Treinamento e Desenvolvimento (T&D):</b>
+                <ul>
+                    <li><b>Treinamento:</b> foco no curto prazo, visa suprir lacunas de competências para o cargo atual.</li>
+                    <li><b>Desenvolvimento:</b> foco no longo prazo, prepara o colaborador para futuras responsabilidades.</li>
+                </ul>
+            </li>
+            <li><b>Avaliação de Desempenho:</b>
+                <ul>
+                    <li>Ferramenta para medir a performance do colaborador.</li>
+                    <li>Pode ser feita por autoavaliação, avaliação do gestor, avaliação 360° (pares, subordinados e clientes).</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Gestão de Pessoas – Parte 2                         -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>GESTÃO DE PESSOAS (continuação)</h2>
+        <h3>3.3. Remuneração e Benefícios</h3>
+        <p>A <b>remuneração</b> não se limita ao salário base. Ela engloba:</p>
+        <ul>
+            <li><b>Remuneração fixa:</b> salário mensal.</li>
+            <li><b>Remuneração variável:</b> comissões, bônus, participação nos lucros (PLR).</li>
+            <li><b>Benefícios:</b> vale-transporte, vale-refeição, plano de saúde, seguro de vida, previdência privada, etc.</li>
+        </ul>
+        <p>Uma política de remuneração justa e competitiva é essencial para atrair e reter talentos.</p>
+
+        <h3>3.4. Clima Organizacional e Motivação</h3>
+        <p>O <b>clima organizacional</b> refere-se ao ambiente psicológico da empresa, influenciado pelo estilo de liderança, relações interpessoais e condições de trabalho. Um clima positivo eleva a motivação e a produtividade.</p>
+        <p>Teorias motivacionais importantes:</p>
+        <ul>
+            <li><b>Hierarquia das Necessidades (Maslow):</b> necessidades fisiológicas, segurança, sociais, estima e autorrealização.</li>
+            <li><b>Teoria dos Dois Fatores (Herzberg):</b> fatores higiênicos (evitam insatisfação) e fatores motivacionais (geram satisfação).</li>
+        </ul>
+        <div class="dica">
+            <b>🧠 Lembre-se:</b> Pessoas motivadas e engajadas produzem mais e melhor. A liderança participativa e o reconhecimento são grandes aliados.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Administração de Materiais – Parte 1                -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO III – ADMINISTRAÇÃO DE MATERIAIS</h2>
+        <h3>4.1. Conceito e Objetivos</h3>
+        <p>A <b>administração de materiais</b> é a função que planeja, coordena e controla o fluxo de materiais desde a aquisição até a utilização final. Seus objetivos são:</p>
+        <ul>
+            <li>Garantir o abastecimento adequado, no momento certo e na quantidade necessária.</li>
+            <li>Minimizar custos de aquisição, armazenamento e movimentação.</li>
+            <li>Evitar falta ou excesso de estoques.</li>
+            <li>Assegurar a qualidade e conservação dos materiais.</li>
+        </ul>
+
+        <h3>4.2. Processo de Compras</h3>
+        <p>O ciclo de compras envolve:</p>
+        <ol>
+            <li><b>Identificação da necessidade</b> (requisição interna).</li>
+            <li><b>Pesquisa de fornecedores</b> e cotação de preços.</li>
+            <li><b>Negociação</b> e emissão do pedido de compra.</li>
+            <li><b>Recebimento e conferência</b> (quantidade, qualidade e prazo).</li>
+            <li><b>Pagamento</b> ao fornecedor.</li>
+        </ol>
+
+        <h3>4.3. Classificação de Estoques – Curva ABC</h3>
+        <p>A <b>Curva ABC</b> é um método de classificação de itens de estoque com base em seu valor financeiro ou importância operacional:</p>
+        <table>
+            <tr><th>Classe</th><th>Característica</th><th>Controle</th></tr>
+            <tr><td><b>A</b></td><td>Itens de alto valor / pouca quantidade (ex: 20% dos itens representam 80% do valor)</td><td>Controle rigoroso, estoque mínimo</td></tr>
+            <tr><td><b>B</b></td><td>Itens de médio valor / quantidade média (ex: 30% dos itens representam 15% do valor)</td><td>Controle intermediário</td></tr>
+            <tr><td><b>C</b></td><td>Itens de baixo valor / grande quantidade (ex: 50% dos itens representam 5% do valor)</td><td>Controle simplificado, estoque maior</td></tr>
+        </table>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Administração de Materiais – Parte 2                -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>ADMINISTRAÇÃO DE MATERIAIS (continuação)</h2>
+        <h3>4.4. Armazenagem e Conservação</h3>
+        <p>A <b>armazenagem</b> envolve a guarda e a preservação dos materiais em condições adequadas. Boas práticas incluem:</p>
+        <ul>
+            <li><b>Endereçamento:</b> localização exata de cada item no almoxarifado.</li>
+            <li><b>Empilhamento e acondicionamento:</b> respeitar limites de peso e empilhar de forma segura.</li>
+            <li><b>Controle de validade e prazo:</b> especialmente para materiais perecíveis ou com data de vencimento.</li>
+            <li><b>Segurança:</b> prevenir incêndios, furtos e danos.</li>
+        </ul>
+
+        <h3>4.5. Reposição e Ponto de Pedido</h3>
+        <p>O <b>ponto de pedido</b> é o nível de estoque que aciona uma nova compra. Ele é calculado considerando:</p>
+        <ul>
+            <li><b>Consumo médio</b> do item por período.</li>
+            <li><b>Tempo de reposição</b> (lead time) do fornecedor.</li>
+            <li><b>Estoque mínimo</b> (de segurança) para imprevistos.</li>
+        </ul>
+        <p><b>Fórmula básica:</b> Ponto de Pedido = (Consumo Médio × Tempo de Reposição) + Estoque de Segurança.</p>
+
+        <h3>4.6. Noções de Logística</h3>
+        <p>A logística abrange o planejamento, execução e controle do fluxo de materiais, desde a origem até o consumo. Envolve transporte, distribuição, gestão de fornecedores e sistemas de informação. Uma logística eficiente reduz custos e melhora o nível de serviço ao cliente.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 1 a 13                                     -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (1 a 13)</h2>
+        <p><i>Responda as questões com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Administração Financeira) – O orçamento que se adapta às mudanças no volume de atividades é denominado:</p>
+            <div class="alternativas">
+                a) Orçamento estático<br>
+                b) Orçamento flexível<br>
+                c) Orçamento base-zero<br>
+                d) Orçamento estratégico<br>
+                e) Orçamento operacional
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Fluxo de Caixa) – Assinale a alternativa que contém APENAS saídas de caixa:</p>
+            <div class="alternativas">
+                a) Vendas à vista, recebimento de duplicatas<br>
+                b) Pagamento de fornecedores, salários, impostos<br>
+                c) Aporte de capital, empréstimos obtidos<br>
+                d) Despesas operacionais, vendas a prazo<br>
+                e) Recebimento de aluguéis, pagamento de fornecedores
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Indicadores) – O indicador que mede a capacidade de pagamento da empresa no curto prazo é a:</p>
+            <div class="alternativas">
+                a) Margem de lucro<br>
+                b) Liquidez corrente<br>
+                c) Rentabilidade sobre o patrimônio (ROE)<br>
+                d) Endividamento<br>
+                e) Giro de estoque
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Custos) – Os custos que variam proporcionalmente ao volume de produção são chamados de:</p>
+            <div class="alternativas">
+                a) Custos fixos<br>
+                b) Custos indiretos<br>
+                c) Custos variáveis<br>
+                d) Custos semivariáveis<br>
+                e) Custos operacionais
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Gestão de Pessoas) – O processo que visa suprir lacunas de competências para o cargo atual, com foco no curto prazo, é o:</p>
+            <div class="alternativas">
+                a) Desenvolvimento<br>
+                b) Recrutamento<br>
+                c) Treinamento<br>
+                d) Avaliação de desempenho<br>
+                e) Sucessão
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Gestão de Pessoas) – A avaliação de desempenho que envolve a opinião de pares, subordinados, clientes e do próprio avaliado é chamada de:</p>
+            <div class="alternativas">
+                a) Autoavaliação<br>
+                b) Avaliação 360°<br>
+                c) Avaliação funcional<br>
+                d) Avaliação por competências<br>
+                e) Avaliação gerencial
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Gestão de Pessoas) – Segundo a hierarquia de necessidades de Maslow, a necessidade de reconhecimento e prestígio está no nível de:</p>
+            <div class="alternativas">
+                a) Necessidades fisiológicas<br>
+                b) Segurança<br>
+                c) Sociais<br>
+                d) Estima<br>
+                e) Autorrealização
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Administração de Materiais) – O método de classificação de estoques que divide os itens em classes A, B e C com base no valor financeiro é a:</p>
+            <div class="alternativas">
+                a) Curva de Pareto<br>
+                b) Curva ABC<br>
+                c) Matriz SWOT<br>
+                d) Diagrama de Ishikawa<br>
+                e) Método PEPS
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Materiais) – O nível de estoque que aciona uma nova compra é denominado:</p>
+            <div class="alternativas">
+                a) Estoque máximo<br>
+                b) Estoque mínimo<br>
+                c) Ponto de pedido<br>
+                d) Lote econômico<br>
+                e) Giro de estoque
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Materiais) – Na curva ABC, os itens de classe ________ representam alto valor e baixa quantidade, exigindo controle rigoroso.</p>
+            <div class="alternativas">
+                a) A<br>
+                b) B<br>
+                c) C<br>
+                d) D<br>
+                e) E
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Finanças) – O fluxo de caixa é importante porque:</p>
+            <div class="alternativas">
+                a) Mostra o lucro contábil da empresa<br>
+                b) Indica a movimentação real de entradas e saídas de dinheiro<br>
+                c) Substitui a demonstração de resultados<br>
+                d) Mede o endividamento da empresa<br>
+                e) Avalia o desempenho dos colaboradores
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Pessoas) – São benefícios oferecidos pelas organizações, EXCETO:</p>
+            <div class="alternativas">
+                a) Vale-transporte<br>
+                b) Plano de saúde<br>
+                c) Participação nos lucros<br>
+                d) Salário-base<br>
+                e) Seguro de vida
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Materiais) – O processo de compras inicia-se com:</p>
+            <div class="alternativas">
+                a) Emissão do pedido<br>
+                b) Pesquisa de fornecedores<br>
+                c) Identificação da necessidade<br>
+                d) Recebimento do material<br>
+                e) Pagamento ao fornecedor
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 9: Questões 14 a 25 + Gabarito                        -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="9">
+        <h2>📝 QUESTÕES (14 a 25) – Verdadeiro/Falso e Final</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F) – Analise as afirmativas sobre Administração Financeira:</p>
+            <p>(   ) O orçamento base-zero exige que cada despesa seja justificada a cada novo período.<br>
+            (   ) O fluxo de caixa registra apenas as saídas de dinheiro.<br>
+            (   ) A margem de lucro é calculada dividindo o lucro líquido pela receita total.<br>
+            (   ) O endividamento mede a relação entre passivo total e ativo total.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – V<br>
+                b) F – V – F – F<br>
+                c) V – V – F – V<br>
+                d) F – F – V – F<br>
+                e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F) – Sobre Gestão de Pessoas:</p>
+            <p>(   ) O recrutamento interno busca candidatos no mercado externo.<br>
+            (   ) Treinamento e desenvolvimento são sinônimos e têm o mesmo objetivo.<br>
+            (   ) O clima organizacional é influenciado pela liderança e pelas relações interpessoais.<br>
+            (   ) A avaliação 360° envolve múltiplas fontes de feedback.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – F<br>
+                b) F – F – V – V<br>
+                c) F – V – V – F<br>
+                d) V – F – F – V<br>
+                e) F – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (V/F) – Sobre Administração de Materiais:</p>
+            <p>(   ) A curva ABC classifica os itens com base no peso físico.<br>
+            (   ) O ponto de pedido considera o consumo médio e o tempo de reposição.<br>
+            (   ) O estoque de segurança serve para cobrir imprevistos.<br>
+            (   ) A armazenagem adequada previne danos e perdas.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – V – V<br>
+                b) V – F – F – V<br>
+                c) F – F – V – V<br>
+                d) V – V – F – F<br>
+                e) F – V – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Finanças) – O ROE (Return on Equity) é calculado da seguinte forma:</p>
+            <div class="alternativas">
+                a) Lucro Líquido / Ativo Total<br>
+                b) Lucro Líquido / Patrimônio Líquido<br>
+                c) Receita Total / Ativo Circulante<br>
+                d) Passivo Total / Patrimônio Líquido<br>
+                e) Lucro Bruto / Vendas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Pessoas) – A teoria de Herzberg classifica os fatores que evitam insatisfação como:</p>
+            <div class="alternativas">
+                a) Fatores motivacionais<br>
+                b) Fatores higiênicos<br>
+                c) Fatores intrínsecos<br>
+                d) Fatores de autorrealização<br>
+                e) Fatores sociais
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Materiais) – No processo de compras, a etapa que ocorre imediatamente após a pesquisa de fornecedores é:</p>
+            <div class="alternativas">
+                a) Identificação da necessidade<br>
+                b) Recebimento do material<br>
+                c) Negociação e pedido<br>
+                d) Conferência da nota fiscal<br>
+                e) Armazenamento
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Finanças) – Um fluxo de caixa com saldo negativo frequente indica:</p>
+            <div class="alternativas">
+                a) Alta rentabilidade<br>
+                b) Possível problema de liquidez<br>
+                c) Baixo endividamento<br>
+                d) Ótimo controle de custos<br>
+                e) Superávit financeiro
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (Pessoas) – O desenvolvimento de pessoas tem foco no:</p>
+            <div class="alternativas">
+                a) Curto prazo e cargo atual<br>
+                b) Longo prazo e preparação para futuras funções<br>
+                c) Cumprimento de normas trabalhistas<br>
+                d) Redução de custos com pessoal<br>
+                e) Terceirização de atividades
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Materiais) – A função que planeja, coordena e controla o fluxo de materiais desde a aquisição até o consumo é a:</p>
+            <div class="alternativas">
+                a) Administração financeira<br>
+                b) Gestão de pessoas<br>
+                c) Administração de materiais<br>
+                d) Marketing<br>
+                e) Produção
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (V/F) – Sobre indicadores financeiros:</p>
+            <p>(   ) A liquidez corrente ideal é sempre inferior a 1,0.<br>
+            (   ) Quanto maior o endividamento, maior o risco financeiro.<br>
+            (   ) A margem de lucro líquida considera todas as despesas e impostos.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – V<br>
+                b) V – F – F<br>
+                c) F – V – F<br>
+                d) V – F – V<br>
+                e) F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (Pessoas) – O recrutamento que aproveita talentos já existentes na própria organização é o:</p>
+            <div class="alternativas">
+                a) Recrutamento externo<br>
+                b) Recrutamento interno<br>
+                c) Recrutamento misto<br>
+                d) Recrutamento terceirizado<br>
+                e) Recrutamento virtual
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (Materiais) – O estoque de segurança também é conhecido como:</p>
+            <div class="alternativas">
+                a) Estoque ativo<br>
+                b) Estoque mínimo<br>
+                c) Estoque máximo<br>
+                d) Estoque de reposição<br>
+                e) Estoque sazonal
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-B</b> | <b>3-B</b> | <b>4-C</b> | <b>5-C</b> | <b>6-B</b> | <b>7-D</b> | <b>8-B</b> | <b>9-C</b> | <b>10-A</b></p>
+            <p><b>11-B</b> | <b>12-D</b> | <b>13-C</b> | <b>14-A</b> | <b>15-B</b> | <b>16-A</b> | <b>17-B</b> | <b>18-B</b> | <b>19-C</b> | <b>20-B</b></p>
+            <p><b>21-B</b> | <b>22-C</b> | <b>23-A</b> | <b>24-B</b> | <b>25-B</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,F,V,V); Q15 (F,F,V,V); Q16 (F,V,V,V); Q23 (F,V,V).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO (botões)                                   -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+        
+        <!-- BOTÃO MENU ADICIONADO AQUI -->
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn" style="background-color: #28a745; min-width:100px;">🏠 Menu</button>
+        </a>
+        
+        <span class="page-indicator" id="pageIndicator">Página 1 de 9</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            // scroll to top of book when changing page
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        // Inicializa
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

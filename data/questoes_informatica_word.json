@@ -1,0 +1,212 @@
+[
+  {
+    "enunciado": "Qual é o atalho para abrir a ajuda no Microsoft Word 2016?",
+    "alternativas": ["a) F2", "b) F3", "c) F1", "d) F4", "e) F5"],
+    "gabarito": "C",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "Para alinhar um texto à esquerda no Word, usa-se o atalho:",
+    "alternativas": ["a) Ctrl + E", "b) Ctrl + J", "c) Ctrl + G", "d) Ctrl + Q", "e) Ctrl + D"],
+    "gabarito": "D",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O que faz a tecla F7 no Word?",
+    "alternativas": ["a) Abre a ajuda", "b) Inicia a verificação ortográfica e gramatical", "c) Insere um comentário", "d) Abre o dicionário de sinônimos", "e) Salva o documento"],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "Qual guia do Word contém os comandos para inserir cabeçalho e rodapé?",
+    "alternativas": ["a) Início", "b) Inserir", "c) Layout da Página", "d) Referências", "e) Exibição"],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "Para inserir uma quebra de página, usa-se o atalho:",
+    "alternativas": ["a) Ctrl + Enter", "b) Ctrl + Shift + Enter", "c) Ctrl + Page Down", "d) Ctrl + Page Up", "e) Alt + Enter"],
+    "gabarito": "A",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "A guia Correspondências é usada principalmente para:",
+    "alternativas": ["a) Inserir tabelas", "b) Criar mala direta", "c) Revisar ortografia", "d) Inserir imagens", "e) Configurar margens"],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O Pincel de Formatação serve para:",
+    "alternativas": ["a) Copiar a formatação de um texto para outro", "b) Pintar a página", "c) Inserir formas", "d) Destacar texto com cor", "e) Alterar a cor da fonte"],
+    "gabarito": "A",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O atalho Ctrl + K no Word insere:",
+    "alternativas": ["a) Uma quebra de página", "b) Um hiperlink", "c) Um comentário", "d) Uma tabela", "e) Um gráfico"],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "Qual guia contém as opções de margens, orientação e tamanho da página?",
+    "alternativas": ["a) Início", "b) Inserir", "c) Layout da Página", "d) Referências", "e) Exibição"],
+    "gabarito": "C",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O atalho para centralizar um texto é:",
+    "alternativas": ["a) Ctrl + C", "b) Ctrl + E", "c) Ctrl + G", "d) Ctrl + J", "e) Ctrl + Q"],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O que é a Faixa de Opções (Ribbon) no Word?",
+    "alternativas": ["a) Uma barra de menus no topo da tela", "b) O conjunto de guias com ferramentas organizadas", "c) Uma barra de status na parte inferior", "d) Uma régua para alinhar textos", "e) Uma janela de ajuda"],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "Para verificar a contagem de palavras, pode-se usar:",
+    "alternativas": ["a) Guia Início → Contagem", "b) Guia Revisão → Contagem de Palavras", "c) Guia Inserir → Contagem", "d) Guia Exibição → Contagem", "e) Barra de Status (clicar em palavras)"],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O atalho Ctrl + J no Word faz:",
+    "alternativas": ["a) Alinhar à esquerda", "b) Alinhar à direita", "c) Justificar o texto", "d) Centralizar o texto", "e) Abrir a janela de impressão"],
+    "gabarito": "C",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "Qual recurso do Word permite criar diagramas e organogramas?",
+    "alternativas": ["a) SmartArt", "b) Formas", "c) WordArt", "d) Caixa de Texto", "e) Tabelas"],
+    "gabarito": "A",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O modo de exibição que mostra o documento como ele ficará impresso é o:",
+    "alternativas": ["a) Rascunho", "b) Layout de Impressão", "c) Leitura em Tela Cheia", "d) Layout da Web", "e) Estrutura de Tópicos"],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "Qual atalho insere um comentário no Word?",
+    "alternativas": ["a) Ctrl + K", "b) Ctrl + Alt + M", "c) Ctrl + Shift + M", "d) Alt + F4", "e) Ctrl + F"],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O grupo 'Parágrafo' na guia Início contém, EXCETO:",
+    "alternativas": ["a) Marcadores", "b) Numeração", "c) Alinhamento", "d) Cor da Fonte", "e) Espaçamento"],
+    "gabarito": "D",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O atalho para salvar um documento no Word é:",
+    "alternativas": ["a) Ctrl + S", "b) Ctrl + N", "c) Ctrl + O", "d) Ctrl + P", "e) Ctrl + W"],
+    "gabarito": "A",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O que é o Painel de Navegação no Word?",
+    "alternativas": ["a) Uma ferramenta para navegar por cabeçalhos e páginas", "b) Uma janela de ajuda", "c) Uma barra de ferramentas", "d) Um editor de imagens", "e) Um verificador ortográfico"],
+    "gabarito": "A",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "A guia Revisão contém, EXCETO:",
+    "alternativas": ["a) Ortografia e Gramática", "b) Controle de Alterações", "c) Comentários", "d) Mala Direta", "e) Traduzir"],
+    "gabarito": "D",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "Para inserir uma tabela no Word, usa-se a guia:",
+    "alternativas": ["a) Início", "b) Inserir", "c) Layout da Página", "d) Referências", "e) Exibição"],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O atalho Ctrl + Z no Word serve para:",
+    "alternativas": ["a) Refazer a última ação", "b) Desfazer a última ação", "c) Copiar o texto", "d) Colar o texto", "e) Recortar o texto"],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O que é a Mala Direta no Word?",
+    "alternativas": ["a) Uma ferramenta para criar documentos personalizados em massa", "b) Um correio eletrônico", "c) Um endereço de correspondência", "d) Uma tabela de dados", "e) Um gráfico"],
+    "gabarito": "A",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "Para aplicar negrito ao texto, usa-se:",
+    "alternativas": ["a) Ctrl + B", "b) Ctrl + I", "c) Ctrl + S", "d) Ctrl + N", "e) Ctrl + K"],
+    "gabarito": "A",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "A opção 'Sumário' está localizada na guia:",
+    "alternativas": ["a) Início", "b) Inserir", "c) Layout da Página", "d) Referências", "e) Exibição"],
+    "gabarito": "D",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O atalho Ctrl + P no Word abre:",
+    "alternativas": ["a) A janela de impressão", "b) A janela de salvar", "c) A janela de ajuda", "d) A janela de abrir", "e) A janela de fechar"],
+    "gabarito": "A",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O que é o WordArt?",
+    "alternativas": ["a) Um texto estilizado com efeitos", "b) Um gráfico de dados", "c) Uma imagem", "d) Um diagrama", "e) Uma tabela"],
+    "gabarito": "A",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O atalho F1 no Word serve para:",
+    "alternativas": ["a) Abrir a ajuda", "b) Verificar ortografia", "c) Renomear o arquivo", "d) Salvar o documento", "e) Fechar o documento"],
+    "gabarito": "A",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "A guia Exibição contém, EXCETO:",
+    "alternativas": ["a) Modos de Exibição", "b) Zoom", "c) Régua", "d) Margens", "e) Painel de Navegação"],
+    "gabarito": "D",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O atalho para copiar a formatação de um texto para outro é:",
+    "alternativas": ["a) Pincel de Formatação (botão)", "b) Ctrl + Shift + C", "c) Ctrl + Shift + V", "d) Alt + F4", "e) F5"],
+    "gabarito": "A",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O grupo 'Fonte' na guia Início contém, EXCETO:",
+    "alternativas": ["a) Negrito", "b) Itálico", "c) Sublinhado", "d) Alinhamento", "e) Tamanho da fonte"],
+    "gabarito": "D",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O atalho para abrir o dicionário de sinônimos no Word é:",
+    "alternativas": ["a) F7", "b) Shift + F7", "c) Ctrl + F7", "d) Alt + F7", "e) F1"],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O que é o Controle de Alterações no Word?",
+    "alternativas": ["a) Uma ferramenta para registrar e acompanhar alterações no documento", "b) Uma ferramenta de impressão", "c) Um recurso de formatação", "d) Uma ferramenta de revisão ortográfica", "e) Um recurso de inserção de imagens"],
+    "gabarito": "A",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "O atalho Ctrl + S no Word serve para:",
+    "alternativas": ["a) Salvar o documento", "b) Abrir um documento", "c) Fechar o documento", "d) Imprimir o documento", "e) Novo documento"],
+    "gabarito": "A",
+    "slug_materia": "apostila_informatica_word"
+  },
+  {
+    "enunciado": "Para inserir uma imagem no Word, usa-se a guia:",
+    "alternativas": ["a) Início", "b) Inserir", "c) Layout da Página", "d) Referências", "e) Exibição"],
+    "gabarito": "B",
+    "slug_materia": "apostila_informatica_word"
+  }
+]

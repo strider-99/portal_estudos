@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - SUS: Portaria 230/2023 - Equidade de Gênero e Raça</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fdf5f0;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #6b1a4a;
+            text-align: center;
+            border-bottom: 3px solid #c0397a;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #6b1a4a;
+            background-color: #fdedf5;
+            padding: 10px 15px;
+            border-left: 6px solid #c0397a;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #8a2a5a;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #fad7e6;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .atencao {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .atencao b {
+            color: #922b21;
+        }
+        .exemplo {
+            background-color: #fdf2f7;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #c0397a;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #fdf8f5;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #c0397a;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #6b1a4a;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #c0397a;
+            color: white;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+            color: white;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>♀️✊🏿 PROGRAMA NACIONAL DE EQUIDADE DE GÊNERO, RAÇA E VALORIZAÇÃO DAS TRABALHADORAS NO SUS</h1>
+    <p style="text-align:center; font-size:18px; color:#6b1a4a;"><b>Portaria GM/MS nº 230, de 7 de março de 2023</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Portaria GM/MS nº 230, de 7 de março de 2023</b>, institui o <b>Programa Nacional de Equidade de Gênero, Raça e Valorização das Trabalhadoras no SUS</b>, com o objetivo de promover a equidade de gênero e raça no Sistema Único de Saúde, buscando modificar as estruturas machista e racista que operam na divisão do trabalho na saúde.</p>
+        <p>Esta portaria reconhece as <b>desigualdades históricas</b> enfrentadas por mulheres e pessoas negras no mercado de trabalho da saúde e estabelece diretrizes para a <b>valorização das trabalhadoras</b>, a <b>promoção da equidade</b> e o <b>enfrentamento das violências</b> de gênero e raça no SUS.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender os fundamentos, objetivos, diretrizes e estratégias do Programa Nacional de Equidade de Gênero, Raça e Valorização das Trabalhadoras no SUS, instituído pela Portaria 230/2023, com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Contexto e Fundamentos do Programa – pág. 2</li>
+            <li><b>Módulo II:</b> Objetivos Gerais e Específicos – pág. 3</li>
+            <li><b>Módulo III:</b> Princípios do Programa – pág. 4</li>
+            <li><b>Módulo IV:</b> Eixos Estratégicos e Ações – pág. 5</li>
+            <li><b>Módulo V:</b> Público-Alvo, Abrangência e Implementação – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Contexto e Fundamentos                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – CONTEXTO E FUNDAMENTOS DO PROGRAMA</h2>
+
+        <h3>2.1. Contexto Histórico</h3>
+        <ul>
+            <li><b>2023:</b> Publicação da Portaria GM/MS nº 230, de 7 de março de 2023.</li>
+            <li><b>Motivação:</b> Reconhecimento das <b>desigualdades de gênero e raça</b> no mercado de trabalho da saúde, com a predominância feminina em cargos de menor remuneração e a sub-representação de pessoas negras em posições de liderança.</li>
+            <li><b>Articulação:</b> O programa se articula com a <b>Política Nacional de Saúde Integral da População Negra</b>, com a <b>Política Nacional de Saúde Integral LGBT</b> e com o <b>HumanizaSUS</b>.</li>
+        </ul>
+
+        <h3>2.2. Reconhecimento das Estruturas Machista e Racista</h3>
+        <ul>
+            <li><b>Divisão sexual do trabalho:</b> A maioria dos trabalhadores da saúde são mulheres, mas elas ocupam majoritariamente cargos de menor remuneração (técnicas de enfermagem, agentes comunitárias de saúde, etc.), enquanto os homens ocupam mais posições de liderança.</li>
+            <li><b>Racismo estrutural:</b> Pessoas negras enfrentam maiores barreiras para o acesso a cargos de liderança e melhores condições de trabalho.</li>
+            <li><b>Interseccionalidade:</b> Mulheres negras são as que enfrentam as maiores desigualdades.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>Frase-chave:</b> "O Programa Nacional de Equidade de Gênero, Raça e Valorização das Trabalhadoras no SUS busca modificar as estruturas machista e racista que operam na divisão do trabalho na saúde."</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Objetivos                                           -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – OBJETIVOS DO PROGRAMA</h2>
+
+        <h3>3.1. Objetivos Gerais</h3>
+        <ul>
+            <li><b>I –</b> <b>Promover a equidade de gênero e raça</b> no SUS, buscando modificar as estruturas machista e racista que operam na divisão do trabalho na saúde.</li>
+            <li><b>II –</b> <b>Valorizar as trabalhadoras</b> do SUS, com especial atenção às mulheres negras, indígenas e de outros grupos étnico-raciais.</li>
+            <li><b>III –</b> <b>Enfrentar as violências</b> de gênero e raça no ambiente de trabalho.</li>
+        </ul>
+
+        <h3>3.2. Objetivos Específicos (Art. 2º)</h3>
+        <ul>
+            <li><b>I –</b> <b>Fortalecer a participação das mulheres</b> em cargos de liderança, gestão e direção no SUS.</li>
+            <li><b>II –</b> <b>Promover a valorização e a qualificação</b> das trabalhadoras do SUS, especialmente as mulheres negras, indígenas e de outros grupos étnico-raciais.</li>
+            <li><b>III –</b> <b>Enfrentar o assédio moral e sexual</b>, a discriminação e outras violências de gênero e raça no ambiente de trabalho.</li>
+            <li><b>IV –</b> <b>Fomentar a produção de conhecimento</b> e a formação de profissionais para a promoção da equidade de gênero e raça no SUS.</li>
+            <li><b>V –</b> <b>Monitorar e avaliar</b> os indicadores de equidade de gênero e raça no SUS, com a produção de dados desagregados por sexo, raça/cor e ocupação.</li>
+            <li><b>VI –</b> <b>Articular</b> as políticas de equidade com outras políticas públicas (educação, assistência social, segurança pública).</li>
+        </ul>
+
+        <div class="atencao">
+            <b>⚡ Atenção:</b> O enfrentamento do <b>assédio moral e sexual</b> e da <b>discriminação</b> é um dos objetivos específicos mais importantes do Programa.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Princípios do Programa                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – PRINCÍPIOS DO PROGRAMA</h2>
+
+        <p>O Programa Nacional de Equidade de Gênero, Raça e Valorização das Trabalhadoras no SUS fundamenta-se nos seguintes princípios:</p>
+
+        <ul>
+            <li><b>I –</b> <b>Equidade:</b> Reconhecimento das desigualdades históricas e ação estratégica para superá-las.</li>
+            <li><b>II –</b> <b>Interseccionalidade:</b> Reconhecimento de que as opressões de gênero, raça, classe e outras se cruzam, gerando desigualdades específicas.</li>
+            <li><b>III –</b> <b>Participação Social:</b> Fortalecimento do controle social e da participação das trabalhadoras e dos movimentos sociais nas instâncias de gestão do SUS.</li>
+            <li><b>IV –</b> <b>Transversalidade:</b> A equidade de gênero e raça deve permear todas as políticas e ações do SUS.</li>
+            <li><b>V –</b> <b>Valorização do Trabalho:</b> Reconhecimento da importância do trabalho em saúde, com especial atenção às mulheres e pessoas negras.</li>
+            <li><b>VI –</b> <b>Enfrentamento das Violências:</b> Combate ao assédio moral e sexual, à discriminação e a todas as formas de violência de gênero e raça.</li>
+            <li><b>VII –</b> <b>Respeito à Diversidade:</b> Valorização da diversidade de gênero, raça, etnia, orientação sexual e identidade de gênero.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Eixos Estratégicos e Ações                        -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – EIXOS ESTRATÉGICOS E AÇÕES DO PROGRAMA</h2>
+
+        <p>A Portaria 230/2023 estabelece os seguintes eixos estratégicos para a implementação do Programa:</p>
+
+        <h3>5.1. Eixo 1 – Valorização das Trabalhadoras</h3>
+        <ul>
+            <li>Promoção de políticas de <b>valorização, qualificação e desenvolvimento</b> das trabalhadoras do SUS.</li>
+            <li>Fortalecimento das <b>carreiras</b> e <b>planos de cargos e salários</b> com equidade de gênero e raça.</li>
+            <li>Garantia de <b>condições dignas de trabalho</b>, com combate à precarização.</li>
+        </ul>
+
+        <h3>5.2. Eixo 2 – Enfrentamento das Violências de Gênero e Raça</h3>
+        <ul>
+            <li>Implementação de <b>políticas de prevenção e enfrentamento</b> do assédio moral e sexual.</li>
+            <li>Criação de <b>canais de denúncia</b> e acolhimento para trabalhadoras vítimas de violência.</li>
+            <li>Capacitação dos gestores e trabalhadores para a <b>identificação e prevenção</b> de situações de violência.</li>
+        </ul>
+
+        <h3>5.3. Eixo 3 – Produção de Conhecimento e Formação</h3>
+        <ul>
+            <li>Fomento à <b>pesquisa</b> sobre equidade de gênero e raça no SUS.</li>
+            <li>Inclusão da temática de <b>gênero, raça e equidade</b> nos processos de formação e educação permanente.</li>
+            <li>Produção de <b>materiais educativos</b> sobre o tema.</li>
+        </ul>
+
+        <h3>5.4. Eixo 4 – Monitoramento e Avaliação</h3>
+        <ul>
+            <li>Produção de <b>dados desagregados por sexo, raça/cor e ocupação</b> nos sistemas de informação do SUS.</li>
+            <li>Estabelecimento de <b>indicadores e metas</b> para a promoção da equidade.</li>
+            <li>Avaliação <b>permanente</b> das ações do Programa.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Público-Alvo, Abrangência e Implementação          -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – PÚBLICO-ALVO, ABRANGÊNCIA E IMPLEMENTAÇÃO</h2>
+
+        <h3>6.1. Público-Alvo</h3>
+        <ul>
+            <li><b>Mulheres</b> trabalhadoras do SUS, com especial atenção às <b>mulheres negras, indígenas e de outros grupos étnico-raciais</b>.</li>
+            <li>Trabalhadores do SUS em geral, com ênfase na sensibilização para a equidade de gênero e raça.</li>
+            <li><b>Gestores</b> e <b>dirigentes</b> do SUS, responsáveis pela implementação das políticas de equidade.</li>
+        </ul>
+
+        <h3>6.2. Abrangência</h3>
+        <ul>
+            <li>O Programa tem <b>abrangência nacional</b>, aplicando-se a todas as esferas de gestão do SUS (federal, estadual e municipal).</li>
+            <li>As ações devem ser <b>descentralizadas</b> e adaptadas às realidades regionais.</li>
+        </ul>
+
+        <h3>6.3. Implementação</h3>
+        <ul>
+            <li><b>Articulação intersetorial:</b> O Programa deve ser implementado em articulação com outras políticas públicas (educação, assistência social, segurança pública).</li>
+            <li><b>Participação Social:</b> Os Conselhos de Saúde e os movimentos sociais devem ser envolvidos na implementação e no monitoramento.</li>
+            <li><b>Recursos:</b> A implementação deve contar com recursos orçamentários e financeiros adequados.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica Final:</b> Em concursos, a Portaria 230/2023 é frequentemente associada à <b>equidade de gênero e raça</b>, ao <b>enfrentamento do assédio moral e sexual</b> e à <b>valorização das trabalhadoras</b> do SUS. Memorize os eixos estratégicos e os princípios.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Conceito) – O Programa Nacional de Equidade de Gênero, Raça e Valorização das Trabalhadoras no SUS foi instituído pela:</p>
+            <div class="alternativas">
+                a) Portaria GM/MS nº 230, de 7 de março de 2023.<br>
+                b) Portaria nº 2.836/2011.<br>
+                c) Lei 8.080/90.<br>
+                d) Portaria nº 992/2009.<br>
+                e) Lei 13.146/2015.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Objetivo Geral) – O objetivo geral do Programa é:</p>
+            <div class="alternativas">
+                a) Promover a equidade de gênero e raça no SUS, modificando as estruturas machista e racista.<br>
+                b) Garantir o acesso da população negra aos serviços de saúde.<br>
+                c) Combater a discriminação contra a população LGBT.<br>
+                d) Promover a saúde da mulher.<br>
+                e) Reduzir a mortalidade infantil.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Objetivos Específicos) – É um objetivo específico do Programa, segundo o Art. 2º da Portaria 230/2023:</p>
+            <div class="alternativas">
+                a) Fortalecer a participação das mulheres em cargos de liderança no SUS.<br>
+                b) Excluir as mulheres dos cargos de gestão.<br>
+                c) Reduzir o número de trabalhadoras negras no SUS.<br>
+                d) Centralizar as ações no nível federal.<br>
+                e) Eliminar a participação social.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Princípios) – São princípios do Programa, EXCETO:</p>
+            <div class="alternativas">
+                a) Equidade.<br>
+                b) Interseccionalidade.<br>
+                c) Participação Social.<br>
+                d) Centralização das decisões.<br>
+                e) Valorização do Trabalho.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Eixos Estratégicos) – O Eixo 1 do Programa trata da:</p>
+            <div class="alternativas">
+                a) Valorização das Trabalhadoras.<br>
+                b) Produção de Conhecimento.<br>
+                c) Monitoramento e Avaliação.<br>
+                d) Enfrentamento das Violências.<br>
+                e) Articulação Intersetorial.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Eixos Estratégicos) – O Eixo 2 do Programa trata do:</p>
+            <div class="alternativas">
+                a) Enfrentamento das Violências de Gênero e Raça.<br>
+                b) Valorização das Trabalhadoras.<br>
+                c) Produção de Conhecimento.<br>
+                d) Monitoramento e Avaliação.<br>
+                e) Articulação Intersetorial.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Público-Alvo) – O Programa tem como público-alvo prioritário:</p>
+            <div class="alternativas">
+                a) Mulheres trabalhadoras do SUS, especialmente as negras, indígenas e de outros grupos étnico-raciais.<br>
+                b) Apenas os homens trabalhadores do SUS.<br>
+                c) Apenas as mulheres brancas.<br>
+                d) Apenas os gestores do SUS.<br>
+                e) Apenas os usuários do SUS.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Contexto) – O Programa reconhece a existência de estruturas que operam na divisão do trabalho na saúde, EXCETO:</p>
+            <div class="alternativas">
+                a) Machista.<br>
+                b) Racista.<br>
+                c) Igualitária.<br>
+                d) Discriminatória.<br>
+                e) Sexista.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Eixos Estratégicos) – O Eixo 3 do Programa trata da:</p>
+            <div class="alternativas">
+                a) Produção de Conhecimento e Formação.<br>
+                b) Valorização das Trabalhadoras.<br>
+                c) Enfrentamento das Violências.<br>
+                d) Monitoramento e Avaliação.<br>
+                e) Articulação Intersetorial.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Eixos Estratégicos) – O Eixo 4 do Programa trata do:</p>
+            <div class="alternativas">
+                a) Monitoramento e Avaliação.<br>
+                b) Valorização das Trabalhadoras.<br>
+                c) Enfrentamento das Violências.<br>
+                d) Produção de Conhecimento.<br>
+                e) Articulação Intersetorial.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Articulação) – O Programa se articula com as seguintes políticas, EXCETO:</p>
+            <div class="alternativas">
+                a) Política Nacional de Saúde Integral da População Negra.<br>
+                b) Política Nacional de Saúde Integral LGBT.<br>
+                c) HumanizaSUS.<br>
+                d) Política Nacional de Atenção Básica.<br>
+                e) Política Nacional de Saúde Mental.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Dados) – O Programa prevê a produção de dados desagregados por:</p>
+            <div class="alternativas">
+                a) Sexo, raça/cor e ocupação.<br>
+                b) Apenas sexo.<br>
+                c) Apenas raça/cor.<br>
+                d) Apenas ocupação.<br>
+                e) Apenas idade.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Interseccionalidade) – O princípio da interseccionalidade, no Programa, reconhece que:</p>
+            <div class="alternativas">
+                a) As opressões de gênero, raça, classe e outras se cruzam, gerando desigualdades específicas.<br>
+                b) As desigualdades de gênero e raça são independentes.<br>
+                c) Apenas a raça é relevante para a equidade.<br>
+                d) Apenas o gênero é relevante para a equidade.<br>
+                e) As desigualdades não se relacionam.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Conceitos e Objetivos) – Analise as afirmativas:</p>
+            <p>(   ) A Portaria 230/2023 institui o Programa Nacional de Equidade de Gênero, Raça e Valorização das Trabalhadoras no SUS.<br>
+            (   ) O Programa tem como objetivo modificar as estruturas machista e racista no SUS.<br>
+            (   ) O Programa não prevê o enfrentamento do assédio moral e sexual.<br>
+            (   ) A valorização das trabalhadoras é um objetivo do Programa.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Eixos e Ações) – Analise as afirmativas:</p>
+            <p>(   ) O Eixo 1 trata da valorização das trabalhadoras.<br>
+            (   ) O Eixo 2 trata da produção de conhecimento.<br>
+            (   ) O Eixo 3 trata do enfrentamento das violências de gênero e raça.<br>
+            (   ) O Eixo 4 trata do monitoramento e avaliação.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – F – V<br>b) F – V – V – F<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (Princípios) – O princípio da equidade, no Programa, significa:</p>
+            <div class="alternativas">
+                a) Reconhecer as desigualdades históricas e agir para superá-las.<br>
+                b) Tratar todos de forma idêntica.<br>
+                c) Ignorar as diferenças de gênero e raça.<br>
+                d) Centralizar as ações no nível federal.<br>
+                e) Reduzir o acesso das mulheres aos serviços de saúde.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Enfrentamento) – O Programa prevê o enfrentamento de violências, incluindo:</p>
+            <div class="alternativas">
+                a) Assédio moral e sexual.<br>
+                b) Apenas assédio moral.<br>
+                c) Apenas assédio sexual.<br>
+                d) Apenas discriminação racial.<br>
+                e) Apenas violência física.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Abrangência) – O Programa tem abrangência:</p>
+            <div class="alternativas">
+                a) Nacional.<br>
+                b) Apenas federal.<br>
+                c) Apenas estadual.<br>
+                d) Apenas municipal.<br>
+                e) Apenas regional.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Participação Social) – O Programa prevê a participação social por meio do envolvimento de:</p>
+            <div class="alternativas">
+                a) Conselhos de Saúde e movimentos sociais.<br>
+                b) Apenas Conselhos de Saúde.<br>
+                c) Apenas movimentos sociais.<br>
+                d) Apenas Ouvidorias.<br>
+                e) Apenas Sindicatos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Divisão do Trabalho) – O Programa reconhece que a divisão do trabalho na saúde é marcada por estruturas:</p>
+            <div class="alternativas">
+                a) Machista e racista.<br>
+                b) Igualitária e democrática.<br>
+                c) Apenas machista.<br>
+                d) Apenas racista.<br>
+                e) Apenas classista.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Consolidação) – Analise as afirmativas:</p>
+            <p>(   ) O Programa foi instituído pela Portaria 230/2023.<br>
+            (   ) O Programa tem como objetivo modificar as estruturas machista e racista.<br>
+            (   ) O Programa não prevê a valorização das trabalhadoras.<br>
+            (   ) O Programa prevê a produção de dados desagregados por sexo, raça/cor e ocupação.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Interseccionalidade) – O princípio da interseccionalidade reconhece que as opressões de gênero e raça:</p>
+            <div class="alternativas">
+                a) Se cruzam, gerando desigualdades específicas.<br>
+                b) São independentes.<br>
+                c) Não se relacionam.<br>
+                d) São exclusivas do ambiente de trabalho.<br>
+                e) São exclusivas do SUS.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (Qualificação) – O Programa prevê a qualificação das trabalhadoras do SUS, com especial atenção a:</p>
+            <div class="alternativas">
+                a) Mulheres negras, indígenas e de outros grupos étnico-raciais.<br>
+                b) Apenas mulheres negras.<br>
+                c) Apenas mulheres indígenas.<br>
+                d) Apenas mulheres brancas.<br>
+                e) Apenas homens.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (Formação) – O Programa prevê a inclusão da temática de gênero, raça e equidade nos processos de:</p>
+            <div class="alternativas">
+                a) Formação e educação permanente.<br>
+                b) Apenas na formação inicial.<br>
+                c) Apenas na educação continuada.<br>
+                d) Apenas na pós-graduação.<br>
+                e) Apenas nos cursos técnicos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Final) – Analise as afirmativas:</p>
+            <p>(   ) O Programa Nacional de Equidade de Gênero, Raça e Valorização das Trabalhadoras no SUS foi instituído pela Portaria 230/2023.<br>
+            (   ) O Programa tem como objetivo promover a equidade de gênero e raça no SUS.<br>
+            (   ) O Programa prevê o enfrentamento do assédio moral e sexual.<br>
+            (   ) O Programa não prevê a produção de dados desagregados por raça/cor.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – V – F<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – F – F
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-A</b> | <b>2-A</b> | <b>3-A</b> | <b>4-D</b> | <b>5-A</b> | <b>6-A</b> | <b>7-A</b> | <b>8-C</b> | <b>9-A</b> | <b>10-A</b></p>
+            <p><b>11-E</b> | <b>12-A</b> | <b>13-A</b> | <b>14-A</b> | <b>15-A</b> | <b>16-A</b> | <b>17-A</b> | <b>18-A</b> | <b>19-A</b> | <b>20-A</b></p>
+            <p><b>21-A</b> | <b>22-A</b> | <b>23-A</b> | <b>24-A</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,V,F,V); Q15 (V,F,F,V); Q21 (V,V,F,V); Q25 (V,V,V,F).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

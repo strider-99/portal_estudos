@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - SUS: Resolução CNS 330/2003 (NOB/RH-SUS)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a5276;
+            text-align: center;
+            border-bottom: 3px solid #2980b9;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a5276;
+            background-color: #d6eaf8;
+            padding: 10px 15px;
+            border-left: 6px solid #2980b9;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #0d3b66;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d6eaf8;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .atencao {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .atencao b {
+            color: #922b21;
+        }
+        .exemplo {
+            background-color: #eafaf1;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #2980b9;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5fbf8;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #2980b9;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a5276;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #2980b9;
+            color: white;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+            color: white;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📋 RESOLUÇÃO CNS Nº 330/2003</h1>
+    <p style="text-align:center; font-size:18px; color:#1a5276;"><b>Política Nacional de Gestão do Trabalho e da Educação em Saúde (NOB/RH-SUS)</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Resolução CNS nº 330, de 4 de novembro de 2003</b>, do Conselho Nacional de Saúde (CNS), aplica os princípios e diretrizes da <b>Norma Operacional Básica de Recursos Humanos para o SUS (NOB/RH-SUS)</b> como <b>Política Nacional de Gestão do Trabalho e da Educação em Saúde</b>, no âmbito do Sistema Único de Saúde.</p>
+        <p>Esta resolução estabelece as bases para a gestão do trabalho, a formação e a educação permanente dos trabalhadores do SUS, reconhecendo que a qualidade do cuidado depende diretamente da valorização e capacitação dos profissionais de saúde.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender os princípios, diretrizes e dispositivos da Resolução CNS 330/2003, dominando a relação entre gestão do trabalho, educação em saúde e a NOB/RH-SUS, com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Contexto e Histórico – O que é a NOB/RH-SUS? – pág. 2</li>
+            <li><b>Módulo II:</b> Princípios da NOB/RH-SUS – pág. 3</li>
+            <li><b>Módulo III:</b> Diretrizes da NOB/RH-SUS – pág. 4</li>
+            <li><b>Módulo IV:</b> Política Nacional de Gestão do Trabalho e Educação em Saúde – pág. 5</li>
+            <li><b>Módulo V:</b> Implicações e Articulação com o HumanizaSUS – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Contexto e Histórico                               -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – CONTEXTO E HISTÓRICO: O QUE É A NOB/RH-SUS?</h2>
+        <h3>2.1. A Norma Operacional Básica de Recursos Humanos (NOB/RH-SUS)</h3>
+        <ul>
+            <li><b>O que é:</b> A NOB/RH-SUS é um instrumento que estabelece as bases para a gestão de recursos humanos no SUS, organizando a relação entre formação, trabalho e saúde.</li>
+            <li><b>Objetivo:</b> Orientar a implementação de políticas de gestão do trabalho e educação em saúde em todas as esferas de governo.</li>
+            <li><b>Origem:</b> Desenvolvida pelo Ministério da Saúde, a NOB/RH-SUS foi validada pelo Conselho Nacional de Saúde por meio da Resolução 330/2003.</li>
+        </ul>
+
+        <h3>2.2. Contexto Histórico</h3>
+        <ul>
+            <li><b>Anos 1990:</b> Reconhecimento da necessidade de uma política de recursos humanos para o SUS, diante da precarização do trabalho e da falta de educação continuada.</li>
+            <li><b>2003:</b> Aprovação da Resolução CNS 330, que incorpora a NOB/RH-SUS como política oficial, em articulação com outras políticas como o HumanizaSUS.</li>
+            <li><b>Atualidade:</b> A NOB/RH-SUS continua sendo um referencial para a gestão do trabalho e a educação permanente em saúde.</li>
+        </ul>
+        <div class="exemplo">
+            <p><b>Frase-chave:</b> "A NOB/RH-SUS é a resposta do SUS à necessidade de qualificação, valorização e integração dos trabalhadores da saúde."</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Princípios da NOB/RH-SUS                           -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – PRINCÍPIOS DA NOB/RH-SUS</h2>
+        <p>A NOB/RH-SUS fundamenta-se em princípios que orientam a gestão do trabalho e a educação em saúde:</p>
+
+        <ul>
+            <li><b>Integralidade:</b> O cuidado em saúde deve ser compreendido de forma ampla, envolvendo ações de promoção, proteção e recuperação, e a gestão de recursos humanos deve acompanhar essa visão.</li>
+            <li><b>Equidade:</b> As políticas de gestão do trabalho devem reduzir desigualdades regionais e sociais, garantindo acesso a oportunidades de formação e desenvolvimento.</li>
+            <li><b>Descentralização:</b> A gestão do trabalho e a educação em saúde devem ser descentralizadas, com autonomia e responsabilidade das esferas municipal, estadual e federal.</li>
+            <li><b>Participação social:</b> A definição de políticas de recursos humanos deve envolver trabalhadores, gestores e usuários, por meio dos Conselhos de Saúde e Conferências.</li>
+            <li><b>Valorização do trabalhador:</b> Reconhecimento da importância dos profissionais de saúde, com garantia de direitos, condições dignas de trabalho e oportunidades de desenvolvimento.</li>
+            <li><b>Educação Permanente:</b> A formação e o desenvolvimento dos trabalhadores devem ser contínuos, integrando ensino, pesquisa e prática.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Diretrizes da NOB/RH-SUS                          -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – DIRETRIZES DA NOB/RH-SUS</h2>
+        <p>A Resolução CNS 330/2003 estabelece diretrizes para a implementação da Política Nacional de Gestão do Trabalho e da Educação em Saúde:</p>
+
+        <ul>
+            <li><b>Articulação entre gestão do trabalho e educação em saúde:</b> As políticas de formação e desenvolvimento devem estar integradas às necessidades do SUS, alinhando oferta de profissionais com a demanda dos serviços.</li>
+            <li><b>Valorização das profissões de saúde:</b> Reconhecimento e fortalecimento das carreiras, com planos de cargos e salários, e melhoria das condições de trabalho.</li>
+            <li><b>Promoção da saúde dos trabalhadores:</b> Garantia de ambientes seguros, prevenção de doenças ocupacionais e atenção à saúde mental dos profissionais.</li>
+            <li><b>Educação Permanente em Saúde:</b> Processo contínuo de aprendizagem, integrando ensino, serviço e comunidade, com metodologias ativas e problematizadoras.</li>
+            <li><b>Gestão participativa e democrática:</b> Participação dos trabalhadores nas decisões sobre gestão do trabalho e processos de trabalho.</li>
+            <li><b>Transversalidade:</b> A política de recursos humanos deve perpassar todas as áreas do SUS, em todos os níveis de atenção.</li>
+        </ul>
+        <div class="atencao">
+            <b>⚡ Atenção:</b> A Educação Permanente em Saúde (EPS) é uma das principais estratégias da NOB/RH-SUS, buscando a transformação das práticas de saúde.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Política Nacional de Gestão do Trabalho            -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – POLÍTICA NACIONAL DE GESTÃO DO TRABALHO E DA EDUCAÇÃO EM SAÚDE</h2>
+
+        <h3>5.1. Objetivos da Política</h3>
+        <ul>
+            <li><b>Garantir a qualidade da atenção:</b> A valorização dos trabalhadores e a educação permanente são condições para um cuidado de excelência.</li>
+            <li><b>Fortalecer o SUS:</b> Profissionais qualificados e motivados são essenciais para a sustentabilidade e a resolutividade do sistema.</li>
+            <li><b>Reduzir as desigualdades:</b> Garantir que todos os profissionais, independentemente da região, tenham acesso a formação e desenvolvimento.</li>
+        </ul>
+
+        <h3>5.2. Principais Dispositivos</h3>
+        <ul>
+            <li><b>Comissões de Gestão do Trabalho:</b> Estruturas locais, estaduais e federais para implementar a política.</li>
+            <li><b>Programas de Educação Permanente:</b> Iniciativas de formação continuada, como o Programa de Educação Permanente em Saúde (PEPS).</li>
+            <li><b>Planos de Cargos, Carreiras e Salários (PCCS):</b> Instrumentos para valorização e desenvolvimento profissional.</li>
+            <li><b>Políticas de Saúde do Trabalhador:</b> Atenção à saúde física e mental dos profissionais do SUS.</li>
+        </ul>
+
+        <h3>5.3. Articulação com outras Políticas</h3>
+        <ul>
+            <li><b>HumanizaSUS:</b> A valorização do trabalhador e a gestão participativa são pontos de convergência.</li>
+            <li><b>Política Nacional de Atenção Básica (PNAB):</b> A educação permanente é uma diretriz da Atenção Básica.</li>
+            <li><b>Rede de Atenção Psicossocial (RAPS):</b> Integração entre saúde mental e gestão do trabalho.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Implicações e Articulação                          -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – IMPLICAÇÕES E ARTICULAÇÃO COM O HUMANIZASUS</h2>
+
+        <h3>6.1. Implicações Práticas da Resolução 330/2003</h3>
+        <ul>
+            <li><b>Valorização do trabalhador:</b> Estabelecimento de políticas de reconhecimento e cuidado com os profissionais de saúde.</li>
+            <li><b>Educação permanente:</b> Formação continuada como ferramenta de transformação das práticas de saúde.</li>
+            <li><b>Gestão participativa:</b> Inclusão dos trabalhadores nas decisões sobre o trabalho.</li>
+            <li><b>Melhoria da qualidade:</b> Profissionais mais qualificados e motivados oferecem melhor cuidado.</li>
+        </ul>
+
+        <h3>6.2. Relação com o HumanizaSUS</h3>
+        <ul>
+            <li>A NOB/RH-SUS complementa o HumanizaSUS, fortalecendo a <b>valorização dos trabalhadores</b> e a <b>gestão participativa</b>.</li>
+            <li>Ambas as políticas compartilham os princípios da <b>integralidade</b>, <b>equidade</b> e <b>participação social</b>.</li>
+            <li>A <b>educação permanente</b> é uma estratégia comum às duas políticas.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica Final:</b> Em concursos, a Resolução 330/2003 é frequentemente associada à <b>gestão do trabalho</b> e à <b>educação permanente em saúde</b>. Memorize os princípios e as diretrizes, e a relação com o HumanizaSUS.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Conceito) – A Resolução CNS nº 330/2003 aplica os princípios e diretrizes da:</p>
+            <div class="alternativas">
+                a) Lei 8.080/90.<br>
+                b) Norma Operacional Básica de Recursos Humanos para o SUS (NOB/RH-SUS).<br>
+                c) Política Nacional de Humanização.<br>
+                d) Lei 8.142/90.<br>
+                e) Política Nacional de Atenção Básica.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Ano) – A Resolução CNS nº 330 foi aprovada no ano de:</p>
+            <div class="alternativas">
+                a) 1988.<br>
+                b) 1990.<br>
+                c) 2003.<br>
+                d) 2009.<br>
+                e) 2015.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Objetivo) – A Resolução 330/2003 estabelece a Política Nacional de:</p>
+            <div class="alternativas">
+                a) Humanização.<br>
+                b) Gestão do Trabalho e da Educação em Saúde.<br>
+                c) Saúde da Família.<br>
+                d) Vigilância Sanitária.<br>
+                e) Saúde Mental.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Princípios) – São princípios da NOB/RH-SUS, EXCETO:</p>
+            <div class="alternativas">
+                a) Integralidade.<br>
+                b) Equidade.<br>
+                c) Centralização.<br>
+                d) Descentralização.<br>
+                e) Participação social.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Diretrizes) – A diretriz que estabelece a articulação entre gestão do trabalho e educação em saúde busca:</p>
+            <div class="alternativas">
+                a) Separar a formação da prática.<br>
+                b) Alinhar a oferta de profissionais com a demanda dos serviços.<br>
+                c) Centralizar as decisões no Ministério da Saúde.<br>
+                d) Reduzir a participação dos trabalhadores.<br>
+                e) Eliminar a educação continuada.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Diretrizes) – A valorização das profissões de saúde inclui, entre outros:</p>
+            <div class="alternativas">
+                a) Planos de cargos, carreiras e salários (PCCS).<br>
+                b) Redução de salários.<br>
+                c) Aumento da carga horária sem compensação.<br>
+                d) Eliminação de direitos trabalhistas.<br>
+                e) Centralização das decisões.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Dispositivos) – Os Programas de Educação Permanente em Saúde (PEPS) são dispositivos para:</p>
+            <div class="alternativas">
+                a) Formação inicial dos profissionais.<br>
+                b) Formação continuada e transformação das práticas.<br>
+                c) Substituir a formação universitária.<br>
+                d) Reduzir o número de profissionais.<br>
+                e) Fiscalizar a atuação profissional.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Princípios) – O princípio da equidade, na NOB/RH-SUS, significa que:</p>
+            <div class="alternativas">
+                a) Todos os trabalhadores devem receber o mesmo tratamento.<br>
+                b) As políticas de gestão do trabalho devem reduzir desigualdades regionais e sociais.<br>
+                c) A gestão do trabalho deve ser centralizada.<br>
+                d) A participação social não é relevante.<br>
+                e) Os trabalhadores não têm direito a formação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Articulação) – A Resolução 330/2003 se articula com o HumanizaSUS por meio, entre outros, do princípio da:</p>
+            <div class="alternativas">
+                a) Valorização do trabalhador.<br>
+                b) Centralização das decisões.<br>
+                c) Exclusão dos usuários.<br>
+                d) Redução da participação social.<br>
+                e) Eliminação da educação permanente.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Diretrizes) – A diretriz que trata da promoção da saúde dos trabalhadores inclui:</p>
+            <div class="alternativas">
+                a) Prevenção de doenças ocupacionais e atenção à saúde mental.<br>
+                b) Apenas a prevenção de acidentes.<br>
+                c) Apenas a atenção à saúde mental.<br>
+                d) Apenas a promoção de atividades físicas.<br>
+                e) Apenas a alimentação saudável.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Histórico) – A NOB/RH-SUS foi desenvolvida pelo:</p>
+            <div class="alternativas">
+                a) Ministério da Saúde.<br>
+                b) Conselho Nacional de Saúde.<br>
+                c) Ministério da Educação.<br>
+                d) Agência Nacional de Saúde Suplementar.<br>
+                e) Ministério do Trabalho.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Dispositivos) – As Comissões de Gestão do Trabalho são estruturas para:</p>
+            <div class="alternativas">
+                a) Implementar a política de gestão do trabalho.<br>
+                b) Fiscalizar a atuação dos profissionais.<br>
+                c) Contratar novos profissionais.<br>
+                d) Reduzir os salários dos trabalhadores.<br>
+                e) Eliminar os direitos trabalhistas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Objetivos) – São objetivos da Política Nacional de Gestão do Trabalho e da Educação em Saúde, EXCETO:</p>
+            <div class="alternativas">
+                a) Garantir a qualidade da atenção.<br>
+                b) Fortalecer o SUS.<br>
+                c) Reduzir as desigualdades.<br>
+                d) Privatizar a gestão do trabalho.<br>
+                e) Valorizar os trabalhadores.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Princípios e Diretrizes) – Analise as afirmativas:</p>
+            <p>(   ) A integralidade é um princípio da NOB/RH-SUS.<br>
+            (   ) A descentralização é uma diretriz da política de gestão do trabalho.<br>
+            (   ) A educação permanente em saúde é uma estratégia da NOB/RH-SUS.<br>
+            (   ) A participação social não está prevista na Resolução 330/2003.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – V – F<br>b) F – V – F – V<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – F – F
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Articulação e Dispositivos) – Analise as afirmativas:</p>
+            <p>(   ) A NOB/RH-SUS se articula com o HumanizaSUS por meio da valorização do trabalhador.<br>
+            (   ) Os Planos de Cargos, Carreiras e Salários (PCCS) são dispositivos da política.<br>
+            (   ) A educação permanente em saúde é uma diretriz da Resolução 330/2003.<br>
+            (   ) A NOB/RH-SUS prevê a exclusão dos trabalhadores das decisões.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – V – F<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – F – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (Diretrizes) – A diretriz que estabelece a transversalidade da política de recursos humanos significa que:</p>
+            <div class="alternativas">
+                a) A política é restrita à Atenção Básica.<br>
+                b) A política perpassa todas as áreas do SUS, em todos os níveis.<br>
+                c) A política é exclusiva do nível federal.<br>
+                d) A política se aplica apenas aos hospitais.<br>
+                e) A política não se articula com outras áreas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Objetivos) – A valorização do trabalhador, prevista na NOB/RH-SUS, inclui a garantia de:</p>
+            <div class="alternativas">
+                a) Apenas salários justos.<br>
+                b) Direitos trabalhistas, condições dignas de trabalho e oportunidades de desenvolvimento.<br>
+                c) Apenas oportunidades de desenvolvimento.<br>
+                d) Apenas condições dignas de trabalho.<br>
+                e) Apenas a redução da carga horária.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Histórico) – A NOB/RH-SUS foi validada pelo Conselho Nacional de Saúde por meio da Resolução:</p>
+            <div class="alternativas">
+                a) 330/2003.<br>
+                b) 992/2009.<br>
+                c) 2.836/2011.<br>
+                d) 230/2023.<br>
+                e) 1.526/2023.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Dispositivos) – As políticas de saúde do trabalhador, no âmbito da NOB/RH-SUS, visam:</p>
+            <div class="alternativas">
+                a) Apenas a prevenção de acidentes.<br>
+                b) A atenção à saúde física e mental dos profissionais do SUS.<br>
+                c) Apenas a atenção à saúde mental.<br>
+                d) Apenas a prevenção de doenças ocupacionais.<br>
+                e) Apenas a promoção da atividade física.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Articulação) – A NOB/RH-SUS e o HumanizaSUS compartilham os princípios da:</p>
+            <div class="alternativas">
+                a) Integralidade, equidade e participação social.<br>
+                b) Centralização, exclusão e verticalização.<br>
+                c) Competição, individualismo e privatização.<br>
+                d) Burocracia, hierarquia e autoritarismo.<br>
+                e) Desigualdade, discriminação e preconceito.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Consolidação) – Analise as afirmativas:</p>
+            <p>(   ) A Resolução 330/2003 é anterior ao HumanizaSUS.<br>
+            (   ) A NOB/RH-SUS estabelece a educação permanente em saúde como estratégia.<br>
+            (   ) A gestão participativa é uma diretriz da política de recursos humanos.<br>
+            (   ) A NOB/RH-SUS não prevê a participação dos trabalhadores.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – V – F<br>b) V – F – V – F<br>c) F – V – F – V<br>d) V – V – F – V<br>e) F – F – V – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Diretrizes) – A educação permanente em saúde, na NOB/RH-SUS, é caracterizada como um processo:</p>
+            <div class="alternativas">
+                a) Contínuo, integrando ensino, serviço e comunidade.<br>
+                b) Pontual, restrito a cursos de curta duração.<br>
+                c) Obrigatório, com carga horária definida.<br>
+                d) Exclusivo para médicos e enfermeiros.<br>
+                e) Voluntário, sem impacto na prática.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (Objetivos) – A Política Nacional de Gestão do Trabalho e da Educação em Saúde busca, entre outros, garantir:</p>
+            <div class="alternativas">
+                a) A qualidade da atenção e o fortalecimento do SUS.<br>
+                b) A privatização dos serviços de saúde.<br>
+                c) A redução do número de profissionais.<br>
+                d) A centralização das decisões.<br>
+                e) A exclusão dos usuários.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (Princípios) – O princípio da descentralização, na NOB/RH-SUS, implica que:</p>
+            <div class="alternativas">
+                a) As decisões são exclusivas do nível federal.<br>
+                b) As esferas municipal, estadual e federal têm autonomia na gestão do trabalho.<br>
+                c) Os municípios não têm responsabilidade sobre a gestão do trabalho.<br>
+                d) A União centraliza todas as ações.<br>
+                e) Os estados são os únicos responsáveis pela gestão do trabalho.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Final) – Analise as afirmativas:</p>
+            <p>(   ) A Resolução 330/2003 aplica os princípios da NOB/RH-SUS como Política Nacional de Gestão do Trabalho e da Educação em Saúde.<br>
+            (   ) A integralidade é um dos princípios da NOB/RH-SUS.<br>
+            (   ) A educação permanente em saúde é uma estratégia da NOB/RH-SUS.<br>
+            (   ) A Resolução 330/2003 não se articula com o HumanizaSUS.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – V – F<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – F – F
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-C</b> | <b>3-B</b> | <b>4-C</b> | <b>5-B</b> | <b>6-A</b> | <b>7-B</b> | <b>8-B</b> | <b>9-A</b> | <b>10-A</b></p>
+            <p><b>11-A</b> | <b>12-A</b> | <b>13-D</b> | <b>14-A</b> | <b>15-A</b> | <b>16-B</b> | <b>17-B</b> | <b>18-A</b> | <b>19-B</b> | <b>20-A</b></p>
+            <p><b>21-A</b> | <b>22-A</b> | <b>23-A</b> | <b>24-B</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,V,V,F); Q15 (V,V,V,F); Q21 (F,V,V,F); Q25 (V,V,V,F).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

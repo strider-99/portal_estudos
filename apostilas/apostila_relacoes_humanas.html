@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Relações Humanas e Interpessoais</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f1ea;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #4a2c2c;
+            text-align: center;
+            border-bottom: 3px solid #b76e6e;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #4a2c2c;
+            background-color: #f8e8e8;
+            padding: 10px 15px;
+            border-left: 6px solid #b76e6e;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #6b3f3f;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f0dede;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .gabarito-box {
+            background-color: #eaf4ea;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #fdfbf7;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #b76e6e;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #4a2c2c;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #6b3f3f;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>🧑‍🤝‍🧑 RELAÇÕES HUMANAS E RELAÇÕES INTERPESSOAIS</h1>
+    <p style="text-align:center; font-size:18px; color:#4a2c2c;"><b>Apostila completa com 25 questões</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução                                   -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO E CONTEXTUALIZAÇÃO</h2>
+        <p>As <b>relações humanas</b> e <b>relações interpessoais</b> são temas centrais na administração contemporânea. Enquanto as relações humanas abrangem o estudo da interação entre pessoas dentro de um contexto organizacional, as relações interpessoais referem-se à comunicação e aos vínculos estabelecidos entre dois ou mais indivíduos, independentemente do ambiente.</p>
+        <p>Este campo do conhecimento ganhou destaque a partir da <b>Teoria das Relações Humanas</b>, desenvolvida por <b>Elton Mayo</b> e seus colaboradores nas experiências de Hawthorne (1927–1932), que demonstraram que fatores psicológicos, sociais e emocionais têm impacto direto na produtividade e na satisfação no trabalho.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender os fundamentos das relações humanas, as habilidades interpessoais essenciais (como empatia, comunicação e inteligência emocional) e as técnicas para gerenciar conflitos e construir um clima organizacional saudável.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Teoria das Relações Humanas – Origens e Fundamentos (pág. 2)</li>
+            <li><b>Módulo II:</b> Comunicação e Percepção Interpessoal (pág. 3)</li>
+            <li><b>Módulo III:</b> Inteligência Emocional e Trabalho em Equipe (pág. 4)</li>
+            <li><b>Módulo IV:</b> Gestão de Conflitos e Clima Organizacional (pág. 5)</li>
+            <li><b>Questões:</b> 25 questões objetivas e V/F (págs. 6 e 7)</li>
+        </ul>
+        <p style="margin-top:20px;">Utilize os botões abaixo para navegar entre as páginas.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Teoria das Relações Humanas                        -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – TEORIA DAS RELAÇÕES HUMANAS</h2>
+        <h3>2.1. Origens e Contexto Histórico</h3>
+        <p>A Teoria das Relações Humanas surgiu como uma reação à abordagem mecanicista da Teoria Clássica (Taylor e Fayol), que tratava o trabalhador como uma extensão da máquina. As <b>Experiências de Hawthorne</b>, conduzidas por Elton Mayo na fábrica da Western Electric, revelaram que:</p>
+        <ul>
+            <li>A produtividade aumentava quando os trabalhadores recebiam atenção especial (Efeito Hawthorne).</li>
+            <li>O <b>grupo informal</b> (laços de amizade e normas sociais não escritas) exerce forte influência sobre o comportamento.</li>
+            <li>Fatores emocionais e psicológicos são tão ou mais importantes que fatores físicos (iluminação, ruído).</li>
+        </ul>
+
+        <h3>2.2. Conceitos Fundamentais</h3>
+        <ul>
+            <li><b>Relações Humanas:</b> Conjunto de interações que ocorrem entre as pessoas em uma organização, influenciadas por valores, cultura organizacional, liderança e clima.</li>
+            <li><b>Relações Interpessoais:</b> Vínculo direto entre dois ou mais indivíduos, baseado em comunicação, percepção e comportamentos mútuos. É a "ponte" que conecta as pessoas.</li>
+            <li><b>Grupo Informal:</b> Estrutura social espontânea que surge a partir de afinidades, interesses comuns e amizades, sem estar prevista no organograma.</li>
+        </ul>
+
+        <h3>2.3. Importância no Ambiente de Trabalho</h3>
+        <p>Relacionamentos saudáveis no trabalho reduzem o estresse, aumentam o engajamento, facilitam a resolução de problemas e melhoram a retenção de talentos. A habilidade de lidar com pessoas é, hoje, uma competência essencial para qualquer gestor.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Comunicação e Percepção                            -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – COMUNICAÇÃO E PERCEPÇÃO INTERPESSOAL</h2>
+        <h3>3.1. A Comunicação Interpessoal</h3>
+        <p>Comunicação é o processo de transmissão e recepção de mensagens entre emissor e receptor. No ambiente interpessoal, ela pode ser:</p>
+        <ul>
+            <li><b>Verbal:</b> palavras faladas ou escritas.</li>
+            <li><b>Não-verbal:</b> expressões faciais, gestos, postura, tom de voz (representa mais de 70% da mensagem, segundo estudos).</li>
+        </ul>
+        <p>As principais <b>barreiras</b> à comunicação eficaz são: ruídos, percepções distorcidas, filtros emocionais, jargões e falta de feedback.</p>
+
+        <h3>3.2. Escuta Ativa</h3>
+        <p>A <b>escuta ativa</b> é a capacidade de ouvir com atenção plena, demonstrando interesse genuíno pelo que o outro tem a dizer. Envolve:</p>
+        <ul>
+            <li>Manter contato visual e postura aberta.</li>
+            <li>Fazer perguntas para esclarecer ou aprofundar o assunto.</li>
+            <li>Parafrasear o conteúdo para confirmar o entendimento.</li>
+            <li>Evitar interrupções e julgamentos precipitados.</li>
+        </ul>
+
+        <h3>3.3. Percepção e Distorções Cognitivas</h3>
+        <p>A percepção é a forma como interpretamos as pessoas e situações. Alguns vieses comuns são:</p>
+        <ul>
+            <li><b>Efeito Halo:</b> tendência a generalizar uma característica positiva ou negativa para toda a pessoa (ex.: "ele é bom em vendas, logo deve ser bom em gestão").</li>
+            <li><b>Profecia Autorrealizável:</b> quando uma expectativa (positiva ou negativa) influencia o comportamento da pessoa, fazendo com que ela a confirme.</li>
+            <li><b>Estereótipos:</b> generalizações simplificadas sobre grupos, que prejudicam a objetividade.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Inteligência Emocional e Equipes                   -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – INTELIGÊNCIA EMOCIONAL E TRABALHO EM EQUIPE</h2>
+        <h3>4.1. Inteligência Emocional (Daniel Goleman)</h3>
+        <p>A inteligência emocional é a capacidade de reconhecer, compreender e gerenciar as próprias emoções e as dos outros. Goleman a divide em <b>5 pilares</b>:</p>
+        <ol>
+            <li><b>Autoconsciência:</b> reconhecer as próprias emoções e seu impacto.</li>
+            <li><b>Autocontrole / Autogestão:</b> administrar impulsos e emoções negativas.</li>
+            <li><b>Automotivação:</b> direcionar emoções para a conquista de metas.</li>
+            <li><b>Empatia:</b> compreender as emoções e perspectivas alheias.</li>
+            <li><b>Habilidades Sociais:</b> construir relacionamentos, influenciar e liderar.</li>
+        </ol>
+        <div class="dica">
+            <b>💡 Dica:</b> Em concursos, a empatia e a comunicação não-violenta são temas muito cobrados como competências essenciais para o atendimento ao público.
+        </div>
+
+        <h3>4.2. Trabalho em Equipe e Sinergia</h3>
+        <p>Uma equipe eficaz não é apenas um grupo de pessoas que trabalham juntas. Ela se caracteriza por:</p>
+        <ul>
+            <li><b>Objetivos comuns</b> claramente definidos.</li>
+            <li><b>Complementaridade</b> de habilidades e conhecimentos.</li>
+            <li><b>Confiança mútua</b> e respeito.</li>
+            <li><b>Sinergia:</b> o resultado do trabalho coletivo é maior que a soma das partes individuais (2 + 2 = 5).</li>
+        </ul>
+
+        <h3>4.3. Feedback e Cultura de Aprendizado</h3>
+        <p>O <b>feedback</b> é uma ferramenta vital para o desenvolvimento interpessoal. Um bom feedback deve ser:</p>
+        <ul>
+            <li><b>Específico:</b> baseado em fatos observáveis.</li>
+            <li><b>Construtivo:</b> focado em melhoria, não em crítica pessoal.</li>
+            <li><b>Tempestivo:</b> dado o mais próximo possível do ocorrido.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Conflitos e Clima Organizacional                   -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – GESTÃO DE CONFLITOS E CLIMA ORGANIZACIONAL</h2>
+        <h3>5.1. Conflitos Interpessoais</h3>
+        <p>Conflito é um processo que ocorre quando uma pessoa percebe que seus interesses, valores ou necessidades são contrariados pelos de outra. Nem sempre o conflito é negativo; ele pode ser <b>funcional</b> (estimula mudanças e inovação) ou <b>disfuncional</b> (prejudica o desempenho).</p>
+        <p><b>Estilos de Gestão de Conflitos (Thomas-Kilmann):</b></p>
+        <table>
+            <tr><th>Estilo</th><th>Característica</th></tr>
+            <tr><td><b>Competir</b></td><td>Alta assertividade, baixa cooperação. Busca vencer a qualquer custo.</td></tr>
+            <tr><td><b>Colaborar</b></td><td>Alta assertividade e alta cooperação. Busca solução ganha-ganha.</td></tr>
+            <tr><td><b>Comprometer</b></td><td>Assertividade e cooperação médias. Busca um acordo mútuo.</td></tr>
+            <tr><td><b>Evitar</b></td><td>Baixa assertividade e baixa cooperação. Fuga do problema.</td></tr>
+            <tr><td><b>Acomodar</b></td><td>Baixa assertividade, alta cooperação. Sacrifica os próprios interesses.</td></tr>
+        </table>
+
+        <h3>5.2. Clima Organizacional</h3>
+        <p>O <b>clima organizacional</b> é a percepção compartilhada pelos colaboradores sobre o ambiente de trabalho. Ele é influenciado por:</p>
+        <ul>
+            <li>Estilo de liderança e tomada de decisão.</li>
+            <li>Qualidade das relações interpessoais.</li>
+            <li>Políticas de reconhecimento e recompensas.</li>
+            <li>Condições físicas e ergonômicas.</li>
+        </ul>
+        <p>Um clima positivo eleva a motivação, reduz o absenteísmo e fortalece o comprometimento organizacional.</p>
+
+        <h3>5.3. Ética e Respeito nas Relações</h3>
+        <p>O respeito à diversidade, a conduta ética e a comunicação não-violenta são pilares para relações humanas sustentáveis. Assédio moral e discriminação são desvios que devem ser combatidos com políticas claras e canais de denúncia.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda as questões com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Teoria) – O pesquisador responsável pelas experiências de Hawthorne, que deram origem à Teoria das Relações Humanas, foi:</p>
+            <div class="alternativas">
+                a) Frederick Taylor<br>
+                b) Henri Fayol<br>
+                c) Elton Mayo<br>
+                d) Max Weber<br>
+                e) Peter Drucker
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Conceitos) – A diferença básica entre relações humanas e relações interpessoais é que:</p>
+            <div class="alternativas">
+                a) As relações humanas ocorrem apenas no ambiente familiar, e as interpessoais no trabalho.<br>
+                b) As relações humanas são mais amplas e abrangem o contexto organizacional, enquanto as interpessoais focam no vínculo direto entre indivíduos.<br>
+                c) As relações interpessoais são estudadas apenas pela psicologia, e as humanas pela administração.<br>
+                d) Não há diferença; os termos são sinônimos.<br>
+                e) As relações humanas são sempre positivas, enquanto as interpessoais são sempre conflituosas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Comunicação) – São barreiras à comunicação eficaz, EXCETO:</p>
+            <div class="alternativas">
+                a) Ruídos<br>
+                b) Filtros emocionais<br>
+                c) Feedback construtivo<br>
+                d) Percepções distorcidas<br>
+                e) Uso de jargões
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Escuta ativa) – Sobre a escuta ativa, é correto afirmar que:</p>
+            <div class="alternativas">
+                a) Consiste em interromper o falante para dar respostas rápidas.<br>
+                b) Envolve parafrasear o conteúdo para confirmar o entendimento.<br>
+                c) Dispensa contato visual, pois isso pode intimidar.<br>
+                d) É uma técnica usada apenas em psicoterapia.<br>
+                e) Prioriza a fala do ouvinte em detrimento da do emissor.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Percepção) – O viés que leva uma pessoa a generalizar uma característica positiva para toda a personalidade de alguém é chamado de:</p>
+            <div class="alternativas">
+                a) Efeito Halo<br>
+                b) Profecia autorrealizável<br>
+                c) Estereótipo<br>
+                d) Efeito Hawthorne<br>
+                e) Viés de confirmação
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Inteligência Emocional) – Segundo Daniel Goleman, o pilar que envolve a capacidade de compreender as emoções e perspectivas alheias é a:</p>
+            <div class="alternativas">
+                a) Autoconsciência<br>
+                b) Autocontrole<br>
+                c) Automotivação<br>
+                d) Empatia<br>
+                e) Habilidade social
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Conflitos) – O estilo de gestão de conflitos caracterizado por alta assertividade e baixa cooperação, buscando vencer a qualquer custo, é o:</p>
+            <div class="alternativas">
+                a) Colaborar<br>
+                b) Comprometer<br>
+                c) Competir<br>
+                d) Evitar<br>
+                e) Acomodar
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Clima Organizacional) – O clima organizacional é influenciado, entre outros fatores, pelo(a):</p>
+            <div class="alternativas">
+                a) Estilo de liderança e qualidade das relações interpessoais.<br>
+                b) Endividamento da empresa.<br>
+                c) Margem de lucro anual.<br>
+                d) Tecnologia utilizada na produção.<br>
+                e) Número de filiais da organização.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Equipes) – O conceito de sinergia no trabalho em equipe significa que:</p>
+            <div class="alternativas">
+                a) O resultado do grupo é igual à soma dos esforços individuais.<br>
+                b) O resultado do grupo é menor que a soma dos esforços individuais.<br>
+                c) O resultado do grupo é maior que a soma dos esforços individuais.<br>
+                d) Não existe relação entre esforço individual e resultado coletivo.<br>
+                e) A equipe deve evitar conflitos a todo custo.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Comunicação) – A comunicação não-verbal inclui, entre outros elementos:</p>
+            <div class="alternativas">
+                a) Palavras escritas em relatórios.<br>
+                b) Tom de voz, expressões faciais e gestos.<br>
+                c) Apenas a comunicação por e-mail.<br>
+                d) Textos de contratos e manuais.<br>
+                e) Conversas formais em reuniões.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Teoria) – As experiências de Hawthorne concluíram que:</p>
+            <div class="alternativas">
+                a) A iluminação é o fator mais importante para a produtividade.<br>
+                b) Os fatores psicológicos e sociais têm grande impacto na produtividade.<br>
+                c) O pagamento por produção é o único motivador eficaz.<br>
+                d) A hierarquia rígida é essencial para o desempenho.<br>
+                e) A especialização do trabalho aumenta a satisfação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Feedback) – Um feedback eficaz deve ser:</p>
+            <div class="alternativas">
+                a) Vago, para não constranger o colaborador.<br>
+                b) Específico, construtivo e tempestivo.<br>
+                c) Dado apenas em avaliações anuais.<br>
+                d) Focado exclusivamente em aspectos negativos.<br>
+                e) Feito em público para dar exemplo.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Percepção) – Quando uma expectativa positiva faz com que uma pessoa se comporte de modo a confirmá-la, ocorre o fenômeno chamado de:</p>
+            <div class="alternativas">
+                a) Efeito Halo<br>
+                b) Profecia autorrealizável<br>
+                c) Estereótipo<br>
+                d) Percepção seletiva<br>
+                e) Projeção
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F) – Analise as afirmativas sobre a Teoria das Relações Humanas:</p>
+            <p>(   ) Surgiu como crítica à abordagem mecanicista da Teoria Clássica.<br>
+            (   ) O grupo informal não influencia o comportamento dos trabalhadores.<br>
+            (   ) O Efeito Hawthorne demonstrou que a atenção recebida melhora a produtividade.<br>
+            (   ) Elton Mayo foi o precursor da Teoria X e Y.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – F<br>
+                b) F – V – F – V<br>
+                c) V – V – F – F<br>
+                d) F – F – V – V<br>
+                e) V – F – F – V
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F) – Sobre Inteligência Emocional (Goleman):</p>
+            <p>(   ) A autoconsciência é a capacidade de reconhecer as próprias emoções.<br>
+            (   ) A empatia é um pilar que envolve apenas sentir pena do outro.<br>
+            (   ) As habilidades sociais incluem a capacidade de influenciar e liderar.<br>
+            (   ) O autocontrole refere-se a suprimir completamente as emoções.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – F<br>
+                b) F – V – F – V<br>
+                c) V – V – F – F<br>
+                d) F – F – V – V<br>
+                e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (V/F) – Sobre gestão de conflitos:</p>
+            <p>(   ) O estilo "evitar" é sempre a melhor abordagem.<br>
+            (   ) O estilo "colaborar" busca uma solução ganha-ganha.<br>
+            (   ) Conflitos funcionais podem estimular a inovação.<br>
+            (   ) O estilo "acomodar" é caracterizado por alta assertividade.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – V – F<br>
+                b) V – F – F – V<br>
+                c) F – F – V – V<br>
+                d) V – V – F – F<br>
+                e) F – V – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Conceitos) – O grupo que surge espontaneamente no ambiente de trabalho, baseado em amizades e afinidades, sem estar previsto no organograma, é chamado de:</p>
+            <div class="alternativas">
+                a) Grupo formal<br>
+                b) Grupo informal<br>
+                c) Equipe de projeto<br>
+                d) Comitê executivo<br>
+                e) Departamento funcional
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Clima) – Assinale a alternativa que NÃO está diretamente relacionada à melhoria do clima organizacional:</p>
+            <div class="alternativas">
+                a) Comunicação transparente<br>
+                b) Reconhecimento de boas práticas<br>
+                c) Aumento da carga horária sem justificativa<br>
+                d) Estímulo ao trabalho colaborativo<br>
+                e) Liderança participativa
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Comunicação) – A escuta ativa envolve, entre outras ações:</p>
+            <div class="alternativas">
+                a) Interromper o falante para dar conselhos.<br>
+                b) Manter contato visual e fazer perguntas para esclarecer.<br>
+                c) Concordar com tudo que o outro diz para evitar conflitos.<br>
+                d) Falar mais do que ouvir.<br>
+                e) Mudar de assunto rapidamente.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Equipes) – Para que uma equipe atinja a sinergia, é essencial que:</p>
+            <div class="alternativas">
+                a) Todos tenham a mesma opinião sobre todos os assuntos.<br>
+                b) Os membros confiem uns nos outros e compartilhem objetivos comuns.<br>
+                c) O líder tome todas as decisões sozinho.<br>
+                d) Não haja nenhum tipo de conflito.<br>
+                e) As tarefas sejam realizadas individualmente e depois somadas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (Ética) – No contexto das relações interpessoais, assédio moral caracteriza-se por:</p>
+            <div class="alternativas">
+                a) Conduta ética e respeitosa.<br>
+                b) Exposição de colaboradores a situações humilhantes e constrangedoras.<br>
+                c) Feedback construtivo para melhoria do desempenho.<br>
+                d) Competição saudável entre colegas.<br>
+                e) Estabelecimento de metas desafiadoras.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Percepção) – A tendência a julgar os outros com base em características superficiais, como aparência ou sotaque, é um exemplo de:</p>
+            <div class="alternativas">
+                a) Efeito Halo<br>
+                b) Estereótipo<br>
+                c) Profecia autorrealizável<br>
+                d) Empatia<br>
+                e) Comunicação não-violenta
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (Motivação) – Segundo a teoria das relações humanas, a produtividade é fortemente influenciada por:</p>
+            <div class="alternativas">
+                a) Apenas pelo salário oferecido.<br>
+                b) Fatores emocionais, sociais e de reconhecimento.<br>
+                c) Exclusivamente pelas condições físicas do ambiente.<br>
+                d) Pela quantidade de horas trabalhadas.<br>
+                e) Pelo tamanho da organização.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (V/F) – Sobre clima organizacional:</p>
+            <p>(   ) É a percepção compartilhada pelos colaboradores sobre o ambiente de trabalho.<br>
+            (   ) Não sofre influência do estilo de liderança.<br>
+            (   ) Um clima positivo reduz o absenteísmo.<br>
+            (   ) Políticas de reconhecimento podem melhorar o clima.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – V<br>
+                b) F – V – F – F<br>
+                c) V – V – F – V<br>
+                d) F – F – V – F<br>
+                e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (Abordagem Geral) – O conceito de "homem social", que valoriza as relações e o reconhecimento no trabalho, é um dos pilares da:</p>
+            <div class="alternativas">
+                a) Teoria Clássica da Administração<br>
+                b) Teoria das Relações Humanas<br>
+                c) Teoria da Burocracia<br>
+                d) Administração Científica<br>
+                e) Teoria Contingencial
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-C</b> | <b>2-B</b> | <b>3-C</b> | <b>4-B</b> | <b>5-A</b> | <b>6-D</b> | <b>7-C</b> | <b>8-A</b> | <b>9-C</b> | <b>10-B</b></p>
+            <p><b>11-B</b> | <b>12-B</b> | <b>13-B</b> | <b>14-A</b> | <b>15-A</b> | <b>16-A</b> | <b>17-B</b> | <b>18-C</b> | <b>19-B</b> | <b>20-B</b></p>
+            <p><b>21-B</b> | <b>22-B</b> | <b>23-B</b> | <b>24-A</b> | <b>25-B</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,F,V,F); Q15 (V,F,V,F); Q16 (F,V,V,F); Q24 (V,F,V,V).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+        
+        <!-- BOTÃO MENU ADICIONADO AQUI -->
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn" style="background-color: #28a745; min-width:100px;">🏠 Menu</button>
+        </a>
+        
+        <span class="page-indicator" id="pageIndicator">Página 1 de 9</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

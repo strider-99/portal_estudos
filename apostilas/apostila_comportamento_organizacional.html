@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Comportamento Organizacional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f3f0f7;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #4a235a;
+            text-align: center;
+            border-bottom: 3px solid #8e44ad;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #4a235a;
+            background-color: #f4ecf7;
+            padding: 10px 15px;
+            border-left: 6px solid #8e44ad;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #5b2d6e;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #e8daef;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #faf5fc;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #8e44ad;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #4a235a;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #6c3483;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>🧠 COMPORTAMENTO ORGANIZACIONAL</h1>
+    <p style="text-align:center; font-size:18px; color:#4a235a;"><b>Pessoas, Grupos, Comunicação, Liderança, Poder, Conflito e Negociação</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO AO COMPORTAMENTO ORGANIZACIONAL</h2>
+        <p>O <b>Comportamento Organizacional (CO)</b> é a área de estudo que investiga o impacto que indivíduos, grupos e a estrutura organizacional têm sobre o comportamento das pessoas dentro das organizações, com o objetivo de aplicar esse conhecimento para melhorar a eficácia da organização.</p>
+        <p>O CO estuda três níveis de análise: o <b>nível individual</b> (personalidade, percepção, motivação), o <b>nível grupal</b> (equipes, comunicação, liderança, conflito) e o <b>nível organizacional</b> (cultura, estrutura, mudança). Este módulo aborda os temas centrais: pessoas, grupos, comunicação, liderança, poder, conflito e negociação.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender a dinâmica das relações humanas no trabalho, os processos de comunicação e liderança, as fontes de poder e as estratégias de negociação e gestão de conflitos, com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Pessoas, Grupos e Dinâmica Organizacional – pág. 2</li>
+            <li><b>Módulo II:</b> Comunicação Organizacional – pág. 3</li>
+            <li><b>Módulo III:</b> Liderança – pág. 4</li>
+            <li><b>Módulo IV:</b> Poder e Política Organizacional – pág. 5</li>
+            <li><b>Módulo V:</b> Conflito e Negociação – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Pessoas, Grupos e Dinâmica Organizacional          -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – PESSOAS, GRUPOS E DINÂMICA ORGANIZACIONAL</h2>
+        <h3>2.1. Comportamento Individual</h3>
+        <p>As pessoas são a base do comportamento organizacional. Fatores individuais como <b>personalidade</b> (traços, como conscienciosidade e extroversão), <b>percepção</b> (interpretação da realidade) e <b>motivação</b> (forças internas que direcionam o comportamento) moldam a forma como cada um age no trabalho.</p>
+
+        <h3>2.2. Grupos e Equipes</h3>
+        <ul>
+            <li><b>Grupo formal:</b> estrutura definida pela organização, com designação específica de tarefas (ex.: departamentos, comitês).</li>
+            <li><b>Grupo informal:</b> alianças naturais que surgem a partir de interesses, afinidades ou amizades, sem designação oficial.</li>
+            <li><b>Equipe:</b> grupo com alto nível de interdependência, objetivos comuns claros e responsabilidade compartilhada.</li>
+        </ul>
+
+        <h3>2.3. Dinâmica de Grupo</h3>
+        <ul>
+            <li><b>Coesão:</b> grau de atração entre os membros do grupo. Grupos coesos tendem a ser mais produtivos, desde que os objetivos sejam alinhados aos da organização.</li>
+            <li><b>Normas:</b> padrões de comportamento aceitos pelo grupo (ex.: pontualidade, ética).</li>
+            <li><b>Papéis:</b> conjunto de comportamentos esperados de uma pessoa em função de sua posição no grupo.</li>
+            <li><b>Status:</b> posição social ou prestígio atribuído a um membro pelo grupo.</li>
+        </ul>
+        <div class="dica">
+            <b>📌 Importante:</b> Os grupos informais podem influenciar mais o comportamento do que a estrutura formal da organização (comprar, recusar ou sabotar ordens).
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Comunicação Organizacional                         -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – COMUNICAÇÃO ORGANIZACIONAL</h2>
+        <h3>3.1. Processo de Comunicação</h3>
+        <p>A comunicação é o processo de transmissão e compreensão de informações entre duas ou mais pessoas. Envolve emissor, mensagem, canal, receptor e feedback (ou retroalimentação).</p>
+
+        <h3>3.2. Fluxos de Comunicação (Canais)</h3>
+        <ul>
+            <li><b>Descendente:</b> da alta administração para os níveis inferiores (ordens, diretrizes, avaliações).</li>
+            <li><b>Ascendente:</b> dos subordinados para os superiores (sugestões, relatórios, reclamações).</li>
+            <li><b>Horizontal (ou lateral):</b> entre colegas do mesmo nível hierárquico (coordenação entre departamentos).</li>
+            <li><b>Diagonal:</b> entre diferentes níveis e setores, sem seguir a hierarquia estrita.</li>
+        </ul>
+
+        <h3>3.3. Comunicação Formal vs. Informal</h3>
+        <ul>
+            <li><b>Formal:</b> segue a hierarquia e os canais oficiais (ex.: ofícios, memorandos, e-mails institucionais, reuniões agendadas).</li>
+            <li><b>Informal (ou "grapevine"):</b> circula por canais não oficiais (ex.: conversas informais, fofocas, rumores). É rápida, mas pode ser imprecisa.</li>
+        </ul>
+
+        <h3>3.4. Barreiras à Comunicação Eficaz</h3>
+        <ul>
+            <li>Filtragem (manipulação da informação).</li>
+            <li>Percepção seletiva (ouvir apenas o que se quer).</li>
+            <li>Sobrecarga de informações.</li>
+            <li>Diferenças de linguagem ou jargões.</li>
+            <li>Ruídos (físicos ou emocionais).</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Liderança                                          -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – LIDERANÇA</h2>
+        <h3>4.1. Conceitos</h3>
+        <p><b>Liderança</b> é a capacidade de influenciar um grupo em direção ao alcance de objetivos. Não se confunde com chefia (autoridade formal). Uma pessoa pode ser líder mesmo sem ter cargo de chefia.</p>
+
+        <h3>4.2. Principais Estilos de Liderança</h3>
+        <ul>
+            <li><b>Autocrático:</b> centraliza decisões, impõe ordens, pouca participação da equipe.</li>
+            <li><b>Democrático (ou participativo):</b> envolve a equipe nas decisões, valoriza a participação.</li>
+            <li><b>Laissez-faire (ou liberal):</b> dá total liberdade ao grupo, interfere minimamente.</li>
+        </ul>
+
+        <h3>4.3. Teorias de Liderança</h3>
+        <ul>
+            <li><b>Teoria dos Traços:</b> acredita que líderes nascem com características específicas (carisma, inteligência). Superada.</li>
+            <li><b>Teoria Comportamental:</b> foca no que o líder faz (estilos).</li>
+            <li><b>Teoria Situacional (ou Contingencial):</b> a eficácia do líder depende da situação (ex.: modelo de Fiedler, liderança situacional de Hersey-Blanchard).</li>
+        </ul>
+
+        <h3>4.4. Liderança Transformacional e Transacional</h3>
+        <ul>
+            <li><b>Transacional:</b> baseada em trocas (recompensas e punições) para manter o desempenho.</li>
+            <li><b>Transformacional:</b> inspira e motiva os seguidores a superar interesses próprios em prol do grupo, promovendo mudanças profundas.</li>
+        </ul>
+        <div class="dica">
+            <b>💡 Dica:</b> Em concursos, a liderança situacional (Hersey-Blanchard) e a transformacional são as mais cobradas.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Poder e Política Organizacional                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – PODER E POLÍTICA ORGANIZACIONAL</h2>
+        <h3>5.1. Poder – Conceito</h3>
+        <p><b>Poder</b> é a capacidade de influenciar o comportamento de outras pessoas para que ajam de acordo com a própria vontade. É diferente de autoridade (poder formal delegado pela organização).</p>
+
+        <h3>5.2. Bases do Poder (French & Raven)</h3>
+        <table>
+            <tr><th>Base de Poder</th><th>Descrição</th></tr>
+            <tr><td><b>Coercitivo</b></td><td>Baseado no medo de punições (demissão, advertência).</td></tr>
+            <tr><td><b>Recompensa</b></td><td>Baseado na capacidade de oferecer benefícios (aumento, elogios).</td></tr>
+            <tr><td><b>Legítimo</b></td><td>Baseado na posição hierárquica formal (cargo).</td></tr>
+            <tr><td><b>Referente (ou de Referência)</b></td><td>Baseado na admiração, respeito ou identificação com a pessoa (carisma).</td></tr>
+            <tr><td><b>Especialista (ou de Perícia)</b></td><td>Baseado no conhecimento técnico ou habilidades especializadas.</td></tr>
+        </table>
+
+        <h3>5.3. Empoderamento (Empowerment)</h3>
+        <p>É o processo de <b>compartilhar poder</b> com os subordinados, dando-lhes autonomia, responsabilidade e autoridade para tomar decisões. Aumenta o engajamento e a satisfação.</p>
+
+        <h3>5.4. Política Organizacional</h3>
+        <p>São as atividades não oficiais (e muitas vezes informais) que as pessoas realizam para ganhar poder, influenciar decisões ou promover interesses pessoais. Pode ser positiva (negociação legítima) ou negativa (manipulação, favorecimento).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Conflito e Negociação                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – CONFLITO E NEGOCIAÇÃO</h2>
+        <h3>6.1. Conflito – Conceito e Tipos</h3>
+        <p><b>Conflito</b> é um processo que se inicia quando uma parte percebe que a outra frustrou ou irá frustrar seus interesses. Pode ser:</p>
+        <ul>
+            <li><b>Funcional (construtivo):</b> melhora o desempenho, estimula inovação e mudanças saudáveis.</li>
+            <li><b>Disfuncional (destrutivo):</b> prejudica o desempenho, gera hostilidade e reduz a produtividade.</li>
+        </ul>
+
+        <h3>6.2. Processo do Conflito (Estágios)</h3>
+        <ol>
+            <li><b>Oposição potencial:</b> condições que geram conflito (diferenças de valores, recursos escassos).</li>
+            <li><b>Cognição e personalização:</b> percepção do conflito e sentimentos envolvidos.</li>
+            <li><b>Intenções:</b> decisão de como agir (competir, colaborar, evitar, acomodar, comprometer-se).</li>
+            <li><b>Comportamento:</b> ações manifestas (declarações, ataques, negociações).</li>
+            <li><b>Resultados:</b> desfecho (funcional ou disfuncional).</li>
+        </ol>
+
+        <h3>6.3. Estilos de Gestão de Conflitos (Thomas-Kilmann)</h3>
+        <table>
+            <tr><th>Estilo</th><th>Assertividade</th><th>Cooperação</th><th>Descrição</th></tr>
+            <tr><td><b>Competir</b></td><td>Alta</td><td>Baixa</td><td>Busca vencer a qualquer custo.</td></tr>
+            <tr><td><b>Colaborar</b></td><td>Alta</td><td>Alta</td><td>Busca solução ganha-ganha.</td></tr>
+            <tr><td><b>Comprometer</b></td><td>Média</td><td>Média</td><td>Busca um acordo mútuo (ceder um pouco).</td></tr>
+            <tr><td><b>Evitar</b></td><td>Baixa</td><td>Baixa</td><td>Fuga do problema.</td></tr>
+            <tr><td><b>Acomodar</b></td><td>Baixa</td><td>Alta</td><td>Sacrifica os próprios interesses para agradar.</td></tr>
+        </table>
+
+        <h3>6.4. Negociação</h3>
+        <ul>
+            <li><b>Negociação distributiva:</b> disputa por recursos fixos (eu ganho, você perde).</li>
+            <li><b>Negociação integrativa:</b> busca ampliar os recursos para atender ambas as partes (ganha-ganha).</li>
+            <li><b>BATNA (Best Alternative to a Negotiated Agreement):</b> melhor alternativa caso não haja acordo. Fundamental para negociar com força.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Definição) – O Comportamento Organizacional (CO) estuda, principalmente, o impacto de três níveis no comportamento das pessoas. São eles:</p>
+            <div class="alternativas">
+                a) Individual, grupal e organizacional.<br>
+                b) Técnico, humano e conceitual.<br>
+                c) Estrutural, funcional e operacional.<br>
+                d) Cognitivo, afetivo e comportamental.<br>
+                e) Formal, informal e estrutural.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Grupos) – Os grupos que surgem naturalmente no ambiente de trabalho, com base em amizades ou interesses comuns, são chamados de:</p>
+            <div class="alternativas">
+                a) Grupos formais.<br>
+                b) Grupos informais.<br>
+                c) Equipes autônomas.<br>
+                d) Comitês executivos.<br>
+                e) Departamentos funcionais.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Comunicação) – O fluxo de comunicação que vai dos subordinados para a alta administração é denominado:</p>
+            <div class="alternativas">
+                a) Descendente.<br>
+                b) Ascendente.<br>
+                c) Horizontal.<br>
+                d) Diagonal.<br>
+                e) Informal.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Liderança) – O estilo de liderança que centraliza decisões e impõe ordens é o:</p>
+            <div class="alternativas">
+                a) Democrático.<br>
+                b) Laissez-faire.<br>
+                c) Autocrático.<br>
+                d) Transformacional.<br>
+                e) Situacional.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Poder) – Segundo French e Raven, o poder baseado na capacidade de oferecer benefícios (como aumento ou elogios) é o poder de:</p>
+            <div class="alternativas">
+                a) Coerção.<br>
+                b) Recompensa.<br>
+                c) Legítimo.<br>
+                d) Referência.<br>
+                e) Especialista.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Conflito) – O conflito que estimula a inovação e melhora o desempenho é classificado como:</p>
+            <div class="alternativas">
+                a) Disfuncional.<br>
+                b) Funcional.<br>
+                c) Estrutural.<br>
+                d) Irreversível.<br>
+                e) Pessoal.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Negociação) – A negociação que busca ampliar os recursos para atender ambas as partes, gerando ganha-ganha, é a:</p>
+            <div class="alternativas">
+                a) Distributiva.<br>
+                b) Integrativa.<br>
+                c) Competitiva.<br>
+                d) Coercitiva.<br>
+                e) Arbitrada.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Comunicação) – A comunicação informal que circula por canais não oficiais, muitas vezes associada a fofocas e rumores, é conhecida como:</p>
+            <div class="alternativas">
+                a) Rede formal.<br>
+                b) Grapevine (parreiral).<br>
+                c) Fluxo diagonal.<br>
+                d) Comunicação escrita.<br>
+                e) Feedback.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Liderança) – A teoria de liderança que defende que a eficácia do líder depende das características da situação é a:</p>
+            <div class="alternativas">
+                a) Teoria dos traços.<br>
+                b) Teoria comportamental.<br>
+                c) Teoria situacional (contingencial).<br>
+                d) Teoria da troca líder-membro.<br>
+                e) Teoria da atribuição.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Poder) – O empoderamento (empowerment) consiste em:</p>
+            <div class="alternativas">
+                a) Centralizar ainda mais as decisões na alta direção.<br>
+                b) Compartilhar poder e autonomia com os subordinados.<br>
+                c) Reduzir o número de líderes na organização.<br>
+                d) Aumentar o poder coercitivo.<br>
+                e) Eliminar os grupos informais.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Dinâmica de Grupos) – O grau de atração entre os membros do grupo e a força dos vínculos que os unem é chamado de:</p>
+            <div class="alternativas">
+                a) Status.<br>
+                b) Papel.<br>
+                c) Norma.<br>
+                d) Coesão.<br>
+                e) Sinergia.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Conflito) – No processo de conflito, a etapa em que as partes decidem como agir (competir, colaborar, evitar, etc.) refere-se às:</p>
+            <div class="alternativas">
+                a) Intenções.<br>
+                b) Comportamentos.<br>
+                c) Cognições.<br>
+                d) Condições antecedentes.<br>
+                e) Resultados.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Liderança) – A liderança que inspira os seguidores a superarem interesses próprios em prol do grupo, promovendo mudanças profundas, é a:</p>
+            <div class="alternativas">
+                a) Transacional.<br>
+                b) Transformacional.<br>
+                c) Autocrática.<br>
+                d) Laissez-faire.<br>
+                e) Situacional.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Pessoas e Grupos) – Analise as afirmativas:</p>
+            <p>(   ) Os grupos formais são definidos pela estrutura organizacional.<br>
+            (   ) A coesão elevada em um grupo sempre leva a um aumento da produtividade.<br>
+            (   ) Os papéis são comportamentos esperados de uma pessoa em função de sua posição.<br>
+            (   ) O status é irrelevante para a dinâmica de grupo.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – F<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Comunicação) – Analise as afirmativas:</p>
+            <p>(   ) O feedback é uma etapa essencial no processo de comunicação.<br>
+            (   ) A comunicação descendente flui dos subordinados para os superiores.<br>
+            (   ) A percepção seletiva é uma barreira à comunicação eficaz.<br>
+            (   ) A comunicação informal nunca deve ser usada nas organizações.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – F<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (V/F – Liderança) – Analise as afirmativas:</p>
+            <p>(   ) O líder autocrático envolve a equipe nas decisões.<br>
+            (   ) A teoria situacional defende que a eficácia do líder depende da situação.<br>
+            (   ) A liderança transformacional baseia-se em trocas (recompensas e punições).<br>
+            (   ) Um líder pode influenciar pessoas mesmo sem autoridade formal.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – F – V<br>b) V – F – V – F<br>c) F – V – V – F<br>d) V – V – F – V<br>e) F – F – V – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Poder) – O poder baseado na admiração, respeito ou identificação com a pessoa é o poder:</p>
+            <div class="alternativas">
+                a) Coercitivo.<br>
+                b) De recompensa.<br>
+                c) Legítimo.<br>
+                d) De referência.<br>
+                e) De especialista.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Conflito) – O estilo de gestão de conflitos caracterizado por baixa assertividade e alta cooperação, sacrificando os próprios interesses, é o:</p>
+            <div class="alternativas">
+                a) Competir.<br>
+                b) Colaborar.<br>
+                c) Comprometer.<br>
+                d) Evitar.<br>
+                e) Acomodar.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Comunicação) – A comunicação que segue a hierarquia e os canais oficiais da organização é a:</p>
+            <div class="alternativas">
+                a) Formal.<br>
+                b) Informal.<br>
+                c) Grapevine.<br>
+                d) Não verbal.<br>
+                e) Diagonal.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Liderança) – O estilo de liderança que dá total liberdade ao grupo, interferindo minimamente, é o:</p>
+            <div class="alternativas">
+                a) Autocrático.<br>
+                b) Democrático.<br>
+                c) Laissez-faire.<br>
+                d) Transformacional.<br>
+                e) Transacional.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Poder e Política) – Analise as afirmativas:</p>
+            <p>(   ) O poder coercitivo baseia-se no medo de punições.<br>
+            (   ) A política organizacional é sempre negativa e prejudicial.<br>
+            (   ) O poder legítimo deriva da posição hierárquica formal.<br>
+            (   ) O empoderamento (empowerment) centraliza o poder na alta direção.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – F<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Negociação) – Na negociação, o termo BATNA (Best Alternative to a Negotiated Agreement) refere-se à:</p>
+            <div class="alternativas">
+                a) Melhor oferta inicial.<br>
+                b) Melhor alternativa caso não haja acordo.<br>
+                c) Pior resultado possível.<br>
+                d) Estratégia de competição.<br>
+                e) Técnica de persuasão.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (Conflito) – O conflito disfuncional é caracterizado por:</p>
+            <div class="alternativas">
+                a) Estimular a criatividade.<br>
+                b) Prejudicar o desempenho e gerar hostilidade.<br>
+                c) Melhorar a tomada de decisão.<br>
+                d) Aumentar a coesão do grupo.<br>
+                e) Promover mudanças positivas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (V/F – Negociação e Conflito) – Analise as afirmativas:</p>
+            <p>(   ) A negociação distributiva busca o ganha-ganha.<br>
+            (   ) O estilo "colaborar" busca solucionar o conflito com alta assertividade e alta cooperação.<br>
+            (   ) O conflito pode ser funcional ou disfuncional.<br>
+            (   ) Evitar o conflito é sempre a melhor estratégia.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – V – F<br>b) V – F – F – V<br>c) F – V – F – V<br>d) V – V – V – F<br>e) F – F – V – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Consolidação) – Analise as afirmativas sobre Comportamento Organizacional:</p>
+            <p>(   ) O CO estuda o comportamento humano em três níveis: individual, grupal e organizacional.<br>
+            (   ) O poder referente baseia-se no conhecimento técnico especializado.<br>
+            (   ) A liderança situacional considera que não existe um único estilo ideal para todas as situações.<br>
+            (   ) A comunicação ascendente flui dos níveis superiores para os inferiores.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – F<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-A</b> | <b>2-B</b> | <b>3-B</b> | <b>4-C</b> | <b>5-B</b> | <b>6-B</b> | <b>7-B</b> | <b>8-B</b> | <b>9-C</b> | <b>10-B</b></p>
+            <p><b>11-D</b> | <b>12-A</b> | <b>13-B</b> | <b>14-A</b> | <b>15-A</b> | <b>16-A</b> | <b>17-D</b> | <b>18-E</b> | <b>19-A</b> | <b>20-C</b></p>
+            <p><b>21-A</b> | <b>22-B</b> | <b>23-B</b> | <b>24-A</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,F,V,F); Q15 (V,F,V,F); Q16 (F,V,F,V); Q21 (V,F,V,F); Q24 (F,V,V,F); Q25 (V,F,V,F).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

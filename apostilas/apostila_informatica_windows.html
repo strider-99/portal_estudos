@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Informática: Windows 10/11</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #eef2f7;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a237e;
+            text-align: center;
+            border-bottom: 3px solid #3f51b5;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a237e;
+            background-color: #e8eaf6;
+            padding: 10px 15px;
+            border-left: 6px solid #3f51b5;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #283593;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #dde1f0;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5f6fc;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #3f51b5;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a237e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #3f51b5;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>🖥️ INFORMÁTICA – WINDOWS 10/11</h1>
+    <p style="text-align:center; font-size:18px; color:#1a237e;"><b>Área de Trabalho, Menu Iniciar, Barra de Tarefas, Gerenciador de Tarefas, Janelas, Painel de Controle, Lixeira, Arquivos, Pastas e Atalhos</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>O <b>Windows 10/11</b> é o sistema operacional mais utilizado em ambientes corporativos e de concursos públicos. Dominar suas funcionalidades é essencial para a navegação, organização de arquivos e configuração do ambiente de trabalho.</p>
+        <p>Este módulo cobre os principais componentes do Windows: <b>Área de Trabalho</b>, <b>Menu Iniciar</b>, <b>Barra de Tarefas</b>, <b>Gerenciador de Tarefas</b>, <b>Janelas</b>, <b>Painel de Controle</b>, <b>Lixeira</b> e <b>operações com arquivos e pastas</b>.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Dominar as funcionalidades do Windows 10/11, incluindo navegação, configuração, gerenciamento de arquivos e pastas, e atalhos de teclado, com 35 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Área de Trabalho e Menu Iniciar – pág. 2</li>
+            <li><b>Módulo II:</b> Barra de Tarefas e Gerenciador de Tarefas – pág. 3</li>
+            <li><b>Módulo III:</b> Janelas, Painel de Controle e Lixeira – pág. 4</li>
+            <li><b>Módulo IV:</b> Arquivos, Pastas, Ícones e Atalhos – pág. 5</li>
+            <li><b>Módulo V:</b> Nomes Válidos e Dicas Finais – pág. 6</li>
+            <li><b>Questões:</b> 35 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Área de Trabalho e Menu Iniciar                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – ÁREA DE TRABALHO E MENU INICIAR</h2>
+
+        <h3>2.1. Área de Trabalho (Desktop)</h3>
+        <ul>
+            <li><b>Exibir:</b> ícones, arquivos e pastas diretamente na tela.</li>
+            <li><b>Classificar:</b> organizar ícones por nome, tamanho, tipo, data de modificação.</li>
+            <li><b>Atualizar:</b> recarregar a exibição (F5 ou botão direito → Atualizar).</li>
+            <li><b>Resolução da tela:</b> ajustar a qualidade da imagem (Configurações → Sistema → Tela).</li>
+            <li><b>Gadgets:</b> (no Windows 7) eram miniaplicativos. No Windows 10/11, foram substituídos por <b>widgets</b> (ícone na barra de tarefas).</li>
+        </ul>
+
+        <h3>2.2. Menu Iniciar</h3>
+        <ul>
+            <li><b>Documentos, Imagens, Computador (Este Computador):</b> atalhos para pastas do usuário.</li>
+            <li><b>Painel de Controle:</b> central de configurações do sistema.</li>
+            <li><b>Dispositivos e Impressoras:</b> gerenciar periféricos.</li>
+            <li><b>Programa Padrão:</b> definir aplicativos padrão (navegador, player de música, etc.).</li>
+            <li><b>Ajuda e Suporte:</b> acesso à documentação do Windows.</li>
+            <li><b>Desligar, Reiniciar, Suspender:</b> opções de energia.</li>
+            <li><b>Todos os programas:</b> lista de aplicativos instalados.</li>
+            <li><b>Pesquisar:</b> barra de pesquisa integrada (Windows + S).</li>
+            <li><b>Ponto de Partida:</b> no Windows 10, é o menu Iniciar; no Windows 11, centralizado.</li>
+        </ul>
+        <div class="dica">
+            <b>💡 Dica:</b> A tecla <b>Windows (Win)</b> abre o Menu Iniciar. <b>Win + S</b> abre a pesquisa.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Barra de Tarefas e Gerenciador de Tarefas          -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – BARRA DE TAREFAS E GERENCIADOR DE TAREFAS</h2>
+
+        <h3>3.1. Barra de Tarefas</h3>
+        <ul>
+            <li><b>Localização:</b> geralmente na parte inferior da tela.</li>
+            <li><b>Propriedades:</b> clicar com o botão direito → "Configurações da Barra de Tarefas" ou "Propriedades".</li>
+            <li><b>Opções:</b>
+                <ul>
+                    <li>Bloquear/desbloquear a barra de tarefas.</li>
+                    <li>Ocultar automaticamente.</li>
+                    <li>Usar botões pequenos.</li>
+                    <li>Posição na tela (inferior, superior, esquerda, direita).</li>
+                </ul>
+            </li>
+            <li><b>Área de notificação:</b> relógio, volume, rede, ícones de programas em execução.</li>
+            <li><b>Botão Iniciar:</b> no canto esquerdo (Windows 10) ou central (Windows 11).</li>
+        </ul>
+
+        <h3>3.2. Gerenciador de Tarefas (Ctrl + Shift + Esc)</h3>
+        <ul>
+            <li><b>Processos:</b> lista de aplicativos e processos em execução.</li>
+            <li><b>Desempenho:</b> uso de CPU, memória, disco, rede.</li>
+            <li><b>Histórico de aplicativos:</b> uso de recursos por aplicativo.</li>
+            <li><b>Inicializar:</b> programas que iniciam com o Windows.</li>
+            <li><b>Usuários:</b> sessões ativas.</li>
+            <li><b>Detalhes e Serviços:</b> informações mais técnicas.</li>
+            <li><b>Fechar programa:</b> selecionar um aplicativo e clicar em "Finalizar tarefa".</li>
+        </ul>
+        <div class="dica">
+            <b>💡 Dica:</b> <b>Ctrl + Alt + Del</b> também abre o Gerenciador de Tarefas (selecionando a opção).
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Janelas, Painel de Controle e Lixeira              -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – JANELAS, PAINEL DE CONTROLE E LIXEIRA</h2>
+
+        <h3>4.1. Janelas (Navegação)</h3>
+        <ul>
+            <li><b>Componentes:</b> barra de título, botões de minimizar, maximizar/restaurar e fechar.</li>
+            <li><b>Menus:</b> Arquivo, Editar, Exibir, Ferramentas, Ajuda (em aplicativos).</li>
+            <li><b>Barras de ferramentas:</b> ícones para ações rápidas.</li>
+            <li><b>Painéis:</b> lista de arquivos, pastas, pré-visualização.</li>
+            <li><b>Caixa de pesquisa:</b> localizar arquivos ou pastas rapidamente.</li>
+            <li><b>Caixas de marcação (checkboxes):</b> selecionar itens.</li>
+            <li><b>Navegação:</b> atalhos <b>Alt + Tab</b> (alternar janelas) e <b>Win + D</b> (mostrar área de trabalho).</li>
+        </ul>
+
+        <h3>4.2. Painel de Controle</h3>
+        <ul>
+            <li><b>Central de configurações:</b> Sistema, Hardware, Rede, Contas de usuário, Programas.</li>
+            <li><b>Modos de exibição:</b> Categoria, Ícones grandes/pequenos.</li>
+            <li><b>Desinstalar programas:</b> remover aplicativos.</li>
+            <li><b>Configurações de energia:</b> ajustar plano de energia.</li>
+        </ul>
+
+        <h3>4.3. Lixeira</h3>
+        <ul>
+            <li><b>Função:</b> armazena arquivos excluídos temporariamente.</li>
+            <li><b>Restaurar:</b> recuperar arquivos excluídos.</li>
+            <li><b>Esvaziar:</b> remover permanentemente.</li>
+            <li><b>Propriedades:</b> espaço reservado, opções de exclusão.</li>
+            <li><b>Atalho:</b> <b>Shift + Delete</b> exclui permanentemente, sem ir para a Lixeira.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Arquivos, Pastas, Ícones e Atalhos                 -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – ARQUIVOS, PASTAS, ÍCONES E ATALHOS</h2>
+
+        <h3>5.1. Operações com Arquivos e Pastas</h3>
+        <ul>
+            <li><b>Localizar:</b> usar a pesquisa do Windows ou o Explorador de Arquivos.</li>
+            <li><b>Copiar:</b> Ctrl + C, <b>Colar:</b> Ctrl + V.</li>
+            <li><b>Recortar:</b> Ctrl + X (move o arquivo).</li>
+            <li><b>Excluir:</b> Delete (envia para a Lixeira).</li>
+            <li><b>Renomear:</b> F2 ou botão direito → Renomear.</li>
+            <li><b>Criar:</b> botão direito → Novo → Pasta / Arquivo.</li>
+            <li><b>Criar atalho:</b> botão direito → Criar atalho.</li>
+            <li><b>Abrir:</b> duplo clique ou Enter.</li>
+            <li><b>Abrir com:</b> escolher um programa específico para abrir o arquivo.</li>
+            <li><b>Editar:</b> abrir para edição.</li>
+            <li><b>Enviar para:</b> enviar para dispositivo removível, e-mail, etc.</li>
+            <li><b>Propriedades:</b> informações sobre o arquivo/pasta (tamanho, local, atributos).</li>
+            <li><b>Criptografar:</b> proteger o arquivo com senha (via propriedades → Avançado).</li>
+            <li><b>Ocultar:</b> marcar como oculto (propriedades → Oculto).</li>
+        </ul>
+
+        <h3>5.2. Ícones e Atalhos</h3>
+        <ul>
+            <li><b>Ícone:</b> representação gráfica de um arquivo, pasta ou programa.</li>
+            <li><b>Atalho:</b> ícone com uma seta no canto inferior esquerdo.</li>
+            <li><b>Criar atalho:</b> botão direito → "Criar atalho" ou arrastar com Ctrl + Shift.</li>
+            <li><b>Função:</b> aponta para o local original do arquivo.</li>
+        </ul>
+        <div class="dica">
+            <b>💡 Dica:</b> <b>Shift + Delete</b> exclui permanentemente. <b>Ctrl + Z</b> desfaz a última ação.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Nomes Válidos e Dicas Finais                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – NOMES VÁLIDOS E DICAS FINAIS</h2>
+
+        <h3>6.1. Nomes Válidos para Arquivos e Pastas</h3>
+        <ul>
+            <li><b>Caracteres permitidos:</b> letras (A-Z, a-z), números (0-9), espaços, hífen (-), sublinhado (_), ponto (.), vírgula (,), parênteses, colchetes.</li>
+            <li><b>Caracteres proibidos:</b> \ / : * ? " < > |</li>
+            <li><b>Extensões:</b> parte após o ponto (ex: .txt, .docx, .pdf).</li>
+            <li><b>Tamanho máximo:</b> 255 caracteres (incluindo o caminho completo).</li>
+            <li><b>Diferença entre maiúsculas e minúsculas:</b> o Windows não diferencia (ex: "Arquivo" = "arquivo").</li>
+        </ul>
+
+        <h3>6.2. Resumo de Atalhos de Teclado Essenciais</h3>
+        <table>
+            <tr><th>Atalho</th><th>Função</th></tr>
+            <tr><td>Win</td><td>Abrir Menu Iniciar</td></tr>
+            <tr><td>Win + S</td><td>Abrir pesquisa</td></tr>
+            <tr><td>Win + D</td><td>Mostrar área de trabalho</td></tr>
+            <tr><td>Win + E</td><td>Abrir Explorador de Arquivos</td></tr>
+            <tr><td>Ctrl + Shift + Esc</td><td>Abrir Gerenciador de Tarefas</td></tr>
+            <tr><td>Alt + Tab</td><td>Alternar entre janelas abertas</td></tr>
+            <tr><td>Ctrl + C</td><td>Copiar</td></tr>
+            <tr><td>Ctrl + V</td><td>Colar</td></tr>
+            <tr><td>Ctrl + X</td><td>Recortar</td></tr>
+            <tr><td>Delete</td><td>Excluir (envia para Lixeira)</td></tr>
+            <tr><td>Shift + Delete</td><td>Excluir permanentemente</td></tr>
+            <tr><td>F2</td><td>Renomear</td></tr>
+            <tr><td>F5</td><td>Atualizar</td></tr>
+        </table>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 18                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 18)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> – O atalho de teclado para abrir o Menu Iniciar é:</p>
+            <div class="alternativas">
+                a) Ctrl + Esc<br>
+                b) Win<br>
+                c) Alt + Tab<br>
+                d) Ctrl + Alt + Del<br>
+                e) Win + D
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> – Para abrir o Gerenciador de Tarefas diretamente, usa-se:</p>
+            <div class="alternativas">
+                a) Ctrl + Alt + Del<br>
+                b) Ctrl + Shift + Esc<br>
+                c) Win + E<br>
+                d) Alt + F4<br>
+                e) Win + X
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> – Os gadgets no Windows 10/11 foram substituídos por:</p>
+            <div class="alternativas">
+                a) Mini-aplicativos<br>
+                b) Widgets<br>
+                c) Aplicativos da área de trabalho<br>
+                d) Barras de ferramentas<br>
+                e) Gadgets ainda existem
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> – Qual é a tecla usada para renomear um arquivo selecionado?</p>
+            <div class="alternativas">
+                a) F1<br>
+                b) F2<br>
+                c) F3<br>
+                d) F4<br>
+                e) F5
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> – O que faz o atalho <b>Win + D</b>?</p>
+            <div class="alternativas">
+                a) Abre o Menu Iniciar<br>
+                b) Mostra a área de trabalho<br>
+                c) Abre o Explorador de Arquivos<br>
+                d) Abre o Gerenciador de Tarefas<br>
+                e) Bloqueia o computador
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> – Onde ficam armazenados os arquivos excluídos temporariamente?</p>
+            <div class="alternativas">
+                a) Painel de Controle<br>
+                b) Lixeira<br>
+                c) Downloads<br>
+                d) Documentos<br>
+                e) Área de Trabalho
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> – Qual atalho exclui um arquivo permanentemente, sem enviar para a Lixeira?</p>
+            <div class="alternativas">
+                a) Delete<br>
+                b) Shift + Delete<br>
+                c) Ctrl + D<br>
+                d) Alt + F4<br>
+                e) Win + Delete
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> – A barra de tarefas geralmente fica localizada:</p>
+            <div class="alternativas">
+                a) No topo da tela<br>
+                b) Na parte inferior da tela<br>
+                c) No centro da tela<br>
+                d) Na lateral esquerda<br>
+                e) Na lateral direita
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> – Qual ferramenta do Windows permite visualizar o uso de CPU, memória e disco?</p>
+            <div class="alternativas">
+                a) Painel de Controle<br>
+                b) Gerenciador de Tarefas<br>
+                c) Explorador de Arquivos<br>
+                d) Configurações<br>
+                e) Lixeira
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> – O que é um atalho no Windows?</p>
+            <div class="alternativas">
+                a) Um arquivo original<br>
+                b) Um link que aponta para um arquivo ou programa<br>
+                c) Um arquivo criptografado<br>
+                d) Um programa executável<br>
+                e) Um arquivo oculto
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> – Qual caractere NÃO é permitido em nomes de arquivos no Windows?</p>
+            <div class="alternativas">
+                a) _ (sublinhado)<br>
+                b) - (hífen)<br>
+                c) : (dois-pontos)<br>
+                d) . (ponto)<br>
+                e) (espaço)
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> – Para copiar um arquivo, usa-se o atalho:</p>
+            <div class="alternativas">
+                a) Ctrl + X<br>
+                b) Ctrl + C<br>
+                c) Ctrl + V<br>
+                d) Ctrl + Z<br>
+                e) Ctrl + A
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> – O que acontece ao pressionar <b>Alt + Tab</b>?</p>
+            <div class="alternativas">
+                a) Fecha a janela atual<br>
+                b) Abre o Gerenciador de Tarefas<br>
+                c) Alterna entre janelas abertas<br>
+                d) Abre o Menu Iniciar<br>
+                e) Mostra a área de trabalho
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> – A Lixeira pode ser usada para:</p>
+            <div class="alternativas">
+                a) Armazenar arquivos permanentemente<br>
+                b) Recuperar arquivos excluídos<br>
+                c) Criptografar arquivos<br>
+                d) Criar atalhos<br>
+                e) Organizar pastas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> – O que é o Painel de Controle?</p>
+            <div class="alternativas">
+                a) Uma ferramenta para gerenciar arquivos<br>
+                b) Uma central de configurações do sistema<br>
+                c) Um local para excluir programas<br>
+                d) Um editor de textos<br>
+                e) Um navegador de internet
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> – Qual é o atalho para abrir o Explorador de Arquivos?</p>
+            <div class="alternativas">
+                a) Win + E<br>
+                b) Win + D<br>
+                c) Win + S<br>
+                d) Win + I<br>
+                e) Win + X
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> – Para desfazer a última ação, usa-se:</p>
+            <div class="alternativas">
+                a) Ctrl + Z<br>
+                b) Ctrl + Y<br>
+                c) Ctrl + C<br>
+                d) Ctrl + V<br>
+                e) Ctrl + X
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> – O que significa a extensão de um arquivo (ex: .txt, .docx)?</p>
+            <div class="alternativas">
+                a) O nome do arquivo<br>
+                b) O tipo e formato do arquivo<br>
+                c) O tamanho do arquivo<br>
+                d) A data de criação<br>
+                e) O local do arquivo
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 19 a 35 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (19 a 35) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> – O Windows 10/11 diferencia maiúsculas de minúsculas em nomes de arquivos?</p>
+            <div class="alternativas">
+                a) Sim, diferencia<br>
+                b) Não, não diferencia<br>
+                c) Apenas para extensões<br>
+                d) Apenas para pastas<br>
+                e) Depende da configuração
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> – O que é a Área de Trabalho?</p>
+            <div class="alternativas">
+                a) Uma pasta de documentos<br>
+                b) A tela principal do Windows<br>
+                c) Um programa de edição<br>
+                d) Um dispositivo de hardware<br>
+                e) Um tipo de arquivo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> – Para ocultar um arquivo, deve-se:</p>
+            <div class="alternativas">
+                a) Excluí-lo<br>
+                b) Renomeá-lo<br>
+                c) Marcar como oculto nas propriedades<br>
+                d) Criptografá-lo<br>
+                e) Mover para a Lixeira
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> – O que faz o atalho <b>Win + S</b>?</p>
+            <div class="alternativas">
+                a) Abre o Menu Iniciar<br>
+                b) Abre a pesquisa do Windows<br>
+                c) Abre as configurações<br>
+                d) Abre o Explorador de Arquivos<br>
+                e) Bloqueia o computador
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> – O que são widgets no Windows 11?</p>
+            <div class="alternativas">
+                a) Mini-aplicativos da área de trabalho<br>
+                b) Painéis com informações dinâmicas (clima, notícias, etc.)<br>
+                c) Arquivos ocultos<br>
+                d) Programas de edição<br>
+                e) Dispositivos de hardware
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> – Para exibir a Área de Trabalho rapidamente, usa-se:</p>
+            <div class="alternativas">
+                a) Win + M<br>
+                b) Win + D<br>
+                c) Win + E<br>
+                d) Win + S<br>
+                e) Win + I
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> – O que é um arquivo oculto?</p>
+            <div class="alternativas">
+                a) Um arquivo excluído<br>
+                b) Um arquivo que não aparece na visualização padrão<br>
+                c) Um arquivo criptografado<br>
+                d) Um arquivo corrompido<br>
+                e) Um arquivo de sistema
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 26</b> – O Gerenciador de Tarefas permite, EXCETO:</p>
+            <div class="alternativas">
+                a) Finalizar tarefas<br>
+                b) Visualizar desempenho<br>
+                c) Definir programas de inicialização<br>
+                d) Desinstalar programas<br>
+                e) Ver usuários ativos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 27</b> – A tecla <b>F5</b> no Windows tem a função de:</p>
+            <div class="alternativas">
+                a) Renomear<br>
+                b) Atualizar a tela<br>
+                c) Abrir o menu de contexto<br>
+                d) Fechar a janela<br>
+                e) Abrir a ajuda
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 28</b> – Qual das opções abaixo é um caractere permitido em nomes de arquivos no Windows?</p>
+            <div class="alternativas">
+                a) ?<br>
+                b) *<br>
+                c) :<br>
+                d) _<br>
+                e) "
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 29</b> – O que é a Barra de Tarefas?</p>
+            <div class="alternativas">
+                a) Uma barra com menus de programas<br>
+                b) Uma barra que exibe programas em execução e opções do sistema<br>
+                c) Uma barra de ferramentas do Word<br>
+                d) Uma barra de navegação<br>
+                e) Uma barra de status
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 30</b> – A Lixeira pode ser esvaziada para:</p>
+            <div class="alternativas">
+                a) Recuperar arquivos<br>
+                b) Liberar espaço em disco<br>
+                c) Criptografar arquivos<br>
+                d) Criar atalhos<br>
+                e) Renomear arquivos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 31</b> – O atalho para criar um atalho de um arquivo é:</p>
+            <div class="alternativas">
+                a) Botão direito → Criar Atalho<br>
+                b) Ctrl + Shift + N<br>
+                c) Alt + F4<br>
+                d) Win + S<br>
+                e) F5
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 32</b> – O que é o Explorador de Arquivos?</p>
+            <div class="alternativas">
+                a) Um navegador de internet<br>
+                b) Um gerenciador de arquivos e pastas<br>
+                c) Um editor de textos<br>
+                d) Um programa de e-mail<br>
+                e) Um antivírus
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 33</b> – Para selecionar todos os arquivos de uma pasta, usa-se:</p>
+            <div class="alternativas">
+                a) Ctrl + A<br>
+                b) Ctrl + C<br>
+                c) Ctrl + V<br>
+                d) Ctrl + X<br>
+                e) Ctrl + Z
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 34</b> – A opção "Abrir com" permite:</p>
+            <div class="alternativas">
+                a) Excluir o arquivo<br>
+                b) Escolher um programa específico para abrir o arquivo<br>
+                c) Renomear o arquivo<br>
+                d) Copiar o arquivo<br>
+                e) Mover o arquivo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 35</b> – O que é um arquivo com extensão .exe?</p>
+            <div class="alternativas">
+                a) Um arquivo de texto<br>
+                b) Um arquivo de imagem<br>
+                c) Um arquivo executável (programa)<br>
+                d) Um arquivo de som<br>
+                e) Um arquivo de vídeo
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-B</b> | <b>3-B</b> | <b>4-B</b> | <b>5-B</b> | <b>6-B</b> | <b>7-B</b> | <b>8-B</b> | <b>9-B</b> | <b>10-B</b></p>
+            <p><b>11-C</b> | <b>12-B</b> | <b>13-C</b> | <b>14-B</b> | <b>15-B</b> | <b>16-A</b> | <b>17-A</b> | <b>18-B</b> | <b>19-B</b> | <b>20-B</b></p>
+            <p><b>21-C</b> | <b>22-B</b> | <b>23-B</b> | <b>24-B</b> | <b>25-B</b> | <b>26-D</b> | <b>27-B</b> | <b>28-D</b> | <b>29-B</b> | <b>30-B</b></p>
+            <p><b>31-A</b> | <b>32-B</b> | <b>33-A</b> | <b>34-B</b> | <b>35-C</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>💡 Observação:</b> Todas as respostas foram elaboradas com base na norma padrão do Windows 10/11.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

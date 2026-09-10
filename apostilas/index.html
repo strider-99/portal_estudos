@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 Biblioteca de Estudos - Concurso</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+        .hub-container {
+            max-width: 1500px;
+            width: 100%;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            padding: 40px 35px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            color: #1a3c6e;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: #6c757d;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 15px;
+        }
+
+        /* ========== SISTEMA DE ABAS ========== */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+        .tab-btn {
+            background: #f1f3f5;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-size: 17px;
+            font-weight: 600;
+            color: #495057;
+            cursor: pointer;
+            transition: 0.25s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            border: 2px solid transparent;
+        }
+        .tab-btn:hover {
+            background: #e9ecef;
+            color: #212529;
+        }
+        .tab-btn.active {
+            background: #1a3c6e;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(26, 60, 110, 0.3);
+            border-color: #1a3c6e;
+        }
+        .tab-btn i {
+            margin-right: 8px;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0.5; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ========== CARDS ========== */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+            gap: 14px;
+            margin-top: 10px;
+        }
+        .card {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 16px 10px 18px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-left: 6px solid #1a3c6e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+        }
+        .card .icon {
+            font-size: 30px;
+            margin-bottom: 4px;
+        }
+        .card h2 {
+            font-size: 13.5px;
+            color: #212529;
+            margin-bottom: 4px;
+            line-height: 1.2;
+        }
+        .card p {
+            color: #6c757d;
+            font-size: 11px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+            flex-grow: 1;
+        }
+        .card .btn-abrir {
+            color: white;
+            padding: 5px 14px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 11.5px;
+            transition: background 0.2s, filter 0.2s;
+            display: inline-block;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            border: none;
+            cursor: pointer;
+        }
+        .card .btn-abrir:hover { filter: brightness(0.85); }
+        .card .btn-indisponivel {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            color: #f8f9fa;
+            padding: 5px 14px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 11.5px;
+            display: inline-block;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            border: none;
+        }
+
+        /* Cores por aba */
+        .card-adm { border-left-color: #1a3c6e; }
+        .card-port { border-left-color: #2c3e50; }
+        .card-sus { border-left-color: #1a7a5a; }
+
+        .footer-hub {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #dee2e6;
+            color: #868e96;
+            font-size: 14px;
+        }
+
+        .badge-em-breve {
+            background: #ffc107;
+            color: #212529;
+            font-size: 9px;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 20px;
+            margin-top: 2px;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 700px) {
+            .hub-container { padding: 20px; }
+            h1 { font-size: 28px; }
+            .card-grid { grid-template-columns: 1fr 1fr; }
+            .tab-btn { padding: 10px 18px; font-size: 14px; }
+        }
+        @media (max-width: 480px) {
+            .card-grid { grid-template-columns: 1fr; }
+            .tabs { flex-direction: column; align-items: stretch; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hub-container">
+
+        <h1>📖 Biblioteca de Estudos</h1>
+        <p class="subtitle">Navegue pelas abas para acessar as disciplinas</p>
+
+        <!-- ================================ -->
+        <!-- ABAS DE NAVEGAÇÃO               -->
+        <!-- ================================ -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'tab-adm')">📊 Administração Geral</button>
+            <button class="tab-btn" onclick="openTab(event, 'tab-port')">📝 Língua Portuguesa</button>
+            <button class="tab-btn" onclick="openTab(event, 'tab-sus')">⚖️ Legislação SUS</button>
+        </div>
+
+        <!-- ================================ -->
+        <!-- ABA 1: ADMINISTRAÇÃO GERAL      -->
+        <!-- ================================ -->
+        <div id="tab-adm" class="tab-content active">
+            <div class="card-grid">
+                <!-- CARD 1: PODC -->
+                <div class="card card-adm">
+                    <div class="icon">📊</div>
+                    <h2>Rotinas Administrativas (PODC)</h2>
+                    <p>Planejamento, Organização, Direção e Controle.</p>
+                    <a href="apostila_podc.html" class="btn-abrir" style="background-color:#1a3c6e;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 2: Finanças -->
+                <div class="card card-adm">
+                    <div class="icon">💰</div>
+                    <h2>Adm. Financeira, Pessoas e Materiais</h2>
+                    <p>Orçamento, fluxo de caixa, recrutamento e estoques.</p>
+                    <a href="apostila_financas_pessoas_materiais.html" class="btn-abrir" style="background-color:#b76e6e;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 3: Relações Humanas -->
+                <div class="card card-adm">
+                    <div class="icon">🧑‍🤝‍🧑</div>
+                    <h2>Relações Humanas</h2>
+                    <p>Teoria das Relações Humanas, inteligência emocional e conflitos.</p>
+                    <a href="apostila_relacoes_humanas.html" class="btn-abrir" style="background-color:#2a7d4f;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 4: Materiais -->
+                <div class="card card-adm">
+                    <div class="icon">📦</div>
+                    <h2>Administração de Materiais</h2>
+                    <p>Compras, armazenamento, estoques e conservação.</p>
+                    <a href="apostila_materiais.html" class="btn-abrir" style="background-color:#e67e22;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 5: Segurança -->
+                <div class="card card-adm">
+                    <div class="icon">🛡️</div>
+                    <h2>Segurança e Ergonomia</h2>
+                    <p>Riscos, EPIs, NR-17, postura e ginástica laboral.</p>
+                    <a href="apostila_seguranca_ergonomia.html" class="btn-abrir" style="background-color:#c0392b;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 6: Qualidade -->
+                <div class="card card-adm">
+                    <div class="icon">⭐</div>
+                    <h2>Qualidade e Atendimento</h2>
+                    <p>PDCA, Ishikawa, ISO 9001 e atendimento (visão geral).</p>
+                    <a href="apostila_qualidade_atendimento.html" class="btn-abrir" style="background-color:#0b5e5e;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 7: Documentos -->
+                <div class="card card-adm">
+                    <div class="icon">📄</div>
+                    <h2>Gestão de Documentos</h2>
+                    <p>Recepção, classificação, registro, distribuição e expedição.</p>
+                    <a href="apostila_gestao_documentos.html" class="btn-abrir" style="background-color:#2c3e50;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 8: Arquivo -->
+                <div class="card card-adm">
+                    <div class="icon">📁</div>
+                    <h2>Arquivo: Tipos, Fases, Técnicas</h2>
+                    <p>Tipos de arquivo, fases do arquivamento, ordenação e métodos.</p>
+                    <a href="apostila_arquivo.html" class="btn-abrir" style="background-color:#4e342e;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 9: Comportamento -->
+                <div class="card card-adm">
+                    <div class="icon">🧠</div>
+                    <h2>Comportamento Organizacional</h2>
+                    <p>Pessoas, grupos, comunicação, liderança, poder e conflito.</p>
+                    <a href="apostila_comportamento_organizacional.html" class="btn-abrir" style="background-color:#8e44ad;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 10: Ética -->
+                <div class="card card-adm">
+                    <div class="icon">⚖️</div>
+                    <h2>Ética Geral e Profissional</h2>
+                    <p>Conceitos, relações de trabalho, responsabilidade social e assédio.</p>
+                    <a href="apostila_etica.html" class="btn-abrir" style="background-color:#f39c12;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 11: Atendimento Público -->
+                <div class="card card-adm">
+                    <div class="icon">🎯</div>
+                    <h2>Atendimento ao Público</h2>
+                    <p>Excelência, recepção presencial e atendimento telefônico.</p>
+                    <a href="apostila_atendimento_publico.html" class="btn-abrir" style="background-color:#17a2b8;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 12: Recursos e Logística -->
+                <div class="card card-adm">
+                    <div class="icon">📦</div>
+                    <h2>Recursos, Patrimônio e Logística</h2>
+                    <p>Compras, estoques, bens patrimoniais, transporte e distribuição.</p>
+                    <a href="apostila_recursos_patrimoniais_logistica.html" class="btn-abrir" style="background-color:#1a237e;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 13: Redação Oficial -->
+                <div class="card card-adm">
+                    <div class="icon">📝</div>
+                    <h2>Redação Oficial e Manual MRPR</h2>
+                    <p>Conceitos, atributos, pronomes, expedientes e padrão ofício.</p>
+                    <a href="apostila_redacao_oficial.html" class="btn-abrir" style="background-color:#8b0000;">📂 Abrir</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================================ -->
+        <!-- ABA 2: LÍNGUA PORTUGUESA        -->
+        <!-- ================================ -->
+        <div id="tab-port" class="tab-content">
+            <div style="margin-bottom: 20px; text-align: left; background: #f1f3f5; padding: 12px 18px; border-radius: 10px;">
+                <span style="font-weight:600; color:#2c3e50;">📌 Módulos de Língua Portuguesa (COMPLETOS).</span> 
+                <span style="color:#495057;">Clique no card para acessar o material.</span>
+            </div>
+            <div class="card-grid">
+                <!-- Módulo 1 -->
+                <div class="card card-port">
+                    <div class="icon">📖</div>
+                    <h2>Módulo 1 – Compreensão e Organização Textual</h2>
+                    <p>Interpretação, modos de organização, coesão/coerência, níveis de linguagem, elementos e funções da comunicação.</p>
+                    <a href="apostila_portugues_modulo1.html" class="btn-abrir" style="background-color:#2c3e50;">📂 Abrir</a>
+                </div>
+
+                <!-- Módulo 2 -->
+                <div class="card card-port">
+                    <div class="icon">✏️</div>
+                    <h2>Módulo 2 – Ortografia, Acentuação, Homônimos, Parônimos e Polissemia</h2>
+                    <p>Novo Acordo, regras de acentuação, palavras homônimas e parônimas, múltiplos significados.</p>
+                    <a href="apostila_portugues_modulo2.html" class="btn-abrir" style="background-color:#2c3e50;">📂 Abrir</a>
+                </div>
+
+                <!-- Módulo 3 -->
+                <div class="card card-port">
+                    <div class="icon">🧩</div>
+                    <h2>Módulo 3 – Morfologia e Formação de Palavras</h2>
+                    <p>Estrutura das palavras, processos de formação, classes de palavras e flexão nominal e verbal.</p>
+                    <a href="apostila_portugues_modulo3.html" class="btn-abrir" style="background-color:#2c3e50;">📂 Abrir</a>
+                </div>
+
+                <!-- Módulo 4 -->
+                <div class="card card-port">
+                    <div class="icon">🔗</div>
+                    <h2>Módulo 4 – Sintaxe, Período Composto, Pronomes e Verbos</h2>
+                    <p>Termos da oração, coordenação, subordinação, colocação pronominal, tempos e modos verbais.</p>
+                    <a href="apostila_portugues_modulo4.html" class="btn-abrir" style="background-color:#2c3e50;">📂 Abrir</a>
+                </div>
+
+                <!-- Módulo 5 -->
+                <div class="card card-port">
+                    <div class="icon">✅</div>
+                    <h2>Módulo 5 – Concordância, Regência e Crase</h2>
+                    <p>Regência verbal e nominal, concordância verbal e nominal, emprego da crase.</p>
+                    <a href="apostila_portugues_modulo5.html" class="btn-abrir" style="background-color:#2c3e50;">📂 Abrir</a>
+                </div>
+
+                <!-- Módulo 6 -->
+                <div class="card card-port">
+                    <div class="icon">🔖</div>
+                    <h2>Módulo 6 – Pontuação, Figuras, Sinônimos/Antônimos, Denotação/Conotação</h2>
+                    <p>Uso da pontuação, figuras de linguagem, sinônimos/antônimos, denotação e conotação.</p>
+                    <a href="apostila_portugues_modulo6.html" class="btn-abrir" style="background-color:#2c3e50;">📂 Abrir</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================================ -->
+        <!-- ABA 3: LEGISLAÇÃO SUS           -->
+        <!-- ================================ -->
+        <div id="tab-sus" class="tab-content">
+            <div style="margin-bottom: 20px; text-align: left; background: #f1f3f5; padding: 12px 18px; border-radius: 10px;">
+                <span style="font-weight:600; color:#1a7a5a;">📌 Módulos de Legislação do SUS.</span> 
+                <span style="color:#495057;">Clique no card para acessar o material. (Novos cards em breve)</span>
+            </div>
+            <div class="card-grid">
+                <!-- CARD 1: Constituição Federal (PRONTO) -->
+                <div class="card card-sus">
+                    <div class="icon">📜</div>
+                    <h2>Card 1 – Constituição Federal (Arts. 196-200)</h2>
+                    <p>Direito à saúde, relevância pública, organização, diretrizes, iniciativa privada e competências do SUS.</p>
+                    <a href="apostila_sus_cf.html" class="btn-abrir" style="background-color:#1a7a5a;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 2: Lei 8.080/90 (PRONTO) -->
+                <div class="card card-sus">
+                    <div class="icon">⚖️</div>
+                    <h2>Card 2 – Lei 8.080/90</h2>
+                    <p>Lei Orgânica da Saúde: organização, gestão, competências e atribuições do SUS.</p>
+                    <a href="apostila_sus_lei8080.html" class="btn-abrir" style="background-color:#1a7a5a;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 3: HumanizaSUS (PRONTO) -->
+                <div class="card card-sus">
+                    <div class="icon">🤝</div>
+                    <h2>Card 3 – HumanizaSUS</h2>
+                    <p>Política Nacional de Humanização – diretrizes, acolhimento, Clínica Ampliada, gestão participativa e valorização dos trabalhadores.</p>
+                    <a href="apostila_sus_humanizasus.html" class="btn-abrir" style="background-color:#e67e22;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 4: Resolução CNS 330/2003 (PRONTO) -->
+                <div class="card card-sus">
+                    <div class="icon">📋</div>
+                    <h2>Card 4 – Res. CNS 330/2003 (NOB/RH-SUS)</h2>
+                    <p>Política Nacional de Gestão do Trabalho e da Educação em Saúde – princípios, diretrizes e articulação com o HumanizaSUS.</p>
+                    <a href="apostila_sus_nobrh.html" class="btn-abrir" style="background-color:#2980b9;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 5: Estatuto da Pessoa Idosa (Lei 10.741/2003) (PRONTO) -->
+                <div class="card card-sus">
+                    <div class="icon">👴</div>
+                    <h2>Card 5 – Lei 10.741/2003</h2>
+                    <p>Estatuto da Pessoa Idosa – direitos, deveres, prioridade absoluta, atenção integral à saúde e direito a acompanhante.</p>
+                    <a href="apostila_sus_estatuto_idoso.html" class="btn-abrir" style="background-color:#8e44ad;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 6: Portaria 992/2009 (População Negra) (PRONTO) -->
+                <div class="card card-sus">
+                    <div class="icon">✊🏿</div>
+                    <h2>Card 6 – Portaria 992/2009</h2>
+                    <p>Política Nacional de Saúde Integral da População Negra – objetivos, diretrizes, combate ao racismo institucional e inclusão do quesito cor.</p>
+                    <a href="apostila_sus_populacao_negra.html" class="btn-abrir" style="background-color:#c0392b;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 7: Portaria 2.836/2011 (LGBT) (PRONTO) -->
+                <div class="card card-sus">
+                    <div class="icon">🏳️‍🌈</div>
+                    <h2>Card 7 – Portaria 2.836/2011</h2>
+                    <p>Política Nacional de Saúde Integral LGBT – objetivos, diretrizes, inclusão do nome social e combate à discriminação institucional.</p>
+                    <a href="apostila_sus_lgbt.html" class="btn-abrir" style="background-color:#9b59b6;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 8: Lei 13.146/2015 (Estatuto da Pessoa com Deficiência) (PRONTO) -->
+                <div class="card card-sus">
+                    <div class="icon">♿</div>
+                    <h2>Card 8 – Lei 13.146/2015</h2>
+                    <p>Lei Brasileira de Inclusão – conceitos, princípios, direito à saúde (Arts. 24-26), acessibilidade, tecnologia assistiva e proteção contra discriminação.</p>
+                    <a href="apostila_sus_estatuto_deficiencia.html" class="btn-abrir" style="background-color:#1a8ab5;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 9: Portaria 230/2023 (Equidade de Gênero e Raça) (PRONTO) -->
+                <div class="card card-sus">
+                    <div class="icon">♀️✊🏿</div>
+                    <h2>Card 9 – Portaria 230/2023</h2>
+                    <p>Programa Nacional de Equidade de Gênero, Raça e Valorização das Trabalhadoras no SUS – objetivos, princípios, eixos estratégicos e enfrentamento do assédio.</p>
+                    <a href="apostila_sus_equidade_genero_raca.html" class="btn-abrir" style="background-color:#c0397a;">📂 Abrir</a>
+                </div>
+
+                <!-- CARD 10: Portaria 1.526/2023 (PNAISPD e RCPD) (PRONTO) -->
+                <div class="card card-sus">
+                    <div class="icon">🛡️</div>
+                    <h2>Card 10 – Portaria 1.526/2023</h2>
+                    <p>Política Nacional de Atenção Integral à Saúde da Pessoa com Deficiência (PNAISPD) e Rede de Cuidados (RCPD) – objetivos, princípios, componentes e alterações nas Portarias de Consolidação nº 2, 3 e 6.</p>
+                    <a href="apostila_sus_pnaispd_rcpd.html" class="btn-abrir" style="background-color:#1a8ab5;">📂 Abrir</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================================ -->
+        <!-- RODAPÉ                          -->
+        <!-- ================================ -->
+        <div class="footer-hub">
+            ⚡ Mantenha todos os arquivos na mesma pasta para a navegação funcionar perfeitamente.
+        </div>
+    </div>
+
+    <!-- ================================ -->
+    <!-- SCRIPTS                         -->
+    <!-- ================================ -->
+    <script>
+        function openTab(evt, tabName) {
+            var tabcontents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].classList.remove("active");
+            }
+            var tabs = document.getElementsByClassName("tab-btn");
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const activeTab = document.querySelector('.tab-content.active');
+            if (!activeTab) {
+                const firstTab = document.querySelector('.tab-btn');
+                if (firstTab) {
+                    firstTab.click();
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

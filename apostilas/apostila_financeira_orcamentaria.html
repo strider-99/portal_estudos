@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Administração Financeira e Orçamentária (Noções)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #eef4f8;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a3c6e;
+            text-align: center;
+            border-bottom: 3px solid #1a3c6e;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a3c6e;
+            background-color: #e6f0fa;
+            padding: 10px 15px;
+            border-left: 6px solid #1a3c6e;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #2a4c7e;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d9e3f0;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .exemplo {
+            background-color: #eafaf1;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #1a3c6e;
+        }
+        .atencao {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5f6fc;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #1a3c6e;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a3c6e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #2a5a9e;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>💰 ADMINISTRAÇÃO FINANCEIRA E ORÇAMENTÁRIA</h1>
+    <p style="text-align:center; font-size:18px; color:#1a3c6e;"><b>Noções de Orçamento Público, Receita e Despesa, Execução Orçamentária e Controle de Gastos</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Administração Financeira e Orçamentária (AFO)</b> é o conjunto de atividades que envolve o planejamento, a execução e o controle das receitas e despesas do setor público. É uma área essencial para garantir que os recursos públicos sejam aplicados de forma eficiente e transparente.</p>
+        <p>Este módulo aborda os <b>conceitos básicos de orçamento público</b>, as <b>receitas e despesas públicas</b>, a <b>execução orçamentária e financeira</b> e o <b>controle de gastos públicos</b>, com exemplos práticos e 35 questões ao final.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender os fundamentos da Administração Financeira e Orçamentária, com foco nos conceitos cobrados em concursos para Agente Administrativo, com 35 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Conceitos Básicos de Orçamento Público – pág. 2</li>
+            <li><b>Módulo II:</b> Receita Pública – pág. 3</li>
+            <li><b>Módulo III:</b> Despesa Pública – pág. 4</li>
+            <li><b>Módulo IV:</b> Execução Orçamentária e Financeira – pág. 5</li>
+            <li><b>Módulo V:</b> Controle de Gastos Públicos – pág. 6</li>
+            <li><b>Questões:</b> 35 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Conceitos Básicos de Orçamento Público             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – CONCEITOS BÁSICOS DE ORÇAMENTO PÚBLICO</h2>
+
+        <h3>2.1. O que é o Orçamento Público?</h3>
+        <p>O <b>orçamento público</b> é o instrumento de planejamento que estima as receitas e fixa as despesas do Estado para um exercício financeiro (geralmente um ano). Ele é a principal ferramenta de planejamento e controle da Administração Pública.</p>
+
+        <h3>2.2. Instrumentos de Planejamento Orçamentário</h3>
+        <ul>
+            <li><b>PPA – Plano Plurianual:</b> planejamento de médio prazo (4 anos). Estabelece as diretrizes e metas da Administração para o período.</li>
+            <li><b>LDO – Lei de Diretrizes Orçamentárias:</b> define as metas e prioridades para o ano seguinte e orienta a elaboração da lei orçamentária.</li>
+            <li><b>LOA – Lei Orçamentária Anual:</b> estima as receitas e fixa as despesas para o exercício financeiro (um ano).</li>
+        </ul>
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> O governo federal prepara o PPA para os próximos 4 anos, com metas de investimento em educação, saúde e infraestrutura. A LDO define as prioridades para o ano seguinte (ex: mais recursos para o SUS). A LOA detalha quanto será arrecadado e gasto em cada área no ano corrente.</p>
+        </div>
+
+        <h3>2.3. Princípios Orçamentários</h3>
+        <ul>
+            <li><b>Unidade:</b> todas as receitas e despesas devem constar em um único documento.</li>
+            <li><b>Universalidade:</b> o orçamento deve conter todas as receitas e despesas do ente público.</li>
+            <li><b>Anualidade:</b> o orçamento tem vigência de um ano.</li>
+            <li><b>Legalidade:</b> o orçamento deve ser aprovado por lei.</li>
+            <li><b>Publicidade:</b> o orçamento deve ser divulgado para a sociedade.</li>
+        </ul>
+
+        <div class="atencao">
+            <b>⚡ Atenção:</b> O princípio da <b>publicidade</b> é fundamental para a transparência e o controle social.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Receita Pública                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – RECEITA PÚBLICA</h2>
+
+        <h3>3.1. Conceito de Receita Pública</h3>
+        <p>A <b>receita pública</b> é o conjunto de ingressos financeiros do Estado, provenientes da arrecadação de tributos, da exploração de patrimônio, de transferências e de outras fontes.</p>
+
+        <h3>3.2. Classificação da Receita Pública</h3>
+        <ul>
+            <li><b>Receita Originária:</b> decorre da exploração do patrimônio público (ex: aluguéis, venda de imóveis).</li>
+            <li><b>Receita Derivada:</b> decorre do poder de tributar (ex: impostos, taxas, contribuições).</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> O IPTU pago pelos cidadãos é uma receita derivada (imposto). Já o aluguel de um imóvel público é uma receita originária.</p>
+        </div>
+
+        <h3>3.3. Etapas da Receita Pública</h3>
+        <ul>
+            <li><b>Previsão:</b> estimativa da receita no orçamento.</li>
+            <li><b>Lançamento:</b> identificação do contribuinte, cálculo do valor e inscrição em dívida ativa.</li>
+            <li><b>Arrecadação:</b> efetivo recebimento do valor.</li>
+            <li><b>Recolhimento:</b> depósito dos recursos arrecadados nas contas do Tesouro.</li>
+        </ul>
+
+        <h3>3.4. Renúncia de Receita</h3>
+        <ul>
+            <li>É a redução ou exclusão de tributos, por meio de isenção, anistia, remissão, etc.</li>
+            <li>A renúncia de receita deve estar prevista na LDO e na LOA.</li>
+            <li>Exemplo: isenção de IPI para produtos da cesta básica.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> A receita derivada é a principal fonte de recursos do Estado (tributos). A receita originária complementa o orçamento.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Despesa Pública                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – DESPESA PÚBLICA</h2>
+
+        <h3>4.1. Conceito de Despesa Pública</h3>
+        <p>A <b>despesa pública</b> é o conjunto de gastos realizados pelo Estado para o atendimento das necessidades públicas, como o pagamento de servidores, a execução de obras, a prestação de serviços, etc.</p>
+
+        <h3>4.2. Classificação da Despesa Pública</h3>
+        <ul>
+            <li><b>Despesa Corrente:</b> gastos com manutenção e funcionamento dos serviços públicos (ex: salários, material de consumo, energia).</li>
+            <li><b>Despesa de Capital:</b> gastos com investimentos que aumentam o patrimônio público (ex: obras, aquisição de imóveis, equipamentos).</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> O pagamento do salário de um professor é uma despesa corrente. A construção de uma nova escola é uma despesa de capital.</p>
+        </div>
+
+        <h3>4.3. Estágios da Despesa Pública (Empenho, Liquidação e Pagamento)</h3>
+        <ul>
+            <li><b>Empenho:</b> reserva de recursos para o pagamento de uma despesa.</li>
+            <li><b>Liquidação:</b> verificação do direito do credor (ex: nota fiscal conferida).</li>
+            <li><b>Pagamento:</b> efetiva transferência do recurso ao credor.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Um órgão público precisa comprar material de escritório. O gestor <b>empenha</b> os recursos (reserva o valor). A nota fiscal é conferida e o material é recebido – isso é a <b>liquidação</b>. Por fim, o pagamento é efetuado ao fornecedor.</p>
+        </div>
+
+        <h3>4.4. Despesa Fixa e Variável</h3>
+        <ul>
+            <li><b>Despesa Fixa:</b> valor previsível e constante (ex: aluguel, salários).</li>
+            <li><b>Despesa Variável:</b> valor que varia (ex: consumo de água, energia, material de expediente).</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Execução Orçamentária e Financeira                 -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – EXECUÇÃO ORÇAMENTÁRIA E FINANCEIRA</h2>
+
+        <h3>5.1. Execução Orçamentária</h3>
+        <p>A <b>execução orçamentária</b> é a fase em que as despesas são realizadas de acordo com o que foi aprovado na LOA. Inclui a programação financeira, o empenho, a liquidação e o pagamento.</p>
+
+        <h3>5.2. Execução Financeira</h3>
+        <p>A <b>execução financeira</b> envolve a movimentação dos recursos financeiros, ou seja, a entrada (receitas) e a saída (despesas) de dinheiro dos cofres públicos.</p>
+
+        <h3>5.3. Restos a Pagar</h3>
+        <ul>
+            <li>Corresponde a despesas empenhadas, mas não pagas até o final do exercício.</li>
+            <li>Existem duas categorias: <b>processados</b> (liquidadas, mas não pagas) e <b>não processados</b> (não liquidadas).</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Em dezembro, um órgão empenhou R$ 50 mil para manutenção, mas o pagamento só será feito em janeiro. Esse valor vira um "resto a pagar". No ano seguinte, o pagamento é realizado com recursos do orçamento atual.</p>
+        </div>
+
+        <h3>5.4. Créditos Adicionais</h3>
+        <ul>
+            <li>São autorizações de despesa não previstas na LOA ou insuficientemente dotadas.</li>
+            <li><b>Suplementares:</b> reforçam uma dotação orçamentária existente.</li>
+            <li><b>Especiais:</b> destinam-se a despesas para as quais não há dotação específica.</li>
+            <li><b>Extraordinários:</b> destinam-se a despesas imprevisíveis e urgentes (guerra, calamidade pública).</li>
+        </ul>
+
+        <div class="atencao">
+            <b>⚡ Atenção:</b> Os créditos <b>extraordinários</b> podem ser abertos por medida provisória, enquanto os suplementares e especiais exigem lei específica.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Controle de Gastos Públicos                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – CONTROLE DE GASTOS PÚBLICOS</h2>
+
+        <h3>6.1. Controle Interno</h3>
+        <ul>
+            <li>Exercido pelos próprios órgãos da Administração.</li>
+            <li>Objetivo: verificar a legalidade e a eficiência dos gastos.</li>
+        </ul>
+
+        <h3>6.2. Controle Externo</h3>
+        <ul>
+            <li>Exercido pelo Poder Legislativo (e pelo Tribunal de Contas) sobre os atos do Poder Executivo.</li>
+            <li>O TCU (Tribunal de Contas da União) é o órgão auxiliar do Congresso Nacional.</li>
+        </ul>
+
+        <h3>6.3. Lei de Responsabilidade Fiscal (LRF – Lei Complementar nº 101/2000)</h3>
+        <ul>
+            <li>Estabelece regras para a gestão fiscal responsável.</li>
+            <li>Limita as despesas com pessoal e o endividamento público.</li>
+            <li>Exige transparência na gestão fiscal.</li>
+            <li>Prevê sanções para o descumprimento.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> A LRF estabelece que os gastos com pessoal não podem ultrapassar 60% da receita corrente líquida dos municípios. Se ultrapassar, o gestor deve reduzir despesas ou aumentar receitas.</p>
+        </div>
+
+        <h3>6.4. Controle Social</h3>
+        <ul>
+            <li>A sociedade pode fiscalizar os gastos públicos por meio dos conselhos de políticas públicas, ouvidorias e acesso à informação.</li>
+            <li>A Lei de Acesso à Informação (LAI) garante o direito de acesso a informações públicas.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> A LRF é uma das leis mais cobradas em concursos sobre controle de gastos públicos.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 18                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 18)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> – O instrumento de planejamento de médio prazo (4 anos) é o:</p>
+            <div class="alternativas">
+                a) LOA<br>
+                b) LDO<br>
+                c) PPA<br>
+                d) Orçamento<br>
+                e) Lei de Responsabilidade Fiscal
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> – A Lei de Diretrizes Orçamentárias (LDO) tem como principal função:</p>
+            <div class="alternativas">
+                a) Estimar receitas e fixar despesas para um ano<br>
+                b) Estabelecer metas e prioridades para o ano seguinte<br>
+                c) Planejar investimentos para 4 anos<br>
+                d) Controlar os gastos públicos<br>
+                e) Regular a gestão fiscal
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> – O princípio orçamentário que determina que todas as receitas e despesas devem constar em um único documento é a:</p>
+            <div class="alternativas">
+                a) Unidade<br>
+                b) Universalidade<br>
+                c) Anualidade<br>
+                d) Legalidade<br>
+                e) Publicidade
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> – A receita pública que decorre do poder de tributar é chamada de:</p>
+            <div class="alternativas">
+                a) Receita originária<br>
+                b) Receita derivada<br>
+                c) Receita extraorçamentária<br>
+                d) Receita de capital<br>
+                e) Receita corrente
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> – A etapa da receita pública que corresponde ao efetivo recebimento do valor é a:</p>
+            <div class="alternativas">
+                a) Previsão<br>
+                b) Lançamento<br>
+                c) Arrecadação<br>
+                d) Recolhimento<br>
+                e) Empenho
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> – A despesa pública com pagamento de salários de servidores é classificada como:</p>
+            <div class="alternativas">
+                a) Despesa de capital<br>
+                b) Despesa corrente<br>
+                c) Despesa fixa<br>
+                d) Despesa variável<br>
+                e) Despesa extraorçamentária
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> – A construção de uma ponte é um exemplo de:</p>
+            <div class="alternativas">
+                a) Despesa corrente<br>
+                b) Despesa de capital<br>
+                c) Despesa fixa<br>
+                d) Despesa variável<br>
+                e) Despesa extraordinária
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> – O estágio da despesa pública que corresponde à reserva de recursos para o pagamento é o:</p>
+            <div class="alternativas">
+                a) Empenho<br>
+                b) Liquidação<br>
+                c) Pagamento<br>
+                d) Previsão<br>
+                e) Lançamento
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> – A verificação do direito do credor, com a conferência da nota fiscal, é a etapa de:</p>
+            <div class="alternativas">
+                a) Empenho<br>
+                b) Liquidação<br>
+                c) Pagamento<br>
+                d) Previsão<br>
+                e) Arrecadação
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> – Despesas empenhadas, mas não pagas até o final do exercício, são chamadas de:</p>
+            <div class="alternativas">
+                a) Créditos adicionais<br>
+                b) Restos a pagar<br>
+                c) Despesas correntes<br>
+                d) Despesas de capital<br>
+                e) Receitas extraorçamentárias
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> – O crédito adicional destinado a despesas imprevisíveis e urgentes (como calamidade pública) é o:</p>
+            <div class="alternativas">
+                a) Suplementar<br>
+                b) Especial<br>
+                c) Extraordinário<br>
+                d) Orçamentário<br>
+                e) Extraorçamentário
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> – A Lei de Responsabilidade Fiscal (LRF) tem como objetivo:</p>
+            <div class="alternativas">
+                a) Estimar receitas e fixar despesas<br>
+                b) Estabelecer regras para a gestão fiscal responsável<br>
+                c) Planejar investimentos de longo prazo<br>
+                d) Controlar o cumprimento de metas<br>
+                e) Divulgar informações fiscais
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> – O controle externo dos gastos públicos é exercido por:</p>
+            <div class="alternativas">
+                a) Os próprios órgãos da Administração<br>
+                b) O Poder Legislativo e o Tribunal de Contas<br>
+                c) A sociedade civil<br>
+                d) O Poder Executivo<br>
+                e) O Ministério Público
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> – A lei que garante o acesso a informações públicas é a:</p>
+            <div class="alternativas">
+                a) Lei de Responsabilidade Fiscal<br>
+                b) Lei de Acesso à Informação<br>
+                c) Lei de Diretrizes Orçamentárias<br>
+                d) Lei Orçamentária Anual<br>
+                e) Plano Plurianual
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> – O princípio orçamentário que exige que o orçamento seja aprovado por lei é a:</p>
+            <div class="alternativas">
+                a) Unidade<br>
+                b) Universalidade<br>
+                c) Anualidade<br>
+                d) Legalidade<br>
+                e) Publicidade
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> – O aluguel de um imóvel público é classificado como receita:</p>
+            <div class="alternativas">
+                a) Originária<br>
+                b) Derivada<br>
+                c) Extraorçamentária<br>
+                d) De capital<br>
+                e) Corrente
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> – O pagamento de energia elétrica em um órgão público é um exemplo de despesa:</p>
+            <div class="alternativas">
+                a) De capital<br>
+                b) Corrente<br>
+                c) Fixa<br>
+                d) Variável<br>
+                e) Extraorçamentária
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> – O princípio orçamentário que determina que o orçamento deve conter todas as receitas e despesas é a:</p>
+            <div class="alternativas">
+                a) Unidade<br>
+                b) Universalidade<br>
+                c) Anualidade<br>
+                d) Legalidade<br>
+                e) Publicidade
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 19 a 35 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (19 a 35) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> – O PPA (Plano Plurianual) tem vigência de:</p>
+            <div class="alternativas">
+                a) 1 ano<br>
+                b) 2 anos<br>
+                c) 4 anos<br>
+                d) 5 anos<br>
+                e) 8 anos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> – A LOA (Lei Orçamentária Anual) estima receitas e fixa despesas para:</p>
+            <div class="alternativas">
+                a) 4 anos<br>
+                b) 2 anos<br>
+                c) 1 ano<br>
+                d) 6 meses<br>
+                e) 3 anos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> – O crédito adicional que reforça uma dotação orçamentária existente é o:</p>
+            <div class="alternativas">
+                a) Suplementar<br>
+                b) Especial<br>
+                c) Extraordinário<br>
+                d) Orçamentário<br>
+                e) Extraorçamentário
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> – A renúncia de receita ocorre quando:</p>
+            <div class="alternativas">
+                a) O governo aumenta tributos<br>
+                b) O governo reduz ou exclui tributos (isenção, anistia)<br>
+                c) O governo arrecada mais do que o previsto<br>
+                d) O governo gasta mais do que o previsto<br>
+                e) O governo contrai empréstimos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> – O Tribunal de Contas da União (TCU) é um órgão auxiliar do:</p>
+            <div class="alternativas">
+                a) Poder Executivo<br>
+                b) Poder Legislativo<br>
+                c) Poder Judiciário<br>
+                d) Ministério Público<br>
+                e) Presidência da República
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> – A LRF (Lei Complementar nº 101/2000) estabelece limites para:</p>
+            <div class="alternativas">
+                a) Apenas as receitas<br>
+                b) Apenas as despesas com pessoal<br>
+                c) As despesas com pessoal e o endividamento público<br>
+                d) Apenas os investimentos públicos<br>
+                e) Apenas as transferências voluntárias
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> – O controle interno dos gastos públicos é exercido por:</p>
+            <div class="alternativas">
+                a) O Poder Legislativo<br>
+                b) O Tribunal de Contas<br>
+                c) Os próprios órgãos da Administração<br>
+                d) A sociedade civil<br>
+                e) O Ministério Público
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 26</b> – Os restos a pagar são classificados em:</p>
+            <div class="alternativas">
+                a) Processados e não processados<br>
+                b) Correntes e de capital<br>
+                c) Fixos e variáveis<br>
+                d) Ordinários e extraordinários<br>
+                e) Previstos e imprevistos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 27</b> – A etapa de recolhimento da receita pública corresponde ao(à):</p>
+            <div class="alternativas">
+                a) Estimativa da receita<br>
+                b) Identificação do contribuinte<br>
+                c) Depósito dos recursos arrecadados no Tesouro<br>
+                d) Efetivo recebimento do valor<br>
+                e) Inscrição em dívida ativa
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 28</b> – A despesa com a aquisição de um veículo para a Administração é classificada como:</p>
+            <div class="alternativas">
+                a) Despesa corrente<br>
+                b) Despesa de capital<br>
+                c) Despesa fixa<br>
+                d) Despesa variável<br>
+                e) Despesa extraorçamentária
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 29</b> – A LDO (Lei de Diretrizes Orçamentárias) orienta a elaboração da:</p>
+            <div class="alternativas">
+                a) LOA<br>
+                b) PPA<br>
+                c) LRF<br>
+                d) LAI<br>
+                e) LOM
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 30</b> – O princípio orçamentário que exige a divulgação do orçamento para a sociedade é a:</p>
+            <div class="alternativas">
+                a) Unidade<br>
+                b) Universalidade<br>
+                c) Anualidade<br>
+                d) Legalidade<br>
+                e) Publicidade
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 31</b> – Os créditos especiais destinam-se a:</p>
+            <div class="alternativas">
+                a) Reforçar uma dotação orçamentária existente<br>
+                b) Despesas imprevisíveis e urgentes<br>
+                c) Despesas para as quais não há dotação específica<br>
+                d) Despesas de capital<br>
+                e) Despesas correntes
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 32</b> – A receita derivada é proveniente de:</p>
+            <div class="alternativas">
+                a) Exploração do patrimônio público<br>
+                b) Tributos (impostos, taxas, contribuições)<br>
+                c) Doações e transferências<br>
+                d) Venda de imóveis<br>
+                e) Aluguéis
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 33</b> – A execução financeira envolve:</p>
+            <div class="alternativas">
+                a) A programação financeira, o empenho e a liquidação<br>
+                b) A movimentação dos recursos financeiros (entradas e saídas)<br>
+                c) A aprovação do orçamento<br>
+                d) A fixação das despesas<br>
+                e) A previsão das receitas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 34</b> – O controle social dos gastos públicos é uma forma de:</p>
+            <div class="alternativas">
+                a) Controle interno<br>
+                b) Controle externo<br>
+                c) Participação da sociedade na fiscalização<br>
+                d) Controle político<br>
+                e) Controle técnico
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 35</b> – A LRF exige transparência na gestão fiscal e prevê sanções para:</p>
+            <div class="alternativas">
+                a) Apenas o não cumprimento das metas fiscais<br>
+                b) O descumprimento das regras de gestão fiscal<br>
+                c) Apenas o excesso de gastos com pessoal<br>
+                d) Apenas o excesso de endividamento<br>
+                e) Apenas a falta de divulgação
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-C</b> | <b>2-B</b> | <b>3-A</b> | <b>4-B</b> | <b>5-C</b> | <b>6-B</b> | <b>7-B</b> | <b>8-A</b> | <b>9-B</b> | <b>10-B</b></p>
+            <p><b>11-C</b> | <b>12-B</b> | <b>13-B</b> | <b>14-B</b> | <b>15-D</b> | <b>16-A</b> | <b>17-B</b> | <b>18-B</b> | <b>19-C</b> | <b>20-C</b></p>
+            <p><b>21-A</b> | <b>22-B</b> | <b>23-B</b> | <b>24-C</b> | <b>25-C</b> | <b>26-A</b> | <b>27-C</b> | <b>28-B</b> | <b>29-A</b> | <b>30-E</b></p>
+            <p><b>31-C</b> | <b>32-B</b> | <b>33-B</b> | <b>34-C</b> | <b>35-B</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>💡 Observação:</b> Todas as respostas foram elaboradas com base na Lei 4.320/1964, na LRF (LC 101/2000) e na doutrina majoritária.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

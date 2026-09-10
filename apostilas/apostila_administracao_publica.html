@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Administração Pública</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a3c6e;
+            text-align: center;
+            border-bottom: 3px solid #1a3c6e;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a3c6e;
+            background-color: #e6f0fa;
+            padding: 10px 15px;
+            border-left: 6px solid #1a3c6e;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #2a4c7e;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d9e3f0;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .atencao {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .atencao b {
+            color: #922b21;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5f6fc;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #1a3c6e;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a3c6e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #2a5a9e;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>🏛️ ADMINISTRAÇÃO PÚBLICA</h1>
+    <p style="text-align:center; font-size:18px; color:#1a3c6e;"><b>Conceitos, princípios, organização, atos e poderes administrativos</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Administração Pública</b> é o conjunto de órgãos, agentes e entidades que exercem as funções administrativas do Estado, com o objetivo de atender ao interesse público. Ela é regida por princípios constitucionais e legais que garantem a legalidade, a moralidade e a eficiência na gestão dos recursos públicos.</p>
+        <p>Este módulo aborda os <b>conceitos fundamentais</b>, os <b>princípios constitucionais</b> (LIMPE), a <b>organização administrativa</b> (direta e indireta), os <b>atos administrativos</b> e os <b>poderes administrativos</b>, com 35 questões ao final.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Dominar os fundamentos da Administração Pública, seus princípios, organização, atos e poderes, com 35 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Conceitos e Fundamentos da Administração Pública – pág. 2</li>
+            <li><b>Módulo II:</b> Princípios Constitucionais (LIMPE) – pág. 3</li>
+            <li><b>Módulo III:</b> Organização Administrativa – pág. 4</li>
+            <li><b>Módulo IV:</b> Atos Administrativos – pág. 5</li>
+            <li><b>Módulo V:</b> Poderes Administrativos – pág. 6</li>
+            <li><b>Questões:</b> 35 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Conceitos e Fundamentos                            -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – CONCEITOS E FUNDAMENTOS DA ADMINISTRAÇÃO PÚBLICA</h2>
+
+        <h3>2.1. Conceito de Administração Pública</h3>
+        <ul>
+            <li><b>Sentido subjetivo (orgânico):</b> conjunto de órgãos e agentes que exercem a função administrativa.</li>
+            <li><b>Sentido objetivo (material):</b> atividade administrativa propriamente dita, voltada à satisfação do interesse público.</li>
+            <li><b>Administração Pública em sentido amplo:</b> inclui os três Poderes (Executivo, Legislativo e Judiciário) quando exercem função administrativa.</li>
+            <li><b>Administração Pública em sentido estrito:</b> restringe-se ao Poder Executivo.</li>
+        </ul>
+
+        <h3>2.2. Funções da Administração Pública</h3>
+        <ul>
+            <li><b>Função administrativa:</b> execução de políticas públicas, prestação de serviços e gestão de recursos.</li>
+            <li><b>Função política:</b> definição de diretrizes e estratégias governamentais.</li>
+        </ul>
+
+        <h3>2.3. Regime Jurídico Administrativo</h3>
+        <ul>
+            <li>Conjunto de princípios e regras que regem a atuação da Administração Pública.</li>
+            <li><b>Princípios explícitos:</b> legalidade, impessoalidade, moralidade, publicidade, eficiência (art. 37 da CF/88).</li>
+            <li><b>Princípios implícitos:</b> supremacia do interesse público sobre o privado e indisponibilidade do interesse público.</li>
+        </ul>
+
+        <h3>2.4. Supremacia do Interesse Público</h3>
+        <ul>
+            <li>O interesse coletivo prevalece sobre o interesse individual.</li>
+            <li>Fundamenta os poderes administrativos (poder de polícia, poder hierárquico, etc.).</li>
+        </ul>
+
+        <h3>2.5. Indisponibilidade do Interesse Público</h3>
+        <ul>
+            <li>O agente público não pode dispor dos interesses da coletividade.</li>
+            <li>Impõe a observância de princípios e a necessidade de licitação, concurso público, etc.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> A <b>supremacia do interesse público</b> dá à Administração poderes especiais; a <b>indisponibilidade</b> impõe limites e controles.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Princípios Constitucionais (LIMPE)                  -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – PRINCÍPIOS CONSTITUCIONAIS (LIMPE)</h2>
+
+        <p>Os princípios da Administração Pública estão previstos no <b>art. 37 da Constituição Federal de 1988</b>, que estabelece:</p>
+        <p style="text-align:center; font-size:20px; color:#1a3c6e; font-weight:bold;">"LIMPE" – Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência</p>
+
+        <h3>3.1. Legalidade (Art. 37, caput)</h3>
+        <ul>
+            <li><b>Conceito:</b> O administrador público só pode fazer o que a lei permite.</li>
+            <li><b>Distinção do direito privado:</b> enquanto o particular pode fazer tudo o que a lei não proíbe, o agente público só pode fazer o que a lei autoriza.</li>
+            <li><b>Fundamento:</b> princípio da legalidade administrativa.</li>
+        </ul>
+
+        <h3>3.2. Impessoalidade (Art. 37, caput)</h3>
+        <ul>
+            <li><b>Conceito:</b> A Administração deve atuar com neutralidade, sem favorecimentos pessoais ou discriminações.</li>
+            <li><b>Desdobramentos:</b>
+                <ul>
+                    <li>Vedação ao nepotismo.</li>
+                    <li>O ato é atribuído ao órgão, não à pessoa do agente.</li>
+                    <li>Princípio da finalidade: o ato deve visar ao interesse público.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>3.3. Moralidade (Art. 37, caput)</h3>
+        <ul>
+            <li><b>Conceito:</b> A Administração deve agir com honestidade, lealdade e boa-fé.</li>
+            <li><b>Dimensões:</b> moralidade administrativa (jurídica) e moralidade social.</li>
+            <li><b>Consequência:</b> atos imorais podem ser anulados.</li>
+        </ul>
+
+        <h3>3.4. Publicidade (Art. 37, caput)</h3>
+        <ul>
+            <li><b>Conceito:</b> Os atos administrativos devem ser divulgados para controle social e transparência.</li>
+            <li><b>Exceções:</b> sigilo (segurança nacional, investigação, intimidade).</li>
+            <li><b>Meios:</b> diário oficial, sites, editais, etc.</li>
+        </ul>
+
+        <h3>3.5. Eficiência (Art. 37, caput – incluído pela EC 19/1998)</h3>
+        <ul>
+            <li><b>Conceito:</b> A Administração deve atuar com presteza, qualidade e economicidade.</li>
+            <li><b>Dimensões:</b> eficiência administrativa, gestão de resultados, avaliação de desempenho.</li>
+        </ul>
+
+        <div class="atencao">
+            <b>⚡ Atenção:</b> O princípio da <b>eficiência</b> foi incluído pela Emenda Constitucional 19/1998. É o único princípio expresso no caput do art. 37 que não constava originalmente.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Organização Administrativa                         -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – ORGANIZAÇÃO ADMINISTRATIVA</h2>
+
+        <h3>4.1. Administração Direta</h3>
+        <ul>
+            <li>Conjunto de órgãos e entidades que integram diretamente a estrutura do Estado.</li>
+            <li><b>Entes:</b> União, Estados, Distrito Federal e Municípios.</li>
+            <li><b>Órgãos:</b> Ministérios, Secretarias, Departamentos, etc.</li>
+            <li><b>Características:</b> não possuem personalidade jurídica própria; são despersonalizados.</li>
+        </ul>
+
+        <h3>4.2. Administração Indireta</h3>
+        <ul>
+            <li>Conjunto de entidades com personalidade jurídica própria, vinculadas à Administração Direta.</li>
+            <li><b>Espécies:</b>
+                <ul>
+                    <li><b>Autarquias:</b> pessoas jurídicas de direito público, com autonomia administrativa e financeira (ex: INSS, IBAMA).</li>
+                    <li><b>Fundações Públicas:</b> podem ser de direito público ou privado (ex: Funai, Fiocruz).</li>
+                    <li><b>Empresas Públicas:</b> pessoas jurídicas de direito privado, capital público (ex: Caixa, Correios).</li>
+                    <li><b>Sociedades de Economia Mista:</b> pessoas jurídicas de direito privado, capital misto (ex: Petrobras, Banco do Brasil).</li>
+                </ul>
+            </li>
+            <li><b>Vínculo:</b> controle finalístico (tutela/controle).</li>
+        </ul>
+
+        <h3>4.3. Órgãos Públicos</h3>
+        <ul>
+            <li>Unidades despersonalizadas que compõem a estrutura administrativa.</li>
+            <li><b>Classificação (critério da posição):</b> independentes, autônomos, superiores, subalternos.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> Decore a diferença entre <b>Administração Direta</b> (entes políticos) e <b>Administração Indireta</b> (entidades com personalidade jurídica própria).
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Atos Administrativos                               -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – ATOS ADMINISTRATIVOS</h2>
+
+        <h3>5.1. Conceito</h3>
+        <p>Ato administrativo é toda manifestação unilateral da Administração Pública, no exercício da função administrativa, com finalidade de produzir efeitos jurídicos, sujeita ao regime de direito público.</p>
+
+        <h3>5.2. Requisitos (Elementos) do Ato Administrativo</h3>
+        <ul>
+            <li><b>Competência:</b> sujeito que pratica o ato (deve ter atribuição legal).</li>
+            <li><b>Finalidade:</b> o ato deve visar ao interesse público.</li>
+            <li><b>Forma:</b> os atos devem obedecer a procedimentos legais.</li>
+            <li><b>Motivo:</b> situação de fato ou de direito que justifica o ato.</li>
+            <li><b>Objeto:</b> conteúdo do ato (o que se quer alcançar).</li>
+        </ul>
+        <p><b>Mnemônico:</b> <b>COFIFO</b> (Competência, Objeto, Forma, Finalidade, Motivo).</p>
+
+        <h3>5.3. Atributos do Ato Administrativo</h3>
+        <ul>
+            <li><b>Presunção de legitimidade e veracidade:</b> o ato é presumido válido até prova em contrário.</li>
+            <li><b>Imperatividade:</b> o ato pode impor obrigações unilateralmente.</li>
+            <li><b>Autoexecutoriedade:</b> o ato pode ser executado diretamente pela Administração, sem necessidade de ordem judicial.</li>
+        </ul>
+
+        <h3>5.4. Espécies de Atos Administrativos</h3>
+        <ul>
+            <li><b>Normativos:</b> gerais e abstratos (ex: regulamentos, decretos).</li>
+            <li><b>Ordinatórios:</b> organizam o funcionamento interno (ex: instruções, ordens de serviço).</li>
+            <li><b>Negociais:</b> manifestação de vontade da Administração (ex: licenças, autorizações).</li>
+            <li><b>Enunciativos:</b> declaram ou certificam situações (ex: certidões, atestados).</li>
+            <li><b>Punitivos:</b> aplicam sanções (ex: multas, advertências).</li>
+        </ul>
+
+        <div class="atencao">
+            <b>⚡ Atenção:</b> A <b>autoexecutoriedade</b> só se aplica a atos que envolvem a supremacia do interesse público.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Poderes Administrativos                            -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – PODERES ADMINISTRATIVOS</h2>
+
+        <p>Os poderes administrativos são instrumentos que a Administração Pública utiliza para alcançar o interesse público.</p>
+
+        <h3>6.1. Poder Hierárquico</h3>
+        <ul>
+            <li>Capacidade de estruturar, coordenar, controlar e rever a atuação dos órgãos e agentes subordinados.</li>
+            <li><b>Exemplos:</b> dar ordens, delegar competências, avocar funções, fiscalizar.</li>
+        </ul>
+
+        <h3>6.2. Poder Disciplinar</h3>
+        <ul>
+            <li>Capacidade de apurar infrações e aplicar sanções aos servidores públicos.</li>
+            <li><b>Finalidade:</b> garantir a disciplina e a boa ordem dos serviços.</li>
+        </ul>
+
+        <h3>6.3. Poder de Polícia</h3>
+        <ul>
+            <li>Capacidade de limitar direitos individuais em benefício do interesse público.</li>
+            <li><b>Exemplos:</b> fiscalização de trânsito, vigilância sanitária, controle ambiental.</li>
+            <li><b>Atributos:</b> discricionariedade, coercibilidade, autoexecutoriedade.</li>
+        </ul>
+
+        <h3>6.4. Poder Normativo (ou Regulamentar)</h3>
+        <ul>
+            <li>Capacidade de editar atos gerais e abstratos para complementar as leis.</li>
+            <li><b>Exemplo:</b> decretos e regulamentos.</li>
+            <li><b>Limite:</b> não pode inovar no ordenamento jurídico (só detalhar a lei).</li>
+        </ul>
+
+        <h3>6.5. Poder de Punição</h3>
+        <ul>
+            <li>Capacidade de aplicar sanções por infrações administrativas.</li>
+            <li><b>Exemplo:</b> aplicação de multas, interdições.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> O <b>poder de polícia</b> é o que mais aparece em concursos. Lembre-se de seus atributos: discricionariedade, coercibilidade e autoexecutoriedade.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 18                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 18)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> – O princípio da Administração Pública que exige que o agente público só faça o que a lei permite é a:</p>
+            <div class="alternativas">
+                a) Legalidade<br>
+                b) Impessoalidade<br>
+                c) Moralidade<br>
+                d) Publicidade<br>
+                e) Eficiência
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> – O princípio da Administração Pública que veda o nepotismo é a:</p>
+            <div class="alternativas">
+                a) Legalidade<br>
+                b) Impessoalidade<br>
+                c) Moralidade<br>
+                d) Publicidade<br>
+                e) Eficiência
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> – O princípio que exige a divulgação dos atos administrativos para controle social é a:</p>
+            <div class="alternativas">
+                a) Legalidade<br>
+                b) Impessoalidade<br>
+                c) Moralidade<br>
+                d) Publicidade<br>
+                e) Eficiência
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> – O princípio da eficiência foi incluído no art. 37 da CF/88 por qual emenda?</p>
+            <div class="alternativas">
+                a) EC 19/1998<br>
+                b) EC 45/2004<br>
+                c) EC 91/2016<br>
+                d) EC 103/2019<br>
+                e) EC 122/2022
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> – A Administração Direta é composta por:</p>
+            <div class="alternativas">
+                a) União, Estados, DF e Municípios<br>
+                b) Autarquias e fundações públicas<br>
+                c) Empresas públicas e sociedades de economia mista<br>
+                d) Organizações sociais<br>
+                e) Serviços sociais autônomos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> – As autarquias são pessoas jurídicas de:</p>
+            <div class="alternativas">
+                a) Direito privado<br>
+                b) Direito público<br>
+                c) Direito empresarial<br>
+                d) Direito civil<br>
+                e) Direito internacional
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> – Qual dos seguintes NÃO é um atributo do ato administrativo?</p>
+            <div class="alternativas">
+                a) Presunção de legitimidade<br>
+                b) Imperatividade<br>
+                c) Autoexecutoriedade<br>
+                d) Discricionariedade<br>
+                e) Vinculação
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> – Os requisitos (elementos) do ato administrativo são:</p>
+            <div class="alternativas">
+                a) Competência, finalidade, forma, motivo, objeto<br>
+                b) Competência, legalidade, moralidade, publicidade<br>
+                c) Finalidade, forma, motivo, objeto, eficiência<br>
+                d) Legalidade, impessoalidade, moralidade, publicidade, eficiência<br>
+                e) Competência, finalidade, forma, motivo, discricionariedade
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> – O poder administrativo que permite à Administração estruturar e coordenar seus órgãos é o:</p>
+            <div class="alternativas">
+                a) Poder hierárquico<br>
+                b) Poder disciplinar<br>
+                c) Poder de polícia<br>
+                d) Poder normativo<br>
+                e) Poder de punição
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> – O poder de polícia é caracterizado por, EXCETO:</p>
+            <div class="alternativas">
+                a) Discricionariedade<br>
+                b) Coercibilidade<br>
+                c) Autoexecutoriedade<br>
+                d) Vinculação total à lei<br>
+                e) Limitação de direitos individuais
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> – A Administração Indireta é composta por:</p>
+            <div class="alternativas">
+                a) União, Estados, DF e Municípios<br>
+                b) Autarquias, fundações públicas, empresas públicas e sociedades de economia mista<br>
+                c) Ministérios e Secretarias<br>
+                d) Órgãos da administração direta<br>
+                e) Poderes Executivo, Legislativo e Judiciário
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> – Qual princípio da Administração Pública está relacionado à transparência e ao controle social?</p>
+            <div class="alternativas">
+                a) Legalidade<br>
+                b) Impessoalidade<br>
+                c) Moralidade<br>
+                d) Publicidade<br>
+                e) Eficiência
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> – A presunção de legitimidade e veracidade é um atributo que significa que:</p>
+            <div class="alternativas">
+                a) O ato é válido até prova em contrário<br>
+                b) O ato deve ser publicado<br>
+                c) O ato não pode ser questionado<br>
+                d) O ato é irrecorrível<br>
+                e) O ato depende de aprovação judicial
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> – A Petrobras é um exemplo de:</p>
+            <div class="alternativas">
+                a) Autarquia<br>
+                b) Fundação pública<br>
+                c) Empresa pública<br>
+                d) Sociedade de economia mista<br>
+                e) Organização social
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> – A autoexecutoriedade do ato administrativo significa que:</p>
+            <div class="alternativas">
+                a) O ato pode ser executado diretamente pela Administração<br>
+                b) O ato depende de autorização judicial<br>
+                c) O ato é definitivo e não pode ser anulado<br>
+                d) O ato deve ser publicado em diário oficial<br>
+                e) O ato é discricionário
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> – Os atos administrativos normativos são aqueles que:</p>
+            <div class="alternativas">
+                a) Organizam o funcionamento interno<br>
+                b) São gerais e abstratos (ex: decretos)<br>
+                c) Declaram situações (ex: certidões)<br>
+                d) Aplicam sanções (ex: multas)<br>
+                e) Manifestam vontade (ex: licenças)
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> – O poder disciplinar permite à Administração:</p>
+            <div class="alternativas">
+                a) Editar decretos e regulamentos<br>
+                b) Aplicar sanções a servidores públicos<br>
+                c) Limitar direitos individuais<br>
+                d) Estruturar seus órgãos<br>
+                e) Delegar competências
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> – A finalidade do ato administrativo deve ser sempre:</p>
+            <div class="alternativas">
+                a) O interesse público<br>
+                b) O interesse privado<br>
+                c) O interesse do agente<br>
+                d) O interesse político<br>
+                e) O interesse econômico
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 19 a 35 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (19 a 35) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> – O princípio da moralidade administrativa exige que o agente público atue com:</p>
+            <div class="alternativas">
+                a) Honestidade, lealdade e boa-fé<br>
+                b) Rapidez e eficiência<br>
+                c) Transparência e publicidade<br>
+                d) Impessoalidade e neutralidade<br>
+                e) Legalidade e formalismo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> – A Administração Pública em sentido estrito refere-se ao:</p>
+            <div class="alternativas">
+                a) Poder Executivo<br>
+                b) Poder Legislativo<br>
+                c) Poder Judiciário<br>
+                d) Ministério Público<br>
+                e) Tribunal de Contas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> – As fundações públicas podem ser de direito:</p>
+            <div class="alternativas">
+                a) Público ou privado<br>
+                b) Apenas público<br>
+                c) Apenas privado<br>
+                d) Apenas empresarial<br>
+                e) Apenas civil
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> – O poder normativo (regulamentar) é exercido por meio de:</p>
+            <div class="alternativas">
+                a) Decretos e regulamentos<br>
+                b) Ordens de serviço<br>
+                c) Licenças e autorizações<br>
+                d) Certidões e atestados<br>
+                e) Multas e advertências
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> – A empresa pública é uma pessoa jurídica de:</p>
+            <div class="alternativas">
+                a) Direito público, com capital público<br>
+                b) Direito privado, com capital público<br>
+                c) Direito público, com capital misto<br>
+                d) Direito privado, com capital misto<br>
+                e) Direito empresarial, com capital privado
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> – A imperatividade do ato administrativo significa que:</p>
+            <div class="alternativas">
+                a) O ato é obrigatório e pode impor deveres unilateralmente<br>
+                b) O ato é válido até prova em contrário<br>
+                c) O ato é executado diretamente pela Administração<br>
+                d) O ato deve ser publicado<br>
+                e) O ato é discricionário
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> – O princípio da impessoalidade está relacionado à:</p>
+            <div class="alternativas">
+                a) Vedação ao nepotismo<br>
+                b) Divulgação dos atos<br>
+                c) Eficiência administrativa<br>
+                d) Moralidade dos agentes<br>
+                e) Legalidade dos atos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 26</b> – Os atos administrativos enunciativos incluem:</p>
+            <div class="alternativas">
+                a) Regulamentos e decretos<br>
+                b) Certidões e atestados<br>
+                c) Licenças e autorizações<br>
+                d) Multas e advertências<br>
+                e) Instruções e ordens de serviço
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 27</b> – O poder de polícia é exercido para:</p>
+            <div class="alternativas">
+                a) Limitar direitos individuais em benefício do interesse público<br>
+                b) Aplicar sanções a servidores<br>
+                c) Estruturar a administração<br>
+                d) Editar decretos<br>
+                e) Delegar competências
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 28</b> – A regra geral na Administração Pública é que:</p>
+            <div class="alternativas">
+                a) O agente pode fazer tudo o que a lei não proíbe<br>
+                b) O agente só pode fazer o que a lei autoriza<br>
+                c) O agente tem liberdade total<br>
+                d) O agente não precisa de lei para agir<br>
+                e) O agente pode agir discricionariamente sempre
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 29</b> – O INSS é um exemplo de:</p>
+            <div class="alternativas">
+                a) Autarquia<br>
+                b) Fundação pública<br>
+                c) Empresa pública<br>
+                d) Sociedade de economia mista<br>
+                e) Organização social
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 30</b> – A forma do ato administrativo deve obedecer a:</p>
+            <div class="alternativas">
+                a) Procedimentos legais<br>
+                b) Interesse público<br>
+                c) Vontade do agente<br>
+                d) Discricionariedade<br>
+                e) Eficiência
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 31</b> – O poder hierárquico permite, EXCETO:</p>
+            <div class="alternativas">
+                a) Dar ordens<br>
+                b) Delegar competências<br>
+                c) Avocar funções<br>
+                d) Aplicar sanções a servidores<br>
+                e) Fiscalizar atuação de órgãos subordinados
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 32</b> – O princípio da publicidade admite exceções, como:</p>
+            <div class="alternativas">
+                a) Segurança nacional<br>
+                b) Eficiência administrativa<br>
+                c) Moralidade<br>
+                d) Legalidade<br>
+                e) Impessoalidade
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 33</b> – As sociedades de economia mista têm capital:</p>
+            <div class="alternativas">
+                a) Público e privado<br>
+                b) Apenas público<br>
+                c) Apenas privado<br>
+                d) Apenas estrangeiro<br>
+                e) Apenas municipal
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 34</b> – A competência do ato administrativo refere-se ao:</p>
+            <div class="alternativas">
+                a) Sujeito que pratica o ato<br>
+                b) Conteúdo do ato<br>
+                c) Motivo do ato<br>
+                d) Forma do ato<br>
+                e) Finalidade do ato
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 35</b> – O mnemônico COFIFO, utilizado para memorizar os elementos do ato administrativo, significa:</p>
+            <div class="alternativas">
+                a) Competência, Objeto, Forma, Finalidade, Motivo<br>
+                b) Competência, Obrigação, Forma, Finalidade, Objeto<br>
+                c) Controle, Objetivo, Função, Finalidade, Ordem<br>
+                d) Coerência, Objeto, Forma, Foco, Objetivo<br>
+                e) Competência, Objeto, Função, Finalidade, Ordem
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-A</b> | <b>2-B</b> | <b>3-D</b> | <b>4-A</b> | <b>5-A</b> | <b>6-B</b> | <b>7-E</b> | <b>8-A</b> | <b>9-A</b> | <b>10-D</b></p>
+            <p><b>11-B</b> | <b>12-D</b> | <b>13-A</b> | <b>14-D</b> | <b>15-A</b> | <b>16-B</b> | <b>17-B</b> | <b>18-A</b> | <b>19-A</b> | <b>20-A</b></p>
+            <p><b>21-A</b> | <b>22-A</b> | <b>23-B</b> | <b>24-A</b> | <b>25-A</b> | <b>26-B</b> | <b>27-A</b> | <b>28-B</b> | <b>29-A</b> | <b>30-A</b></p>
+            <p><b>31-D</b> | <b>32-A</b> | <b>33-A</b> | <b>34-A</b> | <b>35-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>💡 Observação:</b> Todas as respostas foram elaboradas com base na Constituição Federal de 1988 e na doutrina majoritária.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

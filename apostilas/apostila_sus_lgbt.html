@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - SUS: Portaria 2.836/2011 - Política Nacional de Saúde Integral LGBT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f5f0f7;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #6c2b6c;
+            text-align: center;
+            border-bottom: 3px solid #9b59b6;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #6c2b6c;
+            background-color: #f4ecf7;
+            padding: 10px 15px;
+            border-left: 6px solid #9b59b6;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #4a235a;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #e8daef;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .atencao {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .atencao b {
+            color: #922b21;
+        }
+        .exemplo {
+            background-color: #f5eef8;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #9b59b6;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #faf5fc;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #9b59b6;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #6c2b6c;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #9b59b6;
+            color: white;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+            color: white;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>🏳️‍🌈 POLÍTICA NACIONAL DE SAÚDE INTEGRAL LGBT</h1>
+    <p style="text-align:center; font-size:18px; color:#6c2b6c;"><b>Portaria nº 2.836/GM/MS, de 1º de dezembro de 2011</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Política Nacional de Saúde Integral de Lésbicas, Gays, Bissexuais, Travestis e Transexuais (LGBT)</b> foi instituída pela <b>Portaria nº 2.836/GM/MS, de 1º de dezembro de 2011</b>, com o objetivo de eliminar a discriminação e o preconceito institucional, contribuindo para a redução das desigualdades e para a consolidação do SUS como sistema universal.</p>
+        <p>Esta política reconhece as <b>necessidades específicas de saúde da população LGBT</b> e busca garantir o acesso integral e humanizado, combatendo a <b>discriminação</b>, o <b>preconceito</b> e a <b>violência</b> institucional.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender os fundamentos, objetivos, diretrizes e estratégias da Política Nacional de Saúde Integral LGBT, instituída pela Portaria 2.836/2011, com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Contexto e Fundamentos da Política LGBT – pág. 2</li>
+            <li><b>Módulo II:</b> Princípios Gerais da Política – pág. 3</li>
+            <li><b>Módulo III:</b> Diretrizes Gerais – pág. 4</li>
+            <li><b>Módulo IV:</b> Objetivos da Política – pág. 5</li>
+            <li><b>Módulo V:</b> Estratégias e Ações para a Implementação – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Contexto e Fundamentos                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – CONTEXTO E FUNDAMENTOS DA POLÍTICA LGBT</h2>
+
+        <h3>2.1. Contexto Histórico</h3>
+        <ul>
+            <li><b>2004:</b> Criação do Programa Brasil sem Homofobia, pelo Ministério da Saúde.</li>
+            <li><b>2007:</b> I Conferência Nacional de Gays, Lésbicas, Bissexuais, Travestis e Transexuais (LGBT).</li>
+            <li><b>2011:</b> Portaria nº 2.836/GM/MS institui a Política Nacional de Saúde Integral LGBT.</li>
+            <li><b>2015:</b> O Conselho Nacional de Saúde (CNS) aprova a Resolução nº 491, que estabelece diretrizes para a atenção à saúde da população LGBT.</li>
+        </ul>
+
+        <h3>2.2. Fundamentos da Política</h3>
+        <ul>
+            <li><b>Reconhecimento da LGBTfobia</b> e do preconceito institucional como determinantes sociais da saúde.</li>
+            <li><b>Direito à saúde integral</b> e ao acesso universal e igualitário, conforme princípios do SUS.</li>
+            <li><b>Compromisso com a equidade</b> e com a redução das desigualdades em saúde.</li>
+        </ul>
+
+        <h3>2.3. Reconhecimento da Discriminação e Preconceito como Determinantes Sociais</h3>
+        <p>A Política LGBT parte do reconhecimento de que a <b>discriminação</b>, o <b>preconceito</b> e a <b>violência</b> sofridos pela população LGBT têm impacto direto sobre sua saúde, gerando vulnerabilidades e iniquidades.</p>
+
+        <div class="exemplo">
+            <p><b>Frase-chave:</b> "A Política Nacional de Saúde Integral LGBT busca eliminar a discriminação e o preconceito institucional, contribuindo para a consolidação do SUS como sistema universal."</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Princípios Gerais                                  -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – PRINCÍPIOS GERAIS DA POLÍTICA LGBT</h2>
+
+        <p>A Política Nacional de Saúde Integral LGBT está embasada nos seguintes princípios:</p>
+
+        <ul>
+            <li><b>Equidade:</b> Reconhecimento das desigualdades e atuação estratégica para superá-las.</li>
+            <li><b>Integralidade:</b> Atenção à saúde que considere as especificidades e necessidades da população LGBT.</li>
+            <li><b>Universalidade:</b> Garantia de acesso a todos os níveis de atenção, sem discriminação.</li>
+            <li><b>Participação Social:</b> Fortalecimento do controle social e da participação do movimento LGBT nas instâncias de gestão do SUS.</li>
+            <li><b>Intersetorialidade:</b> Articulação com outras políticas públicas (educação, assistência social, segurança pública) para o enfrentamento das vulnerabilidades.</li>
+            <li><b>Valorização da Diversidade:</b> Respeito à diversidade de orientação sexual e identidade de gênero.</li>
+        </ul>
+
+        <div class="atencao">
+            <b>⚡ Atenção:</b> O princípio da <b>equidade</b> é central na Política LGBT, pois reconhece que a população LGBT enfrenta desigualdades históricas e estruturais.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Diretrizes Gerais                                  -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – DIRETRIZES GERAIS DA POLÍTICA LGBT</h2>
+
+        <p>A Política Nacional de Saúde Integral LGBT estabelece as seguintes diretrizes para a organização da atenção à saúde:</p>
+
+        <ul>
+            <li><b>Diretriz 1 –</b> <b>Ampliação e qualificação do acesso</b> da população LGBT aos serviços de saúde do SUS, em todos os níveis de complexidade.</li>
+            <li><b>Diretriz 2 –</b> <b>Promoção da saúde e prevenção de agravos</b>, com ênfase nas vulnerabilidades específicas (DST/HIV/aids, tuberculose, hepatites virais, saúde mental, câncer de colo de útero e mama, etc.).</li>
+            <li><b>Diretriz 3 –</b> <b>Eliminação da discriminação e do preconceito</b> institucional nas unidades de saúde, garantindo um atendimento humanizado e livre de estigmas.</li>
+            <li><b>Diretriz 4 –</b> <b>Fortalecimento da participação social</b> do movimento LGBT nos Conselhos de Saúde e nas Conferências de Saúde.</li>
+            <li><b>Diretriz 5 –</b> <b>Produção de conhecimento</b> sobre saúde da população LGBT, com incentivo à pesquisa e à produção de evidências.</li>
+            <li><b>Diretriz 6 –</b> <b>Formação e educação permanente</b> dos trabalhadores da saúde sobre a temática LGBT, com abordagem antirracista, antissexista e antidiscriminatória.</li>
+            <li><b>Diretriz 7 –</b> <b>Articulação intersetorial</b> com outras políticas públicas para o enfrentamento das vulnerabilidades da população LGBT.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Objetivos                                           -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – OBJETIVOS DA POLÍTICA LGBT</h2>
+
+        <h3>5.1. Objetivo Geral</h3>
+        <p><b>Promover a saúde integral da população LGBT</b>, eliminando a discriminação e o preconceito institucional, e contribuindo para a redução das desigualdades e para a consolidação do SUS como sistema universal.</p>
+
+        <h3>5.2. Objetivos Específicos</h3>
+        <ul>
+            <li><b>I –</b> <b>Garantir o acesso</b> da população LGBT aos serviços de saúde do SUS, em todos os níveis de atenção, de forma integral e humanizada.</li>
+            <li><b>II –</b> <b>Ampliar e qualificar</b> a oferta de ações e serviços de saúde para a população LGBT.</li>
+            <li><b>III –</b> <b>Incluir</b> a temática da saúde da população LGBT nos processos de formação e educação permanente dos trabalhadores da saúde.</li>
+            <li><b>IV –</b> <b>Fomentar</b> a produção de conhecimento científico e tecnológico sobre saúde da população LGBT.</li>
+            <li><b>V –</b> <b>Fortalecer</b> a participação social do movimento LGBT nas instâncias de controle social do SUS.</li>
+            <li><b>VI –</b> <b>Promover</b> a articulação intersetorial para o enfrentamento das vulnerabilidades da população LGBT.</li>
+            <li><b>VII –</b> <b>Monitorar e avaliar</b> as ações e serviços de saúde voltados para a população LGBT, com a produção de indicadores específicos.</li>
+            <li><b>VIII –</b> <b>Combater</b> a discriminação e o preconceito institucional nas unidades de saúde.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Estratégias e Ações                                -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – ESTRATÉGIAS E AÇÕES PARA A IMPLEMENTAÇÃO</h2>
+
+        <p>A Política LGBT prevê as seguintes estratégias para sua implementação:</p>
+
+        <ul>
+            <li><b>I –</b> <b>Inclusão do nome social</b> nos sistemas de informação e nos atendimentos, garantindo o respeito à identidade de gênero.</li>
+            <li><b>II –</b> <b>Promoção da saúde mental</b> da população LGBT, com atenção especial a transtornos decorrentes da discriminação e da violência.</li>
+            <li><b>III –</b> <b>Ampliação da oferta de serviços de saúde</b> para a população trans, com atenção à hormonioterapia e à cirurgia de redesignação sexual.</li>
+            <li><b>IV –</b> <b>Fortalecimento da atenção integral</b> a pessoas com HIV/aids e outras DSTs, com abordagem específica para a população LGBT.</li>
+            <li><b>V –</b> <b>Produção de materiais informativos e educativos</b> sobre saúde da população LGBT.</li>
+            <li><b>VI –</b> <b>Criação de grupos de trabalho e comitês</b> para acompanhar a implementação da política nas esferas federal, estadual e municipal.</li>
+            <li><b>VII –</b> <b>Fortalecimento da participação</b> do movimento LGBT nos Conselhos de Saúde e nas Conferências de Saúde.</li>
+            <li><b>VIII –</b> <b>Promoção de campanhas educativas</b> para a população LGBT, com ênfase na prevenção de agravos e na promoção da saúde.</li>
+            <li><b>IX –</b> <b>Capacitação de profissionais de saúde</b> para o atendimento humanizado e não discriminatório.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica Final:</b> Em concursos, a Política LGBT é frequentemente associada ao <b>combate à discriminação e ao preconceito institucional</b>, à <b>inclusão do nome social</b> e ao <b>reconhecimento das necessidades específicas de saúde</b> da população LGBT.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Conceito) – A Política Nacional de Saúde Integral LGBT foi instituída pela:</p>
+            <div class="alternativas">
+                a) Portaria nº 992/GM/MS, de 13 de maio de 2009.<br>
+                b) Portaria nº 2.836/GM/MS, de 1º de dezembro de 2011.<br>
+                c) Lei 8.080/90.<br>
+                d) Lei 10.741/2003.<br>
+                e) Portaria nº 230/2023.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Objetivo Geral) – O objetivo geral da Política LGBT é:</p>
+            <div class="alternativas">
+                a) Promover a saúde integral da população LGBT, eliminando a discriminação e o preconceito institucional.<br>
+                b) Garantir o acesso da população LGBT apenas à atenção básica.<br>
+                c) Combater a discriminação exclusivamente nos hospitais públicos.<br>
+                d) Promover a saúde da população LGBT apenas em áreas urbanas.<br>
+                e) Reduzir a morbimortalidade infantil da população LGBT.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Determinantes) – A Política LGBT reconhece como determinantes sociais da saúde da população LGBT:</p>
+            <div class="alternativas">
+                a) Apenas fatores genéticos.<br>
+                b) A discriminação, o preconceito e a violência institucional.<br>
+                c) Apenas as condições econômicas.<br>
+                d) Apenas a localização geográfica.<br>
+                e) Apenas o nível de escolaridade.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Princípios) – São princípios da Política LGBT, EXCETO:</p>
+            <div class="alternativas">
+                a) Equidade.<br>
+                b) Integralidade.<br>
+                c) Universalidade.<br>
+                d) Centralização das ações no Ministério da Saúde.<br>
+                e) Participação Social.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Diretrizes) – É uma diretriz da Política LGBT:</p>
+            <div class="alternativas">
+                a) Ampliação e qualificação do acesso da população LGBT aos serviços de saúde.<br>
+                b) Exclusão da população LGBT dos serviços de saúde.<br>
+                c) Centralização das ações no nível federal.<br>
+                d) Redução da participação social do movimento LGBT.<br>
+                e) Eliminação da produção de conhecimento sobre saúde LGBT.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Nome Social) – A Política LGBT prevê a inclusão do nome social nos sistemas de informação e nos atendimentos, com o objetivo de:</p>
+            <div class="alternativas">
+                a) Garantir o respeito à identidade de gênero.<br>
+                b) Substituir o nome civil.<br>
+                c) Reduzir o número de atendimentos.<br>
+                d) Centralizar os dados no Ministério da Saúde.<br>
+                e) Excluir a população trans dos serviços.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Contexto) – A I Conferência Nacional de Gays, Lésbicas, Bissexuais, Travestis e Transexuais (LGBT) foi realizada no ano de:</p>
+            <div class="alternativas">
+                a) 2004.<br>
+                b) 2007.<br>
+                c) 2011.<br>
+                d) 2015.<br>
+                e) 2019.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Educação Permanente) – A Política LGBT prevê a formação e educação permanente dos trabalhadores da saúde sobre a temática LGBT, com abordagem:</p>
+            <div class="alternativas">
+                a) Antirracista, antissexista e antidiscriminatória.<br>
+                b) Apenas técnica.<br>
+                c) Apenas clínica.<br>
+                d) Apenas administrativa.<br>
+                e) Apenas financeira.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Participação Social) – A Política LGBT prevê o fortalecimento da participação social do movimento LGBT nos:</p>
+            <div class="alternativas">
+                a) Conselhos de Saúde e nas Conferências de Saúde.<br>
+                b) Apenas nos Conselhos de Saúde.<br>
+                c) Apenas nas Conferências de Saúde.<br>
+                d) Apenas nas Ouvidorias.<br>
+                e) Apenas nos Sindicatos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Saúde Mental) – A Política LGBT prevê a promoção da saúde mental da população LGBT, com atenção especial a transtornos decorrentes de:</p>
+            <div class="alternativas">
+                a) Discriminação e violência.<br>
+                b) Apenas fatores genéticos.<br>
+                c) Apenas fatores ambientais.<br>
+                d) Apenas fatores econômicos.<br>
+                e) Apenas fatores educacionais.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (População Trans) – A Política LGBT prevê a ampliação da oferta de serviços de saúde para a população trans, com atenção à:</p>
+            <div class="alternativas">
+                a) Hormonioterapia e cirurgia de redesignação sexual.<br>
+                b) Apenas à hormonioterapia.<br>
+                c) Apenas à cirurgia de redesignação sexual.<br>
+                d) Apenas ao atendimento psicológico.<br>
+                e) Apenas ao atendimento clínico geral.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Resolução CNS) – O Conselho Nacional de Saúde (CNS) aprovou a Resolução nº 491, que estabelece diretrizes para a atenção à saúde da população LGBT, no ano de:</p>
+            <div class="alternativas">
+                a) 2011.<br>
+                b) 2015.<br>
+                c) 2007.<br>
+                d) 2003.<br>
+                e) 2009.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Programa Brasil sem Homofobia) – O Programa Brasil sem Homofobia foi criado pelo Ministério da Saúde no ano de:</p>
+            <div class="alternativas">
+                a) 2004.<br>
+                b) 2007.<br>
+                c) 2011.<br>
+                d) 2015.<br>
+                e) 2019.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Princípios e Diretrizes) – Analise as afirmativas:</p>
+            <p>(   ) A Política LGBT reconhece a discriminação como determinante social da saúde.<br>
+            (   ) A política prevê a inclusão do nome social nos sistemas de informação do SUS.<br>
+            (   ) A Política LGBT é restrita à atenção básica.<br>
+            (   ) A política incentiva a produção de conhecimento sobre saúde da população LGBT.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Estratégias) – Analise as afirmativas:</p>
+            <p>(   ) A Política LGBT prevê a criação de grupos de trabalho e comitês para acompanhar a implementação.<br>
+            (   ) A política não contempla ações específicas para a saúde mental da população LGBT.<br>
+            (   ) A Política LGBT incentiva a produção de materiais informativos e educativos.<br>
+            (   ) A política prevê a capacitação de profissionais de saúde para o atendimento humanizado.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (Princípios) – O princípio da equidade, na Política LGBT, significa:</p>
+            <div class="alternativas">
+                a) Tratar todos de forma idêntica.<br>
+                b) Reconhecer as desigualdades e atuar estrategicamente para superá-las.<br>
+                c) Ignorar as diferenças de orientação sexual.<br>
+                d) Centralizar as ações no nível federal.<br>
+                e) Reduzir o acesso da população LGBT aos serviços de saúde.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (HIV/aids) – A Política LGBT prevê o fortalecimento da atenção integral a pessoas com HIV/aids e outras DSTs, com abordagem específica para:</p>
+            <div class="alternativas">
+                a) A população LGBT.<br>
+                b) Apenas homens gays.<br>
+                c) Apenas mulheres lésbicas.<br>
+                d) Apenas pessoas trans.<br>
+                e) Apenas jovens.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Formação) – A Política LGBT prevê a inclusão da temática da saúde da população LGBT nos processos de:</p>
+            <div class="alternativas">
+                a) Formação e educação permanente dos trabalhadores da saúde.<br>
+                b) Apenas na formação inicial.<br>
+                c) Apenas na educação continuada.<br>
+                d) Apenas na pós-graduação.<br>
+                e) Apenas nos cursos técnicos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Articulação) – A Política LGBT prevê a articulação intersetorial com outras políticas públicas para o enfrentamento das vulnerabilidades da população LGBT, como:</p>
+            <div class="alternativas">
+                a) Educação, assistência social e segurança pública.<br>
+                b) Apenas a educação.<br>
+                c) Apenas a assistência social.<br>
+                d) Apenas a segurança pública.<br>
+                e) Apenas a cultura.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Indicadores) – A Política LGBT prevê a produção de indicadores específicos para monitorar e avaliar as ações e serviços de saúde voltados para:</p>
+            <div class="alternativas">
+                a) A população LGBT.<br>
+                b) Apenas a população trans.<br>
+                c) Apenas a população gay.<br>
+                d) Apenas a população lésbica.<br>
+                e) Apenas a população bissexual.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Consolidação) – Analise as afirmativas:</p>
+            <p>(   ) A Política LGBT foi aprovada pelo Conselho Nacional de Saúde (CNS).<br>
+            (   ) A política prevê a participação do movimento LGBT nas instâncias de controle social.<br>
+            (   ) A Política LGBT não prevê a inclusão do nome social.<br>
+            (   ) A política incentiva a produção de conhecimento científico sobre saúde LGBT.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Campanhas) – A Política LGBT prevê a promoção de campanhas educativas para a população LGBT, com ênfase na:</p>
+            <div class="alternativas">
+                a) Prevenção de agravos e promoção da saúde.<br>
+                b) Apenas na prevenção de doenças.<br>
+                c) Apenas na promoção da saúde.<br>
+                d) Apenas na redução de custos.<br>
+                e) Apenas na divulgação de serviços.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (Universalidade) – O princípio da universalidade, na Política LGBT, garante:</p>
+            <div class="alternativas">
+                a) Acesso a todos os níveis de atenção, sem discriminação.<br>
+                b) Acesso apenas à atenção básica.<br>
+                c) Acesso apenas a serviços especializados.<br>
+                d) Acesso apenas a medicamentos.<br>
+                e) Acesso apenas a atendimento hospitalar.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (Combate à Discriminação) – A Política LGBT tem como estratégia o combate à discriminação e ao preconceito:</p>
+            <div class="alternativas">
+                a) Institucional nas unidades de saúde.<br>
+                b) Apenas na sociedade civil.<br>
+                c) Apenas no ambiente de trabalho.<br>
+                d) Apenas nas escolas.<br>
+                e) Apenas na mídia.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Final) – Analise as afirmativas:</p>
+            <p>(   ) A Política LGBT foi instituída pela Portaria 2.836/2011.<br>
+            (   ) O objetivo geral da política é promover a saúde integral da população LGBT.<br>
+            (   ) A política reconhece a discriminação como determinante social da saúde.<br>
+            (   ) A Política LGBT não prevê a inclusão do nome social.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – V – F<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – F – F
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-A</b> | <b>3-B</b> | <b>4-D</b> | <b>5-A</b> | <b>6-A</b> | <b>7-B</b> | <b>8-A</b> | <b>9-A</b> | <b>10-A</b></p>
+            <p><b>11-A</b> | <b>12-B</b> | <b>13-A</b> | <b>14-A</b> | <b>15-A</b> | <b>16-B</b> | <b>17-A</b> | <b>18-A</b> | <b>19-A</b> | <b>20-A</b></p>
+            <p><b>21-A</b> | <b>22-A</b> | <b>23-A</b> | <b>24-A</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,V,F,V); Q15 (V,F,V,V); Q21 (V,V,F,V); Q25 (V,V,V,F).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

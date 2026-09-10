@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - SUS: Portaria 992/2009 - População Negra</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fdf8f5;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #6b2e1e;
+            text-align: center;
+            border-bottom: 3px solid #c0392b;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #6b2e1e;
+            background-color: #fdedec;
+            padding: 10px 15px;
+            border-left: 6px solid #c0392b;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #7b3b2a;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #fadbd8;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .atencao {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .atencao b {
+            color: #922b21;
+        }
+        .exemplo {
+            background-color: #fdf2f0;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #c0392b;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #fdf8f5;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #c0392b;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #6b2e1e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #c0392b;
+            color: white;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+            color: white;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>✊🏿 POLÍTICA NACIONAL DE SAÚDE INTEGRAL DA POPULAÇÃO NEGRA</h1>
+    <p style="text-align:center; font-size:18px; color:#6b2e1e;"><b>Portaria nº 992/GM/MS, de 13 de maio de 2009</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Política Nacional de Saúde Integral da População Negra (PNSIPN)</b> foi instituída pela <b>Portaria nº 992/GM/MS, de 13 de maio de 2009</b>, com o objetivo de promover a saúde integral da população negra, priorizando a redução das desigualdades étnico-raciais e o combate ao racismo e à discriminação nas instituições e serviços do SUS[reference:1][reference:2].</p>
+        <p>Esta política reconhece o <b>racismo</b> e as <b>desigualdades étnico-raciais</b> como <b>determinantes sociais</b> das condições de saúde, com vistas à promoção da equidade em saúde[reference:3]. Ela foi aprovada pelo Conselho Nacional de Saúde (CNS) e pactuada na Comissão Intergestores Tripartite (CIT)[reference:4].</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender os fundamentos, objetivos, diretrizes e estratégias da Política Nacional de Saúde Integral da População Negra, instituída pela Portaria 992/2009, com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Contexto e Fundamentos da PNSIPN – pág. 2</li>
+            <li><b>Módulo II:</b> Princípios Gerais da Política – pág. 3</li>
+            <li><b>Módulo III:</b> Diretrizes Gerais – pág. 4</li>
+            <li><b>Módulo IV:</b> Objetivo Geral e Objetivos Específicos – pág. 5</li>
+            <li><b>Módulo V:</b> Estratégias e Responsabilidades das Esferas de Gestão – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Contexto e Fundamentos                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – CONTEXTO E FUNDAMENTOS DA PNSIPN</h2>
+
+        <h3>2.1. Contexto Histórico</h3>
+        <ul>
+            <li><b>2003:</b> Decreto nº 4.887 cria o Programa Brasil Quilombola, garantindo o desenvolvimento social, político e econômico dessas comunidades[reference:5].</li>
+            <li><b>2004:</b> Instituição do Comitê Técnico de Saúde da População Negra (Portaria nº 1.678/GM)[reference:6].</li>
+            <li><b>2009:</b> Portaria nº 992/GM/MS institui a Política Nacional de Saúde Integral da População Negra[reference:7].</li>
+        </ul>
+
+        <h3>2.2. Fundamentos Constitucionais</h3>
+        <ul>
+            <li><b>Art. 1º, incisos II e III:</b> Cidadania e dignidade da pessoa humana[reference:8].</li>
+            <li><b>Art. 3º, inciso IV:</b> Promover o bem de todos, sem preconceitos de origem, raça, sexo, cor, idade e quaisquer outras formas de discriminação[reference:9][reference:10].</li>
+            <li><b>Art. 194:</b> Seguridade social como conjunto integrado de ações destinadas a assegurar os direitos à saúde, previdência e assistência social[reference:11].</li>
+        </ul>
+
+        <h3>2.3. Reconhecimento do Racismo como Determinante Social</h3>
+        <p>A PNSIPN parte do reconhecimento do <b>racismo, das desigualdades étnico-raciais e do racismo institucional</b> como determinantes sociais das condições de saúde[reference:12]. Isso significa que as iniquidades em saúde da população negra não são naturais, mas resultam de processos históricos de exclusão e discriminação.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Princípios Gerais                                  -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – PRINCÍPIOS GERAIS DA POLÍTICA</h2>
+
+        <p>A Política Nacional de Saúde Integral da População Negra está embasada nos seguintes princípios[reference:13]:</p>
+
+        <ul>
+            <li><b>Constituição Cidadã:</b> A CF/88 assume o compromisso com a criação de uma nova ordem social, com a seguridade social como um conjunto integrado de ações destinadas a assegurar os direitos à saúde, previdência e assistência social[reference:14].</li>
+            <li><b>Equidade:</b> A promoção da igualdade a partir do reconhecimento das desigualdades e da ação estratégica para superá-las[reference:15].</li>
+            <li><b>Dignidade da Pessoa Humana:</b> Respeito à autonomia e à integridade de cada indivíduo[reference:16].</li>
+            <li><b>Repúdio ao Racismo:</b> Combate a todas as formas de discriminação racial[reference:17].</li>
+            <li><b>Transversalidade:</b> As ações de saúde da população negra devem perpassar todas as áreas do SUS[reference:18].</li>
+            <li><b>Participação Social:</b> Fortalecimento do controle social e da gestão participativa[reference:19].</li>
+        </ul>
+
+        <div class="atencao">
+            <b>⚡ Atenção:</b> O princípio da <b>equidade</b> é central na PNSIPN, pois reconhece que a igualdade formal não é suficiente – é necessário agir sobre as desigualdades estruturais.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Diretrizes Gerais                                  -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – DIRETRIZES GERAIS DA PNSIPN</h2>
+
+        <p>As diretrizes gerais da Política Nacional de Saúde Integral da População Negra são[reference:20]:</p>
+
+        <ul>
+            <li><b>I –</b> <b>Inclusão dos temas Racismo e Saúde da População Negra</b> nos processos de formação e educação permanente dos trabalhadores da saúde e no exercício do controle social[reference:21].</li>
+            <li><b>II –</b> <b>Ampliação e fortalecimento</b> da participação do Movimento Social Negro nas instâncias de controle social das políticas de saúde[reference:22].</li>
+            <li><b>III –</b> <b>Incentivo à produção do conhecimento</b> científico e tecnológico em saúde da população negra[reference:23].</li>
+            <li><b>IV –</b> <b>Promoção do reconhecimento</b> dos saberes e práticas populares de saúde, incluindo aqueles preservados pelas religiões de matrizes africanas[reference:24].</li>
+            <li><b>V –</b> <b>Implementação do processo de monitoramento e avaliação</b> das ações pertinentes ao combate ao racismo e à redução das desigualdades étnico-raciais no campo da saúde[reference:25].</li>
+            <li><b>VI –</b> <b>Desenvolvimento de processos de informação, comunicação e educação</b> que desconstruam estigmas e preconceitos, fortaleçam uma identidade negra positiva e contribuam para a redução das vulnerabilidades[reference:26].</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Objetivos                                           -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – OBJETIVO GERAL E OBJETIVOS ESPECÍFICOS</h2>
+
+        <h3>5.1. Objetivo Geral</h3>
+        <p><b>Promover a saúde integral da população negra</b>, priorizando a <b>redução das desigualdades étnico-raciais</b>, o combate ao racismo e à discriminação nas instituições e serviços do SUS[reference:27][reference:28].</p>
+
+        <h3>5.2. Objetivos Específicos (Art. 3º)</h3>
+        <p>Os objetivos específicos da PNSIPN são[reference:29]:</p>
+        <ul>
+            <li><b>I –</b> Garantir e ampliar o acesso da população negra residente em <b>áreas urbanas</b> (especialmente periferias) às ações e serviços de saúde[reference:30].</li>
+            <li><b>II –</b> Garantir e ampliar o acesso da população negra do <b>campo e da floresta</b> (especialmente <b>quilombolas</b>)[reference:31].</li>
+            <li><b>III –</b> Incluir o tema <b>Combate às Discriminações de Gênero e Orientação Sexual</b>, com destaque para as interseções com a saúde da população negra[reference:32].</li>
+            <li><b>IV –</b> Identificar, combater e prevenir situações de <b>abuso, exploração e violência</b> (incluindo assédio moral) no ambiente de trabalho[reference:33].</li>
+            <li><b>V –</b> Aprimorar a qualidade dos sistemas de informação em saúde, com a <b>inclusão do quesito cor</b> em todos os instrumentos de coleta de dados[reference:34].</li>
+            <li><b>VI –</b> Melhorar a qualidade dos sistemas de informação do SUS com <b>dados desagregados por raça, cor e etnia</b>[reference:35].</li>
+            <li><b>VII –</b> Identificar as necessidades de saúde da população negra e utilizá-las como <b>critério de planejamento e definição de prioridades</b>[reference:36].</li>
+            <li><b>VIII –</b> Definir e pactuar <b>indicadores e metas</b> para a promoção da equidade étnico-racial na saúde[reference:37].</li>
+            <li><b>IX –</b> Monitorar e avaliar os indicadores e metas pactuados para <b>reduzir as iniquidades macrorregionais, regionais, estaduais e municipais</b>[reference:38].</li>
+            <li><b>X –</b> Incluir as demandas específicas da população negra nos processos de <b>regulação do sistema de saúde suplementar</b>[reference:39].</li>
+            <li><b>XI –</b> Monitorar e avaliar as mudanças na <b>cultura institucional</b> para garantir princípios antirracistas[reference:40].</li>
+            <li><b>XII –</b> Fomentar a realização de <b>estudos e pesquisas</b> sobre racismo e saúde da população negra[reference:41].</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Estratégias e Responsabilidades                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – ESTRATÉGIAS E RESPONSABILIDADES DAS ESFERAS DE GESTÃO</h2>
+
+        <p>O Capítulo III da PNSIPN estabelece as estratégias de gestão para a implementação da política[reference:42]:</p>
+
+        <ul>
+            <li><b>I –</b> Implementação de ações de combate ao <b>racismo institucional</b> e redução das iniquidades raciais, com metas específicas no Plano Nacional de Saúde[reference:43].</li>
+            <li><b>II –</b> Desenvolvimento de ações específicas para a redução das disparidades étnico-raciais nas condições de saúde, com atenção especial a: <b>morbimortalidade materna e infantil</b>; <b>doença falciforme</b>; <b>DST/HIV/aids</b>; <b>tuberculose</b>; <b>hansenfíase</b>; <b>câncer de colo uterino e de mama</b>; <b>transtornos mentais</b>[reference:44].</li>
+            <li><b>III –</b> Fortalecimento da atenção à saúde integral da população negra em todas as fases do ciclo da vida[reference:45].</li>
+            <li><b>IV –</b> Estabelecimento de metas específicas para a melhoria dos indicadores de saúde da população negra, com especial atenção para as <b>populações quilombolas</b>[reference:46].</li>
+            <li><b>V –</b> Fortalecimento da atenção à saúde mental da população negra[reference:47].</li>
+            <li><b>VI –</b> Fortalecimento da atenção à saúde mental de <b>mulheres e homens negros</b>, em especial aqueles com transtornos decorrentes do uso de <b>álcool e outras drogas</b>[reference:48].</li>
+            <li><b>VII –</b> Qualificação e humanização da atenção à saúde da <b>mulher negra</b>[reference:49].</li>
+            <li><b>VIII –</b> Articulação e fortalecimento das ações de atenção às pessoas com <b>doença falciforme</b>[reference:50].</li>
+            <li><b>IX –</b> <b>Inclusão do quesito cor</b> nos instrumentos de coleta de dados do SUS[reference:51].</li>
+            <li><b>X –</b> Incentivo técnico e financeiro à organização de redes integradas de atenção às <b>mulheres negras em situação de violência sexual, doméstica e intrafamiliar</b>[reference:52].</li>
+            <li><b>XI –</b> Implantação e implementação dos <b>Núcleos de Prevenção à Violência e Promoção da Saúde</b>[reference:53].</li>
+            <li><b>XII –</b> Elaboração de materiais de <b>informação, comunicação e educação</b> sobre o tema[reference:54].</li>
+            <li><b>XIII –</b> Fomento à realização de <b>estudos e pesquisas</b> sobre o acesso da população negra aos serviços de saúde[reference:55].</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica Final:</b> Em concursos, a PNSIPN é frequentemente associada ao <b>combate ao racismo institucional</b>, à <b>inclusão do quesito cor</b> nos sistemas de informação e ao <b>reconhecimento do racismo como determinante social</b> da saúde.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Conceito) – A Política Nacional de Saúde Integral da População Negra (PNSIPN) foi instituída pela:</p>
+            <div class="alternativas">
+                a) Lei 8.080/90.<br>
+                b) Portaria nº 992/GM/MS, de 13 de maio de 2009.<br>
+                c) Portaria nº 2.836/2011.<br>
+                d) Lei 10.741/2003.<br>
+                e) Portaria nº 230/2023.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Objetivo Geral) – O objetivo geral da PNSIPN é:</p>
+            <div class="alternativas">
+                a) Promover a saúde integral da população negra, priorizando a redução das desigualdades étnico-raciais.<br>
+                b) Garantir o acesso da população negra apenas à atenção básica.<br>
+                c) Combater o racismo exclusivamente nos hospitais públicos.<br>
+                d) Promover a saúde da população negra apenas em áreas urbanas.<br>
+                e) Reduzir a morbimortalidade infantil da população negra.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Determinantes) – A PNSIPN reconhece como determinantes sociais das condições de saúde da população negra:</p>
+            <div class="alternativas">
+                a) Apenas fatores genéticos.<br>
+                b) O racismo, as desigualdades étnico-raciais e o racismo institucional.<br>
+                c) Apenas as condições econômicas.<br>
+                d) Apenas a localização geográfica.<br>
+                e) Apenas o nível de escolaridade.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Diretrizes) – São diretrizes da PNSIPN, EXCETO:</p>
+            <div class="alternativas">
+                a) Inclusão dos temas Racismo e Saúde da População Negra na formação dos trabalhadores.<br>
+                b) Ampliação da participação do Movimento Social Negro no controle social.<br>
+                c) Incentivo à produção do conhecimento científico em saúde da população negra.<br>
+                d) Centralização das ações no Ministério da Saúde.<br>
+                e) Desenvolvimento de processos de informação e comunicação que desconstruam estigmas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Objetivos Específicos) – É um objetivo específico da PNSIPN:</p>
+            <div class="alternativas">
+                a) Garantir o acesso da população negra apenas a medicamentos.<br>
+                b) Incluir o quesito cor em todos os instrumentos de coleta de dados do SUS.<br>
+                c) Reduzir o número de profissionais negros na saúde.<br>
+                d) Centralizar as decisões sobre saúde da população negra no nível federal.<br>
+                e) Excluir a população quilombola do acesso ao SUS.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Populações Específicas) – A PNSIPN prevê a garantia de acesso à saúde para a população negra:</p>
+            <div class="alternativas">
+                a) Apenas em áreas urbanas.<br>
+                b) Em áreas urbanas, do campo e da floresta, com destaque para quilombolas.<br>
+                c) Apenas em áreas rurais.<br>
+                d) Apenas para a população quilombola.<br>
+                e) Apenas para a população jovem.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Sistemas de Informação) – Um dos objetivos específicos da PNSIPN é aprimorar os sistemas de informação em saúde por meio da:</p>
+            <div class="alternativas">
+                a) Exclusão do quesito cor.<br>
+                b) Inclusão do quesito cor em todos os instrumentos de coleta de dados.<br>
+                c) Centralização dos dados no Ministério da Saúde.<br>
+                d) Redução do número de sistemas de informação.<br>
+                e) Eliminação dos dados desagregados por raça.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Fundamentos) – A PNSIPN está embasada nos seguintes princípios constitucionais, EXCETO:</p>
+            <div class="alternativas">
+                a) Cidadania.<br>
+                b) Dignidade da pessoa humana.<br>
+                c) Repúdio ao racismo.<br>
+                d) Promoção do bem de todos, sem preconceitos.<br>
+                e) Centralização administrativa.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Estratégias) – Entre as estratégias da PNSIPN, destaca-se o fortalecimento da atenção à saúde mental de:</p>
+            <div class="alternativas">
+                a) Apenas crianças negras.<br>
+                b) Apenas idosos negros.<br>
+                c) Mulheres e homens negros, em especial aqueles com transtornos decorrentes do uso de álcool e outras drogas.<br>
+                d) Apenas adolescentes negros.<br>
+                e) Apenas mulheres negras.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Doenças Prioritárias) – A PNSIPN estabelece ações específicas para a redução das disparidades étnico-raciais em diversas condições de saúde, EXCETO:</p>
+            <div class="alternativas">
+                a) Doença falciforme.<br>
+                b) DST/HIV/aids.<br>
+                c) Tuberculose.<br>
+                d) Hanseníase.<br>
+                e) Diabetes tipo 2.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Comitê Técnico) – O Comitê Técnico de Saúde da População Negra foi instituído pelo Ministério da Saúde por meio da Portaria:</p>
+            <div class="alternativas">
+                a) nº 1.678/GM, de 13 de agosto de 2004.<br>
+                b) nº 992/GM/MS, de 13 de maio de 2009.<br>
+                c) nº 2.836, de 1º de dezembro de 2011.<br>
+                d) nº 230, de 7 de março de 2023.<br>
+                e) nº 1.526, de 11 de outubro de 2023.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Programa Brasil Quilombola) – O Programa Brasil Quilombola foi criado pelo Decreto nº 4.887, de 20 de novembro de:</p>
+            <div class="alternativas">
+                a) 1988.<br>
+                b) 2003.<br>
+                c) 2009.<br>
+                d) 2011.<br>
+                e) 2015.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Participação Social) – A PNSIPN prevê a ampliação e o fortalecimento da participação do Movimento Social Negro nas instâncias de:</p>
+            <div class="alternativas">
+                a) Controle social das políticas de saúde.<br>
+                b) Apenas na gestão financeira do SUS.<br>
+                c) Apenas na elaboração de orçamentos.<br>
+                d) Apenas na fiscalização de contratos.<br>
+                e) Apenas na nomeação de gestores.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Princípios e Diretrizes) – Analise as afirmativas:</p>
+            <p>(   ) A PNSIPN reconhece o racismo como determinante social da saúde.<br>
+            (   ) A política prevê a inclusão do quesito cor nos sistemas de informação do SUS.<br>
+            (   ) A PNSIPN é restrita à atenção básica.<br>
+            (   ) A política incentiva a produção de conhecimento científico sobre saúde da população negra.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Estratégias) – Analise as afirmativas:</p>
+            <p>(   ) A PNSIPN prevê o fortalecimento da atenção à saúde da mulher negra em todas as fases do ciclo da vida.<br>
+            (   ) A política não contempla ações específicas para a doença falciforme.<br>
+            (   ) A PNSIPN incentiva a criação de Núcleos de Prevenção à Violência e Promoção da Saúde.<br>
+            (   ) A política prevê o combate ao racismo institucional.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (Fundamentos) – A PNSIPN está fundamentada no princípio da equidade, que significa:</p>
+            <div class="alternativas">
+                a) Tratar todos de forma idêntica.<br>
+                b) Reconhecer as desigualdades e agir estrategicamente para superá-las.<br>
+                c) Ignorar as diferenças raciais.<br>
+                d) Centralizar as ações no nível federal.<br>
+                e) Reduzir o acesso da população negra aos serviços de saúde.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Violência) – A PNSIPN prevê o combate a situações de abuso, exploração e violência, incluindo:</p>
+            <div class="alternativas">
+                a) Assédio moral no ambiente de trabalho.<br>
+                b) Apenas violência física.<br>
+                c) Apenas violência sexual.<br>
+                d) Apenas violência psicológica.<br>
+                e) Apenas violência patrimonial.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Dados Desagregados) – A PNSIPN prevê a melhoria dos sistemas de informação do SUS com dados desagregados por:</p>
+            <div class="alternativas">
+                a) Raça, cor e etnia.<br>
+                b) Apenas idade.<br>
+                c) Apenas gênero.<br>
+                d) Apenas escolaridade.<br>
+                e) Apenas renda.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Regulação) – A PNSIPN prevê a inclusão das demandas específicas da população negra nos processos de regulação do:</p>
+            <div class="alternativas">
+                a) Sistema de saúde suplementar.<br>
+                b) Sistema de previdência social.<br>
+                c) Sistema de assistência social.<br>
+                d) Sistema de educação.<br>
+                e) Sistema de segurança pública.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Cultura Institucional) – A PNSIPN prevê o monitoramento e a avaliação das mudanças na cultura institucional para garantir princípios:</p>
+            <div class="alternativas">
+                a) Antirracistas e não discriminatórios.<br>
+                b) Apenas de eficiência.<br>
+                c) Apenas de economicidade.<br>
+                d) Apenas de transparência.<br>
+                e) Apenas de legalidade.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Consolidação) – Analise as afirmativas:</p>
+            <p>(   ) A PNSIPN foi aprovada pelo Conselho Nacional de Saúde (CNS).<br>
+            (   ) A política foi pactuada na Comissão Intergestores Tripartite (CIT).<br>
+            (   ) A PNSIPN não prevê a participação do Movimento Social Negro.<br>
+            (   ) A política incentiva o reconhecimento dos saberes e práticas populares de saúde.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Ciclo da Vida) – A PNSIPN prevê o fortalecimento da atenção à saúde integral da população negra em todas as fases do ciclo da vida, incluindo:</p>
+            <div class="alternativas">
+                a) Jovens, adolescentes e adultos em conflito com a lei.<br>
+                b) Apenas crianças.<br>
+                c) Apenas idosos.<br>
+                d) Apenas mulheres.<br>
+                e) Apenas homens.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (Pactuação) – A PNSIPN prevê a definição e pactuação, junto às três esferas de governo, de:</p>
+            <div class="alternativas">
+                a) Indicadores e metas para a promoção da equidade étnico-racial na saúde.<br>
+                b) Apenas indicadores financeiros.<br>
+                c) Apenas metas de redução de custos.<br>
+                d) Apenas indicadores de produção.<br>
+                e) Apenas metas de contratação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (Violência contra a Mulher) – A PNSIPN prevê o incentivo à organização de redes integradas de atenção às mulheres negras em situação de:</p>
+            <div class="alternativas">
+                a) Violência sexual, doméstica e intrafamiliar.<br>
+                b) Apenas violência sexual.<br>
+                c) Apenas violência doméstica.<br>
+                d) Apenas violência intrafamiliar.<br>
+                e) Apenas violência no trabalho.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Final) – Analise as afirmativas:</p>
+            <p>(   ) A PNSIPN foi instituída pela Portaria 992/2009.<br>
+            (   ) O objetivo geral da política é promover a saúde integral da população negra.<br>
+            (   ) A política reconhece o racismo como determinante social da saúde.<br>
+            (   ) A PNSIPN não prevê a inclusão do quesito cor nos sistemas de informação.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – V – F<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – F – F
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-A</b> | <b>3-B</b> | <b>4-D</b> | <b>5-B</b> | <b>6-B</b> | <b>7-B</b> | <b>8-E</b> | <b>9-C</b> | <b>10-E</b></p>
+            <p><b>11-A</b> | <b>12-B</b> | <b>13-A</b> | <b>14-A</b> | <b>15-A</b> | <b>16-B</b> | <b>17-A</b> | <b>18-A</b> | <b>19-A</b> | <b>20-A</b></p>
+            <p><b>21-A</b> | <b>22-A</b> | <b>23-A</b> | <b>24-A</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,V,F,V); Q15 (V,F,V,V); Q21 (V,V,F,V); Q25 (V,V,V,F).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Rotinas Administrativas (PODC)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #e9ecef;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a3c6e;
+            text-align: center;
+            border-bottom: 3px solid #1a3c6e;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a3c6e;
+            background-color: #e6f0fa;
+            padding: 10px 15px;
+            border-left: 6px solid #1a3c6e;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #2a4c7e;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d9e3f0;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fff3cd;
+            border-left: 6px solid #ffc107;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #856404;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f8f9fa;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #1a3c6e;
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a3c6e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #2a5a9e;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📊 ROTINAS ADMINISTRATIVAS – FUNÇÕES PODC</h1>
+    <p style="text-align:center; font-size:18px; color:#1a3c6e;"><b>Planejamento, Organização, Direção e Controle</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A administração é o processo de <b>planejar, organizar, dirigir e controlar</b> a aplicação das competências e o uso dos recursos organizacionais para alcançar determinados objetivos de maneira eficiente e eficaz.</p>
+        <p>Essas quatro funções, quando consideradas conjuntamente, formam o <b>processo administrativo</b>, conhecido pelo mnemônico <b>PODC</b> (leia-se "pódicê"). Trata-se de uma metodologia que define as funções do administrador, separando as tarefas por etapas dentro de um ciclo.</p>
+        <p>O Ciclo PODC foi originalmente desenvolvido por <b>Henri Fayol</b> e posteriormente aperfeiçoado por autores neoclássicos como <b>Peter Drucker</b> e <b>Idalberto Chiavenato</b>.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender as quatro funções administrativas, suas inter-relações e aplicações práticas, com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Função Planejamento (P) – pág. 2</li>
+            <li><b>Módulo II:</b> Função Organização (O) – pág. 3</li>
+            <li><b>Módulo III:</b> Função Direção (D) – pág. 4</li>
+            <li><b>Módulo IV:</b> Função Controle (C) – pág. 5</li>
+            <li><b>Módulo V:</b> Inter-relação, Neoclássica e Aplicação – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Planejamento (P)                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – FUNÇÃO PLANEJAMENTO (P)</h2>
+        <h3>2.1. Conceito</h3>
+        <p>O planejamento é a função administrativa que <b>define objetivos e decide sobre os recursos e as tarefas necessárias</b> para alcançá-los adequadamente. Em outras palavras: <b>planejar é decidir onde se quer chegar</b>.</p>
+
+        <h3>2.2. Objetivos do Planejamento</h3>
+        <ul>
+            <li>Traçar metas, objetivos e os meios para alcançá-los</li>
+            <li>Responder a duas perguntas fundamentais: <i>o que fazer?</i> e <i>como fazer?</i></li>
+            <li>Estabelecer diretrizes e a sequência de ações</li>
+            <li>Determinar os recursos necessários</li>
+        </ul>
+
+        <h3>2.3. Tipos de Planejamento</h3>
+        <table>
+            <tr><th>TIPO</th><th>NÍVEL</th><th>PRAZO</th><th>CARACTERÍSTICA</th></tr>
+            <tr><td><b>Estratégico</b></td><td>Alta administração</td><td>Longo prazo</td><td>Abrangente, envolve toda a organização</td></tr>
+            <tr><td><b>Tático</b></td><td>Nível gerencial</td><td>Médio prazo</td><td>Detalhado por departamento</td></tr>
+            <tr><td><b>Operacional</b></td><td>Nível supervisor</td><td>Curto prazo</td><td>Altamente detalhado, foco diário</td></tr>
+        </table>
+
+        <h3>2.4. Etapas do Planejamento</h3>
+        <ol>
+            <li><b>Análise do ambiente</b> (interno e externo)</li>
+            <li><b>Definição de objetivos</b> claros e mensuráveis</li>
+            <li><b>Formulação de estratégias</b></li>
+            <li><b>Implementação</b> do plano</li>
+            <li><b>Monitoramento e revisão</b></li>
+        </ol>
+
+        <h3>2.5. Princípios Básicos</h3>
+        <ul>
+            <li><b>Viabilidade:</b> coerência com a realidade</li>
+            <li><b>Exatidão:</b> objetividade e dados confiáveis</li>
+            <li><b>Flexibilidade:</b> margem para mudanças</li>
+            <li><b>Unidade:</b> sintonia com o planejamento geral</li>
+        </ul>
+
+        <h3>2.6. Ferramentas Úteis</h3>
+        <ul>
+            <li><b>Análise SWOT (FOFA):</b> Forças, Fraquezas, Oportunidades e Ameaças</li>
+            <li><b>5W2H:</b> What, Why, Where, When, Who, How, How Much</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Organização (O)                                     -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – FUNÇÃO ORGANIZAÇÃO (O)</h2>
+        <h3>3.1. Conceito</h3>
+        <p>A organização é a função administrativa pela qual são organizados os recursos disponíveis. Envolve repartir as tarefas, especificar as atribuições, agrupar atividades semelhantes em órgãos e cargos. Em outras palavras: <b>organizar é definir como e com que recursos</b>.</p>
+
+        <h3>3.2. Aspectos da Organização</h3>
+        <p>Pode ser vista sob dois pontos de vista:</p>
+        <ol>
+            <li><b>Organização como entidade social:</b> a estrutura formal da empresa</li>
+            <li><b>Organização como função administrativa:</b> o ato de estruturar e alocar recursos</li>
+        </ol>
+
+        <h3>3.3. Elementos da Organização</h3>
+        <ul>
+            <li><b>Divisão do trabalho:</b> repartir tarefas entre as pessoas</li>
+            <li><b>Especialização:</b> agrupar atividades semelhantes</li>
+            <li><b>Hierarquia:</b> estabelecer níveis de autoridade e responsabilidade</li>
+            <li><b>Alocação de recursos:</b> distribuir recursos materiais, financeiros e humanos</li>
+            <li><b>Definição de cargos e funções:</b> especificar atribuições e responsabilidades</li>
+        </ul>
+
+        <h3>3.4. Estrutura Organizacional</h3>
+        <p>A organização resulta em uma <b>estrutura organizacional</b>, representada por organogramas, que demonstram:</p>
+        <ul>
+            <li>A divisão de departamentos e setores</li>
+            <li>As relações hierárquicas</li>
+            <li>Os fluxos de comunicação e autoridade</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Direção (D)                                         -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – FUNÇÃO DIREÇÃO (D)</h2>
+        <h3>4.1. Conceito</h3>
+        <p>A direção é a função administrativa cujo foco principal são <b>as pessoas e o comportamento humano</b>. Envolve comunicar, motivar, orientar e liderar. Em outras palavras: <b>dirigir é liderar para alcançar os objetivos</b>.</p>
+
+        <h3>4.2. Elementos da Direção</h3>
+        <table>
+            <tr><th>ELEMENTO</th><th>DESCRIÇÃO</th></tr>
+            <tr><td><b>Liderança</b></td><td>Influenciar pessoas para que contribuam com os objetivos organizacionais</td></tr>
+            <tr><td><b>Motivação</b></td><td>Estimular o engajamento e o desempenho das equipes</td></tr>
+            <tr><td><b>Comunicação</b></td><td>Transmitir informações, orientações e feedbacks</td></tr>
+            <tr><td><b>Coordenação</b></td><td>Harmonizar esforços e integrar atividades</td></tr>
+        </table>
+
+        <h3>4.3. Habilidades do Dirigente</h3>
+        <ul>
+            <li><b>Habilidade técnica:</b> conhecimento específico da área</li>
+            <li><b>Habilidade humana:</b> capacidade de lidar com pessoas, liderar e motivar</li>
+            <li><b>Habilidade conceitual:</b> visão sistêmica da organização</li>
+        </ul>
+
+        <h3>4.4. Estilos de Liderança</h3>
+        <table>
+            <tr><th>ESTILO</th><th>CARACTERÍSTICA</th></tr>
+            <tr><td><b>Autocrático</b></td><td>Decisões centralizadas, pouca participação da equipe</td></tr>
+            <tr><td><b>Democrático</b></td><td>Participação da equipe nas decisões</td></tr>
+            <tr><td><b>Laissez-faire</b></td><td>Liberdade total para a equipe, mínima interferência</td></tr>
+        </table>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Controle (C)                                        -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – FUNÇÃO CONTROLE (C)</h2>
+        <h3>5.1. Conceito</h3>
+        <p>O controle é a função administrativa que <b>monitora e avalia as atividades e os resultados alcançados</b> para assegurar que o planejamento seja cumprido. Em outras palavras: <b>controlar é monitorar volumes, velocidade e resultados</b>.</p>
+
+        <h3>5.2. Etapas do Controle</h3>
+        <ol>
+            <li><b>Estabelecimento de padrões:</b> definir critérios e metas</li>
+            <li><b>Medição do desempenho:</b> avaliar o que está sendo realizado</li>
+            <li><b>Comparação:</b> confrontar o desempenho real com o planejado</li>
+            <li><b>Ação corretiva:</b> corrigir desvios e ajustar o planejamento</li>
+        </ol>
+
+        <h3>5.3. Tipos de Controle</h3>
+        <table>
+            <tr><th>TIPO</th><th>MOMENTO</th><th>CARACTERÍSTICA</th></tr>
+            <tr><td><b>Prévio</b></td><td>Antes da execução</td><td>Prevenção de problemas</td></tr>
+            <tr><td><b>Concorrente</b></td><td>Durante a execução</td><td>Acompanhamento em tempo real</td></tr>
+            <tr><td><b>Posterior</b></td><td>Após a execução</td><td>Avaliação de resultados</td></tr>
+        </table>
+
+        <h3>5.4. Importância do Controle</h3>
+        <ul>
+            <li>Garante que os objetivos sejam alcançados</li>
+            <li>Permite identificar desvios e corrigir rumos</li>
+            <li>Fornece feedback para o planejamento futuro</li>
+            <li>Contribui para a melhoria contínua dos processos</li>
+        </ul>
+
+        <div class="dica">
+            <b>⚠️ Atenção:</b> O controle não significa que ele inicie apenas no final. Ele deve ser realizado <b>desde o início</b> e finalizado por último.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Inter-relação / Neoclássica / Aplicação            -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – INTER-RELAÇÃO, TEORIA E APLICAÇÃO</h2>
+
+        <h3>6.1. Inter-relação entre as Funções</h3>
+        <p>O processo administrativo é <b>cíclico e sistêmico</b>. O planejamento define o que fazer; a organização prepara como fazer e com quais recursos; a direção faz acontecer por meio das pessoas; e o controle verifica se o que foi planejado realmente aconteceu.</p>
+        <pre style="background:#f1f3f5; padding:15px; border-radius:6px; text-align:center;">
+         PLANEJAMENTO
+              ↓
+    ┌─────────────────────┐
+    │                     │
+    ↓                     ↑
+ORGANIZAÇÃO  →  DIREÇÃO  →  CONTROLE
+        </pre>
+
+        <h3>6.2. O PODC na Teoria Neoclássica</h3>
+        <p>A Teoria Neoclássica, representada por Peter Drucker, explica o processo administrativo a partir da integração das funções (PODC) no ciclo administrativo. Segundo Chiavenato, a tarefa básica da administração é "interpretar os objetivos globais e transformá-los em ação organizacional por meio de planejamento, organização, direção e controle".</p>
+
+        <h3>6.3. Aplicação Prática – Rotinas Administrativas</h3>
+        <table>
+            <tr><th>FUNÇÃO</th><th>APLICAÇÃO NAS ROTINAS</th></tr>
+            <tr><td><b>Planejamento</b></td><td>Definir metas diárias, semanais e mensais; elaborar cronogramas</td></tr>
+            <tr><td><b>Organização</b></td><td>Distribuir tarefas, organizar arquivos e documentos</td></tr>
+            <tr><td><b>Direção</b></td><td>Orientar equipes, delegar responsabilidades, motivar</td></tr>
+            <tr><td><b>Controle</b></td><td>Acompanhar prazos, verificar qualidade, conferir resultados</td></tr>
+        </table>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 13                                     -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 13)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Conceito geral) – O processo administrativo, conhecido pelo mnemônico PODC, é composto pelas seguintes funções:</p>
+            <div class="alternativas">
+                a) Produção, Organização, Distribuição e Controle<br>
+                b) Planejamento, Orientação, Direção e Coordenação<br>
+                c) Planejamento, Organização, Direção e Controle<br>
+                d) Previsão, Organização, Desempenho e Controle<br>
+                e) Planejamento, Orçamento, Direção e Correção
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Planejamento) – A função administrativa que define objetivos e decide sobre os recursos e as tarefas necessárias para alcançá-los adequadamente é:</p>
+            <div class="alternativas">
+                a) Organização<br>b) Direção<br>c) Controle<br>d) Planejamento<br>e) Coordenação
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Organização) – A função que consiste em repartir tarefas, especificar atribuições e agrupar atividades semelhantes em órgãos e cargos é:</p>
+            <div class="alternativas">
+                a) Planejamento<br>b) Organização<br>c) Direção<br>d) Controle<br>e) Liderança
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Direção) – Qual é a única função administrativa (PODC) cujo foco principal são as pessoas e o comportamento humano?</p>
+            <div class="alternativas">
+                a) Planejamento<br>b) Organização<br>c) Direção<br>d) Controle<br>e) Estratégia
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Controle) – A função que monitora e avalia as atividades e os resultados alcançados para assegurar que o planejamento seja cumprido é:</p>
+            <div class="alternativas">
+                a) Planejamento<br>b) Organização<br>c) Direção<br>d) Controle<br>e) Motivação
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Tipos de planejamento) – O planejamento de longo prazo, feito pela alta administração e que envolve toda a organização, é denominado:</p>
+            <div class="alternativas">
+                a) Tático<br>b) Operacional<br>c) Estratégico<br>d) Funcional<br>e) Setorial
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Tipos de planejamento) – O planejamento de médio prazo, realizado pelos gerentes, é chamado de:</p>
+            <div class="alternativas">
+                a) Estratégico<br>b) Tático<br>c) Operacional<br>d) Normativo<br>e) Contingencial
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Tipos de planejamento) – O planejamento de curto prazo, com foco em operações diárias, é o:</p>
+            <div class="alternativas">
+                a) Estratégico<br>b) Tático<br>c) Operacional<br>d) Corporativo<br>e) Institucional
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Etapas do controle) – Assinale a sequência correta das etapas da função controle:</p>
+            <div class="alternativas">
+                a) Medição → Padrões → Comparação → Ação corretiva<br>
+                b) Padrões → Medição → Comparação → Ação corretiva<br>
+                c) Comparação → Padrões → Medição → Ação corretiva<br>
+                d) Ação corretiva → Padrões → Medição → Comparação<br>
+                e) Padrões → Comparação → Medição → Ação corretiva
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Elementos da direção) – São elementos da função direção, EXCETO:</p>
+            <div class="alternativas">
+                a) Liderança<br>b) Motivação<br>c) Comunicação<br>d) Orçamento<br>e) Coordenação
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Ciclo PODC) – Sobre o ciclo PODC, é correto afirmar que:</p>
+            <div class="alternativas">
+                a) As funções ocorrem de forma isolada e independente<br>
+                b) O controle é a primeira função a ser executada<br>
+                c) As funções são interligadas e se retroalimentam em um ciclo contínuo<br>
+                d) A direção não se relaciona com as demais funções<br>
+                e) O planejamento é a única função que requer análise de ambiente
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Princípios do planejamento) – Assinale a alternativa que NÃO corresponde a um princípio do planejamento:</p>
+            <div class="alternativas">
+                a) Viabilidade<br>b) Exatidão<br>c) Flexibilidade<br>d) Rigidez<br>e) Unidade
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Habilidades do dirigente) – A habilidade de lidar com pessoas, liderar e motivar equipes é classificada como:</p>
+            <div class="alternativas">
+                a) Habilidade técnica<br>b) Habilidade humana<br>c) Habilidade conceitual<br>d) Habilidade operacional<br>e) Habilidade funcional
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 14 a 25 + Gabarito                        -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (14 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (Tipos de controle) – O controle realizado antes da execução das atividades, com o objetivo de prevenir problemas, é denominado:</p>
+            <div class="alternativas">
+                a) Concorrente<br>b) Posterior<br>c) Prévio<br>d) Corretivo<br>e) Reativo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (Teoria Neoclássica) – Segundo a Teoria Neoclássica, o processo administrativo é explicado a partir da integração das funções:</p>
+            <div class="alternativas">
+                a) Produção, Finanças, Marketing e RH<br>
+                b) Planejamento, Organização, Direção e Controle<br>
+                c) Previsão, Comando, Coordenação e Controle<br>
+                d) Planejamento, Execução, Verificação e Ação<br>
+                e) Estratégia, Estrutura, Sistemas e Estilo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (Organização) – A estrutura organizacional pode ser representada por meio de:</p>
+            <div class="alternativas">
+                a) Fluxogramas<br>b) Organogramas<br>c) Cronogramas<br>d) Diagramas de Pareto<br>e) Histogramas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Direção) – A função direção envolve, entre outros aspectos:</p>
+            <div class="alternativas">
+                a) Definir objetivos e metas<br>b) Distribuir tarefas e recursos<br>c) Liderar, motivar e coordenar pessoas<br>d) Monitorar e avaliar resultados<br>e) Elaborar orçamentos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Controle) – O controle que ocorre durante a execução das atividades, com acompanhamento em tempo real, é o:</p>
+            <div class="alternativas">
+                a) Prévio<br>b) Concorrente<br>c) Posterior<br>d) Estratégico<br>e) Tático
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Ferramentas de planejamento) – A ferramenta que analisa Forças, Fraquezas, Oportunidades e Ameaças é conhecida como:</p>
+            <div class="alternativas">
+                a) 5W2H<br>b) Análise SWOT<br>c) Matriz BCG<br>d) Diagrama de Ishikawa<br>e) PDCA
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Inter-relação) – No processo administrativo, a função que antecede a direção e sucede o planejamento é:</p>
+            <div class="alternativas">
+                a) Controle<br>b) Organização<br>c) Coordenação<br>d) Avaliação<br>e) Execução
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – PODC) – Analise as afirmativas:</p>
+            <p>(   ) O planejamento define objetivos e decide sobre os recursos.<br>
+            (   ) A organização envolve liderança, motivação e comunicação.<br>
+            (   ) A direção monitora e avalia os resultados alcançados.<br>
+            (   ) O controle distribui tarefas e aloca recursos.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – F – F<br>b) F – V – F – V<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (V/F – Tipos de planejamento) – Analise as afirmativas:</p>
+            <p>(   ) O planejamento estratégico é de longo prazo e envolve toda a organização.<br>
+            (   ) O planejamento tático é de curto prazo e foca em operações diárias.<br>
+            (   ) O planejamento operacional é de médio prazo e feito pelos gerentes.<br>
+            (   ) O planejamento estratégico é feito pela alta administração.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – F – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (V/F – Controle) – Analise as afirmativas:</p>
+            <p>(   ) O controle deve ser realizado apenas ao final do processo.<br>
+            (   ) Uma das etapas do controle é o estabelecimento de padrões.<br>
+            (   ) A comparação entre o desempenho real e o planejado é parte do controle.<br>
+            (   ) A ação corretiva é a última etapa do controle.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – V – V<br>b) F – V – V – V<br>c) V – F – V – F<br>d) F – V – F – V<br>e) V – V – F – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (V/F – Direção) – Analise as afirmativas:</p>
+            <p>(   ) A direção envolve a capacidade de liderar e motivar pessoas.<br>
+            (   ) A comunicação é um elemento essencial da função direção.<br>
+            (   ) A direção não exige habilidades interpessoais.<br>
+            (   ) A coordenação de equipes faz parte da função direção.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – F – V – F<br>c) V – F – V – V<br>d) F – V – F – F<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Processo administrativo) – Analise as afirmativas:</p>
+            <p>(   ) O processo administrativo é composto por funções isoladas e independentes.<br>
+            (   ) O mnemônico PODC significa Planejamento, Organização, Direção e Controle.<br>
+            (   ) O ciclo PODC foi originalmente desenvolvido por Henri Fayol.<br>
+            (   ) As funções administrativas se inter-relacionam em um ciclo contínuo.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – V – V<br>b) V – F – F – V<br>c) F – V – F – F<br>d) V – V – V – F<br>e) F – F – V – V
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-C</b> | <b>2-D</b> | <b>3-B</b> | <b>4-C</b> | <b>5-D</b> | <b>6-C</b> | <b>7-B</b> | <b>8-C</b> | <b>9-B</b> | <b>10-D</b></p>
+            <p><b>11-C</b> | <b>12-D</b> | <b>13-B</b> | <b>14-C</b> | <b>15-B</b> | <b>16-B</b> | <b>17-C</b> | <b>18-B</b> | <b>19-B</b> | <b>20-B</b></p>
+            <p><b>21-A</b> | <b>22-A</b> | <b>23-B</b> | <b>24-A</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q21 (V,F,F,F); Q22 (V,F,F,V); Q23 (F,V,V,V); Q24 (V,V,F,V); Q25 (F,V,V,V).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

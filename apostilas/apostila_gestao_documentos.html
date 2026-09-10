@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Gestão de Documentos, Protocolo e Expedição</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #e8ecf1;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a252f;
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a252f;
+            background-color: #e9edf2;
+            padding: 10px 15px;
+            border-left: 6px solid #2c3e50;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #2c3e50;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d9dee4;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f4f6f9;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #2c3e50;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #34495e;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📄 GESTÃO DE DOCUMENTOS, PROTOCOLO E EXPEDIÇÃO</h1>
+    <p style="text-align:center; font-size:18px; color:#1a252f;"><b>Gestão documental, protocolo, recepção, classificação, registro, distribuição e expedição de correspondência</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO À GESTÃO DE DOCUMENTOS</h2>
+        <p>A <b>Gestão de Documentos</b> é o conjunto de práticas, procedimentos e tecnologias destinados a assegurar a produção, tramitação, uso, arquivamento e destinação correta dos documentos, garantindo sua autenticidade, integridade e acessibilidade ao longo do tempo.</p>
+        <p>O <b>Protocolo</b> é o serviço responsável pelo recebimento, classificação, registro e distribuição de documentos, sendo a "porta de entrada" da comunicação oficial. Já a <b>Expedição</b> cuida do envio de correspondências e documentos para destinatários internos ou externos.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender as etapas do ciclo documental (produção, tramitação, uso e arquivamento), dominar as atividades do protocolo (recepção, classificação, registro e distribuição) e conhecer os procedimentos para expedição de correspondências e gestão de documentos digitais.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Gestão de Documentos – Conceitos e Ciclo de Vida – pág. 2</li>
+            <li><b>Módulo II:</b> Protocolo – Recepção e Classificação – pág. 3</li>
+            <li><b>Módulo III:</b> Protocolo – Registro e Distribuição – pág. 4</li>
+            <li><b>Módulo IV:</b> Gestão de Documentos Digitais – pág. 5</li>
+            <li><b>Módulo V:</b> Expedição de Correspondência – Registro e Encaminhamento – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Gestão de Documentos – Conceitos                   -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – GESTÃO DE DOCUMENTOS: CONCEITOS E CICLO DE VIDA</h2>
+        <h3>2.1. O que é um Documento?</h3>
+        <p>Documento é toda unidade de informação registrada em qualquer suporte (papel, digital, audiovisual, etc.) que sirva como prova, testemunho ou fonte de informação para a administração e para a sociedade.</p>
+
+        <h3>2.2. Ciclo de Vida dos Documentos</h3>
+        <p>O ciclo de vida dos documentos, segundo a teoria das três idades, divide-se em três fases:</p>
+        <ul>
+            <li><b>Fase Corrente (1ª idade):</b> documentos em uso frequente, mantidos no local de trabalho para consulta diária. Ex.: contratos em negociação, processos em andamento.</li>
+            <li><b>Fase Intermediária (2ª idade):</b> documentos com uso menos frequente, mas que ainda podem ser consultados. Aguardam prazo de prescrição ou destinação final. Ex.: processos encerrados há menos de 5 anos.</li>
+            <li><b>Fase Permanente (3ª idade):</b> documentos de valor histórico, probatório ou informativo que devem ser preservados indefinidamente. Ex.: leis, atas de fundação, registros históricos.</li>
+        </ul>
+
+        <h3>2.3. Tipos de Arquivo</h3>
+        <ul>
+            <li><b>Arquivo corrente (ou administrativo):</b> destinado aos documentos da 1ª idade.</li>
+            <li><b>Arquivo intermediário:</b> destinado aos documentos da 2ª idade.</li>
+            <li><b>Arquivo permanente (ou histórico):</b> destinado aos documentos da 3ª idade.</li>
+        </ul>
+
+        <h3>2.4. Fases do Arquivamento</h3>
+        <p>O processo de arquivamento segue etapas básicas:</p>
+        <ol>
+            <li><b>Recebimento:</b> entrada do documento no sistema.</li>
+            <li><b>Classificação:</b> atribuição de um código ou assunto conforme plano de classificação.</li>
+            <li><b>Registro:</b> atribuição de número de protocolo ou tombamento.</li>
+            <li><b>Armazenamento:</b> guarda física ou digital.</li>
+            <li><b>Consulta/Empréstimo:</b> disponibilização para uso.</li>
+            <li><b>Destinação:</b> eliminação (descarte autorizado) ou recolhimento para arquivo permanente.</li>
+        </ol>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Protocolo – Recepção e Classificação               -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – PROTOCOLO: RECEPÇÃO E CLASSIFICAÇÃO</h2>
+        <h3>3.1. Conceito de Protocolo</h3>
+        <p>O <b>Protocolo</b> é o serviço encarregado do recebimento, classificação, registro e distribuição de documentos, bem como do controle da tramitação. Ele é o ponto central de controle documental na organização.</p>
+
+        <h3>3.2. Recepção de Documentos</h3>
+        <p>A recepção é a primeira atividade do protocolo. Envolve:</p>
+        <ul>
+            <li><b>Verificação:</b> conferência do envelope ou pacote (integridade, remetente, destinatário).</li>
+            <li><b>Registro preliminar:</b> anotação da data e hora de chegada.</li>
+            <li><b>Separação:</b> distinguir correspondência oficial (de órgãos públicos) da particular (pessoal).</li>
+            <li><b>Abertura:</b> em geral, os documentos são abertos para verificação de conteúdo e classificação (exceto documentos pessoais ou sigilosos, que seguem procedimentos específicos).</li>
+        </ul>
+
+        <h3>3.3. Classificação de Documentos</h3>
+        <p>A classificação consiste em atribuir ao documento um <b>código</b> ou <b>assunto</b> conforme um plano de classificação previamente estabelecido (ex.: Tabela de Temporalidade e Destinação de Documentos – TTDD). A classificação permite:</p>
+        <ul>
+            <li>Organizar os documentos por assunto.</li>
+            <li>Facilitar a recuperação da informação.</li>
+            <li>Definir o prazo de guarda e a destinação final.</li>
+        </ul>
+        <div class="dica">
+            <b>📌 Atenção:</b> No serviço público, a classificação deve seguir o <b>Código de Classificação de Documentos</b> e a <b>Tabela de Temporalidade</b> estabelecidos pelo CONARQ (Conselho Nacional de Arquivos).
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Protocolo – Registro e Distribuição                -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – PROTOCOLO: REGISTRO E DISTRIBUIÇÃO</h2>
+        <h3>4.1. Registro de Documentos</h3>
+        <p>O registro é o ato de atribuir um <b>número de protocolo</b> ao documento, garantindo sua individualização e rastreabilidade. O registro deve conter:</p>
+        <ul>
+            <li><b>Número sequencial</b> (único por documento).</li>
+            <li><b>Data e hora</b> do registro.</li>
+            <li><b>Origem</b> (remetente) e <b>destino</b> (órgão/pessoa).</li>
+            <li><b>Resumo do conteúdo</b> ou assunto.</li>
+            <li><b>Classificação</b> atribuída.</li>
+        </ul>
+        <p>O registro é fundamental para o <b>controle de tramitação</b>, permitindo saber onde está o documento a qualquer momento.</p>
+
+        <h3>4.2. Distribuição</h3>
+        <p>A distribuição encaminha o documento ao setor ou pessoa responsável por sua análise ou execução. Pode ser:</p>
+        <ul>
+            <li><b>Distribuição física:</b> entrega manual do documento em papel.</li>
+            <li><b>Distribuição digital:</b> envio eletrônico (e-mail, sistema de workflow).</li>
+        </ul>
+        <p>Na distribuição, deve-se usar um <b>formulário de encaminhamento</b> (ou despacho) que registre o destino e a data de saída.</p>
+
+        <h3>4.3. Tramitação e Controle</h3>
+        <p>A <b>tramitação</b> é o percurso do documento entre os diversos setores até a conclusão do processo. O protocolo deve manter o <b>histórico de movimentação</b>, permitindo consultas sobre o paradeiro do documento.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Gestão de Documentos Digitais                      -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – GESTÃO DE DOCUMENTOS DIGITAIS</h2>
+        <h3>5.1. Conceitos Fundamentais</h3>
+        <ul>
+            <li><b>Documento digital:</b> informação registrada em código binário, acessível por meio de dispositivo eletrônico.</li>
+            <li><b>Documento eletrônico:</b> documento digital que possui validade jurídica (ex.: NF-e, processo eletrônico).</li>
+            <li><b>Assinatura digital:</b> mecanismo que garante autenticidade, integridade e não repúdio, utilizando certificação digital (ex.: ICP-Brasil).</li>
+        </ul>
+
+        <h3>5.2. Sistemas Eletrônicos de Gestão Documental</h3>
+        <p>O <b>SEI</b> (Sistema Eletrônico de Informações) e o <b>Processo Eletrônico Nacional</b> (PEN) são exemplos de sistemas utilizados no serviço público para:</p>
+        <ul>
+            <li>Produzir e assinar documentos digitalmente.</li>
+            <li>Automatizar a tramitação (workflow).</li>
+            <li>Gerenciar prazos e tarefas.</li>
+            <li>Garantir a preservação digital a longo prazo.</li>
+        </ul>
+
+        <h3>5.3. Preservação Digital</h3>
+        <p>A preservação de documentos digitais exige:</p>
+        <ul>
+            <li><b>Migração:</b> transferência de dados para novas mídias ou formatos, evitando obsolescência tecnológica.</li>
+            <li><b>Emulação:</b> recriar o ambiente técnico original para acessar documentos antigos.</li>
+            <li><b>Backup e redundância:</b> cópias de segurança em local físico diferente.</li>
+        </ul>
+        <div class="dica">
+            <b>💻 Atenção:</b> A Lei 12.682/2012 dispõe sobre a elaboração e o arquivamento de documentos em meios eletrônicos, reconhecendo sua validade jurídica.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Expedição de Correspondência                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – EXPEDIÇÃO DE CORRESPONDÊNCIA: REGISTRO E ENCAMINHAMENTO</h2>
+        <h3>6.1. Conceito e Finalidade</h3>
+        <p>A <b>expedição</b> é o serviço que trata do envio de documentos, correspondências e processos para destinatários internos ou externos. Sua finalidade é garantir que a comunicação chegue ao destino com segurança, agilidade e comprovação (quando necessário).</p>
+
+        <h3>6.2. Etapas da Expedição</h3>
+        <ol>
+            <li><b>Recebimento do material a expedir:</b> documento já finalizado, com despacho e endereçamento.</li>
+            <li><b>Verificação:</b> conferir se o documento está completo, assinado e com o destinatário correto.</li>
+            <li><b>Registro de expedição:</b> anotar em livro ou sistema a data de saída, o destinatário e o número do documento.</li>
+            <li><b>Preparação:</b> envelopar, etiquetar, pesar e calcular custos postais.</li>
+            <li><b>Envio:</b> utilizar os meios disponíveis (correio, malote, protocolo interno, e-mail, sistema eletrônico).</li>
+            <li><b>Comprovação:</b> no caso de documentos importantes, utilizar <b>AR</b> (Aviso de Recebimento) ou <b>Módulo de Rastreamento</b>.</li>
+        </ol>
+
+        <h3>6.3. Meios de Expedição</h3>
+        <ul>
+            <li><b>Correios:</b> carta, SEDEX, AR, e-SEDEX (rastreável).</li>
+            <li><b>Malote interno / Protocolo:</b> distribuição interna entre setores.</li>
+            <li><b>Digital:</b> e-mail corporativo, sistemas de processo eletrônico (SEI), mensagens criptografadas.</li>
+        </ul>
+
+        <h3>6.4. Boas Práticas na Expedição</h3>
+        <ul>
+            <li>Registrar tudo o que sai, com data e destino.</li>
+            <li>Usar formulários de expedição para controle.</li>
+            <li>Separar correspondências por prioridade (urgente, normal, confidencial).</li>
+            <li>Manter cópias ou cópias digitais dos documentos enviados.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Conceitos) – O serviço responsável pelo recebimento, classificação, registro e distribuição de documentos é o:</p>
+            <div class="alternativas">
+                a) Arquivo.<br>
+                b) Protocolo.<br>
+                c) Expedição.<br>
+                d) Almoxarifado.<br>
+                e) Ouvidoria.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Ciclo de vida) – Na teoria das três idades, os documentos em uso frequente, mantidos no local de trabalho, estão na fase:</p>
+            <div class="alternativas">
+                a) Corrente.<br>
+                b) Intermediária.<br>
+                c) Permanente.<br>
+                d) Histórica.<br>
+                e) Descartável.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Protocolo) – A primeira atividade realizada no protocolo, que consiste em conferir o envelope e anotar a data de chegada, é a:</p>
+            <div class="alternativas">
+                a) Classificação.<br>
+                b) Registro.<br>
+                c) Distribuição.<br>
+                d) Recepção.<br>
+                e) Arquivamento.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Expedição) – O documento que comprova o recebimento de uma correspondência pelos Correios é o:</p>
+            <div class="alternativas">
+                a) Protocolo.<br>
+                b) AR – Aviso de Recebimento.<br>
+                c) SEI.<br>
+                d) Despacho.<br>
+                e) Ofício.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Registro) – O número de protocolo atribuído a um documento tem como principal função:</p>
+            <div class="alternativas">
+                a) Identificar o assunto do documento.<br>
+                b) Garantir a individualização e a rastreabilidade do documento.<br>
+                c) Indicar o valor do documento.<br>
+                d) Substituir a assinatura digital.<br>
+                e) Classificar o documento por cor.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Arquivo) – O arquivo destinado aos documentos da 2ª idade (uso menos frequente) é o:</p>
+            <div class="alternativas">
+                a) Arquivo corrente.<br>
+                b) Arquivo intermediário.<br>
+                c) Arquivo permanente.<br>
+                d) Arquivo histórico.<br>
+                e) Arquivo morto.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Documentos Digitais) – A ferramenta que garante autenticidade, integridade e não repúdio a documentos eletrônicos é a:</p>
+            <div class="alternativas">
+                a) Digitalização.<br>
+                b) Assinatura digital (ICP-Brasil).<br>
+                c) Backup.<br>
+                d) Migração.<br>
+                e) Emulação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Expedição) – Na expedição de correspondência, a verificação da integridade e do endereçamento correto ocorre na etapa de:</p>
+            <div class="alternativas">
+                a) Registro.<br>
+                b) Preparação.<br>
+                c) Envio.<br>
+                d) Recebimento do material.<br>
+                e) Comprovação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Classificação) – A atribuição de um código ou assunto ao documento, conforme plano de classificação, é a atividade de:</p>
+            <div class="alternativas">
+                a) Registro.<br>
+                b) Distribuição.<br>
+                c) Classificação.<br>
+                d) Arquivamento.<br>
+                e) Expedição.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (SEI) – O SEI (Sistema Eletrônico de Informações) é um exemplo de:</p>
+            <div class="alternativas">
+                a) Sistema de gestão financeira.<br>
+                b) Sistema eletrônico de gestão documental e processos.<br>
+                c) Programa de controle de estoques.<br>
+                d) Software de recursos humanos.<br>
+                e) Banco de dados contábil.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Tramitação) – O percurso do documento entre os setores até a conclusão do processo é chamado de:</p>
+            <div class="alternativas">
+                a) Distribuição.<br>
+                b) Tramitação.<br>
+                c) Registro.<br>
+                d) Classificação.<br>
+                e) Arquivamento.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Digital) – A migração de dados para novas mídias ou formatos, evitando a obsolescência tecnológica, é uma técnica de:</p>
+            <div class="alternativas">
+                a) Preservação digital.<br>
+                b) Distribuição.<br>
+                c) Classificação.<br>
+                d) Protocolo.<br>
+                e) Digitalização.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Expedição) – O malote interno é um meio de expedição utilizado para:</p>
+            <div class="alternativas">
+                a) Envio de documentos via Correios.<br>
+                b) Distribuição interna entre setores da mesma organização.<br>
+                c) Envio de documentos para órgãos externos.<br>
+                d) Comunicação com clientes.<br>
+                e) Envio de mercadorias.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Ciclo de vida) – Analise as afirmativas:</p>
+            <p>(   ) A fase permanente destina-se a documentos de valor histórico ou probatório.<br>
+            (   ) Documentos da fase corrente ficam no arquivo intermediário.<br>
+            (   ) A eliminação de documentos é sempre proibida.<br>
+            (   ) A destinação pode ser eliminação ou recolhimento para arquivo permanente.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – F – V<br>b) F – V – V – F<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – V – F
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Protocolo) – Analise as afirmativas:</p>
+            <p>(   ) O protocolo é responsável apenas pela expedição de documentos.<br>
+            (   ) A classificação é atribuir um código ou assunto ao documento.<br>
+            (   ) O registro de um documento pode ser feito sem data.<br>
+            (   ) A distribuição encaminha o documento ao setor responsável.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – F<br>b) F – V – F – V<br>c) V – F – V – F<br>d) F – F – V – V<br>e) F – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (V/F – Gestão Digital) – Analise as afirmativas:</p>
+            <p>(   ) A assinatura digital garante a autenticidade do documento eletrônico.<br>
+            (   ) O backup é uma técnica de preservação digital.<br>
+            (   ) O SEI é utilizado exclusivamente para controle de frequência de servidores.<br>
+            (   ) A emulação recria o ambiente técnico original para acessar documentos antigos.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Arquivo) – O arquivo que guarda documentos de valor histórico, que devem ser preservados indefinidamente, é o:</p>
+            <div class="alternativas">
+                a) Arquivo corrente.<br>
+                b) Arquivo intermediário.<br>
+                c) Arquivo permanente.<br>
+                d) Arquivo administrativo.<br>
+                e) Arquivo de segurança.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Expedição) – Ao expedir uma correspondência via Correios, o atendente deve registrar, entre outras informações:</p>
+            <div class="alternativas">
+                a) Apenas o nome do remetente.<br>
+                b) Data de saída, destinatário e número do documento.<br>
+                c) Apenas o valor do frete.<br>
+                d) O conteúdo completo do documento.<br>
+                e) A cor do envelope.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Classificação) – O plano de classificação de documentos e a tabela de temporalidade são estabelecidos no serviço público pelo:</p>
+            <div class="alternativas">
+                a) IBGE.<br>
+                b) CONARQ – Conselho Nacional de Arquivos.<br>
+                c) STF – Supremo Tribunal Federal.<br>
+                d) Ministério da Economia.<br>
+                e) Câmara dos Deputados.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Protocolo) – O controle de tramitação, que permite saber onde está o documento, é possível graças ao:</p>
+            <div class="alternativas">
+                a) Registro e histórico de movimentação.<br>
+                b) Arquivo permanente.<br>
+                c) Expedição.<br>
+                d) Malote interno.<br>
+                e) Digitalização.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Geral) – Analise as afirmativas:</p>
+            <p>(   ) A digitalização substitui completamente a gestão de documentos físicos.<br>
+            (   ) O protocolo recebe, classifica, registra e distribui documentos.<br>
+            (   ) A expedição cuida do envio de documentos para destinatários.<br>
+            (   ) Documentos da fase corrente ficam no arquivo permanente.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – V – F<br>b) V – F – F – V<br>c) F – V – F – V<br>d) V – V – V – F<br>e) F – F – V – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Digital) – A Lei 12.682/2012 trata da:</p>
+            <div class="alternativas">
+                a) Criação do SEI.<br>
+                b) Elaboração e arquivamento de documentos em meios eletrônicos.<br>
+                c) Instituição da CIPA.<br>
+                d) Regulamentação dos Correios.<br>
+                e) Criação do CONARQ.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (Protocolo) – Na recepção de documentos, a abertura de correspondências deve ser feita, EXCETO quando:</p>
+            <div class="alternativas">
+                a) O documento for sigiloso ou pessoal.<br>
+                b) O envelope estiver danificado.<br>
+                c) For uma correspondência oficial.<br>
+                d) For um processo administrativo.<br>
+                e) For um ofício comum.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (Expedição) – No serviço público, o e-SEDEX é uma modalidade dos Correios que oferece:</p>
+            <div class="alternativas">
+                a) Entrega no mesmo dia.<br>
+                b) Rastreamento e comprovante de entrega.<br>
+                c) Envio exclusivo para o exterior.<br>
+                d) Isenção de impostos.<br>
+                e) Entrega aos domingos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Consolidação) – Analise as afirmativas sobre Gestão de Documentos:</p>
+            <p>(   ) A fase intermediária é também chamada de pré-arquivo.<br>
+            (   ) A classificação serve para facilitar a recuperação da informação.<br>
+            (   ) A expedição não exige registro dos documentos enviados.<br>
+            (   ) A preservação digital inclui técnicas como migração e emulação.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-A</b> | <b>3-D</b> | <b>4-B</b> | <b>5-B</b> | <b>6-B</b> | <b>7-B</b> | <b>8-D</b> | <b>9-C</b> | <b>10-B</b></p>
+            <p><b>11-B</b> | <b>12-A</b> | <b>13-B</b> | <b>14-A</b> | <b>15-B</b> | <b>16-A</b> | <b>17-C</b> | <b>18-B</b> | <b>19-B</b> | <b>20-A</b></p>
+            <p><b>21-A</b> | <b>22-B</b> | <b>23-A</b> | <b>24-B</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,F,F,V); Q15 (F,V,F,V); Q16 (V,V,F,V); Q21 (F,V,V,F); Q25 (V,V,F,V).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

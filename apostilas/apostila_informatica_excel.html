@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Informática: Microsoft Excel 2016</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #eef2f7;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a4d2e;
+            text-align: center;
+            border-bottom: 3px solid #2a7d4f;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a4d2e;
+            background-color: #e6f4ed;
+            padding: 10px 15px;
+            border-left: 6px solid #2a7d4f;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #1e613b;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d4ece4;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5fbf8;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #2a7d4f;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a4d2e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #2a7d4f;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📊 INFORMÁTICA – MICROSOFT EXCEL 2016</h1>
+    <p style="text-align:center; font-size:18px; color:#1a4d2e;"><b>Ambiente, Células, Planilhas, Pastas, Fórmulas, Funções e Guias da Faixa de Opções</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>O <b>Microsoft Excel 2016</b> é uma ferramenta de planilha eletrônica amplamente utilizada para organização, cálculo e análise de dados. Dominar seus recursos é essencial para concursos públicos e para o dia a dia profissional.</p>
+        <p>Este módulo aborda: <b>ambiente e componentes</b>, <b>células, planilhas e pastas</b>, <b>fórmulas e funções</b>, e as <b>guias da Faixa de Opções</b> (Início, Inserir, Layout da Página, Fórmulas, Dados, Revisão, Exibição).</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Dominar os principais recursos do Excel 2016, incluindo navegação, formatação, fórmulas e funções básicas, com 35 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Ambiente e Componentes do Excel – pág. 2</li>
+            <li><b>Módulo II:</b> Células, Planilhas e Pastas – pág. 3</li>
+            <li><b>Módulo III:</b> Fórmulas e Funções – pág. 4</li>
+            <li><b>Módulo IV:</b> Guia Início e Inserir – pág. 5</li>
+            <li><b>Módulo V:</b> Guias Layout, Fórmulas, Dados, Revisão e Exibição – pág. 6</li>
+            <li><b>Questões:</b> 35 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Ambiente e Componentes                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – AMBIENTE E COMPONENTES DO EXCEL</h2>
+
+        <h3>2.1. Interface do Excel</h3>
+        <ul>
+            <li><b>Faixa de Opções (Ribbon):</b> conjunto de guias (Início, Inserir, Layout da Página, Fórmulas, Dados, Revisão, Exibição).</li>
+            <li><b>Guias:</b> agrupam comandos relacionados.</li>
+            <li><b>Grupos:</b> subdivisões dentro de cada guia (ex: Fonte, Alinhamento, Número).</li>
+            <li><b>Botões e Ícones:</b> executam ações específicas.</li>
+            <li><b>Barra de Título:</b> exibe o nome do arquivo.</li>
+            <li><b>Barra de Fórmulas:</b> exibe o conteúdo da célula selecionada.</li>
+            <li><b>Barra de Status:</b> informações sobre o modo de exibição e cálculos rápidos.</li>
+            <li><b>Planilhas:</b> abas na parte inferior (Plan1, Plan2, etc.).</li>
+            <li><b>Zoom:</b> controle de ampliação da visualização.</li>
+        </ul>
+
+        <h3>2.2. Elementos Básicos</h3>
+        <ul>
+            <li><b>Célula:</b> interseção de uma linha (número) e uma coluna (letra).</li>
+            <li><b>Endereço de célula:</b> combinação de coluna e linha (ex: A1, B5).</li>
+            <li><b>Planilha:</b> uma página dentro da pasta de trabalho.</li>
+            <li><b>Pasta de trabalho:</b> o arquivo do Excel (.xlsx).</li>
+        </ul>
+        <div class="dica">
+            <b>💡 Dica:</b> <b>Ctrl + S</b> salva a pasta. <b>Ctrl + N</b> cria uma nova pasta.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Células, Planilhas e Pastas                        -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – CÉLULAS, PLANILHAS E PASTAS</h2>
+
+        <h3>3.1. Seleção de Células</h3>
+        <ul>
+            <li><b>Uma célula:</b> clique único.</li>
+            <li><b>Intervalo:</b> clique e arraste ou use <b>Shift</b> para selecionar um bloco.</li>
+            <li><b>Coluna inteira:</b> clique no cabeçalho da coluna (letra).</li>
+            <li><b>Linha inteira:</b> clique no cabeçalho da linha (número).</li>
+            <li><b>Todas as células:</b> <b>Ctrl + A</b> ou clique no canto superior esquerdo.</li>
+            <li><b>Células não adjacentes:</b> <b>Ctrl</b> + clique em cada célula.</li>
+        </ul>
+
+        <h3>3.2. Operações com Planilhas e Pastas</h3>
+        <ul>
+            <li><b>Abrir:</b> Ctrl + O.</li>
+            <li><b>Fechar:</b> Ctrl + W (fecha a pasta).</li>
+            <li><b>Criar:</b> Ctrl + N.</li>
+            <li><b>Salvar:</b> Ctrl + S (ou F12 para "Salvar como").</li>
+            <li><b>Excluir planilha:</b> botão direito na aba → Excluir.</li>
+            <li><b>Renomear planilha:</b> duplo clique na aba.</li>
+            <li><b>Mover/copiar planilha:</b> botão direito → Mover ou Copiar.</li>
+            <li><b>Inserir planilha:</b> clique no "+" ao lado das abas.</li>
+        </ul>
+
+        <h3>3.3. Formatação de Células</h3>
+        <ul>
+            <li><b>Fonte:</b> tipo, tamanho, cor, negrito, itálico, sublinhado.</li>
+            <li><b>Alinhamento:</b> horizontal, vertical, mesclar células.</li>
+            <li><b>Número:</b> formato (geral, número, moeda, data, porcentagem, texto).</li>
+            <li><b>Bordas e Preenchimento:</b> cores de fundo e bordas.</li>
+        </ul>
+        <div class="dica">
+            <b>💡 Dica:</b> <b>Ctrl + 1</b> abre a janela "Formatar Células".
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Fórmulas e Funções                                 -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – FÓRMULAS E FUNÇÕES</h2>
+
+        <h3>4.1. Fórmulas</h3>
+        <ul>
+            <li><b>Sintaxe:</b> toda fórmula começa com <b>=</b> (ex: =A1+B1).</li>
+            <li><b>Operadores:</b> + (adição), - (subtração), * (multiplicação), / (divisão), ^ (potência).</li>
+            <li><b>Referências:</b> relativas (A1), absolutas ($A$1), mistas ($A1, A$1).</li>
+        </ul>
+
+        <h3>4.2. Funções Básicas</h3>
+        <table>
+            <tr><th>Função</th><th>Sintaxe</th><th>O que faz</th></tr>
+            <tr><td><b>SOMA</b></td><td>=SOMA(A1:A10)</td><td>Soma os valores do intervalo</td></tr>
+            <tr><td><b>MÉDIA</b></td><td>=MÉDIA(A1:A10)</td><td>Calcula a média aritmética</td></tr>
+            <tr><td><b>MÁXIMO</b></td><td>=MÁXIMO(A1:A10)</td><td>Retorna o maior valor</td></tr>
+            <tr><td><b>MÍNIMO</b></td><td>=MÍNIMO(A1:A10)</td><td>Retorna o menor valor</td></tr>
+            <tr><td><b>CONT.NÚM</b></td><td>=CONT.NÚM(A1:A10)</td><td>Conta células com números</td></tr>
+            <tr><td><b>SE</b></td><td>=SE(A1>10;"Aprovado";"Reprovado")</td><td>Teste lógico (se... então... senão)</td></tr>
+            <tr><td><b>PROCV</b></td><td>=PROCV(valor;tabela;coluna;falso)</td><td>Procura um valor em uma tabela</td></tr>
+        </table>
+
+        <h3>4.3. Referências Absolutas e Relativas</h3>
+        <ul>
+            <li><b>Relativa (A1):</b> muda ao copiar a fórmula.</li>
+            <li><b>Absoluta ($A$1):</b> permanece fixa ao copiar.</li>
+            <li><b>Mista ($A1 ou A$1):</b> fixa a coluna ou a linha.</li>
+        </ul>
+        <div class="dica">
+            <b>💡 Dica:</b> Use <b>F4</b> para alternar entre referências relativas, absolutas e mistas.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Guia Início e Inserir                              -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – GUIA INÍCIO E INSERIR</h2>
+
+        <h3>5.1. Guia Início</h3>
+        <ul>
+            <li><b>Área de Transferência:</b> Copiar, Recortar, Colar, Pincel de Formatação.</li>
+            <li><b>Fonte:</b> Tipo, Tamanho, Negrito, Itálico, Sublinhado, Cor da Fonte, Cor de Preenchimento.</li>
+            <li><b>Alinhamento:</b> Alinhar à esquerda, centralizar, à direita, Mesclar e Centralizar.</li>
+            <li><b>Número:</b> Formato Geral, Moeda, Porcentagem, Vírgula, Aumentar/Diminuir Casas Decimais.</li>
+            <li><b>Estilos:</b> Formatação condicional, Formatar como Tabela, Estilos de Célula.</li>
+            <li><b>Células:</b> Inserir, Excluir, Formatar (linhas, colunas, planilhas).</li>
+            <li><b>Edição:</b> AutoSoma, Preencher, Limpar, Classificar e Filtrar, Localizar e Substituir.</li>
+        </ul>
+
+        <h3>5.2. Guia Inserir</h3>
+        <ul>
+            <li><b>Tabelas:</b> Inserir tabela dinâmica, Tabela.</li>
+            <li><b>Ilustrações:</b> Imagens, Formas, Ícones, Modelos 3D.</li>
+            <li><b>Gráficos:</b> Coluna, Linha, Pizza, Barra, Área, Dispersão (recomendados).</li>
+            <li><b>Links:</b> Hiperlink.</li>
+            <li><b>Texto:</b> Caixa de texto, Cabeçalho e Rodapé, WordArt, Objeto.</li>
+            <li><b>Símbolos:</b> Equação, Símbolo.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Layout, Fórmulas, Dados, Revisão e Exibição        -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – GUIAS LAYOUT, FÓRMULAS, DADOS, REVISÃO E EXIBIÇÃO</h2>
+
+        <h3>6.1. Guia Layout da Página</h3>
+        <ul>
+            <li><b>Temas:</b> Cores, Fontes, Efeitos.</li>
+            <li><b>Configurar Página:</b> Margens, Orientação (Retrato/Paisagem), Tamanho, Área de Impressão, Quebras.</li>
+            <li><b>Escala para Ajustar:</b> Largura, Altura, Escala.</li>
+            <li><b>Opções de Planilha:</b> Exibir cabeçalhos, Linhas de grade.</li>
+        </ul>
+
+        <h3>6.2. Guia Fórmulas</h3>
+        <ul>
+            <li><b>Biblioteca de Funções:</b> AutoSoma, Financeira, Lógica, Texto, Data e Hora, Pesquisa e Referência.</li>
+            <li><b>Nomes Definidos:</b> Definir nome, Usar na fórmula, Gerenciar.</li>
+            <li><b>Auditoria de Fórmulas:</b> Rastrear precedentes, dependentes, Mostrar fórmulas, Verificar erros.</li>
+            <li><b>Cálculo:</b> Opções de cálculo (Automático/Manual), Calcular agora, Calcular planilha.</li>
+        </ul>
+
+        <h3>6.3. Guia Dados</h3>
+        <ul>
+            <li><b>Obter Dados Externos:</b> De texto/CSV, Da Web, De tabela/intervalo.</li>
+            <li><b>Classificar e Filtrar:</b> Classificar de A a Z, Z a A, Filtrar, Avançado.</li>
+            <li><b>Ferramentas de Dados:</b> Validação de dados, Remover duplicatas, Texto para colunas.</li>
+            <li><b>Esboço:</b> Subtotal, Agrupar, Desagrupar.</li>
+        </ul>
+
+        <h3>6.4. Guia Revisão</h3>
+        <ul>
+            <li><b>Verificação:</b> Ortografia, Pesquisar sinônimos, Definir, Dicionário de sinônimos.</li>
+            <li><b>Comentários:</b> Novo comentário, Editar, Excluir, Mostrar/ocultar.</li>
+            <li><b>Alterações:</b> Proteger planilha, Proteger pasta de trabalho, Compartilhar.</li>
+        </ul>
+
+        <h3>6.5. Guia Exibição</h3>
+        <ul>
+            <li><b>Modos de Exibição:</b> Normal, Layout de página, Exibição de quebra de página, Personalizado.</li>
+            <li><b>Mostrar/Ocultar:</b> Régua, Linhas de grade, Barra de fórmulas, Títulos.</li>
+            <li><b>Zoom:</b> Zoom, 100%, Zoom na seleção.</li>
+            <li><b>Janela:</b> Nova janela, Organizar tudo, Congelar painéis, Dividir, Ocultar/exibir.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 18                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 18)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> – No Excel, a interseção de uma linha e uma coluna é chamada de:</p>
+            <div class="alternativas">
+                a) Planilha<br>
+                b) Célula<br>
+                c) Pasta<br>
+                d) Gráfico<br>
+                e) Fórmula
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> – O que significa a referência de célula <b>$A$1</b>?</p>
+            <div class="alternativas">
+                a) Referência relativa<br>
+                b) Referência absoluta<br>
+                c) Referência mista<br>
+                d) Referência circular<br>
+                e) Referência externa
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> – A função que calcula a soma de um intervalo de células é:</p>
+            <div class="alternativas">
+                a) =SOMA(A1:A10)<br>
+                b) =MÉDIA(A1:A10)<br>
+                c) =MÁXIMO(A1:A10)<br>
+                d) =PROCV(A1;Tabela;2;FALSO)<br>
+                e) =SE(A1>10;"Aprovado";"Reprovado")
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> – Qual guia do Excel contém os comandos para inserir gráficos?</p>
+            <div class="alternativas">
+                a) Início<br>
+                b) Inserir<br>
+                c) Layout da Página<br>
+                d) Fórmulas<br>
+                e) Dados
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> – Para salvar uma pasta de trabalho com outro nome, usa-se:</p>
+            <div class="alternativas">
+                a) Ctrl + S<br>
+                b) F12<br>
+                c) Ctrl + N<br>
+                d) Ctrl + O<br>
+                e) Ctrl + W
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> – No Excel, o atalho para abrir a janela "Formatar Células" é:</p>
+            <div class="alternativas">
+                a) Ctrl + 1<br>
+                b) Ctrl + 2<br>
+                c) Ctrl + 3<br>
+                d) Ctrl + 4<br>
+                e) Ctrl + 5
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> – A função =MÉDIA(B2:B10) calcula:</p>
+            <div class="alternativas">
+                a) A soma dos valores<br>
+                b) A média aritmética dos valores<br>
+                c) O maior valor<br>
+                d) O menor valor<br>
+                e) A contagem de números
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> – Qual guia do Excel permite configurar margens e orientação da página?</p>
+            <div class="alternativas">
+                a) Início<br>
+                b) Inserir<br>
+                c) Layout da Página<br>
+                d) Fórmulas<br>
+                e) Dados
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> – Para selecionar todas as células de uma planilha, usa-se:</p>
+            <div class="alternativas">
+                a) Ctrl + A<br>
+                b) Ctrl + C<br>
+                c) Ctrl + V<br>
+                d) Ctrl + X<br>
+                e) Ctrl + Z
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> – A função =PROCV(A1;Tabela;2;FALSO) é usada para:</p>
+            <div class="alternativas">
+                a) Somar valores<br>
+                b) Calcular a média<br>
+                c) Procurar um valor em uma tabela<br>
+                d) Testar uma condição<br>
+                e) Contar números
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> – No Excel, a extensão padrão de uma pasta de trabalho é:</p>
+            <div class="alternativas">
+                a) .docx<br>
+                b) .xlsx<br>
+                c) .pptx<br>
+                d) .pdf<br>
+                e) .txt
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> – Qual guia contém o comando "Classificar e Filtrar"?</p>
+            <div class="alternativas">
+                a) Início<br>
+                b) Inserir<br>
+                c) Layout da Página<br>
+                d) Fórmulas<br>
+                e) Dados
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> – O que acontece ao copiar uma fórmula com referência relativa?</p>
+            <div class="alternativas">
+                a) A referência permanece fixa<br>
+                b) A referência se ajusta à nova posição<br>
+                c) A referência é apagada<br>
+                d) A fórmula é convertida em valor<br>
+                e) A fórmula é removida
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> – A tecla <b>F4</b> no Excel tem a função de:</p>
+            <div class="alternativas">
+                a) Salvar o arquivo<br>
+                b) Alternar entre referências relativas, absolutas e mistas<br>
+                c) Abrir a ajuda<br>
+                d) Fechar a janela<br>
+                e) Atualizar a tela
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> – O que é uma planilha no Excel?</p>
+            <div class="alternativas">
+                a) Um arquivo inteiro<br>
+                b) Uma página dentro da pasta de trabalho<br>
+                c) Um tipo de gráfico<br>
+                d) Um conjunto de fórmulas<br>
+                e) Um banco de dados
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> – Qual guia contém o comando "Congelar Painéis"?</p>
+            <div class="alternativas">
+                a) Início<br>
+                b) Inserir<br>
+                c) Layout da Página<br>
+                d) Fórmulas<br>
+                e) Exibição
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> – A função =SE(A1>10;"Aprovado";"Reprovado") retorna:</p>
+            <div class="alternativas">
+                a) "Aprovado" se A1 for maior que 10, senão "Reprovado"<br>
+                b) "Reprovado" se A1 for maior que 10, senão "Aprovado"<br>
+                c) Sempre "Aprovado"<br>
+                d) Sempre "Reprovado"<br>
+                e) Um erro
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> – Para ocultar uma planilha, deve-se:</p>
+            <div class="alternativas">
+                a) Clicar em Excluir<br>
+                b) Botão direito na aba → Ocultar<br>
+                c) Botão direito na aba → Renomear<br>
+                d) Botão direito na aba → Mover<br>
+                e) Clicar no "+" para criar nova
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 19 a 35 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (19 a 35) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> – A função =CONT.NÚM(A1:A10) conta:</p>
+            <div class="alternativas">
+                a) Células com texto<br>
+                b) Células com números<br>
+                c) Células vazias<br>
+                d) Todas as células<br>
+                e) Células com erros
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> – Qual guia permite proteger a planilha com senha?</p>
+            <div class="alternativas">
+                a) Início<br>
+                b) Inserir<br>
+                c) Layout da Página<br>
+                d) Fórmulas<br>
+                e) Revisão
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> – A referência <b>B$5</b> é do tipo:</p>
+            <div class="alternativas">
+                a) Relativa<br>
+                b) Absoluta<br>
+                c) Mista (linha absoluta, coluna relativa)<br>
+                d) Mista (coluna absoluta, linha relativa)<br>
+                e) Circular
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> – Para somar rapidamente um intervalo de células, pode-se usar o botão:</p>
+            <div class="alternativas">
+                a) Média<br>
+                b) AutoSoma<br>
+                c) Contar<br>
+                d) Máximo<br>
+                e) Mínimo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> – Qual guia contém os comandos para criar tabelas dinâmicas?</p>
+            <div class="alternativas">
+                a) Início<br>
+                b) Inserir<br>
+                c) Layout da Página<br>
+                d) Fórmulas<br>
+                e) Dados
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> – No Excel, o que é uma pasta de trabalho?</p>
+            <div class="alternativas">
+                a) Uma única célula<br>
+                b) Um conjunto de planilhas em um único arquivo<br>
+                c) Um tipo de gráfico<br>
+                d) Um banco de dados externo<br>
+                e) Uma imagem
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> – O atalho para criar uma nova pasta de trabalho é:</p>
+            <div class="alternativas">
+                a) Ctrl + N<br>
+                b) Ctrl + O<br>
+                c) Ctrl + S<br>
+                d) Ctrl + W<br>
+                e) Ctrl + P
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 26</b> – A guia Fórmulas contém, EXCETO:</p>
+            <div class="alternativas">
+                a) Biblioteca de funções<br>
+                b) Nomes Definidos<br>
+                c) Auditoria de fórmulas<br>
+                d) Classificar e Filtrar<br>
+                e) Opções de cálculo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 27</b> – O recurso "Validação de dados" está localizado na guia:</p>
+            <div class="alternativas">
+                a) Início<br>
+                b) Inserir<br>
+                c) Layout da Página<br>
+                d) Fórmulas<br>
+                e) Dados
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 28</b> – O que a função =MÁXIMO(A1:A10) retorna?</p>
+            <div class="alternativas">
+                a) O menor valor do intervalo<br>
+                b) O maior valor do intervalo<br>
+                c) A soma dos valores<br>
+                d) A média dos valores<br>
+                e) A contagem de valores
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 29</b> – A guia Exibição permite, entre outros:</p>
+            <div class="alternativas">
+                a) Inserir gráficos<br>
+                b) Congelar painéis<br>
+                c) Proteger planilha<br>
+                d) Classificar dados<br>
+                e) Inserir fórmulas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 30</b> – Para mesclar células, usa-se o comando na guia:</p>
+            <div class="alternativas">
+                a) Início → Alinhamento<br>
+                b) Inserir → Tabela<br>
+                c) Layout da Página → Configurar Página<br>
+                d) Fórmulas → Nomes Definidos<br>
+                e) Dados → Ferramentas de Dados
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 31</b> – A função =MÍNIMO(A1:A10) retorna:</p>
+            <div class="alternativas">
+                a) O maior valor<br>
+                b) O menor valor<br>
+                c) A soma<br>
+                d) A média<br>
+                e) A contagem
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 32</b> – A guia Layout da Página contém comandos para:</p>
+            <div class="alternativas">
+                a) Inserir gráficos<br>
+                b) Definir margens e orientação<br>
+                c) Proteger planilha<br>
+                d) Classificar dados<br>
+                e) Inserir fórmulas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 33</b> – Para renomear uma planilha, deve-se:</p>
+            <div class="alternativas">
+                a) Clicar com o botão direito na aba → Excluir<br>
+                b) Dar um duplo clique na aba da planilha<br>
+                c) Clicar em "+" para criar nova<br>
+                d) Clicar em Mover<br>
+                e) Clicar em Ocultar
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 34</b> – A guia Dados contém, EXCETO:</p>
+            <div class="alternativas">
+                a) Classificar<br>
+                b) Filtrar<br>
+                c) Validação de dados<br>
+                d) Proteger planilha<br>
+                e) Remover duplicatas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 35</b> – O atalho para abrir a janela "Salvar como" é:</p>
+            <div class="alternativas">
+                a) Ctrl + S<br>
+                b) F12<br>
+                c) Ctrl + N<br>
+                d) Ctrl + O<br>
+                e) Ctrl + W
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-B</b> | <b>3-A</b> | <b>4-B</b> | <b>5-B</b> | <b>6-A</b> | <b>7-B</b> | <b>8-C</b> | <b>9-A</b> | <b>10-C</b></p>
+            <p><b>11-B</b> | <b>12-E</b> | <b>13-B</b> | <b>14-B</b> | <b>15-B</b> | <b>16-E</b> | <b>17-A</b> | <b>18-B</b> | <b>19-B</b> | <b>20-E</b></p>
+            <p><b>21-C</b> | <b>22-B</b> | <b>23-B</b> | <b>24-B</b> | <b>25-A</b> | <b>26-D</b> | <b>27-E</b> | <b>28-B</b> | <b>29-B</b> | <b>30-A</b></p>
+            <p><b>31-B</b> | <b>32-B</b> | <b>33-B</b> | <b>34-D</b> | <b>35-B</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>💡 Observação:</b> Todas as respostas foram elaboradas com base na versão Microsoft Excel 2016.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>
