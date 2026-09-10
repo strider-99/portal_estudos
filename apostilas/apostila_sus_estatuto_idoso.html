@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - SUS: Lei 10.741/2003 - Estatuto da Pessoa Idosa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fef9f0;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #6c3483;
+            text-align: center;
+            border-bottom: 3px solid #8e44ad;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #6c3483;
+            background-color: #f4ecf7;
+            padding: 10px 15px;
+            border-left: 6px solid #8e44ad;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #4a235a;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #e8daef;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .atencao {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .atencao b {
+            color: #922b21;
+        }
+        .exemplo {
+            background-color: #f5eef8;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #8e44ad;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #faf5fc;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #8e44ad;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #6c3483;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #8e44ad;
+            color: white;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+            color: white;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>👴 ESTATUTO DA PESSOA IDOSA</h1>
+    <p style="text-align:center; font-size:18px; color:#6c3483;"><b>Lei nº 10.741, de 1º de outubro de 2003 e suas alterações</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Lei nº 10.741, de 1º de outubro de 2003</b>, conhecida como <b>Estatuto da Pessoa Idosa</b>, é um marco legal que estabelece os direitos fundamentais das pessoas com idade igual ou superior a <b>60 (sessenta) anos</b>, garantindo sua proteção integral e prioridade no atendimento.</p>
+        <p>Esta lei é essencial para o SUS, pois estabelece diretrizes específicas para a <b>atenção à saúde do idoso</b>, assegurando acesso, integralidade, prioridade e proteção contra violência e discriminação.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender os direitos da pessoa idosa estabelecidos pela Lei 10.741/2003, com ênfase nas disposições sobre saúde, prioridade de atendimento e proteção integral, com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Conceitos Fundamentais e Princípios – pág. 2</li>
+            <li><b>Módulo II:</b> Direitos da Pessoa Idosa – Visão Geral – pág. 3</li>
+            <li><b>Módulo III:</b> Disposições sobre Saúde (Arts. 15 a 19) – pág. 4</li>
+            <li><b>Módulo IV:</b> Prioridade e Atendimento Integral – pág. 5</li>
+            <li><b>Módulo V:</b> Deveres da Família, Sociedade e Estado – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Conceitos e Princípios                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – CONCEITOS FUNDAMENTAIS E PRINCÍPIOS</h2>
+
+        <h3>2.1. Definição de Pessoa Idosa</h3>
+        <ul>
+            <li><b>Art. 1º:</b> "É instituído o Estatuto da Pessoa Idosa, destinado a regular os <b>direitos assegurados às pessoas com idade igual ou superior a 60 (sessenta) anos</b>."</li>
+        </ul>
+
+        <h3>2.2. Princípios do Estatuto</h3>
+        <ul>
+            <li><b>Prioridade absoluta:</b> Atendimento preferencial em todos os serviços públicos e privados.</li>
+            <li><b>Proteção integral:</b> Garantia de todos os direitos fundamentais, sem discriminação.</li>
+            <li><b>Participação social:</b> Inclusão da pessoa idosa na vida comunitária e política.</li>
+            <li><b>Dignidade e autonomia:</b> Respeito à vontade e à capacidade de decisão da pessoa idosa.</li>
+            <li><b>Descentralização:</b> Atuação integrada entre União, Estados, DF e Municípios.</li>
+        </ul>
+
+        <h3>2.3. Idade para Aposentadoria vs. Estatuto</h3>
+        <ul>
+            <li><b>Importante:</b> O Estatuto considera idosa a pessoa com <b>60 anos</b>, independentemente de aposentadoria.</li>
+            <li>A idade para aposentadoria (65 anos para homens, 62 para mulheres) é uma questão previdenciária, não interfere nos direitos do Estatuto.</li>
+        </ul>
+        <div class="exemplo">
+            <p><b>Frase-chave:</b> "O Estatuto da Pessoa Idosa garante direitos a todos os brasileiros com 60 anos ou mais, independentemente de sua condição econômica ou previdenciária."</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Direitos da Pessoa Idosa – Visão Geral             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – DIREITOS DA PESSOA IDOSA (VISÃO GERAL)</h2>
+        <p>O Estatuto da Pessoa Idosa abrange diversos direitos fundamentais. Os principais são:</p>
+
+        <ul>
+            <li><b>Vida e integridade física:</b> Proteção contra violência, maus-tratos e negligência (Art. 4º).</li>
+            <li><b>Liberdade, respeito e dignidade:</b> Garantia de não ser submetido a tratamento desumano ou degradante (Art. 8º).</li>
+            <li><b>Alimentação, vestuário, moradia e lazer:</b> Direitos sociais básicos (Art. 8º).</li>
+            <li><b>Saúde:</b> Acesso universal e integral aos serviços de saúde (Arts. 15 a 19).</li>
+            <li><b>Prioridade no atendimento:</b> Em todos os serviços públicos e privados (Art. 3º).</li>
+            <li><b>Assistência social:</b> Acesso a benefícios previdenciários e assistenciais (Art. 34).</li>
+            <li><b>Transporte e mobilidade:</b> Acesso facilitado e gratuidade (Arts. 38 a 40).</li>
+            <li><b>Participação social e política:</b> Direito de participar da vida comunitária e política (Art. 46).</li>
+        </ul>
+
+        <div class="atencao">
+            <b>⚡ Atenção:</b> O Art. 3º estabelece a <b>prioridade absoluta</b> da pessoa idosa, que se aplica a todos os serviços, inclusive os de saúde.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Disposições sobre Saúde (Arts. 15 a 19)            -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – DISPOSIÇÕES SOBRE SAÚDE (ARTS. 15 A 19)</h2>
+
+        <h3>4.1. Art. 15 – Atendimento Integral e Prioridade</h3>
+        <ul>
+            <li>"É assegurada a <b>atenção integral à saúde</b> da pessoa idosa, por intermédio do <b>Sistema Único de Saúde</b>, garantindo-lhe o acesso universal e igualitário, em todos os níveis de assistência."</li>
+            <li>Além disso, o Art. 15 estabelece a <b>prioridade</b> no atendimento, com garantia de atendimento imediato em casos de urgência.</li>
+        </ul>
+
+        <h3>4.2. Art. 16 – Atenção Domiciliar e Preventiva</h3>
+        <ul>
+            <li>"À pessoa idosa internada ou em observação em qualquer unidade de saúde é assegurado o direito a <b>acompanhante</b>, devendo o órgão de saúde proporcionar as condições adequadas para sua permanência em tempo integral."</li>
+            <li>O Art. 16 também prevê a <b>atenção domiciliar</b> e a <b>prevenção</b> de doenças, com ênfase na manutenção da autonomia e da qualidade de vida.</li>
+        </ul>
+
+        <h3>4.3. Art. 17 – Medicamentos</h3>
+        <ul>
+            <li>"É assegurado à pessoa idosa a <b>distribuição gratuita de medicamentos</b>, especialmente os de uso contínuo, quando prescritos por profissional de saúde."</li>
+            <li>O art. 17 também prevê a <b>orientação sobre o uso adequado</b> dos medicamentos.</li>
+        </ul>
+
+        <h3>4.4. Arts. 18 e 19 – Programas de Saúde e Prevenção</h3>
+        <ul>
+            <li><b>Art. 18:</b> Os programas de saúde devem incluir ações de <b>prevenção e promoção</b> da saúde do idoso.</li>
+            <li><b>Art. 19:</b> O SUS deve garantir a <b>formação de recursos humanos</b> para o atendimento à pessoa idosa, com ênfase na <b>humanização</b> e na <b>qualificação</b> do cuidado.</li>
+        </ul>
+        <div class="exemplo">
+            <p><b>Dica para provas:</b> Os Artigos 15 a 19 do Estatuto da Pessoa Idosa são os mais cobrados em concursos da área da saúde. Memorize a garantia de <b>atendimento integral</b>, <b>prioridade</b>, <b>acompanhante</b> e <b>distribuição gratuita de medicamentos</b>.</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Prioridade e Atendimento Integral                  -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – PRIORIDADE E ATENDIMENTO INTEGRAL</h2>
+
+        <h3>5.1. Atendimento Prioritário (Art. 3º)</h3>
+        <ul>
+            <li><b>Art. 3º:</b> "É obrigação da família, da comunidade, da sociedade e do Poder Público assegurar à pessoa idosa, com <b>absoluta prioridade</b>, a efetivação do direito à vida, à saúde, à alimentação, à educação, à cultura, ao esporte, ao lazer, ao trabalho, à cidadania, à liberdade, à dignidade, ao respeito e à convivência familiar e comunitária."</li>
+        </ul>
+
+        <h3>5.2. Prioridade nos Serviços de Saúde</h3>
+        <ul>
+            <li>Atendimento preferencial nas filas de hospitais, ambulatórios e unidades de saúde.</li>
+            <li>Atendimento imediato em casos de urgência e emergência.</li>
+            <li>Garantia de acomodação adequada e conforto durante a internação.</li>
+        </ul>
+
+        <h3>5.3. Acompanhante (Art. 16)</h3>
+        <ul>
+            <li>Direito a <b>acompanhante</b> durante internação ou observação em qualquer unidade de saúde.</li>
+            <li>O acompanhante tem direito a <b>condições adequadas</b> para sua permanência (alimentação, local para descanso, etc.).</li>
+            <li>Esse direito é <b>garantido</b> independentemente da vontade da instituição de saúde.</li>
+        </ul>
+
+        <h3>5.4. Atendimento Domiciliar</h3>
+        <ul>
+            <li>O SUS deve garantir a <b>atenção domiciliar</b> à pessoa idosa, sempre que necessário, para evitar internações desnecessárias.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Deveres da Família, Sociedade e Estado             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – DEVERES DA FAMÍLIA, SOCIEDADE E ESTADO</h2>
+
+        <h3>6.1. Deveres da Família (Art. 3º)</h3>
+        <ul>
+            <li>A <b>família</b> tem o dever de cuidar, amparar e proteger a pessoa idosa.</li>
+            <li>Isso inclui garantir sua alimentação, saúde, moradia e bem-estar.</li>
+            <li>É dever da família promover a <b>convivência familiar</b> e <b>comunitária</b> da pessoa idosa.</li>
+        </ul>
+
+        <h3>6.2. Deveres da Sociedade</h3>
+        <ul>
+            <li>A <b>sociedade</b> deve garantir a <b>participação</b> da pessoa idosa na vida comunitária, política e social.</li>
+            <li>Combate à <b>discriminação</b> e ao <b>preconceito</b> contra a pessoa idosa.</li>
+            <li>Promoção de uma <b>cultura de respeito</b> e valorização da pessoa idosa.</li>
+        </ul>
+
+        <h3>6.3. Deveres do Estado</h3>
+        <ul>
+            <li>O <b>Estado</b> deve assegurar a efetivação dos direitos da pessoa idosa, por meio de políticas públicas e programas específicos.</li>
+            <li>O <b>SUS</b> deve garantir a <b>atenção integral</b> e <b>prioritária</b> à saúde da pessoa idosa.</li>
+            <li>O Estado deve <b>fiscalizar</b> o cumprimento das disposições do Estatuto.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica Final:</b> Em concursos, o Estatuto da Pessoa Idosa é frequentemente associado à <b>prioridade absoluta</b> (Art. 3º), ao <b>atendimento integral</b> (Art. 15) e ao <b>direito ao acompanhante</b> (Art. 16). Memorize os artigos e as obrigações de cada ente.</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Conceito) – O Estatuto da Pessoa Idosa (Lei 10.741/2003) considera idosa a pessoa com idade igual ou superior a:</p>
+            <div class="alternativas">
+                a) 50 anos.<br>
+                b) 55 anos.<br>
+                c) 60 anos.<br>
+                d) 65 anos.<br>
+                e) 70 anos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Princípios) – O princípio que garante atendimento preferencial em todos os serviços públicos e privados é a:</p>
+            <div class="alternativas">
+                a) Prioridade absoluta.<br>
+                b) Proteção integral.<br>
+                c) Participação social.<br>
+                d) Dignidade.<br>
+                e) Descentralização.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Saúde) – O Art. 15 do Estatuto da Pessoa Idosa assegura à pessoa idosa:</p>
+            <div class="alternativas">
+                a) Apenas atendimento emergencial.<br>
+                b) Atenção integral à saúde, com acesso universal e igualitário.<br>
+                c) Apenas distribuição de medicamentos.<br>
+                d) Apenas atendimento domiciliar.<br>
+                e) Apenas acompanhante durante a internação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Art. 16) – O Art. 16 do Estatuto garante à pessoa idosa internada o direito a:</p>
+            <div class="alternativas">
+                a) Acompanhante, em tempo integral.<br>
+                b) Apenas visita em horário determinado.<br>
+                c) Apenas atendimento médico.<br>
+                d) Apenas medicamento gratuito.<br>
+                e) Apenas transporte para casa.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Medicamentos) – O Art. 17 do Estatuto assegura à pessoa idosa a distribuição gratuita de medicamentos:</p>
+            <div class="alternativas">
+                a) Apenas para doenças crônicas.<br>
+                b) Especialmente os de uso contínuo, quando prescritos.<br>
+                c) Apenas para doenças agudas.<br>
+                d) Apenas para uso hospitalar.<br>
+                e) Apenas para tratamento de câncer.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Deveres) – Segundo o Art. 3º do Estatuto, é dever da família, da sociedade e do Poder Público assegurar à pessoa idosa:</p>
+            <div class="alternativas">
+                a) Apenas o direito à saúde.<br>
+                b) Todos os direitos fundamentais, com absoluta prioridade.<br>
+                c) Apenas o direito à moradia.<br>
+                d) Apenas o direito à alimentação.<br>
+                e) Apenas o direito ao lazer.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Art. 15) – O Art. 15 estabelece que a atenção integral à saúde da pessoa idosa deve ser garantida por intermédio do:</p>
+            <div class="alternativas">
+                a) Sistema Único de Saúde (SUS).<br>
+                b) Sistema de Saúde Suplementar.<br>
+                c) Ministério da Saúde.<br>
+                d) Secretaria de Assistência Social.<br>
+                e) Conselho Nacional de Saúde.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Acompanhante) – O direito ao acompanhante, previsto no Art. 16, aplica-se a:</p>
+            <div class="alternativas">
+                a) Apenas em hospitais públicos.<br>
+                b) Qualquer unidade de saúde (pública ou privada).<br>
+                c) Apenas em hospitais privados.<br>
+                d) Apenas em casos de internação de longa duração.<br>
+                e) Apenas para pacientes terminais.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Prioridade) – O Art. 3º do Estatuto estabelece a prioridade absoluta da pessoa idosa, o que significa que:</p>
+            <div class="alternativas">
+                a) A pessoa idosa tem prioridade em todos os serviços públicos e privados.<br>
+                b) A pessoa idosa tem prioridade apenas em serviços de saúde.<br>
+                c) A pessoa idosa tem prioridade apenas em transporte.<br>
+                d) A pessoa idosa não tem prioridade em serviços privados.<br>
+                e) A prioridade é relativa, dependendo da situação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Arts. 18 e 19) – Os Arts. 18 e 19 do Estatuto tratam, respectivamente, de:</p>
+            <div class="alternativas">
+                a) Programas de prevenção e formação de recursos humanos.<br>
+                b) Distribuição de medicamentos e acompanhante.<br>
+                c) Atendimento domiciliar e prioridade.<br>
+                d) Internação e alta hospitalar.<br>
+                e) Transporte e mobilidade.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Deveres do Estado) – O Estado tem o dever de assegurar a efetivação dos direitos da pessoa idosa por meio de:</p>
+            <div class="alternativas">
+                a) Políticas públicas e programas específicos.<br>
+                b) Apenas da legislação.<br>
+                c) Apenas da fiscalização.<br>
+                d) Apenas da distribuição de recursos.<br>
+                e) Apenas da contratação de profissionais.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Formação de RH) – O Art. 19 estabelece que o SUS deve garantir a formação de recursos humanos para o atendimento à pessoa idosa, com ênfase na:</p>
+            <div class="alternativas">
+                a) Humanização e qualificação do cuidado.<br>
+                b) Especialização em doenças crônicas.<br>
+                c) Apenas em atendimento hospitalar.<br>
+                d) Apenas em atenção domiciliar.<br>
+                e) Apenas em cuidado paliativo.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Direitos Sociais) – O Art. 8º do Estatuto garante à pessoa idosa, entre outros, os direitos à:</p>
+            <div class="alternativas">
+                a) Liberdade, respeito e dignidade.<br>
+                b) Apenas à saúde.<br>
+                c) Apenas à moradia.<br>
+                d) Apenas ao lazer.<br>
+                e) Apenas ao transporte gratuito.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Conceitos e Princípios) – Analise as afirmativas:</p>
+            <p>(   ) O Estatuto da Pessoa Idosa considera idosa a pessoa com 60 anos ou mais.<br>
+            (   ) O princípio da prioridade absoluta garante à pessoa idosa atendimento preferencial.<br>
+            (   ) O Art. 15 garante à pessoa idosa acesso universal e igualitário à saúde.<br>
+            (   ) O Estatuto não prevê o direito a acompanhante durante a internação.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – V – F<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – F – F
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Direitos e Deveres) – Analise as afirmativas:</p>
+            <p>(   ) O Art. 3º estabelece a prioridade absoluta da pessoa idosa.<br>
+            (   ) O Art. 16 garante o direito a acompanhante durante a internação.<br>
+            (   ) O Art. 17 assegura a distribuição gratuita de medicamentos de uso contínuo.<br>
+            (   ) O Art. 19 trata do direito a transporte gratuito.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – V – F<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – F – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (Art. 15) – O Art. 15 garante à pessoa idosa, entre outros:</p>
+            <div class="alternativas">
+                a) Apenas atendimento em hospitais públicos.<br>
+                b) Atendimento integral em todos os níveis de assistência.<br>
+                c) Apenas atendimento emergencial.<br>
+                d) Apenas atendimento domiciliar.<br>
+                e) Apenas medicamentos gratuitos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Acompanhante) – O direito ao acompanhante, previsto no Art. 16, inclui a garantia de:</p>
+            <div class="alternativas">
+                a) Alimentação e local para descanso.<br>
+                b) Apenas a permanência na unidade.<br>
+                c) Apenas a visita diária.<br>
+                d) Apenas a comunicação com a equipe.<br>
+                e) Apenas o acompanhamento médico.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Art. 17) – A distribuição gratuita de medicamentos, prevista no Art. 17, aplica-se especialmente a:</p>
+            <div class="alternativas">
+                a) Medicamentos de uso contínuo, quando prescritos.<br>
+                b) Medicamentos para doenças agudas.<br>
+                c) Medicamentos para tratamento de câncer.<br>
+                d) Medicamentos para doenças raras.<br>
+                e) Medicamentos de alto custo.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Deveres) – São deveres da família para com a pessoa idosa, segundo o Estatuto:</p>
+            <div class="alternativas">
+                a) Garantir sua alimentação, saúde e bem-estar.<br>
+                b) Apenas garantir sua moradia.<br>
+                c) Apenas garantir sua saúde.<br>
+                d) Apenas garantir sua alimentação.<br>
+                e) Apenas garantir seu lazer.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Formação de RH) – O Art. 19 prevê a formação de recursos humanos para o atendimento à pessoa idosa, com ênfase na:</p>
+            <div class="alternativas">
+                a) Humanização e qualificação do cuidado.<br>
+                b) Especialização em geriatria.<br>
+                c) Apenas em enfermagem.<br>
+                d) Apenas em medicina.<br>
+                e) Apenas em assistência social.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Consolidação) – Analise as afirmativas:</p>
+            <p>(   ) O Estatuto da Pessoa Idosa garante à pessoa idosa o direito à vida, à saúde e à alimentação.<br>
+            (   ) O Art. 16 garante o direito a acompanhante durante a internação.<br>
+            (   ) O Art. 17 assegura a distribuição gratuita de todos os medicamentos.<br>
+            (   ) O Art. 19 trata da formação de recursos humanos para o atendimento ao idoso.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Prioridade) – A prioridade absoluta da pessoa idosa, prevista no Art. 3º, se aplica a:</p>
+            <div class="alternativas">
+                a) Apenas serviços públicos.<br>
+                b) Apenas serviços de saúde.<br>
+                c) Todos os serviços públicos e privados.<br>
+                d) Apenas serviços de transporte.<br>
+                e) Apenas serviços de assistência social.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (SUS) – O Art. 15 estabelece que a atenção integral à saúde da pessoa idosa deve ser garantida por intermédio do:</p>
+            <div class="alternativas">
+                a) SUS.<br>
+                b) Ministério da Saúde.<br>
+                c) Secretaria de Estado da Saúde.<br>
+                d) Conselho Nacional de Saúde.<br>
+                e) Agência Nacional de Saúde Suplementar.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (Deveres) – O dever de assegurar à pessoa idosa a efetivação de seus direitos é da:</p>
+            <div class="alternativas">
+                a) Família, sociedade e Estado.<br>
+                b) Apenas da família.<br>
+                c) Apenas do Estado.<br>
+                d) Apenas da sociedade.<br>
+                e) Apenas dos Conselhos de Saúde.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Final) – Analise as afirmativas:</p>
+            <p>(   ) O Estatuto da Pessoa Idosa garante direitos a pessoas com 60 anos ou mais.<br>
+            (   ) O Art. 16 garante o direito a acompanhante durante a internação.<br>
+            (   ) O Art. 17 assegura a distribuição gratuita de medicamentos de uso contínuo.<br>
+            (   ) O Art. 19 prevê a formação de recursos humanos para o atendimento ao idoso.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – V – V<br>b) V – V – V – F<br>c) V – F – V – F<br>d) F – V – V – V<br>e) V – V – F – F
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-C</b> | <b>2-A</b> | <b>3-B</b> | <b>4-A</b> | <b>5-B</b> | <b>6-B</b> | <b>7-A</b> | <b>8-B</b> | <b>9-A</b> | <b>10-A</b></p>
+            <p><b>11-A</b> | <b>12-A</b> | <b>13-A</b> | <b>14-A</b> | <b>15-A</b> | <b>16-B</b> | <b>17-A</b> | <b>18-A</b> | <b>19-A</b> | <b>20-A</b></p>
+            <p><b>21-A</b> | <b>22-C</b> | <b>23-A</b> | <b>24-A</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,V,V,F); Q15 (V,V,V,F); Q21 (V,V,F,V); Q25 (V,V,V,V).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

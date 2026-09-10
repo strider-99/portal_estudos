@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Legislação e Normas Administrativas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a3c6e;
+            text-align: center;
+            border-bottom: 3px solid #1a3c6e;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a3c6e;
+            background-color: #e6f0fa;
+            padding: 10px 15px;
+            border-left: 6px solid #1a3c6e;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #2a4c7e;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d9e3f0;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .exemplo {
+            background-color: #eafaf1;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #1a3c6e;
+        }
+        .atencao {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .atencao b {
+            color: #922b21;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5f6fc;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #1a3c6e;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a3c6e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #2a5a9e;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>⚖️ LEGISLAÇÃO E NORMAS ADMINISTRATIVAS</h1>
+    <p style="text-align:center; font-size:18px; color:#1a3c6e;"><b>Aplicação de leis, interpretação de normas e procedimentos administrativos</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Legislação e Normas Administrativas</b> são o conjunto de regras que disciplinam a atuação da Administração Pública, garantindo que os agentes públicos ajam dentro da legalidade, da moralidade e da eficiência.</p>
+        <p>Este módulo aborda: <b>aplicação de leis e regulamentos</b>, <b>interpretação básica de normas</b> e <b>procedimentos administrativos</b>, fundamentais para o Agente Administrativo.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender a aplicação das leis e normas na Administração Pública, dominar a interpretação básica e os procedimentos administrativos, com 35 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Hierarquia das Leis e Normas – pág. 2</li>
+            <li><b>Módulo II:</b> Aplicação de Leis e Regulamentos – pág. 3</li>
+            <li><b>Módulo III:</b> Interpretação de Normas – pág. 4</li>
+            <li><b>Módulo IV:</b> Procedimentos Administrativos – pág. 5</li>
+            <li><b>Módul V:</b> Consolidação e Dicas Finais – pág. 6</li>
+            <li><b>Questões:</b> 35 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Hierarquia das Leis e Normas                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – HIERARQUIA DAS LEIS E NORMAS</h2>
+
+        <h3>2.1. Pirâmide Normativa (Kelsen)</h3>
+        <p>No ordenamento jurídico brasileiro, as normas se organizam em uma hierarquia, onde a norma superior fundamenta a inferior. A base é a <b>Constituição Federal</b> (norma suprema).</p>
+        <ul>
+            <li><b>1º Nível (Supremo):</b> Constituição Federal e Emendas Constitucionais.</li>
+            <li><b>2º Nível (Infraconstitucional):</b> Leis Complementares, Leis Ordinárias, Medidas Provisórias, Leis Delegadas.</li>
+            <li><b>3º Nível (Regulamentar):</b> Decretos, Portarias, Instruções Normativas, Resoluções.</li>
+            <li><b>4º Nível (Individual):</b> Atos administrativos concretos (contratos, licenças, etc.).</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> A Constituição Federal estabelece o direito à saúde (Art. 196). A Lei 8.080/90 (lei ordinária) regulamenta esse direito, criando o SUS. O Ministério da Saúde edita portarias (normas infralegais) para detalhar a execução do SUS. Um servidor público, ao aplicar a portaria, está cumprindo a lei e, consequentemente, a Constituição.</p>
+        </div>
+
+        <h3>2.2. Tipos de Normas</h3>
+        <ul>
+            <li><b>Leis Complementares:</b> exigem quórum qualificado para aprovação (maioria absoluta). Ex: Lei de Responsabilidade Fiscal.</li>
+            <li><b>Leis Ordinárias:</b> exigem quórum simples (maioria dos presentes). Ex: Lei 8.666/93 (Licitações).</li>
+            <li><b>Medidas Provisórias:</b> têm força de lei, editadas pelo Presidente, com prazo de 60 dias (prorrogável).</li>
+            <li><b>Decretos:</b> atos do Executivo para regulamentar leis ou organizar a administração.</li>
+            <li><b>Portarias:</b> atos de Ministros ou Secretários para detalhar normas internas.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> A hierarquia das normas é a base para entender a aplicação correta das leis na administração pública.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Aplicação de Leis e Regulamentos                   -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – APLICAÇÃO DE LEIS E REGULAMENTOS</h2>
+
+        <h3>3.1. Princípio da Legalidade</h3>
+        <p>O administrador público só pode fazer o que a lei permite. É o princípio básico da Administração Pública, previsto no Art. 37 da CF/88.</p>
+
+        <h3>3.2. Aplicação Direta e Indireta</h3>
+        <ul>
+            <li><b>Aplicação Direta:</b> a lei é aplicada imediatamente, sem necessidade de regulamentação.</li>
+            <li><b>Aplicação Indireta:</b> a lei depende de regulamentação (ex: decreto) para ser aplicada.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Uma lei que estabelece um novo benefício para servidores públicos pode ter aplicação direta (se já estiver detalhada) ou indireta (se depender de um decreto do Chefe do Executivo para regulamentar os critérios de concessão). O servidor deve aguardar a regulamentação para aplicar o benefício corretamente.</p>
+        </div>
+
+        <h3>3.3. Vigência e Eficácia das Leis</h3>
+        <ul>
+            <li><b>Vigência:</b> a lei entra em vigor na data prevista (publicação no Diário Oficial).</li>
+            <li><b>Eficácia:</b> a lei produz efeitos após sua vigência (podendo ser imediata ou futura).</li>
+        </ul>
+
+        <h3>3.4. Revogação das Leis</h3>
+        <ul>
+            <li><b>Revogação Expressa:</b> a nova lei declara expressamente a revogação da anterior.</li>
+            <li><b>Revogação Tácita:</b> a nova lei é incompatível com a anterior, tornando-a inaplicável.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Interpretação de Normas                           -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – INTERPRETAÇÃO DE NORMAS</h2>
+
+        <h3>4.1. O que é Interpretação?</h3>
+        <p>Interpretar uma norma é descobrir seu sentido e alcance, aplicando-a ao caso concreto. É uma atividade essencial para o agente administrativo.</p>
+
+        <h3>4.2. Métodos de Interpretação</h3>
+        <ul>
+            <li><b>Gramatical (literal):</b> analisa as palavras da lei.</li>
+            <li><b>Lógica (sistemática):</b> analisa a lei no contexto do sistema jurídico.</li>
+            <li><b>Histórica:</b> analisa a origem e a evolução da norma.</li>
+            <li><b>Teleológica:</b> busca a finalidade social da norma.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Uma lei que estabelece "prazo de 5 dias para recurso". O servidor deve interpretar se são dias úteis ou corridos. A interpretação teleológica busca a finalidade da lei (garantir o direito de recurso), e a interpretação gramatical analisa se a lei especifica "dias úteis" (se não, são dias corridos).</p>
+        </div>
+
+        <h3>4.3. Interpretação Restritiva e Extensiva</h3>
+        <ul>
+            <li><b>Restritiva:</b> a norma é interpretada em sentido estrito (ex: normas excepcionais).</li>
+            <li><b>Extensiva:</b> a norma é interpretada em sentido amplo (ex: normas que garantem direitos).</li>
+        </ul>
+
+        <h3>4.4. Lacunas na Lei e a Analogia</h3>
+        <ul>
+            <li><b>Lacuna:</b> ausência de norma para um caso concreto.</li>
+            <li><b>Analogia:</b> aplica-se uma norma semelhante para resolver o caso (desde que compatível).</li>
+        </ul>
+
+        <div class="atencao">
+            <b>⚡ Atenção:</b> A analogia não pode ser usada para criar exceções ou aplicar normas penais (princípio da legalidade estrita).
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Procedimentos Administrativos                      -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – PROCEDIMENTOS ADMINISTRATIVOS</h2>
+
+        <h3>5.1. O que é um Procedimento Administrativo?</h3>
+        <p>É a sequência de atos praticados pela Administração Pública para tomar uma decisão ou executar uma atividade. Garante a transparência, o contraditório e a ampla defesa.</p>
+
+        <h3>5.2. Fases do Procedimento Administrativo</h3>
+        <ul>
+            <li><b>Instauração:</b> início do procedimento (ofício, requerimento, denúncia).</li>
+            <li><b>Instrução:</b> coleta de provas, documentos e pareceres.</li>
+            <li><b>Decisão:</b> ato final da autoridade competente.</li>
+            <li><b>Recurso:</b> possibilidade de revisão da decisão.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Um servidor público precisa licenciar um veículo oficial que foi perdido. O procedimento administrativo inicia com a solicitação do setor. A instrução envolve juntar documentos (nota fiscal, boletim de ocorrência). A decisão é a autorização para baixa do bem. O servidor pode recorrer se a decisão for desfavorável.</p>
+        </div>
+
+        <h3>5.3. Princípios do Procedimento Administrativo</h3>
+        <ul>
+            <li><b>Contraditório e Ampla Defesa:</b> o interessado pode se manifestar e apresentar provas.</li>
+            <li><b>Publicidade:</b> os atos são públicos (exceto sigilos).</li>
+            <li><b>Motivação:</b> todas as decisões devem ser fundamentadas.</li>
+            <li><b>Eficiência:</b> o procedimento deve ser ágil e racional.</li>
+        </ul>
+
+        <h3>5.4. Lei 9.784/99 – Lei do Processo Administrativo</h3>
+        <ul>
+            <li>Estabelece normas básicas para o processo administrativo na Administração Pública Federal.</li>
+            <li>Garante direitos aos administrados (contraditório, ampla defesa, motivação).</li>
+            <li>Define prazos e formas para os atos administrativos.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> A Lei 9.784/99 é uma das mais cobradas em concursos para cargos administrativos. Memorize seus princípios básicos.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Consolidação e Dicas Finais                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – CONSOLIDAÇÃO E DICAS FINAIS</h2>
+
+        <h3>6.1. Resumo dos Tópicos</h3>
+        <ul>
+            <li><b>Hierarquia:</b> CF > Leis > Decretos > Portarias.</li>
+            <li><b>Aplicação:</b> legalidade, vigência, eficácia, revogação.</li>
+            <li><b>Interpretação:</b> gramatical, lógica, histórica, teleológica.</li>
+            <li><b>Procedimentos:</b> instauração, instrução, decisão, recurso.</li>
+        </ul>
+
+        <h3>6.2. Dicas para Concursos</h3>
+        <ul>
+            <li>Decore os níveis hierárquicos das normas (CF, leis, decretos).</li>
+            <li>Entenda a diferença entre vigência e eficácia da lei.</li>
+            <li>Memorize os métodos de interpretação (gramatical, lógica, histórica, teleológica).</li>
+            <li>Estude a Lei 9.784/99 – é um dos principais textos legais para o Agente Administrativo.</li>
+            <li>Lembre-se: o contraditório e a ampla defesa são garantidos em qualquer procedimento administrativo que possa resultar em penalidade.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica Final:</b> A aplicação correta da legislação e das normas é a base da legalidade e da eficiência na Administração Pública.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 18                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 18)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> – Na pirâmide normativa, a norma suprema é:</p>
+            <div class="alternativas">
+                a) A Constituição Federal<br>
+                b) A Lei Complementar<br>
+                c) A Lei Ordinária<br>
+                d) O Decreto<br>
+                e) A Portaria
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> – As leis complementares exigem que tipo de quórum para aprovação?</p>
+            <div class="alternativas">
+                a) Maioria simples<br>
+                b) Maioria absoluta<br>
+                c) Maioria qualificada<br>
+                d) Unanimidade<br>
+                e) Não há quórum específico
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> – O princípio da legalidade na Administração Pública significa que:</p>
+            <div class="alternativas">
+                a) O administrador pode fazer tudo o que a lei não proíbe<br>
+                b) O administrador só pode fazer o que a lei autoriza<br>
+                c) O administrador tem liberdade total<br>
+                d) O administrador não precisa de lei para agir<br>
+                e) O administrador pode agir discricionariamente sempre
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> – A revogação tácita de uma lei ocorre quando:</p>
+            <div class="alternativas">
+                a) A nova lei declara expressamente a revogação da anterior<br>
+                b) A nova lei é incompatível com a anterior, tornando-a inaplicável<br>
+                c) A lei é declarada inconstitucional<br>
+                d) A lei é publicada no Diário Oficial<br>
+                e) A lei perde a vigência
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> – O método de interpretação que busca a finalidade social da norma é o:</p>
+            <div class="alternativas">
+                a) Gramatical<br>
+                b) Lógico<br>
+                c) Histórico<br>
+                d) Teleológico<br>
+                e) Literal
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> – A Lei 9.784/99 trata de:</p>
+            <div class="alternativas">
+                a) Licitações<br>
+                b) Processo administrativo na Administração Pública Federal<br>
+                c) Contratos administrativos<br>
+                d) Servidores públicos<br>
+                e) Improbidade administrativa
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> – No procedimento administrativo, a fase de coleta de provas e documentos é chamada de:</p>
+            <div class="alternativas">
+                a) Instauração<br>
+                b) Instrução<br>
+                c) Decisão<br>
+                d) Recurso<br>
+                e) Conclusão
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> – A interpretação gramatical (literal) analisa a norma sob o aspecto:</p>
+            <div class="alternativas">
+                a) Histórico<br>
+                b) Social<br>
+                c) Das palavras da lei<br>
+                d) Do contexto jurídico<br>
+                e) Da finalidade
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> – A analogia na aplicação das normas consiste em:</p>
+            <div class="alternativas">
+                a) Aplicar uma norma específica para um caso concreto<br>
+                b) Aplicar uma norma semelhante para preencher uma lacuna<br>
+                c) Revogar a norma anterior<br>
+                d) Interpretar a norma de forma restritiva<br>
+                e) Declarar a norma inconstitucional
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> – As medidas provisórias têm prazo de vigência de:</p>
+            <div class="alternativas">
+                a) 30 dias<br>
+                b) 60 dias, prorrogáveis por mais 60<br>
+                c) 90 dias, prorrogáveis por mais 90<br>
+                d) 120 dias<br>
+                e) 180 dias
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> – No procedimento administrativo, o contraditório e a ampla defesa garantem que:</p>
+            <div class="alternativas">
+                a) O servidor pode decidir sem ouvir o interessado<br>
+                b) O interessado pode se manifestar e apresentar provas<br>
+                c) O procedimento é sigiloso<br>
+                d) As decisões são automáticas<br>
+                e) Não há necessidade de motivação
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> – Um decreto é um ato normativo editado pelo:</p>
+            <div class="alternativas">
+                a) Presidente da República, Governadores e Prefeitos<br>
+                b) Ministros de Estado<br>
+                c) Secretários Municipais<br>
+                d) Tribunais<br>
+                e) Congresso Nacional
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> – A interpretação restritiva é aplicada quando a norma:</p>
+            <div class="alternativas">
+                a) Garante direitos<br>
+                b) É excepcional ou de exceção<br>
+                c) É de interesse público<br>
+                d) É de eficácia plena<br>
+                e) É programática
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> – A Lei 9.784/99 estabelece que o processo administrativo deve garantir, entre outros, o princípio da:</p>
+            <div class="alternativas">
+                a) Centralização<br>
+                b) Motivação<br>
+                c) Burocracia<br>
+                d) Hierarquia<br>
+                e) Discricionariedade
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> – A eficácia de uma lei refere-se a:</p>
+            <div class="alternativas">
+                a) Sua entrada em vigor<br>
+                b) Sua produção de efeitos<br>
+                c) Sua publicação no Diário Oficial<br>
+                d) Sua revogação<br>
+                e) Sua interpretação
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> – A Portaria é um ato normativo que, na hierarquia, está abaixo do:</p>
+            <div class="alternativas">
+                a) Decreto<br>
+                b) Lei Ordinária<br>
+                c) Medida Provisória<br>
+                d) Lei Complementar<br>
+                e) Decreto e Lei
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> – A fase de recurso no procedimento administrativo tem como finalidade:</p>
+            <div class="alternativas">
+                a) Iniciar o processo<br>
+                b) Coletar provas<br>
+                c) Revisar a decisão<br>
+                d) Publicar o ato<br>
+                e) Motivar a decisão
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> – A interpretação sistemática analisa a norma em relação ao:</p>
+            <div class="alternativas">
+                a) Contexto histórico<br>
+                b) Sistema jurídico como um todo<br>
+                c) Texto literal<br>
+                d) Finalidade social<br>
+                e) Dicionário
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 19 a 35 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (19 a 35) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> – As leis ordinárias são aprovadas por:</p>
+            <div class="alternativas">
+                a) Maioria absoluta<br>
+                b) Maioria simples<br>
+                c) Maioria qualificada<br>
+                d) Unanimidade<br>
+                e) Dois terços
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> – A aplicação indireta de uma lei ocorre quando:</p>
+            <div class="alternativas">
+                a) A lei é autoaplicável<br>
+                b) A lei depende de regulamentação para ser aplicada<br>
+                c) A lei é aplicada imediatamente<br>
+                d) A lei é revogada<br>
+                e) A lei é interpretada
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> – A Lei 9.784/99 garante ao administrado o direito de:</p>
+            <div class="alternativas">
+                a) Não ser ouvido<br>
+                b) Contraditório e ampla defesa<br>
+                c) Decidir o processo<br>
+                d) Anular o ato administrativo<br>
+                e) Revogar a lei
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> – A analogia não pode ser usada em casos de:</p>
+            <div class="alternativas">
+                a) Direito administrativo<br>
+                b) Direito penal (para criar exceções)<br>
+                c) Direito civil<br>
+                d) Direito tributário<br>
+                e) Direito processual
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> – A vigência de uma lei começa com sua:</p>
+            <div class="alternativas">
+                a) Publicação no Diário Oficial<br>
+                b) Sanção pelo Chefe do Executivo<br>
+                c) Aprovação pelo Legislativo<br>
+                d) Interpretação pelo Judiciário<br>
+                e) Regulamentação por decreto
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> – O procedimento administrativo deve ser motivado, ou seja:</p>
+            <div class="alternativas">
+                a) Todas as decisões devem ser fundamentadas<br>
+                b) Apenas as decisões finais devem ser fundamentadas<br>
+                c) O procedimento não precisa de motivação<br>
+                d) A motivação é opcional<br>
+                e) A motivação só é exigida em recursos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> – A hierarquia das normas no Brasil tem como fundamento o pensamento de:</p>
+            <div class="alternativas">
+                a) Hans Kelsen<br>
+                b) Max Weber<br>
+                c) Henri Fayol<br>
+                d) Peter Drucker<br>
+                e) John Locke
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 26</b> – A revogação expressa ocorre quando:</p>
+            <div class="alternativas">
+                a) A nova lei declara a revogação da anterior<br>
+                b) A lei é incompatível com a anterior<br>
+                c) A lei é declarada inconstitucional<br>
+                d) A lei perde a vigência<br>
+                e) A lei é publicada
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 27</b> – A interpretação teleológica busca:</p>
+            <div class="alternativas">
+                a) A origem da norma<br>
+                b) O sentido das palavras<br>
+                c) A finalidade social da norma<br>
+                d) O contexto jurídico<br>
+                e) A vontade do legislador
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 28</b> – A Lei 9.784/99 estabelece que o processo administrativo deve garantir a publicidade, exceto em casos de:</p>
+            <div class="alternativas">
+                a) Sigilo fiscal<br>
+                b) Segurança nacional<br>
+                c) Informações pessoais<br>
+                d) Todas as alternativas anteriores<br>
+                e) Nenhuma das alternativas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 29</b> – As normas infralegais (decretos, portarias) devem estar em conformidade com:</p>
+            <div class="alternativas">
+                a) Apenas a Constituição<br>
+                b) A Constituição e as leis<br>
+                c) Apenas as leis ordinárias<br>
+                d) Apenas as medidas provisórias<br>
+                e) Apenas os regulamentos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 30</b> – No procedimento administrativo, a instauração é a fase em que:</p>
+            <div class="alternativas">
+                a) O processo é iniciado<br>
+                b) As provas são coletadas<br>
+                c) A decisão é tomada<br>
+                d) O recurso é interposto<br>
+                e) O processo é arquivado
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 31</b> – As leis complementares tratam de matérias específicas e exigem:</p>
+            <div class="alternativas">
+                a) Maioria simples<br>
+                b) Maioria absoluta<br>
+                c) Maioria qualificada<br>
+                d) Unanimidade<br>
+                e) Não há quórum específico
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 32</b> – A Lei 9.784/99 é aplicável à Administração Pública:</p>
+            <div class="alternativas">
+                a) Federal apenas<br>
+                b) Federal, estadual e municipal<br>
+                c) Apenas municipal<br>
+                d) Apenas estadual<br>
+                e) Apenas à União
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 33</b> – O método de interpretação que analisa a origem e a evolução da norma é o:</p>
+            <div class="alternativas">
+                a) Gramatical<br>
+                b) Lógico<br>
+                c) Histórico<br>
+                d) Teleológico<br>
+                e) Literal
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 34</b> – O princípio da motivação exige que as decisões administrativas sejam:</p>
+            <div class="alternativas">
+                a) Sigilosas<br>
+                b) Fundamentadas<br>
+                c) Discricionárias<br>
+                d) Imediatas<br>
+                e) Provisórias
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 35</b> – A aplicação da lei no tempo segue o princípio:</p>
+            <div class="alternativas">
+                a) Da irretroatividade (salvo exceções)<br>
+                b) Da retroatividade plena<br>
+                c) Da eficácia imediata<br>
+                d) Da vigência perpétua<br>
+                e) Da revogação automática
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-A</b> | <b>2-B</b> | <b>3-B</b> | <b>4-B</b> | <b>5-D</b> | <b>6-B</b> | <b>7-B</b> | <b>8-C</b> | <b>9-B</b> | <b>10-B</b></p>
+            <p><b>11-B</b> | <b>12-A</b> | <b>13-B</b> | <b>14-B</b> | <b>15-B</b> | <b>16-B</b> | <b>17-C</b> | <b>18-B</b> | <b>19-B</b> | <b>20-B</b></p>
+            <p><b>21-B</b> | <b>22-B</b> | <b>23-A</b> | <b>24-A</b> | <b>25-A</b> | <b>26-A</b> | <b>27-C</b> | <b>28-D</b> | <b>29-B</b> | <b>30-A</b></p>
+            <p><b>31-B</b> | <b>32-A</b> | <b>33-C</b> | <b>34-B</b> | <b>35-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>💡 Observação:</b> Todas as respostas foram elaboradas com base na Lei 9.784/99 e na doutrina administrativa.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

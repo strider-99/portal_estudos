@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Arquivo: Tipos, Fases, Técnicas e Métodos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #efe8e4;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #4e342e;
+            text-align: center;
+            border-bottom: 3px solid #8d6e63;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #4e342e;
+            background-color: #efebe9;
+            padding: 10px 15px;
+            border-left: 6px solid #8d6e63;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #5d4037;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d7ccc8;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #faf6f3;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #8d6e63;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #4e342e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #6d4c41;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📁 ARQUIVO: TIPOS, FASES, TÉCNICAS E MÉTODOS</h1>
+    <p style="text-align:center; font-size:18px; color:#4e342e;"><b>Tipos de arquivo, fases do arquivamento, técnicas de ordenação e sistemas arquivísticos</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO À ARQUIVOLOGIA</h2>
+        <p>A <b>Arquivologia</b> (ou Arquivística) é a disciplina que estuda os arquivos, sua organização, funcionamento e finalidades. Um arquivo não é apenas um depósito de papéis velhos; ele é um <b>sistema de informação</b> essencial para a memória institucional, a transparência administrativa e a garantia de direitos.</p>
+        <p>Neste módulo, vamos explorar os <b>tipos de arquivo</b>, as <b>fases do arquivamento</b>, as principais <b>técnicas de ordenação</b> e os <b>sistemas e métodos</b> utilizados para organizar e recuperar informações com eficiência.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender a classificação dos arquivos, dominar o ciclo documental (fases), conhecer as técnicas de arquivamento e aplicar os principais sistemas (alfabético, numérico, geográfico, etc.) com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Conceitos Fundamentais e Princípios Arquivísticos – pág. 2</li>
+            <li><b>Módulo II:</b> Tipos de Arquivo – pág. 3</li>
+            <li><b>Módulo III:</b> Fases do Arquivamento – pág. 4</li>
+            <li><b>Módulo IV:</b> Técnicas de Ordenação – pág. 5</li>
+            <li><b>Módulo V:</b> Sistemas e Métodos de Arquivamento – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Conceitos e Princípios                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – CONCEITOS FUNDAMENTAIS E PRINCÍPIOS ARQUIVÍSTICOS</h2>
+        <h3>2.1. Conceitos Básicos</h3>
+        <ul>
+            <li><b>Arquivo:</b> conjunto de documentos produzidos e/ou acumulados por uma pessoa física ou jurídica, pública ou privada, no exercício de suas funções, independentemente do suporte (papel, digital, audiovisual).</li>
+            <li><b>Documento de arquivo:</b> suporte material que contém informação, produzido ou recebido por uma entidade em razão de suas atividades.</li>
+            <li><b>Arquivística:</b> ciência que estuda as operações relativas à gestão de documentos e à organização de arquivos.</li>
+        </ul>
+
+        <h3>2.2. Princípios Arquivísticos Fundamentais</h3>
+        <ul>
+            <li><b>Princípio da Proveniência (ou do Respeito aos Fundos):</b> os documentos de um mesmo arquivo não podem ser misturados aos de outros. Cada fundo (conjunto de documentos de uma mesma entidade) deve ser mantido separado, respeitando sua origem.</li>
+            <li><b>Princípio da Organicidade:</b> os documentos refletem a estrutura e as funções da entidade que os produziu. A organização deve respeitar as relações naturais entre os documentos.</li>
+            <li><b>Princípio da Indivisibilidade:</b> os documentos de um fundo devem ser preservados em seu conjunto, sem dispersão.</li>
+            <li><b>Princípio da Autenticidade:</b> o documento deve ser o que se declara ser (origem confiável, integridade preservada).</li>
+            <li><b>Princípio da Cumulatividade:</b> os documentos são acumulados naturalmente ao longo do tempo, como reflexo das atividades da entidade.</li>
+        </ul>
+        <div class="dica">
+            <b>📌 Atenção:</b> O princípio da proveniência é o mais importante da Arquivologia e é frequentemente cobrado em concursos.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Tipos de Arquivo                                   -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – TIPOS DE ARQUIVO</h2>
+        <h3>3.1. Classificação Quanto à Entidade Mantenedora (Natureza)</h3>
+        <ul>
+            <li><b>Arquivo Público:</b> pertence a entes da administração pública (federal, estadual, municipal). Ex.: Arquivo Nacional, Arquivo Público do Estado.</li>
+            <li><b>Arquivo Privado:</b> pertence a pessoas físicas ou jurídicas de direito privado. Ex.: arquivos de empresas, famílias, associações.</li>
+        </ul>
+
+        <h3>3.2. Classificação Quanto à Idade (Teoria das Três Idades)</h3>
+        <table>
+            <tr><th>Fase</th><th>Característica</th><th>Uso</th><th>Arquivo Correspondente</th></tr>
+            <tr><td><b>1ª Idade (Corrente)</b></td><td>Documentos em uso frequente</td><td>Consulta diária</td><td>Arquivo Corrente (ou de gestão)</td></tr>
+            <tr><td><b>2ª Idade (Intermediária)</b></td><td>Documentos com uso menos frequente, mas que ainda precisam ser guardados</td><td>Consulta eventual, aguardando prescrição ou destinação</td><td>Arquivo Intermediário</td></tr>
+            <tr><td><b>3ª Idade (Permanente)</b></td><td>Documentos de valor histórico, probatório ou informativo</td><td>Preservação indefinida</td><td>Arquivo Permanente (ou histórico)</td></tr>
+        </table>
+
+        <h3>3.3. Classificação Quanto à Espécie ou Suporte</h3>
+        <ul>
+            <li><b>Arquivo Especial:</b> documentos em suportes especiais (cartográfico, filmográfico, fonográfico, iconográfico, micrográfico, etc.).</li>
+            <li><b>Arquivo Específico:</b> documentos textuais (os mais comuns, em papel ou digital).</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Fases do Arquivamento                              -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – FASES DO ARQUIVAMENTO</h2>
+        <p>O arquivamento é o processo de organização dos documentos desde sua entrada até sua destinação final. As fases principais são:</p>
+
+        <h3>4.1. Fases Detalhadas</h3>
+        <ol>
+            <li><b>Recepção / Entrada:</b> o documento chega ao setor de arquivo, geralmente via protocolo ou expedição.</li>
+            <li><b>Classificação:</b> atribuição de um código ou assunto com base no plano de classificação da instituição.</li>
+            <li><b>Ordenação:</b> organização dos documentos dentro de cada classe, seguindo uma ordem predefinida (alfabética, numérica, etc.).</li>
+            <li><b>Acondicionamento:</b> preparação do documento para guarda (pastas, caixas, encadernação), protegendo-o contra danos.</li>
+            <li><b>Arquivamento / Guarda:</b> colocação física do documento no local adequado (arquivo corrente, intermediário ou permanente).</li>
+            <li><b>Consulta / Empréstimo:</b> disponibilização do documento para uso, com controle de saída e devolução.</li>
+            <li><b>Destinação:</b> decisão final sobre o documento:
+                <ul>
+                    <li><b>Eliminação:</b> descarte autorizado (mediante tabela de temporalidade).</li>
+                    <li><b>Recolhimento:</b> transferência para o arquivo permanente (quando tem valor histórico).</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>4.2. Tabela de Temporalidade e Destinação (TTDD)</h3>
+        <p>A TTDD é o instrumento que define os prazos de guarda e a destinação final dos documentos. No serviço público, é elaborada em conformidade com as normas do CONARQ (Conselho Nacional de Arquivos).</p>
+        <ul>
+            <li><b>Prazo de guarda corrente:</b> tempo em que o documento permanece no arquivo corrente.</li>
+            <li><b>Prazo de guarda intermediária:</b> tempo em que o documento permanece no arquivo intermediário.</li>
+            <li><b>Destinação:</b> eliminação ou recolhimento para o arquivo permanente.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Técnicas de Ordenação                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – TÉCNICAS DE ORDENAÇÃO</h2>
+        <p>A <b>ordenação</b> é a sequência lógica em que os documentos são dispostos dentro de cada classe. As principais técnicas são:</p>
+
+        <h3>5.1. Ordenação Alfabética</h3>
+        <ul>
+            <li><b>Regra geral:</b> ordenar pelo nome da pessoa ou entidade, seguindo a ordem do alfabeto (A a Z).</li>
+            <li><b>Nomes de pessoas:</b> considerar o último sobrenome como referência. Ex.: "João Silva" deve ser ordenado por "Silva, João".</li>
+            <li><b>Nomes compostos:</b> usar a última parte. Ex.: "Ana Maria de Souza" → "Souza, Ana Maria de".</li>
+            <li><b>Preposições e artigos:</b> não são considerados para ordenação. Ex.: "da Silva" → "Silva".</li>
+        </ul>
+
+        <h3>5.2. Ordenação Numérica</h3>
+        <ul>
+            <li>Ordenação por números sequenciais (1, 2, 3...).</li>
+            <li>Pode ser combinada com outros critérios (cronológico, geográfico).</li>
+        </ul>
+
+        <h3>5.3. Ordenação Geográfica</h3>
+        <ul>
+            <li>Ordenação por local (país, estado, cidade, bairro).</li>
+            <li>Útil para arquivos de clientes, fornecedores ou processos por regional.</li>
+        </ul>
+
+        <h3>5.4. Ordenação Cronológica</h3>
+        <ul>
+            <li>Ordenação por data (do mais antigo para o mais recente, ou vice-versa).</li>
+            <li>Comum em documentos como contratos, certidões, publicações.</li>
+        </ul>
+
+        <h3>5.5. Ordenação Alfanumérica</h3>
+        <ul>
+            <li>Combina letras e números (ex.: A1, A2, B1, B2...).</li>
+            <li>Usada em classificações complexas.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Sistemas e Métodos de Arquivamento                 -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – SISTEMAS E MÉTODOS DE ARQUIVAMENTO</h2>
+
+        <h3>6.1. Classificação dos Sistemas</h3>
+        <p>Os sistemas de arquivamento podem ser classificados em <b>diretos</b> (consulta direta, sem necessidade de índice) e <b>indiretos</b> (necessitam de índice para localização).</p>
+
+        <h3>6.2. Principais Métodos</h3>
+        <ul>
+            <li><b>Método Alfabético (Direto):</b> ordenação estritamente alfabética pelo nome do destinatário/remetente. É o mais simples e mais utilizado.</li>
+            <li><b>Método Numérico (Indireto):</b> atribuição de números sequenciais. Requer um índice alfabético para localizar o número correspondente. Subtipos:
+                <ul>
+                    <li><b>Numérico Simples:</b> 1, 2, 3... em sequência.</li>
+                    <li><b>Numérico Cronológico:</b> a numeração segue a ordem de entrada (protocolo).</li>
+                    <li><b>Dígito-Terminal:</b> divide o número em grupos (ex.: 12345 → 345/12). Útil para grandes volumes.</li>
+                </ul>
+            </li>
+            <li><b>Método Geográfico:</b> classificação por local (país/estado/cidade), com subordinação alfabética ou numérica.</li>
+            <li><b>Método Alfabético-Numérico:</b> combina letras e números. Ex.: código de assunto (ADM-001).</li>
+            <li><b>Método Ideográfico (ou por Assunto):</b> os documentos são agrupados por temas. Exige um dicionário ou índice de assuntos.</li>
+            <li><b>Método Unitermo (ou Coordenado):</b> utiliza palavras-chave para indexar documentos, permitindo múltiplas entradas.</li>
+            <li><b>Método Mnemônico:</b> utiliza códigos fáceis de lembrar, como siglas.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> Em concursos, o <b>método alfabético</b> (direto) e o <b>método numérico</b> (indireto) são os mais cobrados, especialmente o <b>dígito-terminal</b> para grandes arquivos.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Princípios) – O princípio arquivístico que determina que os documentos de um mesmo arquivo não podem ser misturados aos de outros é o da:</p>
+            <div class="alternativas">
+                a) Organicidade.<br>
+                b) Proveniência.<br>
+                c) Indivisibilidade.<br>
+                d) Autenticidade.<br>
+                e) Cumulatividade.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Tipos) – O arquivo que guarda documentos com uso menos frequente, aguardando prescrição ou destinação final, é o:</p>
+            <div class="alternativas">
+                a) Arquivo corrente.<br>
+                b) Arquivo intermediário.<br>
+                c) Arquivo permanente.<br>
+                d) Arquivo especial.<br>
+                e) Arquivo privado.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Fases) – A fase do arquivamento que consiste em atribuir um código ou assunto com base no plano de classificação é a:</p>
+            <div class="alternativas">
+                a) Recepção.<br>
+                b) Ordenação.<br>
+                c) Classificação.<br>
+                d) Acondicionamento.<br>
+                e) Destinação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Métodos) – O método de arquivamento que utiliza a ordem alfabética diretamente (sem necessidade de índice) é o:</p>
+            <div class="alternativas">
+                a) Numérico.<br>
+                b) Dígito-terminal.<br>
+                c) Geográfico.<br>
+                d) Alfabético.<br>
+                e) Unitermo.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Ordenação) – Segundo as regras de ordenação alfabética, o nome "Ana Paula de Oliveira" deve ser ordenado por:</p>
+            <div class="alternativas">
+                a) Ana Paula.<br>
+                b) Oliveira, Ana Paula de.<br>
+                c) Paula, Ana de Oliveira.<br>
+                d) De Oliveira, Ana Paula.<br>
+                e) Ana, Paula de Oliveira.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Sistemas) – O sistema de arquivamento que utiliza um índice para localizar o documento, como o numérico, é classificado como:</p>
+            <div class="alternativas">
+                a) Direto.<br>
+                b) Indireto.<br>
+                c) Aberto.<br>
+                d) Fechado.<br>
+                e) Variável.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Tipos) – Os documentos cartográficos, filmográficos e sonoros são classificados em arquivos do tipo:</p>
+            <div class="alternativas">
+                a) Textual.<br>
+                b) Especial.<br>
+                c) Corrente.<br>
+                d) Intermediário.<br>
+                e) Privado.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Fases) – A transferência de um documento do arquivo intermediário para o arquivo permanente é chamada de:</p>
+            <div class="alternativas">
+                a) Eliminação.<br>
+                b) Recolhimento.<br>
+                c) Empréstimo.<br>
+                d) Classificação.<br>
+                e) Ordenação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Métodos) – O método dígito-terminal é uma variação do sistema de arquivamento:</p>
+            <div class="alternativas">
+                a) Alfabético.<br>
+                b) Geográfico.<br>
+                c) Numérico.<br>
+                d) Ideográfico.<br>
+                e) Unitermo.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (TTDD) – A Tabela de Temporalidade e Destinação de Documentos define, entre outros itens:</p>
+            <div class="alternativas">
+                a) O valor monetário dos documentos.<br>
+                b) Os prazos de guarda e a destinação final (eliminação ou recolhimento).<br>
+                c) O tipo de suporte a ser utilizado.<br>
+                d) A cor das pastas de arquivo.<br>
+                e) O nome dos funcionários do arquivo.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Princípios) – O princípio que estabelece que os documentos refletem a estrutura e as funções da entidade que os produziu é o da:</p>
+            <div class="alternativas">
+                a) Proveniência.<br>
+                b) Organicidade.<br>
+                c) Indivisibilidade.<br>
+                d) Autenticidade.<br>
+                e) Cumulatividade.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Ordenação) – A ordenação por país, estado, cidade e bairro é característica do método:</p>
+            <div class="alternativas">
+                a) Alfabético.<br>
+                b) Numérico.<br>
+                c) Geográfico.<br>
+                d) Cronológico.<br>
+                e) Mnemônico.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Fases) – A etapa de preparação do documento para guarda (pastas, caixas, encadernação) é a:</p>
+            <div class="alternativas">
+                a) Classificação.<br>
+                b) Ordenação.<br>
+                c) Acondicionamento.<br>
+                d) Arquivamento.<br>
+                e) Destinação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Princípios e Tipos) – Analise as afirmativas:</p>
+            <p>(   ) O princípio da proveniência determina que cada arquivo deve ser mantido separado.<br>
+            (   ) O arquivo corrente guarda documentos de valor histórico permanente.<br>
+            (   ) O arquivo intermediário recebe documentos com uso menos frequente.<br>
+            (   ) A organicidade refere-se à capacidade de o documento ser autêntico.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – F<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Métodos e Sistemas) – Analise as afirmativas:</p>
+            <p>(   ) O método numérico é um sistema direto.<br>
+            (   ) O método geográfico utiliza a ordenação por localidades.<br>
+            (   ) O método dígito-terminal divide o número em grupos para facilitar a busca.<br>
+            (   ) O método unitermo utiliza palavras-chave para indexação.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – V – V<br>b) V – F – F – V<br>c) F – V – F – V<br>d) V – V – V – F<br>e) F – F – V – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (V/F – Fases do Arquivamento) – Analise as afirmativas:</p>
+            <p>(   ) A eliminação de documentos só pode ocorrer com base em tabela de temporalidade.<br>
+            (   ) A ordenação é a primeira fase do arquivamento.<br>
+            (   ) O recolhimento transfere documentos para o arquivo permanente.<br>
+            (   ) O acondicionamento protege o documento contra danos físicos.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Métodos) – O método de arquivamento que utiliza códigos fáceis de lembrar, como siglas, é o:</p>
+            <div class="alternativas">
+                a) Unitermo.<br>
+                b) Numérico.<br>
+                c) Mnemônico.<br>
+                d) Geográfico.<br>
+                e) Alfabético.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Arquivo) – O Arquivo Nacional e os arquivos estaduais são exemplos de arquivos:</p>
+            <div class="alternativas">
+                a) Privados.<br>
+                b) Públicos.<br>
+                c) Especiais.<br>
+                d) Intermediários.<br>
+                e) Correntes.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Ordenação) – Na ordenação alfabética de nomes compostos, a preposição "da" ou "de":</p>
+            <div class="alternativas">
+                a) Deve ser considerada como primeiro elemento.<br>
+                b) Não é considerada para fins de ordenação.<br>
+                c) É sempre colocada no final.<br>
+                d) É substituída por um número.<br>
+                e) Deve ser mantida inalterada.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (TTDD) – O instrumento que define os prazos de guarda e a destinação final dos documentos é a:</p>
+            <div class="alternativas">
+                a) Tabela de Temporalidade e Destinação (TTDD).<br>
+                b) Plano de Classificação.<br>
+                c) Código de Ética.<br>
+                d) Lei de Acesso à Informação.<br>
+                e) Portaria Ministerial.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Geral) – Analise as afirmativas:</p>
+            <p>(   ) O princípio da indivisibilidade determina que os documentos de um fundo devem ser mantidos juntos.<br>
+            (   ) O arquivo intermediário é também chamado de arquivo histórico.<br>
+            (   ) A classificação é a fase em que se atribui um código ao documento.<br>
+            (   ) O método alfabético é um sistema indireto.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – F<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Tipos) – Os arquivos que guardam documentos em suportes como filmes, fitas e fotografias são chamados de:</p>
+            <div class="alternativas">
+                a) Arquivos correntes.<br>
+                b) Arquivos intermediários.<br>
+                c) Arquivos especiais.<br>
+                d) Arquivos permanentes.<br>
+                e) Arquivos privados.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (Métodos) – O método que agrupa documentos por temas ou assuntos, exigindo um dicionário de indexação, é o:</p>
+            <div class="alternativas">
+                a) Alfabético.<br>
+                b) Numérico.<br>
+                c) Geográfico.<br>
+                d) Ideográfico.<br>
+                e) Mnemônico.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (Fases) – A saída temporária de um documento para consulta, com controle de devolução, ocorre na fase de:</p>
+            <div class="alternativas">
+                a) Classificação.<br>
+                b) Ordenação.<br>
+                c) Guarda.<br>
+                d) Consulta/Empréstimo.<br>
+                e) Destinação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Consolidação) – Analise as afirmativas sobre arquivo:</p>
+            <p>(   ) O princípio da proveniência é também conhecido como "respeito aos fundos".<br>
+            (   ) O arquivo corrente é utilizado para documentos de consulta diária.<br>
+            (   ) O método numérico é um sistema direto de arquivamento.<br>
+            (   ) A Tabela de Temporalidade determina o prazo de guarda e a destinação final.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-B</b> | <b>3-C</b> | <b>4-D</b> | <b>5-B</b> | <b>6-B</b> | <b>7-B</b> | <b>8-B</b> | <b>9-C</b> | <b>10-B</b></p>
+            <p><b>11-B</b> | <b>12-C</b> | <b>13-C</b> | <b>14-A</b> | <b>15-A</b> | <b>16-A</b> | <b>17-C</b> | <b>18-B</b> | <b>19-B</b> | <b>20-A</b></p>
+            <p><b>21-A</b> | <b>22-C</b> | <b>23-D</b> | <b>24-D</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,F,V,F); Q15 (F,V,V,V); Q16 (V,F,V,V); Q21 (V,F,V,F); Q25 (V,V,F,V).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

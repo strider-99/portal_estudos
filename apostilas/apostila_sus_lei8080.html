@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - SUS: Lei 8.080/90</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f7f0;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a7a5a;
+            text-align: center;
+            border-bottom: 3px solid #1a7a5a;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a7a5a;
+            background-color: #e6f2ed;
+            padding: 10px 15px;
+            border-left: 6px solid #1a7a5a;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #0d5a3e;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d4ece4;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .atencao {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .atencao b {
+            color: #922b21;
+        }
+        .exemplo {
+            background-color: #eafaf1;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #1a7a5a;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5fbf8;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #1a7a5a;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a7a5a;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #2a9a7a;
+            color: white;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+            color: white;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📜 LEI 8.080/90 – LEI ORGÂNICA DA SAÚDE</h1>
+    <p style="text-align:center; font-size:18px; color:#1a7a5a;"><b>Organização, gestão, competências e atribuições do SUS</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Lei nº 8.080, de 19 de setembro de 1990</b>, conhecida como <b>Lei Orgânica da Saúde</b>, é o marco legal que regulamenta o Sistema Único de Saúde (SUS), estabelecendo as condições para a promoção, proteção e recuperação da saúde, a organização e o funcionamento dos serviços correspondentes.</p>
+        <p>Esta lei é a base estrutural do SUS, definindo seus princípios, diretrizes, organização, competências das esferas de governo, financiamento, participação social e os direitos e deveres dos usuários.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender a estrutura, os princípios e as competências estabelecidas pela Lei 8.080/90, dominando seus principais artigos e aplicações, com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Contexto Histórico e Objetivos do SUS (Art. 5º) – pág. 2</li>
+            <li><b>Módulo II:</b> Princípios e Diretrizes (Art. 7º) – pág. 3</li>
+            <li><b>Módulo III:</b> Organização e Gestão do SUS (Arts. 9º a 15) – pág. 4</li>
+            <li><b>Módulo IV:</b> Competências das Esferas de Governo – pág. 5</li>
+            <li><b>Módulo V:</b> Principais Alterações e Atualizações – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Contexto e Objetivos                                -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – CONTEXTO HISTÓRICO E OBJETIVOS DO SUS</h2>
+        <h3>2.1. Contexto Histórico</h3>
+        <ul>
+            <li><b>1988:</b> Constituição Federal institui a saúde como direito de todos e dever do Estado (Art. 196).</li>
+            <li><b>1990:</b> Lei 8.080/90 regulamenta o SUS, definindo sua organização e funcionamento.</li>
+            <li><b>1990:</b> Lei 8.142/90 complementa a 8.080, estabelecendo a participação social e o financiamento.</li>
+        </ul>
+
+        <h3>2.2. Objetivos do SUS (Art. 5º da Lei 8.080/90)</h3>
+        <p>São objetivos do Sistema Único de Saúde:</p>
+        <ul>
+            <li><b>I –</b> A identificação e divulgação dos fatores condicionantes e determinantes da saúde;</li>
+            <li><b>II –</b> A formulação de política de saúde destinada a promover, nos campos econômico e social, a redução de riscos de doenças e de outros agravos;</li>
+            <li><b>III –</b> A assistência às pessoas por intermédio de ações de promoção, proteção e recuperação da saúde, com a realização integrada das ações assistenciais e das atividades preventivas.</li>
+        </ul>
+
+        <h3>2.3. Campo de Atuação do SUS (Art. 6º)</h3>
+        <p>A Lei 8.080/90 estabelece que o SUS atua em várias áreas, incluindo:</p>
+        <ul>
+            <li>Vigilância sanitária e epidemiológica;</li>
+            <li>Saúde do trabalhador;</li>
+            <li>Assistência terapêutica integral, inclusive farmacêutica;</li>
+            <li>Participação na formulação da política de saneamento básico;</li>
+            <li>Ordenação da formação de recursos humanos na área de saúde;</li>
+            <li>Controle de bens e serviços de saúde.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Princípios e Diretrizes                            -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – PRINCÍPIOS E DIRETRIZES DO SUS (ART. 7º)</h2>
+        <p>O Art. 7º da Lei 8.080/90 estabelece os princípios e diretrizes que orientam a organização e o funcionamento do SUS:</p>
+
+        <ul>
+            <li><b>I – Universalidade de acesso:</b> todos têm direito ao acesso aos serviços de saúde em todos os níveis de assistência.</li>
+            <li><b>II – Integralidade da assistência:</b> entendida como um conjunto articulado e contínuo de ações e serviços preventivos e curativos, individuais e coletivos.</li>
+            <li><b>III – Equidade:</b> redução das desigualdades regionais e sociais, garantindo a todos o mesmo tratamento.</li>
+            <li><b>IV – Descentralização político-administrativa:</b> com direção única em cada esfera de governo, ênfase na municipalização e regionalização.</li>
+            <li><b>V – Regionalização e hierarquização:</b> organização da rede de serviços em níveis de complexidade crescente, com referência e contrarreferência.</li>
+            <li><b>VI – Participação da comunidade:</b> controle social por meio dos Conselhos e Conferências de Saúde.</li>
+            <li><b>VII – Resolução dos serviços:</b> capacidade de resolver os problemas de saúde da população.</li>
+            <li><b>VIII – Capacidade de agir:</b> com resolutividade e qualidade.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>Dica para provas:</b> Os três princípios doutrinários do SUS são: <b>Universalidade, Integralidade e Equidade</b>. As diretrizes organizacionais incluem: <b>Descentralização, Regionalização, Hierarquização e Participação Social</b>.</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Organização e Gestão                               -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – ORGANIZAÇÃO E GESTÃO DO SUS (ARTS. 9º A 15)</h2>
+
+        <h3>4.1. Direção Única (Art. 9º)</h3>
+        <ul>
+            <li><b>Nível Federal:</b> Ministério da Saúde.</li>
+            <li><b>Nível Estadual:</b> Secretaria Estadual de Saúde.</li>
+            <li><b>Nível Municipal:</b> Secretaria Municipal de Saúde.</li>
+        </ul>
+
+        <h3>4.2. Atribuições Comuns (Art. 15)</h3>
+        <p>São atribuições comuns de todas as esferas de governo:</p>
+        <ul>
+            <li>Definir e executar políticas de saúde;</li>
+            <li>Promover a articulação com outros setores;</li>
+            <li>Realizar ações de vigilância sanitária e epidemiológica;</li>
+            <li>Participar da execução de ações de saneamento básico;</li>
+            <li>Ordenar a formação de recursos humanos;</li>
+            <li>Colaborar na proteção do meio ambiente.</li>
+        </ul>
+
+        <h3>4.3. Atribuições Específicas</h3>
+        <table>
+            <tr><th>Esfera</th><th>Atribuições Principais</th></tr>
+            <tr><td><b>União</b></td><td>Formulação da política nacional, coordenação, normatização, avaliação, financiamento, cooperação técnica.</td></tr>
+            <tr><td><b>Estados</b></td><td>Coordenação da política estadual, apoio técnico e financeiro aos municípios, gestão de serviços estaduais.</td></tr>
+            <tr><td><b>Municípios</b></td><td>Gestão local, planejamento, execução de ações, controle, avaliação, prestação de serviços.</td></tr>
+        </table>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Competências e Atualizações                        -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – COMPETÊNCIAS DAS ESFERAS DE GOVERNO</h2>
+
+        <h3>5.1. Competência da União (Art. 16)</h3>
+        <ul>
+            <li>Formulação e coordenação da Política Nacional de Saúde.</li>
+            <li>Normatização, fiscalização e controle das ações e serviços de saúde.</li>
+            <li>Financiamento do SUS (complementar aos estados e municípios).</li>
+            <li>Cooperação técnica e financeira aos estados, municípios e Distrito Federal.</li>
+            <li>Elaboração do planejamento estratégico nacional.</li>
+        </ul>
+
+        <h3>5.2. Competência dos Estados (Art. 17)</h3>
+        <ul>
+            <li>Coordenação da política estadual de saúde.</li>
+            <li>Apoio técnico e financeiro aos municípios.</li>
+            <li>Gestão de serviços estaduais (hospitais estaduais, laboratórios, etc.).</li>
+            <li>Promoção da integração entre os municípios na região de saúde.</li>
+        </ul>
+
+        <h3>5.3. Competência dos Municípios (Art. 18)</h3>
+        <ul>
+            <li>Planejamento, programação, execução, controle e avaliação das ações de saúde em seu território.</li>
+            <li>Gestão dos serviços próprios (unidades básicas, hospitais municipais, etc.).</li>
+            <li>Participação no financiamento do SUS.</li>
+            <li>Promoção da saúde e prevenção de doenças.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> A Lei 8.080/90 estabelece que o SUS é financiado com recursos do orçamento da seguridade social, da União, dos estados, do Distrito Federal e dos municípios, além de outras fontes.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Alterações e Atualizações                          -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – PRINCIPAIS ALTERAÇÕES E ATUALIZAÇÕES DA LEI 8.080/90</h2>
+
+        <h3>6.1. Alterações Relevantes</h3>
+        <ul>
+            <li><b>Lei 9.782/1999:</b> Criou a Agência Nacional de Vigilância Sanitária (ANVISA) e a Agência Nacional de Saúde Suplementar (ANS).</li>
+            <li><b>Lei 12.401/2011:</b> Definiu a incorporação de novas tecnologias no SUS, incluindo medicamentos e procedimentos.</li>
+            <li><b>Lei 13.097/2015:</b> Permitiu a participação de empresas e capitais estrangeiros na assistência à saúde, desde que por meio de doações ou financiamentos de organismos internacionais.</li>
+            <li><b>Lei 13.685/2018:</b> Incluiu o atendimento à saúde de mulheres vítimas de violência doméstica e familiar.</li>
+            <li><b>Lei 14.721/2023:</b> Alterou dispositivos sobre a organização do SUS, incluindo a criação de novas diretrizes para a gestão.</li>
+        </ul>
+
+        <h3>6.2. Atualizações Recentes</h3>
+        <ul>
+            <li><b>2021:</b> Inclusão de ações de telemedicina e telessaúde.</li>
+            <li><b>2023:</b> Fortalecimento das ações de vigilância em saúde e integração com o Sistema Único de Assistência Social (SUAS).</li>
+        </ul>
+
+        <div class="atencao">
+            <b>⚡ Atenção:</b> A Lei 13.097/2015 foi uma alteração polêmica, pois flexibilizou a participação do capital estrangeiro na saúde, que antes era vedada.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Conceito) – A Lei 8.080/90 é conhecida como:</p>
+            <div class="alternativas">
+                a) Lei Orgânica da Saúde.<br>
+                b) Lei de Diretrizes e Bases da Saúde.<br>
+                c) Código de Saúde.<br>
+                d) Estatuto da Saúde.<br>
+                e) Lei de Organização Sanitária.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Objetivos) – De acordo com o Art. 5º da Lei 8.080/90, são objetivos do SUS, EXCETO:</p>
+            <div class="alternativas">
+                a) Identificar e divulgar fatores determinantes da saúde.<br>
+                b) Formular política de saúde para redução de riscos.<br>
+                c) Promover a assistência integral à saúde.<br>
+                d) Centralizar todas as decisões no nível federal.<br>
+                e) Realizar ações de promoção, proteção e recuperação da saúde.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Princípios) – O princípio da <b>equidade</b>, no SUS, significa:</p>
+            <div class="alternativas">
+                a) Oferecer o mesmo tratamento a todos, sem distinção.<br>
+                b) Reduzir as desigualdades regionais e sociais.<br>
+                c) Garantir acesso universal aos serviços de saúde.<br>
+                d) Integrar ações preventivas e curativas.<br>
+                e) Descentralizar a gestão para os municípios.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Diretrizes) – Assinale a alternativa que NÃO corresponde a uma diretriz organizacional do SUS prevista no Art. 7º:</p>
+            <div class="alternativas">
+                a) Descentralização.<br>
+                b) Regionalização e hierarquização.<br>
+                c) Participação da comunidade.<br>
+                d) Centralização político-administrativa.<br>
+                e) Resolução dos serviços.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Organização) – A direção única do SUS em cada esfera de governo é exercida por:</p>
+            <div class="alternativas">
+                a) Ministério da Saúde, Secretarias Estaduais e Municipais de Saúde.<br>
+                b) Conselhos de Saúde.<br>
+                c) Conferências de Saúde.<br>
+                d) Agências Reguladoras.<br>
+                e) Fundações de Saúde.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Competências) – À União cabe, entre outras atribuições:</p>
+            <div class="alternativas">
+                a) Gestão de serviços estaduais de saúde.<br>
+                b) Planejamento municipal das ações de saúde.<br>
+                c) Formulação e coordenação da Política Nacional de Saúde.<br>
+                d) Execução de ações de vigilância sanitária no município.<br>
+                e) Participação no controle social do SUS.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Alterações) – A Lei 13.097/2015 alterou a Lei 8.080/90 para permitir:</p>
+            <div class="alternativas">
+                a) A criação do subsistema de saúde indígena.<br>
+                b) A participação de capitais estrangeiros na assistência à saúde.<br>
+                c) O atendimento a mulheres vítimas de violência.<br>
+                d) A incorporação de novas tecnologias.<br>
+                e) A criação da ANVISA.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Integralidade) – A integralidade, como princípio do SUS, significa que:</p>
+            <div class="alternativas">
+                a) A saúde é direito de todos e dever do Estado.<br>
+                b) A assistência à saúde deve ser descentralizada.<br>
+                c) As ações e serviços devem ser preventivos e curativos, em todos os níveis.<br>
+                d) Os usuários devem participar da gestão da saúde.<br>
+                e) O SUS deve ser regionalizado e hierarquizado.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Campo de Atuação) – A Lei 8.080/90 estabelece que o SUS atua em áreas como vigilância sanitária, saúde do trabalhador e:</p>
+            <div class="alternativas">
+                a) Controle de alimentos e medicamentos.<br>
+                b) Formulação da política de saneamento básico.<br>
+                c) Financiamento da previdência social.<br>
+                d) Gestão do sistema prisional.<br>
+                e) Controle de trânsito.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Descentralização) – A descentralização político-administrativa do SUS enfatiza a gestão municipal, com:</p>
+            <div class="alternativas">
+                a) Direção única em cada esfera de governo.<br>
+                b) Centralização das decisões no Ministério da Saúde.<br>
+                c) Eliminação da participação dos estados.<br>
+                d) Redução do financiamento municipal.<br>
+                e) Criação de hospitais privados.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Participação Social) – O controle social no SUS é exercido por meio de:</p>
+            <div class="alternativas">
+                a) Conselhos de Saúde e Conferências de Saúde.<br>
+                b) Secretarias Estaduais de Saúde.<br>
+                c) Ministério da Saúde.<br>
+                d) Agências Reguladoras.<br>
+                e) Tribunais de Contas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Financiamento) – O SUS é financiado com recursos do:</p>
+            <div class="alternativas">
+                a) Orçamento da seguridade social, da União, estados e municípios.<br>
+                b) Apenas do orçamento federal.<br>
+                c) Apenas do orçamento estadual.<br>
+                d) Apenas do orçamento municipal.<br>
+                e) Doações de organismos internacionais.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Atribuições Comuns) – São atribuições comuns de todas as esferas de governo, de acordo com o Art. 15 da Lei 8.080/90:</p>
+            <div class="alternativas">
+                a) Definir e executar políticas de saúde.<br>
+                b) Realizar ações de vigilância sanitária.<br>
+                c) Participar da execução de ações de saneamento básico.<br>
+                d) Todas as alternativas estão corretas.<br>
+                e) Nenhuma das alternativas está correta.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Princípios) – Analise as afirmativas:</p>
+            <p>(   ) A universalidade de acesso garante que todos tenham acesso aos serviços de saúde.<br>
+            (   ) A equidade significa oferecer o mesmo tratamento a todos.<br>
+            (   ) A integralidade abrange ações preventivas e curativas.<br>
+            (   ) A descentralização visa centralizar as decisões no Ministério da Saúde.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – F<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Competências) – Analise as afirmativas:</p>
+            <p>(   ) A União formula a Política Nacional de Saúde.<br>
+            (   ) Os estados coordenam a política estadual de saúde.<br>
+            (   ) Os municípios apenas executam ações, sem participação no planejamento.<br>
+            (   ) O SUS tem direção única em cada esfera de governo.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (V/F – Organização) – Analise as afirmativas:</p>
+            <p>(   ) O SUS é organizado por meio de uma rede regionalizada e hierarquizada.<br>
+            (   ) A participação da comunidade é uma diretriz do SUS.<br>
+            (   ) A Resolução dos serviços refere-se à capacidade de resolver os problemas de saúde.<br>
+            (   ) A Lei 8.080/90 não prevê a participação de capitais estrangeiros.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – V – F<br>b) F – V – F – V<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – F – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Alterações) – A Lei 13.685/2018 incluiu na Lei 8.080/90 o atendimento à saúde de:</p>
+            <div class="alternativas">
+                a) Pessoas com deficiência.<br>
+                b) Mulheres vítimas de violência doméstica e familiar.<br>
+                c) População LGBT.<br>
+                d) População negra.<br>
+                e) Pessoas idosas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Princípios) – O princípio da <b>universalidade</b> no SUS significa que:</p>
+            <div class="alternativas">
+                a) Todos têm direito ao acesso aos serviços de saúde em todos os níveis.<br>
+                b) A saúde é dever do Estado e direito da família.<br>
+                c) Os serviços de saúde devem ser oferecidos apenas para quem contribui.<br>
+                d) O acesso à saúde é restrito a urgências e emergências.<br>
+                e) A saúde é um direito condicionado à disponibilidade financeira.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Diretrizes) – A regionalização e hierarquização organizam a rede de serviços em níveis de complexidade, sendo a porta de entrada do SUS geralmente:</p>
+            <div class="alternativas">
+                a) Unidades de Pronto Atendimento (UPA).<br>
+                b) Atenção Primária à Saúde (APS).<br>
+                c) Hospitais terciários.<br>
+                d) Centros de Reabilitação.<br>
+                e) Serviços de urgência e emergência.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Competência) – A coordenação da política estadual de saúde é atribuição do(s):</p>
+            <div class="alternativas">
+                a) Ministério da Saúde.<br>
+                b) Secretaria Estadual de Saúde.<br>
+                c) Secretaria Municipal de Saúde.<br>
+                d) Conselho Estadual de Saúde.<br>
+                e) Agência Nacional de Saúde.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Consolidação) – Analise as afirmativas:</p>
+            <p>(   ) A Lei 8.080/90 é anterior à Constituição Federal de 1988.<br>
+            (   ) O SUS tem como princípio a equidade, que busca reduzir desigualdades.<br>
+            (   ) A União é responsável apenas pela normatização, sem financiamento.<br>
+            (   ) A Lei 13.097/2015 permitiu a participação de capitais estrangeiros na saúde.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – F – V<br>b) V – F – V – F<br>c) F – V – V – F<br>d) V – V – F – V<br>e) F – F – V – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Objetivos) – Segundo o Art. 5º da Lei 8.080/90, é objetivo do SUS:</p>
+            <div class="alternativas">
+                a) Reduzir a participação popular na gestão da saúde.<br>
+                b) Centralizar as decisões no Ministério da Saúde.<br>
+                c) Formular política de saúde para redução de riscos.<br>
+                d) Excluir a iniciativa privada da assistência à saúde.<br>
+                e) Criar subsistemas estaduais independentes.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (Financiamento) – O SUS é financiado com recursos dos orçamentos da seguridade social, da União, dos estados, do Distrito Federal e dos municípios, conforme estabelece a Lei 8.080/90. Esse modelo de financiamento é caracterizado como:</p>
+            <div class="alternativas">
+                a) Exclusivamente federal.<br>
+                b) Tripartite.<br>
+                c) Bipartite.<br>
+                d) Municipalista.<br>
+                e) Centralizado.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (Alterações) – A Lei 14.721/2023 alterou a Lei 8.080/90 para:</p>
+            <div class="alternativas">
+                a) Criar a Política Nacional de Saúde Integral LGBT.<br>
+                b) Estabelecer novas diretrizes para a gestão do SUS.<br>
+                c) Instituir o Estatuto da Pessoa Idosa.<br>
+                d) Criar a Rede de Cuidados à Pessoa com Deficiência.<br>
+                e) Instituir o Programa Nacional de Equidade de Gênero.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Final) – Analise as afirmativas:</p>
+            <p>(   ) A Lei 8.080/90 é conhecida como Lei Orgânica da Saúde.<br>
+            (   ) A integralidade da assistência é um dos princípios do SUS.<br>
+            (   ) A União tem direção única no SUS em nível municipal.<br>
+            (   ) A Lei 9.782/1999 criou a ANVISA e a ANS.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-A</b> | <b>2-D</b> | <b>3-B</b> | <b>4-D</b> | <b>5-A</b> | <b>6-C</b> | <b>7-B</b> | <b>8-C</b> | <b>9-B</b> | <b>10-A</b></p>
+            <p><b>11-A</b> | <b>12-A</b> | <b>13-D</b> | <b>14-A</b> | <b>15-A</b> | <b>16-A</b> | <b>17-B</b> | <b>18-A</b> | <b>19-B</b> | <b>20-B</b></p>
+            <p><b>21-A</b> | <b>22-C</b> | <b>23-B</b> | <b>24-B</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,F,V,F); Q15 (V,V,F,V); Q16 (V,V,V,F); Q21 (F,V,F,V); Q25 (V,V,F,V).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

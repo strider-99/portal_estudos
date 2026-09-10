@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Informática: Navegadores (Chrome e Firefox)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #eef2f7;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a3c6e;
+            text-align: center;
+            border-bottom: 3px solid #3f51b5;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a3c6e;
+            background-color: #e8eaf6;
+            padding: 10px 15px;
+            border-left: 6px solid #3f51b5;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #283593;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #dde1f0;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5f6fc;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #3f51b5;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a3c6e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #3f51b5;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>🌐 INFORMÁTICA – NAVEGADORES</h1>
+    <p style="text-align:center; font-size:18px; color:#1a3c6e;"><b>Google Chrome e Mozilla Firefox (versões atualizadas)</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>Os navegadores (browsers) são softwares essenciais para acessar a internet. Os mais utilizados atualmente são o <b>Google Chrome</b> e o <b>Mozilla Firefox</b>, ambos com versões atualizadas constantemente.</p>
+        <p>Este módulo aborda o <b>ambiente, componentes e funcionalidades</b> de cada um, incluindo navegação, guias, favoritos, histórico, segurança, configurações, atalhos de teclado e ferramentas de desenvolvimento.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Dominar as principais funcionalidades do Google Chrome e Mozilla Firefox, incluindo navegação, personalização, segurança e atalhos, com 35 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Google Chrome – Ambiente e Componentes – pág. 2</li>
+            <li><b>Módulo II:</b> Google Chrome – Funcionalidades – pág. 3</li>
+            <li><b>Módulo III:</b> Mozilla Firefox – Ambiente e Componentes – pág. 4</li>
+            <li><b>Módulo IV:</b> Mozilla Firefox – Funcionalidades – pág. 5</li>
+            <li><b>Módulo V:</b> Comparativo e Dicas Finais – pág. 6</li>
+            <li><b>Questões:</b> 35 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Google Chrome – Ambiente e Componentes              -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – GOOGLE CHROME: AMBIENTE E COMPONENTES</h2>
+
+        <h3>2.1. Interface do Google Chrome</h3>
+        <ul>
+            <li><b>Barra de Títulos:</b> exibe o nome da página ativa.</li>
+            <li><b>Barra de Abas (Guias):</b> permite abrir várias páginas em uma única janela.</li>
+            <li><b>Barra de Endereços (Omnibox):</b> insere URLs, realiza pesquisas diretamente (integrada ao Google).</li>
+            <li><b>Botões de Navegação:</b> Voltar, Avançar, Atualizar (Recarregar), Página Inicial.</li>
+            <li><b>Menu do Chrome:</b> três pontos verticais (⋮) no canto superior direito – contém configurações, ferramentas, histórico, favoritos, downloads, etc.</li>
+            <li><b>Barra de Favoritos:</b> exibe sites salvos como favoritos.</li>
+            <li><b>Botão de Perfil:</b> gerenciar perfis de usuário (sincronização).</li>
+            <li><b>Extensões:</b> ícones de extensões instaladas ao lado da barra de endereços.</li>
+            <li><b>Modo de exibição:</b> tela cheia (F11), zoom (Ctrl + + / Ctrl + -).</li>
+        </ul>
+
+        <h3>2.2. Configurações do Chrome (chrome://settings)</h3>
+        <ul>
+            <li><b>Aparência:</b> tema, zoom, mostrar barra de favoritos.</li>
+            <li><b>Mecanismo de pesquisa:</b> padrão (Google, Bing, etc.).</li>
+            <li><b>Privacidade e segurança:</b> limpeza de dados de navegação, cookies, senhas.</li>
+            <li><b>Sinconização:</b> sincronizar favoritos, histórico, senhas, extensões com a conta Google.</li>
+            <li><b>Downloads:</b> local padrão para salvar arquivos.</li>
+            <li><b>Idioma e região.</b></li>
+        </ul>
+
+        <h3>2.3. Atalhos de Teclado Essenciais (Chrome)</h3>
+        <ul>
+            <li><b>Ctrl + T:</b> Abrir nova guia.</li>
+            <li><b>Ctrl + W:</b> Fechar guia atual.</li>
+            <li><b>Ctrl + Shift + T:</b> Reabrir a última guia fechada.</li>
+            <li><b>Ctrl + Tab:</b> Alternar entre guias (próxima).</li>
+            <li><b>Ctrl + Shift + Tab:</b> Alternar entre guias (anterior).</li>
+            <li><b>Ctrl + L ou F6:</b> Selecionar a barra de endereços.</li>
+            <li><b>Ctrl + D:</b> Adicionar página aos favoritos.</li>
+            <li><b>Ctrl + H:</b> Abrir histórico.</li>
+            <li><b>Ctrl + J:</b> Abrir downloads.</li>
+            <li><b>F5 ou Ctrl + R:</b> Atualizar a página.</li>
+            <li><b>Ctrl + Shift + N:</b> Abrir janela anônima (modo de navegação privada).</li>
+            <li><b>F12:</b> Abrir ferramentas de desenvolvedor (DevTools).</li>
+        </ul>
+        <div class="dica">
+            <b>💡 Dica:</b> O modo anônimo (Incógnito) não salva histórico, cookies, dados de formulários ou senhas.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Google Chrome – Funcionalidades                     -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – GOOGLE CHROME: FUNCIONALIDADES</h2>
+
+        <h3>3.1. Funcionalidades Principais</h3>
+        <ul>
+            <li><b>Navegação por Abas:</b> múltiplas páginas na mesma janela.</li>
+            <li><b>Favoritos (Bookmarks):</b> salvar sites para acesso rápido.</li>
+            <li><b>Histórico:</b> registro de todas as páginas visitadas (Ctrl + H).</li>
+            <li><b>Downloads:</b> gerenciador de arquivos baixados (Ctrl + J).</li>
+            <li><b>Extensões:</b> programas adicionais que expandem as funcionalidades (bloqueadores de anúncio, gerenciadores de senha, etc.).</li>
+            <li><b>Gerenciador de Senhas:</b> salva e preenche senhas automaticamente.</li>
+            <li><b>Preenchimento Automático (Autofill):</b> preenche formulários com dados salvos.</li>
+            <li><b>Tradutor integrado:</b> traduz páginas automaticamente.</li>
+            <li><b>Modo de Leitura:</b> simplifica a visualização de artigos.</li>
+            <li><b>Pesquisa por imagem:</b> pesquisa usando uma imagem como entrada.</li>
+            <li><b>Ferramentas de Desenvolvedor (DevTools):</b> inspeção de elementos, console JavaScript, rede, desempenho.</li>
+            <li><b>Gerenciador de Tarefas:</b> visualiza o uso de recursos por guia/processo (Shift + Esc).</li>
+        </ul>
+
+        <h3>3.2. Configurações de Segurança e Privacidade</h3>
+        <ul>
+            <li><b>Limpeza de dados de navegação:</b> histórico, cookies, cache, senhas, etc.</li>
+            <li><b>Controle de cookies:</b> permitir, bloquear, excluir.</li>
+            <li><b>Proteção contra sites perigosos:</b> navegação segura (Safe Browsing).</li>
+            <li><b>Gerenciador de senhas:</b> verificação de senhas comprometidas.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> <b>Ctrl + Shift + Del</b> abre diretamente a tela de limpeza de dados de navegação.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Mozilla Firefox – Ambiente e Componentes            -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – MOZILLA FIREFOX: AMBIENTE E COMPONENTES</h2>
+
+        <h3>4.1. Interface do Firefox</h3>
+        <ul>
+            <li><b>Barra de Títulos:</b> exibe o nome da página ativa.</li>
+            <li><b>Barra de Abas (Guias):</b> permite abrir várias páginas em uma única janela.</li>
+            <li><b>Barra de Endereços (Location Bar):</b> insere URLs e pesquisas (pode usar mecanismos integrados).</li>
+            <li><b>Botões de Navegação:</b> Voltar, Avançar, Atualizar (Recarregar), Página Inicial.</li>
+            <li><b>Menu do Firefox:</b> três linhas horizontais (☰) no canto superior direito – contém configurações, ferramentas, histórico, favoritos, downloads, etc.</li>
+            <li><b>Barra de Favoritos (Bookmarks):</b> exibe sites salvos.</li>
+            <li><b>Botão de Perfil:</b> gerenciar contas e sincronização (Firefox Account).</li>
+            <li><b>Extensões (Add-ons):</b> ícones de extensões instaladas.</li>
+            <li><b>Biblioteca:</b> histórico, favoritos, downloads, etc. (ícone de livro).</li>
+        </ul>
+
+        <h3>4.2. Configurações do Firefox (about:preferences)</h3>
+        <ul>
+            <li><b>Início:</b> página inicial, nova guia.</li>
+            <li><b>Pesquisa:</b> mecanismo de pesquisa padrão.</li>
+            <li><b>Privacidade e segurança:</b> limpeza de dados, cookies, senhas, proteção contra rastreamento.</li>
+            <li><b>Sinconização:</b> sincronizar favoritos, histórico, senhas, extensões com a conta Firefox.</li>
+            <li><b>Downloads:</b> local padrão.</li>
+            <li><b>Idioma e aparência.</b></li>
+        </ul>
+
+        <h3>4.3. Atalhos de Teclado Essenciais (Firefox)</h3>
+        <ul>
+            <li><b>Ctrl + T:</b> Abrir nova guia.</li>
+            <li><b>Ctrl + W:</b> Fechar guia atual.</li>
+            <li><b>Ctrl + Shift + T:</b> Reabrir a última guia fechada.</li>
+            <li><b>Ctrl + Tab:</b> Alternar entre guias (próxima).</li>
+            <li><b>Ctrl + Shift + Tab:</b> Alternar entre guias (anterior).</li>
+            <li><b>Ctrl + L ou F6:</b> Selecionar a barra de endereços.</li>
+            <li><b>Ctrl + D:</b> Adicionar página aos favoritos.</li>
+            <li><b>Ctrl + H:</b> Abrir histórico (Biblioteca).</li>
+            <li><b>Ctrl + J:</b> Abrir downloads (Biblioteca).</li>
+            <li><b>F5 ou Ctrl + R:</b> Atualizar a página.</li>
+            <li><b>Ctrl + Shift + P:</b> Abrir janela privada (modo de navegação privada).</li>
+            <li><b>F12:</b> Abrir ferramentas de desenvolvedor (DevTools).</li>
+        </ul>
+        <div class="dica">
+            <b>💡 Dica:</b> O modo de navegação privada no Firefox é chamado de "Janela Privada" (não salva histórico, cookies, dados de formulários).
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Mozilla Firefox – Funcionalidades                   -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – MOZILLA FIREFOX: FUNCIONALIDADES</h2>
+
+        <h3>5.1. Funcionalidades Principais</h3>
+        <ul>
+            <li><b>Navegação por Abas:</b> múltiplas páginas na mesma janela.</li>
+            <li><b>Favoritos (Bookmarks):</b> salvar sites para acesso rápido.</li>
+            <li><b>Histórico:</b> registro de todas as páginas visitadas (Biblioteca).</li>
+            <li><b>Downloads:</b> gerenciador de arquivos baixados (Biblioteca).</li>
+            <li><b>Extensões (Add-ons):</b> programas adicionais (bloqueadores de anúncio, etc.).</li>
+            <li><b>Gerenciador de Senhas:</b> salva e preenche senhas automaticamente (Lockwise).</li>
+            <li><b>Preenchimento Automático:</b> preenche formulários.</li>
+            <li><b>Proteção contra Rastreamento:</b> bloqueia rastreadores de sites (Enhanced Tracking Protection).</li>
+            <li><b>Modo de Leitura:</b> simplifica a visualização de artigos (ícone de livro na barra de endereços).</li>
+            <li><b>Firefox Pocket:</b> salvar artigos para ler depois (integrado).</li>
+            <li><b>Ferramentas de Desenvolvedor (DevTools):</b> inspeção de elementos, console, rede, etc.</li>
+            <li><b>Gerenciador de Tarefas:</b> visualiza o uso de recursos por guia/processo (about:processes).</li>
+        </ul>
+
+        <h3>5.2. Configurações de Segurança e Privacidade</h3>
+        <ul>
+            <li><b>Limpeza de dados:</b> histórico, cookies, cache, senhas, etc.</li>
+            <li><b>Proteção aprimorada contra rastreamento:</b> bloqueia rastreadores sociais, cookies de rastreamento, etc.</li>
+            <li><b>Gerenciador de senhas:</b> gera senhas fortes e verifica comprometimentos.</li>
+            <li><b>Controle de cookies:</b> permitir, bloquear, excluir.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> <b>Ctrl + Shift + Del</b> também abre a tela de limpeza de dados no Firefox (personalizável).
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Comparativo e Dicas Finais                         -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – COMPARATIVO E DICAS FINAIS</h2>
+
+        <h3>6.1. Comparativo entre Chrome e Firefox</h3>
+        <table>
+            <tr><th>Característica</th><th>Google Chrome</th><th>Mozilla Firefox</th></tr>
+            <tr><td><b>Mecanismo de renderização</b></td><td>Blink</td><td>Gecko</td></tr>
+            <tr><td><b>Modo de navegação privada</b></td><td>Janela anônima (Ctrl + Shift + N)</td><td>Janela privada (Ctrl + Shift + P)</td></tr>
+            <tr><td><b>Gerenciador de senhas</b></td><td>Google Password Manager</td><td>Firefox Lockwise</td></tr>
+            <tr><td><b>Proteção contra rastreamento</b></td><td>Safe Browsing (básico)</td><td>Enhanced Tracking Protection (avançado)</td></tr>
+            <tr><td><b>Sincronização</b></td><td>Conta Google</td><td>Conta Firefox</td></tr>
+            <tr><td><b>Extensões</b></td><td>Chrome Web Store</td><td>Add-ons Mozilla</td></tr>
+            <tr><td><b>Ferramentas de desenvolvedor</b></td><td>F12</td><td>F12</td></tr>
+            <tr><td><b>Página de configurações</b></td><td>chrome://settings</td><td>about:preferences</td></tr>
+        </table>
+
+        <h3>6.2. Dicas Finais</h3>
+        <ul>
+            <li><b>Chrome:</b> use o gerenciador de tarefas (Shift + Esc) para verificar consumo de recursos.</li>
+            <li><b>Firefox:</b> use about:memory para analisar o uso de memória.</li>
+            <li><b>Ambos:</b> mantenha os navegadores atualizados para garantir segurança e desempenho.</li>
+            <li><b>Ambos:</b> use atalhos de teclado para aumentar a produtividade.</li>
+            <li><b>Ambos:</b> cuidado com extensões maliciosas; instale apenas de fontes oficiais.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 18                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 18)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> – No Google Chrome, o atalho para abrir uma nova guia é:</p>
+            <div class="alternativas">
+                a) Ctrl + N<br>
+                b) Ctrl + T<br>
+                c) Ctrl + W<br>
+                d) Ctrl + Shift + T<br>
+                e) Ctrl + Tab
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> – Qual é o atalho para fechar a guia atual no Chrome?</p>
+            <div class="alternativas">
+                a) Ctrl + F4<br>
+                b) Ctrl + W<br>
+                c) Ctrl + Q<br>
+                d) Alt + F4<br>
+                e) Ctrl + Shift + W
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> – O que faz o atalho <b>Ctrl + Shift + T</b> no Google Chrome?</p>
+            <div class="alternativas">
+                a) Abre uma nova janela anônima<br>
+                b) Abre uma nova guia<br>
+                c) Reabre a última guia fechada<br>
+                d) Fecha a guia atual<br>
+                e) Alterna entre guias
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> – No Mozilla Firefox, o atalho para abrir uma janela privada é:</p>
+            <div class="alternativas">
+                a) Ctrl + Shift + N<br>
+                b) Ctrl + Shift + P<br>
+                c) Ctrl + Shift + T<br>
+                d) Ctrl + Shift + W<br>
+                e) Ctrl + Shift + E
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> – Qual a função do botão de três pontos verticais (⋮) no Google Chrome?</p>
+            <div class="alternativas">
+                a) Abrir o menu do Chrome<br>
+                b) Fechar a janela<br>
+                c) Atualizar a página<br>
+                d) Voltar à página anterior<br>
+                e) Adicionar aos favoritos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> – No Mozilla Firefox, o menu principal é acessado pelo ícone de:</p>
+            <div class="alternativas">
+                a) Três pontos verticais<br>
+                b) Três linhas horizontais (☰)<br>
+                c) Engrenagem<br>
+                d) Estrela<br>
+                e) Cadeado
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> – Qual dos seguintes atalhos abre o histórico no Google Chrome?</p>
+            <div class="alternativas">
+                a) Ctrl + H<br>
+                b) Ctrl + J<br>
+                c) Ctrl + D<br>
+                d) Ctrl + L<br>
+                e) Ctrl + F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> – O que é uma extensão (add-on) em um navegador?</p>
+            <div class="alternativas">
+                a) Um programa que melhora a segurança do sistema operacional<br>
+                b) Um programa adicional que expande as funcionalidades do navegador<br>
+                c) Um tipo de arquivo de vídeo<br>
+                d) Um driver de hardware<br>
+                e) Um sistema de arquivos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> – No Firefox, a página de configurações é acessada pelo endereço:</p>
+            <div class="alternativas">
+                a) chrome://settings<br>
+                b) about:preferences<br>
+                c) about:config<br>
+                d) about:memory<br>
+                e) about:processes
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> – O atalho para abrir o gerenciador de downloads no Chrome é:</p>
+            <div class="alternativas">
+                a) Ctrl + D<br>
+                b) Ctrl + J<br>
+                c) Ctrl + H<br>
+                d) Ctrl + L<br>
+                e) Ctrl + F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> – O que é o modo de navegação privada (anônima/incógnito)?</p>
+            <div class="alternativas">
+                a) Modo que bloqueia todos os cookies<br>
+                b) Modo que não salva histórico, cookies ou dados de formulários<br>
+                c) Modo que navega mais rápido<br>
+                d) Modo que evita vírus<br>
+                e) Modo que desativa extensões
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> – No Google Chrome, o atalho para adicionar uma página aos favoritos é:</p>
+            <div class="alternativas">
+                a) Ctrl + D<br>
+                b) Ctrl + S<br>
+                c) Ctrl + F<br>
+                d) Ctrl + B<br>
+                e) Ctrl + E
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> – Qual é o atalho para selecionar a barra de endereços no Chrome (e no Firefox)?</p>
+            <div class="alternativas">
+                a) Ctrl + L<br>
+                b) Ctrl + K<br>
+                c) Ctrl + E<br>
+                d) Ctrl + O<br>
+                e) Ctrl + I
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> – Qual recurso do Firefox bloqueia rastreadores de sites?</p>
+            <div class="alternativas">
+                a) Safe Browsing<br>
+                b) Enhanced Tracking Protection<br>
+                c) Firewall integrado<br>
+                d) Antivírus embutido<br>
+                e) Modo de leitura
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> – No Chrome, a ferramenta de desenvolvedor (DevTools) é aberta com qual tecla?</p>
+            <div class="alternativas">
+                a) F1<br>
+                b) F5<br>
+                c) F11<br>
+                d) F12<br>
+                e) F2
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> – O que é a Omnibox no Google Chrome?</p>
+            <div class="alternativas">
+                a) A barra de ferramentas<br>
+                b) A barra de favoritos<br>
+                c) A barra de endereços que também permite pesquisas<br>
+                d) A barra de status<br>
+                e) O menu principal
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> – Qual é o nome do mecanismo de renderização do Google Chrome?</p>
+            <div class="alternativas">
+                a) Gecko<br>
+                b) Blink<br>
+                c) WebKit<br>
+                d) Trident<br>
+                e) Presto
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> – No Firefox, o gerenciador de senhas é chamado de:</p>
+            <div class="alternativas">
+                a) Google Password Manager<br>
+                b) Firefox Lockwise<br>
+                c) Bitwarden<br>
+                d) LastPass<br>
+                e) Dashlane
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 19 a 35 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (19 a 35) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> – No Google Chrome, o atalho para abrir o gerenciador de tarefas é:</p>
+            <div class="alternativas">
+                a) Ctrl + Esc<br>
+                b) Shift + Esc<br>
+                c) Alt + Esc<br>
+                d) Win + Esc<br>
+                e) Ctrl + Alt + Esc
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> – Qual é a diferença entre o modo de navegação privada e o modo normal?</p>
+            <div class="alternativas">
+                a) O modo privado é mais rápido<br>
+                b) O modo privado não salva histórico, cookies ou dados de formulários<br>
+                c) O modo privado bloqueia todos os anúncios<br>
+                d) O modo privado desativa JavaScript<br>
+                e) O modo privado criptografa a conexão
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> – No Chrome, a página de configurações é acessada por:</p>
+            <div class="alternativas">
+                a) about:settings<br>
+                b) chrome://settings<br>
+                c) about:preferences<br>
+                d) settings://chrome<br>
+                e) config://chrome
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> – O navegador Mozilla Firefox utiliza qual mecanismo de renderização?</p>
+            <div class="alternativas">
+                a) Blink<br>
+                b) WebKit<br>
+                c) Gecko<br>
+                d) Trident<br>
+                e) Presto
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> – No Firefox, qual atalho abre a janela de biblioteca (histórico, favoritos, downloads)?</p>
+            <div class="alternativas">
+                a) Ctrl + H<br>
+                b) Ctrl + J<br>
+                c) Ctrl + Shift + H<br>
+                d) Ctrl + Shift + O<br>
+                e) Ctrl + B
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> – O que a ferramenta de desenvolvedor (DevTools) permite fazer?</p>
+            <div class="alternativas">
+                a) Inspecionar elementos HTML e CSS<br>
+                b) Depurar JavaScript<br>
+                c) Analisar desempenho<br>
+                d) Visualizar requisições de rede<br>
+                e) Todas as alternativas estão corretas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> – No Google Chrome, a sincronização de dados é feita com qual conta?</p>
+            <div class="alternativas">
+                a) Conta Microsoft<br>
+                b) Conta Google<br>
+                c) Conta Firefox<br>
+                d) Conta Apple<br>
+                e) Conta Facebook
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 26</b> – No Firefox, a sincronização é feita com qual conta?</p>
+            <div class="alternativas">
+                a) Conta Google<br>
+                b) Conta Microsoft<br>
+                c) Conta Firefox<br>
+                d) Conta Apple<br>
+                e) Conta Amazon
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 27</b> – O recurso que permite salvar artigos para ler depois no Firefox é chamado de:</p>
+            <div class="alternativas">
+                a) Instapaper<br>
+                b) Pocket<br>
+                c) Readability<br>
+                d) EverNote<br>
+                e) OneNote
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 28</b> – No Chrome, o que é a barra de favoritos?</p>
+            <div class="alternativas">
+                a) Uma barra com sites salvos para acesso rápido<br>
+                b) Uma barra de pesquisa<br>
+                c) Uma barra de ferramentas de desenvolvimento<br>
+                d) Uma barra de status<br>
+                e) Uma barra de navegação
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 29</b> – Qual é o atalho para alternar entre guias no Chrome e Firefox (próxima guia)?</p>
+            <div class="alternativas">
+                a) Ctrl + Tab<br>
+                b) Ctrl + Shift + Tab<br>
+                c) Alt + Tab<br>
+                d) Win + Tab<br>
+                e) Ctrl + Alt + Tab
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 30</b> – O atalho <b>Ctrl + Shift + Del</b> no Chrome e Firefox abre a tela de:</p>
+            <div class="alternativas">
+                a) Limpeza de dados de navegação<br>
+                b) Gerenciador de tarefas<br>
+                c) Configurações<br>
+                d) Histórico<br>
+                e) Favoritos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 31</b> – Qual navegador possui a proteção 'Enhanced Tracking Protection'?</p>
+            <div class="alternativas">
+                a) Google Chrome<br>
+                b) Mozilla Firefox<br>
+                c) Microsoft Edge<br>
+                d) Opera<br>
+                e) Safari
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 32</b> – No Chrome, o atalho para abrir uma janela anônima é:</p>
+            <div class="alternativas">
+                a) Ctrl + Shift + N<br>
+                b) Ctrl + Shift + P<br>
+                c) Ctrl + Shift + T<br>
+                d) Ctrl + Shift + W<br>
+                e) Ctrl + Shift + E
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 33</b> – O que são extensões (ou add-ons) de navegador?</p>
+            <div class="alternativas">
+                a) Apenas bloqueadores de anúncio<br>
+                b) Programas que expandem as funcionalidades do navegador<br>
+                c) Drivers de hardware<br>
+                d) Sistemas operacionais<br>
+                e) Protocolos de internet
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 34</b> – Qual endereço no Firefox exibe informações sobre consumo de memória?</p>
+            <div class="alternativas">
+                a) about:memory<br>
+                b) about:processes<br>
+                c) about:config<br>
+                d) about:preferences<br>
+                e) about:performance
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 35</b> – O Google Chrome e o Mozilla Firefox são exemplos de:</p>
+            <div class="alternativas">
+                a) Sistemas operacionais<br>
+                b) Navegadores (browsers)<br>
+                c) Editores de texto<br>
+                d) Planilhas eletrônicas<br>
+                e) Programas de e-mail
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-B</b> | <b>3-C</b> | <b>4-B</b> | <b>5-A</b> | <b>6-B</b> | <b>7-A</b> | <b>8-B</b> | <b>9-B</b> | <b>10-B</b></p>
+            <p><b>11-B</b> | <b>12-A</b> | <b>13-A</b> | <b>14-B</b> | <b>15-D</b> | <b>16-C</b> | <b>17-B</b> | <b>18-B</b> | <b>19-B</b> | <b>20-B</b></p>
+            <p><b>21-B</b> | <b>22-C</b> | <b>23-D</b> | <b>24-E</b> | <b>25-B</b> | <b>26-C</b> | <b>27-B</b> | <b>28-A</b> | <b>29-A</b> | <b>30-A</b></p>
+            <p><b>31-B</b> | <b>32-A</b> | <b>33-B</b> | <b>34-A</b> | <b>35-B</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>💡 Observação:</b> Todas as respostas foram elaboradas com base nas versões atualizadas do Google Chrome e Mozilla Firefox.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Português Módulo 6: Pontuação, Figuras, Sinônimos e Denotação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fcf9f0;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #922b21;
+            text-align: center;
+            border-bottom: 3px solid #c0392b;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #922b21;
+            background-color: #fdedec;
+            padding: 10px 15px;
+            border-left: 6px solid #c0392b;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #6c2e2b;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #fadbd8;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .exemplo {
+            background-color: #fef9e7;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #c0392b;
+        }
+        .atencao {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .atencao b {
+            color: #922b21;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #fdfcf8;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #c0392b;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+        .final-message {
+            background: #eafaf1;
+            border: 2px solid #2ecc71;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 15px 0;
+            font-size: 18px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #922b21;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #c0392b;
+            color: white;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+            color: white;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📝 LÍNGUA PORTUGUESA – MÓDULO 6</h1>
+    <p style="text-align:center; font-size:18px; color:#922b21;"><b>Pontuação, Figuras de Linguagem, Sinônimos/Antônimos e Denotação/Conotação</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO – O GRANDE FINAL</h2>
+        <p>Chegamos ao último módulo de Língua Portuguesa! Esta é a etapa que une a técnica à criatividade e à precisão. A <b>Pontuação</b> organiza o pensamento, as <b>Figuras de Linguagem</b> dão cor e expressividade ao texto, e o domínio de <b>Sinônimos/Antônimos</b> e da <b>Denotação/Conotação</b> permite que você escolha a palavra exata para cada situação.</p>
+        <p>Com este módulo, você fecha o ciclo completo de estudos do Português, pronto para arrasar em qualquer prova!</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Aplicar corretamente os sinais de pontuação, reconhecer e classificar as principais figuras de linguagem, distinguir sinônimos e antônimos e dominar os sentidos denotativo e conotativo das palavras, com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Pontuação – Sinais e Regras Essenciais – pág. 2</li>
+            <li><b>Módulo II:</b> Figuras de Linguagem – Parte 1 (Palavra e Pensamento) – pág. 3</li>
+            <li><b>Módulo III:</b> Figuras de Linguagem – Parte 2 (Sintaxe e Construção) – pág. 4</li>
+            <li><b>Módulo IV:</b> Sinônimos, Antônimos, Denotação e Conotação – pág. 5</li>
+            <li><b>Módulo V:</b> Consolidação e Dicas Finais – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Pontuação                                          -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – PONTUAÇÃO: SINAIS E REGRAS ESSENCIAIS</h2>
+        <p>Os sinais de pontuação são recursos gráficos que organizam o texto, indicam pausas, entonação e relações sintáticas. Dominá-los é fundamental para a clareza da escrita.</p>
+
+        <h3>2.1. Vírgula (,)</h3>
+        <ul>
+            <li><b>Separa termos de uma enumeração:</b> "Comprei <b>pão, leite e café</b>."</li>
+            <li><b>Isola o vocativo:</b> "<b>Maria</b>, venha aqui."</li>
+            <li><b>Isola o aposto:</b> "São Paulo, <b>a maior cidade do país</b>, está em crise."</li>
+            <li><b>Separa orações intercaladas ou deslocadas:</b> "João, <b>disse o professor</b>, é um ótimo aluno."</li>
+            <li><b>Separa conjunções adversativas deslocadas:</b> "Estudou, <b>porém</b>, não passou."</li>
+            <li><b>NÃO se usa vírgula para separar sujeito de predicado:</b> Errado: "O aluno, estudou."</li>
+            <li><b>NÃO se usa vírgula para separar verbo de complemento:</b> Errado: "Ele comprou, um carro."</li>
+        </ul>
+
+        <h3>2.2. Ponto (.) e Ponto e Vírgula (;)</h3>
+        <ul>
+            <li><b>Ponto final:</b> encerra uma frase declarativa ou imperativa.</li>
+            <li><b>Ponto de interrogação (?):</b> encerra uma pergunta direta.</li>
+            <li><b>Ponto de exclamação (!):</b> indica entonação de surpresa, ordem, admiração.</li>
+            <li><b>Ponto e vírgula (;):</b> usado para separar orações coordenadas extensas ou itens de uma lista complexa. Ex.: "Estudou muito; fez todas as questões; passou com louvor."</li>
+        </ul>
+
+        <h3>2.3. Dois-pontos (:), Travessão (—) e Aspas (“ ”)</h3>
+        <ul>
+            <li><b>Dois-pontos:</b> anunciam uma citação, enumeração ou fala de personagem.</li>
+            <li><b>Travessão:</b> indica mudança de interlocutor em diálogos ou isolamento de expressões.</li>
+            <li><b>Aspas:</b> indicam citação textual, estrangeirismos ou ironia.</li>
+        </ul>
+
+        <h3>2.4. Reticências (...) e Parênteses ( )</h3>
+        <ul>
+            <li><b>Reticências:</b> indicam interrupção, hesitação ou continuidade de um pensamento.</li>
+            <li><b>Parênteses:</b> isolam informações acessórias (explicações, comentários).</li>
+        </ul>
+        <div class="atencao">
+            <b>⚡ Regra de Ouro:</b> A vírgula é o sinal que mais gera dúvidas. Lembre-se: ela não pode separar termos que são sintaticamente ligados (sujeito-verbo, verbo-objeto, nome-complemento nominal).
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Figuras de Linguagem – Parte 1                     -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – FIGURAS DE LINGUAGEM (PARTE 1: PALAVRA E PENSAMENTO)</h2>
+        <p>As figuras de linguagem são recursos estilísticos que tornam a expressão mais expressiva, criativa e persuasiva. Dividem-se em figuras de palavra, pensamento e sintaxe.</p>
+
+        <h3>3.1. Figuras de Palavra (Semântica)</h3>
+        <ul>
+            <li><b>Metáfora:</b> comparação implícita (sem conectivo). Ex.: "A vida é um <b>palco</b>."</li>
+            <li><b>Comparação (ou Símile):</b> comparação explícita (com conectivos: como, tal qual, feito). Ex.: "Seus olhos brilhavam <b>como</b> estrelas."</li>
+            <li><b>Metonímia:</b> substituição de uma palavra por outra com relação de proximidade. Ex.: "Leu <b>Machado de Assis</b>" (autor pela obra). / "Bebeu um <b>copo</b>" (continente pelo conteúdo).</li>
+            <li><b>Catacrese:</b> uso de uma palavra por falta de termo específico. Ex.: "Pé da mesa", "Braço da cadeira", "Asa da xícara".</li>
+            <li><b>Sinestesia:</b> mistura de sensações de diferentes sentidos. Ex.: "Grito <b>surdo</b>", "Voz <b>doce</b>".</li>
+        </ul>
+
+        <h3>3.2. Figuras de Pensamento</h3>
+        <ul>
+            <li><b>Antítese:</b> aproximação de palavras ou ideias opostas. Ex.: "O <b>bem</b> e o <b>mal</b>."</li>
+            <li><b>Paradoxo (ou Oxímoro):</b> ideias contraditórias que se complementam. Ex.: "Estou <b>cheio de vazio</b>."</li>
+            <li><b>Eufemismo:</b> suavização de uma expressão desagradável. Ex.: "Ele <b>partiu</b>" (em vez de "morreu").</li>
+            <li><b>Ironia:</b> dizer o contrário do que se pensa, com intenção crítica. Ex.: "Que <b>ótimo</b> dia para um piquenique!" (em dia de chuva).</li>
+            <li><b>Hipérbole:</b> exagero intencional. Ex.: "Morri de rir."</li>
+            <li><b>Prosopopeia (ou Personificação):</b> atribuição de características humanas a seres inanimados. Ex.: "O vento <b>sussurrava</b>."</li>
+        </ul>
+        <div class="exemplo">
+            <p><b>Dica para provas:</b> A metáfora não usa conectivos de comparação ("como", "tal qual"), ao contrário da comparação. A ironia depende do contexto para ser percebida.</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Figuras de Linguagem – Parte 2                     -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – FIGURAS DE LINGUAGEM (PARTE 2: SINTAXE E CONSTRUÇÃO)</h2>
+
+        <h3>4.1. Figuras de Sintaxe (ou Construção)</h3>
+        <ul>
+            <li><b>Elipse:</b> omissão de um termo facilmente subentendido. Ex.: "Na sala, <b>—</b> apenas um sofá." (omissão de "havia").</li>
+            <li><b>Zeugma:</b> omissão de um termo já expresso anteriormente. Ex.: "Ele prefere cinema; ela, <b>—</b> teatro." (omissão de "prefere").</li>
+            <li><b>Assíndeto:</b> ausência de conjunções entre orações ou termos. Ex.: "Chegou, viu, venceu."</li>
+            <li><b>Polissíndeto:</b> repetição intencional de conjunções. Ex.: "Falou <b>e</b> falou <b>e</b> falou sem parar."</li>
+            <li><b>Anáfora:</b> repetição de uma palavra no início de frases ou versos. Ex.: "<b>Eu</b> vi o mar, <b>eu</b> vi o céu, <b>eu</b> vi a terra."</li>
+            <li><b>Pleonasmo (ou Redundância):</b> repetição de uma ideia com intenção expressiva. Ex.: "A mim <b>me</b> parece." / "Subir para <b>cima</b>." (não deve ser confundido com a redundância viciosa, que é um vício de linguagem).</li>
+            <li><b>Silepse:</b> concordância com a ideia e não com a forma da palavra. Divide-se em:
+                <ul>
+                    <li><b>Gênero:</b> "São Paulo é <b>linda</b>." (cidade).</li>
+                    <li><b>Número:</b> "Os brasileiros são <b>alegres</b>." (povo).</li>
+                    <li><b>Pessoa:</b> "A diretoria <b>decidimos</b>..." (eu + diretoria).</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>4.2. Quadro-resumo das Figuras mais Cobradas</h3>
+        <table>
+            <tr><th>Figura</th><th>Característica</th><th>Exemplo</th></tr>
+            <tr><td><b>Metáfora</b></td><td>Comparação implícita</td><td>"A vida é um palco."</td></tr>
+            <tr><td><b>Comparação</b></td><td>Comparação explícita (como)</td><td>"É forte como um touro."</td></tr>
+            <tr><td><b>Metonímia</b></td><td>Substituição por relação de causa/efeito</td><td>"Leio Machado de Assis."</td></tr>
+            <tr><td><b>Eufemismo</b></td><td>Suavização</td><td>"Ele partiu." (morreu)</td></tr>
+            <tr><td><b>Ironia</b></td><td>Dizer o contrário</td><td>"Que belo dia!" (chovendo)</td></tr>
+            <tr><td><b>Hipérbole</b></td><td>Exagero</td><td>"Estou morto de cansaço."</td></tr>
+            <tr><td><b>Elipse</b></td><td>Omissão de termo</td><td>"Na sala, apenas um sofá."</td></tr>
+            <tr><td><b>Anáfora</b></td><td>Repetição no início</td><td>"Eu vi... Eu vi..."</td></tr>
+        </table>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Sinônimos, Antônimos, Denotação e Conotação        -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – SINÔNIMOS, ANTÔNIMOS, DENOTAÇÃO E CONOTAÇÃO</h2>
+
+        <h3>5.1. Sinônimos</h3>
+        <p>Palavras que possuem significados <b>semelhantes</b> ou aproximados. Ex.: <b>casa</b> / <b>lar</b> / <b>moradia</b>.</p>
+        <ul>
+            <li><b>Sinônimos perfeitos:</b> significados praticamente idênticos (ex.: léxico / vocabulário).</li>
+            <li><b>Sinônimos imperfeitos:</b> significados próximos, mas com nuances diferentes (ex.: <b>casa</b> = edifício físico; <b>lar</b> = conotação afetiva).</li>
+        </ul>
+
+        <h3>5.2. Antônimos</h3>
+        <p>Palavras que possuem significados <b>opostos</b>. Ex.: <b>grande</b> / <b>pequeno</b>; <b>amor</b> / <b>ódio</b>.</p>
+        <ul>
+            <li><b>Antônimos graduais:</b> oposição em uma escala (ex.: quente / morno / frio).</li>
+            <li><b>Antônimos complementares:</b> oposição absoluta (ex.: vivo / morto).</li>
+        </ul>
+
+        <h3>5.3. Denotação</h3>
+        <p>Uso da palavra em seu sentido <b>literal, objetivo</b>, conforme o dicionário. É a linguagem técnica, científica e informativa.</p>
+        <div class="exemplo">"O <b>coração</b> é um órgão muscular." (sentido denotativo).</div>
+
+        <h3>5.4. Conotação</h3>
+        <p>Uso da palavra em sentido <b>figurado, subjetivo</b>, associado a emoções e contextos culturais. Predomina na literatura, poesia e na linguagem publicitária.</p>
+        <div class="exemplo">"Ele tem um <b>coração</b> de ouro." (sentido conotativo – bondade).</div>
+
+        <h3>5.5. Relação entre os temas</h3>
+        <ul>
+            <li><b>Sinônimos e antônimos</b> são relações paradigmáticas (de substituição).</li>
+            <li><b>Denotação e conotação</b> são níveis de significação. Uma mesma palavra pode ser usada nos dois níveis, dependendo do contexto.</li>
+        </ul>
+        <div class="dica">
+            <b>💡 Dica final:</b> Em provas, a banca gosta de cobrar a diferença entre sentido literal (denotação) e sentido figurado (conotação) em textos literários ou propagandas. Fique atento aos adjetivos e metáforas!
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Consolidação e Dicas Finais                        -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – CONSOLIDAÇÃO E DICAS FINAIS</h2>
+        <h3>6.1. Resumo dos Sinais de Pontuação</h3>
+        <ul>
+            <li><b>Vírgula:</b> enumeração, isolamento (vocativo, aposto, orações intercaladas).</li>
+            <li><b>Ponto e vírgula:</b> separação de itens extensos ou orações longas.</li>
+            <li><b>Dois-pontos:</b> anúncio de fala, citação ou enumeração.</li>
+            <li><b>Travessão:</b> diálogo ou isolamento.</li>
+            <li><b>Aspas:</b> citação, estrangeirismo ou ironia.</li>
+            <li><b>Reticências:</b> hesitação, interrupção ou continuidade.</li>
+        </ul>
+
+        <h3>6.2. Lista das Figuras de Linguagem mais Cobradas</h3>
+        <ul>
+            <li><b>Metáfora</b> (comparação implícita).</li>
+            <li><b>Comparação</b> (com "como", "tal qual").</li>
+            <li><b>Metonímia</b> (autor pela obra, continente pelo conteúdo).</li>
+            <li><b>Eufemismo</b> (suavização).</li>
+            <li><b>Ironia</b> (dizer o contrário).</li>
+            <li><b>Hipérbole</b> (exagero).</li>
+            <li><b>Prosopopeia</b> (personificação).</li>
+            <li><b>Antítese</b> (oposição).</li>
+            <li><b>Elipse / Zeugma</b> (omissão).</li>
+            <li><b>Polissíndeto / Assíndeto</b> (conjunções).</li>
+        </ul>
+
+        <h3>6.3. A Jornada está Completa!</h3>
+        <div class="final-message">
+            🎉 <b>Parabéns!</b> 🎉 <br>
+            Você completou todos os módulos de Língua Portuguesa! <br>
+            De interpretação de textos à pontuação, passando por morfologia, sintaxe e figuras de linguagem. <br>
+            Agora, é revisar, praticar e arrasar nas provas! 🚀
+        </div>
+        <p style="text-align:center; font-weight:bold; color:#2e7d32;">"O sucesso é a soma de pequenos esforços repetidos dia após dia."</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Pontuação) – Assinale a frase em que o uso da vírgula está <b>correto</b>:</p>
+            <div class="alternativas">
+                a) O aluno, estudou para a prova.<br>
+                b) João, Maria e Pedro foram ao cinema.<br>
+                c) Comprou, um carro novo.<br>
+                d) Ele não gosta de estudar, mas se esforça.<br>
+                e) B) e D) estão corretas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Pontuação) – Qual sinal de pontuação é usado para separar itens de uma lista extensa ou orações coordenadas muito longas?</p>
+            <div class="alternativas">
+                a) Vírgula.<br>
+                b) Ponto final.<br>
+                c) Ponto e vírgula.<br>
+                d) Dois-pontos.<br>
+                e) Travessão.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Figuras) – "A vida é uma viagem" é um exemplo de:</p>
+            <div class="alternativas">
+                a) Comparação.<br>
+                b) Metonímia.<br>
+                c) Metáfora.<br>
+                d) Prosopopeia.<br>
+                e) Catacrese.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Figuras) – "As pedras do caminho sussurravam segredos" é um exemplo de:</p>
+            <div class="alternativas">
+                a) Ironia.<br>
+                b) Eufemismo.<br>
+                c) Hipérbole.<br>
+                d) Prosopopeia (personificação).<br>
+                e) Antítese.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Figuras) – "Estou morrendo de fome" é um exemplo de:</p>
+            <div class="alternativas">
+                a) Ironia.<br>
+                b) Eufemismo.<br>
+                c) Hipérbole.<br>
+                d) Prosopopeia.<br>
+                e) Metonímia.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Figuras) – A frase "A cidade dormia tranquilamente" contém uma:</p>
+            <div class="alternativas">
+                a) Metáfora.<br>
+                b) Sinestesia.<br>
+                c) Prosopopeia.<br>
+                d) Comparação.<br>
+                e) Elipse.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Sinônimos/Antônimos) – Assinale o par de palavras que são <b>antônimas</b>:</p>
+            <div class="alternativas">
+                a) Casa / Lar.<br>
+                b) Grande / Pequeno.<br>
+                c) Feliz / Contento.<br>
+                d) Trabalho / Labor.<br>
+                e) Rápido / Veloz.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Denotação/Conotação) – Na frase "Ele tem um coração de ouro", a palavra "coração" está empregada em sentido:</p>
+            <div class="alternativas">
+                a) Denotativo.<br>
+                b) Conotativo.<br>
+                c) Literal.<br>
+                d) Técnico.<br>
+                e) Científico.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Figuras) – "Leio Clarice Lispector" é um exemplo de:</p>
+            <div class="alternativas">
+                a) Metáfora.<br>
+                b) Metonímia.<br>
+                c) Comparação.<br>
+                d) Catacrese.<br>
+                e) Sinestesia.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Figuras) – "O amor é fogo que arde sem se ver" (Camões). A figura predominante é:</p>
+            <div class="alternativas">
+                a) Ironia.<br>
+                b) Metáfora.<br>
+                c) Prosopopeia.<br>
+                d) Elipse.<br>
+                e) Antítese.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Figuras) – "Chegou, viu, venceu" é um exemplo de:</p>
+            <div class="alternativas">
+                a) Polissíndeto.<br>
+                b) Assíndeto.<br>
+                c) Elipse.<br>
+                d) Zeugma.<br>
+                e) Anáfora.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Pontuação) – Assinale a frase em que o uso da vírgula está <b>incorreto</b>:</p>
+            <div class="alternativas">
+                a) João, venha aqui.<br>
+                b) Comprei pão, leite e café.<br>
+                c) O professor, disse que a prova é difícil.<br>
+                d) Ele estudou, mas não passou.<br>
+                e) Estava cansado, porém, continuou.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Sinônimos) – "Fugaz" e "efêmero" são exemplos de:</p>
+            <div class="alternativas">
+                a) Antônimos.<br>
+                b) Sinônimos perfeitos.<br>
+                c) Sinônimos imperfeitos.<br>
+                d) Parônimos.<br>
+                e) Homônimos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Pontuação e Figuras) – Analise as afirmativas:</p>
+            <p>(   ) A vírgula separa o sujeito do predicado.<br>
+            (   ) A catacrese ocorre pela falta de uma palavra específica (ex.: "pé da mesa").<br>
+            (   ) As reticências indicam hesitação ou interrupção.<br>
+            (   ) O eufemismo é usado para exagerar uma ideia.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – V – F<br>b) V – F – V – F<br>c) F – V – F – V<br>d) V – V – F – V<br>e) F – F – V – V
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Figuras e Sentidos) – Analise as afirmativas:</p>
+            <p>(   ) A denotação é o sentido literal da palavra.<br>
+            (   ) "O céu chorava" é um exemplo de sinestesia.<br>
+            (   ) A antítese aproxima palavras de sentidos opostos.<br>
+            (   ) A elipse é a repetição de uma palavra no início da frase.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – F<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (Figuras) – "Grito surdo" e "doce amargura" são exemplos de:</p>
+            <div class="alternativas">
+                a) Metáfora.<br>
+                b) Sinestesia.<br>
+                c) Catacrese.<br>
+                d) Antítese.<br>
+                e) Prosopopeia.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Figuras) – "Ele partiu para a eternidade" (em vez de "ele morreu") é um exemplo de:</p>
+            <div class="alternativas">
+                a) Ironia.<br>
+                b) Hipérbole.<br>
+                c) Eufemismo.<br>
+                d) Prosopopeia.<br>
+                e) Antítese.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Denotação/Conotação) – A frase "O cachorro latiu para o carteiro" utiliza a linguagem em sentido:</p>
+            <div class="alternativas">
+                a) Conotativo.<br>
+                b) Denotativo.<br>
+                c) Figurado.<br>
+                d) Poético.<br>
+                e) Subjetivo.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Pontuação) – O uso dos dois-pontos (:) está correto em:</p>
+            <div class="alternativas">
+                a) Ele disse: "Vou viajar."<br>
+                b) Ele disse, "Vou viajar."<br>
+                c) Ele disse; "Vou viajar."<br>
+                d) Ele disse. "Vou viajar."<br>
+                e) Ele disse ... "Vou viajar."
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Figuras) – "Ela é forte como um touro" é um exemplo de:</p>
+            <div class="alternativas">
+                a) Metáfora.<br>
+                b) Comparação.<br>
+                c) Prosopopeia.<br>
+                d) Metonímia.<br>
+                e) Catacrese.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Consolidação) – Analise as afirmativas:</p>
+            <p>(   ) O travessão indica mudança de interlocutor em diálogos.<br>
+            (   ) O pleonasmo é considerado um vício de linguagem, portanto nunca deve ser usado.<br>
+            (   ) "Na sala, apenas ela e eu." é um exemplo de zeugma.<br>
+            (   ) A silepse é uma concordância que se faz com a ideia, e não com a forma da palavra.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Figuras) – A repetição intencional de conjunções (ex.: "e chora, e ri, e dança") é chamada de:</p>
+            <div class="alternativas">
+                a) Assíndeto.<br>
+                b) Polissíndeto.<br>
+                c) Anáfora.<br>
+                d) Elipse.<br>
+                e) Zeugma.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (Sinônimos) – Assinale o par de palavras que são <b>sinônimas</b>:</p>
+            <div class="alternativas">
+                a) Alto / Baixo.<br>
+                b) Rápido / Lento.<br>
+                c) Feliz / Triste.<br>
+                d) Frio / Quente.<br>
+                e) Ágil / Veloz.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (Figuras) – "O sol sorriu para a manhã" é um exemplo de:</p>
+            <div class="alternativas">
+                a) Antítese.<br>
+                b) Ironia.<br>
+                c) Prosopopeia.<br>
+                d) Sinestesia.<br>
+                e) Hipérbole.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Final) – Analise as afirmativas:</p>
+            <p>(   ) A conotação é o sentido figurado, subjetivo, da palavra.<br>
+            (   ) A hipérbole é um exagero intencional.<br>
+            (   ) A vírgula pode ser usada para separar o verbo do seu complemento.<br>
+            (   ) A sinestesia mistura sensações de diferentes sentidos.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-D</b> | <b>2-C</b> | <b>3-C</b> | <b>4-D</b> | <b>5-C</b> | <b>6-C</b> | <b>7-B</b> | <b>8-B</b> | <b>9-B</b> | <b>10-B</b></p>
+            <p><b>11-B</b> | <b>12-C</b> | <b>13-C</b> | <b>14-A</b> | <b>15-A</b> | <b>16-B</b> | <b>17-C</b> | <b>18-B</b> | <b>19-A</b> | <b>20-B</b></p>
+            <p><b>21-A</b> | <b>22-B</b> | <b>23-E</b> | <b>24-C</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (F,V,V,F); Q15 (V,F,V,F); Q21 (V,F,V,V); Q25 (V,V,F,V).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

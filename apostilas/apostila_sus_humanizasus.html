@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - SUS: HumanizaSUS (Política Nacional de Humanização)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fef9f0;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #d35400;
+            text-align: center;
+            border-bottom: 3px solid #e67e22;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #d35400;
+            background-color: #fdebd0;
+            padding: 10px 15px;
+            border-left: 6px solid #e67e22;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #a04000;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #fad7a0;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .atencao {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .atencao b {
+            color: #922b21;
+        }
+        .exemplo {
+            background-color: #fef9e7;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #e67e22;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #fdfcf8;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #e67e22;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #d35400;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #e67e22;
+            color: white;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+            color: white;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>🤝 HUMANIZASUS</h1>
+    <p style="text-align:center; font-size:18px; color:#d35400;"><b>Política Nacional de Humanização da Atenção e Gestão do SUS</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Política Nacional de Humanização (PNH)</b>, conhecida como <b>HumanizaSUS</b>, foi criada em 2003 pelo Ministério da Saúde para efetivar os princípios do SUS no cotidiano das práticas de atenção e gestão. Seu objetivo é <b>colocar as pessoas no centro do cuidado</b>, valorizando os vínculos e a corresponsabilidade entre gestores, trabalhadores e usuários.</p>
+        <p>O HumanizaSUS propõe uma transformação cultural e organizacional, promovendo a inclusão de trabalhadores e usuários, o fortalecimento do trabalho em equipe e a gestão participativa.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender os fundamentos, princípios, diretrizes e dispositivos da Política Nacional de Humanização, dominando seus macro-objetivos e implicações práticas no SUS, com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> O que é HumanizaSUS? Histórico e Objetivos Gerais – pág. 2</li>
+            <li><b>Módulo II:</b> Princípios do HumanizaSUS – pág. 3</li>
+            <li><b>Módulo III:</b> Diretrizes da PNH – pág. 4</li>
+            <li><b>Módulo IV:</b> Dispositivos e Estratégias do HumanizaSUS – pág. 5</li>
+            <li><b>Módulo V:</b> Macro-objetivos e Implicações – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Histórico e Objetivos                              -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – O QUE É HUMANIZASUS? HISTÓRICO E OBJETIVOS GERAIS</h2>
+        <h3>2.1. Contexto Histórico</h3>
+        <ul>
+            <li><b>Criação:</b> 2003, pelo Ministério da Saúde.</li>
+            <li><b>Motivação:</b> necessidade de qualificar a atenção e a gestão no SUS, superando o modelo mecanicista e impessoal.</li>
+            <li><b>Base legal:</b> Portaria GM/MS nº 881, de 19 de maio de 2003 (instituiu a PNH no âmbito do SUS).</li>
+        </ul>
+
+        <h3>2.2. Objetivos Gerais da PNH</h3>
+        <ul>
+            <li><b>Valorizar os trabalhadores</b> do SUS, promovendo sua inclusão, capacitação e bem-estar.</li>
+            <li><b>Protagonismo dos usuários</b>, garantindo sua participação ativa no cuidado e na gestão.</li>
+            <li><b>Fortalecer a gestão participativa</b> e o controle social.</li>
+            <li><b>Humanizar as relações</b> entre profissionais e usuários, com acolhimento, escuta qualificada e vínculo.</li>
+        </ul>
+
+        <h3>2.3. Definição Síntese</h3>
+        <p>HumanizaSUS é uma política que <b>transversaliza</b> as ações do SUS, propondo uma <b>nova cultura de atenção e gestão</b>, baseada na corresponsabilidade, na solidariedade e no respeito à diversidade.</p>
+        <div class="exemplo">
+            <p><b>Frase-chave:</b> "Humanizar é valorizar os diferentes sujeitos implicados no processo de produção de saúde: usuários, trabalhadores e gestores."</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Princípios do HumanizaSUS                          -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – PRINCÍPIOS DO HUMANIZASUS</h2>
+        <p>A PNH fundamenta-se em princípios éticos e políticos que orientam todas as suas ações:</p>
+
+        <ul>
+            <li><b>Autonomia e protagonismo dos sujeitos:</b> reconhecimento da capacidade de cada pessoa de decidir sobre sua vida e seu cuidado.</li>
+            <li><b>Corresponsabilidade:</b> todos os atores (gestores, trabalhadores, usuários) compartilham a responsabilidade pela produção de saúde.</li>
+            <li><b>Solidariedade:</b> fortalecimento dos laços sociais e do trabalho em rede.</li>
+            <li><b>Transversalidade:</b> a humanização deve permear todas as ações e serviços, em todas as áreas do SUS.</li>
+            <li><b>Inclusão:</b> valorização da diversidade e combate a todas as formas de discriminação.</li>
+            <li><b>Respeito à diversidade:</b> reconhecimento das diferenças culturais, étnicas, raciais, de gênero e orientação sexual.</li>
+        </ul>
+
+        <div class="atencao">
+            <b>⚡ Atenção:</b> A transversalidade significa que a humanização não é um programa isolado, mas deve estar presente em todas as políticas e ações do SUS.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Diretrizes do HumanizaSUS                         -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – DIRETRIZES DA POLÍTICA NACIONAL DE HUMANIZAÇÃO</h2>
+
+        <p>O HumanizaSUS atua com base em diretrizes que orientam a implementação em todo o SUS:</p>
+
+        <ul>
+            <li><b>Acolhimento:</b> receber e ouvir o usuário com atenção, responsabilidade e resolutividade, desde sua chegada até sua saída do serviço.</li>
+            <li><b>Ambiência:</b> criar espaços saudáveis, acolhedores e confortáveis, que respeitem a privacidade e promovam o bem-estar.</li>
+            <li><b>Clínica Ampliada:</b> abordagem integral que considera o sujeito em sua totalidade (biológico, psicológico, social e cultural) e envolve equipes multiprofissionais.</li>
+            <li><b>Gestão Participativa:</b> envolvimento de trabalhadores e usuários nos processos decisórios, por meio de colegiados, conselhos e ouvidorias.</li>
+            <li><b>Valorização do Trabalhador:</b> reconhecimento, capacitação, saúde do trabalhador e melhoria das condições de trabalho.</li>
+            <li><b>Defesa dos Direitos dos Usuários:</b> garantia de acesso, informação, sigilo, autonomia e participação.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>Dica para provas:</b> O acolhimento é uma das diretrizes mais cobradas. Ele não se resume a "receber bem", mas envolve escuta qualificada, classificação de risco e resolutividade.</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Dispositivos e Estratégias                         -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – DISPOSITIVOS E ESTRATÉGIAS DO HUMANIZASUS</h2>
+        <p>A PNH opera por meio de dispositivos práticos que viabilizam suas diretrizes no cotidiano dos serviços.</p>
+
+        <h3>5.1. Principais Dispositivos</h3>
+        <ul>
+            <li><b>Grupos de Trabalho de Humanização (GTH):</b> equipes locais que implementam a PNH nos serviços de saúde.</li>
+            <li><b>Projetos de Acolhimento com Classificação de Risco:</b> organização do fluxo de atendimento baseado na gravidade.</li>
+            <li><b>Projetos de Ambiência:</b> melhorias físicas e organizacionais dos espaços de saúde.</li>
+            <li><b>Rodas de Conversa e Grupos de Escuta:</b> espaços de diálogo entre trabalhadores, usuários e gestores.</li>
+            <li><b>Visitas Abertas e Acompanhamento:</b> incentivo à presença de acompanhantes e familiares.</li>
+            <li><b>Educação Permanente:</b> capacitação continuada dos trabalhadores para a humanização.</li>
+        </ul>
+
+        <h3>5.2. Estratégias de Implementação</h3>
+        <ul>
+            <li><b>Formação de apoiadores institucionais</b> para multiplicar a PNH em todo o território.</li>
+            <li><b>Articulação com os Conselhos de Saúde</b> para garantir o controle social.</li>
+            <li><b>Integração com a Rede de Atenção Psicossocial (RAPS)</b> e outras redes.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Macro-objetivos e Implicações                      -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – MACRO-OBJETIVOS E IMPLICAÇÕES DO HUMANIZASUS</h2>
+
+        <h3>6.1. Macro-objetivos da PNH</h3>
+        <ul>
+            <li><b>Valorização do trabalho:</b> fortalecimento dos vínculos profissionais e melhoria das condições laborais.</li>
+            <li><b>Transformação dos modos de gestão:</b> gestão democrática, compartilhada e transparente.</li>
+            <li><b>Fortalecimento da atenção integral:</b> cuidado centrado no usuário, com acolhimento e resolutividade.</li>
+            <li><b>Inclusão e equidade:</b> redução das desigualdades e combate a todas as formas de preconceito.</li>
+        </ul>
+
+        <h3>6.2. Implicações Práticas</h3>
+        <ul>
+            <li>Melhoria da satisfação dos usuários e da qualidade do atendimento.</li>
+            <li>Redução do estresse e do adoecimento dos trabalhadores.</li>
+            <li>Aumento da resolutividade e da eficiência dos serviços.</li>
+            <li>Fortalecimento da democracia e do controle social.</li>
+        </ul>
+
+        <h3>6.3. O HumanizaSUS na Prática</h3>
+        <p>O HumanizaSUS não é um "programa" a ser implantado, mas uma <b>política transversal</b> que deve ser vivenciada no dia a dia de todos os serviços de saúde, em todas as regiões do país.</p>
+        <div class="dica">
+            <b>💡 Dica Final:</b> Em concursos, o HumanizaSUS é frequentemente associado à <b>humanização do atendimento</b>, ao <b>acolhimento</b> e à <b>valorização dos trabalhadores</b>. Memorize as diretrizes e os dispositivos.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Conceito) – O HumanizaSUS é a política nacional de:</p>
+            <div class="alternativas">
+                a) Atenção Básica.<br>
+                b) Humanização da Atenção e Gestão do SUS.<br>
+                c) Saúde da Família.<br>
+                d) Vigilância Sanitária.<br>
+                e) Saúde Mental.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Histórico) – O HumanizaSUS foi criado pelo Ministério da Saúde no ano de:</p>
+            <div class="alternativas">
+                a) 1988.<br>
+                b) 1990.<br>
+                c) 2003.<br>
+                d) 2011.<br>
+                e) 2015.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Objetivos) – São objetivos do HumanizaSUS, EXCETO:</p>
+            <div class="alternativas">
+                a) Valorizar os trabalhadores do SUS.<br>
+                b) Garantir o protagonismo dos usuários.<br>
+                c) Fortalecer a gestão participativa.<br>
+                d) Centralizar as decisões no nível federal.<br>
+                e) Humanizar as relações entre profissionais e usuários.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Princípios) – O princípio do HumanizaSUS que se refere à responsabilidade compartilhada entre gestores, trabalhadores e usuários é a:</p>
+            <div class="alternativas">
+                a) Autonomia.<br>
+                b) Corresponsabilidade.<br>
+                c) Solidariedade.<br>
+                d) Transversalidade.<br>
+                e) Inclusão.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Diretrizes) – A diretriz da PNH que se refere à recepção do usuário com escuta qualificada e classificação de risco é o:</p>
+            <div class="alternativas">
+                a) Acolhimento.<br>
+                b) Ambiência.<br>
+                c) Clínica Ampliada.<br>
+                d) Gestão Participativa.<br>
+                e) Valorização do Trabalhador.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Diretrizes) – A diretriz que busca criar espaços saudáveis, acolhedores e confortáveis nos serviços de saúde é a:</p>
+            <div class="alternativas">
+                a) Acolhimento.<br>
+                b) Ambiência.<br>
+                c) Clínica Ampliada.<br>
+                d) Gestão Participativa.<br>
+                e) Defesa dos Direitos dos Usuários.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Dispositivos) – Os Grupos de Trabalho de Humanização (GTH) são dispositivos que:</p>
+            <div class="alternativas">
+                a) Substituem os Conselhos de Saúde.<br>
+                b) Implementam a PNH nos serviços de saúde.<br>
+                c) Realizam a gestão financeira do SUS.<br>
+                d) Fiscalizam as ações de vigilância sanitária.<br>
+                e) Coordenam a Atenção Básica.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Princípios) – O princípio da transversalidade, no HumanizaSUS, significa que:</p>
+            <div class="alternativas">
+                a) A humanização deve permear todas as ações e serviços do SUS.<br>
+                b) A humanização é um programa isolado.<br>
+                c) A humanização é restrita à atenção hospitalar.<br>
+                d) A humanização é uma ação exclusiva da gestão federal.<br>
+                e) A humanização se aplica apenas aos trabalhadores.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Macro-objetivos) – São macro-objetivos da PNH, EXCETO:</p>
+            <div class="alternativas">
+                a) Valorização do trabalho.<br>
+                b) Transformação dos modos de gestão.<br>
+                c) Fortalecimento da atenção integral.<br>
+                d) Privatização dos serviços de saúde.<br>
+                e) Inclusão e equidade.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Diretrizes) – A Clínica Ampliada, como diretriz do HumanizaSUS, propõe uma abordagem que considera o sujeito em sua:</p>
+            <div class="alternativas">
+                a) Totalidade (biológica, psicológica, social e cultural).<br>
+                b) Dimensão biológica apenas.<br>
+                c) Dimensão psicológica apenas.<br>
+                d) Dimensão social apenas.<br>
+                e) Dimensão cultural apenas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Dispositivos) – O Projeto de Acolhimento com Classificação de Risco organiza o fluxo de atendimento com base na:</p>
+            <div class="alternativas">
+                a) Ordem de chegada.<br>
+                b) Gravidade do estado do usuário.<br>
+                c) Idade do usuário.<br>
+                d) Profissão do usuário.<br>
+                e) Local de residência.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Objetivos) – O HumanizaSUS busca fortalecer a gestão participativa, envolvendo:</p>
+            <div class="alternativas">
+                a) Apenas os gestores.<br>
+                b) Apenas os trabalhadores.<br>
+                c) Trabalhadores e usuários nos processos decisórios.<br>
+                d) Apenas os conselheiros de saúde.<br>
+                e) Apenas os prestadores de serviços.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Diretrizes) – A diretriz que trata da defesa dos direitos dos usuários inclui, entre outros:</p>
+            <div class="alternativas">
+                a) Garantia de acesso, informação, sigilo, autonomia e participação.<br>
+                b) Apenas garantia de acesso.<br>
+                c) Apenas garantia de sigilo.<br>
+                d) Apenas garantia de autonomia.<br>
+                e) Apenas garantia de informação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Princípios e Diretrizes) – Analise as afirmativas:</p>
+            <p>(   ) A corresponsabilidade é um princípio do HumanizaSUS.<br>
+            (   ) O acolhimento é uma diretriz da PNH.<br>
+            (   ) A transversalidade significa que a humanização é restrita à atenção hospitalar.<br>
+            (   ) A Clínica Ampliada considera o sujeito em sua totalidade.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Dispositivos e Estratégias) – Analise as afirmativas:</p>
+            <p>(   ) Os Grupos de Trabalho de Humanização (GTH) são dispositivos locais para implementar a PNH.<br>
+            (   ) A ambiência refere-se à criação de espaços saudáveis e acolhedores.<br>
+            (   ) O HumanizaSUS não prevê a participação de usuários na gestão.<br>
+            (   ) A educação permanente é uma estratégia da PNH.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (V/F – Macro-objetivos) – Analise as afirmativas:</p>
+            <p>(   ) A valorização do trabalho é um macro-objetivo do HumanizaSUS.<br>
+            (   ) A transformação dos modos de gestão visa a gestão democrática.<br>
+            (   ) O HumanizaSUS busca a centralização das decisões.<br>
+            (   ) A inclusão e equidade são macro-objetivos da PNH.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Diretrizes) – A diretriz do HumanizaSUS que envolve a abordagem integral do sujeito por equipes multiprofissionais é a:</p>
+            <div class="alternativas">
+                a) Acolhimento.<br>
+                b) Ambiência.<br>
+                c) Clínica Ampliada.<br>
+                d) Gestão Participativa.<br>
+                e) Valorização do Trabalhador.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Objetivos) – O HumanizaSUS foi instituído por qual portaria?</p>
+            <div class="alternativas">
+                a) Portaria GM/MS nº 881, de 19 de maio de 2003.<br>
+                b) Portaria GM/MS nº 992, de 13 de maio de 2009.<br>
+                c) Portaria GM/MS nº 2.836, de 1º de dezembro de 2011.<br>
+                d) Portaria GM/MS nº 230, de 7 de março de 2023.<br>
+                e) Portaria GM/MS nº 1.526, de 11 de outubro de 2023.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Princípios) – O princípio que reconhece a capacidade de cada pessoa de decidir sobre sua vida e seu cuidado é a:</p>
+            <div class="alternativas">
+                a) Autonomia.<br>
+                b) Corresponsabilidade.<br>
+                c) Solidariedade.<br>
+                d) Transversalidade.<br>
+                e) Inclusão.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Dispositivos) – As Rodas de Conversa e Grupos de Escuta são dispositivos que promovem:</p>
+            <div class="alternativas">
+                a) O diálogo entre trabalhadores, usuários e gestores.<br>
+                b) A avaliação de desempenho dos servidores.<br>
+                c) A fiscalização financeira do SUS.<br>
+                d) A contratação de novos profissionais.<br>
+                e) A distribuição de medicamentos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Consolidação) – Analise as afirmativas:</p>
+            <p>(   ) O HumanizaSUS valoriza a diversidade e combate a discriminação.<br>
+            (   ) O acolhimento envolve apenas a recepção cordial do usuário.<br>
+            (   ) A ambiência é uma diretriz que trata da infraestrutura dos serviços.<br>
+            (   ) A PNH é uma política transversal do SUS.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Diretrizes) – A gestão participativa, como diretriz do HumanizaSUS, envolve a criação de espaços como:</p>
+            <div class="alternativas">
+                a) Conselhos de Saúde e Ouvidorias.<br>
+                b) Apenas os Conselhos de Saúde.<br>
+                c) Apenas as Ouvidorias.<br>
+                d) Apenas as Conferências de Saúde.<br>
+                e) Apenas os Sindicatos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (Objetivos) – O HumanizaSUS busca transformar os modos de gestão, promovendo uma gestão:</p>
+            <div class="alternativas">
+                a) Autoritária e centralizada.<br>
+                b) Democrática, compartilhada e transparente.<br>
+                c) Exclusivamente técnica.<br>
+                d) Baseada em interesses privados.<br>
+                e) Verticalizada.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (Dispositivos) – As visitas abertas e o incentivo à presença de acompanhantes são práticas que promovem:</p>
+            <div class="alternativas">
+                a) O isolamento do usuário.<br>
+                b) A humanização do atendimento.<br>
+                c) A redução de custos.<br>
+                d) A burocratização dos serviços.<br>
+                e) A centralização do cuidado.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Final) – Analise as afirmativas:</p>
+            <p>(   ) O HumanizaSUS é uma política exclusiva do nível federal.<br>
+            (   ) A Clínica Ampliada é uma diretriz da PNH.<br>
+            (   ) A valorização do trabalhador é um macro-objetivo do HumanizaSUS.<br>
+            (   ) O acolhimento envolve a classificação de risco.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – V – V<br>b) V – F – V – F<br>c) F – V – F – V<br>d) V – V – F – V<br>e) F – F – V – V
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-C</b> | <b>3-D</b> | <b>4-B</b> | <b>5-A</b> | <b>6-B</b> | <b>7-B</b> | <b>8-A</b> | <b>9-D</b> | <b>10-A</b></p>
+            <p><b>11-B</b> | <b>12-C</b> | <b>13-A</b> | <b>14-A</b> | <b>15-A</b> | <b>16-A</b> | <b>17-C</b> | <b>18-A</b> | <b>19-A</b> | <b>20-A</b></p>
+            <p><b>21-A</b> | <b>22-A</b> | <b>23-B</b> | <b>24-B</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,V,F,V); Q15 (V,V,F,V); Q16 (V,V,F,V); Q21 (V,F,V,V); Q25 (F,V,V,V).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

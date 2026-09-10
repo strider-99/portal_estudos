@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - SUS: Portaria 1.526/2023 - PNAISPD e RCPD</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #eef4f8;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #0d5a7a;
+            text-align: center;
+            border-bottom: 3px solid #1a8ab5;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #0d5a7a;
+            background-color: #d6eaf8;
+            padding: 10px 15px;
+            border-left: 6px solid #1a8ab5;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #0a4a6a;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d6eaf8;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .atencao {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .atencao b {
+            color: #922b21;
+        }
+        .exemplo {
+            background-color: #eafaf1;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #1a8ab5;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5fbf8;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #1a8ab5;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #0d5a7a;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #1a8ab5;
+            color: white;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+            color: white;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>🛡️ PNAISPD E REDE DE CUIDADOS À PESSOA COM DEFICIÊNCIA (RCPD)</h1>
+    <p style="text-align:center; font-size:18px; color:#0d5a7a;"><b>Portaria GM/MS nº 1.526, de 11 de outubro de 2023</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Portaria GM/MS nº 1.526, de 11 de outubro de 2023</b>, altera as Portarias de Consolidação GM/MS nºs 2, 3 e 6, de 28 de setembro de 2017, para dispor sobre a <b>Política Nacional de Atenção Integral à Saúde da Pessoa com Deficiência (PNAISPD)</b> e a <b>Rede de Cuidados à Pessoa com Deficiência (RCPD)</b> no âmbito do Sistema Único de Saúde.</p>
+        <p>Esta portaria é o mais recente marco legal para a atenção à saúde da pessoa com deficiência, integrando e atualizando as diretrizes existentes e fortalecendo a <b>rede de cuidados</b> para garantir a <b>atenção integral, humanizada e resolutiva</b> a esse público.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender os fundamentos, objetivos, diretrizes e organização da PNAISPD e da RCPD, instituídas pela Portaria 1.526/2023, com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Contexto e Fundamentos da PNAISPD – pág. 2</li>
+            <li><b>Módulo II:</b> Objetivos e Princípios da PNAISPD – pág. 3</li>
+            <li><b>Módulo III:</b> Rede de Cuidados à Pessoa com Deficiência (RCPD) – pág. 4</li>
+            <li><b>Módulo IV:</b> Componentes da RCPD – pág. 5</li>
+            <li><b>Módulo V:</b> Portarias de Consolidação Alteradas (nºs 2, 3 e 6) – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Contexto e Fundamentos                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – CONTEXTO E FUNDAMENTOS DA PNAISPD</h2>
+
+        <h3>2.1. Contexto Histórico</h3>
+        <ul>
+            <li><b>2003:</b> Criação da Política Nacional de Atenção à Saúde da Pessoa com Deficiência (Portaria GM/MS nº 1.060/GM).</li>
+            <li><b>2015:</b> Lei 13.146/2015 (Estatuto da Pessoa com Deficiência) estabelece diretrizes para a inclusão.</li>
+            <li><b>2017:</b> Portarias de Consolidação GM/MS nºs 2, 3 e 6 organizam a atenção à saúde.</li>
+            <li><b>2023:</b> Portaria GM/MS nº 1.526, de 11 de outubro de 2023, atualiza e consolida a PNAISPD e institui a RCPD.</li>
+        </ul>
+
+        <h3>2.2. Fundamentos da PNAISPD</h3>
+        <ul>
+            <li><b>Convenção sobre os Direitos das Pessoas com Deficiência</b> (ONU, 2006).</li>
+            <li><b>Lei 13.146/2015</b> (Estatuto da Pessoa com Deficiência).</li>
+            <li><b>Princípios do SUS:</b> universalidade, integralidade, equidade, descentralização e participação social.</li>
+            <li><b>Reconhecimento da pessoa com deficiência</b> como sujeito de direitos e com necessidades específicas de saúde.</li>
+        </ul>
+
+        <h3>2.3. Definição de Pessoa com Deficiência (conforme Lei 13.146/2015)</h3>
+        <p>Pessoa com deficiência é aquela que tem impedimento de longo prazo de natureza <b>física, mental, intelectual ou sensorial</b>, o qual, em interação com barreiras, pode obstruir sua participação plena e efetiva na sociedade.</p>
+
+        <div class="exemplo">
+            <p><b>Frase-chave:</b> "A PNAISPD visa promover a saúde da pessoa com deficiência em todas as fases do ciclo da vida, garantindo a atenção integral e a inclusão social."</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Objetivos e Princípios                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – OBJETIVOS E PRINCÍPIOS DA PNAISPD</h2>
+
+        <h3>3.1. Objetivo Geral</h3>
+        <ul>
+            <li><b>Promover a saúde integral da pessoa com deficiência</b>, com atenção em todas as fases do ciclo da vida, garantindo o acesso universal, a equidade e a resolutividade.</li>
+        </ul>
+
+        <h3>3.2. Objetivos Específicos</h3>
+        <ul>
+            <li><b>I –</b> Garantir a <b>atenção integral</b> à saúde da pessoa com deficiência, em todos os níveis de complexidade.</li>
+            <li><b>II –</b> Organizar a <b>Rede de Cuidados à Pessoa com Deficiência (RCPD)</b> no âmbito do SUS.</li>
+            <li><b>III –</b> Promover a <b>prevenção de agravos</b> e a <b>promoção da saúde</b> da pessoa com deficiência.</li>
+            <li><b>IV –</b> Garantir a <b>acessibilidade</b> e a <b>eliminação de barreiras</b> nos serviços de saúde.</li>
+            <li><b>V –</b> Fortalecer a <b>participação social</b> das pessoas com deficiência no SUS.</li>
+        </ul>
+
+        <h3>3.3. Princípios da PNAISPD</h3>
+        <ul>
+            <li><b>Universalidade:</b> Acesso a todos os níveis de atenção.</li>
+            <li><b>Integralidade:</b> Cuidado biopsicossocial, com ações de promoção, prevenção, reabilitação e manutenção.</li>
+            <li><b>Equidade:</b> Redução das desigualdades e garantia de acesso às pessoas com deficiência.</li>
+            <li><b>Descentralização:</b> Gestão compartilhada entre União, Estados e Municípios.</li>
+            <li><b>Participação Social:</b> Envolvimento das pessoas com deficiência e suas organizações.</li>
+            <li><b>Intersetorialidade:</b> Articulação com outras políticas (educação, assistência social, trabalho).</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Rede de Cuidados à Pessoa com Deficiência (RCPD)  -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – REDE DE CUIDADOS À PESSOA COM DEFICIÊNCIA (RCPD)</h2>
+
+        <p>A <b>Rede de Cuidados à Pessoa com Deficiência (RCPD)</b> é a estrutura organizacional que integra os serviços de saúde para garantir a atenção integral à pessoa com deficiência no SUS.</p>
+
+        <h3>4.1. Objetivos da RCPD</h3>
+        <ul>
+            <li><b>I –</b> Garantir a <b>atenção integral</b> à pessoa com deficiência em todos os níveis de complexidade.</li>
+            <li><b>II –</b> Promover a <b>articulação</b> entre os diferentes pontos de atenção (Atenção Básica, Atenção Especializada, Serviços de Reabilitação).</li>
+            <li><b>III –</b> Garantir a <b>referência e contrarreferência</b> entre os serviços.</li>
+            <li><b>IV –</b> Assegurar a <b>continuidade do cuidado</b> e a <b>longitudinalidade</b>.</li>
+            <li><b>V –</b> Promover a <b>acessibilidade</b> e a <b>eliminação de barreiras</b> nos serviços.</li>
+        </ul>
+
+        <h3>4.2. Diretrizes da RCPD</h3>
+        <ul>
+            <li><b>Integralidade:</b> Ações de promoção, prevenção, reabilitação e manutenção da saúde.</li>
+            <li><b>Humanização:</b> Atendimento respeitoso, com acolhimento e escuta qualificada.</li>
+            <li><b>Acessibilidade:</b> Adaptações arquitetônicas, comunicacionais e atitudinais.</li>
+            <li><b>Equidade:</b> Ações específicas para grupos mais vulneráveis.</li>
+            <li><b>Intersetorialidade:</b> Articulação com outros setores (educação, assistência social, trabalho).</li>
+        </ul>
+
+        <div class="atencao">
+            <b>⚡ Atenção:</b> A RCPD é uma rede temática, assim como a Rede de Atenção Psicossocial (RAPS) e a Rede de Urgência e Emergência (RUE). Ela organiza os serviços para a pessoa com deficiência.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Componentes da RCPD                                -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – COMPONENTES DA RCPD</h2>
+
+        <p>A RCPD é composta por diferentes pontos de atenção, organizados em níveis de complexidade:</p>
+
+        <h3>5.1. Atenção Básica</h3>
+        <ul>
+            <li><b>Unidades Básicas de Saúde (UBS):</b> Atendimento à pessoa com deficiência, com ações de prevenção, promoção e encaminhamento.</li>
+            <li><b>Equipes de Saúde da Família (ESF):</b> Acompanhamento longitudinal e continuidade do cuidado.</li>
+            <li><b>Núcleo de Apoio à Saúde da Família (NASF):</b> Apoio matricial com profissionais especializados (fonoaudiólogo, psicólogo, terapeuta ocupacional, etc.).</li>
+        </ul>
+
+        <h3>5.2. Atenção Especializada</h3>
+        <ul>
+            <li><b>Serviços de Reabilitação:</b> Física, auditiva, visual, intelectual e mental (Centros Especializados em Reabilitação – CER, oficinas ortopédicas, etc.).</li>
+            <li><b>Consultórios especializados:</b> Neurologia, oftalmologia, otorrinolaringologia, ortopedia, etc.</li>
+            <li><b>Serviços de diagnóstico:</b> Exames de imagem, laboratoriais e genéticos.</li>
+        </ul>
+
+        <h3>5.3. Atenção Hospitalar</h3>
+        <ul>
+            <li><b>Hospitais gerais:</b> Atendimento a pessoas com deficiência em internação.</li>
+            <li><b>Hospitais especializados:</b> Reabilitação, neurocirurgia, oftalmologia, etc.</li>
+        </ul>
+
+        <h3>5.4. Atenção Domiciliar</h3>
+        <ul>
+            <li><b>Programa Melhor em Casa:</b> Atendimento domiciliar para pessoas com deficiência com dificuldade de locomoção.</li>
+        </ul>
+
+        <h3>5.5. Urgência e Emergência</h3>
+        <ul>
+            <li><b>Unidades de Pronto Atendimento (UPA):</b> Atendimento a pessoas com deficiência em situações de urgência.</li>
+            <li><b>Serviços de Atendimento Móvel de Urgência (SAMU):</b> Transporte e atendimento pré-hospitalar.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> Os <b>Centros Especializados em Reabilitação (CER)</b> são serviços de referência para a reabilitação da pessoa com deficiência no SUS.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Portarias de Consolidação Alteradas                -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – PORTARIAS DE CONSOLIDAÇÃO ALTERADAS (NºS 2, 3 E 6)</h2>
+
+        <p>A Portaria 1.526/2023 alterou as seguintes Portarias de Consolidação GM/MS, de 28 de setembro de 2017:</p>
+
+        <h3>6.1. Portaria de Consolidação nº 2</h3>
+        <ul>
+            <li><b>O que consolida:</b> Normas sobre a <b>organização e financiamento</b> das ações e serviços de saúde.</li>
+            <li><b>Alteração:</b> Inclusão de dispositivos sobre a <b>PNAISPD</b> e a <b>RCPD</b> na organização da rede de atenção.</li>
+        </ul>
+
+        <h3>6.2. Portaria de Consolidação nº 3</h3>
+        <ul>
+            <li><b>O que consolida:</b> Normas sobre <b>programas e políticas de saúde</b> específicas.</li>
+            <li><b>Alteração:</b> Atualização das diretrizes da <b>Política Nacional de Atenção à Saúde da Pessoa com Deficiência</b>, incorporando a PNAISPD.</li>
+        </ul>
+
+        <h3>6.3. Portaria de Consolidação nº 6</h3>
+        <ul>
+            <li><b>O que consolida:</b> Normas sobre <b>gestão do trabalho e educação em saúde</b>.</li>
+            <li><b>Alteração:</b> Inclusão de dispositivos sobre a <b>formação de recursos humanos</b> para a atenção à pessoa com deficiência, com ênfase na <b>humanização</b> e na <b>acessibilidade</b>.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>Dica para provas:</b> A Portaria 1.526/2023 é a mais recente e atualiza as três principais Portarias de Consolidação do SUS (nº 2, 3 e 6), integrando a PNAISPD e a RCPD à organização do sistema.</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Conceito) – A Portaria GM/MS nº 1.526/2023 dispõe sobre a:</p>
+            <div class="alternativas">
+                a) Política Nacional de Atenção Integral à Saúde da Pessoa com Deficiência (PNAISPD) e a Rede de Cuidados à Pessoa com Deficiência (RCPD).<br>
+                b) Política Nacional de Saúde Integral LGBT.<br>
+                c) Política Nacional de Saúde Integral da População Negra.<br>
+                d) Programa Nacional de Equidade de Gênero e Raça.<br>
+                e) Lei 13.146/2015.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Portarias Alteradas) – A Portaria 1.526/2023 altera as Portarias de Consolidação GM/MS nºs 2, 3 e 6, de 28 de setembro de:</p>
+            <div class="alternativas">
+                a) 2015.<br>
+                b) 2017.<br>
+                c) 2019.<br>
+                d) 2021.<br>
+                e) 2023.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Objetivo Geral) – O objetivo geral da PNAISPD é:</p>
+            <div class="alternativas">
+                a) Promover a saúde integral da pessoa com deficiência, com atenção em todas as fases do ciclo da vida.<br>
+                b) Garantir o acesso da pessoa com deficiência apenas à atenção básica.<br>
+                c) Reduzir o número de pessoas com deficiência no Brasil.<br>
+                d) Centralizar as ações no Ministério da Saúde.<br>
+                e) Excluir a pessoa com deficiência do SUS.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Princípios) – São princípios da PNAISPD, EXCETO:</p>
+            <div class="alternativas">
+                a) Universalidade.<br>
+                b) Integralidade.<br>
+                c) Equidade.<br>
+                d) Centralização.<br>
+                e) Participação Social.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (RCPD) – A Rede de Cuidados à Pessoa com Deficiência (RCPD) tem como objetivo:</p>
+            <div class="alternativas">
+                a) Garantir a atenção integral à pessoa com deficiência em todos os níveis de complexidade.<br>
+                b) Substituir a Atenção Básica.<br>
+                c) Excluir a pessoa com deficiência do SUS.<br>
+                d) Centralizar os serviços no nível federal.<br>
+                e) Reduzir o número de serviços de reabilitação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Componentes) – São componentes da RCPD, EXCETO:</p>
+            <div class="alternativas">
+                a) Atenção Básica.<br>
+                b) Atenção Especializada.<br>
+                c) Atenção Hospitalar.<br>
+                d) Atenção Domiciliar.<br>
+                e) Atenção Psiquiátrica.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Portaria de Consolidação nº 2) – A Portaria de Consolidação nº 2 trata da:</p>
+            <div class="alternativas">
+                a) Organização e financiamento das ações e serviços de saúde.<br>
+                b) Programas e políticas de saúde específicas.<br>
+                c) Gestão do trabalho e educação em saúde.<br>
+                d) Atenção à saúde indígena.<br>
+                e) Vigilância sanitária.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Portaria de Consolidação nº 3) – A Portaria de Consolidação nº 3 trata de:</p>
+            <div class="alternativas">
+                a) Programas e políticas de saúde específicas.<br>
+                b) Organização e financiamento das ações e serviços de saúde.<br>
+                c) Gestão do trabalho e educação em saúde.<br>
+                d) Atenção à saúde indígena.<br>
+                e) Vigilância sanitária.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Portaria de Consolidação nº 6) – A Portaria de Consolidação nº 6 trata da:</p>
+            <div class="alternativas">
+                a) Gestão do trabalho e educação em saúde.<br>
+                b) Organização e financiamento das ações e serviços de saúde.<br>
+                c) Programas e políticas de saúde específicas.<br>
+                d) Atenção à saúde indígena.<br>
+                e) Vigilância sanitária.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Acessibilidade) – A PNAISPD prevê a garantia de acessibilidade nos serviços de saúde, incluindo:</p>
+            <div class="alternativas">
+                a) Adaptações arquitetônicas, comunicacionais e atitudinais.<br>
+                b) Apenas adaptações arquitetônicas.<br>
+                c) Apenas adaptações comunicacionais.<br>
+                d) Apenas adaptações atitudinais.<br>
+                e) Apenas adaptações tecnológicas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Serviços de Reabilitação) – Os Centros Especializados em Reabilitação (CER) são serviços de referência para:</p>
+            <div class="alternativas">
+                a) Reabilitação física, auditiva, visual, intelectual e mental.<br>
+                b) Apenas reabilitação física.<br>
+                c) Apenas reabilitação auditiva.<br>
+                d) Apenas reabilitação visual.<br>
+                e) Apenas reabilitação intelectual.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Atenção Domiciliar) – O Programa Melhor em Casa é um serviço de atenção domiciliar que atende:</p>
+            <div class="alternativas">
+                a) Pessoas com deficiência com dificuldade de locomoção.<br>
+                b) Apenas idosos.<br>
+                c) Apenas crianças.<br>
+                d) Apenas gestantes.<br>
+                e) Apenas pessoas com doenças crônicas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Fundamentos) – A PNAISPD fundamenta-se, entre outros, na:</p>
+            <div class="alternativas">
+                a) Convenção sobre os Direitos das Pessoas com Deficiência (ONU).<br>
+                b) Lei 8.080/90.<br>
+                c) Lei 8.142/90.<br>
+                d) Lei 10.741/2003.<br>
+                e) Portaria 230/2023.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Conceitos e Objetivos) – Analise as afirmativas:</p>
+            <p>(   ) A Portaria 1.526/2023 institui a PNAISPD e a RCPD.<br>
+            (   ) A PNAISPD tem como objetivo promover a saúde integral da pessoa com deficiência.<br>
+            (   ) A RCPD substitui a Atenção Básica.<br>
+            (   ) A Portaria 1.526/2023 altera a Portaria de Consolidação nº 6.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Componentes) – Analise as afirmativas:</p>
+            <p>(   ) A Atenção Básica é um componente da RCPD.<br>
+            (   ) A Atenção Especializada não faz parte da RCPD.<br>
+            (   ) A Atenção Hospitalar é um componente da RCPD.<br>
+            (   ) A Atenção Domiciliar não está prevista na RCPD.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – F<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (Diretrizes da RCPD) – São diretrizes da RCPD, EXCETO:</p>
+            <div class="alternativas">
+                a) Integralidade.<br>
+                b) Humanização.<br>
+                c) Acessibilidade.<br>
+                d) Centralização.<br>
+                e) Equidade.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Portaria de Consolidação) – A Portaria de Consolidação nº 3 foi alterada para atualizar as diretrizes da:</p>
+            <div class="alternativas">
+                a) Política Nacional de Atenção à Saúde da Pessoa com Deficiência.<br>
+                b) Política Nacional de Atenção Básica.<br>
+                c) Política Nacional de Saúde Mental.<br>
+                d) Política Nacional de Saúde da Família.<br>
+                e) Política Nacional de Vigilância Sanitária.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Acessibilidade) – A acessibilidade nos serviços de saúde inclui a eliminação de barreiras:</p>
+            <div class="alternativas">
+                a) Arquitetônicas, comunicacionais e atitudinais.<br>
+                b) Apenas arquitetônicas.<br>
+                c) Apenas comunicacionais.<br>
+                d) Apenas atitudinais.<br>
+                e) Apenas tecnológicas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (SAMU) – O Serviço de Atendimento Móvel de Urgência (SAMU) é um serviço que faz parte da RCPD no componente de:</p>
+            <div class="alternativas">
+                a) Urgência e Emergência.<br>
+                b) Atenção Básica.<br>
+                c) Atenção Especializada.<br>
+                d) Atenção Domiciliar.<br>
+                e) Atenção Hospitalar.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Atenção Domiciliar) – O Programa Melhor em Casa é um serviço de:</p>
+            <div class="alternativas">
+                a) Atenção Domiciliar.<br>
+                b) Atenção Hospitalar.<br>
+                c) Atenção Básica.<br>
+                d) Atenção Especializada.<br>
+                e) Urgência e Emergência.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Consolidação) – Analise as afirmativas:</p>
+            <p>(   ) A Portaria 1.526/2023 altera a Portaria de Consolidação nº 2, que trata da organização e financiamento.<br>
+            (   ) A Portaria 1.526/2023 altera a Portaria de Consolidação nº 3, que trata de programas e políticas de saúde.<br>
+            (   ) A Portaria 1.526/2023 não altera a Portaria de Consolidação nº 6.<br>
+            (   ) A Portaria 1.526/2023 institui a RCPD.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (CER) – Os Centros Especializados em Reabilitação (CER) são serviços de:</p>
+            <div class="alternativas">
+                a) Atenção Especializada.<br>
+                b) Atenção Básica.<br>
+                c) Atenção Hospitalar.<br>
+                d) Atenção Domiciliar.<br>
+                e) Urgência e Emergência.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (Princípios) – O princípio da integralidade, na PNAISPD, significa:</p>
+            <div class="alternativas">
+                a) Cuidado biopsicossocial, com ações de promoção, prevenção, reabilitação e manutenção.<br>
+                b) Apenas ações curativas.<br>
+                c) Apenas ações preventivas.<br>
+                d) Apenas ações de reabilitação.<br>
+                e) Apenas ações de promoção.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (Histórico) – A primeira Política Nacional de Atenção à Saúde da Pessoa com Deficiência foi instituída pela Portaria GM/MS nº 1.060/GM, no ano de:</p>
+            <div class="alternativas">
+                a) 2003.<br>
+                b) 2009.<br>
+                c) 2011.<br>
+                d) 2015.<br>
+                e) 2023.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Final) – Analise as afirmativas:</p>
+            <p>(   ) A Portaria 1.526/2023 institui a PNAISPD e a RCPD.<br>
+            (   ) A RCPD é uma rede temática do SUS.<br>
+            (   ) A PNAISPD tem como princípio a centralização das decisões.<br>
+            (   ) A Portaria 1.526/2023 altera a Portaria de Consolidação nº 6.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-A</b> | <b>2-B</b> | <b>3-A</b> | <b>4-D</b> | <b>5-A</b> | <b>6-E</b> | <b>7-A</b> | <b>8-A</b> | <b>9-A</b> | <b>10-A</b></p>
+            <p><b>11-A</b> | <b>12-A</b> | <b>13-A</b> | <b>14-A</b> | <b>15-A</b> | <b>16-D</b> | <b>17-A</b> | <b>18-A</b> | <b>19-A</b> | <b>20-A</b></p>
+            <p><b>21-A</b> | <b>22-A</b> | <b>23-A</b> | <b>24-A</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,V,F,V); Q15 (V,F,V,F); Q21 (V,V,F,V); Q25 (V,V,F,V).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

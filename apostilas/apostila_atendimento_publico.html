@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Atendimento ao Público: Excelência e Qualidade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f7fa;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #0b5e6b;
+            text-align: center;
+            border-bottom: 3px solid #17a2b8;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #0b5e6b;
+            background-color: #e3f0f3;
+            padding: 10px 15px;
+            border-left: 6px solid #17a2b8;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #0a4a52;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d4ecec;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5fbfb;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #17a2b8;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #0b5e6b;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #17a2b8;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>🎯 ATENDIMENTO AO PÚBLICO: EXCELÊNCIA E QUALIDADE</h1>
+    <p style="text-align:center; font-size:18px; color:#0b5e6b;"><b>Excelência na recepção presencial e atendimento telefônico com foco no cidadão/cliente</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO: O ATENDIMENTO COMO CARTÃO DE VISITAS</h2>
+        <p>O <b>atendimento ao público</b> é o momento da verdade para qualquer organização. Seja presencial (na recepção, balcão ou guichê) ou por telefone, o atendimento é a principal interface entre a instituição e o cidadão/cliente. Um atendimento de excelência gera confiança, fidelização e uma imagem positiva da organização.</p>
+        <p>No serviço público, a excelência no atendimento é um dever constitucional, pautado pelos princípios da <b>eficiência</b>, <b>moralidade</b> e <b>impessoalidade</b>. O servidor público é o representante do Estado perante o cidadão.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Desenvolver as competências essenciais para um atendimento de excelência, dominando as técnicas de comunicação presencial e telefônica, cultivando a empatia, a resolutividade e a postura profissional, com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Excelência em Atendimento – Conceitos e Pilares – pág. 2</li>
+            <li><b>Módulo II:</b> Perfil e Habilidades do Atendente – pág. 3</li>
+            <li><b>Módulo III:</b> Atendimento Presencial (Recepção) – Etapas e Boas Práticas – pág. 4</li>
+            <li><b>Módulo IV:</b> Atendimento Telefônico – Técnicas e Etiqueta – pág. 5</li>
+            <li><b>Módulo V:</b> Gestão de Conflitos, Reclamações e Inteligência Emocional – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Excelência em Atendimento                          -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – EXCELÊNCIA EM ATENDIMENTO: CONCEITOS E PILARES</h2>
+        <h3>2.1. O que é Atendimento de Excelência?</h3>
+        <p>Atendimento de excelência vai além de "ser educado". É <b>superar as expectativas</b> do cidadão, oferecendo uma experiência positiva e resolutiva. Envolve agilidade, cortesia, clareza, empatia e, principalmente, a capacidade de resolver o problema apresentado.</p>
+
+        <h3>2.2. Pilares do Atendimento de Qualidade</h3>
+        <ul>
+            <li><b>Resolutividade:</b> não basta atender bem; é preciso resolver o problema ou encaminhar corretamente. O cidadão quer soluções.</li>
+            <li><b>Cortesia e Urbanidade:</b> tratamento respeitoso, educado e cordial, independentemente do humor do atendente.</li>
+            <li><b>Agilidade:</b> respeito ao tempo do cidadão. Atendimento rápido sem ser apressado.</li>
+            <li><b>Clareza na Comunicação:</b> usar linguagem acessível, evitar jargões técnicos, confirmar o entendimento.</li>
+            <li><b>Empatia:</b> colocar-se no lugar do outro, compreendendo suas necessidades e emoções.</li>
+            <li><b>Postura Profissional:</b> vestimenta adequada, higiene, postura corporal, tom de voz.</li>
+        </ul>
+
+        <h3>2.3. A Tríade do Atendimento</h3>
+        <p>Para o atendimento ser memorável e eficaz, deve alinhar três dimensões:</p>
+        <ul>
+            <li><b>Atendimento Técnico:</b> conhecimento do serviço/produto e dos procedimentos.</li>
+            <li><b>Atendimento Comportamental:</b> habilidades interpessoais (empatia, paciência, comunicação).</li>
+            <li><b>Atendimento Ambiental:</b> condições físicas do local (limpeza, conforto, sinalização).</li>
+        </ul>
+        <div class="dica">
+            <b>📌 Atenção:</b> No serviço público, o atendimento de excelência está diretamente ligado ao princípio da eficiência (art. 37, CF/88) e à Lei 13.460/2017 (Código de Defesa do Usuário dos Serviços Públicos).
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Perfil do Atendente                                -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – PERFIL E HABILIDADES DO ATENDENTE</h2>
+        <h3>3.1. Características Essenciais</h3>
+        <ul>
+            <li><b>Comunicação Assertiva:</b> saber falar e ouvir, expressar ideias com clareza e respeito.</li>
+            <li><b>Inteligência Emocional:</b> controlar as próprias emoções, principalmente em situações de estresse.</li>
+            <li><b>Proatividade:</b> antecipar necessidades, buscar soluções, não se limitar ao "não sei".</li>
+            <li><b>Flexibilidade:</b> adaptar-se a diferentes perfis de cidadãos e situações imprevistas.</li>
+            <li><b>Ética e Sigilo:</b> proteger as informações pessoais do cidadão e agir com imparcialidade.</li>
+        </ul>
+
+        <h3>3.2. A Escuta Ativa como Ferramenta-Chave</h3>
+        <p>A escuta ativa é a habilidade de ouvir com atenção plena, demonstrando interesse genuíno pelo que o cidadão tem a dizer. Envolve:</p>
+        <ul>
+            <li>Manter contato visual (presencial) ou postura atenta (telefone).</li>
+            <li>Não interromper o cidadão enquanto ele fala.</li>
+            <li>Fazer perguntas para esclarecer e aprofundar.</li>
+            <li>Parafrasear o conteúdo para confirmar o entendimento (ex.: "Então, se eu entendi bem, o senhor precisa de...").</li>
+        </ul>
+
+        <h3>3.3. Comunicação Não Verbal (Presencial)</h3>
+        <ul>
+            <li><b>Postura:</b> ereta, aberta, transmitindo confiança.</li>
+            <li><b>Expressão facial:</b> sorriso genuíno, expressão de acolhimento.</li>
+            <li><b>Gestos:</b> moderados, que reforcem a fala.</li>
+            <li><b>Contato visual:</b> fundamental para estabelecer conexão.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Atendimento Presencial (Recepção)                  -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – ATENDIMENTO PRESENCIAL (RECEPÇÃO)</h2>
+        <h3>4.1. A Primeira Impressão é a que Fica</h3>
+        <p>O atendimento presencial começa antes mesmo da fala. O <b>ambiente</b>, a <b>aparência</b> do atendente e sua <b>postura</b> já transmitem uma mensagem sobre a qualidade do serviço.</p>
+
+        <h3>4.2. Etapas do Atendimento Presencial</h3>
+        <ol>
+            <li><b>Acolhimento / Recepção:</b>
+                <ul>
+                    <li>Receber o cidadão com um sorriso e saudação cordial (ex.: "Bom dia! Como posso ajudar você?").</li>
+                    <li>Identificar-se (se for o caso) e identificar a demanda.</li>
+                </ul>
+            </li>
+            <li><b>Escuta e Compreensão:</b>
+                <ul>
+                    <li>Ouvir atentamente, sem pressa.</li>
+                    <li>Anotar informações essenciais (nome, CPF, número de processo, etc.).</li>
+                </ul>
+            </li>
+            <li><b>Análise e Encaminhamento:</b>
+                <ul>
+                    <li>Verificar se a demanda pode ser resolvida naquele momento ou se precisa de encaminhamento para outro setor.</li>
+                    <li>Se for encaminhar, explicar claramente o motivo e para onde o cidadão deve se dirigir (ou como será feito o contato).</li>
+                </ul>
+            </li>
+            <li><b>Resolução ou Retorno:</b>
+                <ul>
+                    <li>Dar uma resposta clara e objetiva.</li>
+                    <li>Se não for possível resolver na hora, estabelecer um prazo para retorno e cumprir.</li>
+                </ul>
+            </li>
+            <li><b>Despedida:</b>
+                <ul>
+                    <li>Encerrar de forma cordial (ex.: "Foi um prazer atender você. Tem mais alguma coisa em que eu possa ajudar?").</li>
+                    <li>Agradecer pela presença e pelo contato.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>4.3. Boas Práticas na Recepção</h3>
+        <ul>
+            <li>Manter o ambiente limpo, organizado e com sinalização clara.</li>
+            <li>Atender um cidadão por vez, com atenção exclusiva.</li>
+            <li>Evitar comer, beber ou usar o celular durante o atendimento.</li>
+            <li>Tratar todos com igualdade, sem discriminação ou favorecimento.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Atendimento Telefônico                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – ATENDIMENTO TELEFÔNICO: TÉCNICAS E ETIQUETA</h2>
+        <h3>5.1. Desafios do Telefone</h3>
+        <p>No atendimento telefônico, a comunicação é <b>exclusivamente verbal</b>. Não há contato visual, gestos ou expressões faciais. Por isso, o <b>tom de voz</b>, a <b>dicção</b> e a <b>organização</b> são elementos críticos.</p>
+
+        <h3>5.2. Etapas do Atendimento Telefônico</h3>
+        <ol>
+            <li><b>Atendimento e Identificação:</b>
+                <ul>
+                    <li>Atender até o terceiro toque.</li>
+                    <li>Identificar-se corretamente (ex.: "Bom dia, Setor de Recursos Humanos, João falando. Como posso ajudar?").</li>
+                </ul>
+            </li>
+            <li><b>Escuta e Registro:</b>
+                <ul>
+                    <li>Ouvir com atenção, anotar o nome do cidadão, telefone para retorno (se necessário) e o resumo da demanda.</li>
+                    <li>Não interromper o cidadão.</li>
+                </ul>
+            </li>
+            <li><b>Análise e Orientação:</b>
+                <ul>
+                    <li>Responder com clareza e objetividade.</li>
+                    <li>Se não souber a resposta, nunca invente. Diga que vai verificar e prometa um retorno (e cumpra!).</li>
+                </ul>
+            </li>
+            <li><b>Encerramento:</b>
+                <ul>
+                    <li>Resumir o que foi combinado (ex.: "Então, o senhor vai enviar o documento por e-mail e eu retorno em até 24 horas").</li>
+                    <li>Despedir-se cordialmente (ex.: "Agradecemos o contato, tenha um ótimo dia!").</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>5.3. Etiqueta Telefônica – O que Fazer e Evitar</h3>
+        <table>
+            <tr><th>✅ FAZER</th><th>❌ EVITAR</th></tr>
+            <tr><td>Falar pausadamente e com clareza</td><td>Falar muito rápido ou com a boca cheia</td></tr>
+            <tr><td>Usar tom de voz cordial e entusiasmado</td><td>Usar tom monótono, cansado ou agressivo</td></tr>
+            <tr><td>Anotar dados e compromissos</td><td>Confiar na memória</td></tr>
+            <tr><td>Explicar antes de transferir a ligação</td><td>Transferir sem avisar ou "jogar" o cidadão de um setor para outro</td></tr>
+            <tr><td>Pedir licença para colocar em espera</td><td>Deixar o cidadão esperando sem aviso</td></tr>
+            <tr><td>Retornar as chamadas no prazo prometido</td><td>Prometer e não cumprir</td></tr>
+        </table>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Gestão de Conflitos e Inteligência Emocional       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – GESTÃO DE CONFLITOS, RECLAMAÇÕES E INTELIGÊNCIA EMOCIONAL</h2>
+        <h3>6.1. Lidando com Cidadãos Irritados ou Insatisfeitos</h3>
+        <p>O atendente, mais cedo ou mais tarde, enfrentará situações de conflito. A chave é <b>não reagir com emoção</b>, mas sim com técnica.</p>
+        <ul>
+            <li><b>Mantenha a calma:</b> respire fundo, mantenha o tom de voz baixo e controlado.</li>
+            <li><b>Não leve para o lado pessoal:</b> a insatisfação do cidadão é com o serviço, não com você.</li>
+            <li><b>Ouça sem interromper:</b> deixe o cidadão desabafar. Isso alivia a tensão.</li>
+            <li><b>Demonstre empatia:</b> "Compreendo sua frustração. Vamos ver o que podemos fazer."</li>
+            <li><b>Peça desculpas quando necessário:</b> "Lamento pelo transtorno. Vamos resolver."</li>
+            <li><b>Foque na solução:</b> "O que posso fazer agora para ajudar?"</li>
+            <li><b>Não prometa o que não pode cumprir:</b> seja realista.</li>
+        </ul>
+
+        <h3>6.2. Inteligência Emocional em Ação</h3>
+        <ul>
+            <li><b>Autoconsciência:</b> reconheça seus gatilhos emocionais.</li>
+            <li><b>Autocontrole:</b> respire, conte até 10, mantenha a postura.</li>
+            <li><b>Empatia:</b> valide os sentimentos do outro ("Entendo que isso é muito frustrante").</li>
+        </ul>
+
+        <h3>6.3. Técnicas para Reduzir a Tensão</h3>
+        <ul>
+            <li><b>Parafrasear:</b> "Se eu entendi bem, o senhor está reclamando que..." (mostra que você ouviu).</li>
+            <li><b>Usar a técnica dos 3 passos:</b> Ouça → Valide → Ofereça solução.</li>
+            <li><b>Oferecer opções:</b> "Posso fazer A ou B. Qual é melhor para o senhor?"</li>
+        </ul>
+
+        <div class="dica">
+            <b>🧠 Lembre-se:</b> O cidadão irritado não está irritado com você pessoalmente. Seja a âncora de calma na tempestade.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Conceito) – Atendimento de excelência significa, principalmente:</p>
+            <div class="alternativas">
+                a) Atender rapidamente, mesmo que não resolva o problema.<br>
+                b) Superar as expectativas do cidadão, oferecendo uma experiência resolutiva e positiva.<br>
+                c) Falar apenas o necessário, sem dar muitas informações.<br>
+                d) Ser educado apenas com cidadãos bem vestidos.<br>
+                e) Transferir o cidadão para outro setor o mais rápido possível.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Pilares) – São pilares do atendimento de qualidade, EXCETO:</p>
+            <div class="alternativas">
+                a) Resolutividade.<br>
+                b) Cortesia e Urbanidade.<br>
+                c) Impessoalidade total (tratar todos como números).<br>
+                d) Clareza na comunicação.<br>
+                e) Empatia.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Escuta Ativa) – A escuta ativa envolve, entre outras ações:</p>
+            <div class="alternativas">
+                a) Interromper o cidadão para dar a resposta rapidamente.<br>
+                b) Parafrasear o conteúdo para confirmar o entendimento.<br>
+                c) Falar mais do que ouvir.<br>
+                d) Manter-se em silêncio absoluto sem qualquer reação.<br>
+                e) Concordar com tudo que o cidadão diz.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Presencial) – Ao atender um cidadão na recepção, a primeira etapa correta é:</p>
+            <div class="alternativas">
+                a) Perguntar o que ele quer sem cumprimentar.<br>
+                b) Receber com sorriso e saudação cordial, perguntando como pode ajudar.<br>
+                c) Pedir para ele preencher um formulário sem olhar para ele.<br>
+                d) Falar ao telefone enquanto o atende.<br>
+                e) Encaminhar imediatamente para outro setor.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Telefone) – Ao atender uma ligação, a primeira ação correta é:</p>
+            <div class="alternativas">
+                a) Dizer "Alô" e esperar.<br>
+                b) Identificar-se com o nome do setor e do atendente.<br>
+                c) Colocar o cidadão em espera imediatamente.<br>
+                d) Perguntar quem está falando antes de se identificar.<br>
+                e) Transferir a ligação sem explicação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Conflitos) – Ao lidar com um cidadão irritado, a atitude recomendada é:</p>
+            <div class="alternativas">
+                a) Discutir para provar que você está certo.<br>
+                b) Ouvir sem interromper, demonstrar empatia e focar na solução.<br>
+                c) Desligar o telefone ou ignorar o cidadão.<br>
+                d) Falar mais alto que o cidadão.<br>
+                e) Pedir para ele se acalmar de forma autoritária.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Habilidades) – A habilidade de controlar as próprias emoções, especialmente em situações de estresse, é chamada de:</p>
+            <div class="alternativas">
+                a) Proatividade.<br>
+                b) Flexibilidade.<br>
+                c) Inteligência Emocional.<br>
+                d) Ética.<br>
+                e) Comunicação não verbal.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Legislação) – A Lei 13.460/2017, que trata da defesa do usuário dos serviços públicos, está relacionada diretamente à qualidade do atendimento e é conhecida como:</p>
+            <div class="alternativas">
+                a) Código de Defesa do Usuário dos Serviços Públicos.<br>
+                b) Lei de Responsabilidade Fiscal.<br>
+                c) Lei de Acesso à Informação.<br>
+                d) Código de Ética do Servidor.<br>
+                e) Lei Geral de Proteção de Dados.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Tríade) – A tríade do atendimento é composta pelas dimensões:</p>
+            <div class="alternativas">
+                a) Técnica, Comportamental e Ambiental.<br>
+                b) Econômica, Social e Ambiental.<br>
+                c) Formal, Informal e Estrutural.<br>
+                d) Cognitiva, Afetiva e Motora.<br>
+                e) Planejamento, Execução e Controle.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Telefone) – Colocar um cidadão em espera ao telefone exige que o atendente:</p>
+            <div class="alternativas">
+                a) Faça isso sem avisar, para ganhar tempo.<br>
+                b) Peça licença, explique o motivo e retorne em tempo razoável.<br>
+                c) Deixe-o esperando por mais de 5 minutos sem retorno.<br>
+                d) Transfira a ligação enquanto ele está em espera.<br>
+                e) Nunca coloque ninguém em espera.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Presencial) – Na etapa de despedida do atendimento presencial, é recomendado:</p>
+            <div class="alternativas">
+                a) Encerrar a conversa abruptamente.<br>
+                b) Agradecer, perguntar se há mais alguma necessidade e encerrar de forma cordial.<br>
+                c) Dar as costas ao cidadão imediatamente.<br>
+                d) Ignorar o que foi falado.<br>
+                e) Falar sobre assuntos pessoais.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Técnicas) – A técnica de repetir com outras palavras o que o cidadão disse para confirmar o entendimento é chamada de:</p>
+            <div class="alternativas">
+                a) Paráfrase.<br>
+                b) Projeção.<br>
+                c) Subjetivação.<br>
+                d) Escuta passiva.<br>
+                e) Comunicação vertical.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Excelência) – No serviço público, a excelência no atendimento está diretamente vinculada ao princípio constitucional da:</p>
+            <div class="alternativas">
+                a) Legalidade.<br>
+                b) Impessoalidade.<br>
+                c) Moralidade.<br>
+                d) Eficiência.<br>
+                e) Publicidade.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Pilares e Perfil) – Analise as afirmativas:</p>
+            <p>(   ) A resolutividade é mais importante do que a cortesia no atendimento, pois o cidadão quer resultados.<br>
+            (   ) A comunicação não verbal (postura, sorriso) é irrelevante no atendimento presencial.<br>
+            (   ) A escuta ativa envolve não interromper o cidadão e fazer perguntas para esclarecer.<br>
+            (   ) A proatividade significa antecipar necessidades e buscar soluções.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Telefone) – Analise as afirmativas:</p>
+            <p>(   ) No atendimento telefônico, o tom de voz é um dos principais elementos de comunicação.<br>
+            (   ) Pode-se transferir uma ligação sem explicar ao cidadão para agilizar o atendimento.<br>
+            (   ) Prometer retorno e não cumprir é uma prática que prejudica a imagem da organização.<br>
+            (   ) Ao atender, deve-se falar rapidamente para não tomar muito tempo do cidadão.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – F<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (V/F – Conflitos) – Analise as afirmativas:</p>
+            <p>(   ) Ao lidar com um cidadão irritado, o atendente deve rebater cada argumento.<br>
+            (   ) Validar os sentimentos do cidadão ("Entendo sua frustração") ajuda a reduzir a tensão.<br>
+            (   ) Oferecer opções de solução é uma boa estratégia.<br>
+            (   ) Pedir desculpas quando a organização errou é um sinal de fraqueza.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – V – F<br>b) V – F – F – V<br>c) F – V – F – V<br>d) V – V – V – F<br>e) F – F – V – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Habilidades) – A habilidade de se adaptar a diferentes perfis de cidadãos e situações imprevistas é a:</p>
+            <div class="alternativas">
+                a) Proatividade.<br>
+                b) Flexibilidade.<br>
+                c) Inteligência Emocional.<br>
+                d) Comunicação assertiva.<br>
+                e) Ética.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Presencial) – Ao atender um cidadão na recepção, o atendente deve evitar:</p>
+            <div class="alternativas">
+                a) Manter contato visual.<br>
+                b) Usar o celular durante o atendimento.<br>
+                c) Falar com clareza.<br>
+                d) Demonstrar empatia.<br>
+                e) Manter postura ereta.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Telefone) – O atendente deve atender a ligação em até:</p>
+            <div class="alternativas">
+                a) 1 toque.<br>
+                b) 3 toques.<br>
+                c) 5 toques.<br>
+                d) 10 toques.<br>
+                e) Qualquer número de toques.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Excelência) – A dimensão ambiental do atendimento refere-se a:</p>
+            <div class="alternativas">
+                a) Conhecimento técnico do atendente.<br>
+                b) Condições físicas do local (limpeza, conforto, sinalização).<br>
+                c) Habilidade de comunicação.<br>
+                d) Capacidade de ouvir.<br>
+                e) Inteligência emocional.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Geral) – Analise as afirmativas:</p>
+            <p>(   ) A empatia é fundamental para estabelecer uma conexão positiva com o cidadão.<br>
+            (   ) A agilidade no atendimento justifica a falta de cortesia.<br>
+            (   ) O sigilo das informações do cidadão é um dever ético do atendente.<br>
+            (   ) No serviço público, o atendente deve tratar todos os cidadãos com igualdade.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Técnicas) – A técnica que consiste em oferecer ao cidadão duas ou mais alternativas de solução é recomendada para:</p>
+            <div class="alternativas">
+                a) Aumentar a confusão.<br>
+                b) Dar poder de escolha ao cidadão e facilitar a resolução.<br>
+                c) Evitar resolver o problema.<br>
+                d) Demonstrar autoridade.<br>
+                e) Reduzir o tempo de atendimento.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (Legislação) – O princípio da eficiência, previsto na CF/88, exige que o atendente:</p>
+            <div class="alternativas">
+                a) Atue com rapidez, qualidade e resolutividade.<br>
+                b) Siga estritamente a lei, mesmo que o atendimento seja prejudicado.<br>
+                c) Priorize apenas os cidadãos mais educados.<br>
+                d) Trabalhe apenas o horário mínimo.<br>
+                e) Ignore as reclamações dos cidadãos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (V/F – Etiqueta Telefônica) – Analise as afirmativas:</p>
+            <p>(   ) Comer ou mascar chiclete durante uma ligação é aceitável, pois o cidadão não vê.<br>
+            (   ) O atendente deve evitar o uso de gírias e expressões informais demais.<br>
+            (   ) Deixar o cidadão em espera por mais de 5 minutos sem retorno é uma boa prática.<br>
+            (   ) Ao transferir a ligação, o atendente deve explicar o motivo ao cidadão.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – F – V<br>b) V – F – V – F<br>c) F – V – V – F<br>d) V – V – F – V<br>e) F – F – V – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Consolidação) – Analise as afirmativas sobre Atendimento ao Público:</p>
+            <p>(   ) A escuta ativa é uma técnica que consiste em ouvir com atenção e confirmar o entendimento.<br>
+            (   ) No atendimento presencial, a postura corporal e o sorriso são irrelevantes.<br>
+            (   ) A Lei 13.460/2017 estabelece direitos dos usuários dos serviços públicos.<br>
+            (   ) A resolutividade é a capacidade de resolver o problema do cidadão.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-C</b> | <b>3-B</b> | <b>4-B</b> | <b>5-B</b> | <b>6-B</b> | <b>7-C</b> | <b>8-A</b> | <b>9-A</b> | <b>10-B</b></p>
+            <p><b>11-B</b> | <b>12-A</b> | <b>13-D</b> | <b>14-A</b> | <b>15-A</b> | <b>16-A</b> | <b>17-B</b> | <b>18-B</b> | <b>19-B</b> | <b>20-B</b></p>
+            <p><b>21-A</b> | <b>22-B</b> | <b>23-A</b> | <b>24-A</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,F,V,V); Q15 (V,F,V,F); Q16 (F,V,V,F); Q21 (V,F,V,V); Q24 (F,V,F,V); Q25 (V,F,V,V).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

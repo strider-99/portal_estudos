@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Recursos Materiais, Patrimoniais e Logística</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #eef2f7;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a237e;
+            text-align: center;
+            border-bottom: 3px solid #3f51b5;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a237e;
+            background-color: #e8eaf6;
+            padding: 10px 15px;
+            border-left: 6px solid #3f51b5;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #283593;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #dde1f0;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5f6fc;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #3f51b5;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a237e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #3f51b5;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📦 ADMINISTRAÇÃO DE RECURSOS MATERIAIS, PATRIMONIAIS E LOGÍSTICA</h1>
+    <p style="text-align:center; font-size:18px; color:#1a237e;"><b>Compras, estoques, patrimônio, cadeia de suprimentos e componentes logísticos</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Administração de Recursos Materiais, Patrimoniais e Logística</b> é uma área estratégica que integra o planejamento, a aquisição, o armazenamento, a movimentação e o controle de todos os recursos físicos da organização, desde insumos (matérias-primas) até produtos acabados e bens patrimoniais.</p>
+        <p>Este módulo integra três pilares: (1) a <b>gestão de materiais</b> (compras e estoques), (2) a <b>gestão patrimonial</b> (bens móveis e imóveis) e (3) a <b>logística</b> (transporte, distribuição, cadeia de suprimentos), componentes essenciais para a eficiência organizacional.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender o ciclo completo dos recursos materiais e patrimoniais, desde a aquisição até a destinação, dominar os métodos de controle de estoques e conhecer os componentes da logística (cadeia de suprimentos, transportes, armazenagem, distribuição), com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Gestão de Recursos Materiais – Compras e Estoques – pág. 2</li>
+            <li><b>Módulo II:</b> Administração Patrimonial – Bens, Tombamento e Inventário – pág. 3</li>
+            <li><b>Módulo III:</b> Logística e Cadeia de Suprimentos (SCM) – pág. 4</li>
+            <li><b>Módulo IV:</b> Componentes da Logística – Transporte e Armazenagem – pág. 5</li>
+            <li><b>Módulo V:</b> Componentes da Logística – Distribuição e Gestão da Informação – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Compras e Estoques                                  -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – GESTÃO DE RECURSOS MATERIAIS: COMPRAS E ESTOQUES</h2>
+        <h3>2.1. Compras</h3>
+        <p>A função compras consiste em adquirir materiais, insumos e serviços necessários às operações, nas melhores condições de preço, prazo, qualidade e forma de pagamento. É o ponto de partida da cadeia logística.</p>
+        <ul>
+            <li><b>Etapas do processo de compras:</b> identificação da necessidade → pesquisa de fornecedores → negociação → emissão do pedido → recebimento e conferência → pagamento.</li>
+            <li><b>Compras sustentáveis:</b> critérios ambientais e sociais na seleção de fornecedores.</li>
+        </ul>
+
+        <h3>2.2. Estoques e Indicadores</h3>
+        <p>O estoque é o conjunto de materiais armazenados aguardando uso ou venda. Uma gestão eficiente equilibra a disponibilidade (evitar faltas) com a redução de custos (evitar excessos).</p>
+        <ul>
+            <li><b>Estoque mínimo (segurança):</b> quantidade extra para imprevistos.</li>
+            <li><b>Estoque máximo:</b> limite superior para evitar custos excessivos.</li>
+            <li><b>Ponto de pedido:</b> (Consumo Médio × Tempo de Reposição) + Estoque de Segurança.</li>
+            <li><b>Lote Econômico de Compra (LEC):</b> quantidade que minimiza o custo total de pedido + armazenagem.</li>
+            <li><b>Giro de estoques:</b> Consumo Total / Estoque Médio. Quanto maior, melhor (desde que não haja faltas).</li>
+        </ul>
+
+        <div class="dica">
+            <b>📊 Curva ABC:</b> Classifica os itens por valor financeiro ou importância (A = alto valor/baixa quantidade; C = baixo valor/alta quantidade). O controle deve ser mais rigoroso para a classe A.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Administração Patrimonial                          -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – ADMINISTRAÇÃO PATRIMONIAL</h2>
+        <h3>3.1. Conceito e Objetivos</h3>
+        <p>A <b>administração patrimonial</b> é o conjunto de atividades voltadas para a gestão dos bens (móveis e imóveis) da organização, garantindo sua correta identificação, registro, conservação, utilização e, quando necessário, alienação (venda ou descarte).</p>
+        <ul>
+            <li><b>Objetivos:</b> proteger o patrimônio, otimizar sua utilização, manter o controle físico-financeiro e garantir a transparência.</li>
+        </ul>
+
+        <h3>3.2. Bens Móveis e Imóveis</h3>
+        <ul>
+            <li><b>Bens Móveis:</b> podem ser transportados sem alteração de sua estrutura (ex.: veículos, máquinas, equipamentos, móveis).</li>
+            <li><b>Bens Imóveis:</b> estão ligados ao solo (ex.: terrenos, prédios, instalações).</li>
+        </ul>
+
+        <h3>3.3. Controle Patrimonial – Processos Essenciais</h3>
+        <ul>
+            <li><b>Tombamento:</b> ato de identificar e cadastrar o bem, atribuindo-lhe um número de patrimônio. É o "RG" do bem.</li>
+            <li><b>Inventário:</b> levantamento físico e financeiro de todos os bens da organização. Pode ser geral (anual) ou parcial.</li>
+            <li><b>Manutenção:</b> conservação preventiva e corretiva para garantir a vida útil do bem.</li>
+            <li><b>Depreciação:</b> perda do valor do bem ao longo do tempo, por uso, desgaste ou obsolescência.</li>
+            <li><b>Alienação / Baixa:</b> retirada do bem do ativo da organização (venda, doação, descarte). Deve ser autorizada e registrada.</li>
+        </ul>
+
+        <h3>3.4. Responsabilidade do Gestor</h3>
+        <p>O gestor patrimonial é responsável pela guarda e conservação dos bens sob sua responsabilidade, devendo prestar contas de sua localização e estado de conservação. O <b>termo de responsabilidade</b> é o documento que formaliza essa atribuição.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Logística e Cadeia de Suprimentos                   -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – LOGÍSTICA E CADEIA DE SUPRIMENTOS (SCM)</h2>
+        <h3>4.1. Conceito de Logística</h3>
+        <p>A <b>Logística</b> é o processo de planejamento, implementação e controle do fluxo eficiente e eficaz de materiais, serviços e informações, desde o ponto de origem (fornecedores) até o ponto de consumo (cliente), com o objetivo de atender às necessidades do cliente.</p>
+
+        <h3>4.2. Cadeia de Suprimentos (Supply Chain Management – SCM)</h3>
+        <p>A SCM é a integração dos processos de negócios, desde os fornecedores iniciais (matéria-prima) até o consumidor final. Envolve a coordenação de fluxos:</p>
+        <ul>
+            <li><b>Fluxo Físico:</b> movimentação de materiais e produtos.</li>
+            <li><b>Fluxo de Informações:</b> dados sobre pedidos, estoques, previsões.</li>
+            <li><b>Fluxo Financeiro:</b> pagamentos, custos, investimentos.</li>
+        </ul>
+
+        <h3>4.3. Pilares da Logística Empresarial</h3>
+        <ul>
+            <li><b>Suprimentos:</b> aquisição e gestão de insumos (compras).</li>
+            <li><b>Produção:</b> transformação de insumos em produtos (quando aplicável).</li>
+            <li><b>Distribuição:</b> entrega dos produtos acabados ao cliente.</li>
+            <li><b>Pós-venda / Logística reversa:</b> devolução, reciclagem ou descarte de produtos.</li>
+        </ul>
+        <div class="dica">
+            <b>📌 Diferença:</b> Logística cuida do fluxo interno e da distribuição; Cadeia de Suprimentos engloba toda a rede de fornecedores, produção e clientes (visão macro).
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Componentes – Transporte e Armazenagem             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – COMPONENTES DA LOGÍSTICA: TRANSPORTE E ARMAZENAGEM</h2>
+        <h3>5.1. Transporte</h3>
+        <p>O transporte é o componente responsável pela movimentação física de materiais entre fornecedores, a organização e os clientes. A escolha do modal influencia diretamente o custo, o prazo e a segurança.</p>
+        <ul>
+            <li><b>Modal Rodoviário:</b> flexível, porta a porta, mas com custo variável. É o mais utilizado no Brasil.</li>
+            <li><b>Modal Ferroviário:</b> ideal para grandes volumes e longas distâncias, com baixo custo, mas menos flexível.</li>
+            <li><b>Modal Aéreo:</b> rápido, mas de alto custo. Usado para cargas urgentes ou de alto valor.</li>
+            <li><b>Modal Aquaviário (marítimo/fluvial):</b> baixo custo para grandes volumes, porém mais lento.</li>
+            <li><b>Modal Dutoviário:</b> utilizado para líquidos e gases (petróleo, gás).</li>
+        </ul>
+
+        <h3>5.2. Armazenagem</h3>
+        <p>A armazenagem envolve a guarda e preservação dos materiais até sua utilização ou expedição. Aspectos importantes:</p>
+        <ul>
+            <li><b>Layout:</b> organização interna do armazém (prateleiras, corredores, docks).</li>
+            <li><b>Endereçamento:</b> localização fixa e codificada para cada item.</li>
+            <li><b>Gestão de espaço:</b> otimização do volume de armazenamento.</li>
+            <li><b>Segurança e conservação:</b> controle de temperatura, umidade, prevenção de incêndios e furtos.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Componentes – Distribuição e Informação            -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – COMPONENTES DA LOGÍSTICA: DISTRIBUIÇÃO E GESTÃO DA INFORMAÇÃO</h2>
+        <h3>6.1. Distribuição Física (Logística de Saída)</h3>
+        <p>A distribuição é o processo de entregar o produto certo, no lugar certo, na hora certa e nas condições certas para o cliente. Envolve:</p>
+        <ul>
+            <li><b>Processamento de pedidos:</b> recebimento, separação, embalagem e expedição.</li>
+            <li><b>Roteirização:</b> planejamento de rotas para otimizar entregas (reduzir tempo e custos de combustível).</li>
+            <li><b>Gestão de entregas:</b> monitoramento e comprovação de recebimento.</li>
+        </ul>
+
+        <h3>6.2. Sistemas de Informação Logística (SIL)</h3>
+        <p>A informação é o "sangue" da logística. Os sistemas de informação permitem:</p>
+        <ul>
+            <li><b>Rastreamento (tracking):</b> localização de cargas em tempo real.</li>
+            <li><b>Previsão de demanda:</b> planejar compras e estoques com base em dados históricos e tendências.</li>
+            <li><b>Integração com fornecedores:</b> troca eletrônica de dados (EDI) para agilizar processos.</li>
+            <li><b>WMS (Warehouse Management System):</b> sistema de gerenciamento de armazéns.</li>
+            <li><b>TMS (Transportation Management System):</b> sistema de gerenciamento de transportes.</li>
+        </ul>
+
+        <h3>6.3. Logística Reversa</h3>
+        <p>A logística reversa é o fluxo de materiais no sentido contrário (do consumidor de volta à cadeia), para devolução, reciclagem, reuso ou descarte adequado. É uma exigência legal para setores específicos (ex.: pilhas, eletrônicos, óleo de cozinha, pneus) e um diferencial de sustentabilidade.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Conceito) – A logística é definida como o processo de planejamento, implementação e controle do fluxo eficiente de materiais, serviços e informações, desde a origem até o consumo. Seu objetivo principal é:</p>
+            <div class="alternativas">
+                a) Reduzir o preço dos produtos a qualquer custo.<br>
+                b) Atender às necessidades do cliente com eficiência e eficácia.<br>
+                c) Aumentar o número de fornecedores.<br>
+                d) Centralizar todos os estoques em um único local.<br>
+                e) Eliminar o transporte rodoviário.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Patrimonial) – O ato de identificar e cadastrar um bem, atribuindo-lhe um número único de identificação, é chamado de:</p>
+            <div class="alternativas">
+                a) Inventário.<br>
+                b) Depreciação.<br>
+                c) Tombamento.<br>
+                d) Alienação.<br>
+                e) Manutenção.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Compras) – A primeira etapa do processo de compras é:</p>
+            <div class="alternativas">
+                a) Emissão do pedido.<br>
+                b) Negociação com fornecedores.<br>
+                c) Identificação da necessidade.<br>
+                d) Recebimento e conferência.<br>
+                e) Pagamento.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Logística) – A integração dos processos de negócios, desde os fornecedores iniciais até o consumidor final, é chamada de:</p>
+            <div class="alternativas">
+                a) Logística reversa.<br>
+                b) Distribuição física.<br>
+                c) Cadeia de Suprimentos (SCM).<br>
+                d) Gestão de transportes.<br>
+                e) Armazenagem.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Estoques) – A quantidade que minimiza o custo total de pedido e de armazenagem é o:</p>
+            <div class="alternativas">
+                a) Ponto de pedido.<br>
+                b) Estoque mínimo.<br>
+                c) Lote Econômico de Compra (LEC).<br>
+                d) Giro de estoques.<br>
+                e) Estoque máximo.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Transporte) – O modal de transporte mais utilizado no Brasil, com flexibilidade porta a porta, é o:</p>
+            <div class="alternativas">
+                a) Ferroviário.<br>
+                b) Aéreo.<br>
+                c) Aquaviário.<br>
+                d) Rodoviário.<br>
+                e) Dutoviário.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Patrimonial) – A perda do valor do bem ao longo do tempo, por uso, desgaste ou obsolescência, é chamada de:</p>
+            <div class="alternativas">
+                a) Alienação.<br>
+                b) Depreciação.<br>
+                c) Tombamento.<br>
+                d) Inventário.<br>
+                e) Manutenção.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Distribuição) – O planejamento de rotas para otimizar entregas, reduzindo tempo e custos, é conhecido como:</p>
+            <div class="alternativas">
+                a) Roteirização.<br>
+                b) Rastreamento (tracking).<br>
+                c) Processamento de pedidos.<br>
+                d) Logística reversa.<br>
+                e) Gestão de armazéns.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Curva ABC) – Na Curva ABC, os itens da classe ________ representam alto valor e baixa quantidade, exigindo controle rigoroso.</p>
+            <div class="alternativas">
+                a) A.<br>
+                b) B.<br>
+                c) C.<br>
+                d) D.<br>
+                e) E.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Sistemas) – O sistema de gerenciamento de armazéns é conhecido pela sigla:</p>
+            <div class="alternativas">
+                a) WMS.<br>
+                b) TMS.<br>
+                c) ERP.<br>
+                d) EDI.<br>
+                e) CRM.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Logística Reversa) – O fluxo de materiais no sentido contrário (do consumidor de volta à cadeia) para reciclagem, reuso ou descarte adequado é a:</p>
+            <div class="alternativas">
+                a) Distribuição direta.<br>
+                b) Logística reversa.<br>
+                c) Suprimento contínuo.<br>
+                d) Cadeia de suprimentos.<br>
+                e) Gestão de transportes.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Bens) – Terrenos, prédios e instalações são classificados como bens:</p>
+            <div class="alternativas">
+                a) Móveis.<br>
+                b) Imóveis.<br>
+                c) Semoventes.<br>
+                d) Intangíveis.<br>
+                e) Descartáveis.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Indicadores) – O giro de estoques é calculado pela fórmula:</p>
+            <div class="alternativas">
+                a) Estoque Médio / Consumo Total.<br>
+                b) Consumo Total / Estoque Médio.<br>
+                c) Ponto de Pedido / Estoque Máximo.<br>
+                d) LEC / Consumo Médio.<br>
+                e) Estoque de Segurança / Giro.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Compras e Estoques) – Analise as afirmativas:</p>
+            <p>(   ) O ponto de pedido considera o consumo médio, o tempo de reposição e o estoque de segurança.<br>
+            (   ) As compras sustentáveis consideram critérios ambientais e sociais na seleção de fornecedores.<br>
+            (   ) O estoque máximo é a quantidade mínima que a empresa deve manter.<br>
+            (   ) O LEC é calculado apenas para itens da classe C da Curva ABC.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – F<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Patrimônio) – Analise as afirmativas:</p>
+            <p>(   ) O inventário é um levantamento físico e financeiro de todos os bens da organização.<br>
+            (   ) Bens móveis podem ser transportados sem alteração de sua estrutura.<br>
+            (   ) A alienação é o ato de cadastrar um bem no sistema.<br>
+            (   ) O termo de responsabilidade formaliza a guarda de bens sob responsabilidade de um servidor.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (V/F – Logística e Componentes) – Analise as afirmativas:</p>
+            <p>(   ) O modal aéreo é o mais barato para grandes volumes.<br>
+            (   ) O WMS é um sistema de gerenciamento de armazéns.<br>
+            (   ) A roteirização visa otimizar as rotas de entrega.<br>
+            (   ) A logística reversa é voluntária e não tem previsão legal no Brasil.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – V – F<br>b) V – F – F – V<br>c) F – V – F – V<br>d) V – V – V – F<br>e) F – F – V – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Transporte) – O modal ideal para transporte de líquidos e gases (petróleo, gás natural) é o:</p>
+            <div class="alternativas">
+                a) Rodoviário.<br>
+                b) Ferroviário.<br>
+                c) Aéreo.<br>
+                d) Dutoviário.<br>
+                e) Aquaviário.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (SCM) – A Cadeia de Suprimentos integra os seguintes fluxos, EXCETO:</p>
+            <div class="alternativas">
+                a) Fluxo físico (materiais).<br>
+                b) Fluxo de informações.<br>
+                c) Fluxo financeiro.<br>
+                d) Fluxo de recursos humanos.<br>
+                e) Fluxo de pagamentos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Patrimonial) – O levantamento geral de todos os bens da organização, realizado periodicamente (ex.: anualmente), é o:</p>
+            <div class="alternativas">
+                a) Tombamento.<br>
+                b) Inventário geral.<br>
+                c) Inventário parcial.<br>
+                d) Depreciação.<br>
+                e) Alienação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Distribuição) – O processamento de pedidos envolve, entre outras etapas:</p>
+            <div class="alternativas">
+                a) Separação, embalagem e expedição.<br>
+                b) Compra de matéria-prima.<br>
+                c) Pesquisa de fornecedores.<br>
+                d) Tombamento de bens.<br>
+                e) Depreciação de ativos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Estoques e Gestão) – Analise as afirmativas:</p>
+            <p>(   ) O estoque de segurança é utilizado para cobrir imprevistos no consumo ou no fornecimento.<br>
+            (   ) O giro de estoques alto indica que a empresa está com baixa eficiência.<br>
+            (   ) A Curva ABC classifica os itens com base no peso físico.<br>
+            (   ) O ponto de pedido é o nível que aciona uma nova compra.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – F – V<br>b) F – V – V – F<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Logística) – A logística de saída, que envolve a entrega dos produtos acabados ao cliente, é também chamada de:</p>
+            <div class="alternativas">
+                a) Logística de suprimentos.<br>
+                b) Distribuição física.<br>
+                c) Logística reversa.<br>
+                d) Gestão de compras.<br>
+                e) Armazenagem.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (Patrimonial) – A manutenção preventiva e corretiva de bens patrimoniais tem como objetivo:</p>
+            <div class="alternativas">
+                a) Aumentar a depreciação.<br>
+                b) Garantir a vida útil e a conservação do bem.<br>
+                c) Realizar o tombamento.<br>
+                d) Reduzir o valor do bem.<br>
+                e) Fazer o inventário.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (V/F – Componentes) – Analise as afirmativas sobre componentes logísticos:</p>
+            <p>(   ) O TMS é um sistema de gerenciamento de transportes.<br>
+            (   ) O modal ferroviário é o mais flexível para entregas porta a porta.<br>
+            (   ) A armazenagem envolve a guarda e preservação de materiais.<br>
+            (   ) A logística reversa é um fluxo do consumidor para a cadeia produtiva.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Consolidação) – Analise as afirmativas sobre Administração de Recursos Materiais, Patrimoniais e Logística:</p>
+            <p>(   ) O tombamento é o ato de dar baixa em um bem.<br>
+            (   ) A Cadeia de Suprimentos é mais ampla que a logística, abrangendo fornecedores, produção e clientes.<br>
+            (   ) O Lote Econômico de Compra visa minimizar os custos totais de compra e armazenagem.<br>
+            (   ) O rastreamento (tracking) permite localizar cargas em tempo real.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – V – V<br>b) V – F – V – F<br>c) V – V – F – V<br>d) F – V – V – F<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-C</b> | <b>3-C</b> | <b>4-C</b> | <b>5-C</b> | <b>6-D</b> | <b>7-B</b> | <b>8-A</b> | <b>9-A</b> | <b>10-A</b></p>
+            <p><b>11-B</b> | <b>12-B</b> | <b>13-B</b> | <b>14-A</b> | <b>15-A</b> | <b>16-A</b> | <b>17-D</b> | <b>18-D</b> | <b>19-B</b> | <b>20-A</b></p>
+            <p><b>21-A</b> | <b>22-B</b> | <b>23-B</b> | <b>24-A</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,V,F,F); Q15 (V,V,F,V); Q16 (F,V,V,F); Q21 (V,F,F,V); Q24 (V,F,V,V); Q25 (F,V,V,V).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

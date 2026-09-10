@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Administração de Recursos Humanos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f5f0f7;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #6c3483;
+            text-align: center;
+            border-bottom: 3px solid #8e44ad;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #6c3483;
+            background-color: #f4ecf7;
+            padding: 10px 15px;
+            border-left: 6px solid #8e44ad;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #4a235a;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #e8daef;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .exemplo {
+            background-color: #f5eef8;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #8e44ad;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #faf5fc;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #8e44ad;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #6c3483;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #8e44ad;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>👥 ADMINISTRAÇÃO DE RECURSOS HUMANOS</h1>
+    <p style="text-align:center; font-size:18px; color:#6c3483;"><b>Recrutamento e Seleção, Treinamento e Desenvolvimento, Avaliação de Desempenho e Rotinas de Pessoal</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Administração de Recursos Humanos (ARH)</b> é a área responsável por gerenciar o capital humano da organização, desde a atração e seleção de talentos até o desenvolvimento e a manutenção de uma força de trabalho motivada e produtiva.</p>
+        <p>Este módulo aborda os principais processos de RH: <b>recrutamento e seleção</b>, <b>treinamento e desenvolvimento</b>, <b>avaliação de desempenho</b> e as <b>rotinas de pessoal</b> (frequência, férias, registros funcionais).</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Dominar os conceitos fundamentais da gestão de pessoas, compreendendo os processos de atração, desenvolvimento e manutenção de talentos, com 35 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Recrutamento e Seleção – pág. 2</li>
+            <li><b>Módulo II:</b> Treinamento e Desenvolvimento – pág. 3</li>
+            <li><b>Módulo III:</b> Avaliação de Desempenho – pág. 4</li>
+            <li><b>Módulo IV:</b> Rotinas de Pessoal – pág. 5</li>
+            <li><b>Módulo V:</b> Consolidação e Dicas Finais – pág. 6</li>
+            <li><b>Questões:</b> 35 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Recrutamento e Seleção                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – RECRUTAMENTO E SELEÇÃO</h2>
+
+        <h3>2.1. Recrutamento</h3>
+        <p>O <b>recrutamento</b> é o processo de atrair candidatos para preencher vagas na organização. Pode ser:</p>
+        <ul>
+            <li><b>Interno:</b> busca candidatos dentro da própria organização (promoções, transferências). Vantagens: motivação, menor custo e aproveitamento de talentos já conhecidos.</li>
+            <li><b>Externo:</b> busca candidatos no mercado de trabalho (anúncios, agências, sites de emprego). Vantagens: traz novos conhecimentos e amplia o leque de opções.</li>
+            <li><b>Misto:</b> combina as duas abordagens.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Uma prefeitura precisa preencher uma vaga de analista administrativo. O RH faz um recrutamento interno, divulgando a vaga entre os servidores efetivos (para promover quem já está na casa). Simultaneamente, faz um recrutamento externo, publicando o edital no site e em jornais locais, para trazer novos talentos de fora.</p>
+        </div>
+
+        <h3>2.2. Seleção</h3>
+        <p>A <b>seleção</b> é o processo de escolher o candidato mais adequado para a vaga, com base em critérios predefinidos. Utiliza técnicas como:</p>
+        <ul>
+            <li><b>Análise curricular:</b> verificação de experiência e formação.</li>
+            <li><b>Entrevistas:</b> individuais ou em grupo, estruturadas ou livres.</li>
+            <li><b>Testes:</b> de conhecimentos, habilidades, psicotécnicos, de personalidade.</li>
+            <li><b>Dinâmicas de grupo:</b> observação do comportamento em situações simuladas.</li>
+            <li><b>Avaliação de competências:</b> verificação de habilidades técnicas e comportamentais.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> O recrutamento e a seleção são as "portas de entrada" dos talentos na organização. Um processo bem feito reduz a rotatividade e melhora o desempenho.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Treinamento e Desenvolvimento                      -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – TREINAMENTO E DESENVOLVIMENTO</h2>
+
+        <h3>3.1. Treinamento</h3>
+        <ul>
+            <li><b>Objetivo:</b> suprir lacunas de competências para o cargo atual, com foco no curto prazo.</li>
+            <li><b>Exemplos:</b> treinamento de sistemas, atendimento ao público, técnicas de vendas.</li>
+            <li><b>Público-alvo:</b> funcionários que precisam melhorar seu desempenho imediato.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Um órgão público adota um novo sistema de gestão de processos. O RH organiza um treinamento de 2 dias para todos os servidores que vão usar o sistema, ensinando como cadastrar, acompanhar e finalizar processos.</p>
+        </div>
+
+        <h3>3.2. Desenvolvimento</h3>
+        <ul>
+            <li><b>Objetivo:</b> preparar o colaborador para futuras responsabilidades, com foco no longo prazo.</li>
+            <li><b>Exemplos:</b> programas de liderança, cursos de pós-graduação, rodízio de funções.</li>
+            <li><b>Público-alvo:</b> funcionários com potencial para assumir cargos de maior complexidade.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Uma empresa identifica um analista com potencial para gestão. Oferece a ele um programa de desenvolvimento de lideranças, com mentoria, cursos de gestão e um projeto desafiador. Depois de 12 meses, ele é promovido a coordenador.</p>
+        </div>
+
+        <h3>3.3. Educação Continuada e Educação Permanente</h3>
+        <ul>
+            <li><b>Educação continuada:</b> processos formais de aprendizado (cursos, especializações).</li>
+            <li><b>Educação permanente:</b> aprendizado contínuo no dia a dia, integrando teoria e prática.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> Treinamento é para o "hoje"; desenvolvimento é para o "amanhã". Ambos são essenciais para uma organização que quer crescer.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Avaliação de Desempenho                            -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – AVALIAÇÃO DE DESEMPENHO</h2>
+
+        <h3>4.1. Conceito</h3>
+        <p>A <b>avaliação de desempenho</b> é uma ferramenta de gestão que mede a performance do colaborador em relação às metas e competências esperadas.</p>
+
+        <h3>4.2. Métodos de Avaliação</h3>
+        <ul>
+            <li><b>Autoavaliação:</b> o próprio colaborador avalia seu desempenho.</li>
+            <li><b>Avaliação do gestor:</b> o superior avalia o subordinado.</li>
+            <li><b>Avaliação 360°:</b> envolve pares, subordinados, clientes e o próprio avaliado.</li>
+            <li><b>Avaliação por competências:</b> mede comportamentos e habilidades.</li>
+            <li><b>Avaliação por resultados:</b> foca no cumprimento de metas quantitativas.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Um servidor público participa de uma avaliação 360°. O gestor avalia sua produtividade e cumprimento de prazos. Os colegas avaliam sua colaboração e comunicação. Os clientes internos avaliam a qualidade do atendimento. O servidor também faz sua autoavaliação. O resultado consolidado serve para identificar pontos fortes e oportunidades de melhoria.</p>
+        </div>
+
+        <h3>4.3. Benefícios da Avaliação de Desempenho</h3>
+        <ul>
+            <li>Identifica necessidades de treinamento.</li>
+            <li>Subsidia promoções e planos de carreira.</li>
+            <li>Melhora a comunicação entre gestor e equipe.</li>
+            <li>Mantém a equipe alinhada com os objetivos organizacionais.</li>
+        </ul>
+
+        <h3>4.4. Feedback e Plano de Ação</h3>
+        <ul>
+            <li>Após a avaliação, o gestor deve fornecer <b>feedback construtivo</b>.</li>
+            <li>Um <b>plano de ação</b> é elaborado para corrigir desvios e desenvolver competências.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> A avaliação de desempenho não é um fim em si mesma – é um meio para o desenvolvimento contínuo das pessoas.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Rotinas de Pessoal                                 -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – ROTINAS DE PESSOAL</h2>
+
+        <h3>5.1. Controle de Frequência</h3>
+        <ul>
+            <li><b>Objetivo:</b> registrar a presença, as faltas e os atrasos dos servidores.</li>
+            <li><b>Instrumentos:</b> ponto eletrônico, folha de ponto manual, sistemas de gestão.</li>
+            <li><b>Importância:</b> base para o cálculo da remuneração e para o controle da assiduidade.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Em um órgão público, os servidores registram o ponto eletrônico ao entrar e sair. O sistema calcula as horas trabalhadas, as horas extras e os atrasos. Ao final do mês, o RH gera a folha de pagamento com base nessas informações.</p>
+        </div>
+
+        <h3>5.2. Férias</h3>
+        <ul>
+            <li><b>Direito do trabalhador:</b> 30 dias de férias após 12 meses de trabalho (período aquisitivo).</li>
+            <li><b>Concessão:</b> deve ser usufruída nos 12 meses seguintes (período concessivo).</li>
+            <li><b>Planejamento:</b> o RH organiza o cronograma de férias para não comprometer a operação.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> O setor de RH de uma prefeitura planeja as férias dos servidores. Em janeiro, faz um levantamento de quem tem direito a férias no primeiro semestre. Elabora um cronograma, consulta os servidores e publica a escala. Durante o período de férias, o servidor recebe o adicional de 1/3 sobre o salário (terço constitucional).</p>
+        </div>
+
+        <h3>5.3. Registros Funcionais</h3>
+        <ul>
+            <li><b>Documentos essenciais:</b> ficha de registro, contrato de trabalho, documentos pessoais, declarações.</li>
+            <li><b>Controle:</b> o RH mantém a documentação atualizada e organizada.</li>
+            <li><b>Exemplos:</b> ficha cadastral, pasta funcional, prontuário do servidor.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> As rotinas de pessoal são o "backbone" da administração de RH. Mantê-las organizadas é essencial para a transparência e a legalidade.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Consolidação e Dicas Finais                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – CONSOLIDAÇÃO E DICAS FINAIS</h2>
+
+        <h3>6.1. Resumo dos Processos de RH</h3>
+        <ul>
+            <li><b>Recrutamento e Seleção:</b> atrair e escolher os melhores talentos.</li>
+            <li><b>Treinamento e Desenvolvimento:</b> capacitar para o presente e preparar para o futuro.</li>
+            <li><b>Avaliação de Desempenho:</b> medir, dar feedback e promover o crescimento.</li>
+            <li><b>Rotinas de Pessoal:</b> gerir frequência, férias e documentação.</li>
+        </ul>
+
+        <h3>6.2. Dicas para Concursos</h3>
+        <ul>
+            <li>Decore a diferença entre recrutamento interno e externo.</li>
+            <li>Memorize os métodos de avaliação de desempenho (autoavaliação, gestor, 360°).</li>
+            <li>Entenda a diferença entre treinamento (curto prazo) e desenvolvimento (longo prazo).</li>
+            <li>Saiba o que é período aquisitivo (12 meses) e concessivo (12 meses seguintes) para férias.</li>
+            <li>Associe a avaliação 360° à visão múltipla (pares, subordinados, clientes).</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica Final:</b> A administração de RH é uma área estratégica que conecta as pessoas aos objetivos da organização. Entender esses processos é essencial para qualquer agente administrativo.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 18                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 18)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> – O processo de atração de candidatos para preencher vagas na organização é chamado de:</p>
+            <div class="alternativas">
+                a) Seleção<br>
+                b) Recrutamento<br>
+                c) Treinamento<br>
+                d) Avaliação de desempenho<br>
+                e) Desenvolvimento
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> – O recrutamento interno tem como vantagem:</p>
+            <div class="alternativas">
+                a) Trazer novos conhecimentos<br>
+                b) Motivar os colaboradores e reduzir custos<br>
+                c) Ampliar o leque de opções<br>
+                d) Reduzir o tempo de adaptação<br>
+                e) Aumentar a diversidade
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> – A seleção é o processo de:</p>
+            <div class="alternativas">
+                a) Atrair candidatos<br>
+                b) Escolher o candidato mais adequado<br>
+                c) Treinar os funcionários<br>
+                d) Avaliar o desempenho<br>
+                e) Registrar a frequência
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> – O treinamento tem como foco:</p>
+            <div class="alternativas">
+                a) O longo prazo e a preparação para futuras funções<br>
+                b) O curto prazo e o desempenho no cargo atual<br>
+                c) A avaliação de desempenho<br>
+                d) O recrutamento de novos talentos<br>
+                e) O planejamento de férias
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> – O desenvolvimento de pessoas tem como foco:</p>
+            <div class="alternativas">
+                a) O curto prazo e o cargo atual<br>
+                b) O longo prazo e a preparação para futuras funções<br>
+                c) A avaliação 360°<br>
+                d) O controle de frequência<br>
+                e) O recrutamento externo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> – A avaliação de desempenho que envolve pares, subordinados, clientes e o próprio avaliado é a:</p>
+            <div class="alternativas">
+                a) Autoavaliação<br>
+                b) Avaliação do gestor<br>
+                c) Avaliação 360°<br>
+                d) Avaliação por competências<br>
+                e) Avaliação por resultados
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> – O período aquisitivo para férias é de:</p>
+            <div class="alternativas">
+                a) 6 meses<br>
+                b) 12 meses<br>
+                c) 18 meses<br>
+                d) 24 meses<br>
+                e) 30 dias
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> – O período concessivo para férias é de:</p>
+            <div class="alternativas">
+                a) 6 meses após o período aquisitivo<br>
+                b) 12 meses após o período aquisitivo<br>
+                c) 18 meses após o período aquisitivo<br>
+                d) 24 meses após o período aquisitivo<br>
+                e) 30 dias após o período aquisitivo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> – O recrutamento que busca candidatos no mercado de trabalho é o:</p>
+            <div class="alternativas">
+                a) Interno<br>
+                b) Externo<br>
+                c) Misto<br>
+                d) Seletivo<br>
+                e) Continuado
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> – A avaliação de desempenho por resultados foca em:</p>
+            <div class="alternativas">
+                a) Comportamentos e habilidades<br>
+                b) Cumprimento de metas quantitativas<br>
+                c) Opinião de pares e subordinados<br>
+                d) Autoavaliação<br>
+                e) Potencial de liderança
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> – O que são rotinas de pessoal?</p>
+            <div class="alternativas">
+                a) Processos de recrutamento e seleção<br>
+                b) Procedimentos administrativos relacionados à gestão de servidores (frequência, férias, registros)<br>
+                c) Treinamentos obrigatórios<br>
+                d) Avaliações periódicas<br>
+                e) Planos de carreira
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> – O controle de frequência é importante porque:</p>
+            <div class="alternativas">
+                a) Substitui a avaliação de desempenho<br>
+                b) Baseia o cálculo da remuneração e controla a assiduidade<br>
+                c) É opcional nas organizações públicas<br>
+                d) Apenas registra o horário de entrada<br>
+                e) Não tem relação com a folha de pagamento
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> – O desenvolvimento de pessoas está relacionado a:</p>
+            <div class="alternativas">
+                a) Programas de curta duração<br>
+                b) Preparação para cargos de maior complexidade<br>
+                c) Treinamento de sistemas<br>
+                d) Controle de frequência<br>
+                e) Recrutamento externo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> – A avaliação de desempenho 360° é composta por:</p>
+            <div class="alternativas">
+                a) Apenas o gestor e o avaliado<br>
+                b) Apenas pares e subordinados<br>
+                c) Apenas clientes e fornecedores<br>
+                d) Múltiplas fontes: pares, subordinados, clientes e o próprio avaliado<br>
+                e) Apenas o RH
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> – O treinamento é uma ação de curto prazo voltada para:</p>
+            <div class="alternativas">
+                a) Desenvolver novos líderes<br>
+                b) Suprir lacunas de competências para o cargo atual<br>
+                c) Preparar para a aposentadoria<br>
+                d) Avaliar o clima organizacional<br>
+                e) Recrutar novos talentos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> – O recrutamento misto combina:</p>
+            <div class="alternativas">
+                a) Apenas recrutamento interno<br>
+                b) Apenas recrutamento externo<br>
+                c) Recrutamento interno e externo<br>
+                d) Apenas anúncios em jornais<br>
+                e) Apenas indicações de funcionários
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> – A educação permanente é caracterizada por:</p>
+            <div class="alternativas">
+                a) Cursos formais de longa duração<br>
+                b) Aprendizado contínuo integrado ao dia a dia<br>
+                c) Apenas treinamentos obrigatórios<br>
+                d) Avaliações periódicas<br>
+                e) Recrutamento externo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> – O que é a ficha funcional de um servidor?</p>
+            <div class="alternativas">
+                a) Um documento de avaliação de desempenho<br>
+                b) Um registro contendo dados pessoais, profissionais e históricos do servidor<br>
+                c) Um programa de treinamento<br>
+                d) Um plano de férias<br>
+                e) Um contrato de trabalho temporário
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 19 a 35 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (19 a 35) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> – A avaliação de desempenho por competências mede:</p>
+            <div class="alternativas">
+                a) Apenas resultados quantitativos<br>
+                b) Comportamentos e habilidades<br>
+                c) Apenas a assiduidade<br>
+                d) Apenas a pontualidade<br>
+                e) Apenas o cumprimento de prazos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> – O feedback na avaliação de desempenho deve ser:</p>
+            <div class="alternativas">
+                a) Genérico e vago<br>
+                b) Construtivo e específico<br>
+                c) Apenas positivo<br>
+                d) Apenas negativo<br>
+                e) Sempre escrito
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> – O terço constitucional de férias é:</p>
+            <div class="alternativas">
+                a) Um adicional de 1/3 sobre o salário durante as férias<br>
+                b) Um desconto de 1/3 sobre o salário<br>
+                c) Um bônus anual<br>
+                d) Um acréscimo de 1/3 sobre o 13º salário<br>
+                e) Um desconto sobre as horas extras
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> – O recrutamento interno tem como desvantagem:</p>
+            <div class="alternativas">
+                a) Maior custo<br>
+                b) Menor motivação<br>
+                c) Possível conflito entre candidatos internos<br>
+                d) Maior tempo de adaptação<br>
+                e) Menor conhecimento da cultura organizacional
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> – A seleção de pessoal utiliza, entre outras técnicas:</p>
+            <div class="alternativas">
+                a) Apenas entrevistas<br>
+                b) Análise curricular, entrevistas, testes e dinâmicas de grupo<br>
+                c) Apenas testes psicotécnicos<br>
+                d) Apenas dinâmicas de grupo<br>
+                e) Apenas a análise curricular
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> – O desenvolvimento de pessoas é voltado para:</p>
+            <div class="alternativas">
+                a) O cargo atual<br>
+                b) O curto prazo<br>
+                c) O longo prazo e a carreira<br>
+                d) Apenas a aposentadoria<br>
+                e) Apenas o recrutamento
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> – A avaliação de desempenho serve para, EXCETO:</p>
+            <div class="alternativas">
+                a) Identificar necessidades de treinamento<br>
+                b) Subsidiar promoções<br>
+                c) Reduzir o número de funcionários<br>
+                d) Melhorar a comunicação entre gestor e equipe<br>
+                e) Alinhar a equipe com os objetivos organizacionais
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 26</b> – O controle de frequência é feito por meio de:</p>
+            <div class="alternativas">
+                a) Apenas ponto eletrônico<br>
+                b) Ponto eletrônico, folha de ponto manual ou sistemas de gestão<br>
+                c) Apenas folha de ponto manual<br>
+                d) Apenas sistemas de gestão<br>
+                e) Apenas relógio de ponto
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 27</b> – O planejamento de férias no RH tem como objetivo:</p>
+            <div class="alternativas">
+                a) Evitar que os servidores tirem férias<br>
+                b) Organizar o cronograma para não comprometer a operação<br>
+                c) Reduzir o número de dias de férias<br>
+                d) Eliminar as férias<br>
+                e) Apenas registrar as férias após a concessão
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 28</b> – A avaliação de desempenho que foca no cumprimento de metas quantitativas é chamada de:</p>
+            <div class="alternativas">
+                a) Avaliação por competências<br>
+                b) Avaliação por resultados<br>
+                c) Autoavaliação<br>
+                d) Avaliação 360°<br>
+                e) Avaliação do gestor
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 29</b> – Os registros funcionais incluem, EXCETO:</p>
+            <div class="alternativas">
+                a) Ficha de registro<br>
+                b) Contrato de trabalho<br>
+                c) Documentos pessoais<br>
+                d) Avaliação de desempenho<br>
+                e) Declarações
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 30</b> – A educação continuada refere-se a:</p>
+            <div class="alternativas">
+                a) Aprendizado informal no dia a dia<br>
+                b) Processos formais de aprendizado (cursos, especializações)<br>
+                c) Apenas treinamentos obrigatórios<br>
+                d) Apenas avaliações periódicas<br>
+                e) Apenas recrutamento interno
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 31</b> – O recrutamento externo é vantajoso porque:</p>
+            <div class="alternativas">
+                a) É mais barato que o interno<br>
+                b) Traz novos conhecimentos e amplia o leque de opções<br>
+                c) Não requer divulgação<br>
+                d) É mais rápido que o interno<br>
+                e) Gera menos concorrência
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 32</b> – A avaliação de desempenho 360° é chamada assim porque:</p>
+            <div class="alternativas">
+                a) Envolve 360 pessoas<br>
+                b) Avalia 360 competências<br>
+                c) Coleta feedback de múltiplas fontes (360 graus)<br>
+                d) Dura 360 minutos<br>
+                e) É realizada 360 vezes por ano
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 33</b> – O treinamento e o desenvolvimento são processos complementares porque:</p>
+            <div class="alternativas">
+                a) Ambos têm o mesmo objetivo<br>
+                b) O treinamento prepara para o presente e o desenvolvimento para o futuro<br>
+                c) Ambos são de longo prazo<br>
+                d) Ambos são de curto prazo<br>
+                e) Não se relacionam
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 34</b> – O controle de frequência é importante para, EXCETO:</p>
+            <div class="alternativas">
+                a) Calcular a remuneração<br>
+                b) Controlar a assiduidade<br>
+                c) Avaliar o desempenho qualitativo<br>
+                d) Registrar horas extras<br>
+                e) Controlar atrasos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 35</b> – O objetivo principal da avaliação de desempenho é:</p>
+            <div class="alternativas">
+                a) Demitir funcionários com baixo desempenho<br>
+                b) Medir a performance e promover o desenvolvimento contínuo<br>
+                c) Reduzir custos com pessoal<br>
+                d) Aumentar a carga horária<br>
+                e) Eliminar o feedback
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-B</b> | <b>3-B</b> | <b>4-B</b> | <b>5-B</b> | <b>6-C</b> | <b>7-B</b> | <b>8-B</b> | <b>9-B</b> | <b>10-B</b></p>
+            <p><b>11-B</b> | <b>12-B</b> | <b>13-B</b> | <b>14-D</b> | <b>15-B</b> | <b>16-C</b> | <b>17-B</b> | <b>18-B</b> | <b>19-B</b> | <b>20-B</b></p>
+            <p><b>21-A</b> | <b>22-C</b> | <b>23-B</b> | <b>24-C</b> | <b>25-C</b> | <b>26-B</b> | <b>27-B</b> | <b>28-B</b> | <b>29-D</b> | <b>30-B</b></p>
+            <p><b>31-B</b> | <b>32-C</b> | <b>33-B</b> | <b>34-C</b> | <b>35-B</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>💡 Observação:</b> Todas as respostas foram elaboradas com base na doutrina de Administração de Recursos Humanos e na legislação trabalhista (CLT).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

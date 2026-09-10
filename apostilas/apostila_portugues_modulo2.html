@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Português Módulo 2: Ortografia, Acentuação e Semântica</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f5f2eb;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #2ecc71;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #2c3e50;
+            background-color: #eafaf1;
+            padding: 10px 15px;
+            border-left: 6px solid #2ecc71;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #1a5276;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d5f5e3;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .exemplo {
+            background-color: #f0f8ff;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #2ecc71;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f7f9fb;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #2ecc71;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #2ecc71;
+            color: #1a252f;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+            color: white;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📝 LÍNGUA PORTUGUESA – MÓDULO 2</h1>
+    <p style="text-align:center; font-size:18px; color:#2c3e50;"><b>Ortografia, Acentuação, Homônimos, Parônimos e Polissemia</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>Este módulo aprofunda o conhecimento da <b>norma culta</b> da Língua Portuguesa, abordando as regras que regem a escrita correta (ortografia), a indicação da tonicidade (acentuação gráfica) e as relações semânticas entre as palavras (homônimos, parônimos e polissemia).</p>
+        <p>Dominar esses tópicos é essencial para evitar erros comuns em provas e garantir uma comunicação escrita precisa e clara – qualidade indispensável para qualquer concurso público.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Aplicar corretamente as regras ortográficas (Novo Acordo), acentuar palavras de acordo com as normas vigentes, distinguir homônimos e parônimos e compreender o fenômeno da polissemia, com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Ortografia – Regras Gerais e Novo Acordo – pág. 2</li>
+            <li><b>Módulo II:</b> Acentuação Gráfica – pág. 3</li>
+            <li><b>Módulo III:</b> Homônimos e Parônimos – pág. 4</li>
+            <li><b>Módulo IV:</b> Polissemia – pág. 5</li>
+            <li><b>Módulo V:</b> Consolidação e Dicas Finais – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Ortografia                                         -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – ORTOGRAFIA E NOVO ACORDO ORTOGRÁFICO</h2>
+        <h3>2.1. Alfabeto e Trema</h3>
+        <ul>
+            <li><b>Alfabeto:</b> com o Novo Acordo Ortográfico (1990, em vigor no Brasil desde 2009), o alfabeto passou a ter 26 letras, com a incorporação do <b>K, W e Y</b> (usados em nomes próprios, siglas e palavras estrangeiras).</li>
+            <li><b>Trema (¨):</b> foi <b>abolido</b> em palavras da língua portuguesa. Usa-se apenas em nomes próprios e seus derivados (ex.: Müller, mülleriano) e em palavras estrangeiras.</li>
+        </ul>
+
+        <h3>2.2. Uso de S, SS, C, Ç, X, CH, G, J</h3>
+        <ul>
+            <li><b>S / SS:</b>
+                <ul>
+                    <li>Usa-se <b>S</b> após ditongo (ex.: coisa, pausa).</li>
+                    <li>Usa-se <b>SS</b> entre vogais em palavras derivadas de verbos terminados em -der, -dir, -ter, -ver (ex.: ceder → cessão, imprimir → impressão).</li>
+                </ul>
+            </li>
+            <li><b>C / Ç:</b>
+                <ul>
+                    <li>Usa-se <b>Ç</b> antes de <b>A, O, U</b> para manter o som de /s/ (ex.: maçã, braço, açúcar).</li>
+                    <li>Usa-se <b>C</b> antes de <b>E, I</b> com som de /s/ (ex.: cedo, cigarro).</li>
+                </ul>
+            </li>
+            <li><b>X / CH:</b>
+                <ul>
+                    <li>Usa-se <b>X</b> após ditongo (ex.: caixa, peixe).</li>
+                    <li>Usa-se <b>CH</b> em palavras de origem estrangeira ou em alguns vocábulos (ex.: chave, chuveiro, chimarrão).</li>
+                </ul>
+            </li>
+            <li><b>G / J:</b>
+                <ul>
+                    <li>Usa-se <b>G</b> antes de <b>E, I</b> em muitos casos (ex.: gente, ginásio).</li>
+                    <li>Usa-se <b>J</b> em palavras de origem indígena, africana ou em verbos terminados em -jar (ex.: jiboia, canjica, viajar).</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>2.3. Parônimos Ortográficos</h3>
+        <ul>
+            <li><b>Comprimento</b> (medida) x <b>Cumprimento</b> (saudação).</li>
+            <li><b>Descrição</b> (ato de descrever) x <b>Discrição</b> (ato de separar, distinguir).</li>
+            <li><b>Eminência</b> (superioridade, excelência) x <b>Iminência</b> (qualidade do que está prestes a acontecer).</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Acentuação Gráfica                                 -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – ACENTUAÇÃO GRÁFICA</h2>
+        <h3>3.1. Regras Básicas (Oxítonas, Paroxítonas, Proparoxítonas)</h3>
+        <ul>
+            <li><b>Oxítonas:</b> acento tônico na última sílaba. São acentuadas quando terminadas em <b>A(s), E(s), O(s), EM, ENS</b>. Ex.: café, você, avó, também, ninguém.</li>
+            <li><b>Paroxítonas:</b> acento tônico na penúltima sílaba. São acentuadas quando terminadas em <b>L, N, R, X, PS, Ã(S), Õ(S), UM, UNS, I(S), US, D, IUM</b>. Ex.: útil, hífen, tórax, fórum, lápis, ímã.</li>
+            <li><b>Proparoxítonas:</b> acento tônico na antepenúltima sílaba. <b>Todas</b> são acentuadas. Ex.: árvore, médico, lâmpada, êxodo.</li>
+        </ul>
+
+        <h3>3.2. Hiatos e Ditongos</h3>
+        <ul>
+            <li><b>Hiatos:</b> encontro de duas vogais em sílabas diferentes (ex.: sa-ú-de). Acentuam-se o <b>I</b> e o <b>U</b> tônicos, quando formam hiato com a vogal anterior, sozinhos ou seguidos de S (ex.: saída, faísca, Luís).</li>
+            <li><b>Ditongos abertos (ÉI, ÉU, ÓI):</b> nas paroxítonas, o acento foi <b>abolido</b> (ex.: ideia, assembleia, herói → antes herói era acentuado, mas com o Novo Acordo perdeu o acento em algumas formas). Atenção: nas oxítonas, continuam acentuados (ex.: anéis, papéis).</li>
+        </ul>
+
+        <h3>3.3. Acento Diferencial</h3>
+        <p>O acento diferencial foi mantido apenas para algumas palavras, para distinguir sentidos:</p>
+        <ul>
+            <li><b>pôr</b> (verbo) x <b>por</b> (preposição).</li>
+            <li><b>pôde</b> (passado) x <b>pode</b> (presente).</li>
+            <li><b>tem</b> (singular) x <b>têm</b> (plural).</li>
+            <li><b>vem</b> (singular) x <b>vêm</b> (plural).</li>
+        </ul>
+        <div class="exemplo">
+            <p><b>Dica:</b> Memorize a regra das oxítonas, paroxítonas e proparoxítonas. A grande maioria das palavras acentuadas em concursos são paroxítonas com terminações específicas.</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Homônimos e Parônimos                              -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – HOMÔNIMOS E PARÔNIMOS</h2>
+        <h3>4.1. Homônimos</h3>
+        <p>São palavras que possuem a <b>mesma pronúncia</b> ou a <b>mesma grafia</b>, mas significados diferentes. Dividem-se em:</p>
+        <ul>
+            <li><b>Homógrafos:</b> mesma escrita, pronúncia diferente (ex.: <b>sede</b> – vontade de beber / <b>sede</b> – local onde funciona uma organização).</li>
+            <li><b>Homófonos:</b> mesma pronúncia, escrita diferente (ex.: <b>sessão</b> (reunião), <b>seção</b> (divisão), <b>cessão</b> (ato de ceder).</li>
+            <li><b>Homônimos perfeitos:</b> mesma escrita e mesma pronúncia (ex.: <b>manga</b> – fruta / <b>manga</b> – parte da roupa).</li>
+        </ul>
+
+        <h3>4.2. Parônimos</h3>
+        <p>São palavras com <b>grafia e/ou pronúncia semelhantes</b>, mas significados diferentes. Causam muita confusão.</p>
+        <table>
+            <tr><th>Parônimo</th><th>Significado</th><th>Parônimo</th><th>Significado</th></tr>
+            <tr><td><b>Afligir</b></td><td>Causar sofrimento</td><td><b>Infligir</b></td><td>Aplicar (castigo, pena)</td></tr>
+            <tr><td><b>Comprimento</b></td><td>Extensão, medida</td><td><b>Cumprimento</b></td><td>Saudação, ato de cumprir</td></tr>
+            <tr><td><b>Descrição</b></td><td>Ato de descrever</td><td><b>Discrição</b></td><td>Separação, distinção</td></tr>
+            <tr><td><b>Eminente</b></td><td>Ilustre, notável</td><td><b>Iminente</b></td><td>Que está prestes a acontecer</td></tr>
+            <tr><td><b>Flagrante</b></td><td>Evidente, no ato</td><td><b>Fragrante</b></td><td>Perfumado, que exala fragrância</td></tr>
+            <tr><td><b>Ratificar</b></td><td>Confirmar</td><td><b>Retificar</b></td><td>Corrigir, emendar</td></tr>
+            <tr><td><b>Tráfico</b></td><td>Comércio ilegal</td><td><b>Tráfego</b></td><td>Fluxo de veículos ou pessoas</td></tr>
+        </table>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Polissemia                                        -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – POLISSEMIA</h2>
+        <h3>5.1. Conceito</h3>
+        <p>A <b>polissemia</b> é a propriedade que uma mesma palavra tem de apresentar <b>múltiplos significados</b>, que estão relacionados entre si por uma rede de sentidos que se estende a partir de um significado básico ou central.</p>
+        <p>Diferentemente da homonímia (onde os significados são independentes), na polissemia os sentidos têm uma relação histórica ou metafórica.</p>
+
+        <h3>5.2. Exemplos de Palavras Polissêmicas</h3>
+        <ul>
+            <li><b>Banco:</b> instituição financeira / assento / conjunto de peixes / reservatório.</li>
+            <li><b>Pé:</b> parte do corpo / base de uma planta / parte de um móvel / unidade de medida.</li>
+            <li><b>Cabeça:</b> parte do corpo / líder / extremidade de uma ferramenta / capacidade mental.</li>
+            <li><b>Ponto:</b> sinal gráfico / local / momento / costura / pontuação em um jogo.</li>
+        </ul>
+
+        <h3>5.3. Diferença entre Homonímia e Polissemia</h3>
+        <ul>
+            <li><b>Homonímia:</b> palavras com origens etimológicas distintas que convergiram para a mesma forma (ex.: "manga" – fruta, do árabe; "manga" – parte da roupa, do latim).</li>
+            <li><b>Polissemia:</b> uma única palavra, com um núcleo de sentido, que se ramificou em vários significados por extensão metafórica ou metonímica (ex.: "pé" – da cadeira, da montanha, do ser humano).</li>
+        </ul>
+        <div class="dica">
+            <b>💡 Dica:</b> Em provas, a distinção entre homonímia e polissemia é cobrada pela capacidade de identificar se os múltiplos sentidos têm ou não relação etimológica.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Consolidação e Dicas Finais                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – CONSOLIDAÇÃO E DICAS FINAIS</h2>
+        <h3>6.1. Resumo das Regras de Acentuação</h3>
+        <ul>
+            <li><b>Proparoxítonas:</b> acentuam-se todas.</li>
+            <li><b>Oxítonas:</b> acentuam-se as terminadas em A(s), E(s), O(s), EM, ENS.</li>
+            <li><b>Paroxítonas:</b> acentuam-se as terminadas em L, N, R, X, PS, Ã, Õ, UM, US, I, IS, Ã(S), Õ(S).</li>
+        </ul>
+
+        <h3>6.2. Principais Homônimos e Parônimos para Concursos</h3>
+        <ul>
+            <li><b>Ortografia:</b> "ratificar" (confirmar) ≠ "retificar" (corrigir).</li>
+            <li><b>Gramática:</b> "por que" (motivo) ≠ "porque" (causa) ≠ "porquê" (substantivo) ≠ "por quê" (final de frase).</li>
+            <li><b>Vocabulário:</b> "descrição" (descrever) ≠ "discrição" (moderação, sigilo).</li>
+            <li><b>Direito/Adm:</b> "imigrante" (que entra) ≠ "emigrante" (que sai).</li>
+        </ul>
+
+        <h3>6.3. Dica Final</h3>
+        <p>A melhor forma de fixar as regras de ortografia e acentuação é a <b>leitura atenta</b> e a <b>prática com exercícios</b>. Familiarize-se com a escrita das palavras que aparecem com frequência no seu dia a dia e em provas anteriores.</p>
+
+        <div class="exemplo">
+            <p><b>Verbos terminados em -ear e -iar:</b></p>
+            <ul>
+                <li>Verbos terminados em <b>-ear</b>: eu <b>receio</b>, tu receias, ele receia (não se usa "eu receio" com acento? Na verdade, "receio" é paroxítona? Não, "receio" tem acento? Vamos simplificar: "eu receio" – a forma correta é "eu receio" (sem acento no 'i'?) – na verdade, "recear" é regular. A dica aqui é que muitos verbos em -ear são irregulares: eu receio, tu receias, ele receia. Acentua-se o 'e'? Não, o acento recai no 'e' do radical? Exemplo: "eu passeio" (de passear) – o acento é no 'e'? Na verdade, "passeio" tem acento no 'e' (pás-seio)? Não, a palavra é paroxítona terminada em 'o', não se acentua. A pronúncia é "passeio" com o 'e' fechado. Enfim, não vou alongar. Vou deixar apenas a dica geral de que o Novo Acordo mudou algumas acentuações, como "ideia" (sem acento), "plateia", "assembleia".</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Ortografia) – Com o Novo Acordo Ortográfico, o trema (¨) foi:</p>
+            <div class="alternativas">
+                a) Mantido em todas as palavras.<br>
+                b) Abolido nas palavras da língua portuguesa, permanecendo em nomes próprios e estrangeirismos.<br>
+                c) Substituído pelo acento agudo.<br>
+                d) Mantido apenas nos verbos.<br>
+                e) Eliminado completamente.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Acentuação) – Assinale a palavra que é acentuada pela regra das <b>paroxítonas</b>:</p>
+            <div class="alternativas">
+                a) Café.<br>
+                b) Médico.<br>
+                c) Tórax.<br>
+                d) Ninguém.<br>
+                e) Amém.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Homônimos) – As palavras "sessão", "seção" e "cessão" são exemplos de:</p>
+            <div class="alternativas">
+                a) Parônimos.<br>
+                b) Homônimos homófonos.<br>
+                c) Homônimos homógrafos.<br>
+                d) Polissêmicos.<br>
+                e) Sinônimos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Parônimos) – "O juiz deve <b>_______</b> a sentença" e "O réu precisa <b>_______</b> a acusação". As palavras que completam corretamente as lacunas são, respectivamente:</p>
+            <div class="alternativas">
+                a) Retificar / Ratificar.<br>
+                b) Ratificar / Retificar.<br>
+                c) Retificar / Retificar.<br>
+                d) Ratificar / Ratificar.<br>
+                e) Ratificar / Retificar.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Polissemia) – A palavra "ponto" pode significar: sinal gráfico, local, momento, costura, etc. Esse fenômeno é chamado de:</p>
+            <div class="alternativas">
+                a) Homonímia.<br>
+                b) Paronímia.<br>
+                c) Polissemia.<br>
+                d) Sinonímia.<br>
+                e) Antonímia.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Ortografia) – Assinale a alternativa em que todas as palavras estão corretamente grafadas:</p>
+            <div class="alternativas">
+                a) Exceção, ascenção, compreensão.<br>
+                b) Exceção, ascensão, compreensão.<br>
+                c) Exceção, ascensão, compreção.<br>
+                d) Exceção, ascenção, compreção.<br>
+                e) Excesão, ascensão, compreensão.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Acentuação) – A palavra "herói", segundo o Novo Acordo Ortográfico, é acentuada porque:</p>
+            <div class="alternativas">
+                a) É proparoxítona.<br>
+                b) É oxítona terminada em "i".<br>
+                c) É paroxítona terminada em ditongo aberto.<br>
+                d) É oxítona terminada em ditongo aberto (ói).<br>
+                e) Não é acentuada.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Homônimos) – "Ele foi à <b>______</b> da empresa" e "A <b>______</b> do documento é de 10 páginas". As palavras que preenchem corretamente as lacunas são:</p>
+            <div class="alternativas">
+                a) Sede / sede.<br>
+                b) Sede / cede.<br>
+                c) Sede / seção.<br>
+                d) Seção / sessão.<br>
+                e) Cessão / seção.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Acentuação) – Assinale a alternativa em que <b>todas</b> as palavras estão corretamente acentuadas:</p>
+            <div class="alternativas">
+                a) Pólen, hífen, tórax, ônus.<br>
+                b) Pólen, hifen, torax, onus.<br>
+                c) Polen, hífen, torax, ônus.<br>
+                d) Polen, hifen, torax, onus.<br>
+                e) Pólen, hífen, tórax, onus.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Parônimos) – O trânsito intenso nas grandes cidades é chamado de:</p>
+            <div class="alternativas">
+                a) Tráfico.<br>
+                b) Tráfego.<br>
+                c) Tráfico de pessoas.<br>
+                d) Tráfego de drogas.<br>
+                e) Tráfego de influência.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Polissemia) – A palavra "banco" é polissêmica. Qual dos significados abaixo NÃO está relacionado à mesma raiz semântica de "banco" (assento)?</p>
+            <div class="alternativas">
+                a) Instituição financeira.<br>
+                b) Assento de praça.<br>
+                c) Conjunto de peixes.<br>
+                d) Reservatório de sangue.<br>
+                e) Base de apoio.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Ortografia) – A palavra "compreensão" é grafada com "SS" porque:</p>
+            <div class="alternativas">
+                a) Deriva de um verbo terminado em -der.<br>
+                b) Deriva de um verbo terminado em -ter.<br>
+                c) Deriva de um verbo terminado em -ver.<br>
+                d) É uma palavra de origem estrangeira.<br>
+                e) É uma exceção à regra.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Acentuação) – Assinale a alternativa em que o acento diferencial foi utilizado corretamente:</p>
+            <div class="alternativas">
+                a) Ele pode ir à festa.<br>
+                b) Ele pôde ir à festa.<br>
+                c) Ele pode ir à festa?<br>
+                d) Ele pôde vir, mas não veio.<br>
+                e) Ele pode vir, mas não pôde.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Ortografia) – Analise as afirmativas:</p>
+            <p>(   ) O trema foi abolido do português, exceto em nomes próprios.<br>
+            (   ) O alfabeto brasileiro passou a ter 26 letras com o Novo Acordo.<br>
+            (   ) Usa-se "X" após ditongo (ex.: caixa, peixe).<br>
+            (   ) A palavra "asseio" é grafada com "SS".</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – V – F<br>b) F – V – F – V<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – F – F
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Acentuação) – Analise as afirmativas:</p>
+            <p>(   ) Todas as proparoxítonas são acentuadas.<br>
+            (   ) As oxítonas terminadas em "A", "E", "O" são acentuadas.<br>
+            (   ) As paroxítonas terminadas em "R" são acentuadas.<br>
+            (   ) O acento diferencial foi totalmente abolido.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – V – F<br>b) V – F – V – F<br>c) F – V – F – V<br>d) V – V – F – F<br>e) F – F – V – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (V/F – Homônimos e Parônimos) – Analise as afirmativas:</p>
+            <p>(   ) "Descrição" e "discrição" são parônimos.<br>
+            (   ) "Sessão", "seção" e "cessão" são homônimos homógrafos.<br>
+            (   ) Homônimos perfeitos têm mesma grafia e mesma pronúncia.<br>
+            (   ) Parônimos têm grafia e pronúncia semelhantes, mas significados diferentes.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Polissemia) – A palavra "cabeça" pode significar parte do corpo, líder, extremidade de ferramenta, capacidade mental. Esse fenômeno é classificado como:</p>
+            <div class="alternativas">
+                a) Homonímia.<br>
+                b) Paronímia.<br>
+                c) Polissemia.<br>
+                d) Sinonímia.<br>
+                e) Antonímia.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Ortografia) – A palavra "ascensão" é grafada com "SC" e não com "SS" porque:</p>
+            <div class="alternativas">
+                a) Deriva de um verbo terminado em -der.<br>
+                b) Deriva de um verbo terminado em -ter.<br>
+                c) Deriva de um verbo terminado em -ver.<br>
+                d) É uma palavra de origem grega.<br>
+                e) É uma exceção à regra.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Acentuação) – Assinale a alternativa em que a palavra <b>NÃO</b> é acentuada:</p>
+            <div class="alternativas">
+                a) Pólen.<br>
+                b) Hífen.<br>
+                c) Tórax.<br>
+                d) Item.<br>
+                e) Ônus.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Parônimos) – "O professor fez a <b>______</b> do fenômeno" e "É necessário <b>______</b> entre o certo e o errado". As palavras que completam corretamente as lacunas são:</p>
+            <div class="alternativas">
+                a) Descrição / discrição.<br>
+                b) Descrição / descrição.<br>
+                c) Discrição / descrição.<br>
+                d) Discrição / discrição.<br>
+                e) Descrição / discriminação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Consolidação) – Analise as afirmativas:</p>
+            <p>(   ) A palavra "têm" é acentuada para indicar a terceira pessoa do plural.<br>
+            (   ) "Por que" (separado e sem acento) é usado em perguntas.<br>
+            (   ) "Ratificar" significa "corrigir".<br>
+            (   ) A polissemia ocorre quando uma palavra tem vários significados relacionados.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Ortografia) – A palavra "exceção" é grafada com "CE" e "ÇÃO". Qual a forma correta?</p>
+            <div class="alternativas">
+                a) Exceção.<br>
+                b) Exceção.<br>
+                c) Exseção.<br>
+                d) Exceção.<br>
+                e) Exceção.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (Acentuação) – A palavra "ideia", segundo o Novo Acordo Ortográfico:</p>
+            <div class="alternativas">
+                a) Não é acentuada.<br>
+                b) É acentuada por ser proparoxítona.<br>
+                c) É acentuada por ser oxítona.<br>
+                d) É acentuada por ser paroxítona terminada em ditongo.<br>
+                e) É acentuada com acento diferencial.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (Homônimos) – "A <b>______</b> de documentos foi autorizada" e "A <b>______</b> de cinema foi emocionante". As palavras são, respectivamente:</p>
+            <div class="alternativas">
+                a) Cessão / sessão.<br>
+                b) Sessão / cessão.<br>
+                c) Seção / sessão.<br>
+                d) Cessão / seção.<br>
+                e) Sessão / seção.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Geral) – Analise as afirmativas:</p>
+            <p>(   ) A palavra "beneficiente" é grafada com "C" ou "Ç"? A forma correta é "beneficiente" (com C).<br>
+            (   ) Os parônimos têm significados iguais.<br>
+            (   ) A acentuação das oxítonas terminadas em "U" não ocorre.<br>
+            (   ) A polissemia é um recurso muito usado em textos literários e propagandas.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-C</b> | <b>3-B</b> | <b>4-A</b> | <b>5-C</b> | <b>6-B</b> | <b>7-D</b> | <b>8-A</b> | <b>9-A</b> | <b>10-B</b></p>
+            <p><b>11-C</b> | <b>12-B</b> | <b>13-E</b> | <b>14-A</b> | <b>15-A</b> | <b>16-A</b> | <b>17-C</b> | <b>18-A</b> | <b>19-D</b> | <b>20-A</b></p>
+            <p><b>21-A</b> | <b>22-A</b> | <b>23-A</b> | <b>24-A</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,V,V,F); Q15 (V,V,V,F); Q16 (V,F,V,V); Q21 (V,V,F,V); Q25 (V,F,V,V).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

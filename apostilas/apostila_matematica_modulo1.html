@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Matemática: Conjuntos e Conjuntos Numéricos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f7f0;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a7a5a;
+            text-align: center;
+            border-bottom: 3px solid #1a7a5a;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a7a5a;
+            background-color: #e6f4ed;
+            padding: 10px 15px;
+            border-left: 6px solid #1a7a5a;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #0d5a3e;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d4ece4;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .atencao {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .atencao b {
+            color: #922b21;
+        }
+        .exemplo {
+            background-color: #eafaf1;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #1a7a5a;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5fbf8;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #1a7a5a;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a7a5a;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #2a9a7a;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📐 MATEMÁTICA – MÓDULO 1</h1>
+    <p style="text-align:center; font-size:18px; color:#1a7a5a;"><b>Teoria dos Conjuntos e Conjuntos Numéricos</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>Este módulo aborda a <b>Teoria dos Conjuntos</b> e os <b>Conjuntos Numéricos</b> (Naturais, Inteiros, Racionais e Reais). É a base para toda a matemática e frequentemente cobrada em concursos.</p>
+        <p>Além da teoria, traremos <b>dicas de resolução e pegadinhas</b> para você não cair nas armadilhas mais comuns das provas.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Dominar os conceitos de conjuntos e conjuntos numéricos, compreender as operações e propriedades, e identificar as principais pegadinhas de concurso, com 35 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Teoria dos Conjuntos – pág. 2</li>
+            <li><b>Módulo II:</b> Conjuntos Numéricos: Naturais e Inteiros – pág. 3</li>
+            <li><b>Módulo III:</b> Conjuntos Numéricos: Racionais e Reais – pág. 4</li>
+            <li><b>Módulo IV:</b> Divisibilidade, MDC e MMC – pág. 5</li>
+            <li><b>Módulo V:</b> Dicas e Pegadinhas – pág. 6</li>
+            <li><b>Questões:</b> 35 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Teoria dos Conjuntos                               -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – TEORIA DOS CONJUNTOS</h2>
+
+        <h3>2.1. Conceitos Básicos</h3>
+        <ul>
+            <li><b>Conjunto:</b> agrupamento de elementos com características comuns.</li>
+            <li><b>Pertinência:</b> relação entre elemento e conjunto (<b>∈</b> pertence, <b>∉</b> não pertence).</li>
+            <li><b>Inclusão:</b> relação entre conjuntos (<b>⊂</b> está contido, <b>⊄</b> não está contido).</li>
+            <li><b>Conjunto vazio (∅):</b> não possui elementos.</li>
+            <li><b>Conjunto universo (U):</b> conjunto que contém todos os elementos considerados.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> Se A = {1, 2, 3} e B = {1, 2, 3, 4}.</p>
+            <ul>
+                <li>1 <b>∈</b> A (1 pertence a A).</li>
+                <li>5 <b>∉</b> A (5 não pertence a A).</li>
+                <li>A <b>⊂</b> B (A está contido em B).</li>
+                <li>B <b>⊄</b> A (B não está contido em A).</li>
+            </ul>
+        </div>
+
+        <h3>2.2. Operações com Conjuntos</h3>
+        <ul>
+            <li><b>União (∪):</b> reunião dos elementos de dois ou mais conjuntos. Ex: A ∪ B = {1, 2, 3, 4}.</li>
+            <li><b>Interseção (∩):</b> elementos comuns a dois ou mais conjuntos. Ex: A ∩ B = {1, 2, 3}.</li>
+            <li><b>Diferença ( - ):</b> elementos que estão em um conjunto e não no outro. Ex: B - A = {4}.</li>
+            <li><b>Complementar:</b> elementos do universo que não estão no conjunto. Ex: complementar de A em U.</li>
+            <li><b>Produto Cartesiano:</b> conjunto de todos os pares ordenados (a, b) com a ∈ A e b ∈ B.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Produto Cartesiano:</b> Se A = {1, 2} e B = {a, b}.</p>
+            <ul>
+                <li>A × B = {(1,a), (1,b), (2,a), (2,b)}.</li>
+                <li>B × A = {(a,1), (a,2), (b,1), (b,2)}.</li>
+            </ul>
+            <p><b>⚠️ Atenção:</b> A × B ≠ B × A (a ordem importa!).</p>
+        </div>
+
+        <div class="atencao">
+            <b>⚡ Pegadinha:</b> Confundir <b>∈</b> (pertence) com <b>⊂</b> (está contido). O primeiro é entre elemento e conjunto; o segundo, entre conjuntos.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Conjuntos Numéricos: Naturais e Inteiros           -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – CONJUNTOS NUMÉRICOS: NATURAIS E INTEIROS</h2>
+
+        <h3>3.1. Conjunto dos Naturais (N)</h3>
+        <ul>
+            <li><b>N = {0, 1, 2, 3, 4, ...}</b></li>
+            <li><b>Ordenação:</b> 0 < 1 < 2 < 3 < ...</li>
+            <li><b>Operações:</b> soma, subtração, multiplicação e divisão (com restrições).</li>
+        </ul>
+
+        <h3>3.2. Conjunto dos Inteiros (Z)</h3>
+        <ul>
+            <li><b>Z = {..., -3, -2, -1, 0, 1, 2, 3, ...}</b></li>
+            <li><b>N ⊂ Z</b> (todo natural é inteiro).</li>
+            <li><b>Ordenação:</b> ... < -3 < -2 < -1 < 0 < 1 < 2 < 3 < ...</li>
+            <li><b>Operações:</b> todas as operações são fechadas (soma, subtração, multiplicação). A divisão pode não ser inteira.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> Em Z, a divisão de 5 por 2 não resulta em um inteiro (5 ÷ 2 = 2,5). Em N, a subtração de 3 por 5 não é possível (3 - 5 = -2, que não é natural).</p>
+        </div>
+
+        <h3>3.3. Múltiplos e Divisores</h3>
+        <ul>
+            <li><b>Múltiplos de um número:</b> resultado da multiplicação por um inteiro. Ex: múltiplos de 3: 0, 3, 6, 9, 12, ...</li>
+            <li><b>Divisores de um número:</b> números que dividem exatamente. Ex: divisores de 12: 1, 2, 3, 4, 6, 12.</li>
+            <li><b>Números primos:</b> têm exatamente dois divisores: 1 e ele mesmo. Ex: 2, 3, 5, 7, 11, 13, 17, 19, 23, ...</li>
+        </ul>
+
+        <div class="atencao">
+            <b>⚡ Pegadinha:</b> O número <b>1</b> não é primo (tem apenas um divisor). O <b>2</b> é o único primo par.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Conjuntos Numéricos: Racionais e Reais             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – CONJUNTOS NUMÉRICOS: RACIONAIS E REAIS</h2>
+
+        <h3>4.1. Conjunto dos Racionais (Q)</h3>
+        <ul>
+            <li><b>Q = { números que podem ser escritos na forma a/b, com a ∈ Z, b ∈ Z, b ≠ 0 }</b></li>
+            <li><b>Representação:</b> frações, decimais finitos e dízimas periódicas.</li>
+            <li><b>Exemplos:</b> 1/2 = 0,5; 1/3 = 0,333...; 2 = 2/1.</li>
+            <li><b>N ⊂ Z ⊂ Q</b>.</li>
+            <li><b>Dízima periódica:</b> decimal que se repete infinitamente. Ex: 0,333... (período 3), 0,121212... (período 12).</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Como transformar dízima em fração:</b></p>
+            <ul>
+                <li>0,333... = 3/9 = 1/3.</li>
+                <li>0,121212... = 12/99 = 4/33.</li>
+            </ul>
+        </div>
+
+        <h3>4.2. Conjunto dos Reais (R)</h3>
+        <ul>
+            <li><b>R = Q ∪ {irracionais}</b></li>
+            <li><b>Irracionais:</b> números que não podem ser escritos como fração. Ex: √2, π, √3.</li>
+            <li><b>N ⊂ Z ⊂ Q ⊂ R</b>.</li>
+            <li><b>Operações com radicais:</b> soma só é possível com radicais semelhantes. Ex: 2√3 + 5√3 = 7√3.</li>
+            <li><b>Propriedades:</b> √(a × b) = √a × √b; √(a/b) = √a / √b.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo de racionalização:</b></p>
+            <ul>
+                <li>1/√2 = (1/√2) × (√2/√2) = √2/2.</li>
+                <li>2/(3+√5) = [2/(3+√5)] × [(3-√5)/(3-√5)] = 2(3-√5)/(9-5) = (6-2√5)/4 = (3-√5)/2.</li>
+            </ul>
+        </div>
+
+        <div class="atencao">
+            <b>⚡ Pegadinha:</b> Dízimas periódicas são números <b>racionais</b> (podem ser escritas como fração). Números como √2, π são <b>irracionais</b>.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Divisibilidade, MDC e MMC                          -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – DIVISIBILIDADE, MDC E MMC</h2>
+
+        <h3>5.1. Critérios de Divisibilidade</h3>
+        <ul>
+            <li><b>Por 2:</b> número par (termina em 0, 2, 4, 6, 8).</li>
+            <li><b>Por 3:</b> soma dos algarismos é divisível por 3.</li>
+            <li><b>Por 4:</b> os dois últimos algarismos formam um número divisível por 4.</li>
+            <li><b>Por 5:</b> termina em 0 ou 5.</li>
+            <li><b>Por 6:</b> divisível por 2 e por 3.</li>
+            <li><b>Por 9:</b> soma dos algarismos é divisível por 9.</li>
+            <li><b>Por 10:</b> termina em 0.</li>
+        </ul>
+
+        <h3>5.2. Máximo Divisor Comum (MDC)</h3>
+        <ul>
+            <li><b>MDC:</b> maior número que divide dois ou mais números.</li>
+            <li><b>Método:</b> decomposição em fatores primos (pegar os fatores comuns com o menor expoente).</li>
+            <li><b>Exemplo:</b> MDC(12, 18) = 6 (12 = 2²×3; 18 = 2×3²; comuns: 2×3 = 6).</li>
+        </ul>
+
+        <h3>5.3. Mínimo Múltiplo Comum (MMC)</h3>
+        <ul>
+            <li><b>MMC:</b> menor número que é múltiplo de dois ou mais números.</li>
+            <li><b>Método:</b> decomposição em fatores primos (pegar os fatores comuns e não comuns com o maior expoente).</li>
+            <li><b>Exemplo:</b> MMC(12, 18) = 36 (12 = 2²×3; 18 = 2×3²; comuns e não comuns: 2²×3² = 36).</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Dica:</b></p>
+            <ul>
+                <li>O <b>MDC</b> é útil para divisão de objetos em partes iguais.</li>
+                <li>O <b>MMC</b> é útil para encontrar um momento em que eventos coincidem (ex: encontro de pessoas, trens, etc.).</li>
+            </ul>
+        </div>
+
+        <div class="atencao">
+            <b>⚡ Pegadinha:</b> Não confundir MDC com MMC. MDC usa os <b>menores</b> expoentes; MMC usa os <b>maiores</b>.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Dicas e Pegadinhas                                 -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – DICAS E PEGADINHAS</h2>
+
+        <h3>6.1. Dicas de Resolução</h3>
+        <ul>
+            <li><b>Leia com atenção:</b> identifique se o problema envolve união, interseção, diferença ou complementar.</li>
+            <li><b>Desenhe diagramas:</b> para conjuntos, use o diagrama de Venn para visualizar as relações.</li>
+            <li><b>Verifique a ordem:</b> no produto cartesiano, a ordem dos elementos importa.</li>
+            <li><b>Frações e dízimas:</b> lembre-se de que toda dízima periódica é uma fração.</li>
+            <li><b>MDC e MMC:</b> use a decomposição em fatores primos para agilizar os cálculos.</li>
+        </ul>
+
+        <h3>6.2. Pegadinhas Comuns</h3>
+        <ul>
+            <li><b>Confundir ∈ e ⊂:</b> elemento x pertence (∈) ao conjunto; conjunto A está contido (⊂) em B.</li>
+            <li><b>Esquecer o zero:</b> o zero é natural? Sim (N = {0, 1, 2, ...}) na maioria das bancas. Verifique o edital.</li>
+            <li><b>1 não é primo:</b> ele tem apenas um divisor (ele mesmo).</li>
+            <li><b>Dízimas são racionais:</b> 0,333... é racional (1/3).</li>
+            <li><b>√2 é irracional:</b> não pode ser escrito como fração.</li>
+            <li><b>MMC de números primos:</b> é o produto deles (ex: MMC(2,3,5) = 30).</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica Final:</b> Pratique bastante com exercícios. A teoria dos conjuntos e os números são a base para tudo que vem depois. Domine bem este módulo!
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 18                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 18)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> – Dados os conjuntos A = {1, 2, 3} e B = {2, 3, 4}, qual é o resultado de A ∪ B?</p>
+            <div class="alternativas">
+                a) {1, 2, 3}<br>
+                b) {2, 3, 4}<br>
+                c) {1, 2, 3, 4}<br>
+                d) {1, 2, 2, 3, 3, 4}<br>
+                e) {1, 4}
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> – Qual é a interseção dos conjuntos A = {1, 2, 3, 4} e B = {3, 4, 5, 6}?</p>
+            <div class="alternativas">
+                a) {1, 2, 3, 4, 5, 6}<br>
+                b) {3, 4}<br>
+                c) {1, 2, 5, 6}<br>
+                d) {1, 2, 3, 4}<br>
+                e) {3, 4, 5, 6}
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> – Qual das afirmações é verdadeira?</p>
+            <div class="alternativas">
+                a) 1 é primo<br>
+                b) 2 é o único primo par<br>
+                c) Todos os números primos são ímpares<br>
+                d) 0 é um número primo<br>
+                e) 4 é primo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> – O MDC de 24 e 36 é:</p>
+            <div class="alternativas">
+                a) 6<br>
+                b) 8<br>
+                c) 12<br>
+                d) 18<br>
+                e) 24
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> – O MMC de 12 e 18 é:</p>
+            <div class="alternativas">
+                a) 6<br>
+                b) 18<br>
+                c) 24<br>
+                d) 36<br>
+                e) 72
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> – O número √2 pertence a qual conjunto numérico?</p>
+            <div class="alternativas">
+                a) Naturais<br>
+                b) Inteiros<br>
+                c) Racionais<br>
+                d) Irracionais<br>
+                e) Reais, mas não é racional
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> – A dízima 0,666... é um número:</p>
+            <div class="alternativas">
+                a) Natural<br>
+                b) Inteiro<br>
+                c) Racional<br>
+                d) Irracional<br>
+                e) Complexo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> – O produto cartesiano de A = {a, b} e B = {1, 2} é:</p>
+            <div class="alternativas">
+                a) {(a,1), (a,2), (b,1), (b,2)}<br>
+                b) {(1,a), (2,a), (1,b), (2,b)}<br>
+                c) {a, b, 1, 2}<br>
+                d) {a, 1, b, 2}<br>
+                e) {(a,b), (1,2)}
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> – Qual é a diferença entre os conjuntos A = {1, 2, 3, 4} e B = {2, 4, 6}?</p>
+            <div class="alternativas">
+                a) {1, 2, 3, 4, 6}<br>
+                b) {1, 3}<br>
+                c) {2, 4}<br>
+                d) {6}<br>
+                e) {1, 3, 6}
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> – Qual é o menor número natural?</p>
+            <div class="alternativas">
+                a) -1<br>
+                b) 0<br>
+                c) 1<br>
+                d) 2<br>
+                e) Não existe menor
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> – A soma dos algarismos de um número é 12. Esse número é divisível por:</p>
+            <div class="alternativas">
+                a) 2<br>
+                b) 3<br>
+                c) 4<br>
+                d) 5<br>
+                e) 9
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> – Se A = {x ∈ N | x é par e menor que 10}, qual é A?</p>
+            <div class="alternativas">
+                a) {0, 2, 4, 6, 8}<br>
+                b) {2, 4, 6, 8}<br>
+                c) {1, 3, 5, 7, 9}<br>
+                d) {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}<br>
+                e) {2, 4, 6, 8, 10}
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> – O número 0,333... pode ser escrito como:</p>
+            <div class="alternativas">
+                a) 1/2<br>
+                b) 1/3<br>
+                c) 3/10<br>
+                d) 33/100<br>
+                e) 1/9
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> – Quantos divisores tem o número 12?</p>
+            <div class="alternativas">
+                a) 3<br>
+                b) 4<br>
+                c) 5<br>
+                d) 6<br>
+                e) 7
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> – Qual dos seguintes números é irracional?</p>
+            <div class="alternativas">
+                a) 1/2<br>
+                b) 0,5<br>
+                c) √4<br>
+                d) √3<br>
+                e) 1,333...
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> – Se A = {1, 2} e B = {2, 3}, qual é A ∩ B?</p>
+            <div class="alternativas">
+                a) {1, 2, 3}<br>
+                b) {2}<br>
+                c) {1, 3}<br>
+                d) ∅<br>
+                e) {1, 2}
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> – O MMC de 4, 6 e 8 é:</p>
+            <div class="alternativas">
+                a) 12<br>
+                b) 24<br>
+                c) 36<br>
+                d) 48<br>
+                e) 72
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> – Qual das afirmações sobre conjuntos é falsa?</p>
+            <div class="alternativas">
+                a) 2 ∈ {1, 2, 3}<br>
+                b) {2} ⊂ {1, 2, 3}<br>
+                c) {1, 2} = {2, 1}<br>
+                d) ∅ ⊂ {1, 2, 3}<br>
+                e) 5 ∈ {1, 2, 3}
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 19 a 35 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (19 a 35) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> – A √16 é igual a:</p>
+            <div class="alternativas">
+                a) 2<br>
+                b) 3<br>
+                c) 4<br>
+                d) 5<br>
+                e) 6
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> – O conjunto dos números inteiros inclui:</p>
+            <div class="alternativas">
+                a) Apenas números positivos<br>
+                b) Apenas números negativos<br>
+                c) Números positivos, negativos e o zero<br>
+                d) Apenas frações<br>
+                e) Apenas números primos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> – Qual é o resultado de 2√3 + 5√3?</p>
+            <div class="alternativas">
+                a) 7√3<br>
+                b) 10√3<br>
+                c) 7√6<br>
+                d) 10√6<br>
+                e) 7
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> – O número 0,121212... pode ser escrito como:</p>
+            <div class="alternativas">
+                a) 12/99<br>
+                b) 12/100<br>
+                c) 12/10<br>
+                d) 12/9<br>
+                e) 1/8
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> – O MDC de 18 e 30 é:</p>
+            <div class="alternativas">
+                a) 2<br>
+                b) 3<br>
+                c) 4<br>
+                d) 6<br>
+                e) 8
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> – Se A = {a, b, c} e B = {1, 2, 3}, quantos elementos tem A × B?</p>
+            <div class="alternativas">
+                a) 3<br>
+                b) 6<br>
+                c) 9<br>
+                d) 12<br>
+                e) 18
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> – Qual é o menor número inteiro?</p>
+            <div class="alternativas">
+                a) -1<br>
+                b) 0<br>
+                c) 1<br>
+                d) Não existe menor<br>
+                e) -∞
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 26</b> – Um número é divisível por 6 quando:</p>
+            <div class="alternativas">
+                a) É divisível por 2 ou por 3<br>
+                b) É divisível por 2 e por 3<br>
+                c) É divisível por 4 e por 6<br>
+                d) Termina em 6<br>
+                e) É múltiplo de 12
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 27</b> – O MMC de 3 e 5 é:</p>
+            <div class="alternativas">
+                a) 3<br>
+                b) 5<br>
+                c) 8<br>
+                d) 15<br>
+                e) 30
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 28</b> – Qual conjunto numérico contém todos os outros?</p>
+            <div class="alternativas">
+                a) Naturais<br>
+                b) Inteiros<br>
+                c) Racionais<br>
+                d) Reais<br>
+                e) Irracionais
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 29</b> – A expressão √2 + √3 é:</p>
+            <div class="alternativas">
+                a) Racional<br>
+                b) Irracional<br>
+                c) Inteiro<br>
+                d) Natural<br>
+                e) Complexo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 30</b> – Qual é o próximo número primo após 7?</p>
+            <div class="alternativas">
+                a) 8<br>
+                b) 9<br>
+                c) 10<br>
+                d) 11<br>
+                e) 12
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 31</b> – A diferença entre A = {1, 2, 3, 4} e B = {1, 2, 5} é:</p>
+            <div class="alternativas">
+                a) {3, 4}<br>
+                b) {5}<br>
+                c) {1, 2}<br>
+                d) {3, 4, 5}<br>
+                e) {1, 2, 3, 4, 5}
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 32</b> – O número 25 tem quantos divisores?</p>
+            <div class="alternativas">
+                a) 2<br>
+                b) 3<br>
+                c) 4<br>
+                d) 5<br>
+                e) 6
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 33</b> – 0,222... é igual a:</p>
+            <div class="alternativas">
+                a) 1/3<br>
+                b) 2/9<br>
+                c) 2/3<br>
+                d) 1/9<br>
+                e) 1/2
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 34</b> – Se A = {x ∈ Z | -3 < x < 3}, quais são os elementos de A?</p>
+            <div class="alternativas">
+                a) {-2, -1, 0, 1, 2}<br>
+                b) {-3, -2, -1, 0, 1, 2, 3}<br>
+                c) {-2, -1, 1, 2}<br>
+                d) {-3, 3}<br>
+                e) {0, 1, 2}
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 35</b> – O MMC de 6 e 9 é:</p>
+            <div class="alternativas">
+                a) 6<br>
+                b) 9<br>
+                c) 18<br>
+                d) 36<br>
+                e) 54
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-C</b> | <b>2-B</b> | <b>3-B</b> | <b>4-C</b> | <b>5-D</b> | <b>6-E</b> | <b>7-C</b> | <b>8-A</b> | <b>9-B</b> | <b>10-B</b></p>
+            <p><b>11-B</b> | <b>12-B</b> | <b>13-B</b> | <b>14-D</b> | <b>15-D</b> | <b>16-B</b> | <b>17-B</b> | <b>18-E</b> | <b>19-C</b> | <b>20-C</b></p>
+            <p><b>21-A</b> | <b>22-A</b> | <b>23-D</b> | <b>24-C</b> | <b>25-D</b> | <b>26-B</b> | <b>27-D</b> | <b>28-D</b> | <b>29-B</b> | <b>30-D</b></p>
+            <p><b>31-A</b> | <b>32-B</b> | <b>33-B</b> | <b>34-A</b> | <b>35-C</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>💡 Observação:</b> Todas as respostas foram elaboradas com base na matemática básica e nas definições padrão.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

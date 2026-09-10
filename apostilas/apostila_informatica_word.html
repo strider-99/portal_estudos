@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Informática: Microsoft Word 2016</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #eef2f7;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a237e;
+            text-align: center;
+            border-bottom: 3px solid #3f51b5;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a237e;
+            background-color: #e8eaf6;
+            padding: 10px 15px;
+            border-left: 6px solid #3f51b5;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #283593;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #dde1f0;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5f6fc;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #3f51b5;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a237e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #3f51b5;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📝 INFORMÁTICA – MICROSOFT WORD 2016</h1>
+    <p style="text-align:center; font-size:18px; color:#1a237e;"><b>Ambiente, Documentos, Formatação, Guias e Ferramentas do Word</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>O <b>Microsoft Word 2016</b> é o processador de textos mais utilizado no mundo, essencial para a criação, edição e formatação de documentos. Em concursos públicos, é fundamental conhecer sua interface, ferramentas e atalhos.</p>
+        <p>Este módulo aborda o <b>ambiente e componentes</b>, a <b>Faixa de Opções</b> (guias e grupos), a <b>formatação de documentos</b>, a <b>inserção de elementos</b> e as <b>ferramentas de revisão</b> e <b>exibição</b>.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Dominar os recursos do Microsoft Word 2016, incluindo formatação, inserção de elementos, revisão e exibição, com 35 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Ambiente e Componentes do Word – pág. 2</li>
+            <li><b>Módulo II:</b> Guia Início – Formatação de Texto – pág. 3</li>
+            <li><b>Módulo III:</b> Guia Inserir – Elementos no Documento – pág. 4</li>
+            <li><b>Módulo IV:</b> Guias Layout, Referências e Correspondências – pág. 5</li>
+            <li><b>Módulo V:</b> Guias Revisão e Exibição – pág. 6</li>
+            <li><b>Questões:</b> 35 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Ambiente e Componentes                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – AMBIENTE E COMPONENTES DO WORD</h2>
+
+        <h3>2.1. Interface Principal</h3>
+        <ul>
+            <li><b>Barra de Título:</b> exibe o nome do documento e o programa.</li>
+            <li><b>Faixa de Opções (Ribbon):</b> conjunto de guias com ferramentas agrupadas.</li>
+            <li><b>Guias:</b> Início, Inserir, Layout, Referências, Correspondências, Revisão, Exibição.</li>
+            <li><b>Grupos:</b> subdivisões dentro de cada guia (ex: Fonte, Parágrafo, Estilos).</li>
+            <li><b>Botões e Ícones:</b> comandos para executar ações.</li>
+            <li><b>Barra de Status:</b> exibe número de páginas, palavras, idioma, modos de exibição e zoom.</li>
+            <li><b>Régua:</b> auxilia no alinhamento e recuo de parágrafos.</li>
+        </ul>
+
+        <h3>2.2. Modos de Exibição</h3>
+        <ul>
+            <li><b>Layout de Impressão:</b> visualização padrão (como ficará impresso).</li>
+            <li><b>Leitura em Tela Cheia:</b> otimizado para leitura.</li>
+            <li><b>Layout da Web:</b> visualização para páginas da web.</li>
+            <li><b>Estrutura de Tópicos:</b> exibe a hierarquia do documento.</li>
+            <li><b>Rascunho:</b> exibição simplificada, ideal para edição rápida.</li>
+        </ul>
+
+        <h3>2.3. Zoom</h3>
+        <ul>
+            <li>Controla o nível de ampliação do documento.</li>
+            <li>Atalho: <b>Ctrl + +</b> (aumenta), <b>Ctrl + -</b> (diminui), <b>Ctrl + 0</b> (100%).</li>
+        </ul>
+
+        <h3>2.4. Número de Páginas e Palavras</h3>
+        <ul>
+            <li><b>Barra de Status:</b> exibe contagem de páginas e palavras.</li>
+            <li><b>Contagem de palavras:</b> clicar na barra de status ou ir em <b>Revisão → Contagem de Palavras</b>.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Guia Início                                        -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – GUIA INÍCIO (FORMATAÇÃO DE TEXTO)</h2>
+
+        <h3>3.1. Grupo Área de Transferência</h3>
+        <ul>
+            <li><b>Colar:</b> Ctrl + V, opções de colar (manter formatação, texto sem formatação).</li>
+            <li><b>Recortar:</b> Ctrl + X.</li>
+            <li><b>Copiar:</b> Ctrl + C.</li>
+            <li><b>Pincel de Formatação:</b> copia a formatação de um texto para outro.</li>
+        </ul>
+
+        <h3>3.2. Grupo Fonte</h3>
+        <ul>
+            <li><b>Negrito:</b> Ctrl + N.</li>
+            <li><b>Itálico:</b> Ctrl + I.</li>
+            <li><b>Sublinhado:</b> Ctrl + S.</li>
+            <li><b>Tamanho da fonte:</b> Ctrl + Shift + > / <.</li>
+            <li><b>Cor da fonte, Realce, Maiúsculas/minúsculas.</b></li>
+        </ul>
+
+        <h3>3.3. Grupo Parágrafo</h3>
+        <ul>
+            <li><b>Alinhamento:</b> Esquerda (Ctrl + Q), Centralizado (Ctrl + E), Direita (Ctrl + G), Justificado (Ctrl + J).</li>
+            <li><b>Marcadores e Numeração.</b></li>
+            <li><b>Recuo e Espaçamento.</b></li>
+            <li><b>Bordas e sombreamento.</b></li>
+        </ul>
+
+        <h3>3.4. Grupo Estilos</h3>
+        <ul>
+            <li><b>Estilos rápidos:</b> Título 1, Título 2, Normal, etc.</li>
+            <li><b>Aplicar e modificar estilos.</b></li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> <b>Ctrl + 1</b> (espaçamento simples), <b>Ctrl + 2</b> (espaçamento duplo), <b>Ctrl + 5</b> (espaçamento 1,5).
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Guia Inserir                                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – GUIA INSERIR (ELEMENTOS NO DOCUMENTO)</h2>
+
+        <h3>4.1. Grupo Páginas</h3>
+        <ul>
+            <li><b>Capa:</b> inserir capa pronta.</li>
+            <li><b>Página em Branco:</b> adicionar nova página.</li>
+            <li><b>Quebra de Página:</b> Ctrl + Enter.</li>
+        </ul>
+
+        <h3>4.2. Grupo Tabelas</h3>
+        <ul>
+            <li><b>Inserir Tabela:</b> escolher número de linhas e colunas.</li>
+            <li><b>Desenhar Tabela:</b> desenhar com o mouse.</li>
+            <li><b>Planilha do Excel:</b> inserir planilha como objeto.</li>
+        </ul>
+
+        <h3>4.3. Grupo Ilustrações</h3>
+        <ul>
+            <li><b>Imagens:</b> inserir imagens do computador.</li>
+            <li><b>Imagens Online:</b> buscar imagens da web.</li>
+            <li><b>Formas:</b> retângulo, círculo, setas, etc.</li>
+            <li><b>Ícones e Modelos 3D.</b></li>
+            <li><b>SmartArt:</b> diagramas e organogramas.</li>
+            <li><b>Gráfico:</b> inserir gráficos.</li>
+            <li><b>Captura de Tela:</b> capturar e inserir tela.</li>
+        </ul>
+
+        <h3>4.4. Grupo Links</h3>
+        <ul>
+            <li><b>Hiperlink:</b> Ctrl + K.</li>
+            <li><b>Marcadores:</b> criar referências no documento.</li>
+            <li><b>Referência Cruzada:</b> remeter a outros pontos do documento.</li>
+        </ul>
+
+        <h3>4.5. Grupo Cabeçalho e Rodapé</h3>
+        <ul>
+            <li><b>Cabeçalho:</b> inserir cabeçalho.</li>
+            <li><b>Rodapé:</b> inserir rodapé.</li>
+            <li><b>Número de Página:</b> inserir numeração.</li>
+        </ul>
+
+        <h3>4.6. Grupo Texto</h3>
+        <ul>
+            <li><b>Caixa de Texto:</b> inserir caixa com texto.</li>
+            <li><b>WordArt:</b> texto estilizado.</li>
+            <li><b>Data e Hora:</b> inserir data/hora.</li>
+            <li><b>Símbolos e Equações.</b></li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Guias Layout, Referências e Correspondências       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – GUIAS LAYOUT, REFERÊNCIAS E CORRESPONDÊNCIAS</h2>
+
+        <h3>5.1. Guia Layout da Página</h3>
+        <ul>
+            <li><b>Margens:</b> personalizar margens do documento.</li>
+            <li><b>Orientação:</b> Retrato (vertical) ou Paisagem (horizontal).</li>
+            <li><b>Tamanho:</b> A4, Ofício, etc.</li>
+            <li><b>Colunas:</b> dividir texto em colunas.</li>
+            <li><b>Quebras:</b> quebras de página, seção, coluna.</li>
+            <li><b>Espaçamento entre parágrafos.</b></li>
+        </ul>
+
+        <h3>5.2. Guia Referências</h3>
+        <ul>
+            <li><b>Sumário:</b> inserir sumário automático.</li>
+            <li><b>Notas de Rodapé e Fim:</b> inserir notas.</li>
+            <li><b>Citações e Bibliografia:</b> gerenciar referências.</li>
+            <li><b>Índice Remissivo e Tabela de Ilustrações.</b></li>
+        </ul>
+
+        <h3>5.3. Guia Correspondências</h3>
+        <ul>
+            <li><b>Mala Direta:</b> criar cartas, e-mails, envelopes.</li>
+            <li><b>Iniciar Mala Direta:</b> escolher o tipo (cartas, envelopes, e-mails).</li>
+            <li><b>Selecionar Destinatários:</b> importar de lista (Excel, Outlook).</li>
+            <li><b>Inserir Campo de Mala Direta:</b> personalizar com campos.</li>
+            <li><b>Concluir e Mesclar.</b></li>
+        </ul>
+        <div class="dica">
+            <b>💡 Dica:</b> A Mala Direta é muito cobrada em concursos como ferramenta para personalização em massa.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Guias Revisão e Exibição                           -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – GUIAS REVISÃO E EXIBIÇÃO</h2>
+
+        <h3>6.1. Guia Revisão</h3>
+        <ul>
+            <li><b>Verificar Ortografia e Gramática:</b> F7.</li>
+            <li><b>Dicionário:</b> sinônimos (Shift + F7).</li>
+            <li><b>Contagem de Palavras.</b></li>
+            <li><b>Controle de Alterações:</b> registrar alterações feitas no documento.</li>
+            <li><b>Comentários:</b> adicionar comentários (Ctrl + Alt + M).</li>
+            <li><b>Comparar/Combinar Documentos.</b></li>
+            <li><b>Traduzir documento.</b></li>
+        </ul>
+
+        <h3>6.2. Guia Exibição</h3>
+        <ul>
+            <li><b>Modos de Exibição:</b> Layout de Impressão, Leitura, Layout da Web, Estrutura de Tópicos, Rascunho.</li>
+            <li><b>Régua e Linhas de Grade:</b> exibir/ocultar.</li>
+            <li><b>Painel de Navegação:</b> navegar por cabeçalhos e páginas.</li>
+            <li><b>Zoom.</b></li>
+            <li><b>Janela:</b> Nova Janela, Dividir, Exibir Lado a Lado.</li>
+            <li><b>Macros:</b> gravar e executar macros (na guia Exibição, grupo Macros).</li>
+        </ul>
+
+        <h3>6.3. Ajuda do Word (F1)</h3>
+        <ul>
+            <li><b>Atalho F1:</b> abrir a ajuda do Word.</li>
+            <li><b>Pesquisar:</b> digitar o assunto desejado.</li>
+            <li><b>Dicas e Suporte Online.</b></li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica Final:</b> <b>F7</b> verifica ortografia; <b>Shift + F7</b> abre o dicionário de sinônimos; <b>Ctrl + Alt + M</b> insere comentário.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 18                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 18)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> – Qual é o atalho para abrir a ajuda no Microsoft Word 2016?</p>
+            <div class="alternativas">
+                a) F2<br>
+                b) F3<br>
+                c) F1<br>
+                d) F4<br>
+                e) F5
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> – Para alinhar um texto à esquerda no Word, usa-se o atalho:</p>
+            <div class="alternativas">
+                a) Ctrl + E<br>
+                b) Ctrl + J<br>
+                c) Ctrl + G<br>
+                d) Ctrl + Q<br>
+                e) Ctrl + D
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> – O que faz a tecla F7 no Word?</p>
+            <div class="alternativas">
+                a) Abre a ajuda<br>
+                b) Inicia a verificação ortográfica e gramatical<br>
+                c) Insere um comentário<br>
+                d) Abre o dicionário de sinônimos<br>
+                e) Salva o documento
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> – Qual guia do Word contém os comandos para inserir cabeçalho e rodapé?</p>
+            <div class="alternativas">
+                a) Início<br>
+                b) Inserir<br>
+                c) Layout da Página<br>
+                d) Referências<br>
+                e) Exibição
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> – Para inserir uma quebra de página, usa-se o atalho:</p>
+            <div class="alternativas">
+                a) Ctrl + Enter<br>
+                b) Ctrl + Shift + Enter<br>
+                c) Ctrl + Page Down<br>
+                d) Ctrl + Page Up<br>
+                e) Alt + Enter
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> – A guia Correspondências é usada principalmente para:</p>
+            <div class="alternativas">
+                a) Inserir tabelas<br>
+                b) Criar mala direta<br>
+                c) Revisar ortografia<br>
+                d) Inserir imagens<br>
+                e) Configurar margens
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> – O Pincel de Formatação serve para:</p>
+            <div class="alternativas">
+                a) Copiar a formatação de um texto para outro<br>
+                b) Pintar a página<br>
+                c) Inserir formas<br>
+                d) Destacar texto com cor<br>
+                e) Alterar a cor da fonte
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> – O atalho <b>Ctrl + K</b> no Word insere:</p>
+            <div class="alternativas">
+                a) Uma quebra de página<br>
+                b) Um hiperlink<br>
+                c) Um comentário<br>
+                d) Uma tabela<br>
+                e) Um gráfico
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> – Qual guia contém as opções de margens, orientação e tamanho da página?</p>
+            <div class="alternativas">
+                a) Início<br>
+                b) Inserir<br>
+                c) Layout da Página<br>
+                d) Referências<br>
+                e) Exibição
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> – O atalho para centralizar um texto é:</p>
+            <div class="alternativas">
+                a) Ctrl + C<br>
+                b) Ctrl + E<br>
+                c) Ctrl + G<br>
+                d) Ctrl + J<br>
+                e) Ctrl + Q
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> – O que é a Faixa de Opções (Ribbon) no Word?</p>
+            <div class="alternativas">
+                a) Uma barra de menus no topo da tela<br>
+                b) O conjunto de guias com ferramentas organizadas<br>
+                c) Uma barra de status na parte inferior<br>
+                d) Uma régua para alinhar textos<br>
+                e) Uma janela de ajuda
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> – Para verificar a contagem de palavras, pode-se usar:</p>
+            <div class="alternativas">
+                a) Guia Início → Contagem<br>
+                b) Guia Revisão → Contagem de Palavras<br>
+                c) Guia Inserir → Contagem<br>
+                d) Guia Exibição → Contagem<br>
+                e) Barra de Status (clicar em palavras)
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> – O atalho <b>Ctrl + J</b> no Word faz:</p>
+            <div class="alternativas">
+                a) Alinhar à esquerda<br>
+                b) Alinhar à direita<br>
+                c) Justificar o texto<br>
+                d) Centralizar o texto<br>
+                e) Abrir a janela de impressão
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> – Qual recurso do Word permite criar diagramas e organogramas?</p>
+            <div class="alternativas">
+                a) SmartArt<br>
+                b) Formas<br>
+                c) WordArt<br>
+                d) Caixa de Texto<br>
+                e) Tabelas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> – O modo de exibição que mostra o documento como ele ficará impresso é o:</p>
+            <div class="alternativas">
+                a) Rascunho<br>
+                b) Layout de Impressão<br>
+                c) Leitura em Tela Cheia<br>
+                d) Layout da Web<br>
+                e) Estrutura de Tópicos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> – Qual atalho insere um comentário no Word?</p>
+            <div class="alternativas">
+                a) Ctrl + K<br>
+                b) Ctrl + Alt + M<br>
+                c) Ctrl + Shift + M<br>
+                d) Alt + F4<br>
+                e) Ctrl + F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> – O grupo "Parágrafo" na guia Início contém, EXCETO:</p>
+            <div class="alternativas">
+                a) Marcadores<br>
+                b) Numeração<br>
+                c) Alinhamento<br>
+                d) Cor da Fonte<br>
+                e) Espaçamento
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> – O atalho para salvar um documento no Word é:</p>
+            <div class="alternativas">
+                a) Ctrl + S<br>
+                b) Ctrl + N<br>
+                c) Ctrl + O<br>
+                d) Ctrl + P<br>
+                e) Ctrl + W
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 19 a 35 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (19 a 35) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> – O que é o Painel de Navegação no Word?</p>
+            <div class="alternativas">
+                a) Uma ferramenta para navegar por cabeçalhos e páginas<br>
+                b) Uma janela de ajuda<br>
+                c) Uma barra de ferramentas<br>
+                d) Um editor de imagens<br>
+                e) Um verificador ortográfico
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> – A guia Revisão contém, EXCETO:</p>
+            <div class="alternativas">
+                a) Ortografia e Gramática<br>
+                b) Controle de Alterações<br>
+                c) Comentários<br>
+                d) Mala Direta<br>
+                e) Traduzir
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> – Para inserir uma tabela no Word, usa-se a guia:</p>
+            <div class="alternativas">
+                a) Início<br>
+                b) Inserir<br>
+                c) Layout da Página<br>
+                d) Referências<br>
+                e) Exibição
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> – O atalho <b>Ctrl + Z</b> no Word serve para:</p>
+            <div class="alternativas">
+                a) Refazer a última ação<br>
+                b) Desfazer a última ação<br>
+                c) Copiar o texto<br>
+                d) Colar o texto<br>
+                e) Recortar o texto
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> – O que é a Mala Direta no Word?</p>
+            <div class="alternativas">
+                a) Uma ferramenta para criar documentos personalizados em massa<br>
+                b) Um correio eletrônico<br>
+                c) Um endereço de correspondência<br>
+                d) Uma tabela de dados<br>
+                e) Um gráfico
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> – Para aplicar negrito ao texto, usa-se:</p>
+            <div class="alternativas">
+                a) Ctrl + B<br>
+                b) Ctrl + I<br>
+                c) Ctrl + S<br>
+                d) Ctrl + N<br>
+                e) Ctrl + K
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> – A opção "Sumário" está localizada na guia:</p>
+            <div class="alternativas">
+                a) Início<br>
+                b) Inserir<br>
+                c) Layout da Página<br>
+                d) Referências<br>
+                e) Exibição
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 26</b> – O atalho <b>Ctrl + P</b> no Word abre:</p>
+            <div class="alternativas">
+                a) A janela de impressão<br>
+                b) A janela de salvar<br>
+                c) A janela de ajuda<br>
+                d) A janela de abrir<br>
+                e) A janela de fechar
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 27</b> – O que é o WordArt?</p>
+            <div class="alternativas">
+                a) Um texto estilizado com efeitos<br>
+                b) Um gráfico de dados<br>
+                c) Uma imagem<br>
+                d) Um diagrama<br>
+                e) Uma tabela
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 28</b> – O atalho <b>F1</b> no Word serve para:</p>
+            <div class="alternativas">
+                a) Abrir a ajuda<br>
+                b) Verificar ortografia<br>
+                c) Renomear o arquivo<br>
+                d) Salvar o documento<br>
+                e) Fechar o documento
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 29</b> – A guia Exibição contém, EXCETO:</p>
+            <div class="alternativas">
+                a) Modos de Exibição<br>
+                b) Zoom<br>
+                c) Régua<br>
+                d) Margens<br>
+                e) Painel de Navegação
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 30</b> – O atalho para copiar a formatação de um texto para outro é:</p>
+            <div class="alternativas">
+                a) Pincel de Formatação (botão)<br>
+                b) Ctrl + Shift + C<br>
+                c) Ctrl + Shift + V<br>
+                d) Alt + F4<br>
+                e) F5
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 31</b> – O grupo "Fonte" na guia Início contém, EXCETO:</p>
+            <div class="alternativas">
+                a) Negrito<br>
+                b) Itálico<br>
+                c) Sublinhado<br>
+                d) Alinhamento<br>
+                e) Tamanho da fonte
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 32</b> – O atalho para abrir o dicionário de sinônimos no Word é:</p>
+            <div class="alternativas">
+                a) F7<br>
+                b) Shift + F7<br>
+                c) Ctrl + F7<br>
+                d) Alt + F7<br>
+                e) F1
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 33</b> – O que é o Controle de Alterações no Word?</p>
+            <div class="alternativas">
+                a) Uma ferramenta para registrar e acompanhar alterações no documento<br>
+                b) Uma ferramenta de impressão<br>
+                c) Um recurso de formatação<br>
+                d) Uma ferramenta de revisão ortográfica<br>
+                e) Um recurso de inserção de imagens
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 34</b> – O atalho <b>Ctrl + S</b> no Word serve para:</p>
+            <div class="alternativas">
+                a) Salvar o documento<br>
+                b) Abrir um documento<br>
+                c) Fechar o documento<br>
+                d) Imprimir o documento<br>
+                e) Novo documento
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 35</b> – Para inserir uma imagem no Word, usa-se a guia:</p>
+            <div class="alternativas">
+                a) Início<br>
+                b) Inserir<br>
+                c) Layout da Página<br>
+                d) Referências<br>
+                e) Exibição
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-C</b> | <b>2-D</b> | <b>3-B</b> | <b>4-B</b> | <b>5-A</b> | <b>6-B</b> | <b>7-A</b> | <b>8-B</b> | <b>9-C</b> | <b>10-B</b></p>
+            <p><b>11-B</b> | <b>12-B</b> | <b>13-C</b> | <b>14-A</b> | <b>15-B</b> | <b>16-B</b> | <b>17-D</b> | <b>18-A</b> | <b>19-A</b> | <b>20-D</b></p>
+            <p><b>21-B</b> | <b>22-B</b> | <b>23-A</b> | <b>24-A</b> | <b>25-D</b> | <b>26-A</b> | <b>27-A</b> | <b>28-A</b> | <b>29-D</b> | <b>30-A</b></p>
+            <p><b>31-D</b> | <b>32-B</b> | <b>33-A</b> | <b>34-A</b> | <b>35-B</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>💡 Observação:</b> Todas as respostas foram elaboradas com base no Microsoft Word 2016.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

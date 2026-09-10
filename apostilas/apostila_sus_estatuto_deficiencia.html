@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - SUS: Lei 13.146/2015 - Estatuto da Pessoa com Deficiência</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #eef4f8;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #0d5a7a;
+            text-align: center;
+            border-bottom: 3px solid #1a8ab5;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #0d5a7a;
+            background-color: #d6eaf8;
+            padding: 10px 15px;
+            border-left: 6px solid #1a8ab5;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #0a4a6a;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d6eaf8;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .atencao {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .atencao b {
+            color: #922b21;
+        }
+        .exemplo {
+            background-color: #eafaf1;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #1a8ab5;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5fbf8;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #1a8ab5;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #0d5a7a;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #1a8ab5;
+            color: white;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+            color: white;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>♿ ESTATUTO DA PESSOA COM DEFICIÊNCIA</h1>
+    <p style="text-align:center; font-size:18px; color:#0d5a7a;"><b>Lei Brasileira de Inclusão – Lei nº 13.146, de 6 de julho de 2015</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Lei nº 13.146, de 6 de julho de 2015</b>, conhecida como <b>Lei Brasileira de Inclusão da Pessoa com Deficiência (Estatuto da Pessoa com Deficiência)</b>, é um marco legal que assegura e promove, em condições de igualdade, os direitos e as liberdades fundamentais das pessoas com deficiência, visando à sua inclusão social e cidadania.</p>
+        <p>Esta lei, inspirada na <b>Convenção sobre os Direitos das Pessoas com Deficiência</b> da ONU, estabelece diretrizes para a promoção da acessibilidade, o combate à discriminação e a garantia do direito à saúde, educação, trabalho e participação social.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender os fundamentos, princípios e direitos estabelecidos pela Lei 13.146/2015, com ênfase nas disposições sobre saúde, acessibilidade e inclusão, com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Fundamentos e Conceitos – pág. 2</li>
+            <li><b>Módulo II:</b> Princípios da Lei Brasileira de Inclusão – pág. 3</li>
+            <li><b>Módulo III:</b> Direito à Saúde (Arts. 24 a 26) – pág. 4</li>
+            <li><b>Módulo IV:</b> Acessibilidade, Tecnologia Assistiva e Comunicação – pág. 5</li>
+            <li><b>Módulo V:</b> Educação, Trabalho, Participação Social e Proteção contra a Discriminação – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Fundamentos e Conceitos                            -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – FUNDAMENTOS E CONCEITOS</h2>
+
+        <h3>2.1. Definição de Pessoa com Deficiência (Art. 2º)</h3>
+        <p>"Considera-se pessoa com deficiência aquela que tem <b>impedimento de longo prazo</b> (duração igual ou superior a 2 anos) de natureza <b>física, mental, intelectual ou sensorial</b>, o qual, em interação com uma ou mais <b>barreiras</b>, pode obstruir sua participação plena e efetiva na sociedade em igualdade de condições com as demais pessoas."</p>
+
+        <h3>2.2. Barreiras (Art. 3º)</h3>
+        <ul>
+            <li><b>Barreiras arquitetônicas:</b> físicas (edificações, espaços urbanos).</li>
+            <li><b>Barreiras atitudinais:</b> preconceitos, estigmas, comportamentos discriminatórios.</li>
+            <li><b>Barreiras comunicacionais:</b> linguagem inacessível.</li>
+            <li><b>Barreiras tecnológicas:</b> sistemas e dispositivos sem acessibilidade.</li>
+            <li><b>Barreiras urbanísticas:</b> vias públicas e transportes.</li>
+        </ul>
+
+        <h3>2.3. Acessibilidade (Art. 3º)</h3>
+        <ul>
+            <li><b>Conceito:</b> Condição para utilização, com segurança e autonomia, de espaços, mobiliários, equipamentos urbanos, edificações, transportes, informação e comunicação, inclusive sistemas e tecnologias.</li>
+            <li><b>Dimensões:</b> arquitetônica, urbanística, comunicacional, atitudinal, tecnológica e digital.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>Frase-chave:</b> "A Lei Brasileira de Inclusão assegura à pessoa com deficiência o exercício de seus direitos fundamentais, em igualdade de condições com as demais pessoas."</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Princípios da Lei                                  -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – PRINCÍPIOS DA LEI BRASILEIRA DE INCLUSÃO</h2>
+
+        <p>A Lei 13.146/2015 fundamenta-se nos seguintes princípios (Art. 1º e 3º):</p>
+
+        <ul>
+            <li><b>I –</b> <b>Igualdade e não discriminação:</b> A pessoa com deficiência não pode ser tratada de forma desigual ou discriminatória.</li>
+            <li><b>II –</b> <b>Autonomia e independência:</b> A pessoa com deficiência tem o direito de tomar suas próprias decisões e exercer sua capacidade civil.</li>
+            <li><b>III –</b> <b>Participação plena e efetiva na sociedade:</b> Inclusão em todos os espaços (educação, trabalho, saúde, cultura, lazer).</li>
+            <li><b>IV –</b> <b>Acessibilidade:</b> Eliminação de barreiras e garantia de condições de acesso.</li>
+            <li><b>V –</b> <b>Respeito à diversidade:</b> Valorização da diferença e combate ao preconceito.</li>
+            <li><b>VI –</b> <b>Transversalidade das políticas:</b> A inclusão deve permear todas as políticas públicas.</li>
+            <li><b>VII –</b> <b>Participação social:</b> Protagonismo das pessoas com deficiência na formulação de políticas.</li>
+        </ul>
+
+        <div class="atencao">
+            <b>⚡ Atenção:</b> O princípio da <b>acessibilidade</b> é um dos mais importantes da Lei, pois garante a eliminação de barreiras e a autonomia da pessoa com deficiência.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Direito à Saúde (Arts. 24 a 26)                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – DIREITO À SAÚDE (ARTS. 24 A 26)</h2>
+
+        <h3>4.1. Art. 24 – Direito à Saúde</h3>
+        <ul>
+            <li>"O direito à saúde da pessoa com deficiência será assegurado por meio de <b>políticas públicas</b> que garantam a <b>atenção integral</b> à sua saúde, em todos os níveis de complexidade."</li>
+            <li>É <b>obrigação do SUS</b> garantir o acesso universal e igualitário.</li>
+        </ul>
+
+        <h3>4.2. Art. 25 – Atendimento Integral</h3>
+        <ul>
+            <li>"É assegurada à pessoa com deficiência a <b>atenção integral à saúde</b>, em todos os níveis de assistência, por intermédio do SUS, garantindo-lhe o acesso universal e igualitário."</li>
+            <li>O <b>atendimento deve ser humanizado</b>, com respeito à dignidade e à autonomia da pessoa.</li>
+        </ul>
+
+        <h3>4.3. Art. 26 – Rede de Cuidados</h3>
+        <ul>
+            <li>"A pessoa com deficiência será incluída nas <b>redes de atenção à saúde</b>, especialmente na <b>Rede de Cuidados à Pessoa com Deficiência</b>, no âmbito do SUS."</li>
+            <li>O SUS deve garantir a <b>articulação entre os serviços</b>, com referência e contrarreferência.</li>
+            <li>É assegurada a <b>atenção integral</b>, com ações de promoção, prevenção, reabilitação e manutenção da saúde.</li>
+        </ul>
+
+        <h3>4.4. Outras Disposições sobre Saúde</h3>
+        <ul>
+            <li><b>Inclusão do quesito deficiência</b> nos sistemas de informação do SUS.</li>
+            <li><b>Formação de recursos humanos</b> para o atendimento à pessoa com deficiência.</li>
+            <li><b>Garantia de atendimento prioritário</b> e acompanhante durante a internação.</li>
+        </ul>
+        <div class="dica">
+            <b>💡 Dica:</b> Os Arts. 24 a 26 do Estatuto da Pessoa com Deficiência são os mais cobrados em concursos da área da saúde. Memorize a garantia de <b>atenção integral</b>, <b>acesso universal</b> e <b>inclusão na Rede de Cuidados</b>.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Acessibilidade e Tecnologia Assistiva              -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – ACESSIBILIDADE, TECNOLOGIA ASSISTIVA E COMUNICAÇÃO</h2>
+
+        <h3>5.1. Acessibilidade (Art. 53 e seguintes)</h3>
+        <ul>
+            <li><b>Objetivo:</b> Garantir à pessoa com deficiência o acesso a espaços, produtos, serviços e informações.</li>
+            <li><b>Dimensões:</b> Arquitetônica, urbanística, comunicacional, atitudinal, tecnológica e digital.</li>
+            <li><b>Obrigatória</b> em edificações públicas e privadas de uso coletivo.</li>
+        </ul>
+
+        <h3>5.2. Tecnologia Assistiva</h3>
+        <ul>
+            <li><b>Conceito:</b> Produtos, equipamentos, dispositivos, recursos, metodologias e práticas que aumentam a funcionalidade e a autonomia da pessoa com deficiência.</li>
+            <li><b>Exemplos:</b> cadeiras de rodas, próteses, órteses, softwares de acessibilidade, leitores de tela, etc.</li>
+            <li><b>O SUS deve garantir</b> o acesso à tecnologia assistiva, com distribuição gratuita quando necessário.</li>
+        </ul>
+
+        <h3>5.3. Comunicação e Informação</h3>
+        <ul>
+            <li><b>Libras (Língua Brasileira de Sinais):</b> Garantia de acesso à comunicação para pessoas surdas.</li>
+            <li><b>Legenda e audiodescrição:</b> Em conteúdos audiovisuais e eventos públicos.</li>
+            <li><b>Braille e formatos acessíveis:</b> Para pessoas cegas.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Educação, Trabalho e Proteção contra Discriminação -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – EDUCAÇÃO, TRABALHO, PARTICIPAÇÃO SOCIAL E PROTEÇÃO CONTRA DISCRIMINAÇÃO</h2>
+
+        <h3>6.1. Educação (Arts. 27 a 31)</h3>
+        <ul>
+            <li><b>Direito à educação inclusiva:</b> Em todos os níveis de ensino, com atendimento educacional especializado.</li>
+            <li><b>Vedação à exclusão:</b> A pessoa com deficiência não pode ser excluída do sistema educacional.</li>
+            <li><b>Adaptações curriculares e metodológicas:</b> Para garantir a aprendizagem.</li>
+        </ul>
+
+        <h3>6.2. Trabalho (Arts. 34 a 37)</h3>
+        <ul>
+            <li><b>Direito ao trabalho</b> em igualdade de oportunidades.</li>
+            <li><b>Vedação à discriminação:</b> A pessoa com deficiência não pode ser discriminada na contratação, permanência e promoção.</li>
+            <li><b>Adaptação do ambiente de trabalho</b> para garantir acessibilidade.</li>
+        </ul>
+
+        <h3>6.3. Participação Social e Cultural (Arts. 42 a 45)</h3>
+        <ul>
+            <li><b>Garantia de participação</b> em atividades culturais, esportivas e de lazer.</li>
+            <li><b>Acessibilidade</b> em espaços culturais e eventos.</li>
+        </ul>
+
+        <h3>6.4. Proteção contra Discriminação (Art. 35)</h3>
+        <ul>
+            <li><b>Vedação:</b> A pessoa com deficiência não pode ser submetida a tratamento desumano, degradante ou discriminatório.</li>
+            <li><b>Abuso e violência:</b> São deveres do Estado, da família e da sociedade proteger a pessoa com deficiência contra todas as formas de abuso e violência.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Conceito) – O Estatuto da Pessoa com Deficiência (Lei 13.146/2015) é também conhecido como:</p>
+            <div class="alternativas">
+                a) Lei Brasileira de Inclusão.<br>
+                b) Lei de Acessibilidade.<br>
+                c) Lei de Direitos Humanos.<br>
+                d) Lei de Proteção Social.<br>
+                e) Lei da Pessoa com Deficiência.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Definição) – O Art. 2º da Lei 13.146/2015 define pessoa com deficiência como aquela que tem impedimento de longo prazo de natureza:</p>
+            <div class="alternativas">
+                a) Física, mental, intelectual ou sensorial.<br>
+                b) Apenas física.<br>
+                c) Apenas mental.<br>
+                d) Apenas sensorial.<br>
+                e) Apenas intelectual.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Barreiras) – São consideradas barreiras, segundo a Lei 13.146/2015, EXCETO:</p>
+            <div class="alternativas">
+                a) Arquitetônicas.<br>
+                b) Atitudinais.<br>
+                c) Comunicacionais.<br>
+                d) Tecnológicas.<br>
+                e) Econômicas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Princípios) – São princípios da Lei Brasileira de Inclusão, EXCETO:</p>
+            <div class="alternativas">
+                a) Igualdade e não discriminação.<br>
+                b) Autonomia e independência.<br>
+                c) Acessibilidade.<br>
+                d) Centralização das políticas.<br>
+                e) Participação social.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Saúde – Art. 24) – O Art. 24 da Lei 13.146/2015 assegura à pessoa com deficiência o direito à saúde por meio de:</p>
+            <div class="alternativas">
+                a) Políticas públicas que garantam atenção integral.<br>
+                b) Apenas atendimento emergencial.<br>
+                c) Apenas medicamentos gratuitos.<br>
+                d) Apenas hospitais privados.<br>
+                e) Apenas tratamento no exterior.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Art. 25) – O Art. 25 garante à pessoa com deficiência a atenção integral à saúde, por intermédio do:</p>
+            <div class="alternativas">
+                a) SUS.<br>
+                b) Sistema de Saúde Suplementar.<br>
+                c) Ministério da Saúde.<br>
+                d) Secretaria de Assistência Social.<br>
+                e) Conselho Nacional de Saúde.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Rede de Cuidados) – O Art. 26 determina que a pessoa com deficiência seja incluída na:</p>
+            <div class="alternativas">
+                a) Rede de Cuidados à Pessoa com Deficiência (RCPD).<br>
+                b) Rede de Atenção Psicossocial (RAPS).<br>
+                c) Rede de Urgência e Emergência.<br>
+                d) Rede de Atenção Básica.<br>
+                e) Rede de Atenção Hospitalar.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Acessibilidade) – O conceito de acessibilidade, segundo a Lei 13.146/2015, inclui, entre outras dimensões:</p>
+            <div class="alternativas">
+                a) Arquitetônica, urbanística e comunicacional.<br>
+                b) Apenas arquitetônica.<br>
+                c) Apenas urbanística.<br>
+                d) Apenas comunicacional.<br>
+                e) Apenas tecnológica.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Tecnologia Assistiva) – A tecnologia assistiva, segundo a Lei 13.146/2015, tem como objetivo:</p>
+            <div class="alternativas">
+                a) Aumentar a funcionalidade e autonomia da pessoa com deficiência.<br>
+                b) Substituir completamente a pessoa com deficiência.<br>
+                c) Reduzir o acesso da pessoa com deficiência aos serviços.<br>
+                d) Excluir a pessoa com deficiência do mercado de trabalho.<br>
+                e) Apenas fornecer próteses.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Educação) – O Art. 27 da Lei 13.146/2015 garante à pessoa com deficiência o direito à:</p>
+            <div class="alternativas">
+                a) Educação inclusiva em todos os níveis de ensino.<br>
+                b) Apenas educação especial.<br>
+                c) Apenas educação básica.<br>
+                d) Apenas educação superior.<br>
+                e) Apenas educação infantil.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Trabalho) – O Art. 34 da Lei 13.146/2015 garante à pessoa com deficiência o direito ao trabalho em:</p>
+            <div class="alternativas">
+                a) Igualdade de oportunidades.<br>
+                b) Apenas em empresas públicas.<br>
+                c) Apenas em empresas privadas.<br>
+                d) Apenas em cooperativas.<br>
+                e) Apenas em trabalho voluntário.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Proteção) – O Art. 35 da Lei 13.146/2015 veda à pessoa com deficiência o tratamento:</p>
+            <div class="alternativas">
+                a) Desumano, degradante ou discriminatório.<br>
+                b) Apenas desumano.<br>
+                c) Apenas degradante.<br>
+                d) Apenas discriminatório.<br>
+                e) Apenas abusivo.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Libras) – A Lei 13.146/2015 garante à pessoa surda o acesso à comunicação por meio da:</p>
+            <div class="alternativas">
+                a) Língua Brasileira de Sinais (Libras).<br>
+                b) Apenas leitura labial.<br>
+                c) Apenas linguagem escrita.<br>
+                d) Apenas interpretação simultânea.<br>
+                e) Apenas comunicação gestual.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Conceitos e Princípios) – Analise as afirmativas:</p>
+            <p>(   ) A Lei 13.146/2015 é conhecida como Lei Brasileira de Inclusão.<br>
+            (   ) O princípio da autonomia garante à pessoa com deficiência o direito de tomar suas próprias decisões.<br>
+            (   ) O Art. 24 garante à pessoa com deficiência o direito à saúde apenas em hospitais privados.<br>
+            (   ) A acessibilidade é um dos princípios da Lei.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Saúde e Acessibilidade) – Analise as afirmativas:</p>
+            <p>(   ) O Art. 25 garante o acesso universal e igualitário à saúde por meio do SUS.<br>
+            (   ) A tecnologia assistiva não é prevista pela Lei 13.146/2015.<br>
+            (   ) A Lei prevê a inclusão da pessoa com deficiência nas redes de atenção à saúde.<br>
+            (   ) A acessibilidade é uma condição para a utilização de espaços e serviços.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (Acessibilidade) – A acessibilidade, segundo a Lei 13.146/2015, é obrigatória em:</p>
+            <div class="alternativas">
+                a) Edificações públicas e privadas de uso coletivo.<br>
+                b) Apenas em edifícios públicos.<br>
+                c) Apenas em edifícios privados.<br>
+                d) Apenas em espaços urbanos.<br>
+                e) Apenas em transportes.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Rede de Cuidados) – A Rede de Cuidados à Pessoa com Deficiência (RCPD) foi instituída no âmbito do SUS por meio da:</p>
+            <div class="alternativas">
+                a) Lei 13.146/2015.<br>
+                b) Portaria GM/MS nº 1.526, de 11 de outubro de 2023.<br>
+                c) Portaria nº 2.836/2011.<br>
+                d) Lei 8.080/90.<br>
+                e) Portaria nº 992/2009.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Direitos) – São direitos garantidos pela Lei 13.146/2015 à pessoa com deficiência, EXCETO:</p>
+            <div class="alternativas">
+                a) Educação inclusiva.<br>
+                b) Trabalho em igualdade de oportunidades.<br>
+                c) Participação social e cultural.<br>
+                d) Isenção de impostos.<br>
+                e) Acessibilidade em espaços públicos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Comunicação) – A Lei 13.146/2015 garante à pessoa com deficiência o acesso à comunicação por meio de:</p>
+            <div class="alternativas">
+                a) Libras, legenda, audiodescrição e Braille.<br>
+                b) Apenas Libras.<br>
+                c) Apenas legenda.<br>
+                d) Apenas audiodescrição.<br>
+                e) Apenas Braille.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Trabalho) – A Lei 13.146/2015 veda a discriminação da pessoa com deficiência na:</p>
+            <div class="alternativas">
+                a) Contratação, permanência e promoção no trabalho.<br>
+                b) Apenas na contratação.<br>
+                c) Apenas na permanência.<br>
+                d) Apenas na promoção.<br>
+                e) Apenas na rescisão.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Consolidação) – Analise as afirmativas:</p>
+            <p>(   ) A Lei 13.146/2015 foi inspirada na Convenção sobre os Direitos das Pessoas com Deficiência da ONU.<br>
+            (   ) O Art. 26 determina a inclusão da pessoa com deficiência na Rede de Cuidados à Pessoa com Deficiência.<br>
+            (   ) A Lei não prevê a distribuição gratuita de tecnologia assistiva.<br>
+            (   ) A acessibilidade comunicacional é garantida pela Lei.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Barreiras) – As barreiras atitudinais, segundo a Lei 13.146/2015, são:</p>
+            <div class="alternativas">
+                a) Preconceitos, estigmas e comportamentos discriminatórios.<br>
+                b) Apenas barreiras físicas.<br>
+                c) Apenas barreiras tecnológicas.<br>
+                d) Apenas barreiras comunicacionais.<br>
+                e) Apenas barreiras urbanísticas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (Autonomia) – O princípio da autonomia, na Lei 13.146/2015, garante à pessoa com deficiência:</p>
+            <div class="alternativas">
+                a) O direito de tomar suas próprias decisões e exercer sua capacidade civil.<br>
+                b) Apenas o direito de expressar sua opinião.<br>
+                c) Apenas o direito de escolher seu tratamento.<br>
+                d) Apenas o direito de escolher seu local de trabalho.<br>
+                e) Apenas o direito de escolher sua moradia.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (Participação Social) – A Lei 13.146/2015 garante à pessoa com deficiência o direito à participação em:</p>
+            <div class="alternativas">
+                a) Atividades culturais, esportivas e de lazer.<br>
+                b) Apenas atividades culturais.<br>
+                c) Apenas atividades esportivas.<br>
+                d) Apenas atividades de lazer.<br>
+                e) Apenas atividades religiosas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Final) – Analise as afirmativas:</p>
+            <p>(   ) A Lei 13.146/2015 é conhecida como Estatuto da Pessoa com Deficiência.<br>
+            (   ) O Art. 25 garante à pessoa com deficiência a atenção integral à saúde por meio do SUS.<br>
+            (   ) A Lei prevê a distribuição gratuita de medicamentos para pessoas com deficiência.<br>
+            (   ) A acessibilidade arquitetônica é obrigatória em edificações públicas e privadas de uso coletivo.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-A</b> | <b>2-A</b> | <b>3-E</b> | <b>4-D</b> | <b>5-A</b> | <b>6-A</b> | <b>7-A</b> | <b>8-A</b> | <b>9-A</b> | <b>10-A</b></p>
+            <p><b>11-A</b> | <b>12-A</b> | <b>13-A</b> | <b>14-A</b> | <b>15-A</b> | <b>16-A</b> | <b>17-B</b> | <b>18-D</b> | <b>19-A</b> | <b>20-A</b></p>
+            <p><b>21-A</b> | <b>22-A</b> | <b>23-A</b> | <b>24-A</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,V,F,V); Q15 (V,F,V,V); Q21 (V,V,F,V); Q25 (V,V,F,V).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

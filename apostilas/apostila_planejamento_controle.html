@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Planejamento e Controle Administrativo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f7fa;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a5276;
+            text-align: center;
+            border-bottom: 3px solid #2980b9;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a5276;
+            background-color: #d6eaf8;
+            padding: 10px 15px;
+            border-left: 6px solid #2980b9;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #0d3b66;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d6eaf8;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .exemplo {
+            background-color: #eafaf1;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #2980b9;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5fbf8;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #2980b9;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a5276;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #2980b9;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📊 PLANEJAMENTO E CONTROLE ADMINISTRATIVO</h1>
+    <p style="text-align:center; font-size:18px; color:#1a5276;"><b>Planos de Ação, Controle Físico e Financeiro, Análise de Dados e Indicadores de Desempenho</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>O <b>planejamento e controle administrativo</b> é o conjunto de práticas e ferramentas que garantem que os objetivos organizacionais sejam alcançados de forma eficiente e eficaz. Enquanto o planejamento define o "onde queremos chegar", o controle verifica se estamos no caminho certo.</p>
+        <p>Este módulo aborda a <b>elaboração e acompanhamento de planos de ação</b>, o <b>controle de execução física e financeira</b>, a <b>análise de dados e elaboração de relatórios</b> e os <b>indicadores de desempenho</b> (KPIs).</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Dominar as técnicas de planejamento, controle e avaliação de desempenho na administração pública, com 35 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Planos de Ação – Elaboração e Acompanhamento – pág. 2</li>
+            <li><b>Módulo II:</b> Controle de Execução Física e Financeira – pág. 3</li>
+            <li><b>Módulo III:</b> Análise de Dados e Elaboração de Relatórios – pág. 4</li>
+            <li><b>Módulo IV:</b> Indicadores de Desempenho (KPIs) – pág. 5</li>
+            <li><b>Módulo V:</b> Consolidação e Dicas Finais – pág. 6</li>
+            <li><b>Questões:</b> 35 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Planos de Ação                                     -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – PLANOS DE AÇÃO: ELABORAÇÃO E ACOMPANHAMENTO</h2>
+
+        <h3>2.1. O que é um Plano de Ação?</h3>
+        <p>Um <b>plano de ação</b> é um documento que detalha as atividades necessárias para alcançar um objetivo específico, definindo prazos, responsáveis, recursos e métricas de sucesso.</p>
+
+        <h3>2.2. Ferramentas para Planos de Ação</h3>
+        <ul>
+            <li><b>5W2H:</b> What (o quê?), Why (por quê?), Where (onde?), When (quando?), Who (quem?), How (como?), How Much (quanto custa?).</li>
+            <li><b>Matriz GUT:</b> Gravidade, Urgência e Tendência – para priorizar problemas.</li>
+            <li><b>PDCA:</b> Plan (Planejar), Do (Executar), Check (Verificar), Act (Agir).</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático (5W2H):</b> Melhorar o atendimento ao público em uma repartição pública.</p>
+            <ul>
+                <li><b>What:</b> Implementar um sistema de senhas e chamada digital.</li>
+                <li><b>Why:</b> Reduzir o tempo de espera e melhorar a experiência do cidadão.</li>
+                <li><b>Where:</b> No setor de atendimento da prefeitura.</li>
+                <li><b>When:</b> Até o final do próximo mês.</li>
+                <li><b>Who:</b> Equipe de TI e gestor do setor.</li>
+                <li><b>How:</b> Instalação de totens de autoatendimento e treinamento da equipe.</li>
+                <li><b>How Much:</b> R$ 15.000,00 (estimado).</li>
+            </ul>
+        </div>
+
+        <h3>2.3. Acompanhamento de Planos de Ação</h3>
+        <ul>
+            <li><b>Cronograma:</b> definição de marcos e prazos.</li>
+            <li><b>Reuniões de acompanhamento:</b> verificação do progresso.</li>
+            <li><b>Correção de rotas:</b> ajustes quando necessário.</li>
+            <li><b>Registro de lições aprendidas:</b> documentar o que funcionou e o que pode ser melhorado.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> O 5W2H é uma ferramenta simples e poderosa, muito cobrada em concursos para a elaboração de planos de ação.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Controle de Execução Física e Financeira           -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – CONTROLE DE EXECUÇÃO FÍSICA E FINANCEIRA</h2>
+
+        <h3>3.1. Controle Físico</h3>
+        <ul>
+            <li><b>O que é:</b> verificação do andamento das atividades em relação ao planejado (quantidade de serviços prestados, obras executadas, etc.).</li>
+            <li><b>Exemplos:</b> número de atendimentos realizados, quilômetros de asfalto aplicado, processos concluídos.</li>
+            <li><b>Ferramentas:</b> cronogramas, marcos físicos, relatórios de progresso.</li>
+        </ul>
+
+        <h3>3.2. Controle Financeiro</h3>
+        <ul>
+            <li><b>O que é:</b> acompanhamento dos gastos e despesas em relação ao orçamento previsto.</li>
+            <li><b>Exemplos:</b> execução orçamentária, desembolsos, comparação entre o previsto e o realizado.</li>
+            <li><b>Ferramentas:</b> planilhas, sistemas de gestão financeira, relatórios de execução.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Uma obra pública tem um orçamento previsto de R$ 500.000,00 e prazo de 6 meses. No final do 3º mês, o controle físico mostra que 60% da obra foi executada, mas o controle financeiro mostra que 70% do orçamento já foi gasto. O gestor precisa analisar a situação e, se necessário, realocar recursos ou ajustar o cronograma para evitar o estouro do orçamento.</p>
+        </div>
+
+        <h3>3.3. Relação entre Controle Físico e Financeiro</h3>
+        <ul>
+            <li><b>Curva S:</b> ferramenta gráfica que relaciona o avanço físico (percentual concluído) com o avanço financeiro (percentual gasto) ao longo do tempo.</li>
+            <li><b>Desvios:</b> identificar onde o físico e o financeiro não estão alinhados para tomar ações corretivas.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> O controle físico e financeiro é essencial para evitar o "estouro" do orçamento e o atraso de projetos.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Análise de Dados e Elaboração de Relatórios        -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – ANÁLISE DE DADOS E ELABORAÇÃO DE RELATÓRIOS</h2>
+
+        <h3>4.1. Análise de Dados</h3>
+        <ul>
+            <li><b>Coleta de dados:</b> reunião de informações relevantes (físicas, financeiras, operacionais).</li>
+            <li><b>Organização:</b> estruturação dos dados em tabelas, gráficos ou painéis.</li>
+            <li><b>Interpretação:</b> identificar tendências, desvios e oportunidades de melhoria.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> O setor de RH de um órgão público analisa os dados de absenteísmo (faltas e atrasos) dos servidores nos últimos 6 meses. Ao organizar os dados em um gráfico, percebe que as faltas aumentam significativamente nas segundas-feiras. A partir dessa análise, o RH propõe uma campanha de conscientização sobre a importância da assiduidade e adota um sistema de ponto eletrônico mais rigoroso.</p>
+        </div>
+
+        <h3>4.2. Elaboração de Relatórios</h3>
+        <ul>
+            <li><b>Finalidade:</b> comunicar resultados, decisões e recomendações.</li>
+            <li><b>Estrutura:</b>
+                <ul>
+                    <li><b>Introdução:</b> objetivo do relatório.</li>
+                    <li><b>Metodologia:</b> como os dados foram coletados.</li>
+                    <li><b>Análise:</b> apresentação dos resultados e interpretação.</li>
+                    <li><b>Conclusão:</b> principais achados.</li>
+                    <li><b>Recomendações:</b> sugestões para melhoria.</li>
+                </ul>
+            </li>
+            <li><b>Tipos de relatórios:</b> operacionais, gerenciais, técnicos, de prestação de contas.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> Um bom relatório é claro, objetivo, baseado em dados e direcionado ao público-alvo (gestor, equipe, cidadão).
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Indicadores de Desempenho (KPIs)                   -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – INDICADORES DE DESEMPENHO (KPIs)</h2>
+
+        <h3>5.1. O que são KPIs?</h3>
+        <p><b>KPI (Key Performance Indicator)</b> é um indicador que mede o desempenho de um processo, área ou organização em relação a uma meta predefinida.</p>
+
+        <h3>5.2. Características de um Bom KPI (SMART)</h3>
+        <ul>
+            <li><b>Specific (Específico):</b> claro e bem definido.</li>
+            <li><b>Measurable (Mensurável):</b> pode ser quantificado.</li>
+            <li><b>Attainable (Atingível):</b> realista.</li>
+            <li><b>Relevant (Relevante):</b> alinhado aos objetivos estratégicos.</li>
+            <li><b>Time-bound (Temporal):</b> tem prazo definido.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Um indicador de desempenho para o setor de licitações poderia ser: <b>"Reduzir o tempo médio entre a publicação do edital e a assinatura do contrato de 90 para 60 dias até dezembro de 2024."</b> Esse KPI é específico, mensurável, atingível, relevante e com prazo definido.</p>
+        </div>
+
+        <h3>5.3. Tipos de Indicadores</h3>
+        <ul>
+            <li><b>Indicadores de eficiência:</b> medem a relação entre recursos utilizados e resultados obtidos (ex: custo por atendimento).</li>
+            <li><b>Indicadores de eficácia:</b> medem o grau de alcance dos objetivos (ex: percentual de metas cumpridas).</li>
+            <li><b>Indicadores de qualidade:</b> medem a satisfação e a conformidade (ex: índice de reclamações).</li>
+            <li><b>Indicadores de produtividade:</b> medem a quantidade produzida em relação a um período (ex: processos analisados por mês).</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> Na administração pública, os indicadores de desempenho são fundamentais para avaliar a eficiência dos serviços prestados à população.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Consolidação e Dicas Finais                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – CONSOLIDAÇÃO E DICAS FINAIS</h2>
+
+        <h3>6.1. Resumo dos Conceitos</h3>
+        <ul>
+            <li><b>Planos de ação:</b> ferramentas como 5W2H e PDCA.</li>
+            <li><b>Controle físico:</b> acompanhamento do progresso das atividades.</li>
+            <li><b>Controle financeiro:</b> monitoramento dos gastos em relação ao orçamento.</li>
+            <li><b>Análise de dados:</b> coleta, organização e interpretação para tomada de decisão.</li>
+            <li><b>Relatórios:</b> comunicação clara e estruturada dos resultados.</li>
+            <li><b>KPIs:</b> indicadores mensuráveis que orientam a gestão (critérios SMART).</li>
+        </ul>
+
+        <h3>6.2. Dicas para Concursos</h3>
+        <ul>
+            <li>Memorize as ferramentas de planejamento (5W2H, PDCA, Matriz GUT).</li>
+            <li>Entenda a diferença entre controle físico e financeiro.</li>
+            <li>Decore os critérios SMART para bons indicadores.</li>
+            <li>Conheça os tipos de indicadores: eficiência, eficácia, qualidade e produtividade.</li>
+            <li>Associe a Curva S ao controle de execução físico-financeira.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica Final:</b> O planejamento e o controle são o "motor" da administração. Sem eles, os objetivos ficam no papel e os recursos são desperdiçados.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 18                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 18)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> – A ferramenta de planejamento que responde a perguntas como "o quê?", "por quê?", "onde?", "quando?", "quem?", "como?" e "quanto custa?" é:</p>
+            <div class="alternativas">
+                a) PDCA<br>
+                b) 5W2H<br>
+                c) Matriz GUT<br>
+                d) Curva S<br>
+                e) SWOT
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> – O que significa a sigla PDCA?</p>
+            <div class="alternativas">
+                a) Plan, Do, Check, Act<br>
+                b) Plan, Develop, Control, Adjust<br>
+                c) Prepare, Do, Check, Act<br>
+                d) Plan, Do, Control, Adjust<br>
+                e) Prepare, Develop, Check, Act
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> – O controle físico de um projeto está relacionado a:</p>
+            <div class="alternativas">
+                a) Acompanhamento dos gastos<br>
+                b) Verificação do andamento das atividades em relação ao planejado<br>
+                c) Elaboração de relatórios financeiros<br>
+                d) Definição de indicadores<br>
+                e) Análise de dados
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> – O controle financeiro está relacionado a:</p>
+            <div class="alternativas">
+                a) Acompanhamento do progresso físico<br>
+                b) Monitoramento dos gastos em relação ao orçamento<br>
+                c) Definição de metas<br>
+                d) Análise de riscos<br>
+                e) Elaboração de planos de ação
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> – A ferramenta que relaciona graficamente o avanço físico e financeiro ao longo do tempo é a:</p>
+            <div class="alternativas">
+                a) Curva S<br>
+                b) Matriz GUT<br>
+                c) 5W2H<br>
+                d) PDCA<br>
+                e) SWOT
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> – Os indicadores de desempenho também são conhecidos como:</p>
+            <div class="alternativas">
+                a) KPIs<br>
+                b) PDCA<br>
+                c) 5W2H<br>
+                d) SWOT<br>
+                e) GUT
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> – Para que um indicador seja considerado bom, ele deve ser SMART. O que significa a letra "S" em SMART?</p>
+            <div class="alternativas">
+                a) Simples<br>
+                b) Específico<br>
+                c) Sustentável<br>
+                d) Sistemático<br>
+                e) Sensível
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> – O que significa a letra "M" em SMART?</p>
+            <div class="alternativas">
+                a) Mensurável<br>
+                b) Motivador<br>
+                c) Mutável<br>
+                d) Moderado<br>
+                e) Máximo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> – Os indicadores de eficiência medem:</p>
+            <div class="alternativas">
+                a) O grau de alcance dos objetivos<br>
+                b) A relação entre recursos utilizados e resultados obtidos<br>
+                c) A satisfação dos clientes<br>
+                d) A quantidade produzida<br>
+                e) O tempo de execução
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> – Os indicadores de eficácia medem:</p>
+            <div class="alternativas">
+                a) A relação entre recursos utilizados e resultados obtidos<br>
+                b) O grau de alcance dos objetivos<br>
+                c) A quantidade de recursos disponíveis<br>
+                d) A qualidade dos serviços prestados<br>
+                e) A produtividade
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> – Um plano de ação detalhado deve conter, entre outros itens:</p>
+            <div class="alternativas">
+                a) Apenas a descrição da atividade<br>
+                b) Atividades, prazos, responsáveis e recursos<br>
+                c) Apenas o orçamento<br>
+                d) Apenas o cronograma<br>
+                e) Apenas os indicadores
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> – A Matriz GUT é utilizada para:</p>
+            <div class="alternativas">
+                a) Elaborar planos de ação<br>
+                b) Priorizar problemas com base na gravidade, urgência e tendência<br>
+                c) Definir indicadores<br>
+                d) Elaborar relatórios<br>
+                e) Analisar dados
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> – Na análise de dados, a etapa de "interpretação" consiste em:</p>
+            <div class="alternativas">
+                a) Coletar informações<br>
+                b) Organizar os dados em tabelas<br>
+                c) Identificar tendências, desvios e oportunidades de melhoria<br>
+                d) Apresentar os dados em gráficos<br>
+                e) Definir metas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> – A elaboração de relatórios tem como finalidade principal:</p>
+            <div class="alternativas">
+                a) Registrar todos os dados da organização<br>
+                b) Comunicar resultados, decisões e recomendações<br>
+                c) Substituir a análise de dados<br>
+                d) Definir novos indicadores<br>
+                e) Planejar ações futuras
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> – A etapa "Act" do ciclo PDCA tem como objetivo:</p>
+            <div class="alternativas">
+                a) Planejar a melhoria<br>
+                b) Executar o plano<br>
+                c) Verificar os resultados<br>
+                d) Padronizar as melhorias ou ajustar o que não funcionou<br>
+                e) Identificar o problema
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> – O controle de execução financeira deve ser feito de forma:</p>
+            <div class="alternativas">
+                a) Apenas no final do projeto<br>
+                b) Periódica, ao longo de todo o projeto<br>
+                c) Apenas quando há desvios<br>
+                d) Apenas pela equipe financeira<br>
+                e) Apenas após a conclusão física
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> – Um indicador de produtividade mede:</p>
+            <div class="alternativas">
+                a) A qualidade dos serviços<br>
+                b) A quantidade produzida em relação a um período<br>
+                c) A satisfação dos clientes<br>
+                d) O custo por unidade<br>
+                e) O tempo de espera
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> – O que significa a letra "T" em SMART?</p>
+            <div class="alternativas">
+                a) Transitório<br>
+                b) Temporal (com prazo definido)<br>
+                c) Tangível<br>
+                d) Total<br>
+                e) Tático
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 19 a 35 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (19 a 35) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> – O que são indicadores de qualidade?</p>
+            <div class="alternativas">
+                a) Medem a quantidade produzida<br>
+                b) Medem a satisfação e a conformidade dos serviços<br>
+                c) Medem a relação entre recursos e resultados<br>
+                d) Medem o grau de alcance dos objetivos<br>
+                e) Medem a eficiência dos processos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> – A Matriz GUT é composta pelas dimensões:</p>
+            <div class="alternativas">
+                a) Gravidade, Urgência e Tendência<br>
+                b) Geral, Única e Tática<br>
+                c) Grande, Útil e Temporal<br>
+                d) Gestão, Unidade e Tecnologia<br>
+                e) Grau, Utilidade e Tempo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> – O acompanhamento de planos de ação inclui, EXCETO:</p>
+            <div class="alternativas">
+                a) Definição de prazos<br>
+                b) Reuniões de acompanhamento<br>
+                c) Correção de rotas<br>
+                d) Registro de lições aprendidas<br>
+                e) Eliminação de todas as atividades
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> – Na elaboração de relatórios, a seção de "Recomendações" tem como objetivo:</p>
+            <div class="alternativas">
+                a) Apresentar os dados coletados<br>
+                b) Sugerir ações para melhoria<br>
+                c) Descrever a metodologia<br>
+                d) Concluir o relatório<br>
+                e) Definir novos indicadores
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> – A letra "A" em SMART significa:</p>
+            <div class="alternativas">
+                a) Atingível (realista)<br>
+                b) Adaptável<br>
+                c) Assertivo<br>
+                d) Automático<br>
+                e) Ágil
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> – A Curva S é utilizada para:</p>
+            <div class="alternativas">
+                a) Elaborar planos de ação<br>
+                b) Relacionar o avanço físico e financeiro<br>
+                c) Definir indicadores<br>
+                d) Analisar dados<br>
+                e) Priorizar problemas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> – Os indicadores de eficiência são também conhecidos como indicadores de:</p>
+            <div class="alternativas">
+                a) Qualidade<br>
+                b) Produtividade<br>
+                c) Eficácia<br>
+                d) Custo-benefício<br>
+                e) Impacto
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 26</b> – O ciclo PDCA é uma ferramenta de:</p>
+            <div class="alternativas">
+                a) Planejamento estratégico<br>
+                b) Melhoria contínua<br>
+                c) Análise de dados<br>
+                d) Controle financeiro<br>
+                e) Elaboração de relatórios
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 27</b> – A etapa "Check" do PDCA consiste em:</p>
+            <div class="alternativas">
+                a) Planejar as ações<br>
+                b) Executar o plano<br>
+                c) Avaliar os resultados<br>
+                d) Padronizar as melhorias<br>
+                e) Identificar o problema
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 28</b> – Um exemplo de indicador de eficiência é:</p>
+            <div class="alternativas">
+                a) Percentual de metas cumpridas<br>
+                b) Custo por atendimento<br>
+                c) Índice de reclamações<br>
+                d) Número de atendimentos por mês<br>
+                e) Satisfação do cliente
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 29</b> – Os relatórios operacionais têm como público-alvo:</p>
+            <div class="alternativas">
+                a) A alta direção<br>
+                b) Os gestores de nível médio<br>
+                c) Os trabalhadores e supervisores<br>
+                d) Os clientes externos<br>
+                e) Os fornecedores
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 30</b> – A elaboração de um plano de ação começa com:</p>
+            <div class="alternativas">
+                a) A definição do orçamento<br>
+                b) A definição do objetivo<br>
+                c) A identificação dos responsáveis<br>
+                d) A definição dos prazos<br>
+                e) A criação dos indicadores
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 31</b> – O controle de execução física deve ser feito com base em:</p>
+            <div class="alternativas">
+                a) Apenas no orçamento<br>
+                b) No cronograma e nos marcos físicos<br>
+                c) Apenas nos relatórios financeiros<br>
+                d) Na satisfação do cliente<br>
+                e) Na análise de riscos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 32</b> – A etapa de "Análise" em um relatório tem como objetivo:</p>
+            <div class="alternativas">
+                a) Apresentar os dados coletados<br>
+                b) Interpretar os dados e identificar tendências<br>
+                c) Descrever a metodologia<br>
+                d) Concluir o relatório<br>
+                e) Fazer recomendações
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 33</b> – Os indicadores de eficácia medem:</p>
+            <div class="alternativas">
+                a) A relação entre recursos e resultados<br>
+                b) O grau de alcance dos objetivos<br>
+                c) A quantidade produzida<br>
+                d) A qualidade dos serviços<br>
+                e) A produtividade
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 34</b> – A Curva S é uma ferramenta gráfica que:</p>
+            <div class="alternativas">
+                a) Mostra a evolução do orçamento ao longo do tempo<br>
+                b) Relaciona o avanço físico e financeiro ao longo do tempo<br>
+                c) Compara diferentes projetos<br>
+                d) Avalia a qualidade dos serviços<br>
+                e) Define indicadores de desempenho
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 35</b> – Na gestão por indicadores, um KPI deve ser:</p>
+            <div class="alternativas">
+                a) Amplo e genérico<br>
+                b) Específico, mensurável, atingível, relevante e com prazo<br>
+                c) Apenas numérico<br>
+                d) Definido sem prazo<br>
+                e) Irrealista
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-A</b> | <b>3-B</b> | <b>4-B</b> | <b>5-A</b> | <b>6-A</b> | <b>7-B</b> | <b>8-A</b> | <b>9-B</b> | <b>10-B</b></p>
+            <p><b>11-B</b> | <b>12-B</b> | <b>13-C</b> | <b>14-B</b> | <b>15-D</b> | <b>16-B</b> | <b>17-B</b> | <b>18-B</b> | <b>19-B</b> | <b>20-A</b></p>
+            <p><b>21-E</b> | <b>22-B</b> | <b>23-A</b> | <b>24-B</b> | <b>25-B</b> | <b>26-B</b> | <b>27-C</b> | <b>28-B</b> | <b>29-C</b> | <b>30-B</b></p>
+            <p><b>31-B</b> | <b>32-B</b> | <b>33-B</b> | <b>34-B</b> | <b>35-B</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>💡 Observação:</b> Todas as respostas foram elaboradas com base na doutrina de Administração Geral e nas boas práticas de planejamento e controle.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

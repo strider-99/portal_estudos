@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Redação Oficial e Manual da Presidência</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f8f5f0;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a3c6e;
+            text-align: center;
+            border-bottom: 3px solid #8b0000;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a3c6e;
+            background-color: #f0e8e0;
+            padding: 10px 15px;
+            border-left: 6px solid #8b0000;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #2c3e50;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #e8ddd0;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .atencao {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .atencao b {
+            color: #922b21;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #fcf9f5;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #8b0000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a3c6e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #2a5a9e;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📝 REDAÇÃO OFICIAL E MANUAL DE REDAÇÃO DA PRESIDÊNCIA DA REPÚBLICA</h1>
+    <p style="text-align:center; font-size:18px; color:#1a3c6e;"><b>Conceitos, atributos, expedientes e padrão ofício</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Redação Oficial</b> é a maneira pela qual o Poder Público se comunica, tanto internamente (entre órgãos) quanto externamente (com os cidadãos). Ela deve ser clara, objetiva, impessoal e padronizada, refletindo a seriedade e a formalidade do serviço público.</p>
+        <p>O <b>Manual de Redação da Presidência da República (MRPR)</b> é o principal documento normativo sobre o tema no âmbito do Poder Executivo Federal. Ele estabelece padrões para a elaboração de comunicações oficiais e atos normativos, servindo como referência para toda a administração pública.[reference:0][reference:1]</p>
+        <p>O MRPR foi instituído pelo Decreto nº 100.000, de 11 de janeiro de 1991, e sua terceira edição, revista, atualizada e ampliada, foi aprovada pela Portaria nº 1.369, de 27 de dezembro de 2018.[reference:2][reference:3]</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender os fundamentos da redação oficial, dominar os atributos essenciais (impessoalidade, clareza, concisão, etc.), conhecer os principais expedientes (ofício, memorando, aviso, etc.) e a estrutura do padrão ofício, com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Redação Oficial – Conceitos e Fundamentos – pág. 2</li>
+            <li><b>Módulo II:</b> Atributos da Redação Oficial – pág. 3</li>
+            <li><b>Módulo III:</b> Pronomes de Tratamento – pág. 4</li>
+            <li><b>Módulo IV:</b> Expedientes Oficiais – Ofício, Memorando e Aviso – pág. 5</li>
+            <li><b>Módulo V:</b> Estrutura do Padrão Ofício e Manual MRPR – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+        <p style="margin-top:15px; font-size:14px; color:#6c757d;">
+            <b>Link oficial do Manual:</b> 
+            <a href="http://www4.planalto.gov.br/centrodeestudos/assuntos/manual-de-redacao-da-presidencia-da-republica/manual-de-redacao.pdf" target="_blank" style="color:#1a3c6e;">
+                www4.planalto.gov.br/.../manual-de-redacao.pdf
+            </a>
+        </p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Conceitos e Fundamentos                            -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – REDAÇÃO OFICIAL: CONCEITOS E FUNDAMENTOS</h2>
+        <h3>2.1. O que é Redação Oficial?</h3>
+        <p>A redação oficial é a forma de comunicação utilizada pela administração pública para a elaboração de atos normativos, expedientes administrativos e correspondências oficiais. Ela se caracteriza pela <b>impessoalidade</b>, pelo uso do <b>padrão culto da língua</b> e pela <b>uniformidade</b>.[reference:4]</p>
+
+        <h3>2.2. Finalidade da Redação Oficial</h3>
+        <ul>
+            <li><b>Comunicar:</b> transmitir informações de forma clara e eficiente.</li>
+            <li><b>Registrar:</b> documentar decisões, atos e procedimentos.</li>
+            <li><b>Instruir:</b> orientar e direcionar ações.</li>
+            <li><b>Dar publicidade:</b> tornar os atos oficiais acessíveis ao cidadão.</li>
+        </ul>
+
+        <h3>2.3. Princípios Constitucionais Aplicáveis</h3>
+        <p>A redação oficial está diretamente ligada aos princípios da administração pública (art. 37 da CF/88):</p>
+        <ul>
+            <li><b>Legalidade:</b> o texto deve estar em conformidade com a lei.</li>
+            <li><b>Impessoalidade:</b> a comunicação é da instituição, não da pessoa que a redige.</li>
+            <li><b>Moralidade:</b> respeito à ética e à transparência.</li>
+            <li><b>Publicidade:</b> os atos devem ser claros e acessíveis.</li>
+            <li><b>Eficiência:</b> a comunicação deve ser ágil e eficaz.</li>
+        </ul>
+
+        <h3>2.4. Histórico do Manual de Redação da Presidência</h3>
+        <p>O MRPR foi criado para <b>"rever, atualizar, uniformizar e simplificar"</b> as normas de redação de atos e comunicações oficiais.[reference:5] A primeira edição foi publicada em 1991, e a terceira edição, em 2018, incorporou as mudanças tecnológicas e legislativas ocorridas nas últimas décadas.[reference:6]</p>
+        <div class="atencao">
+            <b>📌 Atenção:</b> O MRPR é uma <b>diretriz oficial</b> e sua observância é obrigatória para a elaboração de documentos no âmbito do Poder Executivo Federal.[reference:7]
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Atributos da Redação Oficial                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – ATRIBUTOS DA REDAÇÃO OFICIAL</h2>
+        <p>Segundo o MRPR, a redação oficial deve caracterizar-se pelos seguintes atributos: <b>clareza e precisão, objetividade, concisão, coesão e coerência, impessoalidade, formalidade e padronização</b>, e <b>uso da norma padrão da língua portuguesa</b>.[reference:8]</p>
+
+        <h3>3.1. Impessoalidade</h3>
+        <p>A impessoalidade é o atributo mais característico da redação oficial. Ela decorre do princípio constitucional da impessoalidade e significa que o texto não deve refletir opiniões, sentimentos ou marcas pessoais de quem o redige.[reference:9][reference:10]</p>
+        <ul>
+            <li>Utilizar a <b>terceira pessoa</b> (ele/ela) em vez da primeira (eu/nós).</li>
+            <li>Evitar adjetivos e expressões que denotem subjetividade.</li>
+            <li>O foco é a <b>instituição</b>, não o indivíduo.</li>
+        </ul>
+
+        <h3>3.2. Clareza e Precisão</h3>
+        <p>A clareza exige que o texto seja compreendido facilmente pelo destinatário. A precisão requer o uso de termos exatos, sem ambiguidades.[reference:11]</p>
+        <ul>
+            <li>Usar frases curtas e na ordem direta (sujeito + verbo + complemento).[reference:12]</li>
+            <li>Evitar jargões técnicos desnecessários.</li>
+            <li>Preferir palavras simples e de uso corrente.[reference:13]</li>
+        </ul>
+
+        <h3>3.3. Concisão</h3>
+        <p>A concisão consiste em transmitir o máximo de informações com o mínimo de palavras.[reference:14]</p>
+        <ul>
+            <li>Eliminar redundâncias e expressões desnecessárias.</li>
+            <li>Ir direto ao ponto, sem rodeios.</li>
+        </ul>
+
+        <h3>3.4. Formalidade e Padronização</h3>
+        <p>A redação oficial deve seguir um <b>padrão formal</b> e <b>uniforme</b>, respeitando as normas gramaticais e os modelos estabelecidos.[reference:15] Isso garante que todos os documentos sigam a mesma estrutura, facilitando a compreensão e o arquivamento.</p>
+
+        <h3>3.5. Coesão e Coerência</h3>
+        <ul>
+            <li><b>Coesão:</b> uso adequado de conectivos para ligar as ideias.</li>
+            <li><b>Coerência:</b> as ideias devem se complementar logicamente.</li>
+        </ul>
+        <div class="dica">
+            <b>💡 Dica:</b> A concisão é uma <b>qualidade</b> essencial do texto oficial. Como diz o MRPR, "a concisão é antes uma qualidade do que uma característica do texto oficial".[reference:16]
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Pronomes de Tratamento                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – PRONOMES DE TRATAMENTO</h2>
+        <p>Os pronomes de tratamento são utilizados para se dirigir a autoridades e pessoas com quem se mantém uma relação formal. O MRPR estabelece regras claras para seu emprego.[reference:17]</p>
+
+        <h3>4.1. Principais Pronomes de Tratamento</h3>
+        <table>
+            <tr><th>Pronome</th><th>Abreviatura</th><th>Uso</th></tr>
+            <tr><td><b>Vossa Excelência</b></td><td>V. Ex.ª</td><td>Presidente da República, Ministros, Deputados, Senadores, Governadores, Prefeitos, Juízes, etc.</td></tr>
+            <tr><td><b>Vossa Senhoria</b></td><td>V. S.ª</td><td>Tratamento geral para autoridades e pessoas em correspondências oficiais.</td></tr>
+            <tr><td><b>Vossa Magnificência</b></td><td>V. Mag.ª</td><td>Reitores de universidades.</td></tr>
+            <tr><td><b>Vossa Reverendíssima</b></td><td>V. Rev.ma</td><td>Autoridades religiosas.</para></td></tr>
+        </table>
+
+        <h3>4.2. Regras de Concordância</h3>
+        <ul>
+            <li>Os pronomes de tratamento exigem concordância em <b>terceira pessoa</b> (verbos e pronomes oblíquos).</li>
+            <li>Exemplo: "Vossa Excelência <b>determinou</b> que <b>seu</b> assessor..." (e não "determinastes").</li>
+        </ul>
+
+        <h3>4.3. Recomendações do MRPR</h3>
+        <ul>
+            <li>O MRPR recomenda que sejam <b>evitadas frases-feitas</b> para iniciar ou encerrar textos, como "Tenho a honra de", "Tenho o prazer de", "Cumpre-me informar que".[reference:18]</li>
+            <li>Em vez disso, empregue a <b>forma direta</b>: "Informo Vossa Excelência de que..."[reference:19]</li>
+        </ul>
+        <div class="atencao">
+            <b>⚡ Importante:</b> A impessoalidade também se reflete no uso dos pronomes. Evite "eu" e "nós"; prefira construções impessoais.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Expedientes Oficiais                               -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – EXPEDIENTES OFICIAIS</h2>
+        <p>O MRPR define os principais tipos de expedientes utilizados na administração pública. Eles se distinguem pela finalidade e, principalmente, pelo formato.[reference:20]</p>
+
+        <h3>5.1. Ofício</h3>
+        <p>O <b>ofício</b> é o expediente utilizado para comunicações <b>externas</b> entre órgãos públicos ou entre o poder público e particulares.[reference:21]</p>
+        <ul>
+            <li><b>Formato:</b> padrão ofício (com cabeçalho, identificação, assunto, texto, fecho e assinatura).</li>
+            <li><b>Fecho:</b> "Atenciosamente" ou "Respeitosamente" (para autoridades superiores).</li>
+            <li><b>Exemplo de uso:</b> solicitação de informações a outro órgão, encaminhamento de processos, comunicação de decisões.</li>
+        </ul>
+
+        <h3>5.2. Memorando</h3>
+        <p>O <b>memorando</b> é o expediente utilizado para comunicações <b>internas</b> entre unidades de uma mesma organização.[reference:22]</p>
+        <ul>
+            <li><b>Característica principal:</b> agilidade e brevidade.[reference:23]</li>
+            <li>Trata de um único assunto por memorando.[reference:24]</li>
+            <li>Não exige fechos formais como "Atenciosamente"; pode-se usar apenas o nome do remetente.[reference:25]</li>
+            <li>Em geral, traz a <b>rúbrica</b> (iniciais) do remetente, em vez de assinatura.[reference:26]</li>
+        </ul>
+
+        <h3>5.3. Aviso</h3>
+        <p>O <b>aviso</b> é o expediente utilizado para comunicações <b>entre Ministérios</b> ou entre órgãos de diferentes níveis hierárquicos. Atualmente, o MRPR unificou aviso e ofício num único expediente: o <b>ofício</b>.[reference:27]</p>
+
+        <h3>5.4. Outros Expedientes</h3>
+        <ul>
+            <li><b>Despacho:</b> decisão ou pronunciamento de autoridade sobre um processo.</li>
+            <li><b>Portaria:</b> ato administrativo normativo ou de nomeação/exoneração.</li>
+            <li><b>Circular:</b> comunicação dirigida a vários destinatários simultaneamente.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Estrutura do Padrão Ofício e MRPR                  -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – ESTRUTURA DO PADRÃO OFÍCIO E MANUAL MRPR</h2>
+        <h3>6.1. Estrutura do Padrão Ofício</h3>
+        <p>O <b>padrão ofício</b> é o modelo padronizado para a redação de expedientes oficiais. O MRPR estabelece os seguintes elementos:</p>
+        <ul>
+            <li><b>Cabeçalho:</b> utilizado apenas na primeira página, centralizado.[reference:28]</li>
+            <li><b>Número e identificação:</b> número do documento, órgão e ano.</li>
+            <li><b>Assunto:</b> resumo do conteúdo do documento.</li>
+            <li><b>Texto:</b> desenvolvimento do assunto, com clareza e concisão.</li>
+            <li><b>Fecho:</b> "Atenciosamente" ou "Respeitosamente".</li>
+            <li><b>Assinatura:</b> nome e cargo do autor.</li>
+        </ul>
+
+        <h3>6.2. Formatação (MRPR)</h3>
+        <ul>
+            <li><b>Fonte:</b> Times New Roman ou Arial, tamanho 12.</li>
+            <li><b>Margens:</b> superior e esquerda 3 cm; inferior e direita 2 cm.</li>
+            <li><b>Espaçamento:</b> entrelinhas simples.</li>
+            <li><b>Alinhamento:</b> justificado.</li>
+        </ul>
+
+        <h3>6.3. Conteúdo do Manual (Divisão em Duas Partes)</h3>
+        <p>A segunda edição do MRPR manteve a divisão do documento em <b>duas partes</b>:[reference:29]</p>
+        <ul>
+            <li><b>Parte 1:</b> comunicações oficiais, aspectos essenciais, padronização de expedientes e simplificação de fechos.</li>
+            <li><b>Parte 2:</b> atos normativos do Poder Executivo e sua conceituação.</li>
+        </ul>
+
+        <h3>6.4. Importância do MRPR</h3>
+        <p>O Manual confere <b>"maior segurança no seio da administração pública"</b> e garante <b>"maior clareza e padronização"</b> na produção dos atos de comunicação oficial.[reference:30] Ele é uma <b>ferramenta teórico-referencial</b> para todos os servidores públicos.[reference:31]</p>
+        <div class="dica">
+            <b>📌 Dica de estudo:</b> O MRPR é um documento público e está disponível gratuitamente no site da Presidência da República. A leitura do manual é recomendada para aprofundar o conhecimento.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Conceito) – A redação oficial é a forma de comunicação utilizada pela administração pública e deve caracterizar-se, fundamentalmente, pela:</p>
+            <div class="alternativas">
+                a) Pessoalidade e subjetividade.<br>
+                b) Impessoalidade, uso do padrão culto da língua, clareza e concisão.<br>
+                c) Informalidade e criatividade.<br>
+                d) Uso de gírias e expressões populares.<br>
+                e) Emprego da primeira pessoa do singular.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Manual) – O Manual de Redação da Presidência da República (MRPR) foi instituído originalmente pelo Decreto:</p>
+            <div class="alternativas">
+                a) 1.171/94.<br>
+                b) 100.000, de 11 de janeiro de 1991.<br>
+                c) 12.002/2024.<br>
+                d) 8.112/90.<br>
+                e) 9.784/99.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Atributos) – São atributos da redação oficial, segundo o MRPR, EXCETO:</p>
+            <div class="alternativas">
+                a) Clareza e precisão.<br>
+                b) Concisão.<br>
+                c) Impessoalidade.<br>
+                d) Pessoalidade e subjetividade.<br>
+                e) Formalidade e padronização.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Pronomes) – O pronome de tratamento utilizado para se dirigir ao Presidente da República é:</p>
+            <div class="alternativas">
+                a) Vossa Senhoria.<br>
+                b) Vossa Excelência.<br>
+                c) Vossa Magnificência.<br>
+                d) Vossa Reverendíssima.<br>
+                e) Vossa Alteza.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Expedientes) – O expediente utilizado para comunicações internas entre unidades de uma mesma organização é o:</p>
+            <div class="alternativas">
+                a) Ofício.<br>
+                b) Aviso.<br>
+                c) Memorando.<br>
+                d) Despacho.<br>
+                e) Portaria.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (MRPR) – A terceira edição do Manual de Redação da Presidência da República foi aprovada pela Portaria nº 1.369, de 27 de dezembro de:</p>
+            <div class="alternativas">
+                a) 1991.<br>
+                b) 2002.<br>
+                c) 2018.<br>
+                d) 2020.<br>
+                e) 2024.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Impessoalidade) – A impessoalidade na redação oficial implica que:</p>
+            <div class="alternativas">
+                a) O texto deve refletir a opinião pessoal do redator.<br>
+                b) A comunicação é da instituição, não da pessoa que a redige.<br>
+                c) Deve-se usar a primeira pessoa do singular.<br>
+                d) É permitido usar adjetivos que expressem julgamentos pessoais.<br>
+                e) O redator pode assinar com seu nome completo.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Concisão) – A concisão na redação oficial consiste em:</p>
+            <div class="alternativas">
+                a) Usar o maior número possível de palavras.<br>
+                b) Transmitir o máximo de informações com o mínimo de palavras.<br>
+                c) Utilizar frases longas e complexas.<br>
+                d) Repetir a mesma ideia várias vezes.<br>
+                e) Empregar sinônimos para enriquecer o texto.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Estrutura) – No padrão ofício, o cabeçalho deve ser utilizado:</p>
+            <div class="alternativas">
+                a) Em todas as páginas do documento.<br>
+                b) Apenas na primeira página, centralizado.<br>
+                c) Apenas na última página.<br>
+                d) Em nenhuma página.<br>
+                e) Na página inicial e na final.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Fechos) – O fecho "Atenciosamente" é utilizado, segundo o MRPR, para:</p>
+            <div class="alternativas">
+                a) Comunicações com autoridades superiores.<br>
+                b) Comunicações com destinatários de mesma hierarquia ou inferiores.<br>
+                c) Comunicações internas (memorandos).<br>
+                d) Qualquer tipo de comunicação oficial.<br>
+                e) Apenas para comunicações externas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (MRPR) – O MRPR recomenda que sejam evitadas frases-feitas como "Tenho a honra de", sugerindo em seu lugar:</p>
+            <div class="alternativas">
+                a) A forma indireta.<br>
+                b) A forma direta.<br>
+                c) O uso de pronomes de tratamento.<br>
+                d) A linguagem informal.<br>
+                e) O emprego de gírias.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Expedientes) – O aviso, segundo o MRPR, foi unificado em qual expediente?</p>
+            <div class="alternativas">
+                a) Memorando.<br>
+                b) Ofício.<br>
+                c) Despacho.<br>
+                d) Portaria.<br>
+                e) Circular.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Divisão do Manual) – A segunda edição do MRPR mantém a divisão do documento em duas partes. A primeira parte trata de:</p>
+            <div class="alternativas">
+                a) Atos normativos do Poder Executivo.<br>
+                b) Comunicações oficiais e padronização de expedientes.<br>
+                c) Pronomes de tratamento.<br>
+                d) Formatação de documentos.<br>
+                e) Legislação complementar.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Atributos) – Analise as afirmativas sobre os atributos da redação oficial:</p>
+            <p>(   ) A clareza exige que o texto seja compreendido facilmente.<br>
+            (   ) A impessoalidade permite o uso da primeira pessoa do plural.<br>
+            (   ) A concisão é uma qualidade essencial do texto oficial.<br>
+            (   ) A formalidade e padronização garantem a uniformidade dos documentos.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Expedientes) – Analise as afirmativas:</p>
+            <p>(   ) O ofício é utilizado para comunicações externas entre órgãos públicos.<br>
+            (   ) O memorando é utilizado para comunicações internas e é caracterizado pela agilidade.<br>
+            (   ) O memorando exige fecho formal como "Atenciosamente".<br>
+            (   ) O aviso foi unificado com o ofício pelo MRPR.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (V/F – Pronomes e MRPR) – Analise as afirmativas:</p>
+            <p>(   ) O pronome "Vossa Senhoria" é utilizado para se dirigir a Ministros de Estado.<br>
+            (   ) O MRPR recomenda o uso de frases-feitas como "Tenho a honra de".<br>
+            (   ) Os pronomes de tratamento exigem concordância em terceira pessoa.<br>
+            (   ) O MRPR é uma ferramenta teórico-referencial para a administração pública.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – F – V – V<br>b) V – V – F – F<br>c) V – F – V – F<br>d) F – V – F – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Redação Oficial) – A redação oficial deve utilizar, preferencialmente, a ordem:</p>
+            <div class="alternativas">
+                a) Indireta.<br>
+                b) Direta (sujeito + verbo + complemento).<br>
+                c) Inversa.<br>
+                d) Nominal.<br>
+                e) Subjetiva.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (MRPR) – O MRPR foi criado com o objetivo de:</p>
+            <div class="alternativas">
+                a) Dificultar a comunicação entre os órgãos públicos.<br>
+                b) Rever, atualizar, uniformizar e simplificar as normas de redação de atos e comunicações oficiais.<br>
+                c) Estabelecer a obrigatoriedade do uso de gírias.<br>
+                d) Eliminar a necessidade de padronização.<br>
+                e) Substituir a língua portuguesa por outra.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Formatação) – Segundo o MRPR, a fonte recomendada para documentos oficiais é:</p>
+            <div class="alternativas">
+                a) Times New Roman ou Arial, tamanho 12.<br>
+                b) Comic Sans, tamanho 14.<br>
+                c) Calibri, tamanho 11.<br>
+                d) Qualquer fonte, desde que legível.<br>
+                e) Apenas Times New Roman, tamanho 10.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Expedientes) – O expediente que traz, em geral, apenas a rúbrica (iniciais) do remetente, em vez de assinatura, é o:</p>
+            <div class="alternativas">
+                a) Ofício.<br>
+                b) Aviso.<br>
+                c) Memorando.<br>
+                d) Despacho.<br>
+                e) Portaria.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Estrutura) – Analise as afirmativas sobre a estrutura do padrão ofício:</p>
+            <p>(   ) O cabeçalho deve ser utilizado em todas as páginas.<br>
+            (   ) O assunto é um resumo do conteúdo do documento.<br>
+            (   ) O fecho "Respeitosamente" é utilizado para autoridades superiores.<br>
+            (   ) A assinatura deve conter o nome e o cargo do autor.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – V – V<br>b) V – F – V – F<br>c) F – V – F – V<br>d) V – V – F – V<br>e) F – F – V – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Princípios) – O princípio constitucional da administração pública que exige que os atos sejam claros e acessíveis aos cidadãos é o da:</p>
+            <div class="alternativas">
+                a) Legalidade.<br>
+                b) Impessoalidade.<br>
+                c) Moralidade.<br>
+                d) Publicidade.<br>
+                e) Eficiência.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (MRPR) – A terceira edição do MRPR foi motivada, entre outros fatores, pelas mudanças:</p>
+            <div class="alternativas">
+                a) Tecnológicas e legislativas ocorridas nas últimas décadas.<br>
+                b) Apenas tecnológicas.<br>
+                c) Apenas legislativas.<br>
+                d) Políticas e econômicas.<br>
+                e) Sociais e culturais.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (V/F – Redação Oficial) – Analise as afirmativas:</p>
+            <p>(   ) A redação oficial deve utilizar a norma padrão da língua portuguesa.<br>
+            (   ) A coesão refere-se à ligação lógica entre as ideias.<br>
+            (   ) A coerência está relacionada ao uso adequado de conectivos.<br>
+            (   ) A redação oficial admite o uso de gírias e expressões coloquiais.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – F<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Consolidação) – Analise as afirmativas sobre Redação Oficial e MRPR:</p>
+            <p>(   ) O Manual de Redação da Presidência da República é de observância obrigatória no âmbito do Poder Executivo Federal.<br>
+            (   ) A impessoalidade na redação oficial decorre do princípio constitucional da impessoalidade.<br>
+            (   ) O memorando é utilizado para comunicações externas.<br>
+            (   ) O MRPR recomenda a forma direta em vez de frases-feitas.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-B</b> | <b>3-D</b> | <b>4-B</b> | <b>5-C</b> | <b>6-C</b> | <b>7-B</b> | <b>8-B</b> | <b>9-B</b> | <b>10-B</b></p>
+            <p><b>11-B</b> | <b>12-B</b> | <b>13-B</b> | <b>14-A</b> | <b>15-A</b> | <b>16-A</b> | <b>17-B</b> | <b>18-B</b> | <b>19-A</b> | <b>20-C</b></p>
+            <p><b>21-A</b> | <b>22-D</b> | <b>23-A</b> | <b>24-A</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,F,V,V); Q15 (V,V,F,V); Q16 (F,F,V,V); Q21 (F,V,V,V); Q24 (V,V,F,F); Q25 (V,V,F,V).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

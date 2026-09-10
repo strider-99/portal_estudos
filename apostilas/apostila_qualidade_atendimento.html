@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Gestão da Qualidade e Atendimento</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f7fa;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #0b5e5e;
+            text-align: center;
+            border-bottom: 3px solid #1a9e9e;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #0b5e5e;
+            background-color: #e0f2f2;
+            padding: 10px 15px;
+            border-left: 6px solid #1a9e9e;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #0a4a4a;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d4ecec;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5fbfb;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #1a9e9e;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #0b5e5e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #1a9e9e;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>⭐ GESTÃO DA QUALIDADE E ATENDIMENTO</h1>
+    <p style="text-align:center; font-size:18px; color:#0b5e5e;"><b>Ferramentas da qualidade, excelência no atendimento ao público e atendimento telefônico</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>Este módulo combina duas áreas essenciais para o profissional administrativo: a <b>Gestão da Qualidade</b> e o <b>Atendimento ao Público</b>. A qualidade não se restringe a produtos industriais; ela permeia serviços, processos internos e, principalmente, a experiência do cidadão/cliente ao interagir com a organização.</p>
+        <p>O atendimento ao público, seja presencial ou telefônico, é o "cartão de visitas" da instituição. Uma boa gestão da qualidade assegura que os processos sejam eficientes e que o atendimento seja cortês, ágil e resolutivo.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender os fundamentos da gestão da qualidade (princípios, ferramentas e normas), dominar as técnicas de atendimento ao público com excelência e aplicar as boas práticas no atendimento telefônico.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Gestão da Qualidade – Fundamentos e Evolução – pág. 2</li>
+            <li><b>Módulo II:</b> Ferramentas da Qualidade (PDCA, Ishikawa, Pareto, 5W2H) – pág. 3</li>
+            <li><b>Módulo III:</b> Normas ISO 9001 e Qualidade no Serviço Público – pág. 4</li>
+            <li><b>Módulo IV:</b> Atendimento ao Público – Excelência e Acolhimento – pág. 5</li>
+            <li><b>Módulo V:</b> Atendimento Telefônico – Técnicas e Postura – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Gestão da Qualidade – Fundamentos                  -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – GESTÃO DA QUALIDADE: FUNDAMENTOS E EVOLUÇÃO</h2>
+        <h3>2.1. O que é Qualidade?</h3>
+        <p>Qualidade pode ser definida como a <b>adequação ao uso</b> (Juran), a <b>conformidade com requisitos</b> (Crosby) ou a <b>capacidade de atender e superar as expectativas do cliente</b> (Deming). Na administração pública, qualidade é entregar serviços que atendam às necessidades do cidadão com eficiência, eficácia e efetividade.</p>
+
+        <h3>2.2. Evolução da Gestão da Qualidade</h3>
+        <ul>
+            <li><b>Controle da Qualidade (CQ):</b> foco na inspeção final dos produtos (detectar defeitos).</li>
+            <li><b>Garantia da Qualidade (GQ):</b> foco na prevenção de defeitos, com padronização de processos.</li>
+            <li><b>Gestão da Qualidade Total (TQM):</b> abordagem holística, envolvendo todos os setores e pessoas da organização, com foco na melhoria contínua e satisfação do cliente.</li>
+        </ul>
+
+        <h3>2.3. Os Mestres da Qualidade – Principais Contribuições</h3>
+        <ul>
+            <li><b>W. Edwards Deming:</b> Ciclo PDCA (Plan, Do, Check, Act) e os 14 princípios para a qualidade.</li>
+            <li><b>Joseph M. Juran:</b> Trilogia da Qualidade (Planejamento, Controle e Melhoria) e a regra 80/20 (Diagrama de Pareto).</li>
+            <li><b>Philip Crosby:</b> "Qualidade é grátis" – defende que fazer certo da primeira vez reduz custos. Criou o conceito de "Zero Defeitos".</li>
+            <li><b>Kaoru Ishikawa:</b> Diagrama de Causa e Efeito (Espinha de Peixe) e a importância do controle estatístico da qualidade.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Ferramentas da Qualidade                           -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – FERRAMENTAS DA QUALIDADE</h2>
+        <h3>3.1. Ciclo PDCA (Deming)</h3>
+        <p>O PDCA é um método de gestão para melhoria contínua:</p>
+        <ul>
+            <li><b>P (Plan):</b> Planejar – identificar o problema, analisar causas e definir um plano de ação.</li>
+            <li><b>D (Do):</b> Executar – implementar o plano.</li>
+            <li><b>C (Check):</b> Verificar – monitorar e avaliar os resultados obtidos.</li>
+            <li><b>A (Act):</b> Agir corretivamente – se o resultado foi bom, padronizar; se não, ajustar e reiniciar o ciclo.</li>
+        </ul>
+
+        <h3>3.2. Diagrama de Ishikawa (Causa e Efeito)</h3>
+        <p>Também chamado de "Espinha de Peixe", é uma ferramenta visual para identificar as causas raiz de um problema. As causas são agrupadas em 6 categorias (os "6Ms"):</p>
+        <ul>
+            <li><b>Máquinas</b> (equipamentos)</li>
+            <li><b>Mão de Obra</b> (pessoas)</li>
+            <li><b>Materiais</b> (insumos)</li>
+            <li><b>Métodos</b> (processos)</li>
+            <li><b>Medição</b> (controle)</li>
+            <li><b>Meio Ambiente</b> (condições externas)</li>
+        </ul>
+
+        <h3>3.3. Diagrama de Pareto (80/20)</h3>
+        <p>Baseia-se no princípio de que <b>80% dos problemas são causados por 20% das causas</b>. A ferramenta prioriza os problemas mais frequentes ou com maior impacto, direcionando os esforços para as causas vitais.</p>
+
+        <h3>3.4. 5W2H</h3>
+        <p>É um plano de ação detalhado que responde a 7 perguntas:</p>
+        <ul>
+            <li><b>What?</b> (O que será feito?)</li>
+            <li><b>Why?</b> (Por que será feito?)</li>
+            <li><b>Where?</b> (Onde será feito?)</li>
+            <li><b>When?</b> (Quando será feito?)</li>
+            <li><b>Who?</b> (Quem fará?)</li>
+            <li><b>How?</b> (Como será feito?)</li>
+            <li><b>How Much?</b> (Quanto custa?)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: ISO 9001 e Qualidade no Serviço Público            -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – NORMAS ISO 9001 E QUALIDADE NO SERVIÇO PÚBLICO</h2>
+        <h3>4.1. ISO 9001 – Sistema de Gestão da Qualidade</h3>
+        <p>A <b>ISO 9001</b> é uma norma internacional que estabelece requisitos para um sistema de gestão da qualidade. É aplicável a qualquer organização, pública ou privada. Seus <b>7 princípios</b> são:</p>
+        <ol>
+            <li><b>Foco no cliente:</b> entender e atender às necessidades dos clientes.</li>
+            <li><b>Liderança:</b> criar unidade de propósito e direção.</li>
+            <li><b>Engajamento das pessoas:</b> valorizar e capacitar os colaboradores.</li>
+            <li><b>Abordagem de processos:</b> gerenciar atividades como processos interligados.</li>
+            <li><b>Melhoria:</b> buscar continuamente a melhoria do desempenho.</li>
+            <li><b>Tomada de decisão baseada em evidências:</b> usar dados e fatos.</li>
+            <li><b>Gestão de relacionamento:</b> manter boas relações com fornecedores e parceiros.</li>
+        </ol>
+
+        <h3>4.2. Qualidade no Serviço Público</h3>
+        <p>No setor público, a qualidade está atrelada aos princípios constitucionais da <b>administração pública</b>: legalidade, impessoalidade, moralidade, publicidade e eficiência (art. 37 da CF/88). A <b>eficácia</b> (atingir resultados) e a <b>eficiência</b> (fazer com o menor custo possível) são dimensões essenciais.</p>
+        <ul>
+            <li><b>Cartas de Serviços:</b> documentos que informam ao cidadão quais serviços são oferecidos, prazos e como acessá-los.</li>
+            <li><b>Ouvidorias:</b> canais para receber reclamações, sugestões e elogios, promovendo a melhoria contínua.</li>
+        </ul>
+        <div class="dica">
+            <b>📌 Atenção:</b> A eficiência é um princípio explícito na CF/88 e é cobrada em concursos como um dos pilares da qualidade no serviço público.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Atendimento ao Público – Excelência                -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – ATENDIMENTO AO PÚBLICO: EXCELÊNCIA E ACOLHIMENTO</h2>
+        <h3>5.1. Conceitos Fundamentais</h3>
+        <ul>
+            <li><b>Atendimento:</b> conjunto de ações e atitudes que a organização ou seu representante adota para receber, orientar, informar e solucionar as demandas do público.</li>
+            <li><b>Cliente / Cidadão:</b> razão da existência da organização. No serviço público, o cidadão é o destinatário final dos serviços.</li>
+            <li><b>Excelência no atendimento:</b> superar as expectativas do cidadão, oferecendo um serviço ágil, cortês, claro e resolutivo.</li>
+        </ul>
+
+        <h3>5.2. Pilares do Bom Atendimento</h3>
+        <ul>
+            <li><b>Empatia:</b> colocar-se no lugar do outro, compreendendo suas necessidades e sentimentos.</li>
+            <li><b>Comunicação Clara:</b> usar linguagem acessível, evitar jargões técnicos, confirmar o entendimento.</li>
+            <li><b>Postura Profissional:</b> ser educado, atento, paciente e manter uma aparência adequada ao ambiente.</li>
+            <li><b>Resolutividade:</b> não basta atender bem; é preciso resolver o problema ou encaminhar corretamente.</li>
+            <li><b>Sigilo e Ética:</b> proteger as informações pessoais do cidadão e agir com imparcialidade.</li>
+        </ul>
+
+        <h3>5.3. Etapas do Atendimento Presencial</h3>
+        <ol>
+            <li><b>Recepção:</b> acolher com cordialidade, identificar-se e identificar a demanda.</li>
+            <li><b>Escuta Ativa:</b> ouvir atentamente, sem interrupções, fazendo perguntas esclarecedoras.</li>
+            <li><b>Análise e Encaminhamento:</b> verificar se a demanda pode ser resolvida naquele momento ou se precisa de encaminhamento para outro setor.</li>
+            <li><b>Resolução ou Retorno:</b> dar uma resposta clara e, se necessário, estabelecer um prazo para retorno.</li>
+            <li><b>Despedida:</b> encerrar de forma cordial, perguntando se há mais alguma necessidade.</li>
+        </ol>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Atendimento Telefônico                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – ATENDIMENTO TELEFÔNICO: TÉCNICAS E POSTURA</h2>
+        <h3>6.1. Características do Atendimento Telefônico</h3>
+        <p>O atendimento telefônico tem particularidades: não há contato visual, a comunicação é exclusivamente verbal (tom de voz) e o tempo de atenção tende a ser mais curto. Por isso, a <b>postura vocal</b> e a <b>organização</b> são fundamentais.</p>
+
+        <h3>6.2. Boas Práticas no Telefone</h3>
+        <ul>
+            <li><b>Identificação correta:</b> atender informando o nome do setor e do atendente (ex.: "Bom dia, Setor de Recursos Humanos, João falando. Como posso ajudar?").</li>
+            <li><b>Tom de voz adequado:</b> falar pausadamente, com clareza, entonação cordial e volume moderado.</li>
+            <li><b>Escuta ativa:</b> prestar atenção ao que o interlocutor diz, anotar informações importantes.</li>
+            <li><b>Evitar interrupções:</b> deixar o cidadão falar completamente antes de responder.</li>
+            <li><b>Controle do tempo:</b> ser objetivo, mas sem pressa aparente.</li>
+            <li><b>Registro da chamada:</b> anotar dados do cidadão, demanda e providências tomadas (protocolo).</li>
+        </ul>
+
+        <h3>6.3. Lidando com Situações Difíceis</h3>
+        <ul>
+            <li><b>Reclamações:</b> ouvir sem interromper, demonstrar empatia, pedir desculpas quando necessário, buscar a solução e não prometer o que não pode cumprir.</li>
+            <li><b>Cidadãos irritados:</b> manter a calma, usar tom de voz tranquilo, focar na solução do problema.</li>
+            <li><b>Informações complexas:</b> falar devagar, confirmar se o cidadão entendeu, oferecer alternativas (e-mail, atendimento presencial).</li>
+        </ul>
+
+        <h3>6.4. Etiqueta Telefônica – O que Evitar</h3>
+        <ul>
+            <li>Atender com "alô" sem identificação.</li>
+            <li>Usar expressões informais demais ("tá", "opa", "beleza").</li>
+            <li>Deixar o cidadão em espera por muito tempo sem avisar.</li>
+            <li>Transferir a ligação sem explicar o motivo.</li>
+            <li>Comer, beber ou mascar chiclete durante a chamada.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Qualidade) – O ciclo PDCA, criado por Deming, é composto pelas etapas:</p>
+            <div class="alternativas">
+                a) Planejar, Executar, Corrigir, Padronizar.<br>
+                b) Planejar, Fazer, Verificar, Agir.<br>
+                c) Planejar, Organizar, Dirigir, Controlar.<br>
+                d) Prever, Desenvolver, Checar, Ajustar.<br>
+                e) Produzir, Distribuir, Controlar, Avaliar.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Ishikawa) – O Diagrama de Causa e Efeito, também conhecido como "Espinha de Peixe", foi criado por:</p>
+            <div class="alternativas">
+                a) W. Edwards Deming.<br>
+                b) Joseph Juran.<br>
+                c) Kaoru Ishikawa.<br>
+                d) Philip Crosby.<br>
+                e) Peter Drucker.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Pareto) – O princípio de Pareto (80/20) afirma que:</p>
+            <div class="alternativas">
+                a) 80% dos lucros vêm de 80% dos clientes.<br>
+                b) 20% das causas são responsáveis por 80% dos problemas.<br>
+                c) 20% dos problemas são causados por 80% das causas.<br>
+                d) 80% dos funcionários produzem 20% dos resultados.<br>
+                e) A qualidade é gratuita.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (ISO 9001) – São princípios da ISO 9001, EXCETO:</p>
+            <div class="alternativas">
+                a) Foco no cliente.<br>
+                b) Engajamento das pessoas.<br>
+                c) Abordagem de processos.<br>
+                d) Maximização de lucros a curto prazo.<br>
+                e) Tomada de decisão baseada em evidências.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Atendimento) – O pilar do bom atendimento que significa "colocar-se no lugar do outro" é a:</p>
+            <div class="alternativas">
+                a) Eficiência.<br>
+                b) Empatia.<br>
+                c) Impessoalidade.<br>
+                d) Legalidade.<br>
+                e) Publicidade.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Telefone) – Ao atender uma ligação, a primeira atitude correta é:</p>
+            <div class="alternativas">
+                a) Dizer "alô" e esperar o outro falar.<br>
+                b) Identificar-se com o nome do setor e do atendente.<br>
+                c) Perguntar imediatamente "o que você quer?".<br>
+                d) Colocar o cidadão em espera.<br>
+                e) Transferir a ligação sem explicação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (5W2H) – A ferramenta 5W2H é utilizada para:</p>
+            <div class="alternativas">
+                a) Analisar causas de problemas.<br>
+                b) Elaborar planos de ação detalhados.<br>
+                c) Classificar estoques.<br>
+                d) Avaliar o clima organizacional.<br>
+                e) Calcular custos de produção.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Qualidade no Serviço Público) – O princípio constitucional da administração pública que está diretamente relacionado à qualidade e à entrega de resultados é a:</p>
+            <div class="alternativas">
+                a) Legalidade.<br>
+                b) Impessoalidade.<br>
+                c) Moralidade.<br>
+                d) Publicidade.<br>
+                e) Eficiência.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Atendimento) – Na etapa de despedida do atendimento presencial, é recomendado:</p>
+            <div class="alternativas">
+                a) Encerrar a conversa abruptamente.<br>
+                b) Perguntar se há mais alguma necessidade e encerrar de forma cordial.<br>
+                c) Dar as costas ao cidadão imediatamente.<br>
+                d) Ignorar o que foi falado.<br>
+                e) Falar sobre assuntos pessoais.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Crosby) – Philip Crosby é conhecido por defender que:</p>
+            <div class="alternativas">
+                a) A qualidade é gratuita.<br>
+                b) A qualidade não tem custo.<br>
+                c) A qualidade é um luxo.<br>
+                d) A qualidade aumenta os custos.<br>
+                e) A qualidade deve ser ignorada.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Ishikawa) – No Diagrama de Ishikawa, os "6Ms" são utilizados para agrupar causas. Um desses "Ms" é:</p>
+            <div class="alternativas">
+                a) Marketing.<br>
+                b) Métodos.<br>
+                c) Motivação.<br>
+                d) Mercado.<br>
+                e) Manutenção.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Telefone) – Ao lidar com um cidadão irritado ao telefone, o atendente deve:</p>
+            <div class="alternativas">
+                a) Discutir com o cidadão para provar que está certo.<br>
+                b) Manter a calma, ouvir e focar na solução do problema.<br>
+                c) Desligar o telefone imediatamente.<br>
+                d) Transferir a ligação sem avisar.<br>
+                e) Falar mais alto que o cidadão.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (TQM) – A Gestão da Qualidade Total (TQM) envolve:</p>
+            <div class="alternativas">
+                a) Apenas o setor de produção.<br>
+                b) Apenas o setor de vendas.<br>
+                c) Toda a organização e todos os colaboradores.<br>
+                d) Apenas a alta direção.<br>
+                e) Apenas os clientes externos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Qualidade) – Analise as afirmativas:</p>
+            <p>(   ) O PDCA é um ciclo de melhoria contínua.<br>
+            (   ) O Diagrama de Pareto classifica os problemas por frequência ou impacto.<br>
+            (   ) A ISO 9001 não se aplica a organizações públicas.<br>
+            (   ) Deming é conhecido como o pai do Controle Estatístico da Qualidade.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Atendimento) – Analise as afirmativas:</p>
+            <p>(   ) A empatia é essencial para um bom atendimento ao público.<br>
+            (   ) No atendimento telefônico, o tom de voz não é relevante.<br>
+            (   ) O sigilo das informações do cidadão deve ser respeitado.<br>
+            (   ) A resolutividade significa encaminhar o problema para outro setor sem retorno.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – F<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (V/F – ISO e Serviço Público) – Analise as afirmativas:</p>
+            <p>(   ) O princípio da eficiência está previsto na Constituição Federal de 1988.<br>
+            (   ) A ISO 9001 exige foco no cliente e melhoria contínua.<br>
+            (   ) As Cartas de Serviços são documentos que informam os prazos e formas de acesso aos serviços públicos.<br>
+            (   ) A ouvidoria é um canal exclusivo para reclamações, não aceitando sugestões.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – V – F<br>b) F – V – F – V<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Juran) – A Trilogia da Qualidade, proposta por Juran, é composta por:</p>
+            <div class="alternativas">
+                a) Planejamento, Controle e Melhoria.<br>
+                b) Planejamento, Organização e Direção.<br>
+                c) Inspeção, Prevenção e Melhoria.<br>
+                d) Qualidade, Produtividade e Lucro.<br>
+                e) Projeto, Produção e Pós-venda.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Atendimento) – Uma postura profissional no atendimento presencial inclui:</p>
+            <div class="alternativas">
+                a) Usar roupas informais e desleixadas.<br>
+                b) Manter contato visual, falar com clareza e ser educado.<br>
+                c) Atender vários cidadãos ao mesmo tempo.<br>
+                d) Ignorar perguntas que não sabe responder.<br>
+                e) Usar gírias e expressões coloquiais.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Ferramentas) – A ferramenta 5W2H é composta por perguntas que começam com as letras W e H. Qual das opções abaixo NÃO faz parte do 5W2H?</p>
+            <div class="alternativas">
+                a) What? (O quê?)<br>
+                b) Who? (Quem?)<br>
+                c) Why? (Por quê?)<br>
+                d) How Much? (Quanto custa?)<br>
+                e) Which? (Qual?)
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Qualidade) – "Fazer certo da primeira vez" é um conceito associado a:</p>
+            <div class="alternativas">
+                a) Zero Defeitos (Crosby).<br>
+                b) Ciclo PDCA (Deming).<br>
+                c) Diagrama de Pareto (Juran).<br>
+                d) Espinha de Peixe (Ishikawa).<br>
+                e) Gestão de processos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (Telefone) – Ao transferir uma ligação, é correto:</p>
+            <div class="alternativas">
+                a) Transferir sem avisar, para agilizar.<br>
+                b) Explicar ao cidadão o motivo da transferência e para quem está encaminhando.<br>
+                c) Desligar a ligação e ligar de volta depois.<br>
+                d) Pedir para o cidadão ligar novamente mais tarde.<br>
+                e) Anotar o número e retornar em até 30 dias.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (V/F – Conhecimentos Gerais) – Analise as afirmativas:</p>
+            <p>(   ) O Diagrama de Ishikawa é usado para identificar a causa raiz de um problema.<br>
+            (   ) O atendimento ao público deve ser pautado pela cortesia e pela eficiência.<br>
+            (   ) A qualidade no serviço público não está relacionada à satisfação do cidadão.<br>
+            (   ) O PDCA é um ciclo que termina na etapa "Act".</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (ISO 9001) – O princípio da ISO 9001 que trata da gestão de atividades como processos interligados é a:</p>
+            <div class="alternativas">
+                a) Abordagem de processos.<br>
+                b) Liderança.<br>
+                c) Foco no cliente.<br>
+                d) Melhoria.<br>
+                e) Gestão de relacionamento.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (Atendimento) – Um dos pilares do bom atendimento é a resolutividade, que significa:</p>
+            <div class="alternativas">
+                a) Atender rapidamente, mesmo que não resolva o problema.<br>
+                b) Resolver o problema do cidadão ou encaminhá-lo corretamente.<br>
+                c) Transferir a responsabilidade para outro setor.<br>
+                d) Ignorar as reclamações complexas.<br>
+                e) Dar respostas vagas e genéricas.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Consolidação) – Analise as afirmativas sobre Qualidade e Atendimento:</p>
+            <p>(   ) A Gestão da Qualidade Total (TQM) envolve apenas a área de produção.<br>
+            (   ) No atendimento telefônico, é recomendado manter um tom de voz cordial e pausado.<br>
+            (   ) O princípio da eficiência na administração pública está previsto na Constituição Federal.<br>
+            (   ) O 5W2H é uma ferramenta utilizada exclusivamente para controle de estoques.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) F – V – V – F<br>b) V – F – F – V<br>c) F – V – F – V<br>d) V – V – V – F<br>e) F – F – V – V
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-C</b> | <b>3-B</b> | <b>4-D</b> | <b>5-B</b> | <b>6-B</b> | <b>7-B</b> | <b>8-E</b> | <b>9-B</b> | <b>10-A</b></p>
+            <p><b>11-B</b> | <b>12-B</b> | <b>13-C</b> | <b>14-A</b> | <b>15-A</b> | <b>16-A</b> | <b>17-A</b> | <b>18-B</b> | <b>19-E</b> | <b>20-A</b></p>
+            <p><b>21-B</b> | <b>22-A</b> | <b>23-A</b> | <b>24-B</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,V,F,F); Q15 (V,F,V,F); Q16 (V,V,V,F); Q22 (V,V,F,V); Q25 (F,V,V,F).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

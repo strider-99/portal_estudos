@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Administração Geral: O&M, Fluxogramas, Organogramas e Gestão por Processos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f7f0;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a7a5a;
+            text-align: center;
+            border-bottom: 3px solid #1a7a5a;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a7a5a;
+            background-color: #e6f4ed;
+            padding: 10px 15px;
+            border-left: 6px solid #1a7a5a;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #0d5a3e;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d4ece4;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .exemplo {
+            background-color: #eafaf1;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #1a7a5a;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5fbf8;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #1a7a5a;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a7a5a;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #2a9a7a;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📋 ADMINISTRAÇÃO GERAL</h1>
+    <p style="text-align:center; font-size:18px; color:#1a7a5a;"><b>O&M, Fluxogramas, Organogramas, Rotinas Administrativas e Gestão por Processos</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Administração Geral</b> abrange as ferramentas e técnicas utilizadas para organizar, otimizar e documentar o trabalho nas organizações. Neste módulo, vamos explorar <b>Organização e Métodos (O&M)</b>, <b>fluxogramas</b>, <b>organogramas</b>, <b>rotinas administrativas</b> e a <b>gestão por processos</b>.</p>
+        <p>Para facilitar a compreensão, cada tópico será acompanhado de <b>exemplos práticos</b> do dia a dia administrativo, mostrando como essas ferramentas são aplicadas na prática.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Dominar as técnicas de organização e métodos, compreender a elaboração de fluxogramas e organogramas, documentar rotinas administrativas e aplicar a gestão por processos, com 35 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Organização e Métodos (O&M) – pág. 2</li>
+            <li><b>Módulo II:</b> Fluxogramas – pág. 3</li>
+            <li><b>Módulo III:</b> Organogramas – pág. 4</li>
+            <li><b>Módulo IV:</b> Rotinas Administrativas – pág. 5</li>
+            <li><b>Módulo V:</b> Gestão por Processos – pág. 6</li>
+            <li><b>Questões:</b> 35 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Organização e Métodos (O&M)                        -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – ORGANIZAÇÃO E MÉTODOS (O&M)</h2>
+
+        <h3>2.1. O que é O&M?</h3>
+        <p><b>Organização e Métodos (O&M)</b> é uma área da administração que estuda e propõe melhorias na estrutura organizacional, nos processos de trabalho e nos métodos utilizados para executar tarefas.</p>
+
+        <h3>2.2. Objetivos do O&M</h3>
+        <ul>
+            <li>Racionalizar o trabalho, eliminando desperdícios e redundâncias.</li>
+            <li>Padronizar procedimentos, garantindo consistência e qualidade.</li>
+            <li>Simplificar processos, reduzindo o tempo e o custo das operações.</li>
+            <li>Definir responsabilidades, evitando conflitos e lacunas.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Imagine um setor de licitações que recebe 50 processos por mês, mas não há um padrão para preencher os formulários, causando retrabalho e atrasos. O O&M analisa o fluxo atual, propõe um formulário padronizado, define quem faz o quê (quem recebe, quem analisa, quem aprova) e sugere um sistema de acompanhamento. Com isso, o tempo médio de análise cai de 10 dias para 5 dias, e os erros diminuem 80%.</p>
+        </div>
+
+        <h3>2.3. Áreas de Atuação do O&M</h3>
+        <ul>
+            <li><b>Estrutura organizacional:</b> análise de organogramas e definição de níveis hierárquicos.</li>
+            <li><b>Processos e procedimentos:</b> mapeamento e melhoria de fluxos de trabalho.</li>
+            <li><b>Normas e manuais:</b> elaboração de manuais de procedimentos.</li>
+            <li><b>Layout e ambiência:</b> organização física dos espaços de trabalho.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> O&M é frequentemente chamado de "engenharia administrativa" porque aplica técnicas de racionalização e melhoria contínua.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Fluxogramas                                        -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – FLUXOGRAMAS</h2>
+
+        <h3>3.1. O que é um Fluxograma?</h3>
+        <p>Um <b>fluxograma</b> é a representação gráfica de um processo ou procedimento, utilizando símbolos padronizados para mostrar a sequência de etapas, decisões e pontos de controle.</p>
+
+        <h3>3.2. Símbolos Básicos</h3>
+        <table>
+            <tr><th>Símbolo</th><th>Nome</th><th>Significado</th></tr>
+            <tr><td>⬜ (retângulo)</td><td>Atividade / Processo</td><td>Uma ação ou tarefa executada</td></tr>
+            <tr><td>⬡ (losango)</td><td>Decisão</td><td>Um ponto de escolha (sim/não)</td></tr>
+            <tr><td>⬤ (círculo)</td><td>Conector</td><td>Liga partes do fluxograma</td></tr>
+            <tr><td>⬭ (oval/arredondado)</td><td>Início / Fim</td><td>Indica o início ou o término do processo</td></tr>
+            <tr><td>⬜ (retângulo com bordas)</td><td>Documento</td><td>Produção ou uso de um documento</td></tr>
+        </table>
+
+        <h3>3.3. Tipos de Fluxogramas</h3>
+        <ul>
+            <li><b>Fluxograma vertical:</b> etapas dispostas de cima para baixo. Ideal para processos simples.</li>
+            <li><b>Fluxograma horizontal:</b> etapas dispostas da esquerda para a direita. Mostra a interação entre setores.</li>
+            <li><b>Fluxograma de blocos:</b> usa formas geométricas para representar atividades e decisões.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Processo de <b>aprovação de um pedido de compra</b> em uma empresa:</p>
+            <ul>
+                <li><b>1. Início:</b> Solicitação de compra enviada pelo setor demandante.</li>
+                <li><b>2. Atividade:</b> Verificação de disponibilidade orçamentária.</li>
+                <li><b>3. Decisão:</b> Há orçamento disponível? → Sim: prossegue; Não: devolve com justificativa.</li>
+                <li><b>4. Atividade:</b> Pesquisa de preços com fornecedores.</li>
+                <li><b>5. Decisão:</b> O preço está dentro do orçamento? → Sim: autoriza; Não: renegocia ou cancela.</li>
+                <li><b>6. Fim:</b> Pedido autorizado e enviado para execução.</li>
+            </ul>
+            <p>Esse processo, desenhado em um fluxograma, permite visualizar rapidamente cada etapa, quem é responsável e onde podem ocorrer gargalos.</p>
+        </div>
+
+        <div class="dica">
+            <b>💡 Dica:</b> O fluxograma é uma ferramenta essencial para identificar gargalos e pontos de melhoria em qualquer processo.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Organogramas                                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – ORGANOGRAMAS</h2>
+
+        <h3>4.1. O que é um Organograma?</h3>
+        <p>Um <b>organograma</b> é a representação gráfica da estrutura hierárquica e funcional de uma organização, mostrando as relações de autoridade, responsabilidade e comunicação entre os órgãos e cargos.</p>
+
+        <h3>4.2. Tipos de Organogramas</h3>
+        <ul>
+            <li><b>Funcional (ou clássico):</b> mostra a estrutura vertical, com a presidência no topo e os departamentos subordinados.</li>
+            <li><b>Linear (ou militar):</b> hierarquia rígida, com linhas claras de subordinação.</li>
+            <li><b>Matricial (ou em rede):</b> combina estruturas funcionais e de projetos, com dupla subordinação.</li>
+            <li><b>Circular:</b> centraliza a liderança no centro e os departamentos ao redor, mostrando maior horizontalidade.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Organograma funcional de uma Prefeitura:</p>
+            <ul>
+                <li><b>Prefeito</b> (topo)</li>
+                <li><b>Secretarias:</b> Saúde, Educação, Obras, Finanças, Administração</li>
+                <li><b>Departamentos:</b> cada secretaria tem seus departamentos (ex: na Saúde: Atenção Básica, Vigilância Sanitária, etc.)</li>
+            </ul>
+            <p>O organograma mostra que o Prefeito é a autoridade máxima, e cada Secretário responde a ele. Por sua vez, os Departamentos respondem aos Secretários.</p>
+            <p><b>Organograma Matricial (exemplo):</b> Uma empresa de tecnologia tem um gerente de projetos que coordena equipes de desenvolvimento, design e marketing, mesmo que esses profissionais pertençam a departamentos funcionais diferentes. O analista de desenvolvimento reporta-se ao gerente de projetos para entregas e ao diretor de tecnologia para aspectos técnicos.</p>
+        </div>
+
+        <h3>4.3. Importância do Organograma</h3>
+        <ul>
+            <li>Facilita a comunicação e a coordenação.</li>
+            <li>Define responsabilidades e autoridades.</li>
+            <li>Auxilia no planejamento e na alocação de recursos.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Rotinas Administrativas                            -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – ROTINAS ADMINISTRATIVAS</h2>
+
+        <h3>5.1. O que são Rotinas Administrativas?</h3>
+        <p><b>Rotinas administrativas</b> são os procedimentos padronizados executados diariamente em uma organização para realizar tarefas específicas. Elas garantem a previsibilidade, a qualidade e a continuidade das operações.</p>
+
+        <h3>5.2. Como Documentar uma Rotina</h3>
+        <ul>
+            <li><b>Definir o objetivo:</b> O que a rotina deve alcançar?</li>
+            <li><b>Identificar os passos:</b> Quem faz o quê, em que ordem.</li>
+            <li><b>Estabelecer prazos e responsáveis:</b> Quando deve ser feito e por quem.</li>
+            <li><b>Prever exceções:</b> O que fazer em caso de imprevistos.</li>
+            <li><b>Criar formulários e documentos de apoio:</b> Para padronizar registros.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> <b>Rotina de atendimento ao público na recepção de um órgão público:</b></p>
+            <ul>
+                <li><b>1. Chegada do cidadão:</b> Receber com cordialidade.</li>
+                <li><b>2. Identificação da demanda:</b> Perguntar qual serviço deseja.</li>
+                <li><b>3. Triagem:</b> Verificar se o serviço é daquele setor ou de outro.</li>
+                <li><b>4. Encaminhamento:</b> Se for de outro setor, orientar o cidadão; se for do setor, chamar a fila ou dar uma senha.</li>
+                <li><b>5. Atendimento:</b> Realizar o serviço ou registrar a solicitação.</li>
+                <li><b>6. Finalização:</b> Entregar comprovante, agradecer e encerrar.</li>
+            </ul>
+            <p>Essa rotina, quando documentada, permite treinar novos servidores e manter a qualidade do atendimento, independentemente de quem esteja no posto.</p>
+        </div>
+
+        <h3>5.3. Benefícios das Rotinas Documentadas</h3>
+        <ul>
+            <li>Agilidade na execução.</li>
+            <li>Redução de erros e retrabalho.</li>
+            <li>Facilidade de treinamento.</li>
+            <li>Melhor controle e avaliação.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Gestão por Processos                               -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – GESTÃO POR PROCESSOS</h2>
+
+        <h3>6.1. Conceito de Gestão por Processos</h3>
+        <p>A <b>gestão por processos</b> (ou <b>BPM – Business Process Management</b>) é uma abordagem que organiza a organização em torno de seus processos de negócio, em vez de departamentos ou funções isoladas. O foco está na <b>cadeia de valor</b> e na <b>entrega de resultados</b> para o cliente (interno ou externo).</p>
+
+        <h3>6.2. Mapeamento de Processos</h3>
+        <p>Mapear um processo significa identificar todas as atividades, entradas, saídas, responsáveis e fluxos de informação que compõem um processo. O resultado é um modelo visual do processo (fluxograma ou mapa de processo).</p>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> <b>Processo de admissão de um novo servidor público:</b></p>
+            <ul>
+                <li><b>Entrada:</b> Portaria de nomeação publicada em Diário Oficial.</li>
+                <li><b>Atividades:</b> Entrega de documentos → Cadastro no sistema de pessoal → Registro de ponto → Abertura de conta-salário → Integração ao setor de trabalho.</li>
+                <li><b>Saída:</b> Servidor empossado e pronto para iniciar as atividades.</li>
+                <li><b>Responsáveis:</b> RH, Setor de Patrimônio, Setor de TI.</li>
+            </ul>
+            <p>Com o processo mapeado, o órgão pode garantir que nenhum passo seja esquecido, reduzir o tempo de espera do novo servidor e padronizar o procedimento para todas as admissões.</p>
+        </div>
+
+        <h3>6.3. BPM e Melhoria Contínua (Ciclo PDCA)</h3>
+        <ul>
+            <li><b>Plan (Planejar):</b> Identificar o processo, analisar problemas e propor melhorias.</li>
+            <li><b>Do (Executar):</b> Implementar as melhorias.</li>
+            <li><b>Check (Verificar):</b> Avaliar os resultados.</li>
+            <li><b>Act (Agir):</b> Padronizar as melhorias ou ajustar o que não funcionou.</li>
+        </ul>
+
+        <h3>6.4. Indicadores de Desempenho (KPIs)</h3>
+        <p>Na gestão por processos, os indicadores são usados para medir a eficiência e a eficácia do processo. Exemplos: tempo médio de atendimento, taxa de erros, custo por processo.</p>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Em um processo de licitação, um KPI comum é o <b>tempo médio entre a publicação do edital e a assinatura do contrato</b>. Se o tempo médio é de 90 dias, a gestão pode buscar reduzir para 60 dias, mapeando gargalos e simplificando etapas.</p>
+        </div>
+
+        <div class="dica">
+            <b>💡 Dica:</b> A gestão por processos é uma das tendências mais fortes na administração pública moderna, sendo cobrada em concursos como uma abordagem que prioriza a eficiência e a qualidade dos serviços.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 18                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 18)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> – O que significa a sigla O&M?</p>
+            <div class="alternativas">
+                a) Organização e Métodos<br>
+                b) Orçamento e Metas<br>
+                c) Operações e Manutenção<br>
+                d) Ordem e Movimento<br>
+                e) Organização e Marketing
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> – O principal objetivo do O&M é:</p>
+            <div class="alternativas">
+                a) Aumentar o número de funcionários<br>
+                b) Racionalizar o trabalho e melhorar processos<br>
+                c) Centralizar todas as decisões na alta direção<br>
+                d) Reduzir salários<br>
+                e) Eliminar todos os manuais de procedimentos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> – Em um fluxograma, o símbolo que representa uma decisão (sim/não) é:</p>
+            <div class="alternativas">
+                a) Retângulo<br>
+                b) Losango<br>
+                c) Círculo<br>
+                d) Oval<br>
+                e) Retângulo com bordas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> – O símbolo que representa o início e o fim de um processo em um fluxograma é:</p>
+            <div class="alternativas">
+                a) Retângulo<br>
+                b) Losango<br>
+                c) Círculo<br>
+                d) Oval / arredondado<br>
+                e) Retângulo com bordas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> – Um organograma é utilizado para representar:</p>
+            <div class="alternativas">
+                a) A sequência de etapas de um processo<br>
+                b) A estrutura hierárquica e funcional de uma organização<br>
+                c) O fluxo de informações entre setores<br>
+                d) O orçamento anual<br>
+                e) As rotinas administrativas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> – O organograma que combina estruturas funcionais e de projetos, com dupla subordinação, é o:</p>
+            <div class="alternativas">
+                a) Funcional<br>
+                b) Linear<br>
+                c) Matricial<br>
+                d) Circular<br>
+                e) Vertical
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> – As rotinas administrativas são importantes porque:</p>
+            <div class="alternativas">
+                a) Padronizam procedimentos e garantem qualidade<br>
+                b) Aumentam a burocracia<br>
+                c) Eliminam a necessidade de treinamento<br>
+                d) Centralizam todas as decisões<br>
+                e) Reduzem o número de funcionários
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> – A gestão por processos (BPM) organiza a organização em torno de:</p>
+            <div class="alternativas">
+                a) Departamentos isolados<br>
+                b) Processos de negócio<br>
+                c) Hierarquia rígida<br>
+                d) Tarefas individuais<br>
+                e) Orçamento anual
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> – No ciclo PDCA, a etapa em que se implementam as melhorias é:</p>
+            <div class="alternativas">
+                a) Plan (Planejar)<br>
+                b) Do (Executar)<br>
+                c) Check (Verificar)<br>
+                d) Act (Agir)<br>
+                e) Todas as alternativas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> – O mapeamento de processos consiste em:</p>
+            <div class="alternativas">
+                a) Desenhar o organograma da empresa<br>
+                b) Identificar todas as atividades, entradas, saídas e responsáveis de um processo<br>
+                c) Definir o orçamento anual<br>
+                d) Contratar novos funcionários<br>
+                e) Criar rotinas administrativas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> – O símbolo do fluxograma que representa a produção ou uso de um documento é:</p>
+            <div class="alternativas">
+                a) Retângulo simples<br>
+                b) Retângulo com bordas onduladas ou com uma linha na base<br>
+                c) Losango<br>
+                d) Círculo<br>
+                e) Oval
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> – O organograma que mostra a estrutura vertical da organização, com a presidência no topo, é chamado de:</p>
+            <div class="alternativas">
+                a) Matricial<br>
+                b) Linear<br>
+                c) Funcional<br>
+                d) Circular<br>
+                e) Horizontal
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> – Na documentação de uma rotina administrativa, o primeiro passo é:</p>
+            <div class="alternativas">
+                a) Definir os prazos<br>
+                b) Identificar os responsáveis<br>
+                c) Definir o objetivo<br>
+                d) Criar formulários<br>
+                e) Prever exceções
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> – Em um fluxograma, o símbolo que liga partes do fluxograma é o:</p>
+            <div class="alternativas">
+                a) Retângulo<br>
+                b) Losango<br>
+                c) Círculo<br>
+                d) Oval<br>
+                e) Retângulo com bordas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> – Um KPI (indicador de desempenho) em um processo de licitação poderia ser:</p>
+            <div class="alternativas">
+                a) O número de servidores envolvidos<br>
+                b) O tempo médio entre a publicação do edital e a assinatura do contrato<br>
+                c) A quantidade de papel utilizada<br>
+                d) O número de fornecedores cadastrados<br>
+                e) O tamanho do edital
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> – A gestão por processos está diretamente ligada à ideia de:</p>
+            <div class="alternativas">
+                a) Centralização de decisões<br>
+                b) Melhoria contínua (ciclo PDCA)<br>
+                c) Redução de custos a qualquer custo<br>
+                d) Aumento da hierarquia<br>
+                e) Desconsideração dos clientes
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> – As rotinas administrativas documentadas facilitam o treinamento porque:</p>
+            <div class="alternativas">
+                a) São atualizadas diariamente<br>
+                b) Contêm os passos padronizados a serem seguidos<br>
+                c) Substituem a necessidade de supervisão<br>
+                d) São aplicadas apenas a cargos de chefia<br>
+                e) Não precisam ser revisadas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> – O fluxograma vertical é caracterizado por:</p>
+            <div class="alternativas">
+                a) Etapas dispostas da esquerda para a direita<br>
+                b) Etapas dispostas de cima para baixo<br>
+                c) Uso exclusivo de retângulos<br>
+                d) Ausência de decisões<br>
+                e) Representação de múltiplos setores
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 19 a 35 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (19 a 35) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> – O organograma que enfatiza a horizontalidade e a comunicação é o:</p>
+            <div class="alternativas">
+                a) Funcional<br>
+                b) Linear<br>
+                c) Matricial<br>
+                d) Circular<br>
+                e) Vertical
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> – Um dos benefícios da documentação de rotinas é:</p>
+            <div class="alternativas">
+                a) Aumento da burocracia<br>
+                b) Redução de erros e retrabalho<br>
+                c) Eliminação de todos os procedimentos<br>
+                d) Centralização das decisões<br>
+                e) Desconsideração das exceções
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> – No contexto da gestão por processos, a 'cadeia de valor' refere-se:</p>
+            <div class="alternativas">
+                a) Ao fluxo financeiro<br>
+                b) À sequência de atividades que agregam valor ao cliente<br>
+                c) À hierarquia de cargos<br>
+                d) À lista de fornecedores<br>
+                e) Ao orçamento anual
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> – O símbolo do fluxograma que representa uma atividade ou tarefa é:</p>
+            <div class="alternativas">
+                a) Losango<br>
+                b) Retângulo<br>
+                c) Círculo<br>
+                d) Oval<br>
+                e) Triângulo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> – O O&M é uma área que atua principalmente na:</p>
+            <div class="alternativas">
+                a) Contratação de pessoal<br>
+                b) Racionalização de processos e estruturas<br>
+                c) Gestão financeira<br>
+                d) Elaboração de orçamentos<br>
+                e) Comunicação externa
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> – Em um fluxograma, o conector (círculo) é usado para:</p>
+            <div class="alternativas">
+                a) Iniciar o processo<br>
+                b) Tomar uma decisão<br>
+                c) Ligar partes do fluxograma<br>
+                d) Finalizar o processo<br>
+                e) Executar uma atividade
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> – A principal diferença entre o organograma funcional e o matricial é:</p>
+            <div class="alternativas">
+                a) O funcional tem dupla subordinação, enquanto o matricial tem subordinação única<br>
+                b) O matricial tem dupla subordinação, enquanto o funcional tem subordinação única<br>
+                c) O funcional é mais horizontal<br>
+                d) O matricial é mais vertical<br>
+                e) Não há diferença
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 26</b> – A etapa 'Check' do ciclo PDCA consiste em:</p>
+            <div class="alternativas">
+                a) Planejar as ações<br>
+                b) Implementar as melhorias<br>
+                c) Avaliar os resultados<br>
+                d) Padronizar as melhorias<br>
+                e) Identificar o problema
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 27</b> – No mapeamento de processos, a 'entrada' é:</p>
+            <div class="alternativas">
+                a) O resultado final do processo<br>
+                b) O que é necessário para iniciar o processo<br>
+                c) O responsável pela execução<br>
+                d) O fluxo de informações<br>
+                e) A decisão tomada
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 28</b> – Um fluxograma horizontal é ideal para:</p>
+            <div class="alternativas">
+                a) Processos simples e lineares<br>
+                b) Mostrar a interação entre diferentes setores<br>
+                c) Processos que não têm decisões<br>
+                d) Representar hierarquias<br>
+                e) Documentar rotinas internas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 29</b> – As rotinas administrativas devem ser revisadas periodicamente para:</p>
+            <div class="alternativas">
+                a) Manter a burocracia<br>
+                b) Garantir que estejam atualizadas e eficientes<br>
+                c) Reduzir o número de funcionários<br>
+                d) Aumentar a complexidade<br>
+                e) Centralizar as decisões
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 30</b> – A gestão por processos é uma abordagem que busca:</p>
+            <div class="alternativas">
+                a) Focar nas funções departamentais<br>
+                b) Organizar a organização em torno dos processos de negócio<br>
+                c) Eliminar todos os processos<br>
+                d) Centralizar a tomada de decisão<br>
+                e) Aumentar a hierarquia
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 31</b> – Em O&M, o termo 'layout' refere-se:</p>
+            <div class="alternativas">
+                a) Ao organograma da empresa<br>
+                b) À organização física dos espaços de trabalho<br>
+                c) Ao fluxo de informações<br>
+                d) Ao orçamento anual<br>
+                e) À rotina administrativa
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 32</b> – O símbolo do fluxograma que representa um documento é:</p>
+            <div class="alternativas">
+                a) Retângulo com bordas onduladas ou com uma linha na base<br>
+                b) Losango<br>
+                c) Círculo<br>
+                d) Oval<br>
+                e) Triângulo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 33</b> – O organograma linear (ou militar) caracteriza-se por:</p>
+            <div class="alternativas">
+                a) Hierarquia flexível<br>
+                b) Linhas claras de subordinação<br>
+                c) Dupla subordinação<br>
+                d) Estrutura horizontal<br>
+                e) Ausência de hierarquia
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 34</b> – No ciclo PDCA, a etapa 'Act' tem como objetivo:</p>
+            <div class="alternativas">
+                a) Planejar a melhoria<br>
+                b) Executar o plano<br>
+                c) Verificar os resultados<br>
+                d) Padronizar as melhorias ou ajustar o que não funcionou<br>
+                e) Identificar o problema
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 35</b> – Um exemplo de KPI em um processo de atendimento ao público é:</p>
+            <div class="alternativas">
+                a) O número de funcionários do setor<br>
+                b) O tempo médio de espera na fila<br>
+                c) A quantidade de papel utilizada<br>
+                d) O número de salas da repartição<br>
+                e) O orçamento do setor
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-A</b> | <b>2-B</b> | <b>3-B</b> | <b>4-D</b> | <b>5-B</b> | <b>6-C</b> | <b>7-A</b> | <b>8-B</b> | <b>9-B</b> | <b>10-B</b></p>
+            <p><b>11-B</b> | <b>12-C</b> | <b>13-C</b> | <b>14-C</b> | <b>15-B</b> | <b>16-B</b> | <b>17-B</b> | <b>18-B</b> | <b>19-D</b> | <b>20-B</b></p>
+            <p><b>21-B</b> | <b>22-B</b> | <b>23-B</b> | <b>24-C</b> | <b>25-B</b> | <b>26-C</b> | <b>27-B</b> | <b>28-B</b> | <b>29-B</b> | <b>30-B</b></p>
+            <p><b>31-B</b> | <b>32-A</b> | <b>33-B</b> | <b>34-D</b> | <b>35-B</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>💡 Observação:</b> Todas as respostas foram elaboradas com base na doutrina de Administração Geral e nas boas práticas de gestão.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

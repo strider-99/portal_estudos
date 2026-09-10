@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Administração de Materiais e Patrimônio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a4d2e;
+            text-align: center;
+            border-bottom: 3px solid #2a7d4f;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a4d2e;
+            background-color: #e6f4ed;
+            padding: 10px 15px;
+            border-left: 6px solid #2a7d4f;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #1e613b;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d4ece4;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .exemplo {
+            background-color: #eafaf1;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #2a7d4f;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5fbf8;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #2a7d4f;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a4d2e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #2a7d4f;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📦 ADMINISTRAÇÃO DE MATERIAIS E PATRIMÔNIO</h1>
+    <p style="text-align:center; font-size:18px; color:#1a4d2e;"><b>Gestão de materiais, compras, recebimento, armazenamento, estoques, inventário e controle patrimonial</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Administração de Materiais e Patrimônio</b> é uma área estratégica que garante o suprimento adequado de insumos e a correta gestão dos bens da organização. Ela envolve desde a aquisição e armazenamento de materiais até o controle de bens patrimoniais, assegurando eficiência, economia e transparência.</p>
+        <p>Este módulo aborda os principais processos: <b>gestão de materiais</b> (compras, recebimento, armazenamento e distribuição), <b>controle de estoque</b>, <b>inventário de bens</b> e <b>controle patrimonial</b>.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Dominar os conceitos e práticas da administração de materiais e patrimônio, com 35 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Gestão de Materiais – Compras e Recebimento – pág. 2</li>
+            <li><b>Módulo II:</b> Armazenamento e Distribuição – pág. 3</li>
+            <li><b>Módulo III:</b> Controle de Estoques – pág. 4</li>
+            <li><b>Módulo IV:</b> Gestão Patrimonial e Inventário – pág. 5</li>
+            <li><b>Módulo V:</b> Controle Patrimonial e Boas Práticas – pág. 6</li>
+            <li><b>Questões:</b> 35 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Compras e Recebimento                              -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – GESTÃO DE MATERIAIS: COMPRAS E RECEBIMENTO</h2>
+
+        <h3>2.1. Processo de Compras</h3>
+        <ul>
+            <li><b>Identificação da necessidade:</b> demanda gerada por requisição interna ou reposição automática.</li>
+            <li><b>Pesquisa de fornecedores:</b> análise de preços, prazos e qualidade.</li>
+            <li><b>Negociação:</b> definição de condições de pagamento, entrega e frete.</li>
+            <li><b>Emissão do pedido:</b> formalização da compra.</li>
+            <li><b>Acompanhamento:</b> follow-up para garantir a entrega no prazo.</li>
+            <li><b>Recebimento e conferência:</b> verificação quantitativa e qualitativa.</li>
+            <li><b>Pagamento:</b> liquidação financeira.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> O setor de TI de uma prefeitura solicita a compra de 50 computadores. O setor de compras pesquisa fornecedores, negocia preços e prazos, emite o pedido, acompanha a entrega, recebe e confere os equipamentos (quantidade e funcionamento). Após a conferência, autoriza o pagamento.</p>
+        </div>
+
+        <h3>2.2. Recebimento e Conferência</h3>
+        <ul>
+            <li><b>Conferência quantitativa:</b> contagem, pesagem ou medição.</li>
+            <li><b>Conferência qualitativa:</b> inspeção de qualidade, especificações técnicas, validade.</li>
+            <li><b>Documentação:</b> nota fiscal, guias de remessa, certificados.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> A conferência qualitativa é tão importante quanto a quantitativa. Um material com defeito pode comprometer toda a operação.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Armazenamento e Distribuição                      -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – ARMAZENAMENTO E DISTRIBUIÇÃO</h2>
+
+        <h3>3.1. Armazenagem</h3>
+        <ul>
+            <li><b>Objetivos:</b> proteger os materiais contra danos, otimizar o espaço e facilitar o acesso.</li>
+            <li><b>Endereçamento:</b> localização fixa e codificada.</li>
+            <li><b>Empilhamento e acondicionamento:</b> respeitar limites de peso e empilhar de forma segura.</li>
+            <li><b>Conservação:</b> controle de temperatura, umidade e prazo de validade.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> O almoxarifado de uma secretaria de saúde recebe vacinas que precisam ser armazenadas entre 2°C e 8°C. São utilizadas câmaras frias, com monitoramento contínuo da temperatura para garantir a conservação.</p>
+        </div>
+
+        <h3>3.2. Distribuição</h3>
+        <ul>
+            <li><b>Separação:</b> retirada dos materiais do estoque conforme pedido.</li>
+            <li><b>Embalagem:</b> proteger o material durante o transporte.</li>
+            <li><b>Expedição:</b> envio para os setores demandantes.</li>
+            <li><b>Roteirização:</b> planejamento de rotas para otimizar entregas.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> A armazenagem adequada reduz perdas e garante a qualidade dos materiais até o momento da utilização.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Controle de Estoques                              -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – CONTROLE DE ESTOQUES</h2>
+
+        <h3>4.1. Conceitos Básicos</h3>
+        <ul>
+            <li><b>Estoque mínimo (segurança):</b> quantidade extra para imprevistos.</li>
+            <li><b>Estoque máximo:</b> limite superior para evitar excessos.</li>
+            <li><b>Ponto de pedido:</b> nível que aciona nova compra.</li>
+            <li><b>Giro de estoques:</b> frequência de renovação do estoque.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Em uma farmácia pública, o estoque mínimo de um medicamento é de 100 unidades. O consumo médio é de 20 unidades por dia, e o tempo de reposição é de 5 dias. O ponto de pedido é: (20 × 5) + 100 = 200 unidades. Quando o estoque chega a 200 unidades, uma nova compra é acionada.</p>
+        </div>
+
+        <h3>4.2. Métodos de Controle</h3>
+        <ul>
+            <li><b>Curva ABC:</b> classifica os itens por valor financeiro ou importância operacional (A = alto valor, C = baixo valor).</li>
+            <li><b>PEPS (Primeiro que Entra, Primeiro que Sai):</b> usado para materiais com prazo de validade.</li>
+            <li><b>Lote Econômico de Compra (LEC):</b> quantidade que minimiza custos de pedido e armazenagem.</li>
+            <li><b>Inventário periódico:</b> contagem física em intervalos regulares.</li>
+            <li><b>Inventário rotativo:</b> contagem contínua de itens específicos.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> A Curva ABC é uma das ferramentas mais cobradas em concursos. Itens da classe A merecem controle mais rigoroso.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Gestão Patrimonial e Inventário                   -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – GESTÃO PATRIMONIAL E INVENTÁRIO</h2>
+
+        <h3>5.1. O que é Patrimônio?</h3>
+        <p>Patrimônio é o conjunto de bens, direitos e obrigações de uma organização. Na administração pública, os bens patrimoniais são aqueles utilizados para a prestação de serviços públicos.</p>
+
+        <h3>5.2. Tombamento</h3>
+        <ul>
+            <li><b>Conceito:</b> ato de identificar e cadastrar um bem, atribuindo-lhe um número de patrimônio.</li>
+            <li><b>Finalidade:</b> garantir a rastreabilidade e o controle do bem.</li>
+            <li><b>Responsabilidade:</b> o servidor que recebe o bem assina o termo de responsabilidade.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Uma secretaria de educação adquire 100 computadores. Cada equipamento recebe uma plaqueta com um número de patrimônio (ex: 0001 a 0100). O servidor que recebe o computador assina um termo de responsabilidade, comprometendo-se a zelar pela conservação do bem.</p>
+        </div>
+
+        <h3>5.3. Inventário de Bens</h3>
+        <ul>
+            <li><b>Inventário geral:</b> levantamento de todos os bens, realizado anualmente.</li>
+            <li><b>Inventário parcial:</b> levantamento de um grupo específico de bens.</li>
+            <li><b>Inventário rotativo:</b> contagem contínua ao longo do ano.</li>
+            <li><b>Objetivo:</b> verificar a existência física dos bens, sua localização e estado de conservação.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica:</b> O inventário é uma ferramenta essencial para a transparência e o controle dos bens públicos.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Controle Patrimonial e Boas Práticas              -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – CONTROLE PATRIMONIAL E BOAS PRÁTICAS</h2>
+
+        <h3>6.1. Controle Patrimonial</h3>
+        <ul>
+            <li><b>Registro:</b> manter cadastro atualizado de todos os bens.</li>
+            <li><b>Manutenção:</b> conservação preventiva e corretiva.</li>
+            <li><b>Baixa e Alienação:</b> retirada do bem do patrimônio (venda, doação, descarte).</li>
+            <li><b>Depreciação:</b> perda de valor do bem ao longo do tempo.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo prático:</b> Um veículo oficial da prefeitura sofre um acidente e é considerado irrecuperável. O setor patrimonial dá baixa no bem, registrando a alienação (venda como sucata) e atualizando o cadastro patrimonial.</p>
+        </div>
+
+        <h3>6.2. Boas Práticas</h3>
+        <ul>
+            <li>Realizar inventários periódicos.</li>
+            <li>Manter o cadastro patrimonial atualizado.</li>
+            <li>Treinar servidores sobre a importância da conservação dos bens.</li>
+            <li>Utilizar sistemas informatizados para o controle.</li>
+            <li>Promover a transparência e a prestação de contas.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Dica Final:</b> A gestão patrimonial eficiente evita perdas, reduz custos e garante a continuidade dos serviços públicos.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 18                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 18)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> – O processo de compras inicia-se com:</p>
+            <div class="alternativas">
+                a) Emissão do pedido<br>
+                b) Pesquisa de fornecedores<br>
+                c) Identificação da necessidade<br>
+                d) Recebimento do material<br>
+                e) Pagamento ao fornecedor
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> – A conferência que verifica a qualidade e as especificações técnicas do material recebido é a:</p>
+            <div class="alternativas">
+                a) Quantitativa<br>
+                b) Qualitativa<br>
+                c) Documental<br>
+                d) Fiscal<br>
+                e) Contábil
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> – O nível de estoque que aciona uma nova compra é chamado de:</p>
+            <div class="alternativas">
+                a) Estoque máximo<br>
+                b) Estoque mínimo<br>
+                c) Ponto de pedido<br>
+                d) Lote econômico<br>
+                e) Giro de estoque
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> – Na Curva ABC, os itens da classe A são caracterizados por:</p>
+            <div class="alternativas">
+                a) Baixo valor e alta quantidade<br>
+                b) Alto valor e baixa quantidade<br>
+                c) Médio valor e média quantidade<br>
+                d) Baixo valor e baixa quantidade<br>
+                e) Alto valor e alta quantidade
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> – O método de controle de estoques que prioriza a utilização dos materiais mais antigos é o:</p>
+            <div class="alternativas">
+                a) UEPS<br>
+                b) PEPS<br>
+                c) Curva ABC<br>
+                d) Lote econômico<br>
+                e) Just-in-time
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> – O ato de identificar e cadastrar um bem, atribuindo-lhe um número de patrimônio, é chamado de:</p>
+            <div class="alternativas">
+                a) Inventário<br>
+                b) Tombamento<br>
+                c) Depreciação<br>
+                d) Alienação<br>
+                e) Manutenção
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> – O inventário geral de bens deve ser realizado:</p>
+            <div class="alternativas">
+                a) Mensalmente<br>
+                b) Trimestralmente<br>
+                c) Anualmente<br>
+                d) A cada 5 anos<br>
+                e) Apenas quando solicitado
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> – A perda de valor do bem ao longo do tempo, por uso ou obsolescência, é chamada de:</p>
+            <div class="alternativas">
+                a) Depreciação<br>
+                b) Alienação<br>
+                c) Tombamento<br>
+                d) Manutenção<br>
+                e) Inventário
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> – O setor de compras, ao receber materiais, deve realizar a conferência:</p>
+            <div class="alternativas">
+                a) Apenas quantitativa<br>
+                b) Apenas qualitativa<br>
+                c) Quantitativa e qualitativa<br>
+                d) Apenas documental<br>
+                e) Apenas fiscal
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> – O lote econômico de compra (LEC) busca equilibrar:</p>
+            <div class="alternativas">
+                a) Custos de pedido e custos de armazenagem<br>
+                b) Custos fixos e custos variáveis<br>
+                c) Preço de compra e preço de venda<br>
+                d) Quantidade em estoque e número de fornecedores<br>
+                e) Prazo de entrega e qualidade do material
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> – O indicador que mede a frequência de renovação dos estoques é o:</p>
+            <div class="alternativas">
+                a) Ponto de pedido<br>
+                b) Estoque mínimo<br>
+                c) Giro de estoques<br>
+                d) Lote econômico<br>
+                e) Curva ABC
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> – A retirada de um bem do patrimônio da organização (venda, doação, descarte) é chamada de:</p>
+            <div class="alternativas">
+                a) Tombamento<br>
+                b) Inventário<br>
+                c) Alienação<br>
+                d) Depreciação<br>
+                e) Manutenção
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> – O ponto de pedido é calculado com base em:</p>
+            <div class="alternativas">
+                a) Estoque máximo + Estoque mínimo<br>
+                b) (Consumo médio × Tempo de reposição) + Estoque de segurança<br>
+                c) Vendas totais / Número de fornecedores<br>
+                d) Custos fixos + Custos variáveis<br>
+                e) Receita total – Despesas totais
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> – O termo de responsabilidade é um documento que:</p>
+            <div class="alternativas">
+                a) Autoriza a compra de materiais<br>
+                b) Formaliza a guarda de um bem sob responsabilidade de um servidor<br>
+                c) Registra a entrada de materiais no almoxarifado<br>
+                d) Solicita a manutenção de um bem<br>
+                e) Autoriza a alienação de um bem
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> – A armazenagem adequada tem como objetivo, EXCETO:</p>
+            <div class="alternativas">
+                a) Proteger os materiais contra danos<br>
+                b) Otimizar o espaço físico<br>
+                c) Facilitar o acesso e a movimentação<br>
+                d) Aumentar os custos operacionais<br>
+                e) Preservar a qualidade dos materiais
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> – O inventário rotativo é caracterizado por:</p>
+            <div class="alternativas">
+                a) Contagem de todos os bens em uma única data<br>
+                b) Contagem contínua de itens específicos ao longo do ano<br>
+                c) Contagem apenas de bens de alto valor<br>
+                d) Contagem apenas de bens de baixo valor<br>
+                e) Contagem apenas de bens móveis
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> – Na Curva ABC, os itens da classe C exigem:</p>
+            <div class="alternativas">
+                a) Controle rigoroso e estoques mínimos<br>
+                b) Controle intermediário<br>
+                c) Controle simplificado e estoques maiores<br>
+                d) Controle apenas de qualidade<br>
+                e) Controle apenas de preço
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> – A conferência qualitativa no recebimento de materiais verifica, entre outros aspectos:</p>
+            <div class="alternativas">
+                a) A quantidade de itens entregues<br>
+                b) As especificações técnicas, qualidade e validade<br>
+                c) O valor total da nota fiscal<br>
+                d) O prazo de entrega<br>
+                e) O nome do fornecedor
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 19 a 35 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (19 a 35) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> – A alienação de um bem patrimonial consiste em:</p>
+            <div class="alternativas">
+                a) Cadastrar o bem no sistema<br>
+                b) Realizar o inventário do bem<br>
+                c) Retirar o bem do ativo da organização (venda, doação, descarte)<br>
+                d) Fazer a manutenção do bem<br>
+                e) Calcular a depreciação do bem
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> – O estoque mínimo (de segurança) tem a função de:</p>
+            <div class="alternativas">
+                a) Aumentar o lucro da empresa<br>
+                b) Cobrir imprevistos como atrasos de fornecedores ou aumento de consumo<br>
+                c) Substituir o estoque máximo<br>
+                d) Reduzir a necessidade de compras<br>
+                e) Aumentar o giro de estoques
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> – O layout do almoxarifado deve colocar os itens de maior rotatividade:</p>
+            <div class="alternativas">
+                a) Próximos à saída<br>
+                b) No fundo do almoxarifado<br>
+                c) Em prateleiras altas<br>
+                d) Em locais de difícil acesso<br>
+                e) Independentemente da localização
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> – A manutenção preventiva de equipamentos tem como objetivo:</p>
+            <div class="alternativas">
+                a) Apenas reparar danos<br>
+                b) Evitar acidentes e prolongar a vida útil dos bens<br>
+                c) Aumentar a depreciação<br>
+                d) Reduzir o valor do bem<br>
+                e) Realizar o tombamento
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> – O giro de estoques é calculado pela fórmula:</p>
+            <div class="alternativas">
+                a) Estoque Médio / Consumo Total<br>
+                b) Consumo Total / Estoque Médio<br>
+                c) Ponto de Pedido / Estoque Máximo<br>
+                d) LEC / Consumo Médio<br>
+                e) Estoque de Segurança / Giro
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> – O processo de compras no setor público é regido pela Lei:</p>
+            <div class="alternativas">
+                a) 8.080/90<br>
+                b) 8.142/90<br>
+                c) 14.133/2021 (Nova Lei de Licitações)<br>
+                d) 10.741/2003<br>
+                e) 13.146/2015
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> – O controle de validade e as condições de temperatura e umidade são práticas relacionadas à função de:</p>
+            <div class="alternativas">
+                a) Compras<br>
+                b) Requisição<br>
+                c) Conservação<br>
+                d) Reposição<br>
+                e) Distribuição
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 26</b> – O follow-up no processo de compras refere-se ao:</p>
+            <div class="alternativas">
+                a) Acompanhamento do pedido junto ao fornecedor<br>
+                b) Pagamento ao fornecedor<br>
+                c) Emissão da nota fiscal<br>
+                d) Identificação da necessidade<br>
+                e) Armazenamento do material
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 27</b> – O inventário geral é realizado, normalmente, com que periodicidade?</p>
+            <div class="alternativas">
+                a) Mensal<br>
+                b) Trimestral<br>
+                c) Semestral<br>
+                d) Anual<br>
+                e) A cada 5 anos
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 28</b> – O que é o endereçamento no contexto da armazenagem?</p>
+            <div class="alternativas">
+                a) A localização fixa e codificada de cada material no almoxarifado<br>
+                b) O nome do fornecedor<br>
+                c) O número do pedido de compra<br>
+                d) A data de entrada do material<br>
+                e) A quantidade em estoque
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 29</b> – O que caracteriza um bem imóvel?</p>
+            <div class="alternativas">
+                a) Pode ser transportado sem alteração de sua estrutura<br>
+                b) Está ligado ao solo (terrenos, prédios)<br>
+                c) É de fácil movimentação<br>
+                d) Tem vida útil curta<br>
+                e) Não sofre depreciação
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 30</b> – A classificação ABC é útil para:</p>
+            <div class="alternativas">
+                a) Aumentar a complexidade do controle<br>
+                b) Priorizar os itens mais importantes para controle e gestão<br>
+                c) Eliminar itens do estoque<br>
+                d) Reduzir o número de fornecedores<br>
+                e) Aumentar o custo de armazenagem
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 31</b> – O que é o Lote Econômico de Compra (LEC)?</p>
+            <div class="alternativas">
+                a) A quantidade máxima que pode ser comprada<br>
+                b) A quantidade que minimiza os custos totais de compra e armazenagem<br>
+                c) A quantidade mínima para reposição<br>
+                d) O valor total do pedido<br>
+                e) O número de fornecedores
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 32</b> – O que é a obsolescência de um material?</p>
+            <div class="alternativas">
+                a) A perda de utilidade devido a avanços tecnológicos ou mudanças de processo<br>
+                b) O desgaste natural pelo uso<br>
+                c) A redução do preço de mercado<br>
+                d) O aumento da demanda<br>
+                e) A falta de fornecedores
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 33</b> – O controle patrimonial envolve, EXCETO:</p>
+            <div class="alternativas">
+                a) Registro e cadastro de bens<br>
+                b) Manutenção e conservação<br>
+                c) Alienação e baixa<br>
+                d) Recrutamento de pessoal<br>
+                e) Depreciação
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 34</b> – A roteirização na distribuição de materiais tem como objetivo:</p>
+            <div class="alternativas">
+                a) Aumentar o número de entregas<br>
+                b) Otimizar as rotas para reduzir tempo e custos<br>
+                c) Reduzir o número de veículos<br>
+                d) Aumentar o estoque<br>
+                e) Diminuir o número de funcionários
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 35</b> – O que é o PEPS no controle de estoques?</p>
+            <div class="alternativas">
+                a) Último que Entra, Primeiro que Sai<br>
+                b) Primeiro que Entra, Primeiro que Sai<br>
+                c) Método de classificação por valor<br>
+                d) Método de cálculo de lote econômico<br>
+                e) Método de reposição automática
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-C</b> | <b>2-B</b> | <b>3-C</b> | <b>4-B</b> | <b>5-B</b> | <b>6-B</b> | <b>7-C</b> | <b>8-A</b> | <b>9-C</b> | <b>10-A</b></p>
+            <p><b>11-C</b> | <b>12-C</b> | <b>13-B</b> | <b>14-B</b> | <b>15-D</b> | <b>16-B</b> | <b>17-C</b> | <b>18-B</b> | <b>19-C</b> | <b>20-B</b></p>
+            <p><b>21-A</b> | <b>22-B</b> | <b>23-B</b> | <b>24-C</b> | <b>25-C</b> | <b>26-A</b> | <b>27-D</b> | <b>28-A</b> | <b>29-B</b> | <b>30-B</b></p>
+            <p><b>31-B</b> | <b>32-A</b> | <b>33-D</b> | <b>34-B</b> | <b>35-B</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>💡 Observação:</b> Todas as respostas foram elaboradas com base na doutrina de Administração de Materiais e Patrimônio.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

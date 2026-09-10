@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - SUS: Constituição Federal (Arts. 196 a 200)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f7f0;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a3c6e;
+            text-align: center;
+            border-bottom: 3px solid #1a3c6e;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a3c6e;
+            background-color: #e6f0fa;
+            padding: 10px 15px;
+            border-left: 6px solid #1a3c6e;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #0d3b66;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 10px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d9e3f0;
+            font-weight: bold;
+        }
+        .dica {
+            background-color: #fef3e2;
+            border-left: 6px solid #e67e22;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b {
+            color: #a04000;
+        }
+        .atencao {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .atencao b {
+            color: #922b21;
+        }
+        .exemplo {
+            background-color: #eafaf1;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #1a3c6e;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5fbf8;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #1a3c6e;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p {
+            margin-bottom: 6px;
+        }
+        .alternativas {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a3c6e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #2a5a9e;
+            color: white;
+        }
+        .nav-btn:active {
+            transform: scale(0.97);
+        }
+        .nav-btn:disabled {
+            background-color: #adb5bd;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .nav-btn.secondary {
+            background-color: #6c757d;
+        }
+        .nav-btn.secondary:hover {
+            background-color: #5a6268;
+            color: white;
+        }
+        .nav-btn.menu-btn {
+            background-color: #28a745;
+            min-width: 100px;
+        }
+        .nav-btn.menu-btn:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #868e96;
+        }
+        hr {
+            margin: 30px 0 15px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📜 CONSTITUIÇÃO FEDERAL E O SUS</h1>
+    <p style="text-align:center; font-size:18px; color:#1a3c6e;"><b>Artigos 196, 197, 198, 199 e 200 – Direito à Saúde e Organização do SUS</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>A <b>Constituição Federal de 1988</b> representou um marco histórico para a saúde pública no Brasil. Pela primeira vez, a saúde foi elevada à condição de <b>direito social fundamental</b>, com dever do Estado de garanti-la por meio de políticas públicas.</p>
+        <p>Os arts. 196 a 200 da CF/88 estabelecem as bases do <b>Sistema Único de Saúde (SUS)</b>, definindo seus princípios, diretrizes, organização e competências. Este módulo analisa detalhadamente cada um desses dispositivos, fundamentais para qualquer concurso.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Compreender o conteúdo e a aplicação dos arts. 196 a 200 da Constituição Federal, dominando os princípios do direito à saúde, a organização do SUS, a participação da iniciativa privada e as competências do sistema, com 25 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Art. 196 – Direito à Saúde – pág. 2</li>
+            <li><b>Módulo II:</b> Art. 197 – Relevância Pública – pág. 3</li>
+            <li><b>Módulo III:</b> Art. 198 – Organização do SUS (Diretrizes) – pág. 4</li>
+            <li><b>Módulo IV:</b> Art. 199 – Iniciativa Privada – pág. 5</li>
+            <li><b>Módulo V:</b> Art. 200 – Competências do SUS – pág. 6</li>
+            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Art. 196 – Direito à Saúde                         -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – ART. 196: DIREITO À SAÚDE</h2>
+        <div class="exemplo">
+            <p><b>Art. 196.</b> A saúde é <b>direito de todos</b> e <b>dever do Estado</b>, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao <b>acesso universal e igualitário</b> às ações e serviços para sua promoção, proteção e recuperação.</p>
+        </div>
+
+        <h3>2.1. Desdobramentos do Art. 196</h3>
+        <ul>
+            <li><b>Direito de todos:</b> Universalidade – a saúde é um direito de toda a população, sem distinção de qualquer natureza.</li>
+            <li><b>Dever do Estado:</b> O Poder Público é o principal responsável por garantir a saúde, por meio de políticas públicas e prestação de serviços.</li>
+            <li><b>Políticas sociais e econômicas:</b> A saúde não se restringe ao atendimento médico; envolve condições de vida, trabalho, saneamento, alimentação, educação e meio ambiente.</li>
+            <li><b>Acesso universal e igualitário:</b> Todos devem ter acesso às ações e serviços de saúde, em todos os níveis de complexidade, sem discriminação.</li>
+        </ul>
+
+        <h3>2.2. Fundamentos do Art. 196</h3>
+        <ul>
+            <li><b>Universalidade:</b> acesso amplo e irrestrito.</li>
+            <li><b>Igualdade:</b> tratamento equitativo, sem privilégios.</li>
+            <li><b>Integralidade (implícita):</b> as ações devem abranger promoção, proteção e recuperação da saúde.</li>
+        </ul>
+        <div class="atencao">
+            <b>⚡ Atenção:</b> O Art. 196 é a base jurídica de todo o Sistema Único de Saúde. Ele fundamenta a Lei 8.080/90 e todas as políticas de saúde no Brasil.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Art. 197 – Relevância Pública                      -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – ART. 197: RELEVÂNCIA PÚBLICA</h2>
+        <div class="exemplo">
+            <p><b>Art. 197.</b> São de <b>relevância pública</b> as ações e serviços de saúde, cabendo ao Poder Público dispor, nos termos da lei, sobre sua regulamentação, fiscalização e controle, devendo sua execução ser feita diretamente ou através de terceiros e, também, por pessoa física ou jurídica de direito privado.</p>
+        </div>
+
+        <h3>3.1. Desdobramentos do Art. 197</h3>
+        <ul>
+            <li><b>Relevância pública:</b> As ações e serviços de saúde são considerados de interesse coletivo, transcendendo o interesse particular.</li>
+            <li><b>Regulamentação, fiscalização e controle:</b> O Poder Público tem o dever de normatizar e supervisionar todas as ações de saúde, sejam elas públicas ou privadas.</li>
+            <li><b>Execução direta ou por terceiros:</b> O Estado pode prestar serviços de saúde diretamente (por meio de hospitais públicos, unidades básicas) ou por meio de entidades privadas (filantrópicas, contratadas, conveniadas).</li>
+            <li><b>Pessoa física ou jurídica de direito privado:</b> A prestação de serviços de saúde pode ser feita por profissionais liberais, clínicas, hospitais privados, etc.</li>
+        </ul>
+
+        <h3>3.2. Implicações Práticas</h3>
+        <ul>
+            <li>O SUS é um sistema <b>misto</b> (público e privado), pois a iniciativa privada pode atuar na assistência à saúde.</li>
+            <li>O Estado deve garantir a <b>qualidade</b> e a <b>segurança</b> dos serviços prestados por terceiros.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Art. 198 – Organização do SUS                      -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – ART. 198: ORGANIZAÇÃO DO SUS</h2>
+        <div class="exemplo">
+            <p><b>Art. 198.</b> As ações e serviços públicos de saúde integram uma <b>rede regionalizada e hierarquizada</b> e constituem um <b>sistema único</b>, organizado de acordo com as seguintes diretrizes:</p>
+            <ul>
+                <li><b>I – Descentralização</b>, com direção única em cada esfera de governo;</li>
+                <li><b>II – Atendimento integral</b>, com prioridade para as atividades preventivas, sem prejuízo dos serviços assistenciais;</li>
+                <li><b>III – Participação da comunidade</b>.</li>
+            </ul>
+        </div>
+
+        <h3>4.1. Diretrizes do SUS (Art. 198)</h3>
+        <ul>
+            <li><b>Regionalização e hierarquização:</b> Os serviços de saúde são organizados em níveis de complexidade crescente (atenção primária, secundária e terciária), com referência e contrarreferência entre eles.</li>
+            <li><b>Sistema único:</b> Integração entre as esferas federal, estadual e municipal, com diretrizes comuns e articulação entre si.</li>
+            <li><b>Descentralização:</b> As ações de saúde são executadas prioritariamente pelos municípios, com direção única em cada esfera de governo (Ministério da Saúde, Secretarias Estaduais e Secretarias Municipais).</li>
+            <li><b>Atendimento integral:</b> Combinação de ações preventivas e curativas, garantindo a continuidade do cuidado.</li>
+            <li><b>Participação da comunidade:</b> Controle social por meio dos Conselhos de Saúde (paritários) e das Conferências de Saúde.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Art. 199 – Iniciativa Privada                      -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – ART. 199: INICIATIVA PRIVADA</h2>
+        <div class="exemplo">
+            <p><b>Art. 199.</b> A <b>assistência à saúde é livre à iniciativa privada</b>.</p>
+        </div>
+
+        <h3>5.1. Parágrafos do Art. 199</h3>
+        <ul>
+            <li><b>§ 1º:</b> As instituições privadas poderão participar de forma <b>complementar</b> do sistema único de saúde, segundo diretrizes deste, mediante <b>contrato de direito público</b> ou <b>convênio</b>, tendo preferência as entidades filantrópicas e as sem fins lucrativos.</li>
+            <li><b>§ 2º:</b> É <b>vedada</b> a destinação de <b>recursos públicos</b> para auxílio ou subvenção às instituições privadas com fins lucrativos.</li>
+            <li><b>§ 3º:</b> As <b>instituições privadas</b> que participarem do SUS deverão obedecer aos seus <b>princípios e diretrizes</b>.</li>
+        </ul>
+
+        <h3>5.2. Implicações Práticas</h3>
+        <ul>
+            <li><b>Caráter complementar:</b> A iniciativa privada atua como suplemento ao SUS, não como substituta do dever do Estado.</li>
+            <li><b>Preferência às filantrópicas:</b> O Estado deve priorizar a contratação de entidades sem fins lucrativos (hospitais filantrópicos, santas casas).</li>
+            <li><b>Vedação de recursos públicos para entidades lucrativas:</b> Hospitais e clínicas com fins lucrativos não podem receber recursos públicos para sua manutenção (embora possam prestar serviços ao SUS mediante contrato, recebendo pelos serviços prestados, mas não por subvenção).</li>
+            <li><b>Observância dos princípios do SUS:</b> As entidades privadas que atuam no SUS devem seguir a universalidade, integralidade, equidade, etc.</li>
+        </ul>
+        <div class="atencao">
+            <b>⚡ Atenção:</b> O Art. 199 permite a atuação da iniciativa privada na saúde, mas sempre de forma complementar e subordinada às diretrizes do SUS.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Art. 200 – Competências do SUS                     -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – ART. 200: COMPETÊNCIAS DO SUS</h2>
+        <div class="exemplo">
+            <p><b>Art. 200.</b> Ao sistema único de saúde compete, além de outras atribuições, nos termos da lei:</p>
+        </div>
+
+        <h3>6.1. Lista de Competências (Incisos I a VIII)</h3>
+        <ul>
+            <li><b>I –</b> <b>Controlar e fiscalizar</b> procedimentos, produtos e substâncias de interesse para a saúde;</li>
+            <li><b>II –</b> <b>Executar</b> as ações de vigilância sanitária e epidemiológica;</li>
+            <li><b>III –</b> <b>Ordenar</b> a formação de recursos humanos na área de saúde;</li>
+            <li><b>IV –</b> <b>Participar</b> da formulação da política e da execução de ações de saneamento básico;</li>
+            <li><b>V –</b> <b>Incrementar</b>, em sua área de atuação, o desenvolvimento científico e tecnológico;</li>
+            <li><b>VI –</b> <b>Fiscalizar e inspecionar</b> alimentos, compreendido o controle de seu teor nutricional, bem como bebidas e águas para consumo humano;</li>
+            <li><b>VII –</b> <b>Controlar</b> a produção, a comercialização e a utilização de produtos, substâncias e equipamentos de interesse para a saúde;</li>
+            <li><b>VIII –</b> <b>Colaborar</b> na proteção do meio ambiente, nele compreendido o do trabalho.</li>
+        </ul>
+
+        <h3>6.2. Resumo das Competências</h3>
+        <ul>
+            <li><b>Vigilância:</b> sanitária, epidemiológica, ambiental e do trabalhador.</li>
+            <li><b>Controle:</b> de produtos, substâncias, alimentos e equipamentos.</li>
+            <li><b>Desenvolvimento:</b> de recursos humanos, ciência e tecnologia.</li>
+            <li><b>Participação:</b> em políticas de saneamento e proteção ambiental.</li>
+        </ul>
+        <div class="dica">
+            <b>💡 Dica:</b> O Art. 200 é muito cobrado em provas. Memorize os incisos que tratam de vigilância (II) e controle de alimentos (VI), que são perguntas frequentes.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 14)</h2>
+        <p><i>Responda com base no conteúdo estudado.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> (Art. 196) – O Art. 196 da Constituição Federal estabelece que a saúde é:</p>
+            <div class="alternativas">
+                a) Direito de todos e dever do Estado.<br>
+                b) Direito apenas dos cidadãos que contribuem para a previdência.<br>
+                c) Dever exclusivo da família e da sociedade.<br>
+                d) Direito condicionado à disponibilidade orçamentária.<br>
+                e) Um serviço essencial, mas não obrigatório.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> (Art. 196) – O Art. 196 garante o acesso universal e igualitário às ações e serviços de saúde, o que significa que:</p>
+            <div class="alternativas">
+                a) Apenas os brasileiros natos têm direito à saúde.<br>
+                b) Todos têm direito à saúde, sem discriminação.<br>
+                c) O acesso à saúde é restrito a quem paga impostos.<br>
+                d) O sistema de saúde é exclusivamente privado.<br>
+                e) Apenas os trabalhadores formais têm direito à saúde.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> (Art. 197) – O Art. 197 da CF/88 estabelece que as ações e serviços de saúde são de:</p>
+            <div class="alternativas">
+                a) Interesse privado.<br>
+                b) Relevância pública.<br>
+                c) Competência exclusiva da União.<br>
+                d) Dever da sociedade civil.<br>
+                e) Natureza comercial.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> (Art. 197) – Segundo o Art. 197, a execução das ações e serviços de saúde pode ser feita:</p>
+            <div class="alternativas">
+                a) Apenas pelo Poder Público.<br>
+                b) Apenas pela iniciativa privada.<br>
+                c) Diretamente pelo Estado ou por terceiros, inclusive pessoa física ou jurídica de direito privado.<br>
+                d) Apenas por hospitais filantrópicos.<br>
+                e) Exclusivamente por meio de convênios internacionais.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> (Art. 198) – O Art. 198 estabelece que as ações e serviços públicos de saúde integram uma rede:</p>
+            <div class="alternativas">
+                a) Centralizada e verticalizada.<br>
+                b) Regionalizada e hierarquizada.<br>
+                c) Descentralizada e horizontalizada.<br>
+                d) Municipalizada e estadualizada.<br>
+                e) Federalizada e privada.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> (Art. 198) – São diretrizes do SUS, segundo o Art. 198, EXCETO:</p>
+            <div class="alternativas">
+                a) Descentralização.<br>
+                b) Atendimento integral.<br>
+                c) Participação da comunidade.<br>
+                d) Centralização político-administrativa.<br>
+                e) Regionalização e hierarquização.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> (Art. 199) – O Art. 199 estabelece que a assistência à saúde é:</p>
+            <div class="alternativas">
+                a) Exclusiva do Poder Público.<br>
+                b) Livre à iniciativa privada.<br>
+                c) Vedada à iniciativa privada.<br>
+                d) Restrita a entidades filantrópicas.<br>
+                e) Proibida para empresas com fins lucrativos.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> (Art. 199) – Segundo o § 1º do Art. 199, as instituições privadas poderão participar do SUS de forma:</p>
+            <div class="alternativas">
+                a) Substitutiva.<br>
+                b) Complementar.<br>
+                c) Exclusiva.<br>
+                d) Prioritária.<br>
+                e) Obrigatória.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> (Art. 199) – O § 2º do Art. 199 veda a destinação de recursos públicos para auxílio ou subvenção a:</p>
+            <div class="alternativas">
+                a) Instituições filantrópicas.<br>
+                b) Instituições privadas com fins lucrativos.<br>
+                c) Hospitais universitários.<br>
+                d) Santas Casas de Misericórdia.<br>
+                e) Organizações não governamentais.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> (Art. 200) – De acordo com o Art. 200, compete ao SUS, entre outras atribuições:</p>
+            <div class="alternativas">
+                a) Administrar o sistema prisional.<br>
+                b) Executar ações de vigilância sanitária e epidemiológica.<br>
+                c) Regular o comércio exterior.<br>
+                d) Controlar a produção de armas.<br>
+                e) Gerir o sistema de previdência social.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> (Art. 200) – O Art. 200, inciso VI, atribui ao SUS a competência para fiscalizar e inspecionar:</p>
+            <div class="alternativas">
+                a) Medicamentos e vacinas.<br>
+                b) Alimentos, bebidas e águas para consumo humano.<br>
+                c) Equipamentos hospitalares.<br>
+                d) Produtos químicos.<br>
+                e) Materiais de construção.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> (Art. 198) – A descentralização do SUS, prevista no Art. 198, significa que:</p>
+            <div class="alternativas">
+                a) A União centraliza todas as decisões.<br>
+                b) As ações de saúde são executadas prioritariamente pelos municípios.<br>
+                c) Os estados têm competência exclusiva.<br>
+                d) A iniciativa privada assume a gestão.<br>
+                e) O Ministério da Saúde não tem atribuições.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> (Art. 200) – O inciso VIII do Art. 200 estabelece que o SUS deve colaborar na proteção do:</p>
+            <div class="alternativas">
+                a) Meio ambiente.<br>
+                b) Patrimônio histórico.<br>
+                c) Patrimônio cultural.<br>
+                d) Sistema financeiro.<br>
+                e) Mercado de trabalho.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> (V/F – Arts. 196 e 197) – Analise as afirmativas:</p>
+            <p>(   ) O Art. 196 estabelece que a saúde é direito de todos e dever do Estado.<br>
+            (   ) O Art. 197 considera as ações de saúde como de relevância pública.<br>
+            (   ) A execução das ações de saúde, segundo o Art. 197, só pode ser feita pelo Estado.<br>
+            (   ) O acesso universal e igualitário é garantido pelo Art. 196.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> (V/F – Arts. 198 e 199) – Analise as afirmativas:</p>
+            <p>(   ) O Art. 198 estabelece a descentralização como diretriz do SUS.<br>
+            (   ) O Art. 199 veda totalmente a participação da iniciativa privada na saúde.<br>
+            (   ) O atendimento integral, segundo o Art. 198, prioriza as atividades preventivas.<br>
+            (   ) A participação da comunidade é uma diretriz do SUS, segundo o Art. 198.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> (V/F – Art. 200) – Analise as afirmativas:</p>
+            <p>(   ) Compete ao SUS controlar e fiscalizar produtos e substâncias de interesse para a saúde.<br>
+            (   ) O SUS deve ordenar a formação de recursos humanos na área de saúde.<br>
+            (   ) O SUS não tem competência para atuar em saneamento básico.<br>
+            (   ) O SUS deve fiscalizar e inspecionar alimentos e águas para consumo humano.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> (Art. 199) – A participação complementar da iniciativa privada no SUS, segundo o Art. 199, deve ser feita mediante:</p>
+            <div class="alternativas">
+                a) Contrato de direito público ou convênio.<br>
+                b) Contrato de direito privado.<br>
+                c) Apenas por meio de doações.<br>
+                d) Por meio de parcerias internacionais.<br>
+                e) Apenas por meio de filantropia.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (Art. 198) – A diretriz da descentralização do SUS, prevista no Art. 198, implica que:</p>
+            <div class="alternativas">
+                a) O Ministério da Saúde executa todas as ações.<br>
+                b) Os municípios são os principais executores das ações de saúde.<br>
+                c) Os estados têm direção única sobre os municípios.<br>
+                d) A União não tem nenhuma atribuição.<br>
+                e) A iniciativa privada substitui o Estado.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> (Art. 196) – O Art. 196 menciona que a saúde é garantida mediante políticas sociais e econômicas que visem à redução do risco de doença. Isso significa que:</p>
+            <div class="alternativas">
+                a) A saúde depende apenas de ações médicas.<br>
+                b) Fatores como saneamento, alimentação e trabalho influenciam a saúde.<br>
+                c) O Estado não tem responsabilidade sobre os determinantes sociais da saúde.<br>
+                d) A saúde é uma questão exclusivamente biológica.<br>
+                e) As políticas de saúde são restritas ao atendimento hospitalar.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> (Art. 200) – O inciso VII do Art. 200 confere ao SUS a competência para controlar:</p>
+            <div class="alternativas">
+                a) A produção, a comercialização e a utilização de produtos, substâncias e equipamentos de interesse para a saúde.<br>
+                b) A importação de veículos.<br>
+                c) A produção de armas de fogo.<br>
+                d) O comércio de bens de consumo não duráveis.<br>
+                e) A exploração de recursos minerais.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> (V/F – Consolidação) – Analise as afirmativas:</p>
+            <p>(   ) O Art. 196 estabelece o direito à saúde como um direito social fundamental.<br>
+            (   ) O Art. 199 permite a atuação da iniciativa privada na saúde de forma complementar.<br>
+            (   ) O Art. 198 prevê a centralização como diretriz do SUS.<br>
+            (   ) O Art. 200 inclui a vigilância sanitária como competência do SUS.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (Art. 199) – Segundo o § 3º do Art. 199, as instituições privadas que participarem do SUS deverão obedecer aos seus:</p>
+            <div class="alternativas">
+                a) Princípios e diretrizes.<br>
+                b) Apenas às regras de faturamento.<br>
+                c) Apenas às regras de contratação.<br>
+                d) Apenas às regras de auditoria.<br>
+                e) Apenas às regras de licitação.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (Art. 198) – O atendimento integral, previsto no Art. 198, combina ações:</p>
+            <div class="alternativas">
+                a) Preventivas e curativas.<br>
+                b) Apenas curativas.<br>
+                c) Apenas preventivas.<br>
+                d) Apenas de reabilitação.<br>
+                e) Apenas de promoção.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (Art. 200) – O inciso III do Art. 200 estabelece que o SUS deve ordenar a formação de:</p>
+            <div class="alternativas">
+                a) Recursos humanos na área de saúde.<br>
+                b) Recursos financeiros.<br>
+                c) Equipamentos hospitalares.<br>
+                d) Medicamentos essenciais.<br>
+                e) Políticas de saneamento.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (V/F – Final) – Analise as afirmativas:</p>
+            <p>(   ) O Art. 196 estabelece que a saúde é dever do Estado e direito de todos.<br>
+            (   ) O Art. 198 prevê a participação da comunidade como diretriz do SUS.<br>
+            (   ) O Art. 199 veda a participação da iniciativa privada na saúde.<br>
+            (   ) O Art. 200 inclui a vigilância epidemiológica como competência do SUS.</p>
+            <p>Assinale a sequência correta:</p>
+            <div class="alternativas">
+                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-A</b> | <b>2-B</b> | <b>3-B</b> | <b>4-C</b> | <b>5-B</b> | <b>6-D</b> | <b>7-B</b> | <b>8-B</b> | <b>9-B</b> | <b>10-B</b></p>
+            <p><b>11-B</b> | <b>12-B</b> | <b>13-A</b> | <b>14-A</b> | <b>15-A</b> | <b>16-A</b> | <b>17-A</b> | <b>18-B</b> | <b>19-B</b> | <b>20-A</b></p>
+            <p><b>21-A</b> | <b>22-A</b> | <b>23-A</b> | <b>24-A</b> | <b>25-A</b></p>
+        </div>
+        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,V,F,V); Q15 (V,F,V,V); Q16 (V,V,F,V); Q21 (V,V,F,V); Q25 (V,V,F,V).</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>
