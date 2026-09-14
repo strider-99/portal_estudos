@@ -3,36 +3,30 @@
 # ============================================
 venv/
 env/
-.env
-.venv
+.venv/
 ENV/
+
+# ============================================
+# Variáveis de ambiente e configurações sensíveis
+# ============================================
+.env
+*.secret
+*.key
+config.py
 
 # ============================================
 # Python cache
 # ============================================
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.pycache
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
 
 # ============================================
-# Arquivos de banco de dados locais
+# Bancos de dados locais
 # ============================================
 *.db
 *.sqlite3
 *.sqlite
-
-# ============================================
-# Arquivos de configuração sensíveis
-# ============================================
-.env
-config.py
-*.secret
-*.key
 
 # ============================================
 # Logs e arquivos temporários
@@ -53,7 +47,7 @@ config.py
 Thumbs.db
 
 # ============================================
-# Arquivos de build e distribuição
+# Build e distribuição
 # ============================================
 build/
 dist/
@@ -72,7 +66,6 @@ htmlcov/
 # ============================================
 # Arquivos do Render
 # ============================================
-*.pid
 *.lock
 
 # ============================================
@@ -81,4 +74,4 @@ htmlcov/
 *.bak
 *.orig
 *.old
-*.rej.env
+*.rej
