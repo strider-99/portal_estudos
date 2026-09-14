@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Revisão — {{ materia.titulo }}{% endblock %}
+{% block content %}
+<h2>🔄 Revisão: {{ materia.titulo }}</h2>
+<p><a href="{{ url_for('main.dashboard') }}">← Voltar ao Dashboard</a></p>
+
+{% if questoes_erradas %}
+<p>Estas são as questões que você errou nesta matéria. Revise com atenção.</p>
+<div class="revisao-list">
+  {% for r in questoes_erradas %}
+  <div class="revisao-card">
+    <p class="revisao-enunciado">{{ loop.index }}. {{ r.enunciado[:500] }}{% if r.enunciado|length > 500 %}...{% endif %}</p>
+    {% if r.alternativas %}
+    <ul class="revisao-alternativas">
+      {% for alt in r.alternativas %}
+        <li{% if r.gabarito and loop.index0 == ' ABCDE'.find(r.gabarito) %} class="correto"{% endif %}>{{ 'ABCDE'[loop.index0] if loop.index0 < 5 else loop.index }}) {{ alt }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <p><strong>Sua resposta:</strong> {% if r.resposta %}{{ r.resposta }}{% else %}<em>não respondida</em>{% endif %}</p>
+    <p><strong>Gabarito:</strong> {{ r.gabarito }}{% if r.gabarito_texto %} — {{ r.gabarito_texto }}{% endif %}</p>
+    {% if r.nota_tentativa is not none %}
+    <p class="revisao-meta">Tentativa: nota {{ r.nota_tentativa }} em {{ r.tentativa_em.strftime('%d/%m/%Y') if r.tentativa_em else '-' }}</p>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<p>Nenhuma questão errada registrada para esta matéria.</p>
+{% endif %}
+
+<p style="margin-top:2rem;"><a class="btn-voltar" href="{{ url_for('main.materia', slug=materia.slug) }}">📖 Estudar esta matéria</a></p>
+{% endblock %}

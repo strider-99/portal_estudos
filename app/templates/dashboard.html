@@ -17,8 +17,9 @@
         <li>✅ <a href="{{ url_for('main.materia', slug=m.slug) }}">{{ m.titulo }}</a> <small>({{ m.area }})</small></li>
       {% endfor %}
       </ul>
+      <button id="btn-reset-progresso" class="btn-reset" style="margin-top:1rem;">🗑️ Resetar Progresso</button>
     {% else %}
-      <p>Nenhuma matéria concluída ainda. Clique em “Marcar como concluída” nas apostilas.</p>
+      <p>Nenhuma matéria concluída ainda. Clique em "Marcar como concluída" nas apostilas.</p>
     {% endif %}
   </div>
 </div>
@@ -53,4 +54,50 @@
   <p>Nenhuma tentativa registrada. Responda as questões na última página de uma matéria.</p>
 {% endif %}
 
+<h3>🔄 Questões para Revisar</h3>
+{% if revisao_links %}
+<p>Clique na matéria para ver as questões que você errou.</p>
+<div class="revisao-links">
+  {% for item in revisao_links %}
+  <a href="{{ url_for('main.revisao_materia', slug=item.slug) }}" class="revisao-link-card">
+    <span class="revisao-link-titulo">{{ item.titulo }}</span>
+    <span class="revisao-link-badge">{{ item.qtd_erros }} erro{{ 's' if item.qtd_erros != 1 }}</span>
+  </a>
+  {% endfor %}
+</div>
+{% else %}
+<p>Nenhuma questão errada registrada. Continue estudando!</p>
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var btnReset = document.getElementById('btn-reset-progresso');
+  if (btnReset) {
+    btnReset.addEventListener('click', async function() {
+      if (!confirm('Tem certeza que deseja resetar TODO o seu progresso? Esta ação não pode ser desfeita.')) return;
+      btnReset.disabled = true;
+      btnReset.textContent = 'Resetando...';
+      try {
+        var resp = await fetch('/api/progresso/reset', { method: 'POST' });
+        var data = await resp.json();
+        if (resp.ok && data.ok) {
+          alert('Progresso resetado! (' + data.progresso_removido + ' registros de progresso, ' + data.historico_removido + ' de histórico)');
+          location.reload();
+        } else {
+          alert(data.erro || 'Erro ao resetar progresso');
+          btnReset.disabled = false;
+          btnReset.textContent = '\uD83D\uDDD1\uFE0F Resetar Progresso';
+        }
+      } catch (e) {
+        alert('Erro de rede ao resetar progresso');
+        btnReset.disabled = false;
+        btnReset.textContent = '\uD83D\uDDD1\uFE0F Resetar Progresso';
+      }
+    });
+  }
+});
+</script>
 {% endblock %}

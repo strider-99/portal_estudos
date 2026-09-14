@@ -3,763 +3,562 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apostila - Português Módulo 6: Pontuação, Figuras, Sinônimos e Denotação</title>
+    <title>Apostila - Português: Pontuação, Semântica e Interpretação</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #fcf9f0;
-            display: flex;
-            justify-content: center;
-            padding: 30px 10px;
-        }
-        .book-container {
-            max-width: 1000px;
-            width: 100%;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-            padding: 30px 35px;
-            position: relative;
-        }
-        h1 {
-            color: #922b21;
-            text-align: center;
-            border-bottom: 3px solid #c0392b;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-            font-size: 28px;
-        }
-        h2 {
-            color: #922b21;
-            background-color: #fdedec;
-            padding: 10px 15px;
-            border-left: 6px solid #c0392b;
-            margin: 25px 0 15px 0;
-            font-size: 22px;
-        }
-        h3 {
-            color: #6c2e2b;
-            margin: 18px 0 10px 0;
-            font-size: 19px;
-        }
-        p {
-            line-height: 1.7;
-            margin-bottom: 12px;
-            text-align: justify;
-        }
-        ul, ol {
-            margin: 10px 0 15px 30px;
-        }
-        li {
-            margin-bottom: 6px;
-            line-height: 1.6;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-            font-size: 15px;
-        }
-        th, td {
-            border: 1px solid #333;
-            padding: 10px 12px;
-            text-align: left;
-            vertical-align: top;
-        }
-        th {
-            background-color: #fadbd8;
-            font-weight: bold;
-        }
-        .dica {
-            background-color: #fef3e2;
-            border-left: 6px solid #e67e22;
-            padding: 14px 18px;
-            margin: 15px 0;
-            border-radius: 4px;
-        }
-        .dica b {
-            color: #a04000;
-        }
-        .exemplo {
-            background-color: #fef9e7;
-            padding: 12px 18px;
-            border-radius: 6px;
-            margin: 10px 0;
-            border: 1px dashed #c0392b;
-        }
-        .atencao {
-            background-color: #fce4e4;
-            border-left: 6px solid #c0392b;
-            padding: 14px 18px;
-            margin: 15px 0;
-            border-radius: 4px;
-        }
-        .atencao b {
-            color: #922b21;
-        }
-        .gabarito-box {
-            background-color: #e8f5e9;
-            border: 2px solid #2e7d32;
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin: 10px 0;
-        }
-        .questao-item {
-            background-color: #fdfcf8;
-            padding: 15px 18px;
-            margin: 12px 0;
-            border-radius: 6px;
-            border-left: 4px solid #c0392b;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-        .questao-item p {
-            margin-bottom: 6px;
-        }
-        .alternativas {
-            margin-left: 20px;
-            font-size: 15px;
-        }
-        .final-message {
-            background: #eafaf1;
-            border: 2px solid #2ecc71;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            margin: 15px 0;
-            font-size: 18px;
-        }
-
-        .page {
-            display: none;
-            animation: fadeIn 0.3s ease;
-        }
-        .page.active {
-            display: block;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0.5; }
-            to { opacity: 1; }
-        }
-
-        .nav-area {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 35px;
-            padding-top: 20px;
-            border-top: 2px solid #dee2e6;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .page-indicator {
-            font-size: 15px;
-            font-weight: bold;
-            color: #495057;
-            background: #f1f3f5;
-            padding: 6px 18px;
-            border-radius: 30px;
-        }
-        .nav-btn {
-            background-color: #922b21;
-            color: white;
-            border: none;
-            padding: 10px 28px;
-            border-radius: 30px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.2s, transform 0.1s;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-            min-width: 120px;
-        }
-        .nav-btn:hover {
-            background-color: #c0392b;
-            color: white;
-        }
-        .nav-btn:active {
-            transform: scale(0.97);
-        }
-        .nav-btn:disabled {
-            background-color: #adb5bd;
-            cursor: not-allowed;
-            box-shadow: none;
-        }
-        .nav-btn.secondary {
-            background-color: #6c757d;
-        }
-        .nav-btn.secondary:hover {
-            background-color: #5a6268;
-            color: white;
-        }
-        .nav-btn.menu-btn {
-            background-color: #28a745;
-            min-width: 100px;
-        }
-        .nav-btn.menu-btn:hover {
-            background-color: #218838;
-            color: white;
-        }
-
-        .footer-note {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 13px;
-            color: #868e96;
-        }
-        hr {
-            margin: 30px 0 15px 0;
-            border: 1px solid #dee2e6;
-        }
-
-        @media (max-width: 600px) {
-            .book-container { padding: 15px; }
-            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
-            h1 { font-size: 22px; }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f2eb; display: flex; justify-content: center; padding: 30px 10px; }
+        .book-container { max-width: 1000px; width: 100%; background: #fff; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); padding: 30px 35px; position: relative; }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 3px solid #3498db; padding-bottom: 15px; margin-bottom: 20px; font-size: 24px; }
+        h2 { color: #2c3e50; background-color: #eaf2f8; padding: 10px 15px; border-left: 6px solid #3498db; margin: 25px 0 15px 0; font-size: 22px; }
+        h3 { color: #1a5276; margin: 18px 0 10px 0; font-size: 19px; }
+        h4 { color: #2c3e50; margin: 15px 0 8px 0; font-size: 17px; }
+        p { line-height: 1.7; margin-bottom: 12px; text-align: justify; }
+        ul, ol { margin: 10px 0 15px 30px; }
+        li { margin-bottom: 6px; line-height: 1.6; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px; }
+        th, td { border: 1px solid #333; padding: 8px 10px; text-align: left; vertical-align: top; }
+        th { background-color: #d6eaf8; font-weight: bold; }
+        code { background: #eef2f7; padding: 2px 6px; border-radius: 4px; font-family: 'Consolas', monospace; font-size: 13px; color: #c0392b; }
+        .dica { background-color: #e8f5e9; border-left: 6px solid #2e7d32; padding: 14px 18px; margin: 15px 0; border-radius: 4px; }
+        .dica b { color: #1b5e20; }
+        .pegadinha { background-color: #fce4e4; border-left: 6px solid #c0392b; padding: 14px 18px; margin: 15px 0; border-radius: 4px; }
+        .pegadinha b { color: #922b21; }
+        .exemplo { background-color: #f0f8ff; padding: 12px 18px; border-radius: 6px; margin: 10px 0; border: 1px dashed #3498db; }
+        .gabarito-box { background-color: #e8f5e9; border: 2px solid #2e7d32; padding: 15px 20px; border-radius: 8px; margin: 10px 0; }
+        .questao-item { background-color: #f7f9fb; padding: 15px 18px; margin: 12px 0; border-radius: 6px; border-left: 4px solid #3498db; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .questao-item p { margin-bottom: 6px; }
+        .alternativas { margin-left: 20px; font-size: 14px; }
+        .comentario { background: #fef9e7; border-left: 3px solid #f39c12; padding: 8px 14px; margin-top: 8px; font-size: 14px; border-radius: 4px; }
+        .page { display: none; animation: fadeIn 0.3s ease; }
+        .page.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0.5; } to { opacity: 1; } }
+        .nav-area { display: flex; justify-content: space-between; align-items: center; margin-top: 35px; padding-top: 20px; border-top: 2px solid #dee2e6; flex-wrap: wrap; gap: 10px; }
+        .page-indicator { font-size: 15px; font-weight: bold; color: #495057; background: #f1f3f5; padding: 6px 18px; border-radius: 30px; }
+        .nav-btn { background-color: #2c3e50; color: white; border: none; padding: 10px 28px; border-radius: 30px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.2s, transform 0.1s; box-shadow: 0 2px 6px rgba(0,0,0,0.15); min-width: 120px; }
+        .nav-btn:hover { background-color: #3498db; }
+        .nav-btn:active { transform: scale(0.97); }
+        .nav-btn:disabled { background-color: #adb5bd; cursor: not-allowed; box-shadow: none; }
+        .nav-btn.secondary { background-color: #6c757d; }
+        .nav-btn.secondary:hover { background-color: #5a6268; }
+        .nav-btn.menu-btn { background-color: #28a745; min-width: 100px; }
+        .nav-btn.menu-btn:hover { background-color: #218838; }
+        .footer-note { text-align: center; margin-top: 15px; font-size: 13px; color: #868e96; }
+        hr { margin: 30px 0 15px 0; border: 1px solid #dee2e6; }
+        @media (max-width: 600px) { .book-container { padding: 15px; } .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; } h1 { font-size: 19px; } }
     </style>
 </head>
 <body>
 <div class="book-container" id="book">
 
-    <h1>📝 LÍNGUA PORTUGUESA – MÓDULO 6</h1>
-    <p style="text-align:center; font-size:18px; color:#922b21;"><b>Pontuação, Figuras de Linguagem, Sinônimos/Antônimos e Denotação/Conotação</b></p>
+    <h1>📝 PONTUAÇÃO, SEMÂNTICA E INTERPRETAÇÃO</h1>
+    <p style="text-align:center; font-size:18px; color:#2c3e50;"><b>Apostila completa para concursos públicos</b></p>
     <hr>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
-    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa/Sumário -->
     <div class="page active" data-page="1">
-        <h2>1. INTRODUÇÃO – O GRANDE FINAL</h2>
-        <p>Chegamos ao último módulo de Língua Portuguesa! Esta é a etapa que une a técnica à criatividade e à precisão. A <b>Pontuação</b> organiza o pensamento, as <b>Figuras de Linguagem</b> dão cor e expressividade ao texto, e o domínio de <b>Sinônimos/Antônimos</b> e da <b>Denotação/Conotação</b> permite que você escolha a palavra exata para cada situação.</p>
-        <p>Com este módulo, você fecha o ciclo completo de estudos do Português, pronto para arrasar em qualquer prova!</p>
-
+        <h2>📖 APRESENTAÇÃO</h2>
+        <p>Bem-vindo, futuro servidor! Sou seu Professor Mentor e preparei este material com um único objetivo: transformar a complexidade da Língua Portuguesa em pontos na sua prova. Não estudaremos apenas regras isoladas, mas a <b>"arquitetura" do texto</b>. Lembre-se: em concursos, não importa o que você pensa sobre o assunto, mas sim o que o autor escreveu. Vamos dominar as bancas.</p>
         <div class="dica">
-            <b>🎯 Objetivo do Módulo:</b> Aplicar corretamente os sinais de pontuação, reconhecer e classificar as principais figuras de linguagem, distinguir sinônimos e antônimos e dominar os sentidos denotativo e conotativo das palavras, com 25 questões ao final.
+            <b>🎯 Como usar este material:</b> Estude a teoria essencial, memorize os quadros e as dicas do mentor, analise as questões comentadas e resolva o simulado final com 25 questões.
         </div>
-
-        <h2>2. SUMÁRIO</h2>
+        <h2>📋 SUMÁRIO</h2>
         <ul>
-            <li><b>Módulo I:</b> Pontuação – Sinais e Regras Essenciais – pág. 2</li>
-            <li><b>Módulo II:</b> Figuras de Linguagem – Parte 1 (Palavra e Pensamento) – pág. 3</li>
-            <li><b>Módulo III:</b> Figuras de Linguagem – Parte 2 (Sintaxe e Construção) – pág. 4</li>
-            <li><b>Módulo IV:</b> Sinônimos, Antônimos, Denotação e Conotação – pág. 5</li>
-            <li><b>Módulo V:</b> Consolidação e Dicas Finais – pág. 6</li>
-            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+            <li><b>Cap I:</b> Introdução à Semântica e Interpretação de Texto – pág. 2-4</li>
+            <li><b>Cap II:</b> Pontuação e Elementos de Coesão – pág. 5-7</li>
+            <li><b>Cap III:</b> Figuras de Linguagem e Intertextualidade – pág. 8</li>
+            <li><b>Cap IV:</b> Revisão Geral e Checklist de Ouro – pág. 9</li>
+            <li><b>Simulado:</b> 25 questões – pág. 10-11</li>
+            <li><b>Gabarito:</b> Comentado – pág. 12</li>
         </ul>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 2: Pontuação                                          -->
-    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Cap I - Introdução -->
     <div class="page" data-page="2">
-        <h2>MÓDULO I – PONTUAÇÃO: SINAIS E REGRAS ESSENCIAIS</h2>
-        <p>Os sinais de pontuação são recursos gráficos que organizam o texto, indicam pausas, entonação e relações sintáticas. Dominá-los é fundamental para a clareza da escrita.</p>
+        <h2>CAP I: INTRODUÇÃO À SEMÂNTICA E INTERPRETAÇÃO</h2>
+        <p>A base do sucesso em Português é saber a diferença entre <b>o que o texto diz</b> e <b>o que ele sugere</b>.</p>
 
-        <h3>2.1. Vírgula (,)</h3>
+        <h3>Teoria Essencial</h3>
         <ul>
-            <li><b>Separa termos de uma enumeração:</b> "Comprei <b>pão, leite e café</b>."</li>
-            <li><b>Isola o vocativo:</b> "<b>Maria</b>, venha aqui."</li>
-            <li><b>Isola o aposto:</b> "São Paulo, <b>a maior cidade do país</b>, está em crise."</li>
-            <li><b>Separa orações intercaladas ou deslocadas:</b> "João, <b>disse o professor</b>, é um ótimo aluno."</li>
-            <li><b>Separa conjunções adversativas deslocadas:</b> "Estudou, <b>porém</b>, não passou."</li>
-            <li><b>NÃO se usa vírgula para separar sujeito de predicado:</b> Errado: "O aluno, estudou."</li>
-            <li><b>NÃO se usa vírgula para separar verbo de complemento:</b> Errado: "Ele comprou, um carro."</li>
+            <li><b>Texto:</b> É um conjunto de ideias organizadas e relacionadas, um todo significativo que produz interação (codificar e decodificar).</li>
+            <li><b>Contexto:</b> É a interligação entre as frases. Uma informação isolada pode mudar de sentido; ela depende do que veio antes e do que vem depois.</li>
+            <li><b>Intertexto:</b> É quando um texto "conversa" com outro, por meio de citações diretas ou indiretas.</li>
         </ul>
 
-        <h3>2.2. Ponto (.) e Ponto e Vírgula (;)</h3>
-        <ul>
-            <li><b>Ponto final:</b> encerra uma frase declarativa ou imperativa.</li>
-            <li><b>Ponto de interrogação (?):</b> encerra uma pergunta direta.</li>
-            <li><b>Ponto de exclamação (!):</b> indica entonação de surpresa, ordem, admiração.</li>
-            <li><b>Ponto e vírgula (;):</b> usado para separar orações coordenadas extensas ou itens de uma lista complexa. Ex.: "Estudou muito; fez todas as questões; passou com louvor."</li>
-        </ul>
-
-        <h3>2.3. Dois-pontos (:), Travessão (—) e Aspas (“ ”)</h3>
-        <ul>
-            <li><b>Dois-pontos:</b> anunciam uma citação, enumeração ou fala de personagem.</li>
-            <li><b>Travessão:</b> indica mudança de interlocutor em diálogos ou isolamento de expressões.</li>
-            <li><b>Aspas:</b> indicam citação textual, estrangeirismos ou ironia.</li>
-        </ul>
-
-        <h3>2.4. Reticências (...) e Parênteses ( )</h3>
-        <ul>
-            <li><b>Reticências:</b> indicam interrupção, hesitação ou continuidade de um pensamento.</li>
-            <li><b>Parênteses:</b> isolam informações acessórias (explicações, comentários).</li>
-        </ul>
-        <div class="atencao">
-            <b>⚡ Regra de Ouro:</b> A vírgula é o sinal que mais gera dúvidas. Lembre-se: ela não pode separar termos que são sintaticamente ligados (sujeito-verbo, verbo-objeto, nome-complemento nominal).
-        </div>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- PÁGINA 3: Figuras de Linguagem – Parte 1                     -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="3">
-        <h2>MÓDULO II – FIGURAS DE LINGUAGEM (PARTE 1: PALAVRA E PENSAMENTO)</h2>
-        <p>As figuras de linguagem são recursos estilísticos que tornam a expressão mais expressiva, criativa e persuasiva. Dividem-se em figuras de palavra, pensamento e sintaxe.</p>
-
-        <h3>3.1. Figuras de Palavra (Semântica)</h3>
-        <ul>
-            <li><b>Metáfora:</b> comparação implícita (sem conectivo). Ex.: "A vida é um <b>palco</b>."</li>
-            <li><b>Comparação (ou Símile):</b> comparação explícita (com conectivos: como, tal qual, feito). Ex.: "Seus olhos brilhavam <b>como</b> estrelas."</li>
-            <li><b>Metonímia:</b> substituição de uma palavra por outra com relação de proximidade. Ex.: "Leu <b>Machado de Assis</b>" (autor pela obra). / "Bebeu um <b>copo</b>" (continente pelo conteúdo).</li>
-            <li><b>Catacrese:</b> uso de uma palavra por falta de termo específico. Ex.: "Pé da mesa", "Braço da cadeira", "Asa da xícara".</li>
-            <li><b>Sinestesia:</b> mistura de sensações de diferentes sentidos. Ex.: "Grito <b>surdo</b>", "Voz <b>doce</b>".</li>
-        </ul>
-
-        <h3>3.2. Figuras de Pensamento</h3>
-        <ul>
-            <li><b>Antítese:</b> aproximação de palavras ou ideias opostas. Ex.: "O <b>bem</b> e o <b>mal</b>."</li>
-            <li><b>Paradoxo (ou Oxímoro):</b> ideias contraditórias que se complementam. Ex.: "Estou <b>cheio de vazio</b>."</li>
-            <li><b>Eufemismo:</b> suavização de uma expressão desagradável. Ex.: "Ele <b>partiu</b>" (em vez de "morreu").</li>
-            <li><b>Ironia:</b> dizer o contrário do que se pensa, com intenção crítica. Ex.: "Que <b>ótimo</b> dia para um piquenique!" (em dia de chuva).</li>
-            <li><b>Hipérbole:</b> exagero intencional. Ex.: "Morri de rir."</li>
-            <li><b>Prosopopeia (ou Personificação):</b> atribuição de características humanas a seres inanimados. Ex.: "O vento <b>sussurrava</b>."</li>
-        </ul>
-        <div class="exemplo">
-            <p><b>Dica para provas:</b> A metáfora não usa conectivos de comparação ("como", "tal qual"), ao contrário da comparação. A ironia depende do contexto para ser percebida.</p>
-        </div>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- PÁGINA 4: Figuras de Linguagem – Parte 2                     -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="4">
-        <h2>MÓDULO III – FIGURAS DE LINGUAGEM (PARTE 2: SINTAXE E CONSTRUÇÃO)</h2>
-
-        <h3>4.1. Figuras de Sintaxe (ou Construção)</h3>
-        <ul>
-            <li><b>Elipse:</b> omissão de um termo facilmente subentendido. Ex.: "Na sala, <b>—</b> apenas um sofá." (omissão de "havia").</li>
-            <li><b>Zeugma:</b> omissão de um termo já expresso anteriormente. Ex.: "Ele prefere cinema; ela, <b>—</b> teatro." (omissão de "prefere").</li>
-            <li><b>Assíndeto:</b> ausência de conjunções entre orações ou termos. Ex.: "Chegou, viu, venceu."</li>
-            <li><b>Polissíndeto:</b> repetição intencional de conjunções. Ex.: "Falou <b>e</b> falou <b>e</b> falou sem parar."</li>
-            <li><b>Anáfora:</b> repetição de uma palavra no início de frases ou versos. Ex.: "<b>Eu</b> vi o mar, <b>eu</b> vi o céu, <b>eu</b> vi a terra."</li>
-            <li><b>Pleonasmo (ou Redundância):</b> repetição de uma ideia com intenção expressiva. Ex.: "A mim <b>me</b> parece." / "Subir para <b>cima</b>." (não deve ser confundido com a redundância viciosa, que é um vício de linguagem).</li>
-            <li><b>Silepse:</b> concordância com a ideia e não com a forma da palavra. Divide-se em:
+        <h3>Diferença Crucial: Interpretar vs. Compreender</h3>
+        <p>Nas provas, o comando da questão dita o seu comportamento:</p>
+        <ol>
+            <li><b>Interpretar (O que se infere):</b> Significa explicar, julgar e tirar conclusões. O foco é a dedução.
                 <ul>
-                    <li><b>Gênero:</b> "São Paulo é <b>linda</b>." (cidade).</li>
-                    <li><b>Número:</b> "Os brasileiros são <b>alegres</b>." (povo).</li>
-                    <li><b>Pessoa:</b> "A diretoria <b>decidimos</b>..." (eu + diretoria).</li>
+                    <li><b>Comandos:</b> "Infere-se que...", "É possível deduzir que...", "Qual a intenção do autor...".</li>
                 </ul>
             </li>
-        </ul>
+            <li><b>Compreender (O que está escrito):</b> Significa atenção objetiva ao texto.
+                <ul>
+                    <li><b>Comandos:</b> "O texto diz que...", "Segundo o autor...", "O narrador afirma...".</li>
+                </ul>
+            </li>
+        </ol>
 
-        <h3>4.2. Quadro-resumo das Figuras mais Cobradas</h3>
-        <table>
-            <tr><th>Figura</th><th>Característica</th><th>Exemplo</th></tr>
-            <tr><td><b>Metáfora</b></td><td>Comparação implícita</td><td>"A vida é um palco."</td></tr>
-            <tr><td><b>Comparação</b></td><td>Comparação explícita (como)</td><td>"É forte como um touro."</td></tr>
-            <tr><td><b>Metonímia</b></td><td>Substituição por relação de causa/efeito</td><td>"Leio Machado de Assis."</td></tr>
-            <tr><td><b>Eufemismo</b></td><td>Suavização</td><td>"Ele partiu." (morreu)</td></tr>
-            <tr><td><b>Ironia</b></td><td>Dizer o contrário</td><td>"Que belo dia!" (chovendo)</td></tr>
-            <tr><td><b>Hipérbole</b></td><td>Exagero</td><td>"Estou morto de cansaço."</td></tr>
-            <tr><td><b>Elipse</b></td><td>Omissão de termo</td><td>"Na sala, apenas um sofá."</td></tr>
-            <tr><td><b>Anáfora</b></td><td>Repetição no início</td><td>"Eu vi... Eu vi..."</td></tr>
-        </table>
-    </div>
+        <h3>Pontos para Memorizar: Erros e Condições</h3>
+        <h4>Erros de Interpretação</h4>
+        <div class="pegadinha">
+            <b>⚠️ Cuidado com:</b>
+            <ul>
+                <li><b>Extrapolação:</b> A famosa "viagem". É quando você coloca ideias suas (conhecimento prévio) que não estão no texto.</li>
+                <li><b>Redução:</b> Focar em apenas um detalhe e esquecer o conjunto da ideia.</li>
+                <li><b>Contradição:</b> Entender o oposto do que o autor disse.</li>
+            </ul>
+        </div>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 5: Sinônimos, Antônimos, Denotação e Conotação        -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="5">
-        <h2>MÓDULO IV – SINÔNIMOS, ANTÔNIMOS, DENOTAÇÃO E CONOTAÇÃO</h2>
-
-        <h3>5.1. Sinônimos</h3>
-        <p>Palavras que possuem significados <b>semelhantes</b> ou aproximados. Ex.: <b>casa</b> / <b>lar</b> / <b>moradia</b>.</p>
-        <ul>
-            <li><b>Sinônimos perfeitos:</b> significados praticamente idênticos (ex.: léxico / vocabulário).</li>
-            <li><b>Sinônimos imperfeitos:</b> significados próximos, mas com nuances diferentes (ex.: <b>casa</b> = edifício físico; <b>lar</b> = conotação afetiva).</li>
-        </ul>
-
-        <h3>5.2. Antônimos</h3>
-        <p>Palavras que possuem significados <b>opostos</b>. Ex.: <b>grande</b> / <b>pequeno</b>; <b>amor</b> / <b>ódio</b>.</p>
-        <ul>
-            <li><b>Antônimos graduais:</b> oposição em uma escala (ex.: quente / morno / frio).</li>
-            <li><b>Antônimos complementares:</b> oposição absoluta (ex.: vivo / morto).</li>
-        </ul>
-
-        <h3>5.3. Denotação</h3>
-        <p>Uso da palavra em seu sentido <b>literal, objetivo</b>, conforme o dicionário. É a linguagem técnica, científica e informativa.</p>
-        <div class="exemplo">"O <b>coração</b> é um órgão muscular." (sentido denotativo).</div>
-
-        <h3>5.4. Conotação</h3>
-        <p>Uso da palavra em sentido <b>figurado, subjetivo</b>, associado a emoções e contextos culturais. Predomina na literatura, poesia e na linguagem publicitária.</p>
-        <div class="exemplo">"Ele tem um <b>coração</b> de ouro." (sentido conotativo – bondade).</div>
-
-        <h3>5.5. Relação entre os temas</h3>
-        <ul>
-            <li><b>Sinônimos e antônimos</b> são relações paradigmáticas (de substituição).</li>
-            <li><b>Denotação e conotação</b> são níveis de significação. Uma mesma palavra pode ser usada nos dois níveis, dependendo do contexto.</li>
-        </ul>
         <div class="dica">
-            <b>💡 Dica final:</b> Em provas, a banca gosta de cobrar a diferença entre sentido literal (denotação) e sentido figurado (conotação) em textos literários ou propagandas. Fique atento aos adjetivos e metáforas!
+            <b>💡 Dica do Mentor:</b> Muitos alunos erram por quererem ser "críticos". Lembre-se: a ótica do escritor é soberana. Esqueça suas opiniões pessoais durante a prova.
         </div>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 6: Consolidação e Dicas Finais                        -->
-    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Cap I - Guia prático + Significação -->
+    <div class="page" data-page="3">
+        <h2>GUIA PRÁTICO PARA INTERPRETAÇÃO</h2>
+        <ol>
+            <li><b>Visão Geral:</b> Leia o texto todo sem interrupções, mesmo se encontrar palavras difíceis.</li>
+            <li><b>Repetição:</b> Leia pelo menos duas vezes. A segunda leitura revela o que a pressa esconde.</li>
+            <li><b>Fragmentação:</b> Analise parágrafo por parágrafo.</li>
+            <li><b>Tópico Frasal:</b> Sublinhe a ideia principal de cada parágrafo.</li>
+            <li><b>Atenção aos Comandos:</b> Grife palavras como "CORRETO" ou "INCORRETO" no enunciado.</li>
+        </ol>
+
+        <h2>CAP I: SIGNIFICAÇÃO DAS PALAVRAS</h2>
+        <h3>Teoria e Conceitos</h3>
+        <ul>
+            <li><b>Sinonímia:</b> Relação entre palavras com sentidos semelhantes. É a base para <b>Parafrasear</b> (reescrever mantendo o sentido original).</li>
+            <li><b>Antonímia:</b> Relação de oposição. Ex: Mal (oposto de Bem) e Mau (oposto de Bom).</li>
+            <li><b>Denotação:</b> Sentido literal, real, de dicionário.</li>
+            <li><b>Conotação:</b> Sentido figurado, simbólico (muito usado em charges).</li>
+        </ul>
+
+        <h3>Pegadinhas: Tabela de Parônimos</h3>
+        <p>Cuidado com a troca de letras que altera o sentido:</p>
+        <table>
+            <tr><th>Palavra</th><th>Significado</th><th>Palavra</th><th>Significado</th></tr>
+            <tr><td>Área</td><td>Superfície</td><td>Ária</td><td>Melodia</td></tr>
+            <tr><td>Delatar</td><td>Denunciar</td><td>Dilatar</td><td>Expandir</td></tr>
+            <tr><td>Emergir</td><td>Vir à tona</td><td>Imergir</td><td>Mergulhar</td></tr>
+            <tr><td>Peão</td><td>Trabalhador / A pé</td><td>Pião</td><td>Brinquedo</td></tr>
+        </table>
+
+        <div class="dica">
+            <b>💡 Dica do Mentor:</b> Para não errar Mal/Mau, use a substituição. Se couber "BEM", use <b>MAL</b>. Se couber "BOM", use <b>MAU</b>.
+        </div>
+    </div>
+
+    <!-- PÁGINA 4: Cap I - Questões comentadas -->
+    <div class="page" data-page="4">
+        <h2>QUESTÕES DE CONCURSO COMENTADAS – CAP I</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 3 (BANPARÁ)</b> – De acordo com o autor do texto "Lastro e o sistema bancário", a reserva fracional foi criada com o objetivo de:</p>
+            <div class="alternativas">
+                a) tornar ilimitada a produção de dinheiro.<br>
+                b) proteger os bens dos clientes de bancos.<br>
+                c) impedir que os bancos fossem à falência.<br>
+                d) permitir o empréstimo de mais dinheiro.<br>
+                e) preservar as economias das pessoas.
+            </div>
+            <div class="comentario">
+                <b>Gabarito: D.</b> O texto afirma categoricamente que os banqueiros "criaram manobras, como a reserva fracional, para emprestar muito mais dinheiro do que realmente tinham".
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4 (BANPARÁ)</b> – A leitura do texto permite a compreensão de que:</p>
+            <div class="alternativas">
+                a) as dívidas dos clientes são o que sustenta os bancos.<br>
+                b) todo o dinheiro que os bancos emprestam é imaginário.<br>
+                c) quem pede um empréstimo deve a outros clientes.<br>
+                d) o pagamento de dívidas depende do "livre-mercado".<br>
+                e) os bancos confiscam os bens dos clientes endividados.
+            </div>
+            <div class="comentario">
+                <b>Gabarito: A.</b> Conforme o texto, o sistema cria dinheiro a partir de empréstimos e cobra dívidas sobre o que foi inventado, sustentando a acumulação de riqueza bancária.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7 (Câmara de Salvador)</b> – "Hoje, esse termo denota, além da agressão física, diversos tipos de imposição...". Qual manchete <b>NÃO</b> se enquadra na violência citada?</p>
+            <div class="alternativas">
+                a) Presa por mensagem racista na internet.<br>
+                b) Vinte pessoas são vítimas da ditadura venezuelana.<br>
+                c) Apanhou de policiais por destruir caixa eletrônico.<br>
+                d) Homossexuais são perseguidos e presos na Rússia.<br>
+                e) Quatro funcionários ficaram livres do trabalho escravo.
+            </div>
+            <div class="comentario">
+                <b>Gabarito: C.</b> A agressão sofrida por quem destrói patrimônio (vandalismo) não se classifica nas tipologias de violência sistêmica ou repressão civil (política, gênero, trabalho) descritas no fragmento.
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 5: Cap II - Pontuação -->
+    <div class="page" data-page="5">
+        <h2>CAP II: PONTUAÇÃO E ELEMENTOS DE COESÃO</h2>
+        <p>A pontuação é a <b>engenharia do texto</b>. Ela organiza a hierarquia das ideias e garante a <b>coesão</b> (conexão entre termos).</p>
+
+        <h3>Regras de Ouro da Pontuação e Escrita</h3>
+        <ul>
+            <li><b>Regra 1 (Vírgula):</b> É obrigatória para isolar advérbios ou expressões adverbiais deslocadas no início da frase. Ex: <i>"Um dia, o cercaram..."</i>.</li>
+            <li><b>Regra 2 (Hífen e Prefixos):</b> Sempre use hífen com os prefixos <b>ex-, vice-, pós-, pré- e pró-</b> (desde que acentuados). Ex: <i>ex-diretor, pós-graduação</i>.</li>
+            <li><b>Regra 3 (Hífen e Vogais):</b> Se o prefixo termina com a mesma vogal que inicia a palavra seguinte, use hífen (Ex: <i>micro-ondas</i>). Se as vogais forem diferentes, junte tudo (Ex: <i>autoestrada</i>).</li>
+            <li><b>Regra 4 (R e S):</b> Se o prefixo termina em vogal e a palavra seguinte começa com R ou S, o hífen cai e as letras dobram. Ex: <i>antirreligioso, microssistema</i>.</li>
+            <li><b>Regra 5 (Encadeamentos):</b> Use o hífen para ligar termos que formam um itinerário ou conexão geográfica. Ex: <i>Ponte Rio-Niterói</i>.</li>
+        </ul>
+
+        <div class="dica">
+            <b>✅ Mnemônico:</b> Guarde os prefixos que <b>sempre</b> pedem hífen: <b>ex-, vice-, pós-, pré-, pró-, além-, aquém-, recém-, sem-</b>.
+        </div>
+    </div>
+
+    <!-- PÁGINA 6: Cap II - Coesão e Acentuação -->
     <div class="page" data-page="6">
-        <h2>MÓDULO V – CONSOLIDAÇÃO E DICAS FINAIS</h2>
-        <h3>6.1. Resumo dos Sinais de Pontuação</h3>
-        <ul>
-            <li><b>Vírgula:</b> enumeração, isolamento (vocativo, aposto, orações intercaladas).</li>
-            <li><b>Ponto e vírgula:</b> separação de itens extensos ou orações longas.</li>
-            <li><b>Dois-pontos:</b> anúncio de fala, citação ou enumeração.</li>
-            <li><b>Travessão:</b> diálogo ou isolamento.</li>
-            <li><b>Aspas:</b> citação, estrangeirismo ou ironia.</li>
-            <li><b>Reticências:</b> hesitação, interrupção ou continuidade.</li>
-        </ul>
+        <h2>COESÃO: O PODER DOS PRONOMES RELATIVOS</h2>
+        <p>Eles retomam um termo anterior (antecedente). Fique atento ao valor semântico:</p>
 
-        <h3>6.2. Lista das Figuras de Linguagem mais Cobradas</h3>
-        <ul>
-            <li><b>Metáfora</b> (comparação implícita).</li>
-            <li><b>Comparação</b> (com "como", "tal qual").</li>
-            <li><b>Metonímia</b> (autor pela obra, continente pelo conteúdo).</li>
-            <li><b>Eufemismo</b> (suavização).</li>
-            <li><b>Ironia</b> (dizer o contrário).</li>
-            <li><b>Hipérbole</b> (exagero).</li>
-            <li><b>Prosopopeia</b> (personificação).</li>
-            <li><b>Antítese</b> (oposição).</li>
-            <li><b>Elipse / Zeugma</b> (omissão).</li>
-            <li><b>Polissíndeto / Assíndeto</b> (conjunções).</li>
-        </ul>
+        <table>
+            <tr><th>Pronome</th><th>Valor / Uso</th></tr>
+            <tr><td><b>Que / Qual</b></td><td>Neutros.</td></tr>
+            <tr><td><b>Quem</b></td><td>Refere-se a pessoas.</td></tr>
+            <tr><td><b>Cujo</b></td><td>Indica posse (entre possuidor e objeto). <b>Nunca use artigo após "cujo".</b></td></tr>
+            <tr><td><b>Onde</b></td><td>Apenas para lugar físico fixo.</td></tr>
+            <tr><td><b>Quanto</b></td><td>Refere-se a montante (Ex: <i>Falou tudo quanto queria</i>).</td></tr>
+        </table>
 
-        <h3>6.3. A Jornada está Completa!</h3>
-        <div class="final-message">
-            🎉 <b>Parabéns!</b> 🎉 <br>
-            Você completou todos os módulos de Língua Portuguesa! <br>
-            De interpretação de textos à pontuação, passando por morfologia, sintaxe e figuras de linguagem. <br>
-            Agora, é revisar, praticar e arrasar nas provas! 🚀
+        <h2>ACENTUAÇÃO E O MNEMÔNICO LINURXÃO</h2>
+        <p>Para acentuar paroxítonas, grave as terminações: <b>L, I, N, U(M), R, X, Ã, ÃO</b>.</p>
+        <div class="exemplo">
+            <b>Exemplos:</b> Fácil, Táxi, Pólen, Fórum, Caráter, Tórax, Ímã, Órgão.
         </div>
-        <p style="text-align:center; font-weight:bold; color:#2e7d32;">"O sucesso é a soma de pequenos esforços repetidos dia após dia."</p>
+
+        <div class="pegadinha">
+            <b>⚠️ Dica do Mentor:</b> Cuidado com a terminação <b>N</b>. A palavra <i>Elétron</i> é acentuada (termina em N), mas <i>Elétrons</i> <b>não</b> é (termina em ENS). Paroxítonas terminadas em <b>ENS</b> seguem a lógica das oxítonas e não recebem acento.
+        </div>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 7: Questões 1 a 14                                    -->
-    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Cap II - Questão comentada -->
     <div class="page" data-page="7">
-        <h2>📝 QUESTÕES (1 a 14)</h2>
-        <p><i>Responda com base no conteúdo estudado.</i></p>
+        <h2>QUESTÃO DE CONCURSO COMENTADA – CAP II</h2>
 
         <div class="questao-item">
-            <p><b>Questão 1</b> (Pontuação) – Assinale a frase em que o uso da vírgula está <b>correto</b>:</p>
+            <p><b>Questão 5 (Manuel Bandeira)</b> – "Um dia, o cercaram e lhe perguntaram porque ele só usava meias vermelhas". Sobre a frase, assinale o erro:</p>
             <div class="alternativas">
-                a) O aluno, estudou para a prova.<br>
-                b) João, Maria e Pedro foram ao cinema.<br>
-                c) Comprou, um carro novo.<br>
-                d) Ele não gosta de estudar, mas se esforça.<br>
-                e) B) e D) estão corretas.
+                a) empregar "o cercaram" em lugar de "lhe cercaram".<br>
+                b) haver vírgula após "Um dia".<br>
+                c) usar "lhe perguntaram" em lugar de "o perguntaram".<br>
+                d) grafar "porque" em vez de "por que".
+            </div>
+            <div class="comentario">
+                <b>Gabarito: D.</b> Trata-se de uma pergunta indireta. O correto seria <b>"por que"</b> (separado), equivalendo a "por qual razão". As demais opções estão gramaticalmente corretas segundo a norma-padrão.
+            </div>
+        </div>
+
+        <div class="dica">
+            <b>📌 Relembre os porquês:</b>
+            <ul>
+                <li><b>Por que:</b> início de pergunta ou "pelo qual".</li>
+                <li><b>Por quê:</b> final de frase ou isolado.</li>
+                <li><b>Porque:</b> explicação ou causa (pois).</li>
+                <li><b>Porquê:</b> substantivo (o motivo).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- PÁGINA 8: Cap III - Figuras e Intertextualidade -->
+    <div class="page" data-page="8">
+        <h2>CAP III: FIGURAS DE LINGUAGEM E INTERTEXTUALIDADE</h2>
+
+        <h3>Teoria Essencial</h3>
+        <ul>
+            <li><b>Intertextualidade:</b> É o diálogo entre textos. Pode ser uma homenagem, uma paródia ou uma citação.</li>
+            <li><b>Linguagem Não-Verbal:</b> Charges e tiras exigem que você interprete a imagem e o texto como uma unidade. O humor geralmente nasce da <b>quebra de expectativa</b>.</li>
+        </ul>
+
+        <h2>QUESTÕES DE CONCURSO COMENTADAS – CAP III</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 2 (TJ-SC)</b> – Na charge de Stephen Hawking no céu, a fala de Einstein ("a mente brilhante que estávamos esperando") destaca o fato de o cientista:</p>
+            <div class="comentario">
+                <b>Gabarito: D.</b> A expressão "mente brilhante" é uma metáfora que reconhece a genialidade do cientista, estabelecendo intertextualidade ao colocá-lo ao lado de Galileu e Einstein.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 2</b> (Pontuação) – Qual sinal de pontuação é usado para separar itens de uma lista extensa ou orações coordenadas muito longas?</p>
-            <div class="alternativas">
-                a) Vírgula.<br>
-                b) Ponto final.<br>
-                c) Ponto e vírgula.<br>
-                d) Dois-pontos.<br>
-                e) Travessão.
+            <p><b>Questão 10 (TJ-AL)</b> – O humor da tira "Direitos Sociais" vem da quebra de expectativa:</p>
+            <div class="comentario">
+                <b>Gabarito: B.</b> O humor reside no fato de o álbum de figurinhas (algo lúdico) tratar de temas sérios como Saúde e Educação, em vez de esportes.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 3</b> (Figuras) – "A vida é uma viagem" é um exemplo de:</p>
+            <p><b>Questão 12 (PM-SP)</b> – Na charge dos presos falando sobre preços de cosméticos, o humor está no fato de:</p>
+            <div class="comentario">
+                <b>Gabarito: E.</b> Os preços de cosméticos são irrelevantes para a condição de confinamento em que os personagens se encontram.
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 9: Revisão Geral -->
+    <div class="page" data-page="9">
+        <h2>REVISÃO GERAL E CHECKLIST DE OURO</h2>
+
+        <h3>Checklist Rápido</h3>
+        <table>
+            <tr><th>Item</th><th>Regra</th></tr>
+            <tr><td><b>Por que</b></td><td>Início de pergunta ou "pelo qual".</td></tr>
+            <tr><td><b>Por quê</b></td><td>Final de frase ou isolado.</td></tr>
+            <tr><td><b>Porque</b></td><td>Explicação ou causa (pois).</td></tr>
+            <tr><td><b>Porquê</b></td><td>Substantivo (O motivo).</td></tr>
+            <tr><td><b>Onde vs. Aonde</b></td><td>Onde é lugar fixo. Aonde indica movimento (ir a algum lugar).</td></tr>
+            <tr><td><b>Acentuação</b></td><td>Oxítonas (A, E, O, EM); Paroxítonas (LINURXÃO); Proparoxítonas (Todas!).</td></tr>
+        </table>
+
+        <div class="dica">
+            <b>🎯 Mapa Mental Final:</b>
+            <ul>
+                <li><b>Interpretação:</b> cuidado com extrapolação, redução e contradição. A ótica do autor é soberana.</li>
+                <li><b>Pontuação:</b> vírgula isola termos deslocados; hífen segue regras de prefixos e vogais iguais.</li>
+                <li><b>Semântica:</b> domine sinônimos, antônimos e parônimos (Área/Ária, Delatar/Dilatar).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- PÁGINA 10: Simulado 1-12 -->
+    <div class="page" data-page="10">
+        <h2>📝 SIMULADO FINAL (1 a 12)</h2>
+
+        <div class="questao-item">
+            <p><b>Q1</b> – No texto de Ivan Martins, o termo "cálidas" descreve as águas da praia. Um sinônimo adequado é:</p>
             <div class="alternativas">
-                a) Comparação.<br>
-                b) Metonímia.<br>
-                c) Metáfora.<br>
-                d) Prosopopeia.<br>
-                e) Catacrese.
+                a) Gélidas.<br>
+                b) Turvas.<br>
+                c) Quentes.<br>
+                d) Profundas.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 4</b> (Figuras) – "As pedras do caminho sussurravam segredos" é um exemplo de:</p>
-            <div class="alternativas">
-                a) Ironia.<br>
-                b) Eufemismo.<br>
-                c) Hipérbole.<br>
-                d) Prosopopeia (personificação).<br>
-                e) Antítese.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 5</b> (Figuras) – "Estou morrendo de fome" é um exemplo de:</p>
-            <div class="alternativas">
-                a) Ironia.<br>
-                b) Eufemismo.<br>
-                c) Hipérbole.<br>
-                d) Prosopopeia.<br>
-                e) Metonímia.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 6</b> (Figuras) – A frase "A cidade dormia tranquilamente" contém uma:</p>
-            <div class="alternativas">
-                a) Metáfora.<br>
-                b) Sinestesia.<br>
-                c) Prosopopeia.<br>
-                d) Comparação.<br>
-                e) Elipse.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 7</b> (Sinônimos/Antônimos) – Assinale o par de palavras que são <b>antônimas</b>:</p>
-            <div class="alternativas">
-                a) Casa / Lar.<br>
-                b) Grande / Pequeno.<br>
-                c) Feliz / Contento.<br>
-                d) Trabalho / Labor.<br>
-                e) Rápido / Veloz.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 8</b> (Denotação/Conotação) – Na frase "Ele tem um coração de ouro", a palavra "coração" está empregada em sentido:</p>
+            <p><b>Q2</b> – A expressão "boiar" no contexto amoroso de Ivan Martins é usada em sentido:</p>
             <div class="alternativas">
                 a) Denotativo.<br>
                 b) Conotativo.<br>
-                c) Literal.<br>
-                d) Técnico.<br>
-                e) Científico.
+                c) Técnico.<br>
+                d) Irônico.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 9</b> (Figuras) – "Leio Clarice Lispector" é um exemplo de:</p>
+            <p><b>Q3</b> – "Praticamente todo o dinheiro QUE existe no mundo...". A função do QUE é:</p>
             <div class="alternativas">
-                a) Metáfora.<br>
-                b) Metonímia.<br>
-                c) Comparação.<br>
-                d) Catacrese.<br>
-                e) Sinestesia.
+                a) Conjunção.<br>
+                b) Pronome relativo.<br>
+                c) Advérbio.<br>
+                d) Interjeição.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 10</b> (Figuras) – "O amor é fogo que arde sem se ver" (Camões). A figura predominante é:</p>
+            <p><b>Q4</b> – Antônimo de "escassa" (texto Lastro):</p>
             <div class="alternativas">
-                a) Ironia.<br>
-                b) Metáfora.<br>
-                c) Prosopopeia.<br>
-                d) Elipse.<br>
-                e) Antítese.
+                a) Rara.<br>
+                b) Farta.<br>
+                c) Minguada.<br>
+                d) Curta.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 11</b> (Figuras) – "Chegou, viu, venceu" é um exemplo de:</p>
+            <p><b>Q5</b> – "Guiar me parece, ainda hoje, uma experiência incomum" (Ivan Martins). Isso indica:</p>
             <div class="alternativas">
-                a) Polissíndeto.<br>
-                b) Assíndeto.<br>
-                c) Elipse.<br>
-                d) Zeugma.<br>
-                e) Anáfora.
+                a) Banalização do ato.<br>
+                b) Caráter de novidade persistente.<br>
+                c) Arrependimento.<br>
+                d) Medo de dirigir.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 12</b> (Pontuação) – Assinale a frase em que o uso da vírgula está <b>incorreto</b>:</p>
+            <p><b>Q6</b> – No texto "Cultura da Paz", a paz em "sentido negativo" é:</p>
             <div class="alternativas">
-                a) João, venha aqui.<br>
-                b) Comprei pão, leite e café.<br>
-                c) O professor, disse que a prova é difícil.<br>
-                d) Ele estudou, mas não passou.<br>
-                e) Estava cansado, porém, continuou.
+                a) Ativismo.<br>
+                b) Ausência de guerra/passividade.<br>
+                c) Conflito armado.<br>
+                d) Gestão de crises.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 13</b> (Sinônimos) – "Fugaz" e "efêmero" são exemplos de:</p>
+            <p><b>Q7</b> – "Falar de violência e de como ela nos assola...". Substitui-se "assola" por:</p>
             <div class="alternativas">
-                a) Antônimos.<br>
-                b) Sinônimos perfeitos.<br>
-                c) Sinônimos imperfeitos.<br>
-                d) Parônimos.<br>
-                e) Homônimos.
+                a) Consola.<br>
+                b) Devasta.<br>
+                c) Protege.<br>
+                d) Edifica.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 14</b> (V/F – Pontuação e Figuras) – Analise as afirmativas:</p>
-            <p>(   ) A vírgula separa o sujeito do predicado.<br>
-            (   ) A catacrese ocorre pela falta de uma palavra específica (ex.: "pé da mesa").<br>
-            (   ) As reticências indicam hesitação ou interrupção.<br>
-            (   ) O eufemismo é usado para exagerar uma ideia.</p>
-            <p>Assinale a sequência correta:</p>
+            <p><b>Q8</b> – Pela Regra 2 do Hífen, a palavra "recém-nascido" está correta porque:</p>
             <div class="alternativas">
-                a) F – V – V – F<br>b) V – F – V – F<br>c) F – V – F – V<br>d) V – V – F – V<br>e) F – F – V – V
+                a) O prefixo termina em vogal.<br>
+                b) O prefixo "recém" sempre exige hífen.<br>
+                c) O segundo termo começa com N.<br>
+                d) É uma exceção da Reforma.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q9</b> – "Prática" é acentuada pelo mesmo motivo de:</p>
+            <div class="alternativas">
+                a) Pará.<br>
+                b) Café.<br>
+                c) Ônibus.<br>
+                d) Útil.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q10</b> – Em "Crises, como em 1929, todos queriam...", as vírgulas servem para:</p>
+            <div class="alternativas">
+                a) Separar sujeito.<br>
+                b) Isolar termo explicativo/exemplificativo.<br>
+                c) Enfatizar o verbo.<br>
+                d) Substituir o ponto final.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q11</b> – Uso correto do substantivo "porquê":</p>
+            <div class="alternativas">
+                a) Porquê você saiu?<br>
+                b) Não entendo o porquê de tanto luxo.<br>
+                c) Fiz isso porquê quis.<br>
+                d) Onde está o por que?
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q12</b> – Respeita o uso de "Aonde" (movimento):</p>
+            <div class="alternativas">
+                a) Aonde você mora?<br>
+                b) Aonde estão as chaves?<br>
+                c) Aonde você pretende chegar?<br>
+                d) Onde você vai amanhã?
             </div>
         </div>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="8">
-        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+    <!-- PÁGINA 11: Simulado 13-25 -->
+    <div class="page" data-page="11">
+        <h2>📝 SIMULADO FINAL (13 a 25)</h2>
 
         <div class="questao-item">
-            <p><b>Questão 15</b> (V/F – Figuras e Sentidos) – Analise as afirmativas:</p>
-            <p>(   ) A denotação é o sentido literal da palavra.<br>
-            (   ) "O céu chorava" é um exemplo de sinestesia.<br>
-            (   ) A antítese aproxima palavras de sentidos opostos.<br>
-            (   ) A elipse é a repetição de uma palavra no início da frase.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) V – F – V – F<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
-            </div>
+            <p><b>Q13 (EBSERH)</b> – "Todos os dias se pode tentar boiar". O autor refere-se a: <b>Gabarito: A</b> – Haver sempre tempo para aprender a relaxar e ser feliz no amor, agindo com menos medo.</p>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 16</b> (Figuras) – "Grito surdo" e "doce amargura" são exemplos de:</p>
-            <div class="alternativas">
-                a) Metáfora.<br>
-                b) Sinestesia.<br>
-                c) Catacrese.<br>
-                d) Antítese.<br>
-                e) Prosopopeia.
-            </div>
+            <p><b>Q14 (BANPARÁ)</b> – A reserva fracional foi criada para: <b>Gabarito: D</b> – Permitir o empréstimo de mais dinheiro do que os bancos tinham em ouro.</p>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 17</b> (Figuras) – "Ele partiu para a eternidade" (em vez de "ele morreu") é um exemplo de:</p>
-            <div class="alternativas">
-                a) Ironia.<br>
-                b) Hipérbole.<br>
-                c) Eufemismo.<br>
-                d) Prosopopeia.<br>
-                e) Antítese.
-            </div>
+            <p><b>Q15 (BANESTES)</b> – Na charge do criminoso no orelhão, <b>NÃO</b> se pode inferir que: <b>Gabarito: D</b> – Que a presença do orelhão indica atraso. O foco é a impunidade e a sofisticação do crime, não o atraso tecnológico.</p>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 18</b> (Denotação/Conotação) – A frase "O cachorro latiu para o carteiro" utiliza a linguagem em sentido:</p>
-            <div class="alternativas">
-                a) Conotativo.<br>
-                b) Denotativo.<br>
-                c) Figurado.<br>
-                d) Poético.<br>
-                e) Subjetivo.
-            </div>
+            <p><b>Q16 (TJ-AL)</b> – Na charge sobre dependência da internet, a crítica é: <b>Gabarito: A</b> – A criação de uma dependência tecnológica excessiva, vista na fala do garoto ao computador.</p>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 19</b> (Pontuação) – O uso dos dois-pontos (:) está correto em:</p>
-            <div class="alternativas">
-                a) Ele disse: "Vou viajar."<br>
-                b) Ele disse, "Vou viajar."<br>
-                c) Ele disse; "Vou viajar."<br>
-                d) Ele disse. "Vou viajar."<br>
-                e) Ele disse ... "Vou viajar."
-            </div>
+            <p><b>Q17 (Câmara Salvador)</b> – Manchete que <b>NÃO</b> é violência citada no texto base: <b>Gabarito: C</b> – "Apanhou de policiais por destruir caixa eletrônico". As outras tratam de repressão de gênero, política ou trabalho.</p>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 20</b> (Figuras) – "Ela é forte como um touro" é um exemplo de:</p>
-            <div class="alternativas">
-                a) Metáfora.<br>
-                b) Comparação.<br>
-                c) Prosopopeia.<br>
-                d) Metonímia.<br>
-                e) Catacrese.
-            </div>
+            <p><b>Q18 (MPE-AL)</b> – O que "precisa acontecer" no rescaldo da greve dos caminhoneiros é: <b>Gabarito: D</b> – Punirem-se os responsáveis por excessos, conforme o texto que associa "precisa acontecer" à punição de excessos contidos.</p>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 21</b> (V/F – Consolidação) – Analise as afirmativas:</p>
-            <p>(   ) O travessão indica mudança de interlocutor em diálogos.<br>
-            (   ) O pleonasmo é considerado um vício de linguagem, portanto nunca deve ser usado.<br>
-            (   ) "Na sala, apenas ela e eu." é um exemplo de zeugma.<br>
-            (   ) A silepse é uma concordância que se faz com a ideia, e não com a forma da palavra.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
-            </div>
+            <p><b>Q19 (PC-MA)</b> – "Gestão de conflitos" e "erradicar a pobreza" são concebidos como: <b>Gabarito: D</b> – Etapas para a construção da cultura da paz (mencionados como "primeiro passo" e "outro passo").</p>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 22</b> (Figuras) – A repetição intencional de conjunções (ex.: "e chora, e ri, e dança") é chamada de:</p>
-            <div class="alternativas">
-                a) Assíndeto.<br>
-                b) Polissíndeto.<br>
-                c) Anáfora.<br>
-                d) Elipse.<br>
-                e) Zeugma.
-            </div>
+            <p><b>Q20 (PM-SP)</b> – Na tira de 2015, a personagem revela que: <b>Gabarito: C</b> – A violência está banalizada (não há mais surpresa ou punição efetiva).</p>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 23</b> (Sinônimos) – Assinale o par de palavras que são <b>sinônimas</b>:</p>
-            <div class="alternativas">
-                a) Alto / Baixo.<br>
-                b) Rápido / Lento.<br>
-                c) Feliz / Triste.<br>
-                d) Frio / Quente.<br>
-                e) Ágil / Veloz.
-            </div>
+            <p><b>Q21 (TJ-AL)</b> – Título: "Cuidado com as figurinhas da Copa". A estrutura indica que: <b>Gabarito: B</b> – As figurinhas se somaram ao celular e à carteira como alvo de desejo dos assaltantes.</p>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 24</b> (Figuras) – "O sol sorriu para a manhã" é um exemplo de:</p>
-            <div class="alternativas">
-                a) Antítese.<br>
-                b) Ironia.<br>
-                c) Prosopopeia.<br>
-                d) Sinestesia.<br>
-                e) Hipérbole.
-            </div>
+            <p><b>Q22 (TJ-DFT)</b> – O texto "Ouro em Fios" possui elementos: <b>Gabarito: CERTO</b> – Possui tipologia expositiva (explica o gasto de energia) e injuntiva (dá ordens: "Desligue as luzes").</p>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 25</b> (V/F – Final) – Analise as afirmativas:</p>
-            <p>(   ) A conotação é o sentido figurado, subjetivo, da palavra.<br>
-            (   ) A hipérbole é um exagero intencional.<br>
-            (   ) A vírgula pode ser usada para separar o verbo do seu complemento.<br>
-            (   ) A sinestesia mistura sensações de diferentes sentidos.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
-            </div>
+            <p><b>Q23 (EBSERH)</b> – Alternativa grafada corretamente: <b>Gabarito: D</b> – Existir – existência. (As outras: extroversão, disponibilizar, determinação, caracterização).</p>
         </div>
 
-        <hr>
+        <div class="questao-item">
+            <p><b>Q24 (LIQUIGÁS)</b> – Uso correto de Mal/Mau: <b>Gabarito: A</b> – "O estagiário foi mal treinado" (bem treinado). B, C, D e E trocam as formas indevidamente.</p>
+        </div>
 
-        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="questao-item">
+            <p><b>Q25 (TRANSPETRO)</b> – Obedecem às regras ortográficas: <b>Gabarito: A</b> – Admissão, paralisação, impasse. (B: bambuzal; C: concessão/estresse; D: banalização; E: desorganização).</p>
+        </div>
+    </div>
+
+    <!-- PÁGINA 12: Gabarito -->
+    <!-- <div class="page" data-page="12">
+        <h2>✅ GABARITO OFICIAL COM COMENTÁRIOS</h2>
         <div class="gabarito-box">
-            <p><b>1-D</b> | <b>2-C</b> | <b>3-C</b> | <b>4-D</b> | <b>5-C</b> | <b>6-C</b> | <b>7-B</b> | <b>8-B</b> | <b>9-B</b> | <b>10-B</b></p>
-            <p><b>11-B</b> | <b>12-C</b> | <b>13-C</b> | <b>14-A</b> | <b>15-A</b> | <b>16-B</b> | <b>17-C</b> | <b>18-B</b> | <b>19-A</b> | <b>20-B</b></p>
-            <p><b>21-A</b> | <b>22-B</b> | <b>23-E</b> | <b>24-C</b> | <b>25-A</b></p>
+            <p><b>1-C</b> | <b>2-B</b> | <b>3-B</b> | <b>4-B</b> | <b>5-B</b> | <b>6-B</b> | <b>7-B</b> | <b>8-B</b> | <b>9-C</b> | <b>10-B</b></p>
+            <p><b>11-B</b> | <b>12-C</b> | <b>13-A</b> | <b>14-D</b> | <b>15-D</b> | <b>16-A</b> | <b>17-C</b> | <b>18-D</b> | <b>19-D</b> | <b>20-C</b></p>
+            <p><b>21-B</b> | <b>22-CERTO</b> | <b>23-D</b> | <b>24-A</b> | <b>25-A</b></p>
         </div>
-        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (F,V,V,F); Q15 (V,F,V,F); Q21 (V,F,V,V); Q25 (V,V,F,V).</p>
-    </div>
 
-    <!-- ============================================================ -->
-    <!-- ÁREA DE NAVEGAÇÃO                                            -->
-    <!-- ============================================================ -->
+        <h3>📚 Comentários</h3>
+        <ul>
+            <li><b>1:</b> <i>Cálida</i> significa quente. No contexto, reforça o prazer do banho. A (oposto), B e D não guardam relação semântica com temperatura.</li>
+            <li><b>2:</b> É uma metáfora para o relaxamento afetivo. Não é sentido real (flutuação física), nem técnico ou de deboche (irônico).</li>
+            <li><b>3:</b> Retoma o substantivo "dinheiro". Não é conjunção pois exerce papel sintático de sujeito do verbo existir.</li>
+            <li><b>4:</b> <i>Farta</i> é o oposto direto de escassa (pouca). As outras opções são sinônimos.</li>
+            <li><b>5:</b> O autor afirma que a experiência "nunca se banalizou inteiramente".</li>
+            <li><b>6:</b> O texto define o sentido negativo como um "vazio", a mera falta de conflito sem dinamismo.</li>
+            <li><b>7:</b> <i>Assolar</i> significa destruir ou causar sofrimento. As outras alteram o sentido para positivo.</li>
+            <li><b>8:</b> Conforme a teoria (Regra 2), os prefixos "além, aquém, recém e sem" obrigatoriamente pedem hífen.</li>
+            <li><b>9:</b> Ambas são proparoxítonas. A e B são oxítonas; D é paroxítona.</li>
+            <li><b>10:</b> "Como em 1929" é um exemplo intercalado que explica o termo anterior.</li>
+            <li><b>11:</b> Como substantivo (acompanhado de artigo "o"), deve ser grafado junto e com acento.</li>
+            <li><b>12:</b> O verbo "chegar" rege a preposição "a", indicando destino/movimento.</li>
+            <li><b>13:</b> Haver sempre tempo para aprender a relaxar e ser feliz no amor, agindo com menos medo.</li>
+            <li><b>14:</b> Permitir o empréstimo de mais dinheiro do que os bancos tinham em ouro.</li>
+            <li><b>15:</b> O foco é a impunidade e a sofisticação do crime, não o atraso tecnológico.</li>
+            <li><b>16:</b> A criação de uma dependência tecnológica excessiva, vista na fala do garoto ao computador.</li>
+            <li><b>17:</b> "Apanhou de policiais por destruir caixa eletrônico". As outras tratam de repressão de gênero, política ou trabalho.</li>
+            <li><b>18:</b> Punirem-se os responsáveis por excessos, conforme o texto que associa "precisa acontecer" à punição de excessos contidos.</li>
+            <li><b>19:</b> Etapas para a construção da cultura da paz (mencionados como "primeiro passo" e "outro passo").</li>
+            <li><b>20:</b> A violência está banalizada (não há mais surpresa ou punição efetiva).</li>
+            <li><b>21:</b> As figurinhas se somaram ao celular e à carteira como alvo de desejo dos assaltantes.</li>
+            <li><b>22:</b> CERTO – Possui tipologia expositiva e injuntiva.</li>
+            <li><b>23:</b> <i>Existir – existência</i> é a grafia correta.</li>
+            <li><b>24:</b> "O estagiário foi mal treinado" (bem treinado).</li>
+            <li><b>25:</b> Admissão, paralisação, impasse obedecem às regras ortográficas.</li>
+        </ul>
+    </div> -->
+
+    <!-- NAVEGAÇÃO -->
     <div class="nav-area">
         <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
-
         <a href="index.html" style="text-decoration:none;">
             <button class="nav-btn menu-btn">🏠 Menu</button>
         </a>
-
-        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <span class="page-indicator" id="pageIndicator">Página 1 de 12</span>
         <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
     </div>
-    <div class="footer-note">
-        📖 Material para concursos – Navegue pelas páginas usando os botões.
-    </div>
+    <div class="footer-note">📖 Material para concursos – Navegue pelas páginas usando os botões.</div>
 </div>
 
 <script>
@@ -767,25 +566,17 @@
         const pages = document.querySelectorAll('.page');
         let current = 0;
         const total = pages.length;
-
         function updatePage() {
-            pages.forEach((p, i) => {
-                p.classList.toggle('active', i === current);
-            });
+            pages.forEach((p, i) => { p.classList.toggle('active', i === current); });
             document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
             document.getElementById('prevBtn').disabled = (current === 0);
             document.getElementById('nextBtn').disabled = (current === total - 1);
             document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-
         window.changePage = function(delta) {
             const newIndex = current + delta;
-            if (newIndex >= 0 && newIndex < total) {
-                current = newIndex;
-                updatePage();
-            }
+            if (newIndex >= 0 && newIndex < total) { current = newIndex; updatePage(); }
         };
-
         updatePage();
     })();
 </script>

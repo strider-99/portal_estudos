@@ -1,354 +1,42 @@
 [
-  {
-    "enunciado": "A frase em que o verbo 'assistir' está empregado corretamente é:",
-    "alternativas": [
-      "a) Assistimos o filme ontem",
-      "b) Assistimos ao filme ontem",
-      "c) Assistimos para o filme ontem",
-      "d) Assistimos no filme ontem",
-      "e) Assistimos por o filme ontem"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "A frase correta, segundo a norma culta, é:",
-    "alternativas": [
-      "a) Ele é capaz de vencer",
-      "b) Ele é capaz para vencer",
-      "c) Ele é capaz a vencer",
-      "d) Ele é capaz com vencer",
-      "e) Ele é capaz em vencer"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "'Mais de um aluno _________ a prova.' A forma verbal correta é:",
-    "alternativas": [
-      "a) fez",
-      "b) fizeram",
-      "c) fazia",
-      "d) faria",
-      "e) fizeram (ambas possíveis, mas a regra exige o singular)"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "A frase correta é:",
-    "alternativas": [
-      "a) Seguem anexo as cópias",
-      "b) Seguem anexas as cópias",
-      "c) Seguem anexos as cópias",
-      "d) Segue anexo as cópias",
-      "e) Segue anexas as cópias"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "A frase em que a crase foi empregada corretamente é:",
-    "alternativas": [
-      "a) Fui a festa",
-      "b) Fui à festa",
-      "c) Fui a à festa",
-      "d) Fui á festa",
-      "e) Fui a festa (sem crase)"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "O verbo 'preferir' exige a preposição:",
-    "alternativas": [
-      "a) de",
-      "b) a",
-      "c) para",
-      "d) com",
-      "e) por"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "A forma correta da concordância é: 'Havia _________ pessoas na sala.'",
-    "alternativas": [
-      "a) muitas",
-      "b) muito",
-      "c) bastante",
-      "d) muita",
-      "e) muito (invariável? Na verdade, 'havia muitas pessoas' – 'muitas' concorda com 'pessoas'. O verbo 'havia' fica no singular, mas o adjetivo concorda com o substantivo)."
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "'Ele está ansioso _______ viajar.' A preposição correta é:",
-    "alternativas": [
-      "a) de",
-      "b) para",
-      "c) com",
-      "d) a",
-      "e) por (também é possível, mas 'para' é mais comum)"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "Assinale a alternativa que preenche corretamente a lacuna: 'Vou _______ sua casa amanhã.'",
-    "alternativas": [
-      "a) à",
-      "b) a",
-      "c) as",
-      "d) às",
-      "e) a (crase facultativa antes de possessivo feminino, mas 'sua' é possessivo, então é facultativo. Vou marcar 'a' como opção se não tiver crase, ou 'à' se considerar. A questão pede uma opção. Normalmente, é facultativo, mas a banca pode cobrar a forma sem crase. Vou marcar 'a' para simplificar, mas com ressalva)."
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "'Um e outro _________ problema.' A forma correta é:",
-    "alternativas": [
-      "a) resolveu",
-      "b) resolveram",
-      "c) resolvia",
-      "d) resolverá",
-      "e) resolveriam (ambas são possíveis, mas o singular é mais formal)"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "O verbo 'visar' no sentido de 'objetivar' exige a preposição:",
-    "alternativas": [
-      "a) a",
-      "b) para",
-      "c) com",
-      "d) de",
-      "e) por"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "'Ela está _______ cansada.' A forma correta é:",
-    "alternativas": [
-      "a) meio",
-      "b) meia",
-      "c) meia (advérbio?) Na verdade, 'meio' como advérbio = invariável. Então 'meio cansada'. A resposta é 'meio'."
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "A frase em que NÃO ocorre crase é:",
-    "alternativas": [
-      "a) Chegou à noite",
-      "b) Foi à escola",
-      "c) Fez a lição à lápis",
-      "d) Referiu-se àquela pessoa",
-      "e) Entregou à aluna"
-    ],
-    "gabarito": "C",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "Analise as afirmativas sobre regência e concordância e assinale a sequência correta: ( ) O verbo 'haver' no sentido de 'existir' é impessoal e fica no singular. ( ) O adjetivo 'anexo' é invariável. ( ) 'Assistir' no sentido de 'ver' é VTD (não exige preposição). ( ) A crase é a fusão da preposição 'a' com o artigo 'a'.",
-    "alternativas": [
-      "a) V – F – F – V",
-      "b) F – V – F – V",
-      "c) V – V – F – F",
-      "d) F – F – V – V",
-      "e) V – F – V – F"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "Analise as afirmativas sobre crase e assinale a sequência correta: ( ) Antes de verbo, não ocorre crase. ( ) Antes de palavras masculinas, ocorre crase. ( ) Nas locuções adverbiais 'à tarde' e 'à noite', a crase é obrigatória. ( ) O uso da crase antes de pronome possessivo feminino é facultativo.",
-    "alternativas": [
-      "a) V – F – V – V",
-      "b) F – V – F – V",
-      "c) V – V – F – F",
-      "d) F – F – V – V",
-      "e) V – F – F – V"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "'O juiz _________ o réu.' A forma correta para o verbo 'absolver' (perdoar) é:",
-    "alternativas": [
-      "a) absolveu de",
-      "b) absolveu a",
-      "c) absolveu o",
-      "d) absolveu por",
-      "e) absolveu para"
-    ],
-    "gabarito": "C",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "'É __________ a entrada de animais.' A forma correta é:",
-    "alternativas": [
-      "a) proibido",
-      "b) proibida",
-      "c) proibido (com artigo? 'a entrada' exige concordância, então é 'proibida')."
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "'Ele se referiu _______ proposta que fiz.' A forma correta é:",
-    "alternativas": [
-      "a) a",
-      "b) à",
-      "c) a (sem crase, pois 'proposta' está no singular sem artigo? Na verdade, 'a proposta' tem artigo, então é 'à proposta')."
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "'Os Estados Unidos _________ um país desenvolvido.' A forma correta é:",
-    "alternativas": [
-      "a) é",
-      "b) são",
-      "c) eram",
-      "d) serão",
-      "e) foi (por ser um nome de país, normalmente se usa o singular)."
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "'Ele é suspeito _______ participação no crime.' A preposição correta é:",
-    "alternativas": [
-      "a) de",
-      "b) a",
-      "c) para",
-      "d) com",
-      "e) por"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "Analise as afirmativas sobre concordância e regência e assinale a sequência correta: ( ) A palavra 'menas' é admitida pela norma culta. ( ) O verbo 'fazer' impessoal fica no plural. ( ) 'Obrigado' concorda com o gênero de quem fala. ( ) A crase é obrigatória antes de pronome possessivo feminino.",
-    "alternativas": [
-      "a) F – F – V – F",
-      "b) V – V – F – V",
-      "c) F – V – V – F",
-      "d) V – F – F – V",
-      "e) F – F – V – V"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "O verbo 'pagar' exige objeto direto (coisa) e indireto (pessoa). Assinale a alternativa correta:",
-    "alternativas": [
-      "a) Pagou o funcionário",
-      "b) Pagou ao funcionário o salário",
-      "c) Pagou o salário o funcionário",
-      "d) Pagou o funcionário o salário",
-      "e) Pagou o salário para o funcionário"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "'Havia _______ pessoas na fila.' A forma correta é:",
-    "alternativas": [
-      "a) bastante",
-      "b) bastantes",
-      "c) bastante (advérbio, mas aqui é adjetivo, então 'bastantes')."
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "'Vou _______ casa de minha avó.' A forma correta (segundo a norma culta mais rigorosa) é:",
-    "alternativas": [
-      "a) a",
-      "b) à",
-      "c) as",
-      "d) às",
-      "e) a (facultativo antes de possessivo feminino, mas considerando a norma mais tradicional, pode-se usar 'à')."
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "Analise as afirmativas sobre concordância e regência e assinale a sequência correta: ( ) A regência verbal estuda a relação entre o verbo e seu complemento. ( ) A concordância nominal se dá entre substantivo e seus modificadores. ( ) A crase ocorre antes de verbos no infinitivo. ( ) O adjetivo 'anexo' é invariável quando acompanha substantivo.",
-    "alternativas": [
-      "a) V – V – F – F",
-      "b) F – V – V – F",
-      "c) V – F – V – F",
-      "d) F – F – V – V",
-      "e) V – V – F – V"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "O verbo 'lembrar' no sentido de 'recordar' é transitivo direto. A forma correta é:",
-    "alternativas": [
-      "a) Lembrei-me disso",
-      "b) Lembrei disso",
-      "c) Me lembrei disso",
-      "d) Lembrei disso (sem 'me')",
-      "e) Lembrei de isso"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "A frase 'A maioria dos alunos chegou' está correta. A concordância é:",
-    "alternativas": [
-      "a) Verbal, com o núcleo 'maioria' (singular)",
-      "b) Verbal, com 'alunos' (plural)",
-      "c) Nominal, com 'alunos' (plural)",
-      "d) Nominal, com 'maioria' (singular)",
-      "e) Concordância ideológica (silepse)"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "A regência do verbo 'obedecer' exige a preposição:",
-    "alternativas": [
-      "a) a",
-      "b) para",
-      "c) de",
-      "d) com",
-      "e) por"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "A frase em que a crase é facultativa é:",
-    "alternativas": [
-      "a) Fui à escola",
-      "b) Refiro-me àquela pessoa",
-      "c) Vou à sua casa",
-      "d) Entreguei à professora",
-      "e) Chegamos à noite"
-    ],
-    "gabarito": "C",
-    "slug_materia": "apostila_portugues_modulo5"
-  },
-  {
-    "enunciado": "O verbo 'custar' no sentido de 'ser difícil' exige sujeito:",
-    "alternativas": [
-      "a) No singular",
-      "b) No plural",
-      "c) Oração subordinada",
-      "d) Complemento indireto",
-      "e) Não exige concordância"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo5"
-  }
+  {"enunciado":"(Cap I - Q1) Assinale a alternativa que respeita a norma-padrão de concordância:","alternativas":["a) Já faziam anos que não se via tantas descobertas.","b) Ocorreu, durante o verão, novas capacidades de boiar.","c) Boiar e nadar exige do praticante muita atenção.","d) Bastam duas experiências para nos transformar em pessoas diferentes.","e) Existe, nas águas da praia, muitos peixes coloridos."],"gabarito":"D","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Cap I - Q2) 'Novas fontes de energia sustentáveis são buscadas por cientistas'. Substituindo o sujeito por 'Novos tipos de pesquisa', o verbo deverá:","alternativas":["a) Permanecer no plural para concordar com 'cientistas'.","b) Ir para o singular para concordar com 'pesquisa'.","c) Permanecer no plural para concordar com o núcleo 'tipos'.","d) Ir para o singular para concordar com 'fontes'.","e) Ficar no plural opcionalmente."],"gabarito":"C","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Cap I - Q3) Indique a frase com erro de concordância nominal:","alternativas":["a) Seguem anexo as fotos da praia de Ubatuba.","b) As capacidades humanas são bastantes para a evolução.","c) Ela mesma disse que aprendeu a boiar sozinha.","d) É necessária paciência para lidar com o novo.","e) As portas estavam meio abertas durante o vento."],"gabarito":"A","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Cap I - Q4) Na frase 'Cada um de nós é chamado à criação de um mundo pacificado', a flexão de singular no verbo 'ser' é obrigatória.","alternativas":["a) CERTO","b) ERRADO"],"gabarito":"A","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Cap I - Q5) Assinale a frase em que a concordância verbal está correta:","alternativas":["a) Haviam muitas pessoas na praia Brava de Ubatuba.","b) Deve existir formas de melhorar os relacionamentos.","c) Podem haver novas descobertas após os 34 anos.","d) Fazem dez anos que ele aprendeu a guiar.","e) Trata-se de experiências subjetivas que nos transformam."],"gabarito":"E","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Cap II - Q1) Assinale a alternativa correta quanto à regência:","alternativas":["a) O autor aspira o sucesso de boiar na água.","b) Prefiro mais boiar do que nadar com esforço.","c) Esta é a praia onde o autor se referiu no texto.","d) Os filhos cujos os rostos eram risonhos estavam na praia.","e) O professor assistiu ao progresso dos alunos no curso."],"gabarito":"E","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Cap II - Q2) Preencha: 'A cidade ___ ele mora é calma, mas a praia ___ ele se dirigiu era agitada.'","alternativas":["a) onde - aonde","b) aonde - onde","c) em que - a que","d) as alternativas A e C estão corretas","e) onde - onde"],"gabarito":"D","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Cap II - Q3) O uso do pronome relativo está INCORRETO em:","alternativas":["a) O dinheiro de que os bancos precisam é fictício.","b) Os materiais cujas propriedades são valiosas são raros.","c) A situação onde me encontrei era perversa.","d) O autor a quem o texto pertence é Ivan Martins.","e) Tudo quanto foi dito no relatório está claro."],"gabarito":"C","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Cap II - Q4) Em 'novas capacidades fazem de nós pessoas diferentes', o termo 'de nós' é exigido pela regência de:","alternativas":["a) Capacidades.","b) Pessoas.","c) Fazem.","d) Nós.","e) Diferentes."],"gabarito":"C","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Cap II - Q5) Marque a alternativa que apresenta erro na preposição antes do relativo:","alternativas":["a) Este é o ideal a que viso.","b) As ferramentas de que dispomos são tecnológicas.","c) O mestre a quem obedecemos é sábio.","d) As verdades em que cremos são subjetivas.","e) O filme que eu gostei foi Stephen Hawking."],"gabarito":"E","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Cap III - Q1) Em 'Cada um de nós é chamado à criação de um mundo pacificado', a supressão do acento grave manteria a correção gramatical.","alternativas":["a) CERTO","b) ERRADO"],"gabarito":"B","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Cap III - Q2) Ocorre crase em 'O autor refere-se àquilo que aprendeu na infância'.","alternativas":["a) CERTO","b) ERRADO"],"gabarito":"A","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Cap III - Q3) Preencha: 'O sistema bancário induz ___ pessoas ___ dívidas, pois não impõe limites ___ produção de dinheiro.'","alternativas":["a) a - à - a","b) as - a - à","c) às - à - a","d) às - a - à","e) a - a - a"],"gabarito":"B","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Cap III - Q4) Marque a opção onde o uso da crase é FACULTATIVO:","alternativas":["a) Dirigiu-se à Ubatuba de seus sonhos.","b) Entregou os relatórios à sua secretária.","c) O assaltante chegou à banca de jornais.","d) Ficou à espera de notícias.","e) Chegaram à conclusão de que o dinheiro é escasso."],"gabarito":"B","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Cap III - Q5) A crase está INCORRETA em:","alternativas":["a) Começou à boiar depois de muita tentativa.","b) Referiu-se àquelas figurinhas da Copa.","c) À medida que o tempo passa, aprendemos mais.","d) Chegou às duas horas da tarde na praia.","e) O acesso à internet gera dependência."],"gabarito":"A","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 1) 'A natureza é capaz de produzir materiais preciosos'. Se trocarmos 'natureza' por 'fontes', a frase correta é:","alternativas":["a) As fontes é capaz de produzir...","b) As fontes são capaz de produzir...","c) As fontes são capazes de produzir...","d) As fontes são capazes de produzirem...","e) As fontes é capazes de produzir..."],"gabarito":"C","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 2) Em 'O verão em que aprendi a boiar', se substituirmos 'verão' por 'época', o termo sublinhado vira:","alternativas":["a) à que","b) na qual","c) onde","d) a que","e) cujo"],"gabarito":"B","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 3) A concordância está correta em:","alternativas":["a) Faziam anos que os cientistas esperavam Hawking.","b) Devem haver muitas mentes brilhantes no céu.","c) Tratam-se de gênios da física contemporânea.","d) Haviam muitas expectativas sobre sua chegada.","e) Existiam mentes brilhantes que o esperavam."],"gabarito":"E","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 4) 'Os banqueiros criaram manobras para emprestar dinheiro'. A regência de 'emprestar' permite:","alternativas":["a) Emprestar dinheiro aos clientes.","b) Emprestar dinheiro nos clientes.","c) Emprestar dinheiro com os clientes.","d) Emprestar dinheiro para com os clientes.","e) Emprestar dinheiro sob os clientes."],"gabarito":"A","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 5) 'Finalmente consegui boiar'. Se o autor dissesse que se dedicou à prática, a frase seria:","alternativas":["a) Dedicou-se à boiar.","b) Dedicou-se à flutuação.","c) Dedicou-se a flutuação.","d) Dedicou-se as flutuações.","e) Dedicou-se àquelas flutuar."],"gabarito":"B","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 6) 'A febre do troca-troca de figurinhas pode estar atingindo uma temperatura muito alta.' A concordância nominal de 'alta' justifica-se por:","alternativas":["a) Concordar com 'troca-troca'.","b) Concordar com 'febre'.","c) Concordar com 'temperatura'.","d) Ser um advérbio invariável.","e) Concordar com 'figurinhas'."],"gabarito":"C","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 7) 'Muitos jornaleiros levam os estoques para casa'. Se substituirmos 'casa' por 'suas residências', a crase será:","alternativas":["a) Obrigatória.","b) Proibida.","c) Facultativa.","d) Inexistente.","e) Errada."],"gabarito":"C","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 8) 'Construir uma cultura da paz envolve dotar as crianças da compreensão de princípios'. O verbo 'dotar' exige a preposição:","alternativas":["a) De.","b) Em.","c) Por.","d) A.","e) Para."],"gabarito":"A","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 9) 'Não faltam, também, os arautos do quanto pior, melhor'. O verbo 'faltar' concorda com:","alternativas":["a) Também.","b) Arautos.","c) Pior.","d) Melhor.","e) Omitido."],"gabarito":"B","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 10) Se o menino usasse a norma-padrão para 'A gente não somos viciados', o correto seria:","alternativas":["a) A gente não é viciado.","b) Nós não somos viciado.","c) A gente não somos viciado.","d) Nós não é viciado.","e) A gente não é viciados."],"gabarito":"A","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 11) Em 'A cidade mudou de fisionomia', a regência de 'mudou' indica:","alternativas":["a) Mudança de estado.","b) Origem.","c) Posse.","d) Instrumento.","e) Finalidade."],"gabarito":"B","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 12) Em 'Desligue as luzes', a regência do verbo 'Desligar' o classifica como:","alternativas":["a) Transitivo Indireto.","b) Intransitivo.","c) Transitivo Direto.","d) Bitransitivo.","e) De ligação."],"gabarito":"C","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 13) 'O patrimônio de 80 pessoas é maior do que o de 3,6 bilhões'. Se trocarmos 'patrimônio' por 'riquezas', o termo 'maior' vira:","alternativas":["a) Maiors.","b) Maiores.","c) Mais grande.","d) Mais grandes.","e) Permanece maior."],"gabarito":"B","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 14) Em 'referir-se à gestão de conflitos', a crase ocorre porque:","alternativas":["a) O verbo é transitivo direto.","b) Gestão é palavra masculina.","c) O termo regente exige 'a' e o regido aceita artigo 'a'.","d) É uma locução adverbial de tempo.","e) É opcional antes de substantivos comuns."],"gabarito":"C","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 15) Na frase 'A violência já é bastante denunciada', o termo 'bastante' é um adjetivo e poderia ir para o plural.","alternativas":["a) CERTO","b) ERRADO"],"gabarito":"B","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 16) Assinale a alternativa onde o 'A' é apenas preposição (sem crase):","alternativas":["a) O autor foi à praia.","b) Ele aprendeu à boiar.","c) O gênio voltou à vida.","d) Referiu-se àquele gênio.","e) Assistiu à cena."],"gabarito":"B","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 17) 'A violência está banalizada'. Substituindo por 'Os atos violentos':","alternativas":["a) Os atos violentos está banalizada.","b) Os atos violentos estão banalizados.","c) Os atos violentos estão banalizada.","d) Os ativos violentos é banalizados.","e) Os atos violentos são banalizada."],"gabarito":"B","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 18) Qual frase apresenta regência correta do verbo 'Visar' (objetivar):","alternativas":["a) Ele visa o cargo de juiz.","b) Ele visa ao cargo de juiz.","c) Ele visa no cargo de juiz.","d) Ele visa pelo cargo de juiz.","e) Ele visa com o cargo de juiz."],"gabarito":"B","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 19) 'As mãos ao volante'. A preposição 'a' fundida com o artigo 'o' ocorre por regência de um termo implícito que indica:","alternativas":["a) Modo.","b) Posse.","c) Lugar/Posição.","d) Tempo.","e) Causa."],"gabarito":"C","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 20) 'A gente nunca para de aprender'. Substituindo por 'Nós':","alternativas":["a) Nós nunca para de aprender.","b) Nós nunca paramos de aprender.","c) Nós nunca param de aprender.","d) Nós nunca paramos de aprendermos.","e) Nós nunca paramos de aprendem."],"gabarito":"B","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 21) 'À medida que os anos passam...'. O uso da crase é obrigatório por se tratar de locução conjuntiva feminina.","alternativas":["a) CERTO","b) ERRADO"],"gabarito":"A","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 22) Indique o erro de crase:","alternativas":["a) Fui à escola de natação.","b) Ficamos à vontade.","c) Entregue o livro à ele.","d) Sairemos às dez horas.","e) Chegamos àquela conclusão."],"gabarito":"C","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 23) 'O dinheiro é criado a partir de empréstimos'. Não há crase em 'a partir' porque:","alternativas":["a) Partir é verbo.","b) A palavra é masculina.","c) É facultativo.","d) Já existe uma preposição.","e) O 'a' é artigo."],"gabarito":"A","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 24) 'As águas translúcidas da praia Brava'. Se o adjetivo 'translúcidas' viesse antes de 'águas e sol':","alternativas":["a) Os translúcidos águas e sol.","b) As translúcidas águas e sol.","c) O translúcido águas e sol.","d) As translúcidas águas e sóis.","e) O translúcido águas e sóis."],"gabarito":"B","slug_materia":"apostila_portugues_modulo5"},
+  {"enunciado":"(Sim 25) Sobre o uso de 'Onde/Aonde', marque a correta:","alternativas":["a) Aonde estão os documentos?","b) Onde você quer chegar com isso?","c) Aonde você mora atualmente?","d) Não sei onde te encontrar.","e) Aonde os fatos ocorreram?"],"gabarito":"D","slug_materia":"apostila_portugues_modulo5"}
 ]

@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apostila - Português Módulo 1: Compreensão e Organização Textual</title>
+    <title>Apostila - Português: Leitura, Compreensão e Interpretação</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             background: #f5f2eb;
@@ -47,18 +43,9 @@
             margin: 18px 0 10px 0;
             font-size: 19px;
         }
-        p {
-            line-height: 1.7;
-            margin-bottom: 12px;
-            text-align: justify;
-        }
-        ul, ol {
-            margin: 10px 0 15px 30px;
-        }
-        li {
-            margin-bottom: 6px;
-            line-height: 1.6;
-        }
+        p { line-height: 1.7; margin-bottom: 12px; text-align: justify; }
+        ul, ol { margin: 10px 0 15px 30px; }
+        li { margin-bottom: 6px; line-height: 1.6; }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -71,19 +58,40 @@
             text-align: left;
             vertical-align: top;
         }
-        th {
-            background-color: #d6eaf8;
-            font-weight: bold;
+        th { background-color: #d6eaf8; font-weight: bold; }
+        pre {
+            background: #f4f6f9;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 13px;
+            line-height: 1.5;
+            margin: 15px 0;
+            font-family: 'Consolas', 'Monaco', monospace;
         }
         .dica {
-            background-color: #fef3e2;
-            border-left: 6px solid #e67e22;
+            background-color: #e8f5e9;
+            border-left: 6px solid #2e7d32;
             padding: 14px 18px;
             margin: 15px 0;
             border-radius: 4px;
         }
-        .dica b {
-            color: #a04000;
+        .dica b { color: #1b5e20; }
+        .pegadinha {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .pegadinha b { color: #922b21; }
+        .exemplo {
+            background-color: #f0f8ff;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #3498db;
         }
         .gabarito-box {
             background-color: #e8f5e9;
@@ -100,32 +108,12 @@
             border-left: 4px solid #3498db;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
-        .questao-item p {
-            margin-bottom: 6px;
-        }
-        .alternativas {
-            margin-left: 20px;
-            font-size: 15px;
-        }
-        .exemplo {
-            background-color: #f0f8ff;
-            padding: 12px 18px;
-            border-radius: 6px;
-            margin: 10px 0;
-            border: 1px dashed #3498db;
-        }
+        .questao-item p { margin-bottom: 6px; }
+        .alternativas { margin-left: 20px; font-size: 15px; }
 
-        .page {
-            display: none;
-            animation: fadeIn 0.3s ease;
-        }
-        .page.active {
-            display: block;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0.5; }
-            to { opacity: 1; }
-        }
+        .page { display: none; animation: fadeIn 0.3s ease; }
+        .page.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0.5; } to { opacity: 1; } }
 
         .nav-area {
             display: flex;
@@ -158,531 +146,516 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.15);
             min-width: 120px;
         }
-        .nav-btn:hover {
-            background-color: #3498db;
-        }
-        .nav-btn:active {
-            transform: scale(0.97);
-        }
-        .nav-btn:disabled {
-            background-color: #adb5bd;
-            cursor: not-allowed;
-            box-shadow: none;
-        }
-        .nav-btn.secondary {
-            background-color: #6c757d;
-        }
-        .nav-btn.secondary:hover {
-            background-color: #5a6268;
-        }
-        .nav-btn.menu-btn {
-            background-color: #28a745;
-            min-width: 100px;
-        }
-        .nav-btn.menu-btn:hover {
-            background-color: #218838;
-        }
+        .nav-btn:hover { background-color: #3498db; }
+        .nav-btn:active { transform: scale(0.97); }
+        .nav-btn:disabled { background-color: #adb5bd; cursor: not-allowed; box-shadow: none; }
+        .nav-btn.secondary { background-color: #6c757d; }
+        .nav-btn.secondary:hover { background-color: #5a6268; }
+        .nav-btn.menu-btn { background-color: #28a745; min-width: 100px; }
+        .nav-btn.menu-btn:hover { background-color: #218838; }
 
-        .footer-note {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 13px;
-            color: #868e96;
-        }
-        hr {
-            margin: 30px 0 15px 0;
-            border: 1px solid #dee2e6;
-        }
+        .footer-note { text-align: center; margin-top: 15px; font-size: 13px; color: #868e96; }
+        hr { margin: 30px 0 15px 0; border: 1px solid #dee2e6; }
 
         @media (max-width: 600px) {
             .book-container { padding: 15px; }
             .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
             h1 { font-size: 22px; }
+            pre { font-size: 11px; padding: 10px; }
         }
     </style>
 </head>
 <body>
 <div class="book-container" id="book">
 
-    <h1>📝 LÍNGUA PORTUGUESA – MÓDULO 1</h1>
-    <p style="text-align:center; font-size:18px; color:#2c3e50;"><b>Compreensão Textual, Organização do Discurso e Comunicação</b></p>
+    <h1>📖 LEITURA, COMPREENSÃO E INTERPRETAÇÃO DE TEXTO</h1>
+    <p style="text-align:center; font-size:18px; color:#2c3e50;"><b>Fundamentos, erros clássicos, coesão, tipologia textual e guia prático de resolução</b></p>
     <hr>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- PÁGINA 1: Capa / Sumário                                     -->
     <!-- ============================================================ -->
     <div class="page active" data-page="1">
-        <h2>1. INTRODUÇÃO</h2>
-        <p>A Língua Portuguesa é uma disciplina fundamental em qualquer concurso público. Ela avalia a capacidade do candidato de compreender textos, dominar a norma culta e utilizar a linguagem de forma adequada às diferentes situações de comunicação.</p>
-        <p>Este módulo cobre os <b>fundamentos da comunicação textual</b>: compreensão e interpretação de textos, modos de organização (descrição, narração, dissertação), coesão e coerência, níveis de linguagem e as funções da linguagem. É a base para os próximos módulos, que abordarão a gramática normativa.</p>
+        <h2>📚 APRESENTAÇÃO</h2>
+        <p>Esta apostila foi elaborada para o estudo aprofundado da <b>Leitura, Compreensão e Interpretação de Textos</b> em concursos públicos. O material apresenta conceitos fundamentais, técnicas de resolução, os erros mais comuns em provas e um simulado comentado para fixação.</p>
 
         <div class="dica">
-            <b>🎯 Objetivo do Módulo:</b> Desenvolver a capacidade de interpretar textos com profundidade, reconhecer os diferentes tipos de organização textual, dominar os níveis de linguagem e compreender os elementos e funções da comunicação, com 25 questões ao final.
+            <b>🎯 Como usar este material:</b> Leia cada capítulo com atenção, memorize os pontos destacados, estude as pegadinhas e resolva o simulado comentado ao final. A repetição ativa é a chave para dominar interpretação de texto.
         </div>
 
-        <h2>2. SUMÁRIO</h2>
+        <h2>📋 SUMÁRIO</h2>
         <ul>
-            <li><b>Módulo I:</b> Compreensão e Interpretação de Textos – pág. 2</li>
-            <li><b>Módulo II:</b> Modos de Organização Textual – Descrição, Narração, Dissertação – pág. 3</li>
-            <li><b>Módulo III:</b> Coesão e Coerência Textuais – pág. 4</li>
-            <li><b>Módulo IV:</b> Níveis de Linguagem e Adequação ao Contexto – pág. 5</li>
-            <li><b>Módulo V:</b> Elementos da Comunicação e Funções da Linguagem – pág. 6</li>
-            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+            <li><b>Capítulo 1:</b> Fundamentos da Leitura, Contexto e Intertexto – pág. 2</li>
+            <li><b>Capítulo 2:</b> Compreensão vs. Interpretação Textual – pág. 3</li>
+            <li><b>Capítulo 3:</b> Os Três Erros Clássicos de Interpretação – pág. 4</li>
+            <li><b>Capítulo 4:</b> Coesão Textual e Vocábulos Relatores – pág. 5</li>
+            <li><b>Capítulo 5:</b> Tipologia Textual, Gêneros e Sentido das Palavras – pág. 6</li>
+            <li><b>Capítulo 6:</b> Guia Prático de Resolução e Dicas de Prova – pág. 6</li>
+            <li><b>Simulado:</b> 10 questões comentadas (págs. 7 e 8)</li>
         </ul>
     </div>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 2: Compreensão e Interpretação                        -->
+    <!-- PÁGINA 2: Capítulo 1                                          -->
     <!-- ============================================================ -->
     <div class="page" data-page="2">
-        <h2>MÓDULO I – COMPREENSÃO E INTERPRETAÇÃO DE TEXTOS</h2>
-        <h3>2.1. Diferença entre Compreensão e Interpretação</h3>
+        <h2>CAPÍTULO 1: FUNDAMENTOS DA LEITURA, CONTEXTO E INTERTEXTO</h2>
+
+        <h3>1. Conceito e Teoria Essencial</h3>
         <ul>
-            <li><b>Compreensão (ou Compreensão Literal):</b> captar o que está explicitamente escrito no texto. É a decodificação da mensagem. Ex.: identificar a ideia principal, localizar informações explícitas.</li>
-            <li><b>Interpretação (ou Compreensão Inferencial):</b> extrair o que está implícito, além do que foi escrito. É a capacidade de inferir, deduzir, estabelecer relações e captar as intenções do autor.</li>
+            <li><b>Texto:</b> É um conjunto de ideias organizadas e relacionadas entre si, formando um todo significativo capaz de produzir interação comunicativa por meio da capacidade de codificação e decodificação.</li>
+            <li><b>Contexto:</b> Um texto é constituído por diversas frases. Em cada uma delas, há uma informação que se conecta com a anterior e/ou com a posterior, estruturando o conteúdo a ser transmitido. A essa interligação dá-se o nome de <b>contexto</b>. Se uma frase for retirada de seu contexto original e analisada separadamente, poderá assumir um sentido completamente diferente do inicial.</li>
+            <li><b>Intertexto:</b> Comumente, os textos apresentam referências diretas ou indiretas a outros autores e obras por meio de citações. A esse recurso de diálogo entre textos dá-se o nome de <b>intertexto</b>.</li>
         </ul>
-        <div class="exemplo">
-            <p><b>Exemplo:</b> "Era uma noite fria e chuvosa. João caminhava apressado pelas ruas desertas, com as mãos nos bolsos."</p>
-            <p><b>Compreensão:</b> A noite era fria e chuvosa. João caminhava rápido em ruas vazias.</p>
-            <p><b>Interpretação:</b> João provavelmente estava com frio (mãos nos bolsos), apressado por algum motivo (talvez desconforto, medo ou compromisso), e a cidade estava pouco movimentada.</p>
+
+        <h3>2. Pontos para Memorização</h3>
+        <ul>
+            <li><b>Interligação obrigatória:</b> frases isoladas perdem o sentido pretendido pelo autor.</li>
+            <li><b>Apreensão do todo:</b> a interpretação de um texto exige identificar primeiramente a <b>ideia principal</b> para, a partir dela, localizar as ideias secundárias (fundamentações) e as explicações.</li>
+        </ul>
+
+        <h3>3. Como o Tema é Cobrado em Provas</h3>
+        <p>As bancas examinam se o candidato consegue relacionar o conteúdo do texto com a realidade, identificar os elementos centrais de uma argumentação ou processo, e reconhecer citações e referências a outras obras ou fatos históricos.</p>
+
+        <h3>4. Principais Pegadinhas</h3>
+        <div class="pegadinha">
+            <b>⚠️ Analisar frases isoladas:</b> A banca retira um trecho do texto e propõe uma afirmativa que parece verdadeira no senso comum, mas que perdeu o sentido original por estar descontextualizada.
         </div>
 
-        <h3>2.2. Dicas para uma Boa Interpretação</h3>
-        <ul>
-            <li><b>Leia o texto mais de uma vez:</b> uma leitura rápida para o geral, e uma segunda mais atenta para os detalhes.</li>
-            <li><b>Identifique a ideia central:</b> qual é o tema principal do texto?</li>
-            <li><b>Pergunte-se "por quê?":</b> por que o autor diz isso? Qual a intenção?</li>
-            <li><b>Observe os conectivos:</b> "portanto", "porém", "além disso" indicam relações lógicas.</li>
-            <li><b>Não use seu conhecimento de mundo para distorcer o texto:</b> a interpretação deve ser baseada no que o texto diz, não no que você acha que ele deveria dizer.</li>
-        </ul>
+        <h3>5. Exemplo Prático</h3>
+        <div class="exemplo">
+            <p><b>Texto:</b> <i>"No início era para pagar a escola do filho. Depois vieram as mães e avós doentes..."</i></p>
+            <p><b>Aplicação:</b> Analisar esses fatos isoladamente faria parecer que o texto trata apenas de despesas médicas ou escolares. No entanto, no contexto global, a sequência de pedidos justifica por que o narrador aprendeu a não ser generoso e como foi enganado.</p>
+        </div>
 
-        <h3>2.3. Ideia Principal x Ideia Secundária</h3>
-        <ul>
-            <li><b>Ideia principal:</b> o tema central, a tese defendida pelo autor.</li>
-            <li><b>Ideias secundárias:</b> argumentos, exemplos, detalhes que dão suporte à ideia principal.</li>
-        </ul>
+        <h3>6. Dica Objetiva de Resolução</h3>
+        <div class="dica">
+            <b>✅ Fragmentação consciente:</b> Divida o texto em parágrafos ou blocos de ideias para compreender como cada parte se conecta com a anterior e com a posterior.
+        </div>
     </div>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 3: Modos de Organização Textual                       -->
+    <!-- PÁGINA 3: Capítulo 2                                          -->
     <!-- ============================================================ -->
     <div class="page" data-page="3">
-        <h2>MÓDULO II – MODOS DE ORGANIZAÇÃO TEXTUAL</h2>
-        <p>Os modos de organização textual (ou tipologias) referem-se à forma como o texto é estruturado para alcançar seu objetivo comunicativo.</p>
+        <h2>CAPÍTULO 2: COMPREENSÃO VS. INTERPRETAÇÃO TEXTUAL</h2>
 
-        <h3>3.1. Descrição</h3>
-        <ul>
-            <li><b>Objetivo:</b> retratar um objeto, pessoa, lugar ou cena, detalhando suas características sensoriais (visuais, auditivas, táteis, olfativas).</li>
-            <li><b>Linguagem:</b> uso de adjetivos, locuções adverbiais, verbos de estado (ser, estar, parecer).</li>
-            <li><b>Exemplo:</b> "O quarto era pequeno, com uma cama de ferro encostada na parede. Uma janela alta deixava entrar a luz do sol da manhã."</li>
-        </ul>
-
-        <h3>3.2. Narração</h3>
-        <ul>
-            <li><b>Objetivo:</b> contar uma história, relatar um acontecimento real ou fictício, com personagens, enredo, tempo e espaço.</li>
-            <li><b>Linguagem:</b> verbos de ação, predominância de tempos passados (pretérito perfeito, imperfeito, mais-que-perfeito).</li>
-            <li><b>Elementos:</b> narrador (1ª ou 3ª pessoa), personagens, conflito, clímax e desfecho.</li>
-        </ul>
-
-        <h3>3.3. Dissertação (Argumentação)</h3>
-        <ul>
-            <li><b>Objetivo:</b> apresentar ideias, pontos de vista e argumentos sobre um determinado tema, com estrutura lógica e persuasiva.</li>
-            <li><b>Linguagem:</b> impessoal, com uso de conectivos lógicos (portanto, logo, porque, além disso).</li>
-            <li><b>Estrutura típica:</b> introdução (tema + tese), desenvolvimento (argumentos) e conclusão (síntese / proposta).</li>
-        </ul>
-
-        <h3>3.4. Quadro Comparativo</h3>
+        <h3>1. Conceito e Teoria Essencial</h3>
         <table>
-            <tr><th>Característica</th><th>DESCRIÇÃO</th><th>NARRAÇÃO</th><th>DISSSERTAÇÃO</th></tr>
-            <tr><td><b>Objetivo</b></td><td>Retratar características</td><td>Contar uma história</td><td>Argumentar / defender uma tese</td></tr>
-            <tr><td><b>Verbos predominantes</b></td><td>Ser, estar, parecer</td><td>Ação (passado)</td><td>Opinião, causa, consequência</td></tr>
-            <tr><td><b>Estrutura</b></td><td>Estática / sequencial</td><td>Início, meio, fim</td><td>Tese + argumentos + conclusão</td></tr>
+            <tr>
+                <th>Critério</th>
+                <th>Compreensão Textual (Literalidade)</th>
+                <th>Interpretação Textual (Inferência)</th>
+            </tr>
+            <tr>
+                <td><b>Definição</b></td>
+                <td>Apreensão das informações explícitas contidas na superfície do escrito.</td>
+                <td>Dedução de conclusões e sentidos implícitos a partir das pistas do texto.</td>
+            </tr>
+            <tr>
+                <td><b>Ação do Candidato</b></td>
+                <td>Localizar o que está escrito no texto.</td>
+                <td>Explicar, julgar, tirar conclusões e deduzir.</td>
+            </tr>
+            <tr>
+                <td><b>Enunciados Típicos</b></td>
+                <td><i>"Segundo o texto..."</i>, <i>"De acordo com o autor..."</i>, <i>"O texto afirma que..."</i>.</td>
+                <td><i>"Infere-se do texto..."</i>, <i>"O autor permite deduzir que..."</i>, <i>"Qual a intenção do autor ao afirmar..."</i>.</td>
+            </tr>
         </table>
+
+        <h3>2. Pontos para Memorização</h3>
+        <ul>
+            <li><b>A Supremacia da Ótica do Autor:</b> em provas de concurso, a única opinião que prevalece é a do <b>autor do texto</b>. A opinião ou convicção pessoal do candidato <b>não possui valor de gabarito</b>.</li>
+            <li><b>Parafrasear:</b> significa reescrever o texto com outras palavras mantendo rigorosamente o sentido original.</li>
+        </ul>
+
+        <h3>3. Como o Tema é Cobrado em Provas</h3>
+        <ul>
+            <li>Questões de <b>compreensão</b> exigem encontrar o termo sinônimo ou a reescrita exata do que foi dito.</li>
+            <li>Questões de <b>interpretação</b> exigem analisar a intenção comunicativa do autor (ex.: provocar reflexão, criticar um hábito, homenagear alguém).</li>
+        </ul>
+
+        <h3>4. Principais Pegadinhas</h3>
+        <div class="pegadinha">
+            <b>⚠️ Validar uma alternativa só porque ela é uma "verdade do mundo":</b> Se a afirmação for correta na vida real, mas não estiver fundamentada no texto, a alternativa está <b>errada</b>.
+        </div>
+
+        <h3>5. Exemplo Prático</h3>
+        <div class="exemplo">
+            <p><b>Trecho:</b> <i>"Todos os dias se pode tentar boiar."</i></p>
+            <ul>
+                <li><b>Compreensão:</b> O autor usa a metáfora de boiar na água.</li>
+                <li><b>Interpretação:</b> A frase refere-se ao fato de que sempre há tempo para aprender, relaxar e viver com mais calma e menos medo nas relações humanas.</li>
+            </ul>
+        </div>
+
+        <h3>6. Dica Objetiva de Resolução</h3>
+        <div class="dica">
+            <b>✅ Identifique o comando do enunciado:</b> Se o comando trouxer <i>"De acordo com o texto"</i>, busque a resposta expressa nas linhas. Se trouxer <i>"Infere-se que"</i>, busque a conclusão lógica autorizada pelas pistas do texto.
+        </div>
     </div>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 4: Coesão e Coerência                                 -->
+    <!-- PÁGINA 4: Capítulo 3                                          -->
     <!-- ============================================================ -->
     <div class="page" data-page="4">
-        <h2>MÓDULO III – COESÃO E COERÊNCIA TEXTUAIS</h2>
-        <h3>4.1. Coesão</h3>
-        <p>A <b>coesão</b> é a ligação linguística entre as partes do texto. Ela se dá por meio de elementos que conectam palavras, frases e parágrafos, garantindo a "costura" do texto.</p>
+        <h2>CAPÍTULO 3: OS TRÊS ERROS CLÁSSICOS DE INTERPRETAÇÃO</h2>
+
+        <h3>1. Conceito e Teoria Essencial</h3>
+        <p>Ao resolver questões de leitura, a maioria dos erros comete-se por três desvios principais:</p>
+
+        <pre>
+                       ┌─────────────────────────┐
+                       │ ERROS DE INTERPRETAÇÃO  │
+                       └────────────┬────────────┘
+                                    │
+         ┌──────────────────────────┼──────────────────────────┐
+         ▼                          ▼                          ▼
+┌──────────────────┐       ┌──────────────────┐       ┌──────────────────┐
+│   EXTRAPOLAÇÃO   │       │     REDUÇÃO      │       │    CONTRADIÇÃO   │
+│  (Inclui ideias  │       │  (Foca em trecho │       │   (Conclui o     │
+│ fora do escrito) │       │   e ignora o todo│       │ oposto do autor) │
+└──────────────────┘       └──────────────────┘       └──────────────────┘
+        </pre>
+
+        <ol>
+            <li><b>Extrapolação:</b> Ocorre quando o candidato acrescenta ideias que não estão no texto, seja por conhecimento prévio do tema, seja pelo uso da imaginação.</li>
+            <li><b>Redução:</b> É o oposto da extrapolação. Ocorre quando se dá atenção apenas a um aspecto ou detalhe isolado, esquecendo que o texto é um conjunto integrado de ideias, tornando a análise insuficiente.</li>
+            <li><b>Contradição:</b> Ocorre quando o texto apresenta ideias contrárias às opiniões do candidato e este, levado por suas convicções, tira conclusões equivocadas opostas ao que o autor defendeu.</li>
+        </ol>
+
+        <h3>2. Pontos para Memorização</h3>
         <ul>
-            <li><b>Coesão referencial:</b> uso de pronomes, sinônimos, hiperônimos para retomar ou antecipar termos. Ex.: "João chegou <b>ele</b> estava cansado."</li>
-            <li><b>Coesão sequencial:</b> uso de conectivos (conjunções, advérbios) que estabelecem relações lógicas. Ex.: "Estudou muito, <b>portanto</b> passou no concurso."</li>
+            <li><b>Extrapolar</b> = "Viajar" / Inventar fatos ausentes do texto.</li>
+            <li><b>Reduzir</b> = Focar na parte e esquecer o todo.</li>
+            <li><b>Contradizer</b> = Trocar a visão do autor pela sua própria.</li>
         </ul>
 
-        <h3>4.2. Coerência</h3>
-        <p>A <b>coerência</b> é a lógica interna do texto – a relação de sentido entre as ideias, a progressão temática e a ausência de contradições. Um texto pode ser coeso (ter conectivos) mas incoerente (sem sentido lógico).</p>
+        <h3>3. Como o Tema é Cobrado em Provas</h3>
+        <p>As bancas constroem distratores (alternativas erradas) utilizando exatamente estes três padrões: inserem uma alternativa com um detalhe verdadeiro, mas incompleto (redução), uma com um fato extrapolado (extrapolação) e uma com um sentido invertido por termos negativos (contradição).</p>
 
-        <div class="exemplo">
-            <p><b>Exemplo de falta de coerência:</b> "O João nasceu em 1990. Ele já estava aposentado há 20 anos quando isso aconteceu." (Não faz sentido cronológico).</p>
+        <h3>4. Principais Pegadinhas</h3>
+        <div class="pegadinha">
+            <b>⚠️ Palavras absolutizantes:</b> Alternativas que contêm termos como <i>"sempre"</i>, <i>"nunca"</i>, <i>"exclusivamente"</i>, <i>"todos"</i> ou <i>"nenhum"</i> frequentemente incorrem em <b>extrapolação</b> ou <b>redução</b>, salvo se o texto usar expressamente essas mesmas palavras.
         </div>
-        <ul>
-            <li><b>Coerência semântica:</b> as ideias não se contradizem.</li>
-            <li><b>Coerência pragmática:</b> o texto é adequado à situação comunicativa.</li>
-        </ul>
 
-        <h3>4.3. Principais Conectivos (para coesão sequencial)</h3>
-        <ul>
-            <li><b>Adição:</b> e, também, além disso, ademais.</li>
-            <li><b>Oposição / Contraste:</b> mas, porém, contudo, entretanto, no entanto.</li>
-            <li><b>Causa:</b> porque, visto que, já que, pois.</li>
-            <li><b>Consequência:</b> portanto, logo, assim, por isso, consequentemente.</li>
-            <li><b>Finalidade:</b> para que, a fim de que.</li>
-            <li><b>Tempo:</b> quando, enquanto, após, antes, logo que.</li>
-        </ul>
+        <h3>5. Exemplo Prático</h3>
+        <div class="exemplo">
+            <p><b>Texto:</b> Artigo sobre a greve dos caminhoneiros afirmando que <i>"há sempre o risco de excessos, a serem devidamente contidos e seus responsáveis, punidos..."</i>.</p>
+            <ul>
+                <li><b>Alternativa de Extrapolação:</b> afirmar que o texto defende o fim do direito de greve no país.</li>
+                <li><b>Alternativa de Redução:</b> afirmar que o texto deseja apenas manter a livre expressão.</li>
+                <li><b>Gabarito Correto:</b> punir os responsáveis pelos excessos cometidos.</li>
+            </ul>
+        </div>
+
+        <h3>6. Dica Objetiva de Resolução</h3>
+        <div class="dica">
+            <b>✅ Método da Eliminação por Rastreio:</b> Sublinhar no texto o trecho que comprova a alternativa. Se você não encontrar suporte direto ou indireto nas linhas do texto, elimine por extrapolação.
+        </div>
     </div>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 5: Níveis de Linguagem                                -->
+    <!-- PÁGINA 5: Capítulo 4                                          -->
     <!-- ============================================================ -->
     <div class="page" data-page="5">
-        <h2>MÓDULO IV – NÍVEIS DE LINGUAGEM, VARIEDADES E ADEQUAÇÃO</h2>
-        <h3>5.1. Níveis de Linguagem</h3>
+        <h2>CAPÍTULO 4: COESÃO TEXTUAL E VOCÁBULOS RELATORES</h2>
+
+        <h3>1. Conceito e Teoria Essencial</h3>
         <ul>
-            <li><b>Nível formal (ou culto):</b> uso da norma padrão da língua, com rigor gramatical, empregado em situações formais (discursos, documentos oficiais, redações, entrevistas de emprego).</li>
-            <li><b>Nível informal (ou coloquial):</b> uso cotidiano, com flexibilidade gramatical, gírias, expressões regionais. Usado em conversas com amigos, familiares, situações descontraídas.</li>
-            <li><b>Nível técnico / jargão:</b> linguagem especializada de uma área do conhecimento (direito, medicina, informática).</li>
-            <li><b>Nível literário:</b> linguagem artística, com figuras de linguagem, criatividade e expressividade.</li>
+            <li><b>Coesão Textual:</b> É a ligação sintática entre as palavras, orações e parágrafos de um texto.</li>
+            <li><b>Vocábulos Relatores:</b> São palavras (pronomes pessoais, demonstrativos, possessivos e relativos) que remetem a outros termos do texto, garantindo a continuidade do fluxo informativo sem repetições desnecessárias.</li>
         </ul>
 
-        <h3>5.2. Variedades da Língua</h3>
+        <h4>Emprego dos Pronomes Relativos</h4>
+        <table>
+            <tr>
+                <th>Pronome</th>
+                <th>Circunstância / Uso Padrão</th>
+                <th>Exemplo</th>
+            </tr>
+            <tr>
+                <td><b>Que / Qual</b></td>
+                <td>Neutros. Relacionam-se com pessoas ou coisas.</td>
+                <td><i>"O relatório <b>que</b> / <b>o qual</b> elaborei foi aprovado."</i></td>
+            </tr>
+            <tr>
+                <td><b>Quem</b></td>
+                <td>Refere-se exclusivamente a pessoas e vem precedido de preposição.</td>
+                <td><i>"O médico a <b>quem</b> consultei era especialista."</i></td>
+            </tr>
+            <tr>
+                <td><b>Cujo(s) / Cuja(s)</b></td>
+                <td>Indica <b>posse</b>. Fica entre o possuidor e o objeto possuído.</td>
+                <td><i>"Existem pessoas <b>cujas</b> ações são nobres."</i></td>
+            </tr>
+            <tr>
+                <td><b>Onde</b></td>
+                <td>Empregado exclusivamente para <b>lugares físicos</b>.</td>
+                <td><i>"A cidade <b>onde</b> moro é tranquila."</i></td>
+            </tr>
+            <tr>
+                <td><b>Quando</b></td>
+                <td>Indica circunstância de <b>tempo</b>.</td>
+                <td><i>"Bons eram os tempos <b>quando</b> podíamos jogar."</i></td>
+            </tr>
+            <tr>
+                <td><b>Como</b></td>
+                <td>Indica <b>modo</b>.</td>
+                <td><i>"O modo <b>como</b> ele agiu foi correto."</i></td>
+            </tr>
+            <tr>
+                <td><b>Quanto</b></td>
+                <td>Refere-se a <b>montante/quantidade</b> (antecedido por <i>tudo</i> ou <i>tanto</i>).</td>
+                <td><i>"Falou tudo <b>quanto</b> queria."</i></td>
+            </tr>
+        </table>
+
+        <h3>2. Pontos para Memorização</h3>
         <ul>
-            <li><b>Variedade geográfica (regional):</b> diferenças regionais (ex.: "mandioca" x "aipim" x "macaxeira").</li>
-            <li><b>Variedade social:</b> diferenças associadas a grupos sociais, idade, escolaridade.</li>
-            <li><b>Variedade histórica:</b> mudanças da língua ao longo do tempo (ex.: "vosmecê" → "você").</li>
-            <li><b>Variedade situacional (registro):</b> adequação da linguagem ao contexto (formal ou informal).</li>
+            <li><b>Cujo + Artigo = ERRO GRAVE:</b> é proibido usar artigo após o pronome relativo <i>cujo</i> (<i>cujo o</i>, <i>cuja a</i> são formas incorretas).</li>
+            <li><b>Onde x Aonde:</b> <i>Onde</i> indica permanência/estaticidade (verbos sem movimento). <i>Aonde</i> equivale a "para onde" e exige verbo de movimento.</li>
+            <li><b>Retomada Demonstrativa:</b> <i>Este/Esta</i> retoma o termo citado por <b>último</b>; <i>Aquele/Aquela</i> retoma o termo citado em <b>primeiro lugar</b>.</li>
         </ul>
 
-        <h3>5.3. Adequação ao Contexto</h3>
-        <p>A habilidade de <b>adequação linguística</b> é a capacidade de escolher o nível de linguagem mais apropriado para cada situação de comunicação. Por exemplo: usar linguagem formal em uma reunião de trabalho e informal em um chat com amigos.</p>
+        <h3>3. Como o Tema é Cobrado em Provas</h3>
+        <p>As bancas cobram a identificação do referente de um pronome relativo ou demonstrativo e a correção sintática no uso das preposições exigidas pelo verbo regente antes do pronome relativo.</p>
+
+        <h3>4. Principais Pegadinhas</h3>
+        <div class="pegadinha">
+            <b>⚠️ Uso indevido de "onde":</b> Empregar <i>onde</i> para retomar palavras abstratas como <i>"projeto"</i>, <i>"reunião"</i> ou <i>"lei"</i>. O correto nesses casos é usar <i>em que</i>, <i>no qual</i> ou <i>na qual</i>.
+        </div>
+        <div class="pegadinha">
+            <b>⚠️ Regência com Pronome Relativo:</b> Esquecer de antepor a preposição exigida pelo verbo depois do pronome.
+            <ul>
+                <li><i>Incorreto:</i> <b>"O livro que eu gosto."</b></li>
+                <li><i>Correto:</i> <b>"O livro de que eu gosto."</b> (quem gosta, gosta <i>de</i>).</li>
+            </ul>
+        </div>
+
+        <h3>5. Exemplo Prático</h3>
+        <div class="exemplo">
+            <p><b>Frase:</b> <i>"Domingo jogarão Palmeiras e São Paulo; <b>este</b> está mais bem colocado que <b>aquele</b>."</i></p>
+            <p><b>Análise:</b> <i>Este</i> retoma o termo mais próximo (São Paulo); <i>aquele</i> retoma o termo mais distante (Palmeiras).</p>
+        </div>
+
+        <h3>6. Dica Objetiva de Resolução</h3>
         <div class="dica">
-            <b>💡 Dica:</b> Em concursos, a <b>norma culta</b> (formal) é a cobrada. Domine a gramática normativa, mas entenda que a língua é viva e admite variações.
+            <b>✅ Substituição de Teste:</b> Para confirmar se o <i>QUE</i> é pronome relativo, substitua-o por <i>o qual</i>, <i>a qual</i>, <i>os quais</i> ou <i>as quais</i>. Se a frase mantiver a coerência, o <i>QUE</i> é pronome relativo e introduz oração subordinada adjetiva.
         </div>
     </div>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 6: Comunicação e Funções da Linguagem                 -->
+    <!-- PÁGINA 6: Capítulos 5 e 6                                     -->
     <!-- ============================================================ -->
     <div class="page" data-page="6">
-        <h2>MÓDULO V – ELEMENTOS DA COMUNICAÇÃO E FUNÇÕES DA LINGUAGEM</h2>
-        <h3>6.1. Elementos da Comunicação</h3>
+        <h2>CAPÍTULO 5: TIPOLOGIA TEXTUAL, GÊNEROS E SENTIDO DAS PALAVRAS</h2>
+
+        <h3>A) Tipologia Textual</h3>
+        <ol>
+            <li><b>Narrativo:</b> caracteriza-se por uma sequência de fatos localizados no tempo e no espaço, envolvendo personagens.</li>
+            <li><b>Descritivo:</b> apresenta a caracterização detalhada de um ser, objeto, lugar ou situação, funcionando como uma "fotografia" verbal.</li>
+            <li><b>Expositivo:</b> tem por finalidade explicar ou apresentar um assunto de forma neutra, enfatizando as razões de sua ocorrência.</li>
+            <li><b>Injuntivo (Instrucional):</b> prescreve ações em sequência, com uso predominante de verbos no <b>imperativo</b>, infinitivo ou futuro. Ex.: receitas, manuais, bulas.</li>
+            <li><b>Dissertativo-Argumentativo:</b> predominam operadores argumentativos para defender um ponto de vista (tese) baseado em argumentos e contra-argumentos.</li>
+        </ol>
+
+        <h3>B) Significação das Palavras</h3>
         <ul>
-            <li><b>Emissor (ou locutor):</b> quem produz a mensagem.</li>
-            <li><b>Receptor (ou interlocutor):</b> quem recebe a mensagem.</li>
-            <li><b>Mensagem:</b> o conteúdo transmitido.</li>
-            <li><b>Código:</b> o sistema de signos utilizado (língua portuguesa, por exemplo).</li>
-            <li><b>Canal:</b> o meio físico pelo qual a mensagem trafega (oral, escrito, digital).</li>
-            <li><b>Contexto (ou referente):</b> a situação a que a mensagem se refere.</li>
-            <li><b>Ruído:</b> qualquer interferência que atrapalhe a comunicação.</li>
+            <li><b>Denotação (Sentido Literal):</b> uso da palavra em seu sentido próprio, original, objetivo, como consta no <b>Dicionário</b>.</li>
+            <li><b>Conotação (Sentido Figurado):</b> uso da palavra em sentido simbólico, poético ou <b>Criativo</b>, dependendo do contexto.</li>
+            <li><b>Polissemia:</b> propriedade de uma mesma palavra apresentar múltiplos significados dependendo do contexto em que é empregada (ex.: <i>cabo</i> de enxada, <i>cabo</i> eleitoral, <i>cabo</i> geográfico, <i>cabo</i> militar).</li>
         </ul>
 
-        <h3>6.2. Funções da Linguagem</h3>
-        <p>As funções da linguagem estão relacionadas ao elemento da comunicação que é enfatizado.</p>
-        <table>
-            <tr><th>Função</th><th>Foco</th><th>Característica</th><th>Exemplo</th></tr>
-            <tr><td><b>Referencial (denotativa)</b></td><td>Contexto</td><td>Informação objetiva</td><td>"A temperatura é de 25°C."</td></tr>
-            <tr><td><b>Emotiva (expressiva)</b></td><td>Emissor</td><td>Exprimir sentimentos</td><td>"Estou muito feliz!"</td></tr>
-            <tr><td><b>Conativa (apelativa)</b></td><td>Receptor</td><td>Persuadir, ordenar</td><td>"Compre já!"</td></tr>
-            <tr><td><b>Fática</b></td><td>Canal</td><td>Estabelecer contato</td><td>"Alô? Está me ouvindo?"</td></tr>
-            <tr><td><b>Metalinguística</b></td><td>Código</td><td>O código explica o código</td><td>"A palavra 'saudade' é um substantivo feminino."</td></tr>
-            <tr><td><b>Poética</b></td><td>Mensagem</td><td>Ênfase na forma</td><td>"A vida é a arte do encontro, embora haja tanto desencontro pela vida."</td></tr>
-        </table>
+        <h3>Pontos para Memorização</h3>
+        <div class="dica">
+            <ul>
+                <li><b>D</b>enotação = <b>D</b>icionário (Literal).</li>
+                <li><b>C</b>onotação = <b>C</b>riatividade (Figurado).</li>
+                <li><b>Expositivo x Dissertativo:</b> o expositivo apenas informa e explica; o dissertativo tenta convencer/persuadir por meio de tese e argumentos.</li>
+            </ul>
+        </div>
+
+        <h3>Principais Pegadinhas</h3>
+        <div class="pegadinha">
+            <b>⚠️ Confundir Gênero com Tipologia:</b> Gênero é a forma materializada do cotidiano (notícia, crônica, edital, receita); Tipologia é a estrutura linguística subjacente (narrar, descrever, expor, instruir, argumentar).
+        </div>
+        <div class="pegadinha">
+            <b>⚠️ Ignorar a Linguagem Não Verbal:</b> Em charges e quadrinhos, a imagem (expressão facial, postura, cenário) integra o texto e pode alterar o sentido das palavras.
+        </div>
+
+        <h2>CAPÍTULO 6: GUIA PRÁTICO DE RESOLUÇÃO E DICAS DE PROVA</h2>
+
+        <h3>Roteiro de Resolução em 5 Passos</h3>
+        <pre>
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 1: Primeira Leitura Global                            │
+│ Ler todo o texto sem interrupções para absorver o tema.     │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 2: Análise do Enunciado e Grifo de Palavras-Chave     │
+│ Identificar se a questão pede COMPREENSÃO ou INTERPRETAÇÃO  │
+│ e destacar comandos como "CORRETO" ou "INCORRETO".          │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 3: Fragmentação e Tópico Frasal                       │
+│ Reler sublinhando a ideia central de cada parágrafo.        │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 4: Rastreio e Verificação dos Vocábulos Relatores     │
+│ Localizar os pronomes e conectivos que articulam o texto.   │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 5: Eliminação dos Três Erros                          │
+│ Descartar opções com EXTRAPOLAÇÃO, REDUÇÃO ou CONTRADIÇÃO.  │
+└─────────────────────────────────────────────────────────────┘
+        </pre>
+
+        <ol>
+            <li><b>Primeira Leitura (Visão Geral):</b> Leia o texto do início ao fim sem parar diante de palavras desconhecidas. O objetivo é apreender o assunto principal e a postura do autor.</li>
+            <li><b>Leitura Atenta do Enunciado:</b> Grife no comando termos como <b>"CORRETO"</b>, <b>"INCORRETO"</b>, <b>"EXCEÇÃO"</b>, <b>"AFIRMA QUE"</b> ou <b>"INFERE-SE QUE"</b> para evitar erros por desatenção.</li>
+            <li><b>Fragmentação e Tópico Frasal:</b> Volte ao texto fragmentando-o em parágrafos e sublinhe a ideia mais importante de cada um (o tópico frasal).</li>
+            <li><b>Atenção aos Vocábulos Relatores:</b> Observe os pronomes relativos, demonstrativos e pessoais, identificando exatamente a qual termo do texto eles se referem.</li>
+            <li><b>Aplicação do Filtro Anti-Erro:</b> Antes de marcar o cartão-resposta, verifique se a alternativa escolhida não incorre em <b>extrapolação</b> (inventou dado), <b>redução</b> (pegou só um pedaço) ou <b>contradição</b> (opôs-se ao autor).</li>
+        </ol>
     </div>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- PÁGINA 7: Simulado - Questões 1 a 5                           -->
     <!-- ============================================================ -->
     <div class="page" data-page="7">
-        <h2>📝 QUESTÕES (1 a 14)</h2>
-        <p><i>Responda com base no conteúdo estudado.</i></p>
+        <h2>📝 SIMULADO COMENTADO (1 a 5)</h2>
 
         <div class="questao-item">
-            <p><b>Questão 1</b> (Interpretação) – A diferença fundamental entre compreensão e interpretação de texto é que:</p>
+            <p><b>Questão 1</b> (AOCP - EBSERH) – Texto: <i>"O verão em que aprendi a boiar. Quando achamos que tudo já aconteceu, novas capacidades fazem de nós pessoas diferentes do que éramos... Todos os dias se pode tentar boiar."</i></p>
+            <p>De acordo com o texto, quando o autor afirma que "Todos os dias se pode tentar boiar", ele refere-se ao fato de:</p>
             <div class="alternativas">
-                a) Compreensão é o ato de ler rapidamente, e interpretação é ler devagar.<br>
-                b) Compreensão capta o explícito; interpretação extrai o implícito.<br>
-                c) Interpretação é mais fácil que compreensão.<br>
-                d) Compreensão e interpretação são sinônimos.<br>
-                e) Interpretação dispensa a leitura atenta.
+                a) haver sempre tempo para aprender, para tentar relaxar e ser feliz nas águas do amor, agindo com mais calma, com mais prazer, com mais intensidade e menos medo.<br>
+                b) ser necessário agir com mais cautela nos relacionamentos amorosos para que eles não se desfaçam.<br>
+                c) haver sempre tempo para aprender a ser mais criterioso com seus relacionamentos, a fim de que eles sejam vividos intensamente.<br>
+                d) haver sempre tempo para aprender coisas novas, inclusive agir com o raciocínio nas relações amorosas.<br>
+                e) ser necessário aprender nos relacionamentos, porém sempre estando alerta para aquilo de ruim que pode acontecer.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 2</b> (Narração) – O texto que tem como objetivo contar uma história, com personagens, enredo e conflito, é classificado como:</p>
+            <p><b>Questão 2</b> (FGV - MPE-AL) – Texto: <i>"Numa democracia, é livre a expressão... É o que precisa acontecer no rescaldo da greve dos caminhoneiros, concluídas as investigações, por exemplo, da ajuda ilegal de patrões ao movimento, interessados em se beneficiar do barateamento do combustível."</i></p>
+            <p>Segundo esse parágrafo do texto, o que "precisa acontecer" é:</p>
             <div class="alternativas">
-                a) Descrição.<br>
-                b) Dissertação.<br>
-                c) Narração.<br>
-                d) Injunção.<br>
-                e) Exposição.
+                a) manter-se o direito de livre expressão do pensamento.<br>
+                b) garantir-se o direito de reunião e de greve.<br>
+                c) lastrear leis e regras na Constituição.<br>
+                d) punirem-se os responsáveis por excessos.<br>
+                e) concluírem-se as investigações sobre a greve.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 3</b> (Coesão) – O uso de pronomes para retomar termos já mencionados é um recurso de coesão do tipo:</p>
+            <p><b>Questão 3</b> (IBDO - Prefeitura de Natividade) – Texto de Rubem Braga: <i>"Tanto que tenho falado, tanto que tenho escrito — como não imaginar que, sem querer, feri alguém? Às vezes sinto, numa pessoa que acabo de conhecer, uma hostilidade surda, ou uma reticência de mágoas. Imprudente ofício é este, de viver em voz alta..."</i></p>
+            <p>Todas as afirmativas a seguir estão corretas em relação ao texto, <b>com EXCEÇÃO de</b>:</p>
             <div class="alternativas">
-                a) Sequencial.<br>
-                b) Referencial.<br>
-                c) Temporal.<br>
-                d) Espacial.<br>
-                e) Semântica.
+                a) O autor manifesta seu estilo próprio a partir de um olhar subjetivo para fatos ou acontecimentos cotidianos.<br>
+                b) Podemos observar que o assunto tratado nada mais é do que o ofício do próprio cronista, que reflete sobre seu principal instrumento de trabalho: a palavra.<br>
+                c) Na crônica de Rubem Braga, acompanha-se o processo de reflexão do escritor sobre os efeitos de suas palavras no público leitor.<br>
+                d) O cronista constata que seus textos podem atingir os leitores de forma mais positiva que negativa.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 4</b> (Coerência) – Um texto que apresenta contradições internas ou ideias que não se complementam carece de:</p>
+            <p><b>Questão 4</b> (IBDO - Prefeitura de Natividade) – No trecho: <i>"Imprudente ofício é este, de viver em voz alta."</i></p>
+            <p>Pode-se destacar a presença de uma figura de linguagem denominada:</p>
             <div class="alternativas">
-                a) Coesão.<br>
-                b) Coerência.<br>
-                c) Concisão.<br>
-                d) Clareza.<br>
-                e) Norma culta.
+                a) eufemismo<br>
+                b) metáfora<br>
+                c) comparação<br>
+                d) hipérbole
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 5</b> (Níveis) – A linguagem utilizada em documentos oficiais, discursos formais e textos acadêmicos é classificada como:</p>
+            <p><b>Questão 5</b> (IBDO - Prefeitura de Natividade) – Analise os empregos destacados nas frases:</p>
+            <p>1. O lavrador quebrou o <b>cabo</b> da enxada.<br>
+            2. O navio contornou o <b>cabo</b> cuidadosamente.<br>
+            3. Aquele soldado será promovido a <b>cabo</b>.<br>
+            4. Ele nunca quis ser <b>cabo</b> eleitoral.</p>
+            <p>Esta propriedade de a palavra destacada apresentar significados distintos dependendo do contexto denomina-se:</p>
             <div class="alternativas">
-                a) Informal.<br>
-                b) Coloquial.<br>
-                c) Formal (norma culta).<br>
-                d) Técnica.<br>
-                e) Regional.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 6</b> (Funções) – Na frase "Amanhã vai chover", a função da linguagem predominante é a:</p>
-            <div class="alternativas">
-                a) Emotiva.<br>
-                b) Conativa.<br>
-                c) Referencial.<br>
-                d) Poética.<br>
-                e) Fática.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 7</b> (Elementos) – O elemento da comunicação que consiste no meio físico pelo qual a mensagem trafega é o:</p>
-            <div class="alternativas">
-                a) Emissor.<br>
-                b) Receptor.<br>
-                c) Canal.<br>
-                d) Código.<br>
-                e) Contexto.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 8</b> (Descrição) – O trecho "A casa era antiga, com paredes de pedra e um jardim cheio de flores silvestres" é um exemplo de:</p>
-            <div class="alternativas">
-                a) Narração.<br>
-                b) Descrição.<br>
-                c) Dissertação.<br>
-                d) Injunção.<br>
-                e) Diálogo.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 9</b> (Coesão) – A palavra "portanto" estabelece uma relação semântica de:</p>
-            <div class="alternativas">
-                a) Adição.<br>
-                b) Oposição.<br>
-                c) Causa.<br>
-                d) Consequência.<br>
-                e) Finalidade.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 10</b> (Funções) – A frase "Compre aqui o seu novo celular!" é um exemplo da função:</p>
-            <div class="alternativas">
-                a) Emotiva.<br>
-                b) Referencial.<br>
-                c) Conativa.<br>
-                d) Fática.<br>
-                e) Metalinguística.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 11</b> (Interpretação) – Leia o trecho: "Ela chegou atrasada, com os olhos vermelhos e o cabelo desgrenhado." A interpretação mais provável é que ela:</p>
-            <div class="alternativas">
-                a) Estava feliz.<br>
-                b) Havia chorado ou estava cansada.<br>
-                c) Havia acabado de acordar.<br>
-                d) Estava com pressa.<br>
-                e) Estava doente.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 12</b> (Níveis) – A expressão "tá beleza?" em uma conversa informal é um exemplo de:</p>
-            <div class="alternativas">
-                a) Norma culta.<br>
-                b) Linguagem formal.<br>
-                c) Linguagem coloquial.<br>
-                d) Jargão técnico.<br>
-                e) Linguagem literária.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 13</b> (Dissertação) – A estrutura típica do texto dissertativo-argumentativo é:</p>
-            <div class="alternativas">
-                a) Início, meio e fim.<br>
-                b) Introdução, desenvolvimento e conclusão.<br>
-                c) Descrição, narração e conclusão.<br>
-                d) Tese, antítese e síntese.<br>
-                e) Contexto, ação e desfecho.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 14</b> (V/F – Coesão e Coerência) – Analise as afirmativas:</p>
-            <p>(   ) A coesão se refere à lógica interna do texto.<br>
-            (   ) A coerência é a ligação linguística entre as partes do texto.<br>
-            (   ) Um texto pode ser coeso, mas incoerente.<br>
-            (   ) Conectivos como "e" e "além disso" estabelecem relação de adição.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) V – F – F – V<br>b) F – V – F – V<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – F – V – F
+                a) Antonímia<br>
+                b) Homonímia<br>
+                c) Polissemia<br>
+                d) Sinonímia
             </div>
         </div>
     </div>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- PÁGINA 8: Simulado - Questões 6 a 10 + Gabarito              -->
     <!-- ============================================================ -->
     <div class="page" data-page="8">
-        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+        <h2>📝 SIMULADO COMENTADO (6 a 10)</h2>
 
         <div class="questao-item">
-            <p><b>Questão 15</b> (V/F – Níveis e Variedades) – Analise as afirmativas:</p>
-            <p>(   ) A variedade geográfica refere-se a diferenças regionais da língua.<br>
-            (   ) A linguagem formal é adequada para situações descontraídas.<br>
-            (   ) O jargão técnico é uma linguagem especializada de uma área.<br>
-            (   ) A adequação linguística é a habilidade de escolher o nível de linguagem apropriado.</p>
-            <p>Assinale a sequência correta:</p>
+            <p><b>Questão 6</b> (IBFC - Prefeitura de Cuiabá) – Texto: <i>"Suas irmãs, <b>as sombrinhas</b>, já se entregaram aos piores desregramentos futuristas..."</i></p>
+            <p>A expressão destacada "as sombrinhas" exerce a função sintática de:</p>
             <div class="alternativas">
-                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+                a) aposto<br>
+                b) sujeito<br>
+                c) predicativo<br>
+                d) vocativo
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 16</b> (V/F – Funções da Linguagem) – Analise as afirmativas:</p>
-            <p>(   ) A função metalinguística foca no emissor.<br>
-            (   ) A função fática visa estabelecer ou manter o contato comunicativo.<br>
-            (   ) A função poética enfatiza a forma da mensagem.<br>
-            (   ) A função referencial é objetiva e informativa.</p>
-            <p>Assinale a sequência correta:</p>
+            <p><b>Questão 7</b> (IBFC - SESACRE) – Texto: <i>"É muito comum escutarmos por aí as pessoas utilizando a expressão 'mãe solteira' para se referir <b>àquelas</b> mulheres..."</i></p>
+            <p>De acordo com a Gramática Normativa e o texto, assinale a alternativa correta:</p>
             <div class="alternativas">
-                a) F – V – V – V<br>b) V – F – V – F<br>c) F – V – F – V<br>d) V – V – V – F<br>e) F – F – V – V
+                a) No trecho "para se referir àquelas mulheres", verifica-se que o verbo "referir" exige, de acordo com as regras de regência verbal, a presença da preposição "a".<br>
+                b) No trecho "isenção perante a paternidade", o termo "a" é uma preposição.<br>
+                c) No trecho "o contrário parece impensável para as mulheres", a expressão "para as mulheres" é um objeto indireto.<br>
+                d) No trecho "está ligado ao aumento da escolaridade feminina", a expressão "ao aumento da escolaridade feminina" é um objeto direto preposicionado.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 17</b> (Interpretação) – Em um texto, a ideia principal é:</p>
+            <p><b>Questão 8</b> (CESPE - TJ-AC) – Julgue a afirmativa:</p>
+            <p><i>As palavras "conteúdo", "calúnia" e "injúria" são acentuadas de acordo com a mesma regra de acentuação gráfica.</i></p>
             <div class="alternativas">
-                a) O tema central defendido pelo autor.<br>
-                b) Um detalhe ou exemplo específico.<br>
-                c) A opinião de um personagem secundário.<br>
-                d) Uma informação irrelevante.<br>
-                e) O título do texto.
+                a) CERTO<br>
+                b) ERRADO
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 18</b> (Organização Textual) – "O sol brilhava forte. As folhas das árvores balançavam suavemente com a brisa." Este trecho é um exemplo de:</p>
+            <p><b>Questão 9</b> (VUNESP - PM-SP) – Assinale a alternativa em que o acento indicativo de crase está empregado corretamente:</p>
             <div class="alternativas">
-                a) Narração.<br>
-                b) Descrição.<br>
-                c) Dissertação.<br>
-                d) Injunção.<br>
-                e) Diálogo.
+                a) O personagem evita considerar à internet responsável por suas atitudes.<br>
+                b) O personagem reconheceu que já tinha uma propensão à jogar o tempo fora.<br>
+                c) O personagem tinha um comportamento indiferente à qualquer influência da internet.<br>
+                d) O personagem refere-se à uma maneira de se portar com relação ao tempo.<br>
+                e) O personagem revelou à pessoa com quem conversava que jogava o tempo fora.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 19</b> (Coesão) – O conectivo "contudo" estabelece uma relação de:</p>
+            <p><b>Questão 10</b> (IBFC - IDAM) – Texto: <i>"Guardar uma coisa não é escondê-la ou trancá-la. Em cofre não se guarda coisa alguma. Em cofre perde-se a coisa à vista. Guardar uma coisa é olhá-la, fitá-la, mirá-la por admirá-la, isto é, iluminá-la..."</i> (Antonio Cícero)</p>
+            <p>Avalie as afirmativas como Verdadeiras (V) ou Falsas (F):</p>
+            <p>1. ( ) No trecho "Guardar uma coisa não é escondê-la", o termo destacado corresponde ao Pronome Pessoal do caso oblíquo "a" grafado após verbo no infinitivo.<br>
+            2. ( ) No trecho "mirá-la por admirá-la, isto é, iluminá-la", a expressão "isto é" pode ser substituída, sem alteração de sentido, por "ou seja".<br>
+            3. ( ) No trecho "Por isso, melhor se guarda o voo de um pássaro", a expressão "Por isso" é uma Conjunção Coordenativa Adversativa.</p>
             <div class="alternativas">
-                a) Adição.<br>
-                b) Oposição.<br>
-                c) Causa.<br>
-                d) Consequência.<br>
-                e) Tempo.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 20</b> (Funções) – "A palavra 'amor' tem quatro letras" é um exemplo da função:</p>
-            <div class="alternativas">
-                a) Emotiva.<br>
-                b) Referencial.<br>
-                c) Metalinguística.<br>
-                d) Fática.<br>
-                e) Conativa.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 21</b> (V/F – Geral) – Analise as afirmativas:</p>
-            <p>(   ) O texto descritivo utiliza verbos de ação.<br>
-            (   ) O texto narrativo apresenta personagens e conflito.<br>
-            (   ) O texto dissertativo defende uma tese.<br>
-            (   ) O texto injuntivo dá instruções ou orientações.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) F – V – V – V<br>b) V – F – F – V<br>c) F – V – F – V<br>d) V – V – V – F<br>e) F – F – V – V
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 22</b> (Elementos) – O "ruído" na comunicação é:</p>
-            <div class="alternativas">
-                a) O conteúdo da mensagem.<br>
-                b) O meio físico de transmissão.<br>
-                c) Qualquer interferência que atrapalhe a comunicação.<br>
-                d) O sistema de signos utilizado.<br>
-                e) O receptor da mensagem.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 23</b> (Níveis) – A expressão "estou ciente da situação" em um e-mail profissional é um exemplo de:</p>
-            <div class="alternativas">
-                a) Linguagem coloquial.<br>
-                b) Linguagem formal (norma culta).<br>
-                c) Gíria.<br>
-                d) Jargão técnico.<br>
-                e) Regionalismo.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 24</b> (V/F – Funções) – Analise as afirmativas sobre as funções da linguagem:</p>
-            <p>(   ) A função emotiva expressa sentimentos do emissor.<br>
-            (   ) A função conativa busca influenciar o receptor.<br>
-            (   ) A função referencial é utilizada em textos científicos e jornalísticos.<br>
-            (   ) A função poética é comum em textos publicitários.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) V – V – V – V<br>b) V – V – V – F<br>c) V – F – V – F<br>d) F – V – F – V<br>e) V – V – F – F
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 25</b> (V/F – Consolidação) – Analise as afirmativas:</p>
-            <p>(   ) A interpretação de texto dispensa a leitura atenta do texto.<br>
-            (   ) A coesão referencial retoma termos por meio de pronomes e sinônimos.<br>
-            (   ) A linguagem informal é sempre inadequada.<br>
-            (   ) A função fática tem como foco o canal de comunicação.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) F – V – F – V<br>b) V – F – V – F<br>c) F – V – V – F<br>d) V – V – F – V<br>e) F – F – V – V
+                a) V - V - F<br>
+                b) V - F - F<br>
+                c) F - V - V<br>
+                d) F - F - F
             </div>
         </div>
 
@@ -690,11 +663,22 @@
 
         <h2>✅ GABARITO OFICIAL</h2>
         <div class="gabarito-box">
-            <p><b>1-B</b> | <b>2-C</b> | <b>3-B</b> | <b>4-B</b> | <b>5-C</b> | <b>6-C</b> | <b>7-C</b> | <b>8-B</b> | <b>9-D</b> | <b>10-C</b></p>
-            <p><b>11-B</b> | <b>12-C</b> | <b>13-B</b> | <b>14-D</b> | <b>15-A</b> | <b>16-A</b> | <b>17-A</b> | <b>18-B</b> | <b>19-B</b> | <b>20-C</b></p>
-            <p><b>21-A</b> | <b>22-C</b> | <b>23-B</b> | <b>24-A</b> | <b>25-A</b></p>
+            <p><b>1-A</b> | <b>2-D</b> | <b>3-D</b> | <b>4-B</b> | <b>5-C</b> | <b>6-A</b> | <b>7-A</b> | <b>8-B</b> | <b>9-E</b> | <b>10-A</b></p>
         </div>
-        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (F,F,V,V); Q15 (V,F,V,V); Q16 (F,V,V,V); Q21 (F,V,V,V); Q24 (V,V,V,F); Q25 (F,V,F,V).</p>
+
+        <h3>📚 Comentários Resumidos</h3>
+        <ul>
+            <li><b>Q1:</b> O texto defende viver o amor com mais calma, intensidade e menos medo.</li>
+            <li><b>Q2:</b> A punição dos responsáveis pelos excessos é o que "precisa acontecer".</li>
+            <li><b>Q3:</b> Alternativa D é EXCEÇÃO – o autor não faz quantificação positiva vs. negativa.</li>
+            <li><b>Q4:</b> "Viver em voz alta" é metáfora para a profissão de cronista.</li>
+            <li><b>Q5:</b> Palavra "cabo" com múltiplos significados = polissemia.</li>
+            <li><b>Q6:</b> "As sombrinhas" é aposto explicativo de "suas irmãs".</li>
+            <li><b>Q7:</b> O verbo "referir" exige a preposição "a" (crase em "àquelas").</li>
+            <li><b>Q8:</b> ERRADO – "conteúdo" (hiato) e "calúnia/injúria" (paroxítonas em ditongo) são regras diferentes.</li>
+            <li><b>Q9:</b> Apenas a alternativa E atende à regência do verbo "revelar" (revelar algo a alguém).</li>
+            <li><b>Q10:</b> "Por isso" é conjunção conclusiva, não adversativa.</li>
+        </ul>
     </div>
 
     <!-- ============================================================ -->

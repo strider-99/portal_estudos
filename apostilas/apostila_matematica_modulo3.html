@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Matemática: Sistemas de Numeração e Unidades do SI</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f4ff;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a3c6e;
+            text-align: center;
+            border-bottom: 3px solid #3f51b5;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a3c6e;
+            background-color: #e8eaf6;
+            padding: 10px 15px;
+            border-left: 6px solid #3f51b5;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #283593;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p { line-height: 1.7; margin-bottom: 12px; text-align: justify; }
+        ul, ol { margin: 10px 0 15px 30px; }
+        li { margin-bottom: 6px; line-height: 1.6; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th { background-color: #dde1f0; font-weight: bold; }
+        .dica {
+            background-color: #e8f5e9;
+            border-left: 6px solid #2e7d32;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b { color: #1b5e20; }
+        .pegadinha {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .pegadinha b { color: #922b21; }
+        .exemplo {
+            background-color: #f0f8ff;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #3f51b5;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5f6fc;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #3f51b5;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p { margin-bottom: 6px; }
+        .alternativas { margin-left: 20px; font-size: 15px; }
+
+        .page { display: none; animation: fadeIn 0.3s ease; }
+        .page.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0.5; } to { opacity: 1; } }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a3c6e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover { background-color: #3f51b5; }
+        .nav-btn:active { transform: scale(0.97); }
+        .nav-btn:disabled { background-color: #adb5bd; cursor: not-allowed; box-shadow: none; }
+        .nav-btn.secondary { background-color: #6c757d; }
+        .nav-btn.secondary:hover { background-color: #5a6268; }
+        .nav-btn.menu-btn { background-color: #28a745; min-width: 100px; }
+        .nav-btn.menu-btn:hover { background-color: #218838; }
+
+        .footer-note { text-align: center; margin-top: 15px; font-size: 13px; color: #868e96; }
+        hr { margin: 30px 0 15px 0; border: 1px solid #dee2e6; }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>🔢 MATEMÁTICA – MÓDULO 3</h1>
+    <p style="text-align:center; font-size:18px; color:#1a3c6e;"><b>Sistemas de Numeração e Unidades do Sistema Internacional (SI)</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>Os <b>sistemas de numeração</b> são a base da representação dos números. Entender como funcionam as ordens, classes e o valor posicional é essencial para resolver problemas de concursos, especialmente em questões que envolvem leitura e escrita de numerais.</p>
+        <p>Já as <b>unidades do Sistema Internacional (SI)</b> são fundamentais para questões de conversão de medidas (comprimento, massa, tempo, etc.), muito comuns em provas de nível médio e superior.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Dominar os conceitos de sistema de numeração decimal, ordens, classes, valor posicional e absoluto, além das principais unidades do SI (comprimento, massa, tempo, corrente elétrica, temperatura termodinâmica, quantidade de matéria e intensidade luminosa), com 35 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Sistemas de Numeração – pág. 2</li>
+            <li><b>Módulo II:</b> O Sistema Decimal – pág. 3</li>
+            <li><b>Módulo III:</b> Unidades do SI – Comprimento, Massa e Tempo – pág. 4</li>
+            <li><b>Módulo IV:</b> Outras Unidades do SI – pág. 5</li>
+            <li><b>Módulo V:</b> Conversões e Dicas Finais – pág. 6</li>
+            <li><b>Questões:</b> 35 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Sistemas de Numeração                              -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – SISTEMAS DE NUMERAÇÃO</h2>
+
+        <h3>2.1. O que é um Sistema de Numeração?</h3>
+        <p>É o conjunto de regras e símbolos utilizados para representar números. Os principais sistemas são:</p>
+        <ul>
+            <li><b>Sistema Decimal:</b> base 10 (0 a 9) – usado no dia a dia.</li>
+            <li><b>Sistema Binário:</b> base 2 (0 e 1) – usado em computação.</li>
+            <li><b>Sistema Octal:</b> base 8 (0 a 7).</li>
+            <li><b>Sistema Hexadecimal:</b> base 16 (0 a 9 e A a F).</li>
+        </ul>
+
+        <h3>2.2. Base de um Sistema de Numeração</h3>
+        <p>A <b>base</b> indica quantos símbolos diferentes o sistema utiliza. Ex:</p>
+        <ul>
+            <li>Base 10 → usa 10 símbolos (0 a 9)</li>
+            <li>Base 2 → usa 2 símbolos (0 e 1)</li>
+            <li>Base 8 → usa 8 símbolos (0 a 7)</li>
+            <li>Base 16 → usa 16 símbolos (0 a 9 + A a F)</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo (conversão decimal → binário):</b> Converter 13 para binário:</p>
+            <ul>
+                <li>13 ÷ 2 = 6, resto 1</li>
+                <li>6 ÷ 2 = 3, resto 0</li>
+                <li>3 ÷ 2 = 1, resto 1</li>
+                <li>1 ÷ 2 = 0, resto 1</li>
+                <li>Lendo os restos de baixo para cima: <b>1101</b></li>
+            </ul>
+        </div>
+
+        <div class="dica">
+            <b>✅ Dica:</b> No sistema decimal, cada posição à esquerda vale 10 vezes mais que a posição à direita. No binário, vale 2 vezes mais. No octal, 8 vezes mais. Isso facilita conversões.
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> Questões de concurso adoram pedir a conversão de decimal para binário (ou vice-versa). Memorize a <b>tabela de potências de 2</b>: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024...
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: O Sistema Decimal                                  -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – O SISTEMA DECIMAL</h2>
+
+        <h3>3.1. Leitura e Escrita de Numerais</h3>
+        <p>No sistema decimal, os algarismos são organizados em <b>ordens</b> e <b>classes</b>.</p>
+        <ul>
+            <li><b>Ordens:</b> unidades, dezenas, centenas (dentro de cada classe).</li>
+            <li><b>Classes:</b> unidades simples, milhares, milhões, bilhões, etc.</li>
+        </ul>
+
+        <h4>Estrutura de um numeral</h4>
+        <p>Exemplo: <b>5.342.178</b></p>
+        <table>
+            <tr><th>Classe</th><th>Milhões</th><th>Milhares</th><th>Unidades Simples</th></tr>
+            <tr><td><b>Ordens</b></td><td>CM | DM | UM</td><td>CM | DM | UM</td><td>C | D | U</td></tr>
+            <tr><td><b>Algarismos</b></td><td>5 | — | —</td><td>3 | 4 | 2</td><td>1 | 7 | 8</td></tr>
+        </table>
+        <p>Leitura: "cinco milhões, trezentos e quarenta e dois mil, cento e setenta e oito".</p>
+
+        <h3>3.2. Valor Posicional e Valor Absoluto</h3>
+        <ul>
+            <li><b>Valor absoluto:</b> é o próprio algarismo, independente da posição. Ex: em 5.342.178, o algarismo 7 vale <b>7</b>.</li>
+            <li><b>Valor posicional:</b> é o valor do algarismo considerando sua posição. Ex: em 5.342.178, o algarismo 7 vale <b>70</b> (7 dezenas).</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> No número 4.567:</p>
+            <ul>
+                <li>Valor absoluto do 5 = 5</li>
+                <li>Valor posicional do 5 = 500 (5 centenas)</li>
+                <li>Valor absoluto do 7 = 7</li>
+                <li>Valor posicional do 7 = 7 (7 unidades)</li>
+            </ul>
+        </div>
+
+        <div class="dica">
+            <b>✅ Dica:</b> A diferença entre valor absoluto e valor posicional é sempre cobrada. Guarde: <b>absoluto = algarismo</b>; <b>posicional = algarismo × valor da ordem</b>.
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> Questões que pedem "quantas unidades vale o algarismo X" costumam confundir. Sempre verifique em que ordem está o algarismo. Ex: 4 dezenas = 40 unidades.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Unidades do SI – Comprimento, Massa e Tempo        -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – UNIDADES DO SI: COMPRIMENTO, MASSA E TEMPO</h2>
+
+        <h3>4.1. Sistema Internacional de Unidades (SI)</h3>
+        <p>O <b>SI</b> é o sistema padrão de unidades, adotado internacionalmente. Suas <b>7 unidades de base</b> são:</p>
+
+        <table>
+            <tr><th>Grandeza</th><th>Unidade</th><th>Símbolo</th></tr>
+            <tr><td>Comprimento</td><td>metro</td><td>m</td></tr>
+            <tr><td>Massa</td><td>quilograma</td><td>kg</td></tr>
+            <tr><td>Tempo</td><td>segundo</td><td>s</td></tr>
+            <tr><td>Corrente elétrica</td><td>ampère</td><td>A</td></tr>
+            <tr><td>Temperatura termodinâmica</td><td>kelvin</td><td>K</td></tr>
+            <tr><td>Quantidade de matéria</td><td>mol</td><td>mol</td></tr>
+            <tr><td>Intensidade luminosa</td><td>candela</td><td>cd</td></tr>
+        </table>
+
+        <h3>4.2. Comprimento (metro)</h3>
+        <p>Múltiplos e submúltiplos do metro:</p>
+        <table>
+            <tr><th>Prefixo</th><th>Símbolo</th><th>Fator</th></tr>
+            <tr><td>Quilômetro</td><td>km</td><td>1000 m</td></tr>
+            <tr><td>Hectômetro</td><td>hm</td><td>100 m</td></tr>
+            <tr><td>Decâmetro</td><td>dam</td><td>10 m</td></tr>
+            <tr><td><b>Metro</b></td><td><b>m</b></td><td><b>1 m</b></td></tr>
+            <tr><td>Decímetro</td><td>dm</td><td>0,1 m</td></tr>
+            <tr><td>Centímetro</td><td>cm</td><td>0,01 m</td></tr>
+            <tr><td>Milímetro</td><td>mm</td><td>0,001 m</td></tr>
+        </table>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> Converter 3,5 km em metros:</p>
+            <ul>
+                <li>1 km = 1000 m</li>
+                <li>3,5 × 1000 = 3500 m</li>
+            </ul>
+        </div>
+
+        <h3>4.3. Massa (quilograma)</h3>
+        <p>Múltiplos e submúltiplos do grama:</p>
+        <table>
+            <tr><th>Prefixo</th><th>Símbolo</th><th>Fator</th></tr>
+            <tr><td>Quilograma</td><td>kg</td><td>1000 g</td></tr>
+            <tr><td>Hectograma</td><td>hg</td><td>100 g</td></tr>
+            <tr><td>Decagrama</td><td>dag</td><td>10 g</td></tr>
+            <tr><td><b>Grama</b></td><td><b>g</b></td><td><b>1 g</b></td></tr>
+            <tr><td>Decigrama</td><td>dg</td><td>0,1 g</td></tr>
+            <tr><td>Centigrama</td><td>cg</td><td>0,01 g</td></tr>
+            <tr><td>Miligrama</td><td>mg</td><td>0,001 g</td></tr>
+        </table>
+
+        <h3>4.4. Tempo (segundo)</h3>
+        <p>Unidades de tempo mais comuns:</p>
+        <ul>
+            <li>1 minuto = 60 segundos</li>
+            <li>1 hora = 60 minutos = 3600 segundos</li>
+            <li>1 dia = 24 horas</li>
+        </ul>
+
+        <div class="dica">
+            <b>✅ Dica:</b> Para conversões de comprimento e massa, use a escada: cada degrau <b>para baixo</b> multiplica por 10; cada degrau <b>para cima</b> divide por 10.
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> <b>1 kg = 1000 g</b> (não 100 g). E o símbolo do quilograma é <b>kg</b> (minúsculo), não "Kg" ou "KG". Cuidado também com <b>1 hora = 3600 s</b>, e não 1000 s.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Outras Unidades do SI                              -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – OUTRAS UNIDADES DO SI</h2>
+
+        <h3>5.1. Corrente Elétrica (ampère – A)</h3>
+        <p>Mede a intensidade do fluxo de cargas elétricas. Utilizada em circuitos e aparelhos elétricos. Ex: um chuveiro pode consumir 20 A de corrente.</p>
+
+        <h3>5.2. Temperatura Termodinâmica (kelvin – K)</h3>
+        <p>Escala absoluta de temperatura. Relação com o grau Celsius:</p>
+        <p style="text-align:center; font-weight:bold;">K = °C + 273 (aproximadamente)</p>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> Converter 27°C em Kelvin:</p>
+            <ul>
+                <li>K = 27 + 273 = 300 K</li>
+            </ul>
+        </div>
+
+        <h3>5.3. Quantidade de Matéria (mol – mol)</h3>
+        <p>Mede a quantidade de entidades elementares (átomos, moléculas, íons, etc.). 1 mol = 6,02 × 10²³ entidades (Número de Avogadro). Muito usado em química.</p>
+
+        <h3>5.4. Intensidade Luminosa (candela – cd)</h3>
+        <p>Mede a intensidade da luz emitida por uma fonte em uma direção específica. Usada em iluminação e fotometria.</p>
+
+        <h3>5.5. Outras Unidades Derivadas do SI</h3>
+        <ul>
+            <li><b>Área:</b> metro quadrado (m²)</li>
+            <li><b>Volume:</b> metro cúbico (m³)</li>
+            <li><b>Velocidade:</b> metro por segundo (m/s)</li>
+            <li><b>Força:</b> newton (N)</li>
+            <li><b>Pressão:</b> pascal (Pa)</li>
+            <li><b>Energia:</b> joule (J)</li>
+            <li><b>Potência:</b> watt (W)</li>
+        </ul>
+
+        <div class="dica">
+            <b>✅ Dica:</b> Os concursos frequentemente pedem para identificar a <b>unidade de base</b> de uma determinada grandeza. Memorize a tabela das 7 unidades de base do SI.
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> A unidade de <b>massa</b> no SI é o <b>quilograma (kg)</b>, não o grama (g). Isso é uma exceção, pois o prefixo "quilo" já está incorporado à unidade de base. Além disso, a unidade de <b>temperatura termodinâmica</b> é o <b>kelvin</b>, não o grau Celsius.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Conversões e Dicas Finais                          -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – CONVERSÕES E DICAS FINAIS</h2>
+
+        <h3>6.1. Tabela Resumo das Unidades de Base do SI</h3>
+        <table>
+            <tr><th>Grandeza</th><th>Unidade</th><th>Símbolo</th></tr>
+            <tr><td>Comprimento</td><td>metro</td><td>m</td></tr>
+            <tr><td>Massa</td><td>quilograma</td><td>kg</td></tr>
+            <tr><td>Tempo</td><td>segundo</td><td>s</td></tr>
+            <tr><td>Corrente elétrica</td><td>ampère</td><td>A</td></tr>
+            <tr><td>Temperatura termodinâmica</td><td>kelvin</td><td>K</td></tr>
+            <tr><td>Quantidade de matéria</td><td>mol</td><td>mol</td></tr>
+            <tr><td>Intensidade luminosa</td><td>candela</td><td>cd</td></tr>
+        </table>
+
+        <h3>6.2. Prefixos do SI mais usados</h3>
+        <table>
+            <tr><th>Prefixo</th><th>Símbolo</th><th>Fator</th></tr>
+            <tr><td>quilo</td><td>k</td><td>10³ = 1000</td></tr>
+            <tr><td>hecto</td><td>h</td><td>10² = 100</td></tr>
+            <tr><td>deca</td><td>da</td><td>10¹ = 10</td></tr>
+            <tr><td>—</td><td>—</td><td>10⁰ = 1</td></tr>
+            <tr><td>deci</td><td>d</td><td>10⁻¹ = 0,1</td></tr>
+            <tr><td>centi</td><td>c</td><td>10⁻² = 0,01</td></tr>
+            <tr><td>mili</td><td>m</td><td>10⁻³ = 0,001</td></tr>
+        </table>
+
+        <h3>6.3. Conversões mais Cobradas</h3>
+        <ul>
+            <li>1 km = 1000 m</li>
+            <li>1 m = 100 cm</li>
+            <li>1 m = 1000 mm</li>
+            <li>1 kg = 1000 g</li>
+            <li>1 g = 1000 mg</li>
+            <li>1 h = 60 min = 3600 s</li>
+            <li>1 min = 60 s</li>
+            <li>1 m² = 10.000 cm²</li>
+            <li>1 m³ = 1000 L</li>
+        </ul>
+
+        <h3>6.4. Pegadinhas Clássicas</h3>
+        <table>
+            <tr><th>Pegadinha</th><th>Como evitar</th></tr>
+            <tr><td>Achar que 1 kg = 100 g</td><td>1 kg = 1000 g</td></tr>
+            <tr><td>Confundir valor absoluto e posicional</td><td>Absoluto = algarismo; posicional = algarismo × ordem</td></tr>
+            <tr><td>Esquecer que 1 h = 3600 s</td><td>1 h = 60 min × 60 s</td></tr>
+            <tr><td>Trocar a unidade de massa do SI</td><td>É o quilograma (kg), não o grama</td></tr>
+            <tr><td>Usar Celsius como unidade de base</td><td>A unidade de base é o kelvin (K)</td></tr>
+            <tr><td>Errar a conversão entre ordens no sistema decimal</td><td>Cada ordem à esquerda vale 10× a da direita</td></tr>
+        </table>
+
+        <div class="dica">
+            <b>✅ Dica Final:</b> Memorize a tabela das 7 unidades de base do SI e as conversões mais comuns. Faça muitos exercícios de conversão, especialmente envolvendo tempo (horas → segundos) e massa (kg → g).
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 18                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 18)</h2>
+        <p><i>Questões no nível de concurso, com contexto e pegadinhas típicas.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> – No sistema de numeração decimal, o número 4.507 é composto por:</p>
+            <div class="alternativas">
+                a) 4 milhares, 5 centenas e 7 unidades<br>
+                b) 4 milhares, 5 dezenas e 7 unidades<br>
+                c) 4 centenas, 5 dezenas e 7 unidades<br>
+                d) 4 milhares, 5 centenas e 7 dezenas<br>
+                e) 4 dezenas, 5 centenas e 7 milhares
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> – No número 8.362, qual é o valor posicional do algarismo 3?</p>
+            <div class="alternativas">
+                a) 3<br>
+                b) 30<br>
+                c) 300<br>
+                d) 3000<br>
+                e) 30000
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> – A representação binária do número decimal 25 é:</p>
+            <div class="alternativas">
+                a) 10011<br>
+                b) 11001<br>
+                c) 10101<br>
+                d) 11101<br>
+                e) 11011
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> – Qual é o valor decimal do número binário 10110?</p>
+            <div class="alternativas">
+                a) 20<br>
+                b) 22<br>
+                c) 24<br>
+                d) 26<br>
+                e) 28
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> – Qual das unidades abaixo NÃO é uma unidade de base do SI?</p>
+            <div class="alternativas">
+                a) Metro (m)<br>
+                b) Quilograma (kg)<br>
+                c) Litro (L)<br>
+                d) Segundo (s)<br>
+                e) Kelvin (K)
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> – A unidade de base do SI para quantidade de matéria é:</p>
+            <div class="alternativas">
+                a) Grama (g)<br>
+                b) Quilograma (kg)<br>
+                c) Mol (mol)<br>
+                d) Candela (cd)<br>
+                e) Ampère (A)
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> – Converter 4,5 km em metros resulta em:</p>
+            <div class="alternativas">
+                a) 45 m<br>
+                b) 450 m<br>
+                c) 4.500 m<br>
+                d) 45.000 m<br>
+                e) 450.000 m
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> – Converter 3.500 mg em gramas resulta em:</p>
+            <div class="alternativas">
+                a) 0,35 g<br>
+                b) 3,5 g<br>
+                c) 35 g<br>
+                d) 350 g<br>
+                e) 3.500 g
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> – Quantos segundos há em 2 horas e 15 minutos?</p>
+            <div class="alternativas">
+                a) 7.200 s<br>
+                b) 7.500 s<br>
+                c) 8.100 s<br>
+                d) 8.400 s<br>
+                e) 9.000 s
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> – A unidade de base do SI para comprimento é:</p>
+            <div class="alternativas">
+                a) Centímetro (cm)<br>
+                b) Quilômetro (km)<br>
+                c) Metro (m)<br>
+                d) Milímetro (mm)<br>
+                e) Polegada (in)
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> – O número romano XLIV corresponde a:</p>
+            <div class="alternativas">
+                a) 44<br>
+                b) 46<br>
+                c) 54<br>
+                d) 56<br>
+                e) 64
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> – No sistema decimal, o número 2.034 tem quantas classes?</p>
+            <div class="alternativas">
+                a) 1<br>
+                b) 2<br>
+                c) 3<br>
+                d) 4<br>
+                e) 5
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> – A unidade de base do SI para temperatura termodinâmica é:</p>
+            <div class="alternativas">
+                a) Celsius (°C)<br>
+                b) Fahrenheit (°F)<br>
+                c) Kelvin (K)<br>
+                d) Rankine (°R)<br>
+                e) Réaumur (°Ré)
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> – Converter 27°C em kelvin resulta em:</p>
+            <div class="alternativas">
+                a) 246 K<br>
+                b) 254 K<br>
+                c) 300 K<br>
+                d) 327 K<br>
+                e) 400 K
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> – O número 7.008 é lido como:</p>
+            <div class="alternativas">
+                a) Sete mil e oito<br>
+                b) Setenta mil e oito<br>
+                c) Setecentos e oito<br>
+                d) Sete mil e oitenta<br>
+                e) Setenta e oito
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> – Quantos milímetros há em 2,5 metros?</p>
+            <div class="alternativas">
+                a) 25 mm<br>
+                b) 250 mm<br>
+                c) 2.500 mm<br>
+                d) 25.000 mm<br>
+                e) 250.000 mm
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> – O número 5.000.000 é composto por quantas classes?</p>
+            <div class="alternativas">
+                a) 1<br>
+                b) 2<br>
+                c) 3<br>
+                d) 4<br>
+                e) 5
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> – Em um número decimal, cada ordem à esquerda vale quantas vezes a ordem à direita?</p>
+            <div class="alternativas">
+                a) 2<br>
+                b) 5<br>
+                c) 8<br>
+                d) 10<br>
+                e) 100
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 19 a 35 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (19 a 35) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> – A representação binária do número decimal 50 é:</p>
+            <div class="alternativas">
+                a) 110010<br>
+                b) 100110<br>
+                c) 101010<br>
+                d) 110100<br>
+                e) 111000
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> – Qual é o valor decimal do número binário 11111?</p>
+            <div class="alternativas">
+                a) 15<br>
+                b) 21<br>
+                c) 27<br>
+                d) 31<br>
+                e) 35
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> – O número romano MCMXCIV corresponde a:</p>
+            <div class="alternativas">
+                a) 1.894<br>
+                b) 1.934<br>
+                c) 1.994<br>
+                d) 2.094<br>
+                e) 2.194
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> – A unidade de base do SI para corrente elétrica é:</p>
+            <div class="alternativas">
+                a) Volt (V)<br>
+                b) Watt (W)<br>
+                c) Ampère (A)<br>
+                d) Ohm (Ω)<br>
+                e) Coulomb (C)
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> – A unidade de base do SI para intensidade luminosa é:</p>
+            <div class="alternativas">
+                a) Lúmen (lm)<br>
+                b) Lux (lx)<br>
+                c) Watt (W)<br>
+                d) Candela (cd)<br>
+                e) Nit (nt)
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> – Converter 0,75 kg em gramas resulta em:</p>
+            <div class="alternativas">
+                a) 7,5 g<br>
+                b) 75 g<br>
+                c) 750 g<br>
+                d) 7.500 g<br>
+                e) 75.000 g
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> – Um atleta correu 5.000 metros. Quantos quilômetros ele percorreu?</p>
+            <div class="alternativas">
+                a) 0,5 km<br>
+                b) 5 km<br>
+                c) 50 km<br>
+                d) 500 km<br>
+                e) 5.000 km
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 26</b> – Quantos minutos há em 3 dias?</p>
+            <div class="alternativas">
+                a) 1.440 min<br>
+                b) 2.160 min<br>
+                c) 3.600 min<br>
+                d) 4.320 min<br>
+                e) 7.200 min
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 27</b> – O número 123.456 tem quantas ordens?</p>
+            <div class="alternativas">
+                a) 3<br>
+                b) 4<br>
+                c) 5<br>
+                d) 6<br>
+                e) 7
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 28</b> – Em um número de 3 algarismos, o algarismo da casa das centenas vale quantas vezes o da casa das unidades?</p>
+            <div class="alternativas">
+                a) 10<br>
+                b) 100<br>
+                c) 1.000<br>
+                d) 10.000<br>
+                e) 100.000
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 29</b> – Quantos gramas há em 2,5 toneladas?</p>
+            <div class="alternativas">
+                a) 250 g<br>
+                b) 2.500 g<br>
+                c) 25.000 g<br>
+                d) 250.000 g<br>
+                e) 2.500.000 g
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 30</b> – O número 40.000 é composto por quantas classes?</p>
+            <div class="alternativas">
+                a) 1<br>
+                b) 2<br>
+                c) 3<br>
+                d) 4<br>
+                e) 5
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 31</b> – Converter 45.000 segundos em horas resulta em:</p>
+            <div class="alternativas">
+                a) 10 h 30 min<br>
+                b) 12 h 30 min<br>
+                c) 12 h 50 min<br>
+                d) 13 h 30 min<br>
+                e) 15 h 00 min
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 32</b> – O sistema de numeração de base 8 é chamado de:</p>
+            <div class="alternativas">
+                a) Binário<br>
+                b) Decimal<br>
+                c) Octal<br>
+                d) Hexadecimal<br>
+                e) Duodecimal
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 33</b> – A unidade de base do SI para massa é:</p>
+            <div class="alternativas">
+                a) Grama (g)<br>
+                b) Quilograma (kg)<br>
+                c) Tonelada (t)<br>
+                d) Miligrama (mg)<br>
+                e) Libra (lb)
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 34</b> – Quantos centímetros há em 0,5 metros?</p>
+            <div class="alternativas">
+                a) 5 cm<br>
+                b) 50 cm<br>
+                c) 500 cm<br>
+                d) 5.000 cm<br>
+                e) 50.000 cm
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 35</b> – A temperatura de 300 K corresponde, em graus Celsius, a aproximadamente:</p>
+            <div class="alternativas">
+                a) 17°C<br>
+                b) 27°C<br>
+                c) 37°C<br>
+                d) 47°C<br>
+                e) 57°C
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-B</b> | <b>2-C</b> | <b>3-B</b> | <b>4-B</b> | <b>5-C</b> | <b>6-C</b> | <b>7-C</b> | <b>8-B</b> | <b>9-C</b> | <b>10-C</b></p>
+            <p><b>11-A</b> | <b>12-B</b> | <b>13-C</b> | <b>14-C</b> | <b>15-A</b> | <b>16-C</b> | <b>17-B</b> | <b>18-D</b> | <b>19-A</b> | <b>20-D</b></p>
+            <p><b>21-C</b> | <b>22-C</b> | <b>23-D</b> | <b>24-C</b> | <b>25-B</b> | <b>26-D</b> | <b>27-D</b> | <b>28-B</b> | <b>29-E</b> | <b>30-B</b></p>
+            <p><b>31-B</b> | <b>32-C</b> | <b>33-B</b> | <b>34-B</b> | <b>35-B</b></p>
+        </div>
+
+        <div class="dica" style="margin-top:20px;">
+            <b>📚 Resoluções comentadas (amostra):</b>
+            <ul>
+                <li><b>Q3:</b> 25 ÷ 2 = 12 (r 1); 12 ÷ 2 = 6 (r 0); 6 ÷ 2 = 3 (r 0); 3 ÷ 2 = 1 (r 1); 1 ÷ 2 = 0 (r 1) → 11001.</li>
+                <li><b>Q9:</b> 2 h = 7200 s; 15 min = 900 s; total = 8100 s.</li>
+                <li><b>Q19:</b> 50 ÷ 2 = 25 (r 0); 25 ÷ 2 = 12 (r 1); 12 ÷ 2 = 6 (r 0); 6 ÷ 2 = 3 (r 0); 3 ÷ 2 = 1 (r 1); 1 ÷ 2 = 0 (r 1) → 110010.</li>
+                <li><b>Q29:</b> 1 tonelada = 1.000.000 g; 2,5 × 1.000.000 = 2.500.000 g.</li>
+                <li><b>Q31:</b> 45000 ÷ 3600 = 12 h e 1800 s = 30 min → 12 h 30 min.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

@@ -3,738 +3,753 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apostila - Português Módulo 5: Concordância, Regência e Crase</title>
+    <title>Apostila - Português: Concordância, Regência e Crase</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f5f2eb;
-            display: flex;
-            justify-content: center;
-            padding: 30px 10px;
-        }
-        .book-container {
-            max-width: 1000px;
-            width: 100%;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-            padding: 30px 35px;
-            position: relative;
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            border-bottom: 3px solid #8e44ad;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-            font-size: 28px;
-        }
-        h2 {
-            color: #2c3e50;
-            background-color: #f4ecf7;
-            padding: 10px 15px;
-            border-left: 6px solid #8e44ad;
-            margin: 25px 0 15px 0;
-            font-size: 22px;
-        }
-        h3 {
-            color: #6c3483;
-            margin: 18px 0 10px 0;
-            font-size: 19px;
-        }
-        p {
-            line-height: 1.7;
-            margin-bottom: 12px;
-            text-align: justify;
-        }
-        ul, ol {
-            margin: 10px 0 15px 30px;
-        }
-        li {
-            margin-bottom: 6px;
-            line-height: 1.6;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-            font-size: 15px;
-        }
-        th, td {
-            border: 1px solid #333;
-            padding: 10px 12px;
-            text-align: left;
-            vertical-align: top;
-        }
-        th {
-            background-color: #e8daef;
-            font-weight: bold;
-        }
-        .dica {
-            background-color: #fef3e2;
-            border-left: 6px solid #e67e22;
-            padding: 14px 18px;
-            margin: 15px 0;
-            border-radius: 4px;
-        }
-        .dica b {
-            color: #a04000;
-        }
-        .atencao {
-            background-color: #fce4e4;
-            border-left: 6px solid #c0392b;
-            padding: 14px 18px;
-            margin: 15px 0;
-            border-radius: 4px;
-        }
-        .atencao b {
-            color: #922b21;
-        }
-        .exemplo {
-            background-color: #f0f8ff;
-            padding: 12px 18px;
-            border-radius: 6px;
-            margin: 10px 0;
-            border: 1px dashed #8e44ad;
-        }
-        .gabarito-box {
-            background-color: #e8f5e9;
-            border: 2px solid #2e7d32;
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin: 10px 0;
-        }
-        .questao-item {
-            background-color: #faf5fc;
-            padding: 15px 18px;
-            margin: 12px 0;
-            border-radius: 6px;
-            border-left: 4px solid #8e44ad;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-        .questao-item p {
-            margin-bottom: 6px;
-        }
-        .alternativas {
-            margin-left: 20px;
-            font-size: 15px;
-        }
-
-        .page {
-            display: none;
-            animation: fadeIn 0.3s ease;
-        }
-        .page.active {
-            display: block;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0.5; }
-            to { opacity: 1; }
-        }
-
-        .nav-area {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 35px;
-            padding-top: 20px;
-            border-top: 2px solid #dee2e6;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .page-indicator {
-            font-size: 15px;
-            font-weight: bold;
-            color: #495057;
-            background: #f1f3f5;
-            padding: 6px 18px;
-            border-radius: 30px;
-        }
-        .nav-btn {
-            background-color: #2c3e50;
-            color: white;
-            border: none;
-            padding: 10px 28px;
-            border-radius: 30px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.2s, transform 0.1s;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-            min-width: 120px;
-        }
-        .nav-btn:hover {
-            background-color: #8e44ad;
-            color: white;
-        }
-        .nav-btn:active {
-            transform: scale(0.97);
-        }
-        .nav-btn:disabled {
-            background-color: #adb5bd;
-            cursor: not-allowed;
-            box-shadow: none;
-        }
-        .nav-btn.secondary {
-            background-color: #6c757d;
-        }
-        .nav-btn.secondary:hover {
-            background-color: #5a6268;
-            color: white;
-        }
-        .nav-btn.menu-btn {
-            background-color: #28a745;
-            min-width: 100px;
-        }
-        .nav-btn.menu-btn:hover {
-            background-color: #218838;
-            color: white;
-        }
-
-        .footer-note {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 13px;
-            color: #868e96;
-        }
-        hr {
-            margin: 30px 0 15px 0;
-            border: 1px solid #dee2e6;
-        }
-
-        @media (max-width: 600px) {
-            .book-container { padding: 15px; }
-            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
-            h1 { font-size: 22px; }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f2eb; display: flex; justify-content: center; padding: 30px 10px; }
+        .book-container { max-width: 1000px; width: 100%; background: #fff; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); padding: 30px 35px; position: relative; }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 3px solid #3498db; padding-bottom: 15px; margin-bottom: 20px; font-size: 24px; }
+        h2 { color: #2c3e50; background-color: #eaf2f8; padding: 10px 15px; border-left: 6px solid #3498db; margin: 25px 0 15px 0; font-size: 22px; }
+        h3 { color: #1a5276; margin: 18px 0 10px 0; font-size: 19px; }
+        h4 { color: #2c3e50; margin: 15px 0 8px 0; font-size: 17px; }
+        p { line-height: 1.7; margin-bottom: 12px; text-align: justify; }
+        ul, ol { margin: 10px 0 15px 30px; }
+        li { margin-bottom: 6px; line-height: 1.6; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px; }
+        th, td { border: 1px solid #333; padding: 8px 10px; text-align: left; vertical-align: top; }
+        th { background-color: #d6eaf8; font-weight: bold; }
+        code { background: #eef2f7; padding: 2px 6px; border-radius: 4px; font-family: 'Consolas', monospace; font-size: 13px; color: #c0392b; }
+        .dica { background-color: #e8f5e9; border-left: 6px solid #2e7d32; padding: 14px 18px; margin: 15px 0; border-radius: 4px; }
+        .dica b { color: #1b5e20; }
+        .pegadinha { background-color: #fce4e4; border-left: 6px solid #c0392b; padding: 14px 18px; margin: 15px 0; border-radius: 4px; }
+        .pegadinha b { color: #922b21; }
+        .exemplo { background-color: #f0f8ff; padding: 12px 18px; border-radius: 6px; margin: 10px 0; border: 1px dashed #3498db; }
+        .gabarito-box { background-color: #e8f5e9; border: 2px solid #2e7d32; padding: 15px 20px; border-radius: 8px; margin: 10px 0; }
+        .questao-item { background-color: #f7f9fb; padding: 15px 18px; margin: 12px 0; border-radius: 6px; border-left: 4px solid #3498db; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .questao-item p { margin-bottom: 6px; }
+        .alternativas { margin-left: 20px; font-size: 14px; }
+        .comentario { background: #fef9e7; border-left: 3px solid #f39c12; padding: 8px 14px; margin-top: 8px; font-size: 14px; border-radius: 4px; }
+        .page { display: none; animation: fadeIn 0.3s ease; }
+        .page.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0.5; } to { opacity: 1; } }
+        .nav-area { display: flex; justify-content: space-between; align-items: center; margin-top: 35px; padding-top: 20px; border-top: 2px solid #dee2e6; flex-wrap: wrap; gap: 10px; }
+        .page-indicator { font-size: 15px; font-weight: bold; color: #495057; background: #f1f3f5; padding: 6px 18px; border-radius: 30px; }
+        .nav-btn { background-color: #2c3e50; color: white; border: none; padding: 10px 28px; border-radius: 30px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.2s, transform 0.1s; box-shadow: 0 2px 6px rgba(0,0,0,0.15); min-width: 120px; }
+        .nav-btn:hover { background-color: #3498db; }
+        .nav-btn:active { transform: scale(0.97); }
+        .nav-btn:disabled { background-color: #adb5bd; cursor: not-allowed; box-shadow: none; }
+        .nav-btn.secondary { background-color: #6c757d; }
+        .nav-btn.secondary:hover { background-color: #5a6268; }
+        .nav-btn.menu-btn { background-color: #28a745; min-width: 100px; }
+        .nav-btn.menu-btn:hover { background-color: #218838; }
+        .footer-note { text-align: center; margin-top: 15px; font-size: 13px; color: #868e96; }
+        hr { margin: 30px 0 15px 0; border: 1px solid #dee2e6; }
+        @media (max-width: 600px) { .book-container { padding: 15px; } .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; } h1 { font-size: 19px; } }
     </style>
 </head>
 <body>
 <div class="book-container" id="book">
 
-    <h1>📝 LÍNGUA PORTUGUESA – MÓDULO 5</h1>
-    <p style="text-align:center; font-size:18px; color:#2c3e50;"><b>Concordância, Regência e Crase</b></p>
+    <h1>📝 CONCORDÂNCIA, REGÊNCIA E CRASE</h1>
+    <p style="text-align:center; font-size:18px; color:#2c3e50;"><b>Apostila completa para concursos públicos</b></p>
     <hr>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
-    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa/Sumário -->
     <div class="page active" data-page="1">
-        <h2>1. INTRODUÇÃO</h2>
-        <p>Este módulo reúne três dos conteúdos mais cobrados em provas de língua portuguesa: a <b>regência</b> (relação entre termos regentes e regidos), a <b>concordância</b> (harmonia entre os elementos da frase) e a <b>crase</b> (fusão da preposição "a" com o artigo "a" ou com pronomes).</p>
-        <p>Dominar esses tópicos é fundamental para escrever com correção e precisão, evitando os erros que mais desclassificam em concursos e redações oficiais.</p>
+        <h2>📖 APRESENTAÇÃO</h2>
+        <p>Esta apostila cobre os três pilares da sintaxe normativa: <b>Concordância</b> (verbal e nominal), <b>Regência</b> (verbal e nominal) e <b>Crase</b>. Aqui, a Gramática é vista como um sistema vivo de interdependência textual.</p>
+        <div class="dica">
+            <b>🎯 Como usar este material:</b> Estude os conceitos e regras, memorize os quadros, analise as pegadinhas de banca e resolva o simulado final com 25 questões.
+        </div>
+        <h2>📋 SUMÁRIO</h2>
+        <ul>
+            <li><b>Cap I:</b> Concordância Verbal e Nominal – pág. 2-4</li>
+            <li><b>Cap II:</b> Regência Verbal e Nominal – pág. 5-7</li>
+            <li><b>Cap III:</b> Crase – pág. 8-10</li>
+            <li><b>Cap IV:</b> Revisão Geral e Resumo Estratégico – pág. 11</li>
+            <li><b>Simulado:</b> 25 questões (págs. 12-13)</li>
+            <li><b>Gabarito:</b> Comentado (pág. 14)</li>
+        </ul>
+    </div>
+
+    <!-- PÁGINA 2: Cap I - Conceito e Regras -->
+    <div class="page" data-page="2">
+        <h2>CAP I: CONCORDÂNCIA – CONCEITO E REGRAS</h2>
+        <p>A concordância baseia-se na lógica da <b>interligação</b> e do <b>contexto</b>. A estrutura de uma frase determina seu sentido; isolar uma oração pode torná-la aparentemente correta, mas incoerente com o todo.</p>
+
+        <h3>Tipos de Concordância</h3>
+        <ul>
+            <li><b>Concordância Nominal:</b> harmonia entre o substantivo (núcleo) e seus determinantes (artigo, adjetivo, numeral, pronome).</li>
+            <li><b>Concordância Verbal:</b> adequação do verbo ao seu sujeito em número (singular/plural) e pessoa (1ª, 2ª ou 3ª).</li>
+        </ul>
+
+        <h3>Regras Fundamentais</h3>
+        <ul>
+            <li><b>Regra Geral Verbal:</b> O verbo concorda com o <b>núcleo do sujeito</b>, mesmo que este esteja distante ou invertido.</li>
+            <li><b>Sujeito Composto:</b> Se vier <b>antes</b> do verbo → plural. Se vier <b>depois</b> → verbo pode concordar com o mais próximo ou ir para o plural.</li>
+            <li><b>Partícula SE:</b>
+                <ul>
+                    <li><b>Apassivadora (VTD):</b> verbo concorda com o sujeito paciente. <i>Vendem-se casas.</i></li>
+                    <li><b>Índice de Indeterminação (VTI/VI/VL):</b> verbo fica na 3ª pessoa do singular. <i>Precisa-se de funcionários.</i></li>
+                </ul>
+            </li>
+            <li><b>Adjetivo Pátrio Composto:</b> primeiro elemento fica na forma reduzida/erudita. <i>teuto-brasileiro, luso-americano.</i></li>
+            <li><b>Vocábulos Relatores:</b> pronomes que remetem a termos anteriores exigem concordância em gênero e número com o antecedente.</li>
+        </ul>
 
         <div class="dica">
-            <b>🎯 Objetivo do Módulo:</b> Identificar a regência adequada de verbos e nomes, aplicar as regras de concordância nominal e verbal, e empregar corretamente a crase, com 25 questões ao final.
-        </div>
-
-        <h2>2. SUMÁRIO</h2>
-        <ul>
-            <li><b>Módulo I:</b> Regência Verbal – pág. 2</li>
-            <li><b>Módulo II:</b> Regência Nominal – pág. 3</li>
-            <li><b>Módulo III:</b> Concordância Verbal – pág. 4</li>
-            <li><b>Módulo IV:</b> Concordância Nominal – pág. 5</li>
-            <li><b>Módulo V:</b> Crase – pág. 6</li>
-            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
-        </ul>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- PÁGINA 2: Regência Verbal                                    -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="2">
-        <h2>MÓDULO I – REGÊNCIA VERBAL</h2>
-        <p>A regência verbal estuda a relação entre o verbo e seus complementos (objetos diretos e indiretos). A escolha da preposição (ou sua ausência) é determinada pela transitividade do verbo.</p>
-
-        <h3>2.1. Verbos Transitivos Diretos (VTD)</h3>
-        <p>Não exigem preposição. Ex.: "Ele <b>comprou</b> um carro."</p>
-
-        <h3>2.2. Verbos Transitivos Indiretos (VTI)</h3>
-        <p>Exigem preposição. Ex.: "Ele <b>gosta</b> <b>de</b> música."</p>
-
-        <h3>2.3. Verbos que Mudam de Sentido com a Regência</h3>
-        <ul>
-            <li><b>Assistir:</b>
-                <ul>
-                    <li><b>Assistir a</b> (ver, presenciar) – VTI. Ex.: "Assistimos <b>ao</b> filme."</li>
-                    <li><b>Assistir</b> (ajudar, dar assistência) – VTD. Ex.: "O médico <b>assistiu</b> o paciente."</li>
-                    <li><b>Assistir</b> (caber, ser de direito) – VTI (a). Ex.: "Isso <b>assiste</b> <b>a</b> você."</li>
-                </ul>
-            </li>
-            <li><b>Agradar:</b>
-                <ul>
-                    <li><b>Agradar a</b> (causar prazer) – VTI. Ex.: "O presente <b>agradou</b> <b>a</b> ela."</li>
-                    <li><b>Agradar</b> (fazer carinho, acariciar) – VTD. Ex.: "Agradou <b>o</b> cachorro."</li>
-                </ul>
-            </li>
-            <li><b>Visar:</b>
-                <ul>
-                    <li><b>Visar a</b> (objetivar, ter em vista) – VTI. Ex.: "Visamos <b>ao</b> sucesso."</li>
-                    <li><b>Visar</b> (pôr visto, assinar) – VTD. Ex.: "O chefe <b>visou</b> o documento."</li>
-                </ul>
-            </li>
-            <li><b>Pagar / Perdoar:</b>
-                <ul>
-                    <li>Paga-se <b>o</b> (objeto direto) a <b>alguém</b> (objeto indireto). Ex.: "Pagou <b>o</b> aluguel <b>ao</b> proprietário."</li>
-                </ul>
-            </li>
-            <li><b>Preferir:</b> usa-se a preposição <b>a</b>. Ex.: "Prefiro café <b>a</b> chá." (não "prefiro café do que chá").</li>
-        </ul>
-        <div class="exemplo">
-            <p><b>Dica:</b> O verbo "assistir" no sentido de "ver" exige a preposição "a" (VTI) – logo, não se diz "assisti o filme", mas sim "assisti ao filme".</p>
+            <b>✅ Técnica de Parafrasear:</b> O examinador costuma alterar a ordem dos termos. Reescreva a frase para testar a concordância.
+            <br><b>Original:</b> <i>A natureza produz materiais preciosos.</i>
+            <br><b>Parafraseado:</b> <i>Materiais preciosos <b>são produzidos</b> pela natureza.</i>
         </div>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 3: Regência Nominal                                   -->
-    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Cap I - Pegadinhas + Questões 1-3 -->
     <div class="page" data-page="3">
-        <h2>MÓDULO II – REGÊNCIA NOMINAL</h2>
-        <p>A regência nominal estuda a relação entre um <b>nome</b> (substantivo, adjetivo ou advérbio) e seu complemento, que geralmente é introduzido por uma preposição.</p>
+        <h2>CAP I – APLICAÇÃO PRÁTICA E PEGADINHAS</h2>
 
-        <h3>3.1. Principais Regências Nominais</h3>
+        <div class="pegadinha">
+            <b>⚠️ Cuidado com:</b>
+            <ul>
+                <li><b>Extrapolação:</b> trazer sentidos que não estão no texto.</li>
+                <li><b>Redução:</b> olhar apenas o termo ao lado do verbo e esquecer o núcleo.</li>
+            </ul>
+        </div>
+
+        <div class="dica">
+            <b>#FicaDica:</b> O sujeito <b>nunca é preposicionado</b>. Se houver preposição antes do substantivo, ele <b>não é o núcleo</b> que manda no verbo!
+        </div>
+
+        <h2>QUESTÕES COMENTADAS – CAP I</h2>
+
+        <div class="questao-item">
+            <p><b>Q1</b> – Assinale a alternativa que respeita a norma-padrão de concordância:</p>
+            <div class="alternativas">
+                a) Já faziam anos que não se via tantas descobertas.<br>
+                b) Ocorreu, durante o verão, novas capacidades de boiar.<br>
+                c) Boiar e nadar exige do praticante muita atenção.<br>
+                d) Bastam duas experiências para nos transformar.<br>
+                e) Existe, nas águas da praia, muitos peixes coloridos.
+            </div>
+            <div class="comentario">
+                <b>Gabarito: D</b><br>
+                <b>a)</b> Fazer indicando tempo é impessoal → <i>fazia anos</i>.<br>
+                <b>b)</b> Sujeito "novas capacidades" (plural) → <i>Ocorreram</i>.<br>
+                <b>c)</b> Infinitivos não sinônimos → plural: <i>exigem</i>.<br>
+                <b>d)</b> CORRETA – <i>bastar</i> concorda com "duas experiências".<br>
+                <b>e)</b> Existir é pessoal → <i>Existem muitos peixes</i>.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q2</b> – "Novas fontes de energia sustentáveis são buscadas por cientistas". Se substituirmos o sujeito por "Novos tipos de pesquisa", o verbo deverá:</p>
+            <div class="alternativas">
+                a) Permanecer no plural para concordar com "cientistas".<br>
+                b) Ir para o singular para concordar com "pesquisa".<br>
+                c) Permanecer no plural para concordar com o núcleo "tipos".<br>
+                d) Ir para o singular para concordar com "fontes".<br>
+                e) Ficar no plural opcionalmente.
+            </div>
+            <div class="comentario"><b>Gabarito: C</b> – O núcleo do novo sujeito é "tipos" (plural). O verbo permanece no plural.</div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q3</b> – Indique a frase com erro de concordância nominal:</p>
+            <div class="alternativas">
+                a) Seguem anexo as fotos da praia de Ubatuba.<br>
+                b) As capacidades humanas são bastantes para a evolução.<br>
+                c) Ela mesma disse que aprendeu a boiar sozinha.<br>
+                d) É necessária paciência para lidar com o novo.<br>
+                e) As portas estavam meio abertas durante o vento.
+            </div>
+            <div class="comentario"><b>Gabarito: A</b> – "Anexo" concorda com o substantivo: <i>anexas as fotos</i>. Em "b", "bastantes" = suficientes (adjetivo). Em "e", "meio" = advérbio (invariável).</div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 4: Cap I - Questões 4-5 -->
+    <div class="page" data-page="4">
+        <h2>QUESTÕES COMENTADAS – CAP I (continuação)</h2>
+
+        <div class="questao-item">
+            <p><b>Q4</b> (CESPE) – Na frase "Cada um de nós é chamado à criação de um mundo pacificado", a flexão de singular no verbo "ser" é obrigatória.</p>
+            <div class="alternativas">
+                a) CERTO<br>
+                b) ERRADO
+            </div>
+            <div class="comentario"><b>Gabarito: A (CERTO)</b> – O núcleo do sujeito é "Cada um" (3ª pessoa do singular), independentemente do adjunto "de nós".</div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q5</b> – Assinale a frase em que a concordância verbal está correta:</p>
+            <div class="alternativas">
+                a) Haviam muitas pessoas na praia.<br>
+                b) Deve existir formas de melhorar os relacionamentos.<br>
+                c) Podem haver novas descobertas após os 34 anos.<br>
+                d) Fazem dez anos que ele aprendeu a guiar.<br>
+                e) Trata-se de experiências subjetivas que nos transformam.
+            </div>
+            <div class="comentario">
+                <b>Gabarito: E</b><br>
+                <b>a)</b> Haver (existir) é impessoal → <i>Havia</i>.<br>
+                <b>b)</b> Existir é pessoal → <i>Devem existir</i>.<br>
+                <b>c)</b> Auxiliar de impessoal fica no singular → <i>Pode haver</i>.<br>
+                <b>d)</b> Fazer (tempo) é impessoal → <i>Faz dez anos</i>.<br>
+                <b>e)</b> CORRETA – VTI + SE = sujeito indeterminado, verbo no singular.
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 5: Cap II - Conceito e pronomes relativos -->
+    <div class="page" data-page="5">
+        <h2>CAP II: REGÊNCIA – CONCEITO E PRONOMES RELATIVOS</h2>
+        <p>A <b>regência</b> é o estudo da subordinação: o termo <b>regente</b> (verbo ou nome) exige um termo <b>regido</b> (complemento). A coesão textual depende diretamente desse uso.</p>
+
+        <h3>Pronomes Relativos e a Regência</h3>
+        <p>Se o verbo da oração seguinte exigir preposição, esta deve ser colocada <b>antes do pronome relativo</b>.</p>
+
         <table>
-            <tr><th>Nome</th><th>Preposição</th><th>Exemplo</th></tr>
-            <tr><td>Acessível</td><td>a</td><td>O local é acessível <b>a</b> todos.</td></tr>
-            <tr><td>Afável</td><td>com / para</td><td>Foi afável <b>com</b> os visitantes.</td></tr>
-            <tr><td>Alheio</td><td>a</td><td>Está alheio <b>a</b> tudo.</td></tr>
-            <tr><td>Análogo</td><td>a</td><td>É análogo <b>a</b> outro caso.</td></tr>
-            <tr><td>Ansioso</td><td>para / por</td><td>Ansioso <b>para</b> viajar / <b>por</b> viajar.</td></tr>
-            <tr><td>Apto</td><td>a / para</td><td>Apto <b>a</b> exercer / <b>para</b> o cargo.</td></tr>
-            <tr><td>Atento</td><td>a</td><td>Atento <b>a</b> tudo.</td></tr>
-            <tr><td>Avesso</td><td>a</td><td>Avesso <b>a</b> fofocas.</td></tr>
-            <tr><td>Capaz</td><td>de</td><td>Capaz <b>de</b> vencer.</td></tr>
-            <tr><td>Compatível</td><td>com</td><td>Compatível <b>com</b> a função.</td></tr>
-            <tr><td>Descontente</td><td>com</td><td>Descontente <b>com</b> o resultado.</td></tr>
-            <tr><td>Diferente</td><td>de</td><td>Diferente <b>de</b> tudo.</td></tr>
-            <tr><td>Favorável</td><td>a</td><td>Favorável <b>a</b> mim.</td></tr>
-            <tr><td>Inerente</td><td>a</td><td>Inerente <b>a</b> todos.</td></tr>
-            <tr><td>Obediente</td><td>a</td><td>Obediente <b>a</b> seus pais.</td></tr>
-            <tr><td>Próximo</td><td>a / de</td><td>Próximo <b>a</b> mim / <b>de</b> mim.</td></tr>
-            <tr><td>Suspeito</td><td>de</td><td>Suspeito <b>de</b> crime.</td></tr>
+            <tr><th>Pronome</th><th>Valor Semântico</th><th>Regra de Ouro</th></tr>
+            <tr><td><b>Que / Qual</b></td><td>Neutro</td><td>"Qual" evita ambiguidade e aceita crase (<i>a qual</i>)</td></tr>
+            <tr><td><b>Quem</b></td><td>Pessoa</td><td>Sempre preposicionado se houver regência (<i>a quem, de quem</i>)</td></tr>
+            <tr><td><b>Cujo</b></td><td>Posse</td><td>Une possuidor ao possuído. <b>Proibido artigo após</b></td></tr>
+            <tr><td><b>Onde</b></td><td>Lugar Fixo</td><td>Indica estatismo (sem movimento)</td></tr>
+            <tr><td><b>Aonde</b></td><td>Movimento</td><td>Indica destino (quem vai, vai a algum lugar)</td></tr>
+            <tr><td><b>Como</b></td><td>Modo</td><td>Refere-se à maneira</td></tr>
+            <tr><td><b>Quando</b></td><td>Tempo</td><td>Refere-se a momentos</td></tr>
+        </table>
+
+        <div class="exemplo">
+            <b>Análise:</b> "O verão <b>em que</b> aprendi a boiar". O "que" retoma "verão" (tempo). A preposição "em" surge para indicar contexto temporal (<i>no verão</i>).
+        </div>
+
+        <h3>Onde x Aonde – Pegadinha Clássica</h3>
+        <ul>
+            <li><b>ONDE:</b> verbos estáticos (morar, estar, permanecer). <i>Onde estão as figurinhas?</i></li>
+            <li><b>AONDE:</b> verbos de movimento (ir, chegar, dirigir-se). <i>Aonde os assaltantes levaram o estoque?</i></li>
+        </ul>
+    </div>
+
+    <!-- PÁGINA 6: Cap II - Questões 1-3 -->
+    <div class="page" data-page="6">
+        <h2>QUESTÕES COMENTADAS – CAP II</h2>
+
+        <div class="questao-item">
+            <p><b>Q1</b> – Assinale a alternativa correta quanto à regência:</p>
+            <div class="alternativas">
+                a) O autor aspira o sucesso de boiar na água.<br>
+                b) Prefiro mais boiar do que nadar com esforço.<br>
+                c) Esta é a praia onde o autor se referiu no texto.<br>
+                d) Os filhos cujos os rostos eram risonhos estavam na praia.<br>
+                e) O professor assistiu ao progresso dos alunos no curso.
+            </div>
+            <div class="comentario">
+                <b>Gabarito: E</b><br>
+                <b>a)</b> Aspirar (desejar) exige "a" → <i>aspira ao sucesso</i>.<br>
+                <b>b)</b> Preferir não aceita "mais" nem "do que" → <i>Prefiro boiar a nadar</i>.<br>
+                <b>c)</b> Quem se refere, refere-se a algo → <i>a que o autor se referiu</i>.<br>
+                <b>d)</b> Proibido artigo após "cujo" → <i>cujos rostos</i>.<br>
+                <b>e)</b> CORRETA – Assistir (ver/presenciar) exige "a".
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q2</b> – Preencha: "A cidade ___ ele mora é calma, mas a praia ___ ele se dirigiu era agitada."</p>
+            <div class="alternativas">
+                a) onde – aonde<br>
+                b) aonde – onde<br>
+                c) em que – a que<br>
+                d) as alternativas A e C estão corretas<br>
+                e) onde – onde
+            </div>
+            <div class="comentario"><b>Gabarito: D</b> – Morar (estático) → <i>onde</i> / <i>em que</i>. Dirigir-se (movimento) → <i>aonde</i> / <i>a que</i>.</div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q3</b> – O uso do pronome relativo está INCORRETO em:</p>
+            <div class="alternativas">
+                a) O dinheiro de que os bancos precisam é fictício.<br>
+                b) Os materiais cujas propriedades são valiosas são raros.<br>
+                c) A situação onde me encontrei era perversa.<br>
+                d) O autor a quem o texto pertence é Ivan Martins.<br>
+                e) Tudo quanto foi dito no relatório está claro.
+            </div>
+            <div class="comentario"><b>Gabarito: C</b> – "Onde" só para lugares físicos. Para situações abstratas: <i>em que</i> ou <i>na qual</i>.</div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 7: Cap II - Questões 4-5 -->
+    <div class="page" data-page="7">
+        <h2>QUESTÕES COMENTADAS – CAP II (continuação)</h2>
+
+        <div class="questao-item">
+            <p><b>Q4</b> (AOCP) – Em "novas capacidades fazem de nós pessoas diferentes", o termo "de nós" é exigido pela regência de:</p>
+            <div class="alternativas">
+                a) Capacidades.<br>
+                b) Pessoas.<br>
+                c) Fazem.<br>
+                d) Nós.<br>
+                e) Diferentes.
+            </div>
+            <div class="comentario"><b>Gabarito: C</b> – O verbo "fazer" (transformar) rege a preposição "de" (<i>fazer de algo/alguém outra coisa</i>).</div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q5</b> – Marque a alternativa que apresenta erro na preposição antes do relativo:</p>
+            <div class="alternativas">
+                a) Este é o ideal a que viso.<br>
+                b) As ferramentas de que dispomos são tecnológicas.<br>
+                c) O mestre a quem obedecemos é sábio.<br>
+                d) As verdades em que cremos são subjetivas.<br>
+                e) O filme que eu gostei foi Stephen Hawking.
+            </div>
+            <div class="comentario"><b>Gabarito: E</b> – Quem gosta, gosta <b>de</b> algo → <i>O filme de que gostei</i>.</div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 8: Cap III - Conceito e regras de ouro -->
+    <div class="page" data-page="8">
+        <h2>CAP III: CRASE – CONCEITO E REGRAS DE OURO</h2>
+        <p><b>Crase</b> é a fusão de dois sons vocálicos iguais (contração). Representamos essa fusão pelo <b>acento grave</b> (`). Ocorre entre a preposição <b>a</b> (exigida por um termo regente) e o artigo feminino <b>a(s)</b> ou pronomes demonstrativos <b>aquele(s), aquela(s), aquilo</b>.</p>
+
+        <h3>Regras de Ouro</h3>
+        <table>
+            <tr><th>Caso</th><th>Regra</th><th>Exemplo</th></tr>
+            <tr><td><b>Obrigatória</b></td><td>Diante de palavras femininas que aceitam artigo; locuções adverbiais femininas; antes de horas exatas</td><td>Vou à escola; à noite; às 8h</td></tr>
+            <tr><td><b>Facultativa</b></td><td>Diante de nomes próprios femininos; pronomes possessivos femininos no singular; após "até"</td><td>Referiu-se a/à Maria; a/à sua casa</td></tr>
+            <tr><td><b>Proibida</b></td><td>Antes de verbos; palavras masculinas; pronomes pessoais e de tratamento (exceto senhora/senhorita); palavras repetidas</td><td>Começou a boiar; a pé; disse a ela; dia a dia</td></tr>
+        </table>
+
+        <h3>Crase e os Pronomes Relativos</h3>
+        <p>Fique atento aos pronomes <b>a qual / as quais</b>. A crase ocorrerá se o verbo depois deles exigir a preposição <b>a</b>:</p>
+        <div class="exemplo">
+            <b>Exemplo:</b> <i>A regra <b>à qual</b> fiz referência é clara.</i> (Fiz referência <b>a</b> + <b>a qual</b>)<br>
+            <b>Atenção:</b> Jamais use crase antes de <b>cujo/cuja</b>, pois esse pronome não admite artigo.
+        </div>
+
+        <div class="dica">
+            <b>✅ Teste do masculino:</b> Troque a palavra feminina por masculina. Se aparecer "ao", a crase é obrigatória.
+            <i>Vou à escola → Vou ao colégio.</i>
+        </div>
+    </div>
+
+    <!-- PÁGINA 9: Cap III - Questões 1-3 -->
+    <div class="page" data-page="9">
+        <h2>QUESTÕES COMENTADAS – CAP III</h2>
+
+        <div class="questao-item">
+            <p><b>Q1</b> (CESPE) – Em "Cada um de nós é chamado à criação de um mundo pacificado", a supressão do acento grave manteria a correção gramatical.</p>
+            <div class="alternativas">
+                a) CERTO<br>
+                b) ERRADO
+            </div>
+            <div class="comentario"><b>Gabarito: B (ERRADO)</b> – Quem é chamado é chamado <b>a</b> (preposição). "Criação" é feminino e admite artigo "a". A fusão é obrigatória.</div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q2</b> (CESPE) – Ocorre crase em "O autor refere-se àquilo que aprendeu na infância".</p>
+            <div class="alternativas">
+                a) CERTO<br>
+                b) ERRADO
+            </div>
+            <div class="comentario"><b>Gabarito: A (CERTO)</b> – O verbo "referir-se" exige "a", que se funde com a letra inicial de "aquilo".</div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q3</b> – Assinale a alternativa que preenche corretamente as lacunas: "O sistema bancário induz ___ pessoas ___ dívidas, pois não impõe limites ___ produção de dinheiro."</p>
+            <div class="alternativas">
+                a) a – à – a<br>
+                b) as – a – à<br>
+                c) às – à – a<br>
+                d) às – a – à<br>
+                e) a – a – a
+            </div>
+            <div class="comentario">
+                <b>Gabarito: B</b><br>
+                1. "Induz <b>as</b> pessoas" (VTD, sem preposição – apenas artigo).<br>
+                2. "<b>a</b> dívidas" (antes de plural, se o "a" estiver no singular, é apenas preposição).<br>
+                3. "limites <b>à</b> produção" (limite a + a produção = crase).
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 10: Cap III - Questões 4-5 -->
+    <div class="page" data-page="10">
+        <h2>QUESTÕES COMENTADAS – CAP III (continuação)</h2>
+
+        <div class="questao-item">
+            <p><b>Q4</b> – Marque a opção onde o uso da crase é FACULTATIVO:</p>
+            <div class="alternativas">
+                a) Dirigiu-se à Ubatuba de seus sonhos.<br>
+                b) Entregou os relatórios à sua secretária.<br>
+                c) O assaltante chegou à banca de jornais.<br>
+                d) Ficou à espera de notícias.<br>
+                e) Chegaram à conclusão de que o dinheiro é escasso.
+            </div>
+            <div class="comentario"><b>Gabarito: B</b> – Antes de pronome possessivo feminino singular, a crase é <b>facultativa</b>.</div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q5</b> – A crase está INCORRETA em:</p>
+            <div class="alternativas">
+                a) Começou à boiar depois de muita tentativa.<br>
+                b) Referiu-se àquelas figurinhas da Copa.<br>
+                c) À medida que o tempo passa, aprendemos mais.<br>
+                d) Chegou às duas horas da tarde na praia.<br>
+                e) O acesso à internet gera dependência.
+            </div>
+            <div class="comentario"><b>Gabarito: A</b> – Proibido uso de crase antes de verbos (<i>boiar</i>).</div>
+        </div>
+    </div>
+    <!-- PÁGINA 11: Revisão Geral -->
+    <div class="page" data-page="11">
+        <h2>REVISÃO GERAL E RESUMO ESTRATÉGICO</h2>
+
+        <h3>Mapa Mental Textual</h3>
+        <ul>
+            <li><b>Concordância:</b> pense em <b>interligação</b>. O núcleo do sujeito manda no verbo. O substantivo manda nos adjetivos. Cuidado com termos distantes.</li>
+            <li><b>Regência:</b> pense em <b>coesão</b>. Verifique se o verbo "pede" preposição. Atenção especial aos pronomes relativos (<i>cujo, onde, a que</i>).</li>
+            <li><b>Crase:</b> pense em <b>soma</b>. Preposição "a" + artigo "a". Verifique o termo regente e a palavra seguinte. Proibida antes de verbo e masculino.</li>
+        </ul>
+
+        <h3>Tabela de Consulta Rápida</h3>
+        <table>
+            <tr><th>Dúvida</th><th>Regra</th><th>Exemplo</th></tr>
+            <tr><td><b>Mau x Mal</b></td><td>Mau (bom) / Mal (bem)</td><td>Estava de mau humor / Foi mal na prova</td></tr>
+            <tr><td><b>Hífen (vogais)</b></td><td>Iguais: usa hífen; Diferentes: não usa</td><td>Micro-ondas / Autoestrada</td></tr>
+            <tr><td><b>Hífen (R e S)</b></td><td>Prefixo em vogal + R/S: dobra a letra</td><td>Antirreligioso / Infrassom</td></tr>
+            <tr><td><b>Onde x Aonde</b></td><td>Onde (fixo) / Aonde (destino/movimento)</td><td>Onde você mora? / Aonde você vai?</td></tr>
+            <tr><td><b>Cujo</b></td><td>Posse; nunca usa artigo após</td><td>O autor cujo texto li</td></tr>
         </table>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 4: Concordância Verbal                                -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="4">
-        <h2>MÓDULO III – CONCORDÂNCIA VERBAL</h2>
-        <p>A concordância verbal é a relação de número (singular/plural) e pessoa (1ª/2ª/3ª) entre o sujeito e o verbo.</p>
-
-        <h3>4.1. Regra Geral</h3>
-        <ul>
-            <li><b>Sujeito simples:</b> verbo concorda com o núcleo. Ex.: "O aluno <b>estudou</b>."</li>
-            <li><b>Sujeito composto:</b> verbo vai para o plural. Ex.: "João e Maria <b>estudaram</b>."</li>
-        </ul>
-
-        <h3>4.2. Casos Especiais</h3>
-        <ul>
-            <li><b>Verbos impessoais (haver, fazer, passar, etc.):</b> ficam na 3ª pessoa do singular. Ex.: "<b>Há</b> muitos alunos." / "<b>Faz</b> cinco anos."</li>
-            <li><b>Sujeito coletivo:</b> verbo no singular. Ex.: "A turma <b>saiu</b>." (se tiver especificador, pode ir para o plural: "A turma de alunos <b>sairam</b>" – admitido).</li>
-            <li><b>Mais de um / menos de um:</b> verbo no singular. Ex.: "<b>Mais de um</b> aluno <b>chegou</b>."</li>
-            <li><b>Um e outro / nem um nem outro:</b> verbo no singular ou plural (singular é mais formal). Ex.: "Um e outro <b>chegou</b> (ou chegaram)."</li>
-            <li><b>Sujeito oracional:</b> verbo no singular. Ex.: "Estudar <b>é</b> importante."</li>
-            <li><b>Verbo + pronome "se" (partícula apassivadora ou índice de indeterminação):</b>
-                <ul>
-                    <li><b>Voz passiva sintética:</b> verbo concorda com o sujeito. Ex.: "Vendem-se <b>casas</b>." (casas = sujeito).</li>
-                    <li><b>Índice de indeterminação do sujeito:</b> verbo na 3ª pessoa do singular. Ex.: "Precisa-se <b>de</b> funcionários."</li>
-                </ul>
-            </li>
-        </ul>
-        <div class="atencao">
-            <b>⚡ Atenção:</b> O verbo "haver" no sentido de "existir" ou "ocorrer" é impessoal e fica sempre no singular. Não confundir com o verbo "existir", que é pessoal.
-        </div>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- PÁGINA 5: Concordância Nominal                               -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="5">
-        <h2>MÓDULO IV – CONCORDÂNCIA NOMINAL</h2>
-        <p>A concordância nominal é a relação de gênero (masculino/feminino) e número (singular/plural) entre o substantivo e seus determinantes (artigo, adjetivo, pronome, numeral).</p>
-
-        <h3>5.1. Regra Geral</h3>
-        <ul>
-            <li><b>Adjetivo anteposto:</b> concorda com o primeiro substantivo. Ex.: "A <b>famosa</b> atriz e escritora."</li>
-            <li><b>Adjetivo posposto:</b> concorda com o substantivo mais próximo ou com todos (flexão de plural). Ex.: "Comprou <b>blusa e saia</b> amarela / amarelas."</li>
-        </ul>
-
-        <h3>5.2. Casos Especiais</h3>
-        <ul>
-            <li><b>Anexo, incluso, junto, incluso, obrigado:</b> concordam com o substantivo. Ex.: "As fotos vão <b>anexas</b>." / "Ele disse <b>obrigado</b>." / "Ela disse <b>obrigada</b>."</li>
-            <li><b>Menos:</b> invariável. Ex.: "Havia <b>menos</b> pessoas." (não existe "menas").</li>
-            <li><b>Bastante:</b>
-                <ul>
-                    <li>Advérbio (muito): invariável. Ex.: "Ela é <b>bastante</b> inteligente."</li>
-                    <li>Pronome / adjetivo (vários): variável. Ex.: "Havia <b>bastantes</b> problemas."</li>
-                </ul>
-            </li>
-            <li><b>Meio:</b>
-                <ul>
-                    <li>Advérbio (um pouco): invariável. Ex.: "Estou <b>meio</b> cansada."</li>
-                    <li>Numeral (metade): variável. Ex.: "Comi <b>meia</b> laranja."</li>
-                </ul>
-            </li>
-            <li><b>É proibido, é permitido, é bom, é necessário:</b>
-                <ul>
-                    <li>Com artigo ou determinante: concordam. Ex.: "É proibida <b>a entrada</b>."</li>
-                    <li>Sem artigo: invariáveis. Ex.: "É <b>proibido</b> entrada."</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- PÁGINA 6: Crase                                              -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="6">
-        <h2>MÓDULO V – CRASE</h2>
-        <p>A crase é a <b>fusão da preposição "a" com o artigo feminino "a"</b> (ou com os pronomes demonstrativos aquela, aquele, aquilo). É indicada pelo acento grave: <b>à</b>.</p>
-
-        <h3>6.1. Regra Prática: Substitua a palavra feminina por uma masculina</h3>
-        <p>Se aparecer <b>"ao"</b>, crase há; se aparecer <b>"ao"</b> (masculino), a crase é obrigatória.</p>
-        <div class="exemplo">
-            <p>Ex.: "Vou <b>à</b> escola." → "Vou <b>ao</b> colégio." (crase obrigatória).</p>
-            <p>Ex.: "Vou <b>a</b> uma escola." → "Vou <b>a</b> um colégio." (sem crase, pois "a" é apenas preposição).</p>
-        </div>
-
-        <h3>6.2. Casos Obrigatórios</h3>
-        <ul>
-            <li><b>Locuções adverbiais femininas:</b> à tarde, à noite, à vontade, às pressas, etc.</li>
-            <li><b>Antes de palavras femininas determinadas por artigo:</b> "Fui <b>à</b> festa."</li>
-            <li><b>Antes de pronomes demonstrativos:</b> "Refiro-me <b>àquela</b> pessoa."</li>
-            <li><b>Nos casos de "a" + "a" (preposição + artigo):</b> "Entreguei <b>à</b> professora."</li>
-        </ul>
-
-        <h3>6.3. Casos Proibidos (Sem Crase)</h3>
-        <ul>
-            <li>Antes de <b>verbo</b> (ex.: "Começou a correr" – sem crase).</li>
-            <li>Antes de <b>palavra masculina</b> (ex.: "Andou a cavalo" – sem crase).</li>
-            <li>Antes de <b>palavra feminina sem artigo</b> (ex.: "Fui a festa" – se "festa" não tiver artigo definido).</li>
-            <li>Antes de <b>pronome possessivo feminino singular</b> (facultativo).</li>
-            <li>Antes de <b>palavras repetidas</b> (ex.: "dia a dia", "frente a frente").</li>
-            <li>Depois de <b>preposição "de"</b> (ex.: "Fui de a" – não existe, seria "da").</li>
-        </ul>
-        <div class="dica">
-            <b>💡 Dica:</b> Antes de pronomes possessivos femininos (minha, tua, sua), o uso da crase é <b>facultativo</b>. Ex.: "Refiro-me a sua mãe" ou "Refiro-me à sua mãe".
-        </div>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- PÁGINA 7: Questões 1 a 14                                    -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="7">
-        <h2>📝 QUESTÕES (1 a 14)</h2>
-        <p><i>Responda com base no conteúdo estudado.</i></p>
+    <!-- PÁGINA 12: Simulado Q1-Q13 -->
+    <div class="page" data-page="12">
+        <h2>📝 SIMULADO FINAL (1 a 13)</h2>
 
         <div class="questao-item">
-            <p><b>Questão 1</b> (Regência Verbal) – A frase em que o verbo "assistir" está empregado corretamente é:</p>
+            <p><b>Q1</b> (VUNESP) – "A natureza é capaz de produzir materiais preciosos". Se trocarmos "natureza" por "fontes":</p>
             <div class="alternativas">
-                a) Assistimos o filme ontem.<br>
-                b) Assistimos ao filme ontem.<br>
-                c) Assistimos para o filme ontem.<br>
-                d) Assistimos no filme ontem.<br>
-                e) Assistimos por o filme ontem.
+                a) As fontes é capaz de produzir...<br>
+                b) As fontes são capaz de produzir...<br>
+                c) As fontes são capazes de produzir...<br>
+                d) As fontes são capazes de produzirem...<br>
+                e) As fontes é capazes de produzir...
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 2</b> (Regência Nominal) – A frase correta, segundo a norma culta, é:</p>
+            <p><b>Q2</b> (AOCP) – Em "O verão em que aprendi a boiar", se substituirmos "verão" por "época":</p>
             <div class="alternativas">
-                a) Ele é capaz de vencer.<br>
-                b) Ele é capaz para vencer.<br>
-                c) Ele é capaz a vencer.<br>
-                d) Ele é capaz com vencer.<br>
-                e) Ele é capaz em vencer.
+                a) à que<br>
+                b) na qual<br>
+                c) onde<br>
+                d) a que<br>
+                e) cujo
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 3</b> (Concordância Verbal) – "Mais de um aluno _________ a prova." A forma verbal correta é:</p>
+            <p><b>Q3</b> (FGV) – A concordância está correta em:</p>
             <div class="alternativas">
-                a) fez.<br>
-                b) fizeram.<br>
-                c) fazia.<br>
-                d) faria.<br>
-                e) fizeram (ambas possíveis, mas a regra exige o singular).
+                a) Faziam anos que os cientistas esperavam.<br>
+                b) Devem haver muitas mentes brilhantes no céu.<br>
+                c) Tratam-se de gênios da física contemporânea.<br>
+                d) Haviam muitas expectativas sobre sua chegada.<br>
+                e) Existiam mentes brilhantes que o esperavam.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 4</b> (Concordância Nominal) – A frase correta é:</p>
+            <p><b>Q4</b> (FADESP) – "Os banqueiros criaram manobras para emprestar dinheiro". A regência de "emprestar" permite:</p>
             <div class="alternativas">
-                a) Seguem anexo as cópias.<br>
-                b) Seguem anexas as cópias.<br>
-                c) Seguem anexos as cópias.<br>
-                d) Segue anexo as cópias.<br>
-                e) Segue anexas as cópias.
+                a) Emprestar dinheiro aos clientes.<br>
+                b) Emprestar dinheiro nos clientes.<br>
+                c) Emprestar dinheiro com os clientes.<br>
+                d) Emprestar dinheiro para com os clientes.<br>
+                e) Emprestar dinheiro sob os clientes.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 5</b> (Crase) – A frase em que a crase foi empregada corretamente é:</p>
+            <p><b>Q5</b> (AOCP) – "Finalmente consegui boiar". Se o autor dissesse que se dedicou à prática:</p>
             <div class="alternativas">
-                a) Fui a festa.<br>
-                b) Fui à festa.<br>
-                c) Fui a à festa.<br>
-                d) Fui á festa.<br>
-                e) Fui a festa (sem crase).
+                a) Dedicou-se à boiar.<br>
+                b) Dedicou-se à flutuação.<br>
+                c) Dedicou-se a flutuação.<br>
+                d) Dedicou-se as flutuações.<br>
+                e) Dedicou-se àquelas flutuar.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 6</b> (Regência Verbal) – O verbo "preferir" exige a preposição:</p>
+            <p><b>Q6</b> (FGV) – "A febre do troca-troca de figurinhas pode estar atingindo uma temperatura muito alta". A concordância de "alta" justifica-se por:</p>
             <div class="alternativas">
-                a) de.<br>
-                b) a.<br>
-                c) para.<br>
-                d) com.<br>
-                e) por.
+                a) Concordar com "troca-troca".<br>
+                b) Concordar com "febre".<br>
+                c) Concordar com "temperatura".<br>
+                d) Ser um advérbio invariável.<br>
+                e) Concordar com "figurinhas".
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 7</b> (Concordância Verbal) – "Havia _________ pessoas na sala." A forma correta é:</p>
+            <p><b>Q7</b> (VUNESP) – "Muitos jornaleiros levam os estoques para casa". Se substituirmos "casa" por "suas residências", a crase será:</p>
             <div class="alternativas">
-                a) muitas.<br>
-                b) muito.<br>
-                c) bastante.<br>
-                d) muita.<br>
-                e) muito (invariável? Na verdade, "havia muitas pessoas" – "muitas" concorda com "pessoas". O verbo "havia" fica no singular, mas o adjetivo concorda com o substantivo).
+                a) Obrigatória.<br>
+                b) Proibida.<br>
+                c) Facultativa.<br>
+                d) Inexistente.<br>
+                e) Errada.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 8</b> (Regência Nominal) – "Ele está ansioso _______ viajar." A preposição correta é:</p>
+            <p><b>Q8</b> (CESPE) – "Construir uma cultura da paz envolve dotar as crianças da compreensão de princípios". O verbo "dotar" exige a preposição:</p>
             <div class="alternativas">
-                a) de.<br>
-                b) para.<br>
-                c) com.<br>
-                d) a.<br>
-                e) por (também é possível, mas "para" é mais comum).
+                a) De.<br>
+                b) Em.<br>
+                c) Por.<br>
+                d) A.<br>
+                e) Para.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 9</b> (Crase) – Assinale a alternativa que preenche corretamente a lacuna: "Vou _______ sua casa amanhã."</p>
+            <p><b>Q9</b> – "Não faltam, também, os arautos do quanto pior, melhor". O verbo "faltar" concorda com:</p>
             <div class="alternativas">
-                a) à.<br>
-                b) a.<br>
-                c) as.<br>
-                d) às.<br>
-                e) a (crase facultativa antes de possessivo feminino, mas "sua" é possessivo, então é facultativo. Vou marcar "a" como opção se não tiver crase, ou "à" se considerar. A questão pede uma opção. Normalmente, é facultativo, mas a banca pode cobrar a forma sem crase. Vou marcar "a" para simplificar, mas com ressalva).
+                a) Também.<br>
+                b) Arautos.<br>
+                c) Pior.<br>
+                d) Melhor.<br>
+                e) Omitido.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 10</b> (Concordância Verbal) – "Um e outro _________ problema." A forma correta é:</p>
+            <p><b>Q10</b> (FGV) – Se o menino usasse a norma-padrão para "A gente não somos viciados", o correto seria:</p>
             <div class="alternativas">
-                a) resolveu.<br>
-                b) resolveram.<br>
-                c) resolvia.<br>
-                d) resolverá.<br>
-                e) resolveriam (ambas são possíveis, mas o singular é mais formal).
+                a) A gente não é viciado.<br>
+                b) Nós não somos viciado.<br>
+                c) A gente não somos viciado.<br>
+                d) Nós não é viciado.<br>
+                e) A gente não é viciados.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 11</b> (Regência Verbal) – O verbo "visar" no sentido de "objetivar" exige a preposição:</p>
+            <p><b>Q11</b> (AOCP) – Em "A cidade mudou de fisionomia", a regência de "mudou" indica:</p>
             <div class="alternativas">
-                a) a.<br>
-                b) para.<br>
-                c) com.<br>
-                d) de.<br>
-                e) por.
+                a) Mudança de estado.<br>
+                b) Origem.<br>
+                c) Posse.<br>
+                d) Instrumento.<br>
+                e) Finalidade.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 12</b> (Concordância Nominal) – "Ela está _______ cansada." A forma correta é:</p>
+            <p><b>Q12</b> (VUNESP) – Em "Desligue as luzes", a regência do verbo "Desligar" o classifica como:</p>
             <div class="alternativas">
-                a) meio.<br>
-                b) meia.<br>
-                c) meia (advérbio?) Na verdade, "meio" como advérbio = invariável. Então "meio cansada". A resposta é "meio".
+                a) Transitivo Indireto.<br>
+                b) Intransitivo.<br>
+                c) Transitivo Direto.<br>
+                d) Bitransitivo.<br>
+                e) De ligação.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 13</b> (Crase) – A frase em que NÃO ocorre crase é:</p>
+            <p><b>Q13</b> (FADESP) – "O patrimônio de 80 pessoas é maior do que o de 3,6 bilhões". Se trocarmos "patrimônio" por "riquezas", o termo "maior" vira:</p>
             <div class="alternativas">
-                a) Chegou à noite.<br>
-                b) Foi à escola.<br>
-                c) Fez a lição à lápis.<br>
-                d) Referiu-se àquela pessoa.<br>
-                e) Entregou à aluna.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 14</b> (V/F – Regência e Concordância) – Analise as afirmativas:</p>
-            <p>(   ) O verbo "haver" no sentido de "existir" é impessoal e fica no singular.<br>
-            (   ) O adjetivo "anexo" é invariável.<br>
-            (   ) "Assistir" no sentido de "ver" é VTD (não exige preposição).<br>
-            (   ) A crase é a fusão da preposição "a" com o artigo "a".</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) V – F – F – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – V – F
+                a) Maiors.<br>
+                b) Maiores.<br>
+                c) Mais grande.<br>
+                d) Mais grandes.<br>
+                e) Permanece maior.
             </div>
         </div>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="8">
-        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+    <!-- PÁGINA 13: Simulado Q14-Q25 -->
+    <div class="page" data-page="13">
+        <h2>📝 SIMULADO FINAL (14 a 25)</h2>
 
         <div class="questao-item">
-            <p><b>Questão 15</b> (V/F – Crase) – Analise as afirmativas:</p>
-            <p>(   ) Antes de verbo, não ocorre crase.<br>
-            (   ) Antes de palavras masculinas, ocorre crase.<br>
-            (   ) Nas locuções adverbiais "à tarde" e "à noite", a crase é obrigatória.<br>
-            (   ) O uso da crase antes de pronome possessivo feminino é facultativo.</p>
-            <p>Assinale a sequência correta:</p>
+            <p><b>Q14</b> (FGV) – Em "referir-se à gestão de conflitos", a crase ocorre porque:</p>
             <div class="alternativas">
-                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+                a) O verbo é transitivo direto.<br>
+                b) Gestão é palavra masculina.<br>
+                c) O termo regente exige "a" e o regido aceita artigo "a".<br>
+                d) É uma locução adverbial de tempo.<br>
+                e) É opcional antes de substantivos comuns.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 16</b> (Regência Verbal) – "O juiz _________ o réu." A forma correta para o verbo "absolver" (perdoar) é:</p>
+            <p><b>Q15</b> (CESPE) – Na frase "A violência já é bastante denunciada", o termo "bastante" é adjetivo e poderia ir para o plural.</p>
             <div class="alternativas">
-                a) absolveu de.<br>
-                b) absolveu a.<br>
-                c) absolveu o.<br>
-                d) absolveu por.<br>
-                e) absolveu para.
+                a) CERTO<br>
+                b) ERRADO
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 17</b> (Concordância Nominal) – "É __________ a entrada de animais." A forma correta é:</p>
+            <p><b>Q16</b> (FGV) – Assinale a alternativa onde o "A" é apenas preposição (sem crase):</p>
             <div class="alternativas">
-                a) proibido.<br>
-                b) proibida.<br>
-                c) proibido (com artigo? "a entrada" exige concordância, então é "proibida").</div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 18</b> (Crase) – "Ele se referiu _______ proposta que fiz." A forma correta é:</p>
-            <div class="alternativas">
-                a) a.<br>
-                b) à.<br>
-                c) a (sem crase, pois "proposta" está no singular sem artigo? Na verdade, "a proposta" tem artigo, então é "à proposta").</div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 19</b> (Concordância Verbal) – "Os Estados Unidos _________ um país desenvolvido." A forma correta é:</p>
-            <div class="alternativas">
-                a) é.<br>
-                b) são.<br>
-                c) eram.<br>
-                d) serão.<br>
-                e) foi (por ser um nome de país, normalmente se usa o singular).
+                a) O autor foi à praia.<br>
+                b) Ele aprendeu à boiar.<br>
+                c) O gênio voltou à vida.<br>
+                d) Referiu-se àquele gênio.<br>
+                e) Assistiu à cena.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 20</b> (Regência Nominal) – "Ele é suspeito _______ participação no crime." A preposição correta é:</p>
+            <p><b>Q17</b> (VUNESP) – "A violência está banalizada". Substituindo por "Os atos violentos":</p>
             <div class="alternativas">
-                a) de.<br>
-                b) a.<br>
-                c) para.<br>
-                d) com.<br>
-                e) por.
+                a) Os atos violentos está banalizada.<br>
+                b) Os atos violentos estão banalizados.<br>
+                c) Os atos violentos estão banalizada.<br>
+                d) Os atos violentos é banalizados.<br>
+                e) Os atos violentos são banalizada.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 21</b> (V/F – Geral) – Analise as afirmativas:</p>
-            <p>(   ) A palavra "menas" é admitida pela norma culta.<br>
-            (   ) O verbo "fazer" impessoal fica no plural.<br>
-            (   ) "Obrigado" concorda com o gênero de quem fala.<br>
-            (   ) A crase é obrigatória antes de pronome possessivo feminino.</p>
-            <p>Assinale a sequência correta:</p>
+            <p><b>Q18</b> – Regência correta do verbo "Visar" (objetivar):</p>
             <div class="alternativas">
-                a) F – F – V – F<br>b) V – V – F – V<br>c) F – V – V – F<br>d) V – F – F – V<br>e) F – F – V – V
+                a) Ele visa o cargo de juiz.<br>
+                b) Ele visa ao cargo de juiz.<br>
+                c) Ele visa no cargo de juiz.<br>
+                d) Ele visa pelo cargo de juiz.<br>
+                e) Ele visa com o cargo de juiz.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 22</b> (Regência Verbal) – O verbo "pagar" exige objeto direto (coisa) e indireto (pessoa). Assinale a alternativa correta:</p>
+            <p><b>Q19</b> (AOCP) – "As mãos ao volante". A preposição "a" fundida com o artigo "o" ocorre por regência de um termo implícito que indica:</p>
             <div class="alternativas">
-                a) Pagou o funcionário.<br>
-                b) Pagou ao funcionário o salário.<br>
-                c) Pagou o salário o funcionário.<br>
-                d) Pagou o funcionário o salário.<br>
-                e) Pagou o salário para o funcionário.
+                a) Modo.<br>
+                b) Posse.<br>
+                c) Lugar/Posição.<br>
+                d) Tempo.<br>
+                e) Causa.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 23</b> (Concordância Nominal) – "Havia _______ pessoas na fila." A forma correta é:</p>
+            <p><b>Q20</b> (FGV) – "A gente nunca para de aprender". Substituindo por "Nós":</p>
             <div class="alternativas">
-                a) bastante.<br>
-                b) bastantes.<br>
-                c) bastante (advérbio, mas aqui é adjetivo, então "bastantes").</div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 24</b> (Crase) – "Vou _______ casa de minha avó." A forma correta (segundo a norma culta mais rigorosa) é:</p>
-            <div class="alternativas">
-                a) a.<br>
-                b) à.<br>
-                c) as.<br>
-                d) às.<br>
-                e) a (facultativo antes de possessivo feminino, mas considerando a norma mais tradicional, pode-se usar "à").
+                a) Nós nunca para de aprender.<br>
+                b) Nós nunca paramos de aprender.<br>
+                c) Nós nunca param de aprender.<br>
+                d) Nós nunca paramos de aprendermos.<br>
+                e) Nós nunca paramos de aprendem.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 25</b> (V/F – Consolidação) – Analise as afirmativas:</p>
-            <p>(   ) A regência verbal estuda a relação entre o verbo e seu complemento.<br>
-            (   ) A concordância nominal se dá entre substantivo e seus modificadores.<br>
-            (   ) A crase ocorre antes de verbos no infinitivo.<br>
-            (   ) O adjetivo "anexo" é invariável quando acompanha substantivo.</p>
-            <p>Assinale a sequência correta:</p>
+            <p><b>Q21</b> (CESPE) – "À medida que os anos passam...". O uso da crase é obrigatório por ser locução conjuntiva feminina.</p>
             <div class="alternativas">
-                a) V – V – F – F<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – F – V
+                a) CERTO<br>
+                b) ERRADO
             </div>
         </div>
 
-        <hr>
+        <div class="questao-item">
+            <p><b>Q22</b> (VUNESP) – Indique o erro de crase:</p>
+            <div class="alternativas">
+                a) Fui à escola de natação.<br>
+                b) Ficamos à vontade.<br>
+                c) Entregue o livro à ele.<br>
+                d) Sairemos às dez horas.<br>
+                e) Chegamos àquela conclusão.
+            </div>
+        </div>
 
-        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="questao-item">
+            <p><b>Q23</b> (FADESP) – "O dinheiro é criado a partir de empréstimos". Não há crase em "a partir" porque:</p>
+            <div class="alternativas">
+                a) Partir é verbo.<br>
+                b) A palavra é masculina.<br>
+                c) É facultativo.<br>
+                d) Já existe uma preposição.<br>
+                e) O "a" é artigo.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q24</b> – "As águas translúcidas da praia Brava". Se o adjetivo "translúcidas" viesse antes de "águas e sol":</p>
+            <div class="alternativas">
+                a) Os translúcidos águas e sol.<br>
+                b) As translúcidas águas e sol.<br>
+                c) O translúcido águas e sol.<br>
+                d) As translúcidas águas e sóis.<br>
+                e) O translúcido águas e sóis.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q25</b> (FGV) – Sobre o uso de "Onde/Aonde", marque a correta:</p>
+            <div class="alternativas">
+                a) Aonde estão os documentos?<br>
+                b) Onde você quer chegar com isso?<br>
+                c) Aonde você mora atualmente?<br>
+                d) Não sei onde te encontrar.<br>
+                e) Aonde os fatos ocorreram?
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 14: Gabarito -->
+    <div class="page" data-page="14">
+        <h2>✅ GABARITO OFICIAL COM COMENTÁRIOS</h2>
         <div class="gabarito-box">
-            <p><b>1-B</b> | <b>2-A</b> | <b>3-A</b> | <b>4-B</b> | <b>5-B</b> | <b>6-B</b> | <b>7-A</b> | <b>8-B</b> | <b>9-B (facultativo, mas a opção com crase é à)</b> | <b>10-A</b></p>
-            <p><b>11-A</b> | <b>12-A</b> | <b>13-C</b> | <b>14-A</b> | <b>15-A</b> | <b>16-C</b> | <b>17-B</b> | <b>18-B</b> | <b>19-A</b> | <b>20-A</b></p>
-            <p><b>21-A</b> | <b>22-B</b> | <b>23-B</b> | <b>24-B</b> | <b>25-A</b></p>
+            <p><b>1-C</b> | <b>2-B</b> | <b>3-E</b> | <b>4-A</b> | <b>5-B</b> | <b>6-C</b> | <b>7-C</b> | <b>8-A</b> | <b>9-B</b> | <b>10-A</b></p>
+            <p><b>11-B</b> | <b>12-C</b> | <b>13-B</b> | <b>14-C</b> | <b>15-B</b> | <b>16-B</b> | <b>17-B</b> | <b>18-B</b> | <b>19-C</b> | <b>20-B</b></p>
+            <p><b>21-A</b> | <b>22-C</b> | <b>23-A</b> | <b>24-B</b> | <b>25-D</b></p>
         </div>
-        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,F,F,V); Q15 (V,F,V,V); Q21 (F,F,V,F); Q25 (V,V,F,F).</p>
+
+        <h3>📚 Comentários</h3>
+        <ul>
+            <li><b>1:</b> "As fontes são capazes de produzir" – verbo no plural.</li>
+            <li><b>2:</b> "Época" é feminino; <i>em que</i> = <i>na qual</i>.</li>
+            <li><b>3:</b> Existir concorda com "mentes".</li>
+            <li><b>4:</b> Emprestar é bitransitivo: emprestar algo a alguém.</li>
+            <li><b>5:</b> "Flutuação" aceita crase (palavra feminina).</li>
+            <li><b>6:</b> "Alta" qualifica "temperatura" (feminino singular).</li>
+            <li><b>7:</b> Antes de possessivo feminino, a crase é facultativa.</li>
+            <li><b>8:</b> Quem dota, dota alguém <b>de</b> alguma coisa.</li>
+            <li><b>9:</b> "Faltar" concorda com o sujeito posposto "os arautos".</li>
+            <li><b>10:</b> "A gente" exige verbo na 3ª pessoa do singular.</li>
+            <li><b>11:</b> "Mudar de" indica ponto de partida.</li>
+            <li><b>12:</b> Desligar (o quê?) = VTD.</li>
+            <li><b>13:</b> Plural de "maior" é "maiores".</li>
+            <li><b>14:</b> Fusão de preposição "a" com artigo "a".</li>
+            <li><b>15:</b> ERRADO – "bastante" é advérbio (invariável).</li>
+            <li><b>16:</b> Antes de verbo, o "a" é apenas preposição.</li>
+            <li><b>17:</b> Concordância verbal e nominal com sujeito plural.</li>
+            <li><b>18:</b> Visar (objetivar) = VTI (rege "a").</li>
+            <li><b>19:</b> Indica posição das mãos em relação ao volante.</li>
+            <li><b>20:</b> "Nós" exige 1ª pessoa do plural (paramos).</li>
+            <li><b>21:</b> CERTO – locuções femininas com crase obrigatória.</li>
+            <li><b>22:</b> Proibido crase antes de pronome pessoal masculino.</li>
+            <li><b>23:</b> Não se usa crase antes de verbos.</li>
+            <li><b>24:</b> Adjetivo antes de substantivos de gêneros diferentes → concorda com o mais próximo.</li>
+            <li><b>25:</b> "Encontrar" indica localização, não movimento.</li>
+        </ul>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- ÁREA DE NAVEGAÇÃO                                            -->
-    <!-- ============================================================ -->
+    <!-- NAVEGAÇÃO -->
     <div class="nav-area">
         <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
-
         <a href="index.html" style="text-decoration:none;">
             <button class="nav-btn menu-btn">🏠 Menu</button>
         </a>
-
-        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <span class="page-indicator" id="pageIndicator">Página 1 de 14</span>
         <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
     </div>
-    <div class="footer-note">
-        📖 Material para concursos – Navegue pelas páginas usando os botões.
-    </div>
+    <div class="footer-note">📖 Material para concursos – Navegue pelas páginas usando os botões.</div>
 </div>
 
 <script>
@@ -742,25 +757,17 @@
         const pages = document.querySelectorAll('.page');
         let current = 0;
         const total = pages.length;
-
         function updatePage() {
-            pages.forEach((p, i) => {
-                p.classList.toggle('active', i === current);
-            });
+            pages.forEach((p, i) => { p.classList.toggle('active', i === current); });
             document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
             document.getElementById('prevBtn').disabled = (current === 0);
             document.getElementById('nextBtn').disabled = (current === total - 1);
             document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-
         window.changePage = function(delta) {
             const newIndex = current + delta;
-            if (newIndex >= 0 && newIndex < total) {
-                current = newIndex;
-                updatePage();
-            }
+            if (newIndex >= 0 && newIndex < total) { current = newIndex; updatePage(); }
         };
-
         updatePage();
     })();
 </script>

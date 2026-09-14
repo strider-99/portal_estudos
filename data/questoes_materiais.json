@@ -1,12 +1,360 @@
 [
   {
-    "enunciado": "A Administração de Materiais tem como objetivo principal:",
+    "enunciado": "Segundo Viana (2010), a etapa que visa reduzir a diversidade de itens destinados ao mesmo fim, visando a economicidade, é a:",
     "alternativas": [
-      "a) Maximizar os lucros da empresa por meio da redução de impostos",
-      "b) Garantir o abastecimento adequado no momento certo e com o menor custo possível",
-      "c) Reduzir o quadro de funcionários do almoxarifado",
-      "d) Aumentar os preços de venda dos produtos finais",
-      "e) Centralizar todas as decisões no setor financeiro"
+      "a) Codificação",
+      "b) Especificação",
+      "c) Simplificação",
+      "d) Catalogação",
+      "e) Normalização"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Na classificação por aplicação, materiais que se encontram em estágio intermediário de acabamento, sendo descritos como \"quase prontos\", são os:",
+    "alternativas": [
+      "a) Em processamento",
+      "b) Auxiliares",
+      "c) Semiacabados",
+      "d) Acabados",
+      "e) Insumos"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Um item que representa 80% do valor total de consumo anual, mas cujas propriedades permitem substituição imediata sem parar a produção, é classificado como:",
+    "alternativas": [
+      "a) Classe A e Classe Z",
+      "b) Classe C e Classe X",
+      "c) Classe B e Classe Y",
+      "d) Classe A e Classe X",
+      "e) Classe C e Classe Z"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "A possibilidade de recuperar internamente materiais após o uso e desgaste refere-se ao critério de:",
+    "alternativas": [
+      "a) Fazer internamente",
+      "b) Recondicionar",
+      "c) Nacionalizar",
+      "d) Comprar",
+      "e) Processamento"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Itens de limpeza e escritório, não incorporados ao produto final, são classificados como materiais:",
+    "alternativas": [
+      "a) De manutenção",
+      "b) Auxiliares ou improdutivos",
+      "c) Em processo",
+      "d) De consumo geral",
+      "e) Permanentes"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "A atividade logística que resulta no controle físico dos materiais armazenados é a:",
+    "alternativas": [
+      "a) Gestão de Compras",
+      "b) Gestão de Estoques",
+      "c) Gestão dos Centros de Distribuição",
+      "d) Processamento de Pedidos",
+      "e) Manutenção de Equipamentos"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "O atributo de Viana que exige que o sistema de classificação seja maleável e adaptável é a:",
+    "alternativas": [
+      "a) Praticidade",
+      "b) Flexibilidade",
+      "c) Abrangência",
+      "d) Codificação",
+      "e) Normalização"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Materiais de criticidade máxima, cuja falta paralisa a produção, são de classe:",
+    "alternativas": [
+      "a) X",
+      "b) Y",
+      "c) Z",
+      "d) A",
+      "e) C"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "O estágio da classificação que consiste em uma descrição minuciosa do material é a:",
+    "alternativas": [
+      "a) Catalogação",
+      "b) Simplificação",
+      "c) Especificação",
+      "d) Normalização",
+      "e) Padronização"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "No sistema ABC, itens que representam 5% do valor total e 50% da quantidade são:",
+    "alternativas": [
+      "a) Classe A",
+      "b) Classe B",
+      "c) Classe C",
+      "d) Classe X",
+      "e) Classe Z"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Materiais consumidos rotineiramente e que possuem critérios automáticos de ressuprimento são de:",
+    "alternativas": [
+      "a) Estocagem Temporária",
+      "b) Estocagem Permanente",
+      "c) Não estoque",
+      "d) Baixa demanda",
+      "e) Ordem especial"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Itens fabricados fora do país, mesmo com fornecedor local instalado, pertencem ao Mercado:",
+    "alternativas": [
+      "a) Nacional",
+      "b) Em processo de nacionalização",
+      "c) Estrangeiro",
+      "d) Misto",
+      "e) Secundário"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Qual atividade é considerada secundária ou de apoio na Administração de Materiais?",
+    "alternativas": [
+      "a) Transporte",
+      "b) Manutenção de estoques",
+      "c) Processamento de pedidos",
+      "d) Embalagem",
+      "e) Negociação de preços"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Materiais que podem perder suas características químicas devido à umidade são classificados por:",
+    "alternativas": [
+      "a) Periculosidade",
+      "b) Perecibilidade",
+      "c) Criticidade",
+      "d) Demanda",
+      "e) Aplicabilidade"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "O sistema de codificação que utiliza uma composição lógica de números é o:",
+    "alternativas": [
+      "a) Alfabético",
+      "b) Mnemônico",
+      "c) Numérico ou Decimal",
+      "d) Alfanumérico",
+      "e) Binário"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "A etapa de classificação que estabelece regras mínimas de segurança e execução é a:",
+    "alternativas": [
+      "a) Normalização",
+      "b) Especificação",
+      "c) Codificação",
+      "d) Catalogação",
+      "e) Simplificação"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Um computador com vida útil estimada de 4 anos é tecnicamente um:",
+    "alternativas": [
+      "a) Recurso Material",
+      "b) Material de Consumo",
+      "c) Recurso Patrimonial",
+      "d) Material Auxiliar",
+      "e) Insumo Produtivo"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "A classificação baseada no impacto financeiro anual (Pareto) é a:",
+    "alternativas": [
+      "a) XYZ",
+      "b) ABC",
+      "c) 123",
+      "d) Alfabética",
+      "e) Por perecibilidade"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Materiais utilizados em manutenção com uso repetitivo são chamados de:",
+    "alternativas": [
+      "a) Materiais de consumo geral",
+      "b) Materiais de manutenção",
+      "c) Materiais improdutivos",
+      "d) Materiais acabados",
+      "e) Materiais semiacabados"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "A decisão de \"Fazer ou Comprar\" baseia-se fundamentalmente na análise de:",
+    "alternativas": [
+      "a) Perecibilidade",
+      "b) Custo-benefício",
+      "c) Codificação",
+      "d) Catalogação",
+      "e) Abrangência"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "O atributo \"Abrangência\" na classificação de materiais refere-se à:",
+    "alternativas": [
+      "a) Simplicidade de uso",
+      "b) Variedade de características suportadas",
+      "c) Mudança de códigos",
+      "d) Redução de itens",
+      "e) Segurança do almoxarifado"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Materiais com risco de explosão ou incêndio são classificados quanto à:",
+    "alternativas": [
+      "a) Perecibilidade",
+      "b) Periculosidade",
+      "c) Criticidade",
+      "d) Demanda",
+      "e) Aplicação"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Materiais que não têm previsão de utilização e demanda irregular são materiais:",
+    "alternativas": [
+      "a) De estoque",
+      "b) Não de estoque",
+      "c) Classe Z",
+      "d) Classe A",
+      "e) Permanentes"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Na SEA-SC, a responsabilidade de estabelecer indicadores para monitorar a Política de Saúde da População Negra recai sobre o:",
+    "alternativas": [
+      "a) Gestor Federal",
+      "b) Gestor Estadual",
+      "c) Gestor Municipal",
+      "d) Comitê de Bioética",
+      "e) Diretor do Almoxarifado"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "O sistema alfanumérico de codificação caracteriza-se por:",
+    "alternativas": [
+      "a) Usar apenas letras",
+      "b) Usar apenas números",
+      "c) Mesclar números e letras",
+      "d) Usar cores e formas",
+      "e) Ser puramente mnemônico"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "A etapa que busca a redução do número de itens em estoque minimizando a variedade é a:",
+    "alternativas": [
+      "a) Padronização",
+      "b) Catalogação",
+      "c) Codificação",
+      "d) Especificação",
+      "e) Normalização"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Materiais em estágio \"quase pronto\" são:",
+    "alternativas": [
+      "a) Em vias",
+      "b) Em processamento",
+      "c) Semiacabados",
+      "d) Acabados",
+      "e) Auxiliares"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Itens de criticidade média que podem ser substituídos com relativa facilidade são:",
+    "alternativas": [
+      "a) Classe X",
+      "b) Classe Y",
+      "c) Classe Z",
+      "d) Classe A",
+      "e) Classe C"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Um fornecedor nacional que está sendo desenvolvido pela organização faz parte do mercado:",
+    "alternativas": [
+      "a) Estrangeiro",
+      "b) Em processo de nacionalização",
+      "c) Global",
+      "d) Permanente",
+      "e) Regional"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_materiais"
+  },
+  {
+    "enunciado": "Materiais que não perdem sua identidade física quando incorporados a outro bem são:",
+    "alternativas": [
+      "a) Materiais de consumo",
+      "b) Materiais permanentes",
+      "c) Materiais perecíveis",
+      "d) Materiais perigosos",
+      "e) Materiais de manutenção"
     ],
     "gabarito": "B",
     "slug_materia": "apostila_materiais"

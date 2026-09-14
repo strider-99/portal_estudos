@@ -3,780 +3,582 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apostila - Português Módulo 3: Morfologia e Formação de Palavras</title>
+    <title>Apostila - Português: Estrutura, Formação, Flexão e Classes Gramaticais</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f5f2eb;
-            display: flex;
-            justify-content: center;
-            padding: 30px 10px;
-        }
-        .book-container {
-            max-width: 1000px;
-            width: 100%;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-            padding: 30px 35px;
-            position: relative;
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            border-bottom: 3px solid #f39c12;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-            font-size: 28px;
-        }
-        h2 {
-            color: #2c3e50;
-            background-color: #fef9e7;
-            padding: 10px 15px;
-            border-left: 6px solid #f39c12;
-            margin: 25px 0 15px 0;
-            font-size: 22px;
-        }
-        h3 {
-            color: #1a5276;
-            margin: 18px 0 10px 0;
-            font-size: 19px;
-        }
-        p {
-            line-height: 1.7;
-            margin-bottom: 12px;
-            text-align: justify;
-        }
-        ul, ol {
-            margin: 10px 0 15px 30px;
-        }
-        li {
-            margin-bottom: 6px;
-            line-height: 1.6;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-            font-size: 15px;
-        }
-        th, td {
-            border: 1px solid #333;
-            padding: 10px 12px;
-            text-align: left;
-            vertical-align: top;
-        }
-        th {
-            background-color: #fdebd0;
-            font-weight: bold;
-        }
-        .dica {
-            background-color: #fef3e2;
-            border-left: 6px solid #e67e22;
-            padding: 14px 18px;
-            margin: 15px 0;
-            border-radius: 4px;
-        }
-        .dica b {
-            color: #a04000;
-        }
-        .exemplo {
-            background-color: #f0f8ff;
-            padding: 12px 18px;
-            border-radius: 6px;
-            margin: 10px 0;
-            border: 1px dashed #f39c12;
-        }
-        .gabarito-box {
-            background-color: #e8f5e9;
-            border: 2px solid #2e7d32;
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin: 10px 0;
-        }
-        .questao-item {
-            background-color: #f7f9fb;
-            padding: 15px 18px;
-            margin: 12px 0;
-            border-radius: 6px;
-            border-left: 4px solid #f39c12;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-        .questao-item p {
-            margin-bottom: 6px;
-        }
-        .alternativas {
-            margin-left: 20px;
-            font-size: 15px;
-        }
-
-        .page {
-            display: none;
-            animation: fadeIn 0.3s ease;
-        }
-        .page.active {
-            display: block;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0.5; }
-            to { opacity: 1; }
-        }
-
-        .nav-area {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 35px;
-            padding-top: 20px;
-            border-top: 2px solid #dee2e6;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .page-indicator {
-            font-size: 15px;
-            font-weight: bold;
-            color: #495057;
-            background: #f1f3f5;
-            padding: 6px 18px;
-            border-radius: 30px;
-        }
-        .nav-btn {
-            background-color: #2c3e50;
-            color: white;
-            border: none;
-            padding: 10px 28px;
-            border-radius: 30px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.2s, transform 0.1s;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-            min-width: 120px;
-        }
-        .nav-btn:hover {
-            background-color: #f39c12;
-            color: #1a252f;
-        }
-        .nav-btn:active {
-            transform: scale(0.97);
-        }
-        .nav-btn:disabled {
-            background-color: #adb5bd;
-            cursor: not-allowed;
-            box-shadow: none;
-        }
-        .nav-btn.secondary {
-            background-color: #6c757d;
-        }
-        .nav-btn.secondary:hover {
-            background-color: #5a6268;
-            color: white;
-        }
-        .nav-btn.menu-btn {
-            background-color: #28a745;
-            min-width: 100px;
-        }
-        .nav-btn.menu-btn:hover {
-            background-color: #218838;
-            color: white;
-        }
-
-        .footer-note {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 13px;
-            color: #868e96;
-        }
-        hr {
-            margin: 30px 0 15px 0;
-            border: 1px solid #dee2e6;
-        }
-
-        @media (max-width: 600px) {
-            .book-container { padding: 15px; }
-            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
-            h1 { font-size: 22px; }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f2eb; display: flex; justify-content: center; padding: 30px 10px; }
+        .book-container { max-width: 1000px; width: 100%; background: #fff; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); padding: 30px 35px; position: relative; }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 3px solid #3498db; padding-bottom: 15px; margin-bottom: 20px; font-size: 26px; }
+        h2 { color: #2c3e50; background-color: #eaf2f8; padding: 10px 15px; border-left: 6px solid #3498db; margin: 25px 0 15px 0; font-size: 22px; }
+        h3 { color: #1a5276; margin: 18px 0 10px 0; font-size: 19px; }
+        h4 { color: #2c3e50; margin: 15px 0 8px 0; font-size: 17px; }
+        p { line-height: 1.7; margin-bottom: 12px; text-align: justify; }
+        ul, ol { margin: 10px 0 15px 30px; }
+        li { margin-bottom: 6px; line-height: 1.6; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px; }
+        th, td { border: 1px solid #333; padding: 8px 10px; text-align: left; vertical-align: top; }
+        th { background-color: #d6eaf8; font-weight: bold; }
+        pre { background: #f4f6f9; border-left: 4px solid #3498db; padding: 15px; border-radius: 6px; overflow-x: auto; font-size: 12px; line-height: 1.4; margin: 15px 0; font-family: 'Consolas', 'Monaco', monospace; }
+        code { background: #eef2f7; padding: 2px 6px; border-radius: 4px; font-family: 'Consolas', monospace; font-size: 13px; color: #c0392b; }
+        .dica { background-color: #e8f5e9; border-left: 6px solid #2e7d32; padding: 14px 18px; margin: 15px 0; border-radius: 4px; }
+        .dica b { color: #1b5e20; }
+        .pegadinha { background-color: #fce4e4; border-left: 6px solid #c0392b; padding: 14px 18px; margin: 15px 0; border-radius: 4px; }
+        .pegadinha b { color: #922b21; }
+        .exemplo { background-color: #f0f8ff; padding: 12px 18px; border-radius: 6px; margin: 10px 0; border: 1px dashed #3498db; }
+        .gabarito-box { background-color: #e8f5e9; border: 2px solid #2e7d32; padding: 15px 20px; border-radius: 8px; margin: 10px 0; }
+        .questao-item { background-color: #f7f9fb; padding: 15px 18px; margin: 12px 0; border-radius: 6px; border-left: 4px solid #3498db; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .questao-item p { margin-bottom: 6px; }
+        .alternativas { margin-left: 20px; font-size: 14px; }
+        .comentario { background: #fef9e7; border-left: 3px solid #f39c12; padding: 8px 14px; margin-top: 8px; font-size: 14px; border-radius: 4px; }
+        .page { display: none; animation: fadeIn 0.3s ease; }
+        .page.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0.5; } to { opacity: 1; } }
+        .nav-area { display: flex; justify-content: space-between; align-items: center; margin-top: 35px; padding-top: 20px; border-top: 2px solid #dee2e6; flex-wrap: wrap; gap: 10px; }
+        .page-indicator { font-size: 15px; font-weight: bold; color: #495057; background: #f1f3f5; padding: 6px 18px; border-radius: 30px; }
+        .nav-btn { background-color: #2c3e50; color: white; border: none; padding: 10px 28px; border-radius: 30px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.2s, transform 0.1s; box-shadow: 0 2px 6px rgba(0,0,0,0.15); min-width: 120px; }
+        .nav-btn:hover { background-color: #3498db; }
+        .nav-btn:active { transform: scale(0.97); }
+        .nav-btn:disabled { background-color: #adb5bd; cursor: not-allowed; box-shadow: none; }
+        .nav-btn.secondary { background-color: #6c757d; }
+        .nav-btn.secondary:hover { background-color: #5a6268; }
+        .nav-btn.menu-btn { background-color: #28a745; min-width: 100px; }
+        .nav-btn.menu-btn:hover { background-color: #218838; }
+        .footer-note { text-align: center; margin-top: 15px; font-size: 13px; color: #868e96; }
+        hr { margin: 30px 0 15px 0; border: 1px solid #dee2e6; }
+        @media (max-width: 600px) { .book-container { padding: 15px; } .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; } h1 { font-size: 20px; } pre { font-size: 10px; padding: 10px; } }
     </style>
 </head>
 <body>
 <div class="book-container" id="book">
 
-    <h1>📝 LÍNGUA PORTUGUESA – MÓDULO 3</h1>
-    <p style="text-align:center; font-size:18px; color:#2c3e50;"><b>Estrutura e Formação de Palavras, Flexão e Classes Gramaticais</b></p>
+    <h1>📚 ESTRUTURA, FORMAÇÃO, FLEXÃO E CLASSES GRAMATICAIS</h1>
+    <p style="text-align:center; font-size:18px; color:#2c3e50;"><b>Apostila completa de Morfologia para concursos públicos</b></p>
     <hr>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
-    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Sumário -->
     <div class="page active" data-page="1">
-        <h2>1. INTRODUÇÃO</h2>
-        <p>A <b>Morfologia</b> é a parte da gramática que estuda a estrutura, a formação e a classificação das palavras. Neste módulo, vamos analisar a composição interna das palavras (radical, vogal temática, afixos, desinências), os processos pelos quais novas palavras são criadas (derivação, composição), e a classificação das palavras em dez classes gramaticais.</p>
-        <p>Dominar a morfologia é essencial para evitar erros de concordância, regência e grafia – habilidades fundamentais para qualquer prova de concurso.</p>
-
+        <h2>📖 APRESENTAÇÃO</h2>
+        <p>Esta apostila cobre todo o conteúdo de <b>Morfologia</b> cobrado em concursos públicos: estrutura e formação de palavras, flexões nominais (substantivo, adjetivo, artigo, numeral) e verbais, pronomes, advérbios, preposições, conjunções e interjeições.</p>
         <div class="dica">
-            <b>🎯 Objetivo do Módulo:</b> Identificar os elementos estruturais das palavras, reconhecer os processos de formação, classificar corretamente as palavras em suas respectivas classes gramaticais e compreender as flexões nominais e verbais, com 25 questões ao final.
+            <b>🎯 Como usar este material:</b> Estude os quadros teóricos, memorize os pontos-chave, analise as pegadinhas de banca e resolva o simulado final com 25 questões.
         </div>
-
-        <h2>2. SUMÁRIO</h2>
+        <h2>📋 SUMÁRIO</h2>
         <ul>
-            <li><b>Módulo I:</b> Estrutura das Palavras – pág. 2</li>
-            <li><b>Módulo II:</b> Processos de Formação de Palavras – pág. 3</li>
-            <li><b>Módulo III:</b> Classes de Palavras (Morfologia) – Parte 1 – pág. 4</li>
-            <li><b>Módulo IV:</b> Classes de Palavras (Morfologia) – Parte 2 – pág. 5</li>
-            <li><b>Módulo V:</b> Flexão Nominal e Verbal – pág. 6</li>
-            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+            <li><b>Cap 1:</b> Estrutura e Formação de Palavras – pág. 2-3</li>
+            <li><b>Cap 2:</b> Substantivo, Adjetivo, Artigo e Numeral – pág. 4-6</li>
+            <li><b>Cap 3:</b> Pronomes, Colocação Pronominal e Advérbios – pág. 7-8</li>
+            <li><b>Cap 4:</b> Verbos: Estrutura, Flexão, Tempos e Vozes – pág. 9-10</li>
+            <li><b>Cap 5:</b> Preposições, Conjunções e Interjeições – pág. 11</li>
+            <li><b>Cap 6:</b> Revisão Geral – Quadros Síntese – pág. 12</li>
+            <li><b>Simulado:</b> 25 questões (págs. 13-15)</li>
         </ul>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 2: Estrutura das Palavras                             -->
-    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Cap 1 - Elementos estruturais -->
     <div class="page" data-page="2">
-        <h2>MÓDULO I – ESTRUTURA DAS PALAVRAS</h2>
-        <p>Toda palavra é formada por elementos mórficos (morfemas). Os principais são:</p>
-
-        <h3>2.1. Radical</h3>
-        <ul>
-            <li><b>Radical:</b> parte da palavra que contém seu significado básico. É a base sobre a qual se acrescentam outros elementos.</li>
-            <li><b>Exemplo:</b> em "casa" → radical "cas-"; em "pedr-", "pedra", "pedreiro".</li>
-        </ul>
-
-        <h3>2.2. Vogal Temática</h3>
-        <ul>
-            <li><b>Vogal temática:</b> vogal que se junta ao radical para formar o tema (radical + vogal temática), indicando a conjugação verbal.</li>
-            <li><b>Verbos:</b> 1ª conjugação (A), 2ª conjugação (E), 3ª conjugação (I).</li>
-            <li><b>Exemplo:</b> "amar" → radical "am-" + vogal temática "a".</li>
-        </ul>
-
-        <h3>2.3. Afixos (Prefixos e Sufixos)</h3>
-        <ul>
-            <li><b>Prefixos:</b> elementos que se colocam <b>antes</b> do radical (ex.: <b>des</b>fazer, <b>re</b>fazer).</li>
-            <li><b>Sufixos:</b> elementos que se colocam <b>depois</b> do radical (ex.: fazer <b>dor</b>, pedr <b>eiro</b>).</li>
-        </ul>
-
-        <h3>2.4. Desinências</h3>
-        <ul>
-            <li><b>Desinências nominais:</b> indicam gênero (masculino/feminino) e número (singular/plural). Ex.: "carros" → desinência de plural "s".</li>
-            <li><b>Desinências verbais:</b> indicam número, pessoa, tempo e modo. Ex.: "amávamos" → "mos" = desinência número-pessoal (nós).</li>
-        </ul>
-
-        <h3>2.5. Outros Elementos</h3>
-        <ul>
-            <li><b>Tema:</b> radical + vogal temática.</li>
-            <li><b>Vogal e Consoante de Ligação:</b> elementos que facilitam a pronúncia (ex.: "café <b>z</b>inho", "gás <b>o</b>metro").</li>
-        </ul>
-        <div class="exemplo">
-            <p><b>Análise da palavra "inaceitável":</b></p>
-            <ul>
-                <li><b>In-</b> = prefixo (negação)</li>
-                <li><b>aceit-</b> = radical (do verbo aceitar)</li>
-                <li><b>-ável</b> = sufixo (possibilidade)</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- PÁGINA 3: Formação de Palavras                               -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="3">
-        <h2>MÓDULO II – PROCESSOS DE FORMAÇÃO DE PALAVRAS</h2>
-        <h3>3.1. Derivação</h3>
-        <p>A derivação cria novas palavras a partir de uma palavra primitiva, por acréscimo de afixos ou alteração.</p>
-        <ul>
-            <li><b>Derivação prefixal:</b> acréscimo de prefixo. Ex.: <b>feliz</b> → <b>in</b>feliz.</li>
-            <li><b>Derivação sufixal:</b> acréscimo de sufixo. Ex.: <b>feliz</b> → feliz<b>mente</b>.</li>
-            <li><b>Derivação parassintética:</b> acréscimo simultâneo de prefixo e sufixo. Ex.: <b>a</b>noit<b>ecer</b>.</li>
-            <li><b>Derivação regressiva:</b> redução da palavra. Ex.: <b>comprar</b> → <b>compra</b>.</li>
-            <li><b>Derivação imprópria:</b> mudança de classe gramatical sem alteração da forma. Ex.: "o <b>comer</b>" (verbo substantivado).</li>
-        </ul>
-
-        <h3>3.2. Composição</h3>
-        <p>A composição forma palavras pela junção de dois ou mais radicais.</p>
-        <ul>
-            <li><b>Composição por justaposição:</b> radicais se juntam sem alteração. Ex.: <b>girassol</b> (gira + sol).</li>
-            <li><b>Composição por aglutinação:</b> radicais se juntam com perda de elementos. Ex.: <b>planalto</b> (plano + alto).</li>
-        </ul>
-
-        <h3>3.3. Hibridismo</h3>
-        <p>Palavras formadas por elementos de línguas diferentes. Ex.: <b>automóvel</b> (grego + latim).</p>
-
-        <h3>3.4. Onomatopeia</h3>
-        <p>Palavra que imita um som. Ex.: <b>tic-tac</b>, <b>cocoricó</b>, <b>zum-zum</b>.</p>
-
-        <h3>3.5. Abreviação ou Redução</h3>
-        <p>Encurtamento de palavras. Ex.: <b>foto</b> (fotografia), <b>pneu</b> (pneumático).</p>
+        <h2>CAP 1: ESTRUTURA E FORMAÇÃO DE PALAVRAS</h2>
+        <h3>1.1. Elementos Estruturais dos Vocábulos</h3>
+        <p>Os vocábulos são constituídos por unidades menores dotadas de significado, chamadas <b>elementos mórficos</b> ou morfemas.</p>
+        <ol>
+            <li><b>Radical:</b> parte invariável que expressa o significado essencial. <i>Ex.: fal- em fal-ei, fal-ava, fal-am.</i></li>
+            <li><b>Vogal Temática:</b> vogal que se une ao radical para preparar a palavra às desinências.
+                <ul>
+                    <li><b>-A-</b>: 1ª conjugação (fal-a-r)</li>
+                    <li><b>-E-</b>: 2ª conjugação (vend-e-r) — <b>inclui o verbo PÔR</b> e derivados, pois sua forma arcaica era <i>poer</i>.</li>
+                    <li><b>-I-</b>: 3ª conjugação (part-i-r)</li>
+                </ul>
+            </li>
+            <li><b>Tema:</b> Radical + Vogal Temática. <i>Ex.: fala- em falar.</i></li>
+            <li><b>Desinências:</b> elementos terminais que indicam flexões.
+                <ul>
+                    <li><b>Nominais:</b> gênero e número (menin-o, menin-a-s).</li>
+                    <li><b>Verbais Modo-Temporais:</b> tempo e modo (-va-, -sse-, -ria-).</li>
+                    <li><b>Verbais Número-Pessoais:</b> pessoa e número (-mos, -is, -m).</li>
+                </ul>
+            </li>
+        </ol>
         <div class="dica">
-            <b>💡 Dica:</b> A derivação parassintética é um processo em que prefixo e sufixo são adicionados simultaneamente – se retirar apenas um deles, a palavra perde o sentido (ex.: <b>a</b>noit<b>ecer</b> → "anoitecer" não é "noitecer" + "a"; é um único processo).
+            <b>✅ Dica de análise:</b> Em verbos, identifique de trás para frente: primeiro a pessoa (-mos, -m), depois o tempo (-sse-, -va-), e o que sobrar é o tema/radical.
         </div>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- PÁGINA 4: Classes de Palavras - Parte 1                     -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="4">
-        <h2>MÓDULO III – CLASSES DE PALAVRAS (MORFOLOGIA) – PARTE 1</h2>
-        <h3>4.1. Substantivo</h3>
-        <ul>
-            <li><b>Conceito:</b> palavra que nomeia seres, objetos, lugares, sentimentos, ideias, etc.</li>
-            <li><b>Classificação:</b> comum/próprio, concreto/abstrato, simples/composto, primitivo/derivado, coletivo.</li>
-            <li><b>Flexão:</b> gênero (masculino/feminino), número (singular/plural), grau (diminutivo/aumentativo).</li>
-        </ul>
-        <div class="exemplo">Ex.: <b>menino, amor, Brasil, felicidade, cardume</b> (coletivo).</div>
-
-        <h3>4.2. Artigo</h3>
-        <ul>
-            <li><b>Conceito:</b> palavra que precede o substantivo, determinando-o (definido ou indefinido).</li>
-            <li><b>Definidos:</b> o, a, os, as.</li>
-            <li><b>Indefinidos:</b> um, uma, uns, umas.</li>
-        </ul>
-        <div class="exemplo">Ex.: <b>O</b> menino, <b>uma</b> casa.</div>
-
-        <h3>4.3. Adjetivo</h3>
-        <ul>
-            <li><b>Conceito:</b> palavra que caracteriza ou modifica o substantivo.</li>
-            <li><b>Flexão:</b> gênero, número, grau (comparativo e superlativo).</li>
-        </ul>
-        <div class="exemplo">Ex.: <b>bonito, feliz, muito alto</b>.</div>
-
-        <h3>4.4. Numeral</h3>
-        <ul>
-            <li><b>Conceito:</b> palavra que indica quantidade, ordem, fração ou multiplicação.</li>
-            <li><b>Cardinais:</b> um, dois, três...</li>
-            <li><b>Ordinais:</b> primeiro, segundo, terceiro...</li>
-            <li><b>Multiplicativos:</b> dobro, triplo...</li>
-            <li><b>Fracionários:</b> meio, terço, quarto...</li>
-        </ul>
-        <div class="exemplo">Ex.: <b>Dois</b> livros, <b>primeiro</b> lugar, <b>dobro</b> da idade.</div>
-
-        <h3>4.5. Pronome</h3>
-        <ul>
-            <li><b>Conceito:</b> palavra que substitui ou acompanha o substantivo, indicando a pessoa do discurso.</li>
-            <li><b>Classificação:</b> pessoais, possessivos, demonstrativos, indefinidos, interrogativos, relativos, tratamento.</li>
-        </ul>
-        <div class="exemplo">Ex.: <b>Eu</b> (pessoal), <b>meu</b> (possessivo), <b>este</b> (demonstrativo), <b>alguém</b> (indefinido), <b>que</b> (relativo), <b>Vossa Excelência</b> (tratamento).</div>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- PÁGINA 5: Classes de Palavras - Parte 2                     -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="5">
-        <h2>MÓDULO IV – CLASSES DE PALAVRAS (MORFOLOGIA) – PARTE 2</h2>
-        <h3>5.1. Verbo</h3>
-        <ul>
-            <li><b>Conceito:</b> palavra que expressa ação, estado, fenômeno da natureza ou processo.</li>
-            <li><b>Flexão:</b> número (singular/plural), pessoa (1ª, 2ª, 3ª), tempo (presente, passado, futuro), modo (indicativo, subjuntivo, imperativo).</li>
-            <li><b>Estrutura:</b> radical + vogal temática + desinências.</li>
-        </ul>
-        <div class="exemplo">Ex.: <b>amar, correr, partir, ser, estar</b>.</div>
-
-        <h3>5.2. Advérbio</h3>
-        <ul>
-            <li><b>Conceito:</b> palavra que modifica o verbo, o adjetivo ou outro advérbio, indicando circunstância (modo, tempo, lugar, intensidade, etc.).</li>
-            <li><b>Classificação:</b> modo, tempo, lugar, intensidade, afirmação, negação, dúvida.</li>
-        </ul>
-        <div class="exemplo">Ex.: <b>rapidamente</b> (modo), <b>hoje</b> (tempo), <b>aqui</b> (lugar), <b>muito</b> (intensidade), <b>sim</b> (afirmação), <b>não</b> (negação), <b>talvez</b> (dúvida).</div>
-
-        <h3>5.3. Preposição</h3>
-        <ul>
-            <li><b>Conceito:</b> palavra invariável que liga dois termos, estabelecendo relação de dependência.</li>
-            <li><b>Exemplos:</b> <b>a, de, em, por, para, com, sem, sob, sobre, entre, até, após, perante, contra, durante, mediante, trás.</b></li>
-        </ul>
-        <div class="exemplo">Ex.: "Vou <b>a</b> São Paulo", "Falei <b>com</b> ela".</div>
-
-        <h3>5.4. Conjunção</h3>
-        <ul>
-            <li><b>Conceito:</b> palavra invariável que liga orações ou termos, estabelecendo relações de coordenação ou subordinação.</li>
-            <li><b>Conjunções coordenativas:</b> aditivas (e), adversativas (mas), alternativas (ou), conclusivas (logo), explicativas (porque).</li>
-            <li><b>Conjunções subordinativas:</b> causais, concessivas, condicionais, comparativas, etc.</li>
-        </ul>
-        <div class="exemplo">Ex.: "Estudou <b>mas</b> não passou" (adversativa).</div>
-
-        <h3>5.5. Interjeição</h3>
-        <ul>
-            <li><b>Conceito:</b> palavra que expressa emoções, sentimentos ou apelos.</li>
-        </ul>
-        <div class="exemplo">Ex.: <b>Ah!</b>, <b>Uau!</b>, <b>Puxa!</b>, <b>Psiu!</b></div>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- PÁGINA 6: Flexão Nominal e Verbal                           -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="6">
-        <h2>MÓDULO V – FLEXÃO NOMINAL E VERBAL</h2>
-        <h3>6.1. Flexão Nominal</h3>
-        <p>A flexão nominal ocorre em <b>substantivos, adjetivos, artigos, numerais e pronomes</b>, variando em gênero, número e grau.</p>
-        <ul>
-            <li><b>Gênero:</b> masculino (o) e feminino (a). Ex.: <b>menino/menina</b>, <b>cidadão/cidadã</b>.</li>
-            <li><b>Número:</b> singular e plural. Ex.: <b>carro/carros</b>, <b>azul/azuis</b>.</li>
-            <li><b>Grau:</b> aumentativo (grande casa = casarão) e diminutivo (casa pequena = casinha).</li>
-        </ul>
-
-        <h3>6.2. Flexão Verbal</h3>
-        <p>A flexão verbal ocorre em <b>verbos</b>, variando em número, pessoa, tempo, modo e voz.</p>
-        <ul>
-            <li><b>Número e Pessoa:</b>
-                <ul>
-                    <li>1ª pessoa (eu, nós)</li>
-                    <li>2ª pessoa (tu, vós)</li>
-                    <li>3ª pessoa (ele/ela, eles/elas)</li>
-                </ul>
-            </li>
-            <li><b>Tempo:</b>
-                <ul>
-                    <li><b>Presente</b> – fato atual</li>
-                    <li><b>Pretérito</b> – passado (perfeito, imperfeito, mais-que-perfeito)</li>
-                    <li><b>Futuro</b> – futuro (do presente e do pretérito)</li>
-                </ul>
-            </li>
-            <li><b>Modo:</b>
-                <ul>
-                    <li><b>Indicativo:</b> certeza</li>
-                    <li><b>Subjuntivo:</b> dúvida, desejo, possibilidade</li>
-                    <li><b>Imperativo:</b> ordem, pedido</li>
-                </ul>
-            </li>
-            <li><b>Voz:</b> ativa, passiva, reflexiva.</li>
-        </ul>
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> O verbo <b>pôr</b> e derivados (<i>compor, repor, depor</i>) pertencem à <b>2ª conjugação</b>, NÃO a uma suposta "4ª conjugação". Isso porque sua forma arcaica era <i>poer</i>.
+        </div>
         <div class="exemplo">
-            <p><b>Exemplo de conjugação do verbo "amar" no presente do indicativo:</b></p>
+            <p><b>Exemplo prático:</b> Analise o verbo <b>FALÁVAMOS</b>:</p>
             <ul>
-                <li>Eu am<b>o</b></li>
-                <li>Tu am<b>as</b></li>
-                <li>Ele am<b>a</b></li>
-                <li>Nós am<b>amos</b></li>
-                <li>Vós am<b>ais</b></li>
-                <li>Eles am<b>am</b></li>
+                <li><b>Radical:</b> fal-</li>
+                <li><b>Vogal Temática:</b> -a- (1ª conjugação)</li>
+                <li><b>Tema:</b> fala-</li>
+                <li><b>Desinência Modo-Temporal:</b> -va- (Pretérito Imperfeito do Indicativo)</li>
+                <li><b>Desinência Número-Pessoal:</b> -mos (1ª pessoa do plural)</li>
             </ul>
         </div>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 7: Questões 1 a 14                                    -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="7">
-        <h2>📝 QUESTÕES (1 a 14)</h2>
-        <p><i>Responda com base no conteúdo estudado.</i></p>
+    <!-- PÁGINA 3: Cap 1 - Processos de formação + Q1-Q3 -->
+    <div class="page" data-page="3">
+        <h2>CAP 1 (continuação): PROCESSOS DE FORMAÇÃO</h2>
+        <h3>1.2. Classificação das Palavras</h3>
+        <ol>
+            <li><b>Simples:</b> um único radical. <i>chuva, limão, carro.</i></li>
+            <li><b>Compostos:</b> dois ou mais radicais. <i>couve-flor, guarda-chuva, girassol, pontapé.</i></li>
+            <li><b>Primitivos:</b> não derivam de outra palavra do português. <i>limão, pedra, dente.</i></li>
+            <li><b>Derivados:</b> originam-se de outra palavra. <i>limoeiro (de limão), pedreiro (de pedra).</i></li>
+            <li><b>Derivação Imprópria (conversão):</b> mudança de classe gramatical sem alteração de forma. <i>"O amar faz bem" (verbo → substantivo pelo artigo).</i></li>
+        </ol>
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> <i>Girassol</i> e <i>pontapé</i> SÃO substantivos compostos (2 radicais), mesmo sem hífen.
+        </div>
+
+        <h3>1.3. Questões Comentadas</h3>
 
         <div class="questao-item">
-            <p><b>Questão 1</b> (Estrutura) – Na palavra "infelizmente", a sequência dos elementos mórficos é:</p>
+            <p><b>Questão 1</b> (IBDO) – No trecho "O amar faz bem", a palavra destacada pertence originalmente à classe dos verbos, mas funciona como substantivo. Esse processo denomina-se:</p>
             <div class="alternativas">
-                a) Prefixo + radical + vogal temática + sufixo.<br>
-                b) Radical + sufixo + prefixo.<br>
-                c) Prefixo + radical + sufixo.<br>
-                d) Radical + desinência + sufixo.<br>
-                e) Prefixo + vogal temática + radical.
+                a) Derivação parassintética<br>
+                b) Derivação regressiva<br>
+                c) Derivação imprópria<br>
+                d) Composição por aglutinação
             </div>
+            <div class="comentario"><b>Gabarito: C</b> – A mudança de classe sem alterar a forma é a derivação imprópria (conversão).</div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 2</b> (Formação) – A palavra "planalto" é formada pelo processo de:</p>
+            <p><b>Questão 2</b> (CESPE) – O verbo "pôr" e seus derivados (compor, repor) pertencem à segunda conjugação verbal.</p>
             <div class="alternativas">
-                a) Derivação prefixal.<br>
-                b) Derivação sufixal.<br>
-                c) Composição por justaposição.<br>
-                d) Composição por aglutinação.<br>
-                e) Onomatopeia.
+                a) CERTO<br>
+                b) ERRADO
             </div>
+            <div class="comentario"><b>Gabarito: A</b> – Origina-se de <i>poer</i> (vogal temática E).</div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 3</b> (Classes) – A palavra "felicidade" pertence à classe dos:</p>
+            <p><b>Questão 3</b> (IBDO) – Assinale a alternativa que apresenta um substantivo COMPOSTO:</p>
             <div class="alternativas">
-                a) Adjetivos.<br>
-                b) Substantivos.<br>
-                c) Verbos.<br>
-                d) Advérbios.<br>
-                e) Pronomes.
+                a) Limoeiro<br>
+                b) Girassol<br>
+                c) Pedreiro<br>
+                d) Dentista
             </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 4</b> (Formação) – A derivação que ocorre quando uma palavra muda de classe gramatical sem alteração de forma é chamada de:</p>
-            <div class="alternativas">
-                a) Derivação prefixal.<br>
-                b) Derivação sufixal.<br>
-                c) Derivação parassintética.<br>
-                d) Derivação regressiva.<br>
-                e) Derivação imprópria.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 5</b> (Flexão) – A flexão verbal indica, entre outros aspectos:</p>
-            <div class="alternativas">
-                a) Gênero e número.<br>
-                b) Número, pessoa, tempo e modo.<br>
-                c) Grau e número.<br>
-                d) Gênero e grau.<br>
-                e) Apenas o modo.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 6</b> (Estrutura) – O radical da palavra "pedreiro" é:</p>
-            <div class="alternativas">
-                a) pedr-.<br>
-                b) pedre-.<br>
-                c) -eiro.<br>
-                d) pedr-eiro.<br>
-                e) pedr- + -eiro.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 7</b> (Classes) – A palavra "muito" pode ser classificada como:</p>
-            <div class="alternativas">
-                a) Substantivo.<br>
-                b) Advérbio.<br>
-                c) Adjetivo.<br>
-                d) Pronome indefinido.<br>
-                e) Todas as anteriores, dependendo do contexto.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 8</b> (Formação) – A palavra "desleal" é formada por:</p>
-            <div class="alternativas">
-                a) Derivação sufixal.<br>
-                b) Derivação prefixal.<br>
-                c) Derivação parassintética.<br>
-                d) Composição por justaposição.<br>
-                e) Composição por aglutinação.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 9</b> (Flexão) – A palavra "meninos" apresenta as seguintes desinências:</p>
-            <div class="alternativas">
-                a) "-o" (masculino) e "-s" (plural).<br>
-                b) "-a" (feminino) e "-s" (plural).<br>
-                c) "-o" (masculino) e "-os" (plural).<br>
-                d) "-a" (feminino) e "-as" (plural).<br>
-                e) "-ino" e "-os".
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 10</b> (Classes) – A palavra "porque" (causal) pertence à classe das:</p>
-            <div class="alternativas">
-                a) Preposições.<br>
-                b) Conjunções.<br>
-                c) Advérbios.<br>
-                d) Pronomes.<br>
-                e) Substantivos.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 11</b> (Formação) – "Girassol" é um exemplo de:</p>
-            <div class="alternativas">
-                a) Derivação sufixal.<br>
-                b) Derivação prefixal.<br>
-                c) Composição por justaposição.<br>
-                d) Composição por aglutinação.<br>
-                e) Hibridismo.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 12</b> (Flexão) – No verbo "cantávamos", a desinência "mos" indica:</p>
-            <div class="alternativas">
-                a) 1ª pessoa do plural.<br>
-                b) 3ª pessoa do plural.<br>
-                c) 2ª pessoa do singular.<br>
-                d) 3ª pessoa do singular.<br>
-                e) 1ª pessoa do singular.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 13</b> (Classes) – A palavra "ou" é uma conjunção:</p>
-            <div class="alternativas">
-                a) Aditiva.<br>
-                b) Adversativa.<br>
-                c) Alternativa.<br>
-                d) Conclusiva.<br>
-                e) Explicativa.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 14</b> (V/F – Estrutura) – Analise as afirmativas:</p>
-            <p>(   ) Radical é a parte da palavra que contém seu significado básico.<br>
-            (   ) A vogal temática do verbo "partir" é "e".<br>
-            (   ) Prefixos são elementos colocados depois do radical.<br>
-            (   ) As desinências nominais indicam gênero e número.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) V – F – F – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – V – F
-            </div>
+            <div class="comentario"><b>Gabarito: B</b> – Girassol = gira + sol (dois radicais).</div>
         </div>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
-    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Cap 2 - Substantivo (gênero) -->
+    <div class="page" data-page="4">
+        <h2>CAP 2: SUBSTANTIVO – CLASSIFICAÇÃO E GÊNERO</h2>
+        <h3>2.1. Flexão de Gênero</h3>
+        <ul>
+            <li><b>Biformes:</b> duas formas (masculino/feminino). <i>gato/gata, homem/mulher, poeta/poetisa.</i></li>
+            <li><b>Uniformes:</b> uma só forma. Subdividem-se em:
+                <ul>
+                    <li><b>Epicenos:</b> animais. Sexo marcado por <i>macho/fêmea</i>. <i>a cobra macho / a cobra fêmea.</i></li>
+                    <li><b>Sobrecomuns:</b> um só artigo para ambos os sexos. <i>a vítima, a testemunha, a criança, o cônjuge, o indivíduo.</i></li>
+                    <li><b>Comuns de Dois Gêneros:</b> o artigo varia. <i>o/a artista, o/a cliente, o/a estudante.</i></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>2.2. Mudança de Sentido com Troca de Gênero</h3>
+        <table>
+            <tr><th>Masculino</th><th>Feminino</th></tr>
+            <tr><td>O águia (vigarista)</td><td>A águia (ave)</td></tr>
+            <tr><td>O cabeça (líder)</td><td>A cabeça (parte do corpo)</td></tr>
+            <tr><td>O capital (dinheiro)</td><td>A capital (cidade sede)</td></tr>
+            <tr><td>O moral (ânimo)</td><td>A moral (ética)</td></tr>
+            <tr><td>O rádio (aparelho)</td><td>A rádio (emissora)</td></tr>
+            <tr><td>O praça (soldado)</td><td>A praça (espaço público)</td></tr>
+        </table>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> <i>Vítima</i> é SEMPRE feminino: "A vítima era um homem" (nunca "o vítima"). Trata-se de substantivo sobrecomum.
+        </div>
+    </div>
+
+    <!-- PÁGINA 5: Cap 2 - Plural de compostos e diminutivos -->
+    <div class="page" data-page="5">
+        <h2>PLURAL DOS SUBSTANTIVOS COMPOSTOS</h2>
+        <h3>Regras do Plural</h3>
+        <table>
+            <tr><th>Regra</th><th>Composição</th><th>Exemplos</th></tr>
+            <tr><td><b>Flexionam AMBOS</b></td><td>Substantivo + Substantivo</td><td>couves-flores</td></tr>
+            <tr><td></td><td>Substantivo + Adjetivo</td><td>amores-perfeitos</td></tr>
+            <tr><td></td><td>Adjetivo + Substantivo</td><td>gentis-homens</td></tr>
+            <tr><td></td><td>Numeral + Substantivo</td><td>quintas-feiras</td></tr>
+            <tr><td><b>Flexiona APENAS O 2º</b></td><td>Verbo + Substantivo</td><td>guarda-roupas</td></tr>
+            <tr><td></td><td>Invariável + Variável</td><td>alto-falantes</td></tr>
+            <tr><td></td><td>Palavras Repetidas</td><td>reco-recos</td></tr>
+            <tr><td><b>Flexiona APENAS O 1º</b></td><td>Substantivo + Preposição (clara ou oculta)</td><td>águas-de-colônia, cavalos-vapor</td></tr>
+            <tr><td></td><td>Substantivo + Substantivo especificador</td><td>palavras-chave, bombas-relógio, homens-rã, peixes-espada</td></tr>
+            <tr><td><b>INVARIÁVEIS</b></td><td>Verbo + Advérbio</td><td>os bota-fora</td></tr>
+            <tr><td></td><td>Verbo + Substantivo plural</td><td>os saca-rolhas</td></tr>
+        </table>
+
+        <h3>Plural dos Diminutivos (-zinho)</h3>
+        <p>Flexione a palavra primitiva no plural, retire o "s" final e adicione <b>-zinhos</b>:</p>
+        <ul>
+            <li>pão → pães → pãe + zinhos = <b>pãezinhos</b></li>
+            <li>animal → animais → animai + zinhos = <b>animaizinhos</b></li>
+            <li>botão → botões → botõe + zinhos = <b>botõezinhos</b></li>
+            <li>papel → papéis → papéi + zinhos = <b>papeizinhos</b></li>
+        </ul>
+        <div class="dica">
+            <b>✅ Teste do Guarda:</b> Em compostos com "guarda-", verifique se indica ação (guarda-roupa = guarda-roupas) ou profissão (guarda-noturno = guardas-noturnos).
+        </div>
+    </div>
+
+    <!-- PÁGINA 6: Cap 2 - Adjetivo, Artigos, Numerais + Q1-Q3 -->
+    <div class="page" data-page="6">
+        <h2>ADJETIVO, LOCUÇÃO ADJETIVA, ARTIGOS E NUMERAIS</h2>
+        <h3>Adjetivo Composto – Plural</h3>
+        <ul>
+            <li><b>Regra geral:</b> só o ÚLTIMO elemento varia. <i>olhos verde-claros, calças azul-escuras.</i></li>
+            <li><b>Se o 2º elemento for substantivo:</b> INVARIÁVEL. <i>camisas rosa-claro, telhados marrom-café.</i></li>
+            <li><b>Sempre invariáveis:</b> azul-marinho, azul-celeste, ultravioleta, cor-de-... <i>roupas azul-marinho.</i></li>
+            <li><b>Exceção:</b> surdo-mudo varia os dois. <i>crianças surdas-mudas.</i></li>
+        </ul>
+
+        <h3>Locuções Adjetivas Eruditas</h3>
+        <p>de aluno = discente | de ano = anual | de chuva = pluvial | de rio = fluvial | de criança = pueril | de idade = senil | de vento = eólico | de ouro = áureo | de gelo = glacial</p>
+
+        <h3>Artigos – Regras Práticas</h3>
+        <ul>
+            <li>Todo <b>a</b> + substantivo = totalidade (<i>toda a classe</i>).</li>
+            <li>Todo + substantivo (sem artigo) = qualquer (<i>toda classe</i>).</li>
+            <li><b>Proibido:</b> usar artigo após <i>cujo</i> (cujo o é ERRADO).</li>
+        </ul>
+
+        <h3>Numerais – Regras de Leitura</h3>
+        <ul>
+            <li><b>Leis:</b> 1º ao 9º = ordinal (<i>Artigo nono</i>); 10 em diante = cardinal (<i>Artigo dez</i>).</li>
+            <li><b>Papas, séculos, capítulos (pós-substantivo):</b> I ao X = ordinal (<i>Século VIII = oitavo</i>); XI em diante = cardinal (<i>Século XX = vinte</i>).</li>
+            <li><b>Ambos:</b> exige artigo após (<i>Ambos os candidatos</i>).</li>
+        </ul>
+
+        <h3>Questões Comentadas</h3>
+        <div class="questao-item">
+            <p><b>Q1</b> – Aquele que deve ser classificado como SOBRECOMUM é:</p>
+            <div class="alternativas">a) artista | b) vítima | c) pianista | d) cliente</div>
+            <div class="comentario"><b>Gabarito: B</b> – Vítima tem um único artigo fixo (a) para ambos os sexos.</div>
+        </div>
+        <div class="questao-item">
+            <p><b>Q2</b> (CESGRANRIO) – A concordância do adjetivo atende à norma em:</p>
+            <div class="alternativas">a) Roupas azuis-marinhas | b) blusas rosa-claras | c) saias azul-marinho e sapatos pretos | d) tecidos azuis-celestes</div>
+            <div class="comentario"><b>Gabarito: C</b> – Azul-marinho é sempre invariável.</div>
+        </div>
+        <div class="questao-item">
+            <p><b>Q3</b> (VUNESP) – A leitura correta de "Artigo 9.º" e "Artigo 12" é:</p>
+            <div class="alternativas">a) nono / décimo segundo | b) nove / doze | c) nono / doze | d) nove / décimo segundo</div>
+            <div class="comentario"><b>Gabarito: C</b> – Ordinal até 9, cardinal de 10 em diante.</div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 7: Cap 3 - Pronomes -->
+    <div class="page" data-page="7">
+        <h2>CAP 3: PRONOMES</h2>
+        <h3>3.1. Pronomes Pessoais – Formas Especiais dos Oblíquos</h3>
+        <ul>
+            <li><b>Após verbos em -R, -S, -Z:</b> consoante cai e o pronome assume <b>-lo, -la, -los, -las</b>.
+                <br><i>fiz + o = fi-lo | fazeis + o = fazei-lo | dizer + a = dizê-la.</i></li>
+            <li><b>Após verbos com som nasal (-M, -ÃO, -ÕE):</b> assume <b>-no, -na, -nos, -nas</b>.
+                <br><i>viram + o = viram-no | repõe + os = repõe-nos | tem + as = tem-nas.</i></li>
+        </ul>
+
+        <h3>3.2. Para EU x Para MIM</h3>
+        <ul>
+            <li><b>EU:</b> antes de infinitivo (sujeito do verbo). <i>"Trouxeram o livro para EU ler."</i></li>
+            <li><b>MIM:</b> complemento/fim de frase. <i>"Isso é fácil para MIM."</i></li>
+        </ul>
+
+        <h3>3.3. Pronomes Demonstrativos</h3>
+        <table>
+            <tr><th>Pronome</th><th>Espaço</th><th>Tempo</th><th>Discurso</th></tr>
+            <tr><td><b>ESTE/ESTA/ISTO</b></td><td>Perto de quem fala</td><td>Presente/futuro próximo</td><td>Último citado em dupla</td></tr>
+            <tr><td><b>ESSE/ESSA/ISSO</b></td><td>Perto de quem ouve</td><td>Passado/futuro pouco distante</td><td>Retoma algo já dito</td></tr>
+            <tr><td><b>AQUELE/AQUELA/AQUILO</b></td><td>Distante</td><td>Passado distante</td><td>Primeiro citado em dupla</td></tr>
+        </table>
+
+        <h3>3.4. Pronome Indefinido QUALQUER</h3>
+        <p>Plural irregular: <b>QUAISQUER</b> (interior do vocábulo).</p>
+
+        <div class="exemplo">
+            <b>Exemplo de retomada:</b> "Palmeiras e São Paulo; <b>este</b> (São Paulo, último citado) está melhor colocado que <b>aquele</b> (Palmeiras, primeiro citado)."
+        </div>
+    </div>
+
+    <!-- PÁGINA 8: Cap 3 - Colocação pronominal + Advérbios + Q1-Q3 -->
     <div class="page" data-page="8">
-        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+        <h2>COLOCAÇÃO PRONOMINAL E ADVÉRBIOS</h2>
+        <h3>Colocação Pronominal</h3>
+        <ol>
+            <li><b>PRÓCLISE</b> (antes do verbo) – obrigatória com palavras atrativas:
+                <ul>
+                    <li>Negativas: <i>não, nunca, jamais</i></li>
+                    <li>Advérbios: <i>aqui, ontem</i></li>
+                    <li>Pronomes relativos/indefinidos: <i>que, alguém, tudo</i></li>
+                    <li>Conjunções subordinativas: <i>que, se, quando</i></li>
+                    <li>Frases interrogativas/exclamativas</li>
+                </ul>
+            </li>
+            <li><b>MESÓCLISE</b> (no meio do verbo) – verbos no futuro, sem palavra atrativa. <i>"Realizar-se-á."</i></li>
+            <li><b>ÊNCLISE</b> (depois do verbo) – regra geral. <b>NUNCA inicie frase com pronome oblíquo.</b></li>
+        </ol>
 
+        <h3>Advérbios – Casos Especiais</h3>
+        <table>
+            <tr><th>Palavra</th><th>Advérbio (invariável)</th><th>Adjetivo/Pronome (variável)</th></tr>
+            <tr><td><b>Bastante</b></td><td>Estudei bastante (= muito)</td><td>Bastantes capítulos (= muitos)</td></tr>
+            <tr><td><b>Meio</b></td><td>Meio nervosa (= um pouco)</td><td>Meia porção (= metade)</td></tr>
+            <tr><td><b>Só</b></td><td>Só desejo passar (= apenas)</td><td>Saíram sós (= sozinhas)</td></tr>
+            <tr><td><b>Alerta</b></td><td>Sempre invariável</td><td>—</td></tr>
+            <tr><td><b>Menos</b></td><td>Sempre invariável</td><td>—</td></tr>
+        </table>
+
+        <h3>Questões Comentadas</h3>
         <div class="questao-item">
-            <p><b>Questão 15</b> (V/F – Formação) – Analise as afirmativas:</p>
-            <p>(   ) A derivação parassintética ocorre quando se adiciona prefixo e sufixo simultaneamente.<br>
-            (   ) A onomatopeia é um processo de composição.<br>
-            (   ) A composição por aglutinação ocorre quando os radicais se juntam sem alteração.<br>
-            (   ) O hibridismo é a formação de palavras com elementos de línguas diferentes.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) V – F – F – V<br>b) F – V – V – F<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – V – F
-            </div>
+            <p><b>Q1</b> (IBDO) – Julgue sobre colocação pronominal (C/I): ( ) Alguém me disse. ( ) Dir-te-ei a verdade. ( ) Aqui, se estuda. ( ) Sentei-me para aguardar.</p>
+            <div class="alternativas">a) C-C-I-C | b) C-C-C-C | c) I-C-C-I | d) C-I-C-I</div>
+            <div class="comentario"><b>Gabarito: B</b> – Todas corretas. (3ª tem vírgula → atração quebrada, mas "se estuda" está correto).</div>
+        </div>
+        <div class="questao-item">
+            <p><b>Q2</b> (CESGRANRIO) – A substituição do termo por pronome está INCORRETA em:</p>
+            <div class="alternativas">a) impregna a vida / impregna-a | b) entender os debates / entendê-los | c) supõe um conhecimento / supõe-lo | d) marcaram sua história / marcaram-na</div>
+            <div class="comentario"><b>Gabarito: C</b> – Verbo "supõe" (som nasal) exige "supõe-no".</div>
+        </div>
+        <div class="questao-item">
+            <p><b>Q3</b> (VUNESP) – A concordância está correta em:</p>
+            <div class="alternativas">a) As candidatas ficaram meias nervosas | b) Havia bastantes motivos | c) permaneceram alertas | d) saíram só</div>
+            <div class="comentario"><b>Gabarito: B</b> – "Bastantes" = "muitos" (concorda com substantivo).</div>
+        </div>
+    </div>
+    <!-- PÁGINA 9: Cap 4 - Verbos estrutura -->
+    <div class="page" data-page="9">
+        <h2>CAP 4: VERBOS – ESTRUTURA E CLASSIFICAÇÃO</h2>
+        <h3>4.1. Classificação dos Verbos</h3>
+        <ol>
+            <li><b>Regulares:</b> radical inalterado. <i>cantar, vender, partir.</i></li>
+            <li><b>Irregulares:</b> alterações no radical/desinência. <i>fazer → faço, fiz, farei.</i></li>
+            <li><b>Anômalos:</b> mais de um radical. <i>ser (sou, és, fui); ir (fui, ia, vá).</i></li>
+            <li><b>Abundantes:</b> duas formas equivalentes. Ocorrem geralmente no <b>particípio</b>.
+                <ul>
+                    <li><b>Particípio Regular (-ado/-ido):</b> com auxiliares <b>TER/HAVER</b>. <i>"Tinha aceitado."</i></li>
+                    <li><b>Particípio Irregular (curto):</b> com auxiliares <b>SER/ESTAR/FICAR</b>. <i>"Foi aceito."</i></li>
+                    <li><b>Só têm particípio irregular:</b> abrir (aberto), cobrir (coberto), dizer (dito), escrever (escrito), pôr (posto), ver (visto), vir (vindo).</li>
+                </ul>
+            </li>
+        </ol>
+        <div class="dica">
+            <b>✅ Casamento de auxiliares:</b> TER/HAVER + -ADO/-IDO | SER/ESTAR/FICAR + FORMA CURTA.
+        </div>
+        <div class="exemplo">
+            <b>Exemplo:</b> "O aluno já tinha <b>imprimido</b> o documento." (auxiliar <i>tinha</i> → regular) x "O documento foi <b>impresso</b>." (auxiliar <i>foi</i> → irregular curto).
+        </div>
+    </div>
+
+    <!-- PÁGINA 10: Cap 4 - Modos, tempos, vozes + Q1-Q3 -->
+    <div class="page" data-page="10">
+        <h2>MODOS, TEMPOS E VOZES VERBAIS</h2>
+        <h3>Modos Verbais</h3>
+        <ul>
+            <li><b>Indicativo:</b> Certeza. <i>"Eu estudo."</i></li>
+            <li><b>Subjuntivo:</b> Dúvida/hipótese. <i>"Talvez eu estude."</i></li>
+            <li><b>Imperativo:</b> Ordem/pedido. <i>"Estude!"</i></li>
+        </ul>
+
+        <h3>Tempos Notáveis</h3>
+        <ul>
+            <li><b>Pretérito Perfeito:</b> concluído. <i>"Ele estudou."</i></li>
+            <li><b>Pretérito Imperfeito:</b> habitual no passado. <i>"Ele estudava todas as tardes."</i> (desinências -VA-, -IA-)</li>
+            <li><b>Pretérito Mais-que-perfeito:</b> passado do passado. <i>"Ele já estudara quando chegaram."</i> (-RA-)</li>
+            <li><b>Presente histórico:</b> presente com valor de passado. <i>"Em 1500, Cabral descobre o Brasil."</i></li>
+        </ul>
+
+        <h3>Vozes Verbais</h3>
+        <ul>
+            <li><b>Ativa:</b> sujeito agente. <i>"O candidato comprou a apostila."</i></li>
+            <li><b>Passiva Analítica:</b> SER + Particípio. <i>"A apostila foi comprada pelo candidato."</i></li>
+            <li><b>Passiva Sintética:</b> 3ª pessoa + SE apassivador. <i>"Vendem-se casas."</i></li>
+            <li><b>Reflexiva:</b> sujeito agente e paciente. <i>"O menino feriu-se."</i></li>
+        </ul>
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> <b>"Vende-se casas"</b> está ERRADO. Como "casas" é sujeito paciente plural, o correto é <b>"Vendem-se casas"</b>.
         </div>
 
+        <h3>Questões Comentadas</h3>
         <div class="questao-item">
-            <p><b>Questão 16</b> (V/F – Flexão) – Analise as afirmativas:</p>
-            <p>(   ) A flexão verbal indica apenas o tempo do verbo.<br>
-            (   ) O grau do adjetivo pode ser comparativo ou superlativo.<br>
-            (   ) Os verbos são flexionados em número, pessoa, tempo e modo.<br>
-            (   ) A voz passiva é uma das flexões verbais.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) F – V – V – V<br>b) V – F – V – F<br>c) F – V – F – V<br>d) V – V – V – F<br>e) F – F – V – V
-            </div>
+            <p><b>Q1</b> (VUNESP) – Em "Pense rápido: qual o número?", o verbo destacado está no modo:</p>
+            <div class="alternativas">a) Indicativo | b) Subjuntivo | c) Imperativo | d) Infinitivo</div>
+            <div class="comentario"><b>Gabarito: C</b> – "Pense" = ordem.</div>
+        </div>
+        <div class="questao-item">
+            <p><b>Q2</b> (CESGRANRIO) – "Perde-se o dinheiro e o amigo" na voz passiva analítica fica:</p>
+            <div class="alternativas">a) O dinheiro e o amigo são perdidos | b) Perderia-se | c) Tinha-se perdido | d) Perdeu-se</div>
+            <div class="comentario"><b>Gabarito: A</b> – SER (presente) + particípio.</div>
+        </div>
+        <div class="questao-item">
+            <p><b>Q3</b> (IBFC) – Verbo no Pretérito Imperfeito do Indicativo:</p>
+            <div class="alternativas">a) Ele falou | b) Ele falava | c) Ele falara | d) Se ele falasse</div>
+            <div class="comentario"><b>Gabarito: B</b> – Desinência -VA- = imperfeito.</div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 11: Cap 5 - Preposições, Conjunções, Interjeições + Q1-Q3 -->
+    <div class="page" data-page="11">
+        <h2>CAP 5: PREPOSIÇÕES, CONJUNÇÕES E INTERJEIÇÕES</h2>
+        <h3>Preposições Essenciais</h3>
+        <p><b>a, ante, após, até, com, contra, de, desde, em, entre, para, por, sem, sob, sobre, trás.</b></p>
+
+        <h3>Relações Semânticas das Preposições</h3>
+        <table>
+            <tr><th>Relação</th><th>Exemplo</th></tr>
+            <tr><td><b>Lugar</b></td><td>Irei a Salvador.</td></tr>
+            <tr><td><b>Causa</b></td><td>Chorei de saudade.</td></tr>
+            <tr><td><b>Finalidade</b></td><td>Estudou para passar.</td></tr>
+            <tr><td><b>Instrumento</b></td><td>Cortou com a faca.</td></tr>
+            <tr><td><b>Companhia</b></td><td>Estarei com ele.</td></tr>
+            <tr><td><b>Matéria</b></td><td>Copo de cristal.</td></tr>
+            <tr><td><b>Modo</b></td><td>Atendeu com dedicação.</td></tr>
+            <tr><td><b>Assunto</b></td><td>Falemos sobre futebol.</td></tr>
+        </table>
+
+        <h3>Conjunções Coordenativas</h3>
+        <table>
+            <tr><th>Tipo</th><th>Conjunções</th></tr>
+            <tr><td><b>Aditivas</b></td><td>e, nem, não só... mas também</td></tr>
+            <tr><td><b>Adversativas</b></td><td>mas, porém, contudo, todavia, entretanto, no entanto</td></tr>
+            <tr><td><b>Alternativas</b></td><td>ou... ou, quer... quer, seja... seja</td></tr>
+            <tr><td><b>Conclusivas</b></td><td>logo, portanto, pois (pós-posto)</td></tr>
+            <tr><td><b>Explicativas</b></td><td>que, porque, pois (antes do verbo)</td></tr>
+        </table>
+
+        <h3>Conjunções Subordinativas – Destaques</h3>
+        <ul>
+            <li><b>Causais:</b> porque, visto que, já que, porquanto, como.</li>
+            <li><b>Concessivas:</b> embora, ainda que, mesmo que, conquanto, se bem que.</li>
+            <li><b>Conformativas:</b> conforme, como, segundo, consoante.</li>
+            <li><b>Proporcionais:</b> à medida que, à proporção que, ao passo que.</li>
+            <li><b>Temporais:</b> quando, enquanto, assim que.</li>
+            <li><b>Finais:</b> para que, a fim de que.</li>
+        </ul>
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> <b>"À medida em que"</b> e <b>"na medida que"</b> são ERROS. A forma correta é <b>"à medida que"</b>.
         </div>
 
-        <div class="questao-item">
-            <p><b>Questão 17</b> (Classes) – Assinale a alternativa em que a palavra sublinhada é um <b>pronome</b>:</p>
-            <div class="alternativas">
-                a) <b>Ele</b> chegou tarde.<br>
-                b) <b>Feliz</b> aniversário.<br>
-                c) <b>Dois</b> livros foram lidos.<br>
-                d) <b>Correndo</b>, ele chegou.<br>
-                e) <b>Muito</b> obrigado.
-            </div>
-        </div>
+        <h3>Interjeições</h3>
+        <p>Palavras invariáveis que exprimem emoções: <i>Ah!, Oh!, Ufa!, Socorro!, Cuidado!</i></p>
 
+        <h3>Questões Comentadas</h3>
         <div class="questao-item">
-            <p><b>Questão 18</b> (Formação) – A palavra "ameaça" (substantivo derivado do verbo ameaçar) é formada por:</p>
-            <div class="alternativas">
-                a) Derivação prefixal.<br>
-                b) Derivação sufixal.<br>
-                c) Derivação regressiva.<br>
-                d) Derivação parassintética.<br>
-                e) Composição por aglutinação.
-            </div>
+            <p><b>Q1</b> (FCC) – "Aos poucos, contudo, fui chegando..." O elemento destacado pode ser substituído por:</p>
+            <div class="alternativas">a) ademais | b) conquanto | c) porquanto | d) entretanto</div>
+            <div class="comentario"><b>Gabarito: D</b> – "Contudo" é adversativa = "entretanto".</div>
         </div>
+        <div class="questao-item">
+            <p><b>Q2</b> (IBFC) – "...falei muito, pois não gosto do silêncio". O "pois" (antes do verbo) classifica-se como:</p>
+            <div class="alternativas">a) Adversativa | b) Explicativa | c) Causal subordinativa | d) Conclusiva</div>
+            <div class="comentario"><b>Gabarito: B</b> – Antes do verbo → explicativa.</div>
+        </div>
+        <div class="questao-item">
+            <p><b>Q3</b> (VUNESP) – Em "atendeu os pacientes COM dedicação e combateu a doença POR meio de novos remédios", as preposições indicam:</p>
+            <div class="alternativas">a) causa e instrumento | b) modo e meio | c) companhia e lugar | d) finalidade e causa</div>
+            <div class="comentario"><b>Gabarito: B</b> – "Com dedicação" = modo; "por meio de" = meio.</div>
+        </div>
+    </div>
 
-        <div class="questao-item">
-            <p><b>Questão 19</b> (Flexão) – A flexão de grau do adjetivo "alto" em "altíssimo" é um exemplo de superlativo:</p>
-            <div class="alternativas">
-                a) Relativo.<br>
-                b) Absoluto sintético.<br>
-                c) Absoluto analítico.<br>
-                d) Relativo de inferioridade.<br>
-                e) Relativo de superioridade.
-            </div>
-        </div>
+    <!-- PÁGINA 12: Cap 6 - Revisão Geral -->
+    <div class="page" data-page="12">
+        <h2>CAP 6: REVISÃO GERAL – QUADROS SÍNTESE</h2>
 
-        <div class="questao-item">
-            <p><b>Questão 20</b> (Classes) – "Excelência" em "Vossa Excelência" é um pronome de tratamento, mas originalmente é um:</p>
-            <div class="alternativas">
-                a) Substantivo.<br>
-                b) Adjetivo.<br>
-                c) Verbo.<br>
-                d) Advérbio.<br>
-                e) Conjunção.
-            </div>
-        </div>
+        <h3>Tabela 1: Flexões Nominais</h3>
+        <table>
+            <tr><th>Fenômeno</th><th>Regra</th><th>Exemplos</th></tr>
+            <tr><td><b>Sobrecomum</b></td><td>Um só artigo para ambos os sexos</td><td>a vítima, a testemunha, o cônjuge</td></tr>
+            <tr><td><b>Comum de 2 gêneros</b></td><td>Mesma palavra; o artigo muda</td><td>o/a artista, o/a cliente</td></tr>
+            <tr><td><b>Plural – Subst. Composto</b></td><td>Verbo+Subst: só o 2º | Subst+Prep+Subst: só o 1º</td><td>guarda-roupas | águas-de-colônia</td></tr>
+            <tr><td><b>Plural – Adj. Composto</b></td><td>Só o 2º varia | Se 2º for subst: INVARIÁVEL</td><td>verde-claros | rosa-claro</td></tr>
+            <tr><td><b>Diminutivos</b></td><td>Plural → retira 's' → -zinhos</td><td>pãezinhos, papeizinhos</td></tr>
+        </table>
 
-        <div class="questao-item">
-            <p><b>Questão 21</b> (V/F – Classes) – Analise as afirmativas:</p>
-            <p>(   ) A interjeição expressa emoções.<br>
-            (   ) A preposição liga dois termos e é variável.<br>
-            (   ) O artigo define ou indefere o substantivo.<br>
-            (   ) O numeral indica quantidade, ordem, fração ou multiplicação.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
-            </div>
-        </div>
+        <h3>Tabela 2: Colocação Pronominal</h3>
+        <table>
+            <tr><th>Posição</th><th>Fator</th><th>Exemplo</th></tr>
+            <tr><td><b>Próclise</b></td><td>Palavras atrativas (não, que, se, advérbios)</td><td>Não se perdeu nada.</td></tr>
+            <tr><td><b>Mesóclise</b></td><td>Verbos no futuro, sem atrativo</td><td>Realizar-se-á amanhã.</td></tr>
+            <tr><td><b>Ênclise</b></td><td>Regra geral; imperativo; início</td><td>Sentei-me no banco.</td></tr>
+        </table>
 
-        <div class="questao-item">
-            <p><b>Questão 22</b> (Estrutura) – Na palavra "desagradável", os elementos "des-" e "-ável" são, respectivamente:</p>
-            <div class="alternativas">
-                a) Prefixo e sufixo.<br>
-                b) Sufixo e prefixo.<br>
-                c) Radical e desinência.<br>
-                d) Vogal temática e radical.<br>
-                e) Ambos são prefixos.
-            </div>
-        </div>
+        <h3>Tabela 3: Equivalência de Conjunções</h3>
+        <table>
+            <tr><th>Tipo</th><th>Conjunções Equivalentes</th></tr>
+            <tr><td><b>Adversativa</b></td><td>mas = porém = contudo = todavia = entretanto</td></tr>
+            <tr><td><b>Concessiva</b></td><td>embora = ainda que = mesmo que = conquanto</td></tr>
+            <tr><td><b>Causal</b></td><td>porque = visto que = já que = porquanto</td></tr>
+            <tr><td><b>Conformativa</b></td><td>conforme = como = segundo = consoante</td></tr>
+        </table>
+    </div>
 
-        <div class="questao-item">
-            <p><b>Questão 23</b> (Formação) – A palavra "cidadão" e "cidadania" são, respectivamente:</p>
-            <div class="alternativas">
-                a) Primitiva e derivada.<br>
-                b) Derivada e primitiva.<br>
-                c) Ambas primitivas.<br>
-                d) Ambas derivadas.<br>
-                e) Não há relação entre elas.
-            </div>
-        </div>
+    <!-- PÁGINA 13: Simulado Q1-Q9 -->
+    <div class="page" data-page="13">
+        <h2>📝 SIMULADO FINAL (1 a 9)</h2>
 
-        <div class="questao-item">
-            <p><b>Questão 24</b> (Flexão) – Assinale a alternativa com o verbo corretamente flexionado no pretérito perfeito:</p>
-            <div class="alternativas">
-                a) Ele cantou.<br>
-                b) Ele cantava.<br>
-                c) Ele cantará.<br>
-                d) Ele cante.<br>
-                e) Ele cantasse.
-            </div>
-        </div>
+        <div class="questao-item"><p><b>Q1</b> (IBDO) – SOBRECOMUM:</p><div class="alternativas">a) artista | b) vítima | c) pianista | d) cliente</div></div>
+        <div class="questao-item"><p><b>Q2</b> (IBFC) – Em "Sentimentos que precisam ficar escondidos", o QUE é:</p><div class="alternativas">a) Pronome relativo | b) Pronome demonstrativo | c) Conjunção integrante | d) Conjunção adverbial</div></div>
+        <div class="questao-item"><p><b>Q3</b> (VUNESP) – Pertence à classe dos ADJETIVOS:</p><div class="alternativas">a) grande confusão | b) ativamente a melhora | c) com paciência | d) a verdadeira boa morte</div></div>
+        <div class="questao-item"><p><b>Q4</b> (IBDO) – Palavra "cabo" com múltiplos significados:</p><div class="alternativas">a) Antonímia | b) Homonímia | c) Polissemia | d) Sinonímia</div></div>
+        <div class="questao-item"><p><b>Q5</b> (CESGRANRIO) – Concordância correta:</p><div class="alternativas">a) Frutos elogiados | b) prática necessárias | c) boatos reproduzidas | d) profissionais estimuladas</div></div>
+        <div class="questao-item"><p><b>Q6</b> (FGV) – "Atentados matam 44 e país decreta emergência" – relação lógica:</p><div class="alternativas">a) causa e consequência | b) informação e comprovação | c) fato e exemplificação | d) tese e argumentação</div></div>
+        <div class="questao-item"><p><b>Q7</b> (VUNESP) – Crase CORRETA:</p><div class="alternativas">a) referiu-se à vontade | b) Chegaram à sofrer | c) Voltar à episódios | d) Dedicado à determinadas</div></div>
+        <div class="questao-item"><p><b>Q8</b> (IBFC) – Plural como "couve-flor" (os dois variam):</p><div class="alternativas">a) Guarda-roupa | b) Amor-perfeito | c) Alto-falante | d) Água-de-colônia</div></div>
+        <div class="questao-item"><p><b>Q9</b> (CESPE) – "metálica", "acúmulo" e "imóveis" têm a mesma regra de acentuação.</p><div class="alternativas">a) CERTO | b) ERRADO</div></div>
+    </div>
 
-        <div class="questao-item">
-            <p><b>Questão 25</b> (V/F – Consolidação) – Analise as afirmativas:</p>
-            <p>(   ) A derivação imprópria ocorre quando a palavra muda de classe gramatical.<br>
-            (   ) Os advérbios são palavras invariáveis.<br>
-            (   ) A conjugação verbal é composta por radical, vogal temática e desinências.<br>
-            (   ) A palavra "cardume" é um substantivo concreto.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) V – V – V – V<br>b) V – F – V – F<br>c) F – V – F – V<br>d) V – V – F – F<br>e) F – F – V – V
-            </div>
-        </div>
+    <!-- PÁGINA 14: Simulado Q10-Q18 -->
+    <div class="page" data-page="14">
+        <h2>📝 SIMULADO FINAL (10 a 18)</h2>
+
+        <div class="questao-item"><p><b>Q10</b> (IBDO) – "Não se sabe por que faltou" – separado e sem acento porque:</p><div class="alternativas">a) final de frase | b) interrogação indireta | c) substantivo | d) conjunção explicativa</div></div>
+        <div class="questao-item"><p><b>Q11</b> (FCC) – Verbo no mesmo tempo/modo de "que nos AJUDE":</p><div class="alternativas">a) conseguissem | b) se esforcem | c) transformou | d) há</div></div>
+        <div class="questao-item"><p><b>Q12</b> (VUNESP) – "Bastante" como ADVÉRBIO:</p><div class="alternativas">a) Havia bastantes candidatos | b) Trabalharam bastante | c) bastantes elogios | d) bastantes livros</div></div>
+        <div class="questao-item"><p><b>Q13</b> (IBFC) – Colocação pronominal correta:</p><div class="alternativas">a) Não se esqueça | b) Me disseram | c) retirou-se sem falar | d) A e C estão corretas</div></div>
+        <div class="questao-item"><p><b>Q14</b> (AOCP) – "escondê-la" tem forma "la" porque:</p><div class="alternativas">a) verbo nasal | b) infinitivo perdeu 'r' | c) pronome reto | d) mesóclise</div></div>
+        <div class="questao-item"><p><b>Q15</b> (IBDO) – Antônimos de "mau" e "bem":</p><div class="alternativas">a) mal / mau | b) bom / mal | c) ruim / péssimo | d) bom / ruim</div></div>
+        <div class="questao-item"><p><b>Q16</b> (VUNESP) – Plural de "surdo-mudo":</p><div class="alternativas">a) surdo-mudas | b) surdas-mudas | c) surdo-mudos | d) surdas-mudo</div></div>
+        <div class="questao-item"><p><b>Q17</b> (IBFC) – "Embora estivesse cansado" – conjunção:</p><div class="alternativas">a) Causa | b) Condição | c) Concessão | d) Conformidade</div></div>
+        <div class="questao-item"><p><b>Q18</b> (CESPE) – "cânon → cânones" e "caráter → caracteres".</p><div class="alternativas">a) CERTO | b) ERRADO</div></div>
+    </div>
+
+    <!-- PÁGINA 15: Simulado Q19-Q25 + Gabarito -->
+    <div class="page" data-page="15">
+        <h2>📝 SIMULADO FINAL (19 a 25)</h2>
+
+        <div class="questao-item"><p><b>Q19</b> (IBDO) – Plural de "pãozinho":</p><div class="alternativas">a) Pãozinhos | b) Pãesinhos | c) Pãezinhos | d) Pãezinhos-s</div></div>
+        <div class="questao-item"><p><b>Q20</b> (FGV) – "como havíamos planejado" – valor semântico:</p><div class="alternativas">a) Causa | b) Comparação | c) Conformidade | d) Consequência</div></div>
+        <div class="questao-item"><p><b>Q21</b> (VUNESP) – "Meio" como ADJETIVO:</p><div class="alternativas">a) meio aberta | b) meia porção | c) meio chocada | d) meio cansados</div></div>
+        <div class="questao-item"><p><b>Q22</b> (IBFC) – "camisas azul-marinho e vestidos cor-de-rosa":</p><div class="alternativas">a) Incorretas (azuis-marinho) | b) Corretas (invariáveis) | c) Incorretas (só último) | d) Incorretas (azuis-marinhas)</div></div>
+        <div class="questao-item"><p><b>Q23</b> (CESPE) – "Ocorreram vários acidentes" – verbo no plural porque concorda com sujeito plural.</p><div class="alternativas">a) CERTO | b) ERRADO</div></div>
+        <div class="questao-item"><p><b>Q24</b> (IBDO) – Leitura de "Artigo 1.º" e "Artigo 15":</p><div class="alternativas">a) um / décimo quinto | b) primeiro / quinze | c) primeiro / décimo quinto | d) um / quinze</div></div>
+        <div class="questao-item"><p><b>Q25</b> (VUNESP) – ONDE correto:</p><div class="alternativas">a) reunião onde discutimos | b) cidade onde nasci | c) projeto onde todos | d) tese onde o autor</div></div>
 
         <hr>
 
         <h2>✅ GABARITO OFICIAL</h2>
         <div class="gabarito-box">
-            <p><b>1-C</b> | <b>2-D</b> | <b>3-B</b> | <b>4-E</b> | <b>5-B</b> | <b>6-A</b> | <b>7-E</b> | <b>8-B</b> | <b>9-A</b> | <b>10-B</b></p>
-            <p><b>11-C</b> | <b>12-A</b> | <b>13-C</b> | <b>14-A</b> | <b>15-A</b> | <b>16-A</b> | <b>17-A</b> | <b>18-C</b> | <b>19-B</b> | <b>20-A</b></p>
-            <p><b>21-A</b> | <b>22-A</b> | <b>23-A</b> | <b>24-A</b> | <b>25-A</b></p>
+            <p><b>1-B</b> | <b>2-A</b> | <b>3-D</b> | <b>4-C</b> | <b>5-A</b> | <b>6-A</b> | <b>7-A</b> | <b>8-B</b> | <b>9-B</b> | <b>10-B</b></p>
+            <p><b>11-B</b> | <b>12-B</b> | <b>13-D</b> | <b>14-B</b> | <b>15-B</b> | <b>16-B</b> | <b>17-C</b> | <b>18-A</b> | <b>19-C</b> | <b>20-C</b></p>
+            <p><b>21-B</b> | <b>22-B</b> | <b>23-A</b> | <b>24-B</b> | <b>25-B</b></p>
         </div>
-        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,F,F,V); Q15 (V,F,F,V); Q16 (F,V,V,V); Q21 (V,F,V,V); Q25 (V,V,V,V).</p>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- ÁREA DE NAVEGAÇÃO                                            -->
-    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO -->
     <div class="nav-area">
         <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
-
         <a href="index.html" style="text-decoration:none;">
             <button class="nav-btn menu-btn">🏠 Menu</button>
         </a>
-
-        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <span class="page-indicator" id="pageIndicator">Página 1 de 15</span>
         <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
     </div>
-    <div class="footer-note">
-        📖 Material para concursos – Navegue pelas páginas usando os botões.
-    </div>
+    <div class="footer-note">📖 Material para concursos – Navegue pelas páginas usando os botões.</div>
 </div>
 
 <script>
@@ -784,25 +586,17 @@
         const pages = document.querySelectorAll('.page');
         let current = 0;
         const total = pages.length;
-
         function updatePage() {
-            pages.forEach((p, i) => {
-                p.classList.toggle('active', i === current);
-            });
+            pages.forEach((p, i) => { p.classList.toggle('active', i === current); });
             document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
             document.getElementById('prevBtn').disabled = (current === 0);
             document.getElementById('nextBtn').disabled = (current === total - 1);
             document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-
         window.changePage = function(delta) {
             const newIndex = current + delta;
-            if (newIndex >= 0 && newIndex < total) {
-                current = newIndex;
-                updatePage();
-            }
+            if (newIndex >= 0 && newIndex < total) { current = newIndex; updatePage(); }
         };
-
         updatePage();
     })();
 </script>

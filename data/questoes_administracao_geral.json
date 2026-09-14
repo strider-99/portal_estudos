@@ -1,37 +1,302 @@
 [
-  {"enunciado":"O que significa a sigla O&M?","alternativas":["a) Organização e Métodos","b) Orçamento e Metas","c) Operações e Manutenção","d) Ordem e Movimento","e) Organização e Marketing"],"gabarito":"A","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"O principal objetivo do O&M é:","alternativas":["a) Aumentar o número de funcionários","b) Racionalizar o trabalho e melhorar processos","c) Centralizar todas as decisões na alta direção","d) Reduzir salários","e) Eliminar todos os manuais de procedimentos"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"Em um fluxograma, o símbolo que representa uma decisão (sim/não) é:","alternativas":["a) Retângulo","b) Losango","c) Círculo","d) Oval","e) Retângulo com bordas"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"O símbolo que representa o início e o fim de um processo em um fluxograma é:","alternativas":["a) Retângulo","b) Losango","c) Círculo","d) Oval / arredondado","e) Retângulo com bordas"],"gabarito":"D","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"Um organograma é utilizado para representar:","alternativas":["a) A sequência de etapas de um processo","b) A estrutura hierárquica e funcional de uma organização","c) O fluxo de informações entre setores","d) O orçamento anual","e) As rotinas administrativas"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"O organograma que combina estruturas funcionais e de projetos, com dupla subordinação, é o:","alternativas":["a) Funcional","b) Linear","c) Matricial","d) Circular","e) Vertical"],"gabarito":"C","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"As rotinas administrativas são importantes porque:","alternativas":["a) Padronizam procedimentos e garantem qualidade","b) Aumentam a burocracia","c) Eliminam a necessidade de treinamento","d) Centralizam todas as decisões","e) Reduzem o número de funcionários"],"gabarito":"A","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"A gestão por processos (BPM) organiza a organização em torno de:","alternativas":["a) Departamentos isolados","b) Processos de negócio","c) Hierarquia rígida","d) Tarefas individuais","e) Orçamento anual"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"No ciclo PDCA, a etapa em que se implementam as melhorias é:","alternativas":["a) Plan (Planejar)","b) Do (Executar)","c) Check (Verificar)","d) Act (Agir)","e) Todas as alternativas"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"O mapeamento de processos consiste em:","alternativas":["a) Desenhar o organograma da empresa","b) Identificar todas as atividades, entradas, saídas e responsáveis de um processo","c) Definir o orçamento anual","d) Contratar novos funcionários","e) Criar rotinas administrativas"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"O símbolo do fluxograma que representa a produção ou uso de um documento é:","alternativas":["a) Retângulo simples","b) Retângulo com bordas onduladas ou com uma linha na base","c) Losango","d) Círculo","e) Oval"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"O organograma que mostra a estrutura vertical da organização, com a presidência no topo, é chamado de:","alternativas":["a) Matricial","b) Linear","c) Funcional","d) Circular","e) Horizontal"],"gabarito":"C","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"Na documentação de uma rotina administrativa, o primeiro passo é:","alternativas":["a) Definir os prazos","b) Identificar os responsáveis","c) Definir o objetivo","d) Criar formulários","e) Prever exceções"],"gabarito":"C","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"Em um fluxograma, o símbolo que liga partes do fluxograma é o:","alternativas":["a) Retângulo","b) Losango","c) Círculo","d) Oval","e) Retângulo com bordas"],"gabarito":"C","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"Um KPI (indicador de desempenho) em um processo de licitação poderia ser:","alternativas":["a) O número de servidores envolvidos","b) O tempo médio entre a publicação do edital e a assinatura do contrato","c) A quantidade de papel utilizada","d) O número de fornecedores cadastrados","e) O tamanho do edital"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"A gestão por processos está diretamente ligada à ideia de:","alternativas":["a) Centralização de decisões","b) Melhoria contínua (ciclo PDCA)","c) Redução de custos a qualquer custo","d) Aumento da hierarquia","e) Desconsideração dos clientes"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"As rotinas administrativas documentadas facilitam o treinamento porque:","alternativas":["a) São atualizadas diariamente","b) Contêm os passos padronizados a serem seguidos","c) Substituem a necessidade de supervisão","d) São aplicadas apenas a cargos de chefia","e) Não precisam ser revisadas"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"O fluxograma vertical é caracterizado por:","alternativas":["a) Etapas dispostas da esquerda para a direita","b) Etapas dispostas de cima para baixo","c) Uso exclusivo de retângulos","d) Ausência de decisões","e) Representação de múltiplos setores"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"O organograma que enfatiza a horizontalidade e a comunicação é o:","alternativas":["a) Funcional","b) Linear","c) Matricial","d) Circular","e) Vertical"],"gabarito":"D","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"Um dos benefícios da documentação de rotinas é:","alternativas":["a) Aumento da burocracia","b) Redução de erros e retrabalho","c) Eliminação de todos os procedimentos","d) Centralização das decisões","e) Desconsideração das exceções"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"No contexto da gestão por processos, a 'cadeia de valor' refere-se:","alternativas":["a) Ao fluxo financeiro","b) À sequência de atividades que agregam valor ao cliente","c) À hierarquia de cargos","d) À lista de fornecedores","e) Ao orçamento anual"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"O símbolo do fluxograma que representa uma atividade ou tarefa é:","alternativas":["a) Losango","b) Retângulo","c) Círculo","d) Oval","e) Triângulo"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"O O&M é uma área que atua principalmente na:","alternativas":["a) Contratação de pessoal","b) Racionalização de processos e estruturas","c) Gestão financeira","d) Elaboração de orçamentos","e) Comunicação externa"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"Em um fluxograma, o conector (círculo) é usado para:","alternativas":["a) Iniciar o processo","b) Tomar uma decisão","c) Ligar partes do fluxograma","d) Finalizar o processo","e) Executar uma atividade"],"gabarito":"C","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"A principal diferença entre o organograma funcional e o matricial é:","alternativas":["a) O funcional tem dupla subordinação, enquanto o matricial tem subordinação única","b) O matricial tem dupla subordinação, enquanto o funcional tem subordinação única","c) O funcional é mais horizontal","d) O matricial é mais vertical","e) Não há diferença"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"A etapa 'Check' do ciclo PDCA consiste em:","alternativas":["a) Planejar as ações","b) Implementar as melhorias","c) Avaliar os resultados","d) Padronizar as melhorias","e) Identificar o problema"],"gabarito":"C","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"No mapeamento de processos, a 'entrada' é:","alternativas":["a) O resultado final do processo","b) O que é necessário para iniciar o processo","c) O responsável pela execução","d) O fluxo de informações","e) A decisão tomada"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"Um fluxograma horizontal é ideal para:","alternativas":["a) Processos simples e lineares","b) Mostrar a interação entre diferentes setores","c) Processos que não têm decisões","d) Representar hierarquias","e) Documentar rotinas internas"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"As rotinas administrativas devem ser revisadas periodicamente para:","alternativas":["a) Manter a burocracia","b) Garantir que estejam atualizadas e eficientes","c) Reduzir o número de funcionários","d) Aumentar a complexidade","e) Centralizar as decisões"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"A gestão por processos é uma abordagem que busca:","alternativas":["a) Focar nas funções departamentais","b) Organizar a organização em torno dos processos de negócio","c) Eliminar todos os processos","d) Centralizar a tomada de decisão","e) Aumentar a hierarquia"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"Em O&M, o termo 'layout' refere-se:","alternativas":["a) Ao organograma da empresa","b) À organização física dos espaços de trabalho","c) Ao fluxo de informações","d) Ao orçamento anual","e) À rotina administrativa"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"O símbolo do fluxograma que representa um documento é:","alternativas":["a) Retângulo com bordas onduladas ou com uma linha na base","b) Losango","c) Círculo","d) Oval","e) Triângulo"],"gabarito":"A","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"O organograma linear (ou militar) caracteriza-se por:","alternativas":["a) Hierarquia flexível","b) Linhas claras de subordinação","c) Dupla subordinação","d) Estrutura horizontal","e) Ausência de hierarquia"],"gabarito":"B","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"No ciclo PDCA, a etapa 'Act' tem como objetivo:","alternativas":["a) Planejar a melhoria","b) Executar o plano","c) Verificar os resultados","d) Padronizar as melhorias ou ajustar o que não funcionou","e) Identificar o problema"],"gabarito":"D","slug_materia":"apostila_administracao_geral"},
-  {"enunciado":"Um exemplo de KPI em um processo de atendimento ao público é:","alternativas":["a) O número de funcionários do setor","b) O tempo médio de espera na fila","c) A quantidade de papel utilizada","d) O número de salas da repartição","e) O orçamento do setor"],"gabarito":"B","slug_materia":"apostila_administracao_geral"}
+  {
+    "enunciado": "A palavra Administração, etimologicamente, remete ao conceito de:",
+    "alternativas": [
+      "a) Comando soberano sobre subordinados.",
+      "b) Atividade exercida por delegação e subordinação.",
+      "c) Planejamento estratégico de recursos financeiros.",
+      "d) Gestão autônoma de interesses privados.",
+      "e) Coordenação de tarefas em nível operacional."
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "Segundo Antônio Maximiano, a administração é um processo dinâmico de:",
+    "alternativas": [
+      "a) Organizar o organograma formal.",
+      "b) Controlar a conduta dos funcionários.",
+      "c) Tomar decisões sobre o uso de recursos.",
+      "d) Maximizar lucros acima de objetivos sociais.",
+      "e) Eliminar a organização informal."
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "No triângulo da administração de Mintzberg, a 'Arte' é responsável por:",
+    "alternativas": [
+      "a) Analisar dados sistematicamente para criar ordem.",
+      "b) Fornecer a base de experiências tangíveis.",
+      "c) Trazer as ideias e a integração.",
+      "d) Realizar as conexões práticas entre setores.",
+      "e) Garantir que a ciência seja a única fonte de decisão."
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "A organização informal caracteriza-se por:",
+    "alternativas": [
+      "a) Ser formalizada em manuais de conduta.",
+      "b) Estar representada fielmente no organograma.",
+      "c) Surgir espontaneamente das interações sociais.",
+      "d) Ser criada deliberadamente pela cúpula estratégica.",
+      "e) Substituir permanentemente a organização formal."
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "O desafio fundamental da Administração na visão da TGA é:",
+    "alternativas": [
+      "a) O isolamento das variáveis para controle individual.",
+      "b) A adequação e integração entre as seis variáveis principais.",
+      "c) O foco exclusivo na variável Pessoas.",
+      "d) A eliminação da influência do Ambiente Externo.",
+      "e) A priorização da Tecnologia sobre a Estrutura."
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "O nível hierárquico que lida com o médio prazo e foco departamental é o:",
+    "alternativas": [
+      "a) Estratégico.",
+      "b) Operacional.",
+      "c) Tático.",
+      "d) Institucional.",
+      "e) Chão de Fábrica."
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "No Contexto Público, a Efetividade é frequentemente associada a:",
+    "alternativas": [
+      "a) Gastar o mínimo possível de recursos.",
+      "b) Atingir metas numéricas de vacinação.",
+      "c) Alcance dos resultados mais benéficos para a sociedade.",
+      "d) Seguir estritamente o manual de procedimentos.",
+      "e) Desenhar o organograma de forma eficiente."
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "Qual autor neoclássico consolidou a sigla PODC (Planejamento, Organização, Direção e Controle)?",
+    "alternativas": [
+      "a) Henri Fayol.",
+      "b) Frederick Taylor.",
+      "c) Ralph Davis / Dale.",
+      "d) Henry Mintzberg.",
+      "e) Robert Katz."
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "A habilidade mais importante para um Diretor (Nível Estratégico) é a:",
+    "alternativas": [
+      "a) Técnica.",
+      "b) Operacional.",
+      "c) Conceitual.",
+      "d) Interpessoal de execução.",
+      "e) Mecânica."
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "A relação entre o 'Esforço empregado' (recurso) e o 'Resultado produzido' define:",
+    "alternativas": [
+      "a) Eficácia.",
+      "b) Eficiência.",
+      "c) Efetividade.",
+      "d) Equidade.",
+      "e) Economicidade."
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "O papel de Mintzberg onde o gestor transmite informações para fora da organização é:",
+    "alternativas": [
+      "a) Disseminador.",
+      "b) Monitor.",
+      "c) Porta-voz.",
+      "d) Ligação.",
+      "e) Líder."
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "O 3º Setor é composto por:",
+    "alternativas": [
+      "a) Órgãos da administração direta.",
+      "b) Empresas privadas com fins lucrativos.",
+      "c) Organizações privadas sem fins lucrativos que colaboram com o Estado.",
+      "d) Autarquias e Fundações Públicas.",
+      "e) Microempreendedores individuais."
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "A função administrativa 'Direção' foca primordialmente em:",
+    "alternativas": [
+      "a) Definir objetivos e metas futuras.",
+      "b) Conduzir e motivar as pessoas para os objetivos.",
+      "c) Alocar recursos financeiros e materiais.",
+      "d) Comparar o desempenho real com o planejado.",
+      "e) Criar a estrutura departamental."
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "A característica da Administração de ser aplicável a todos os níveis é a:",
+    "alternativas": [
+      "a) Verticalidade.",
+      "b) Hierarquia estrita.",
+      "c) Universalidade.",
+      "d) Especialização.",
+      "e) Centralização."
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "Qual indicador avalia se 'as crianças deixaram de ficar doentes' após uma vacinação?",
+    "alternativas": [
+      "a) Eficiência.",
+      "b) Eficácia.",
+      "c) Efetividade.",
+      "d) Economicidade.",
+      "e) Produtividade."
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "O papel decisorial de 'Alocador de Recursos' envolve:",
+    "alternativas": [
+      "a) Representar a organização em eventos.",
+      "b) Resolver conflitos entre subordinados.",
+      "c) Decidir quem receberá tempo, dinheiro e equipamentos.",
+      "d) Buscar novas oportunidades de negócio.",
+      "e) Filtrar informações do ambiente externo."
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "No nível tático, a habilidade predominante deve ser a:",
+    "alternativas": [
+      "a) Técnica.",
+      "b) Humana.",
+      "c) Conceitual.",
+      "d) Abstrata.",
+      "e) Contábil."
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "A 'Economicidade' difere da 'Eficiência' pois foca em:",
+    "alternativas": [
+      "a) Atingir a meta a qualquer custo.",
+      "b) Minimizar o custo de aquisição mantendo a qualidade.",
+      "c) Gerar o maior impacto social possível.",
+      "d) Criar o melhor clima organizacional.",
+      "e) Desenvolver novas tecnologias."
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "A função administrativa que estabelece padrões de desempenho é:",
+    "alternativas": [
+      "a) Planejamento.",
+      "b) Organização.",
+      "c) Direção.",
+      "d) Controle.",
+      "e) Coordenação."
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "A visão de que a Organização Formal 'não é capaz de conformar a realidade concreta' significa:",
+    "alternativas": [
+      "a) O organograma é inútil.",
+      "b) As pessoas sempre seguem as regras 100% do tempo.",
+      "c) A interação humana espontânea ultrapassa o que está no papel.",
+      "d) O governo deve proibir organizações informais.",
+      "e) A estrutura informal deve ser desenhada pelo RH."
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "Fayol propôs o POC3. O que o 'C3' representa?",
+    "alternativas": [
+      "a) Comando, Coordenação e Controle.",
+      "b) Comando, Cooperação e Controle.",
+      "c) Comunicação, Coordenação e Controle.",
+      "d) Comando, Coordenação e Custos.",
+      "e) Cultura, Clima e Controle."
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "O nível 'Institucional' é sinônimo de:",
+    "alternativas": [
+      "a) Nível Operacional.",
+      "b) Nível Tático.",
+      "c) Nível Estratégico.",
+      "d) Nível Departamental.",
+      "e) Nível de Execução."
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "Qual papel de Mintzberg busca informações no ambiente externo?",
+    "alternativas": [
+      "a) Disseminador.",
+      "b) Monitor.",
+      "c) Porta-voz.",
+      "d) Empreendedor.",
+      "e) Negociador."
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "Na TGA, a variável 'Ambiente' refere-se a:",
+    "alternativas": [
+      "a) Clima organizacional interno.",
+      "b) Influências e demandas externas à organização.",
+      "c) Ferramentas e máquinas utilizadas.",
+      "d) Layout do escritório.",
+      "e) Capacitação técnica dos funcionários."
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_geral"
+  },
+  {
+    "enunciado": "A 'Equidade' na administração pública foca em:",
+    "alternativas": [
+      "a) Lucro máximo para os acionistas.",
+      "b) Ofertar bens de forma justa conforme objetivos e metas sociais.",
+      "c) Reduzir o quadro de funcionários ao mínimo.",
+      "d) Priorizar o atendimento aos níveis estratégicos.",
+      "e) Aumentar a burocracia para evitar erros."
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_geral"
+  }
 ]

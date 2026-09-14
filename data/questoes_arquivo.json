@@ -1,362 +1,552 @@
 [
   {
-    "enunciado": "O princípio arquivístico que determina que os documentos de um mesmo arquivo não podem ser misturados aos de outros é o da:",
+    "enunciado": "(IBDO / Adaptada) O conjunto de documentos produzidos e recebidos por órgãos públicos ou entidades privadas no exercício de suas atividades específicas, qualquer que seja o suporte da informação, conceitua legalmente o(a):",
     "alternativas": [
-      "a) Organicidade",
-      "b) Proveniência",
-      "c) Indivisibilidade",
-      "d) Autenticidade",
-      "e) Cumulatividade"
+      "a) Biblioteca pública",
+      "b) Arquivo",
+      "c) Museu histórico",
+      "d) Centro de documentação bibliográfica"
     ],
     "gabarito": "B",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "O arquivo que guarda documentos com uso menos frequente, aguardando prescrição ou destinação final, é o:",
-    "alternativas": [
-      "a) Arquivo corrente",
-      "b) Arquivo intermediário",
-      "c) Arquivo permanente",
-      "d) Arquivo especial",
-      "e) Arquivo privado"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_arquivo"
-  },
-  {
-    "enunciado": "A fase do arquivamento que consiste em atribuir um código ou assunto com base no plano de classificação é a:",
-    "alternativas": [
-      "a) Recepção",
-      "b) Ordenação",
-      "c) Classificação",
-      "d) Acondicionamento",
-      "e) Destinação"
-    ],
-    "gabarito": "C",
-    "slug_materia": "apostila_arquivo"
-  },
-  {
-    "enunciado": "O método de arquivamento que utiliza a ordem alfabética diretamente (sem necessidade de índice) é o:",
-    "alternativas": [
-      "a) Numérico",
-      "b) Dígito-terminal",
-      "c) Geográfico",
-      "d) Alfabético",
-      "e) Unitermo"
-    ],
-    "gabarito": "D",
-    "slug_materia": "apostila_arquivo"
-  },
-  {
-    "enunciado": "Segundo as regras de ordenação alfabética, o nome 'Ana Paula de Oliveira' deve ser ordenado por:",
-    "alternativas": [
-      "a) Ana Paula",
-      "b) Oliveira, Ana Paula de",
-      "c) Paula, Ana de Oliveira",
-      "d) De Oliveira, Ana Paula",
-      "e) Ana, Paula de Oliveira"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_arquivo"
-  },
-  {
-    "enunciado": "O sistema de arquivamento que utiliza um índice para localizar o documento, como o numérico, é classificado como:",
-    "alternativas": [
-      "a) Direto",
-      "b) Indireto",
-      "c) Aberto",
-      "d) Fechado",
-      "e) Variável"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_arquivo"
-  },
-  {
-    "enunciado": "Os documentos cartográficos, filmográficos e sonoros são classificados em arquivos do tipo:",
+    "enunciado": "(IBDO / Adaptada) Os documentos de arquivo compostos por mapas, plantas arquitetônicas e projetos de engenharia pertencem a qual gênero arquivístico?",
     "alternativas": [
       "a) Textual",
-      "b) Especial",
-      "c) Corrente",
-      "d) Intermediário",
-      "e) Privado"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_arquivo"
-  },
-  {
-    "enunciado": "A transferência de um documento do arquivo intermediário para o arquivo permanente é chamada de:",
-    "alternativas": [
-      "a) Eliminação",
-      "b) Recolhimento",
-      "c) Empréstimo",
-      "d) Classificação",
-      "e) Ordenação"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_arquivo"
-  },
-  {
-    "enunciado": "O método dígito-terminal é uma variação do sistema de arquivamento:",
-    "alternativas": [
-      "a) Alfabético",
-      "b) Geográfico",
-      "c) Numérico",
-      "d) Ideográfico",
-      "e) Unitermo"
+      "b) Iconográfico",
+      "c) Cartográfico",
+      "d) Micrográfico"
     ],
     "gabarito": "C",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "A Tabela de Temporalidade e Destinação de Documentos define, entre outros itens:",
+    "enunciado": "(IBDO / Adaptada) Quanto ao tipo de arquivamento, assinale a opção correta a respeito do arquivamento horizontal:",
     "alternativas": [
-      "a) O valor monetário dos documentos",
-      "b) Os prazos de guarda e a destinação final (eliminação ou recolhimento)",
-      "c) O tipo de suporte a ser utilizado",
-      "d) A cor das pastas de arquivo",
-      "e) O nome dos funcionários do arquivo"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_arquivo"
-  },
-  {
-    "enunciado": "O princípio que estabelece que os documentos refletem a estrutura e as funções da entidade que os produziu é o da:",
-    "alternativas": [
-      "a) Proveniência",
-      "b) Organicidade",
-      "c) Indivisibilidade",
-      "d) Autenticidade",
-      "e) Cumulatividade"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_arquivo"
-  },
-  {
-    "enunciado": "A ordenação por país, estado, cidade e bairro é característica do método:",
-    "alternativas": [
-      "a) Alfabético",
-      "b) Numérico",
-      "c) Geográfico",
-      "d) Cronológico",
-      "e) Mnemônico"
+      "a) É o mais indicado para arquivos correntes de documentos textuais comuns",
+      "b) Os documentos são colocados uns atrás dos outros, permitindo consulta rápida",
+      "c) É amplamente utilizado para plantas, mapas e desenhos, mas é desaconselhável para arquivos correntes em geral",
+      "d) Exige obrigatoriamente o uso de código numérico prévio para localização"
     ],
     "gabarito": "C",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "A etapa de preparação do documento para guarda (pastas, caixas, encadernação) é a:",
+    "enunciado": "(IBDO / Adaptada) Qual é a finalidade precípua/primária de um arquivo arquivístico no momento de sua criação?",
     "alternativas": [
-      "a) Classificação",
-      "b) Ordenação",
-      "c) Acondicionamento",
-      "d) Arquivamento",
-      "e) Destinação"
+      "a) Servir de fonte para pesquisas históricas e culturais do público em geral",
+      "b) Promover a exposição de documentos para a comunidade local",
+      "c) Servir à administração da instituição criadora, como instrumento de trabalho",
+      "d) Substituir a guarda de processos por arquivos digitais imediatamente"
     ],
     "gabarito": "C",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "Analise as afirmativas sobre princípios e tipos de arquivo e assinale a sequência correta: ( ) O princípio da proveniência determina que cada arquivo deve ser mantido separado. ( ) O arquivo corrente guarda documentos de valor histórico permanente. ( ) O arquivo intermediário recebe documentos com uso menos frequente. ( ) A organicidade refere-se à capacidade de o documento ser autêntico.",
+    "enunciado": "(IBDO / Adaptada) Um arquivo composto exclusivamente por exames de imagem e prontuários da área de cardiologia de um hospital deve ser classificado quanto à natureza dos documentos como:",
     "alternativas": [
-      "a) V – F – V – F",
-      "b) F – V – F – V",
-      "c) V – V – F – F",
-      "d) F – F – V – V",
-      "e) V – F – F – V"
+      "a) Arquivo Especial",
+      "b) Arquivo Especializado",
+      "c) Arquivo Setorial",
+      "d) Arquivo Geral"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) A sucessão de fases por que passam os documentos, desde a sua criação até a sua destinação final, baseando-se na frequência de uso, é conhecida como:",
+    "alternativas": [
+      "a) Teoria das Cadeias de Custódia",
+      "b) Ciclo Vital dos Documentos ou Teoria das Três Idades",
+      "c) Princípio da Proveniência Territorial",
+      "d) Método de Indexação Coordenada"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) Documentos que deixaram de ser consultados frequentemente na rotina administrativa, mas que ainda precisam ser conservados por razões fiscais ou legais aguardando destinação final, devem ser armazenados em qual arquivo?",
+    "alternativas": [
+      "a) Arquivo Corrente",
+      "b) Arquivo Intermediário",
+      "c) Arquivo Permanente",
+      "d) Arquivo Histórico Geral"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) Assinale a alternativa que indica o termo técnico correto para a passagem de documentos do Arquivo Intermediário para o Arquivo Permanente:",
+    "alternativas": [
+      "a) Transferência",
+      "b) Eliminação",
+      "c) Recolhimento",
+      "d) Descarte"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) O instrumento de gestão arquivística aprovado por autoridade competente que determina os prazos em que os documentos devem permanecer no arquivo corrente e intermediário, bem como a sua destinação final, é denominado:",
+    "alternativas": [
+      "a) Tabela de Temporalidade",
+      "b) Quadro de Arranjo de Fundos",
+      "c) Ficha de Protocolo de Expedição",
+      "d) Organograma Institucional"
     ],
     "gabarito": "A",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "O método de arquivamento que utiliza códigos fáceis de lembrar, como siglas, é o:",
+    "enunciado": "(IBDO / Adaptada) A respeito dos documentos recolhidos ao Arquivo Permanente (3ª Idade), é correto afirmar que:",
     "alternativas": [
-      "a) Unitermo",
-      "b) Numérico",
-      "c) Mnemônico",
-      "d) Geográfico",
-      "e) Alfabético"
+      "a) Podem ser eliminados após cumprirem o prazo de 30 anos",
+      "b) Devem ser devolvidos ao setor de origem caso haja solicitação verbal",
+      "c) Têm valor primário e são consultados diariamente para pagamento de contas",
+      "d) Possuem valor probatório e informativo e jamais podem ser eliminados"
+    ],
+    "gabarito": "D",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) As ações estabilizadoras que visam desacelerar o processo de degradação de documentos por meio do controle ambiental, higienização e acondicionamento são classificadas como:",
+    "alternativas": [
+      "a) Restauração",
+      "b) Preservação política",
+      "c) Conservação",
+      "d) Reconstituição de suporte"
     ],
     "gabarito": "C",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "O Arquivo Nacional e os arquivos estaduais são exemplos de arquivos:",
+    "enunciado": "(IBDO / Adaptada) Na gestão de bens de um arquivo, qual dos itens a seguir é classificado como Material Permanente e deve obrigatoriamente constar no inventário do patrimônio?",
     "alternativas": [
-      "a) Privados",
-      "b) Públicos",
+      "a) Caixas de papelão para arquivamento",
+      "b) Arquivo de aço com gavetas",
+      "c) Pastas suspensas com etiquetas",
+      "d) Grampos e clipes plásticos"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) Qual microforma é especialmente recomendada para arquivos sujeitos a crescimento ou substituição frequente de documentos que devam ser mantidos reunidos na forma de dossiês?",
+    "alternativas": [
+      "a) Rolo de filme contínuo",
+      "b) Jaqueta",
+      "c) Disco óptico estático",
+      "d) Fita magnética analógica"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) Segundo a legislação brasileira e a Resolução nº 10 do CONARQ, quais são os símbolos de presença obrigatória em TODOS os rolos de microfilme?",
+    "alternativas": [
+      "a) Original Ilegível e Texto Deteriorado",
+      "b) Início do Rolo (0076) e Fim do Rolo (0075)",
+      "c) Repetição de Imagem e Páginas em Falta",
+      "d) Jaqueta Tabulável e Cartão-Janela"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) A legislação que rege a microfilmagem de documentos públicos e privados no Brasil e estabelece a equiparação dos microfilmes aos originais é formada pela:",
+    "alternativas": [
+      "a) Lei Federal nº 8.159/1991 e Decreto nº 4.073/2002",
+      "b) Lei Federal nº 5.433/1968 e Decreto nº 1.799/1996",
+      "c) Resolução nº 10/1990 e ISO 9001",
+      "d) Lei Federal nº 13.146/2015"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) O método de arquivamento no qual a busca é feita diretamente no local onde os documentos estão guardados, sem necessidade de consultar índices prévios, pertence ao:",
+    "alternativas": [
+      "a) Sistema Indireto",
+      "b) Sistema Direto",
+      "c) Método Unitermo",
+      "d) Método Dígito-Terminal"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) Aplicando-se as regras de alfabetação arquivística ao nome \"Paulo Castelo Branco Filho\", a ordenação correta na pasta será:",
+    "alternativas": [
+      "a) Branco Filho, Paulo Castelo",
+      "b) Castelo Branco Filho, Paulo",
+      "c) Filho, Paulo Castelo Branco",
+      "d) Paulo Castelo Branco Filho"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) No setor de Protocolo de um arquivo corrente, onde deve ser aposto o carimbo numerador/datador ao receber um documento oficial?",
+    "alternativas": [
+      "a) No verso da última folha",
+      "b) No canto superior direito da primeira folha",
+      "c) No rodapé inferior esquerdo",
+      "d) No centro do documento sobre o texto principal"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) O método de arquivamento ideográfico é aquele em que os documentos são organizados por:",
+    "alternativas": [
+      "a) Data de nascimento do autor",
+      "b) Ordem cronológica estrita de entrada",
+      "c) Assunto ou tema principal do documento",
+      "d) Sigla do estado ou país de origem"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) Um cidadão envia uma carta a um órgão público com a inscrição \"Aos cuidados de Maria Silva - PARTICULAR\". Qual deve ser o procedimento do setor de Protocolo?",
+    "alternativas": [
+      "a) Abrir a carta, tirar cópia para o arquivo central e enviar o original para Maria",
+      "b) Apor carimbo de protocolo no envelope aberto e registrar o assunto no sistema",
+      "c) Não abrir a correspondência e encaminhá-la diretamente à destinatária",
+      "d) Devolver a carta imediatamente aos Correios"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) O Conselho Nacional de Arquivos (CONARQ) é um órgão colegiado vinculado a qual instituição da administração pública federal?",
+    "alternativas": [
+      "a) Ministério da Educação",
+      "b) Arquivo Nacional",
+      "c) Biblioteca Nacional",
+      "d) Casa Civil da Presidência da República"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) Qual é a frequência mínima estabelecida pelo Decreto nº 4.073/2002 para as reuniões ordinárias do Plenário do CONARQ?",
+    "alternativas": [
+      "a) Semanalmente",
+      "b) Mensalmente",
+      "c) Uma vez a cada quatro meses",
+      "d) Uma vez a cada dois anos"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) O órgão central do Sistema Nacional de Arquivos (SINAR) no Brasil é:",
+    "alternativas": [
+      "a) O Arquivo Nacional",
+      "b) O Conselho Nacional de Arquivos (CONARQ)",
+      "c) O Ministério da Justiça e Segurança Pública",
+      "d) O Supremo Tribunal Federal"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) A respeito dos arquivos privados declarados por decreto como de interesse público e social, assinale a afirmativa correta:",
+    "alternativas": [
+      "a) A declaração transfere automaticamente a propriedade do acervo para o Governo Federal",
+      "b) O proprietário fica proibido de vender os documentos sob qualquer hipótese",
+      "c) A alienação do acervo deve ser precedida de notificação à União, que tem direito de preferência no prazo máximo de 60 dias",
+      "d) O exercício da guarda dos documentos passa a ser remunerado pelo CONARQ"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "(IBDO / Adaptada) Quanto à duração do mandato dos conselheiros do CONARQ, o Decreto nº 4.073/2002 estabelece o período de:",
+    "alternativas": [
+      "a) 1 ano, vedada qualquer recondução",
+      "b) 2 anos, permitida uma recondução",
+      "c) 4 anos, sem direito a recondução",
+      "d) Mandato vitalício"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "Toda informação registrada em um suporte material, susceptível de ser utilizada para consulta, estudo, prova e pesquisa, pois comprova fatos e fenômenos, conceitua arquivisticamente o:",
+    "alternativas": [
+      "a) Arquivo",
+      "b) Documento",
+      "c) Dossiê",
+      "d) Protocolo"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O princípio arquivístico que estabelece a relação de dependência mútua entre os documentos e a entidade que os produziu no exercício de suas funções é denominado:",
+    "alternativas": [
+      "a) Princípio da Inalienabilidade",
+      "b) Princípio da Organicidade",
+      "c) Princípio da Territorialidade",
+      "d) Princípio da Reversibilidade"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "Fotos e gravuras armazenadas em um arquivo municipal pertencem a qual gênero arquivístico?",
+    "alternativas": [
+      "a) Cartográfico",
+      "b) Iconográfico",
+      "c) Micrográfico",
+      "d) Filmográfico"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "Os documentos que contêm restrição de acesso por poderem colocar em risco a segurança do Estado ou da sociedade são classificados quanto à natureza do assunto como:",
+    "alternativas": [
+      "a) Ostensivos",
+      "b) Sigilosos",
       "c) Especiais",
-      "d) Intermediários",
-      "e) Correntes"
+      "d) Intermediários"
     ],
     "gabarito": "B",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "Na ordenação alfabética de nomes compostos, a preposição 'da' ou 'de':",
+    "enunciado": "A guarda e a conservação dos documentos, visando à sua utilização prática ou histórica, é a principal:",
     "alternativas": [
-      "a) Deve ser considerada como primeiro elemento",
-      "b) Não é considerada para fins de ordenação",
-      "c) É sempre colocada no final",
-      "d) É substituída por um número",
-      "e) Deve ser mantida inalterada"
+      "a) Função do arquivo",
+      "b) Finalidade do arquivo",
+      "c) Fase do arquivo",
+      "d) Espécie do arquivo"
+    ],
+    "gabarito": "A",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O método de disposição física em que os documentos são colocados uns sobre os outros em caixas ou estantes, amplamente usado para plantas e mapas, mas desaconselhável para arquivos correntes, é o:",
+    "alternativas": [
+      "a) Arquivamento Vertical",
+      "b) Arquivamento Horizontal",
+      "c) Arquivamento Indireto",
+      "d) Arquivamento Automatizado"
     ],
     "gabarito": "B",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "O instrumento que define os prazos de guarda e a destinação final dos documentos é a:",
+    "enunciado": "O arquivo de um escritório de advocacia especializado em causas trabalhistas é classificado quanto à natureza dos documentos como:",
     "alternativas": [
-      "a) Tabela de Temporalidade e Destinação (TTDD)",
+      "a) Arquivo Especial",
+      "b) Arquivo Especializado",
+      "c) Arquivo Setorial",
+      "d) Arquivo Geral"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "Na Teoria das Três Idades, a fase em que os documentos possuem uso frequente e valor primário administrativo denomina-se:",
+    "alternativas": [
+      "a) Arquivo Intermediário",
+      "b) Arquivo Permanente",
+      "c) Arquivo Corrente",
+      "d) Arquivo Histórico"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "A passagem de documentos do Arquivo Corrente para o Arquivo Intermediário recebe o nome de:",
+    "alternativas": [
+      "a) Recolhimento",
+      "b) Transferência",
+      "c) Eliminação",
+      "d) Permuta"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "Os documentos preservados no Arquivo Permanente caracterizam-se por possuírem:",
+    "alternativas": [
+      "a) Apenas valor fiscal de curto prazo",
+      "b) Possibilidade de eliminação após 10 anos",
+      "c) Valor probatório e informativo (secundário) e caráter ineliminável",
+      "d) Necessidade de consulta diária pelo setor de RH"
+    ],
+    "gabarito": "C",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O instrumento que fixa os prazos de permanência dos documentos nas fases corrente e intermediária e determina sua destinação final é o(a):",
+    "alternativas": [
+      "a) Tabela de Temporalidade",
       "b) Plano de Classificação",
-      "c) Código de Ética",
-      "d) Lei de Acesso à Informação",
-      "e) Portaria Ministerial"
+      "c) Ficha de Registro de Protocolo",
+      "d) Organograma Institucional"
     ],
     "gabarito": "A",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "Analise as afirmativas sobre arquivo e assinale a sequência correta: ( ) O princípio da indivisibilidade determina que os documentos de um fundo devem ser mantidos juntos. ( ) O arquivo intermediário é também chamado de arquivo histórico. ( ) A classificação é a fase em que se atribui um código ao documento. ( ) O método alfabético é um sistema indireto.",
+    "enunciado": "As medidas operacionais de higienização, reparos superficiais e acondicionamento que visam desacelerar o processo de degradação do documento são conhecidas como:",
     "alternativas": [
-      "a) V – F – V – F",
-      "b) F – V – F – V",
-      "c) V – V – F – F",
-      "d) F – F – V – V",
-      "e) V – F – F – V"
+      "a) Restauração",
+      "b) Conservação",
+      "c) Microfilmagem",
+      "d) Indexação"
     ],
-    "gabarito": "A",
+    "gabarito": "B",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "Os arquivos que guardam documentos em suportes como filmes, fitas e fotografias são chamados de:",
+    "enunciado": "Dentre os materiais de um setor de arquivo, assinale a opção que apresenta um exemplo de Material Permanente:",
     "alternativas": [
-      "a) Arquivos correntes",
-      "b) Arquivos intermediários",
-      "c) Arquivos especiais",
-      "d) Arquivos permanentes",
-      "e) Arquivos privados"
+      "a) Caixa de papelão para arquivo",
+      "b) Pasta suspensa",
+      "c) Fichário de aço com gavetas",
+      "d) Etiquetas adesivas"
     ],
     "gabarito": "C",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "O método que agrupa documentos por temas ou assuntos, exigindo um dicionário de indexação, é o:",
+    "enunciado": "A microforma em formato de cartão transparente com canais para inserção de tiras de microfilme, ideal para atualizar dossiês, é a:",
     "alternativas": [
-      "a) Alfabético",
-      "b) Numérico",
-      "c) Geográfico",
-      "d) Ideográfico",
-      "e) Mnemônico"
+      "a) Microficha",
+      "b) Jaqueta",
+      "c) Cartão-Janela",
+      "d) Bobina de 35mm"
     ],
-    "gabarito": "D",
+    "gabarito": "B",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "A saída temporária de um documento para consulta, com controle de devolução, ocorre na fase de:",
+    "enunciado": "Segundo a Resolução nº 10 do CONARQ, quais são os códigos numéricos dos símbolos obrigatoriamente microfilmados no Início e no Fim de cada rolo de microfilme?",
     "alternativas": [
-      "a) Classificação",
-      "b) Ordenação",
-      "c) Guarda",
-      "d) Consulta/Empréstimo",
-      "e) Destinação"
+      "a) 0077 e 0079",
+      "b) 0076 e 0075",
+      "c) 0488 e 0076",
+      "d) 0100 e 0200"
     ],
-    "gabarito": "D",
+    "gabarito": "B",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "Analise as afirmativas sobre arquivo e assinale a sequência correta: ( ) O princípio da proveniência é também conhecido como 'respeito aos fundos'. ( ) O arquivo corrente é utilizado para documentos de consulta diária. ( ) O método numérico é um sistema direto de arquivamento. ( ) A Tabela de Temporalidade determina o prazo de guarda e a destinação final.",
+    "enunciado": "Um método de arquivamento em que a busca exige obrigatoriamente a consulta prévia a um índice ou código é classificado como pertencente ao:",
     "alternativas": [
-      "a) V – V – F – V",
-      "b) F – V – V – F",
-      "c) V – F – V – F",
-      "d) F – F – V – V",
-      "e) V – V – V – F"
+      "a) Sistema Direto",
+      "b) Sistema Indireto",
+      "c) Método Geográfico Puro",
+      "d) Método Alfabético Nominal"
     ],
-    "gabarito": "A",
+    "gabarito": "B",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "O método de arquivamento que utiliza palavras-chave para indexar documentos, permitindo múltiplas entradas, é o:",
+    "enunciado": "Aplicando as regras de alfabetação ao nome \"Heitor Villa-Lobos\", a forma correta de entrada para arquivamento será:",
     "alternativas": [
-      "a) Unitermo",
-      "b) Numérico",
-      "c) Geográfico",
-      "d) Ideográfico",
-      "e) Alfabético"
+      "a) Lobos, Heitor Villa",
+      "b) Villa-Lobos, Heitor",
+      "c) Heitor Villa-Lobos",
+      "d) Villa, Heitor Lobos"
     ],
-    "gabarito": "A",
+    "gabarito": "B",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "A fase do arquivamento em que o documento é colocado fisicamente no local adequado é a:",
+    "enunciado": "O carimbo de protocolo contendo número de registro e data de entrada deve ser aposto no documento em qual posição?",
     "alternativas": [
-      "a) Classificação",
-      "b) Ordenação",
-      "c) Acondicionamento",
-      "d) Arquivamento / Guarda",
-      "e) Destinação"
-    ],
-    "gabarito": "D",
-    "slug_materia": "apostila_arquivo"
-  },
-  {
-    "enunciado": "O sistema de arquivamento que permite a consulta direta, sem necessidade de índice, é chamado de:",
-    "alternativas": [
-      "a) Direto",
-      "b) Indireto",
-      "c) Aberto",
-      "d) Fechado",
-      "e) Variável"
+      "a) Canto superior direito da primeira folha",
+      "b) Centro da última página",
+      "c) Rodapé esquerdo de todas as folhas",
+      "d) Verso do documento"
     ],
     "gabarito": "A",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "A ordenação por data (do mais antigo para o mais recente) é característica do método:",
+    "enunciado": "A legislação que instituiu a Política Nacional de Arquivos Públicos e Privados no Brasil e conceituou os documentos públicos é a:",
     "alternativas": [
-      "a) Alfabético",
-      "b) Numérico",
-      "c) Geográfico",
-      "d) Cronológico",
-      "e) Mnemônico"
+      "a) Lei nº 5.433/1968",
+      "b) Lei nº 8.159/1991",
+      "c) Decreto nº 1.799/1996",
+      "d) Lei nº 13.146/2015"
     ],
-    "gabarito": "D",
+    "gabarito": "B",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "O arquivo que guarda documentos de valor histórico, probatório ou informativo, com preservação indefinida, é o:",
+    "enunciado": "O Conselho Nacional de Arquivos (CONARQ) é um órgão colegiado vinculado ao(à):",
     "alternativas": [
-      "a) Arquivo corrente",
-      "b) Arquivo intermediário",
-      "c) Arquivo permanente",
-      "d) Arquivo especial",
-      "e) Arquivo privado"
+      "a) Ministério do Planejamento",
+      "b) Arquivo Nacional",
+      "c) Presidência da Câmara dos Deputados",
+      "d) Biblioteca do Congresso"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O mandato dos conselheiros do CONARQ tem a duração de:",
+    "alternativas": [
+      "a) 1 ano, sem recondução",
+      "b) 2 anos, permitida uma recondução",
+      "c) 4 anos, permitidas ilimitadas reconduções",
+      "d) 5 anos improrrogáveis"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "O órgão central do Sistema Nacional de Arquivos (SINAR) é o(a):",
+    "alternativas": [
+      "a) Arquivo Nacional",
+      "b) CONARQ",
+      "c) Casa Civil",
+      "d) Arquivo Público Estadual do Rio de Janeiro"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "A declaração de interesse público e social de arquivos privados é efetuada por ato do:",
+    "alternativas": [
+      "a) Diretor do Arquivo Nacional",
+      "b) Presidente da República, por decreto",
+      "c) Governador do Estado",
+      "d) Juiz de Direito da comarca"
+    ],
+    "gabarito": "B",
+    "slug_materia": "apostila_arquivo"
+  },
+  {
+    "enunciado": "Caso o proprietário de um arquivo privado declarado de interesse público e social decida vendê-lo, a União terá direito de preferência para compra no prazo de até:",
+    "alternativas": [
+      "a) 15 dias",
+      "b) 30 dias",
+      "c) 60 dias",
+      "d) 120 dias"
     ],
     "gabarito": "C",
     "slug_materia": "apostila_arquivo"
   },
   {
-    "enunciado": "A etapa de decisão final sobre o documento (eliminação ou recolhimento) é a:",
+    "enunciado": "A devolução de um documento arquivado no arquivo corrente ao seu setor de origem, com preenchimento de ficha de acompanhamento no lugar da pasta, utiliza o instrumento denominado:",
     "alternativas": [
-      "a) Classificação",
-      "b) Ordenação",
-      "c) Acondicionamento",
-      "d) Arquivamento",
-      "e) Destinação"
+      "a) Guia de Empréstimo / Guia Fora",
+      "b) Tabela de Temporalidade",
+      "c) Ficha de Registro de Descarte",
+      "d) Protocolo de Eliminação"
     ],
-    "gabarito": "E",
-    "slug_materia": "apostila_arquivo"
-  },
-  {
-    "enunciado": "O método que combina letras e números (ex.: A1, A2, B1, B2) é o:",
-    "alternativas": [
-      "a) Alfabético",
-      "b) Numérico",
-      "c) Geográfico",
-      "d) Alfanumérico",
-      "e) Mnemônico"
-    ],
-    "gabarito": "D",
+    "gabarito": "A",
     "slug_materia": "apostila_arquivo"
   }
 ]

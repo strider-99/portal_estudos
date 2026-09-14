@@ -394,3 +394,84 @@ footer {
     padding-top: 15px;
     border-top: 1px solid #dee2e6;
 }
+
+/* ============================================
+   BOTÃO RESET PROGRESSO
+   ============================================ */
+.btn-reset {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-reset:hover { background: #c82333; }
+.btn-reset:disabled { background: #6c757d; cursor: not-allowed; }
+
+/* ============================================
+   QUESTÕES PARA REVISAR
+   ============================================ */
+.revisao-list { display: flex; flex-direction: column; gap: 15px; margin: 15px 0; }
+.revisao-card {
+    background: #fff8f0;
+    border: 1px solid #ffe0b2;
+    border-left: 4px solid #e67e22;
+    border-radius: 8px;
+    padding: 15px 18px;
+}
+.revisao-card h4 { margin-bottom: 8px; }
+.revisao-card h4 a { color: #1a3c6e; text-decoration: none; }
+.revisao-card h4 a:hover { text-decoration: underline; }
+.revisao-enunciado { font-size: 14px; color: #495057; margin-bottom: 10px; }
+.revisao-alternativas { margin: 8px 0 8px 20px; font-size: 14px; }
+.revisao-alternativas li { margin-bottom: 3px; }
+.revisao-alternativas li.correto { color: #28a745; font-weight: bold; }
+.revisao-meta { font-size: 12px; color: #868e96; margin-top: 8px; }
+
+/* ============================================
+   REVISÃO - LINKS POR MATÉRIA (DASHBOARD)
+   ============================================ */
+.revisao-links { display: flex; flex-direction: column; gap: 10px; margin: 15px 0; }
+.revisao-link-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff8f0;
+    border: 1px solid #ffe0b2;
+    border-left: 4px solid #e67e22;
+    border-radius: 8px;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s, transform 0.2s;
+}
+.revisao-link-card:hover { background: #fff0d6; transform: translateX(4px); }
+.revisao-link-titulo { font-weight: 600; color: #1a3c6e; }
+.revisao-link-badge {
+    background: #e67e22;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* ============================================
+   BOTÃO VOLTAR (REVISÃO)
+   ============================================ */
+.btn-voltar {
+    display: inline-block;
+    background: #1a3c6e;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.btn-voltar:hover { background: #2a5a9e; }

@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apostila - Português Módulo 2: Ortografia, Acentuação e Semântica</title>
+    <title>Apostila - Português: Ortografia, Acentuação, Homônimos, Parônimos e Polissemia</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             background: #f5f2eb;
@@ -29,16 +25,16 @@
         h1 {
             color: #2c3e50;
             text-align: center;
-            border-bottom: 3px solid #2ecc71;
+            border-bottom: 3px solid #3498db;
             padding-bottom: 15px;
             margin-bottom: 20px;
             font-size: 28px;
         }
         h2 {
             color: #2c3e50;
-            background-color: #eafaf1;
+            background-color: #eaf2f8;
             padding: 10px 15px;
-            border-left: 6px solid #2ecc71;
+            border-left: 6px solid #3498db;
             margin: 25px 0 15px 0;
             font-size: 22px;
         }
@@ -47,50 +43,68 @@
             margin: 18px 0 10px 0;
             font-size: 19px;
         }
-        p {
-            line-height: 1.7;
-            margin-bottom: 12px;
-            text-align: justify;
+        h4 {
+            color: #2c3e50;
+            margin: 15px 0 8px 0;
+            font-size: 17px;
         }
-        ul, ol {
-            margin: 10px 0 15px 30px;
-        }
-        li {
-            margin-bottom: 6px;
-            line-height: 1.6;
-        }
+        p { line-height: 1.7; margin-bottom: 12px; text-align: justify; }
+        ul, ol { margin: 10px 0 15px 30px; }
+        li { margin-bottom: 6px; line-height: 1.6; }
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 15px 0;
-            font-size: 15px;
+            font-size: 14px;
         }
         th, td {
             border: 1px solid #333;
-            padding: 10px 12px;
+            padding: 8px 10px;
             text-align: left;
             vertical-align: top;
         }
-        th {
-            background-color: #d5f5e3;
-            font-weight: bold;
+        th { background-color: #d6eaf8; font-weight: bold; }
+        pre {
+            background: #f4f6f9;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 12px;
+            line-height: 1.4;
+            margin: 15px 0;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+        code {
+            background: #eef2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            font-size: 13px;
+            color: #c0392b;
         }
         .dica {
-            background-color: #fef3e2;
-            border-left: 6px solid #e67e22;
+            background-color: #e8f5e9;
+            border-left: 6px solid #2e7d32;
             padding: 14px 18px;
             margin: 15px 0;
             border-radius: 4px;
         }
-        .dica b {
-            color: #a04000;
+        .dica b { color: #1b5e20; }
+        .pegadinha {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
         }
+        .pegadinha b { color: #922b21; }
         .exemplo {
             background-color: #f0f8ff;
             padding: 12px 18px;
             border-radius: 6px;
             margin: 10px 0;
-            border: 1px dashed #2ecc71;
+            border: 1px dashed #3498db;
         }
         .gabarito-box {
             background-color: #e8f5e9;
@@ -104,28 +118,23 @@
             padding: 15px 18px;
             margin: 12px 0;
             border-radius: 6px;
-            border-left: 4px solid #2ecc71;
+            border-left: 4px solid #3498db;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
-        .questao-item p {
-            margin-bottom: 6px;
-        }
-        .alternativas {
-            margin-left: 20px;
-            font-size: 15px;
+        .questao-item p { margin-bottom: 6px; }
+        .alternativas { margin-left: 20px; font-size: 14px; }
+        .comentario {
+            background: #fef9e7;
+            border-left: 3px solid #f39c12;
+            padding: 8px 14px;
+            margin-top: 8px;
+            font-size: 14px;
+            border-radius: 4px;
         }
 
-        .page {
-            display: none;
-            animation: fadeIn 0.3s ease;
-        }
-        .page.active {
-            display: block;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0.5; }
-            to { opacity: 1; }
-        }
+        .page { display: none; animation: fadeIn 0.3s ease; }
+        .page.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0.5; } to { opacity: 1; } }
 
         .nav-area {
             display: flex;
@@ -158,536 +167,718 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.15);
             min-width: 120px;
         }
-        .nav-btn:hover {
-            background-color: #2ecc71;
-            color: #1a252f;
-        }
-        .nav-btn:active {
-            transform: scale(0.97);
-        }
-        .nav-btn:disabled {
-            background-color: #adb5bd;
-            cursor: not-allowed;
-            box-shadow: none;
-        }
-        .nav-btn.secondary {
-            background-color: #6c757d;
-        }
-        .nav-btn.secondary:hover {
-            background-color: #5a6268;
-            color: white;
-        }
-        .nav-btn.menu-btn {
-            background-color: #28a745;
-            min-width: 100px;
-        }
-        .nav-btn.menu-btn:hover {
-            background-color: #218838;
-            color: white;
-        }
+        .nav-btn:hover { background-color: #3498db; }
+        .nav-btn:active { transform: scale(0.97); }
+        .nav-btn:disabled { background-color: #adb5bd; cursor: not-allowed; box-shadow: none; }
+        .nav-btn.secondary { background-color: #6c757d; }
+        .nav-btn.secondary:hover { background-color: #5a6268; }
+        .nav-btn.menu-btn { background-color: #28a745; min-width: 100px; }
+        .nav-btn.menu-btn:hover { background-color: #218838; }
 
-        .footer-note {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 13px;
-            color: #868e96;
-        }
-        hr {
-            margin: 30px 0 15px 0;
-            border: 1px solid #dee2e6;
-        }
+        .footer-note { text-align: center; margin-top: 15px; font-size: 13px; color: #868e96; }
+        hr { margin: 30px 0 15px 0; border: 1px solid #dee2e6; }
 
         @media (max-width: 600px) {
             .book-container { padding: 15px; }
             .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
             h1 { font-size: 22px; }
+            pre { font-size: 10px; padding: 10px; }
         }
     </style>
 </head>
 <body>
 <div class="book-container" id="book">
 
-    <h1>📝 LÍNGUA PORTUGUESA – MÓDULO 2</h1>
-    <p style="text-align:center; font-size:18px; color:#2c3e50;"><b>Ortografia, Acentuação, Homônimos, Parônimos e Polissemia</b></p>
+    <h1>✍️ ORTOGRAFIA, ACENTUAÇÃO, HOMÔNIMOS, PARÔNIMOS E POLISSEMIA</h1>
+    <p style="text-align:center; font-size:18px; color:#2c3e50;"><b>Apostila completa para concursos públicos</b></p>
     <hr>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- PÁGINA 1: Capa / Sumário                                     -->
     <!-- ============================================================ -->
     <div class="page active" data-page="1">
-        <h2>1. INTRODUÇÃO</h2>
-        <p>Este módulo aprofunda o conhecimento da <b>norma culta</b> da Língua Portuguesa, abordando as regras que regem a escrita correta (ortografia), a indicação da tonicidade (acentuação gráfica) e as relações semânticas entre as palavras (homônimos, parônimos e polissemia).</p>
-        <p>Dominar esses tópicos é essencial para evitar erros comuns em provas e garantir uma comunicação escrita precisa e clara – qualidade indispensável para qualquer concurso público.</p>
+        <h2>📚 APRESENTAÇÃO</h2>
+        <p>Esta apostila reúne os conteúdos mais cobrados em provas de concurso sobre <b>Ortografia, Acentuação Gráfica, Homônimos, Parônimos e Polissemia</b>. O material foi estruturado com teoria essencial, pontos de memorização, pegadinhas clássicas de banca, exemplos práticos e questões comentadas.</p>
 
         <div class="dica">
-            <b>🎯 Objetivo do Módulo:</b> Aplicar corretamente as regras ortográficas (Novo Acordo), acentuar palavras de acordo com as normas vigentes, distinguir homônimos e parônimos e compreender o fenômeno da polissemia, com 25 questões ao final.
+            <b>🎯 Como usar este material:</b> Estude cada capítulo, memorize os pontos destacados, analise as pegadinhas e resolva o simulado final. A ortografia e a acentuação se aprendem com <b>repetição e leitura atenta</b>.
         </div>
 
-        <h2>2. SUMÁRIO</h2>
+        <h2>📋 SUMÁRIO</h2>
         <ul>
-            <li><b>Módulo I:</b> Ortografia – Regras Gerais e Novo Acordo – pág. 2</li>
-            <li><b>Módulo II:</b> Acentuação Gráfica – pág. 3</li>
-            <li><b>Módulo III:</b> Homônimos e Parônimos – pág. 4</li>
-            <li><b>Módulo IV:</b> Polissemia – pág. 5</li>
-            <li><b>Módulo V:</b> Consolidação e Dicas Finais – pág. 6</li>
-            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+            <li><b>Capítulo 1:</b> Ortografia Oficial e Emprego do Hífen – pág. 2</li>
+            <li><b>Capítulo 2:</b> Usos Ortográficos Especiais (*Porquês*, *Onde/Aonde*, *Mau/Mal*) – pág. 3</li>
+            <li><b>Capítulo 3:</b> Regras do Hífen e Questões Comentadas – pág. 4</li>
+            <li><b>Capítulo 4:</b> Acentuação Gráfica – Regras Fundamentais – pág. 5</li>
+            <li><b>Capítulo 5:</b> Acentuação – Regras Especiais e CREDELEVÊ – pág. 6</li>
+            <li><b>Capítulo 6:</b> Homônimos e Parônimos – pág. 7</li>
+            <li><b>Capítulo 7:</b> Polissemia e Relações Semânticas – pág. 8</li>
+            <li><b>Capítulo 8:</b> Revisão Geral – Quadros Síntese – pág. 9</li>
+            <li><b>Simulado:</b> 25 questões comentadas (págs. 10 a 12)</li>
         </ul>
     </div>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 2: Ortografia                                         -->
+    <!-- PÁGINA 2: Cap 1 - Ortografia: Fonemas Concorrentes           -->
     <!-- ============================================================ -->
     <div class="page" data-page="2">
-        <h2>MÓDULO I – ORTOGRAFIA E NOVO ACORDO ORTOGRÁFICO</h2>
-        <h3>2.1. Alfabeto e Trema</h3>
+        <h2>CAPÍTULO 1: ORTOGRAFIA – GRAFIA DE FONEMAS CONCORRENTES</h2>
+
+        <h3>1.1. Emprego do S, SS e C/Ç</h3>
+        <h4>Escreve-se com S (e não C/Ç):</h4>
+        <p>Substantivos derivados de verbos com radicais terminados em <b>-nd</b>, <b>-rg</b>, <b>-rt</b>, <b>-pel</b>, <b>-corr</b> e <b>-sent</b>.</p>
+        <div class="exemplo">
+            <p><i>pretender → pretensão; expandir → expansão; ascender → ascensão; inverter → inversão; aspergir → aspersão; submergir → submersão; divertir → diversão; impelir → impulsivo; compelir → compulsório; repelir → repulsa; recorrer → recurso; discorrer → discurso; sentir → sensível; consentir → consensual.</i></p>
+        </div>
+
+        <h4>Escreve-se com SS (e não C/Ç):</h4>
+        <p>Nomes derivados de verbos com radicais em <b>-gred</b>, <b>-ced</b>, <b>-prim</b>, ou verbos terminados em <b>-tir</b> ou <b>-meter</b>.</p>
+        <div class="exemplo">
+            <p><i>agredir → agressivo; imprimir → impressão; admitir → admissão; ceder → cessão; exceder → excesso; percutir → percussão; regredir → regressão; oprimir → opressão; comprometer → compromisso; submeter → submissão. Também se usa SS quando o prefixo terminado em vogal se junta a palavra iniciada por "s" (a + simétrico = assimétrico; re + surgir = ressurgir) e no pretérito imperfeito do subjuntivo (ficasse, falasse).</i></p>
+        </div>
+
+        <h4>Escreve-se com C ou Ç (e não S/SS):</h4>
         <ul>
-            <li><b>Alfabeto:</b> com o Novo Acordo Ortográfico (1990, em vigor no Brasil desde 2009), o alfabeto passou a ter 26 letras, com a incorporação do <b>K, W e Y</b> (usados em nomes próprios, siglas e palavras estrangeiras).</li>
-            <li><b>Trema (¨):</b> foi <b>abolido</b> em palavras da língua portuguesa. Usa-se apenas em nomes próprios e seus derivados (ex.: Müller, mülleriano) e em palavras estrangeiras.</li>
+            <li>Vocábulos de origem árabe (<i>cetim</i>, <i>açucena</i>, <i>açúcar</i>), tupi, africana ou exótica (<i>cipó</i>, <i>Juçara</i>, <i>caçula</i>, <i>cachaça</i>).</li>
+            <li>Sufixos <b>-aça</b>, <b>-aço</b>, <b>-ação</b>, <b>-çar</b>, <b>-ecer</b>, <b>-iça</b>, <b>-nça</b>, <b>-uça</b>, <b>-uçu</b>, <b>-uço</b> (<i>barcaça</i>, <i>ricaço</i>, <i>aguçar</i>, <i>empalidecer</i>, <i>carniça</i>, <i>esperança</i>, <i>carapuça</i>, <i>dentuço</i>).</li>
+            <li>Nomes derivados do verbo <i>ter</i> (<i>abster → abstenção; deter → detenção; ater → atenção; reter → retenção</i>).</li>
+            <li>Após ditongos (<i>foice</i>, <i>coice</i>, <i>traição</i>).</li>
+            <li>Derivadas de palavras terminadas em <b>-te</b> ou <b>-to(r)</b> (<i>marte → marciano; infrator → infração; absorto → absorção</i>).</li>
         </ul>
 
-        <h3>2.2. Uso de S, SS, C, Ç, X, CH, G, J</h3>
+        <h3>1.2. Emprego do S e Z</h3>
+        <h4>Escreve-se com S (som de Z):</h4>
         <ul>
-            <li><b>S / SS:</b>
-                <ul>
-                    <li>Usa-se <b>S</b> após ditongo (ex.: coisa, pausa).</li>
-                    <li>Usa-se <b>SS</b> entre vogais em palavras derivadas de verbos terminados em -der, -dir, -ter, -ver (ex.: ceder → cessão, imprimir → impressão).</li>
-                </ul>
-            </li>
-            <li><b>C / Ç:</b>
-                <ul>
-                    <li>Usa-se <b>Ç</b> antes de <b>A, O, U</b> para manter o som de /s/ (ex.: maçã, braço, açúcar).</li>
-                    <li>Usa-se <b>C</b> antes de <b>E, I</b> com som de /s/ (ex.: cedo, cigarro).</li>
-                </ul>
-            </li>
-            <li><b>X / CH:</b>
-                <ul>
-                    <li>Usa-se <b>X</b> após ditongo (ex.: caixa, peixe).</li>
-                    <li>Usa-se <b>CH</b> em palavras de origem estrangeira ou em alguns vocábulos (ex.: chave, chuveiro, chimarrão).</li>
-                </ul>
-            </li>
-            <li><b>G / J:</b>
-                <ul>
-                    <li>Usa-se <b>G</b> antes de <b>E, I</b> em muitos casos (ex.: gente, ginásio).</li>
-                    <li>Usa-se <b>J</b> em palavras de origem indígena, africana ou em verbos terminados em -jar (ex.: jiboia, canjica, viajar).</li>
-                </ul>
-            </li>
+            <li>Sufixos <b>-ês</b>, <b>-esa</b>, <b>-esia</b>, <b>-isa</b> quando o radical é substantivo, gentílico ou título nobiliárquico (<i>freguês</i>, <i>freguesa</i>, <i>freguesia</i>, <i>poetisa</i>, <i>baronesa</i>, <i>princesa</i>).</li>
+            <li>Sufixos gregos <b>-ase</b>, <b>-ese</b>, <b>-ise</b>, <b>-ose</b> (<i>catequese</i>, <i>metamorfose</i>).</li>
+            <li>Formas verbais dos verbos <i>pôr</i> e <i>querer</i> (<i>pôs</i>, <i>pus</i>, <i>quisera</i>, <i>quis</i>, <i>quiseste</i>).</li>
+            <li>Nomes derivados de verbos com radical em "d" (<i>aludir → alusão; decidir → decisão; empreender → empresa; difundir → difusão</i>).</li>
+            <li>Diminutivos cujo radical já contém "s" (<i>Luís → Luisinho; Rosa → Rosinha; lápis → lapisinho</i>).</li>
+            <li>Após ditongos (<i>coisa</i>, <i>pausa</i>, <i>pouso</i>, <i>causa</i>).</li>
+            <li>Verbos derivados de nomes cujo radical termina com "s" (<i>análise → analisar; pesquisa → pesquisar</i>).</li>
         </ul>
 
-        <h3>2.3. Parônimos Ortográficos</h3>
+        <h4>Escreve-se com Z:</h4>
         <ul>
-            <li><b>Comprimento</b> (medida) x <b>Cumprimento</b> (saudação).</li>
-            <li><b>Descrição</b> (ato de descrever) x <b>Discrição</b> (ato de separar, distinguir).</li>
-            <li><b>Eminência</b> (superioridade, excelência) x <b>Iminência</b> (qualidade do que está prestes a acontecer).</li>
+            <li>Sufixos <b>-ez</b> e <b>-eza</b> de palavras derivadas de adjetivos (<i>macio → maciez; rico → riqueza; belo → beleza</i>).</li>
+            <li>Sufixo <b>-izar</b> quando o radical da palavra de origem <b>não</b> termina com "s" (<i>final → finalizar; concreto → concretizar</i>).</li>
+            <li>Consoante de ligação se o radical não termina com "s" (<i>pé + inho = pezinho; café + al = cafezal</i>). <b>Exceção:</b> <i>lápis + inho = lapisinho</i>.</li>
         </ul>
+
+        <div class="dica">
+            <b>✅ Mnemônico:</b> Verbos em <b>-isar</b> derivam de palavras com "S" no radical (<i>pesquisa → pesquisar</i>). Verbos em <b>-izar</b> derivam de palavras sem "S" no radical (<i>útil → utilizar</i>).
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> A banca coloca <i>"disponibilisar"</i> e <i>"analizar"</i> na mesma questão para induzir por simetria. O correto é <b>disponibilizar</b> e <b>analisar</b>.
+        </div>
     </div>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 3: Acentuação Gráfica                                 -->
+    <!-- PÁGINA 3: Cap 1 - G/J, X/CH, E/I + Usos Especiais           -->
     <!-- ============================================================ -->
     <div class="page" data-page="3">
-        <h2>MÓDULO II – ACENTUAÇÃO GRÁFICA</h2>
-        <h3>3.1. Regras Básicas (Oxítonas, Paroxítonas, Proparoxítonas)</h3>
+        <h2>ORTOGRAFIA – G/J, X/CH, E/I + USOS ESPECIAIS</h2>
+
+        <h3>1.3. Emprego do G e J</h3>
         <ul>
-            <li><b>Oxítonas:</b> acento tônico na última sílaba. São acentuadas quando terminadas em <b>A(s), E(s), O(s), EM, ENS</b>. Ex.: café, você, avó, também, ninguém.</li>
-            <li><b>Paroxítonas:</b> acento tônico na penúltima sílaba. São acentuadas quando terminadas em <b>L, N, R, X, PS, Ã(S), Õ(S), UM, UNS, I(S), US, D, IUM</b>. Ex.: útil, hífen, tórax, fórum, lápis, ímã.</li>
-            <li><b>Proparoxítonas:</b> acento tônico na antepenúltima sílaba. <b>Todas</b> são acentuadas. Ex.: árvore, médico, lâmpada, êxodo.</li>
+            <li><b>Com G:</b> substantivos terminados em <b>-ágio</b>, <b>-égio</b>, <b>-ígio</b>, <b>-ógio</b>, <b>-úgio</b> e <b>-gem</b> (<i>pedágio</i>, <i>colégio</i>, <i>prestígio</i>, <i>relógio</i>, <i>refúgio</i>, <i>garagem</i>, <i>vertigem</i>).</li>
+            <li><b>Com J:</b> palavras de origem latina (<i>jeito</i>, <i>majestade</i>, <i>hoje</i>), africana, árabe ou exótica (<i>jiboia</i>, <i>manjerona</i>) e palavras terminadas em <b>-aje</b> (<i>ultraje</i>).</li>
         </ul>
 
-        <h3>3.2. Hiatos e Ditongos</h3>
+        <h3>1.4. Emprego do X e CH</h3>
         <ul>
-            <li><b>Hiatos:</b> encontro de duas vogais em sílabas diferentes (ex.: sa-ú-de). Acentuam-se o <b>I</b> e o <b>U</b> tônicos, quando formam hiato com a vogal anterior, sozinhos ou seguidos de S (ex.: saída, faísca, Luís).</li>
-            <li><b>Ditongos abertos (ÉI, ÉU, ÓI):</b> nas paroxítonas, o acento foi <b>abolido</b> (ex.: ideia, assembleia, herói → antes herói era acentuado, mas com o Novo Acordo perdeu o acento em algumas formas). Atenção: nas oxítonas, continuam acentuados (ex.: anéis, papéis).</li>
+            <li><b>Com X:</b> palavras de origem tupi, africana ou exótica (<i>abacaxi</i>, <i>xucro</i>); de origem inglesa ou espanhola (<i>xampu</i>, <i>lagartixa</i>); após ditongos (<i>frouxo</i>, <i>feixe</i>); e após a sílaba inicial <b>en-</b> (<i>enxurrada</i>, <i>enxada</i>, <i>enxoval</i>).</li>
+            <li><b>Exceção:</b> quando a palavra de origem já se grafava com "ch" (<i>cheio → enchente; charco → encharcar</i>).</li>
+            <li><b>Com CH:</b> vocábulos de origem estrangeira consagrados (<i>chave</i>, <i>chumbo</i>, <i>chassi</i>, <i>mochila</i>, <i>espadachim</i>, <i>chope</i>, <i>sanduíche</i>, <i>salsicha</i>).</li>
         </ul>
 
-        <h3>3.3. Acento Diferencial</h3>
-        <p>O acento diferencial foi mantido apenas para algumas palavras, para distinguir sentidos:</p>
+        <h3>1.5. Emprego das Letras E e I</h3>
         <ul>
-            <li><b>pôr</b> (verbo) x <b>por</b> (preposição).</li>
-            <li><b>pôde</b> (passado) x <b>pode</b> (presente).</li>
-            <li><b>tem</b> (singular) x <b>têm</b> (plural).</li>
-            <li><b>vem</b> (singular) x <b>vêm</b> (plural).</li>
+            <li>Ditongos nasais escrevem-se com "e" (<i>mãe</i>, <i>põem</i>). Com "i", registra-se o ditongo interno <i>cãibra</i>.</li>
+            <li>Verbos com infinitivo em <b>-oar</b> e <b>-uar</b> recebem "e" nas formas flexionadas (<i>caçoe</i>, <i>perdoe</i>, <i>tumultue</i>).</li>
+            <li>Verbos com infinitivo em <b>-air</b>, <b>-oer</b> e <b>-uir</b> recebem "i" (<i>trai</i>, <i>dói</i>, <i>possui</i>, <i>contribui</i>).</li>
+            <li>Há alteração semântica ao substituir "e" por "i": <i>área</i> (superfície) / <i>ária</i> (melodia); <i>delatar</i> (denunciar) / <i>dilatar</i> (expandir); <i>emergir</i> (vir à tona) / <i>imergir</i> (mergulhar); <i>peão</i> (que anda a pé) / <i>pião</i> (brinquedo).</li>
         </ul>
-        <div class="exemplo">
-            <p><b>Dica:</b> Memorize a regra das oxítonas, paroxítonas e proparoxítonas. A grande maioria das palavras acentuadas em concursos são paroxítonas com terminações específicas.</p>
+
+        <h3>1.6. USOS ESPECIAIS: Porquês, Onde/Aonde, Mau/Mal</h3>
+
+        <h4>Emprego dos Porquês</h4>
+        <table>
+            <tr><th>Forma</th><th>Uso</th><th>Exemplo</th></tr>
+            <tr><td><b>POR QUE</b> (separado)</td><td>Interrogações diretas/indiretas; equivale a "por qual razão" ou "pelo qual"</td><td><i>"Por que você faltou?" / "Ignoro o motivo por que ele se demitiu."</i></td></tr>
+            <tr><td><b>POR QUÊ</b> (com acento)</td><td>Final de frase ou antes de pontuação</td><td><i>"Você faltou. Por quê?"</i></td></tr>
+            <tr><td><b>PORQUE</b> (junto)</td><td>Conjunção explicativa/causal (pois, já que)</td><td><i>"Faltei porque estava doente."</i></td></tr>
+            <tr><td><b>PORQUÊ</b> (junto + acento)</td><td>Substantivo (o motivo, a razão); aceita artigo</td><td><i>"Não sei o porquê de tanta confusão."</i></td></tr>
+        </table>
+
+        <h4>Emprego de Onde e Aonde</h4>
+        <ul>
+            <li><b>ONDE:</b> verbos estáticos (sem movimento). <i>"Onde você mora?"</i></li>
+            <li><b>AONDE:</b> equivale a "para onde"; exige preposição A com verbos de movimento. <i>"Aonde você vai?"</i></li>
+        </ul>
+
+        <h4>Emprego de Mau e Mal</h4>
+        <ul>
+            <li><b>MAU:</b> adjetivo, antônimo de <b>BOM</b>. <i>"Ele é um mau funcionário."</i></li>
+            <li><b>MAL:</b> advérbio (antônimo de <b>BEM</b>), conjunção temporal (assim que) ou substantivo. <i>"Ele se comportou mal." / "Mal cheguei, o chefe me chamou." / "O mal não compensa."</i></li>
+        </ul>
+
+        <div class="dica">
+            <b>✅ Mnemônico:</b> <b>M-A-U</b> faz par com <b>B-O-M</b> (letras curvadas). <b>M-A-L</b> faz par com <b>B-E-M</b> (letras retas).
         </div>
     </div>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 4: Homônimos e Parônimos                              -->
+    <!-- PÁGINA 4: Cap 1 - Hífen                                       -->
     <!-- ============================================================ -->
     <div class="page" data-page="4">
-        <h2>MÓDULO III – HOMÔNIMOS E PARÔNIMOS</h2>
-        <h3>4.1. Homônimos</h3>
-        <p>São palavras que possuem a <b>mesma pronúncia</b> ou a <b>mesma grafia</b>, mas significados diferentes. Dividem-se em:</p>
-        <ul>
-            <li><b>Homógrafos:</b> mesma escrita, pronúncia diferente (ex.: <b>sede</b> – vontade de beber / <b>sede</b> – local onde funciona uma organização).</li>
-            <li><b>Homófonos:</b> mesma pronúncia, escrita diferente (ex.: <b>sessão</b> (reunião), <b>seção</b> (divisão), <b>cessão</b> (ato de ceder).</li>
-            <li><b>Homônimos perfeitos:</b> mesma escrita e mesma pronúncia (ex.: <b>manga</b> – fruta / <b>manga</b> – parte da roupa).</li>
-        </ul>
+        <h2>REGRA DO HÍFEN</h2>
 
-        <h3>4.2. Parônimos</h3>
-        <p>São palavras com <b>grafia e/ou pronúncia semelhantes</b>, mas significados diferentes. Causam muita confusão.</p>
-        <table>
-            <tr><th>Parônimo</th><th>Significado</th><th>Parônimo</th><th>Significado</th></tr>
-            <tr><td><b>Afligir</b></td><td>Causar sofrimento</td><td><b>Infligir</b></td><td>Aplicar (castigo, pena)</td></tr>
-            <tr><td><b>Comprimento</b></td><td>Extensão, medida</td><td><b>Cumprimento</b></td><td>Saudação, ato de cumprir</td></tr>
-            <tr><td><b>Descrição</b></td><td>Ato de descrever</td><td><b>Discrição</b></td><td>Separação, distinção</td></tr>
-            <tr><td><b>Eminente</b></td><td>Ilustre, notável</td><td><b>Iminente</b></td><td>Que está prestes a acontecer</td></tr>
-            <tr><td><b>Flagrante</b></td><td>Evidente, no ato</td><td><b>Fragrante</b></td><td>Perfumado, que exala fragrância</td></tr>
-            <tr><td><b>Ratificar</b></td><td>Confirmar</td><td><b>Retificar</b></td><td>Corrigir, emendar</td></tr>
-            <tr><td><b>Tráfico</b></td><td>Comércio ilegal</td><td><b>Tráfego</b></td><td>Fluxo de veículos ou pessoas</td></tr>
-        </table>
-    </div>
+        <h3>Casos em que SE USA o Hífen</h3>
+        <ol>
+            <li><b>Compostos por justaposição:</b> <i>tio-avô, segunda-feira, conta-gotas, guarda-chuva, arco-íris, primeiro-ministro, azul-escuro</i>.</li>
+            <li><b>Espécies botânicas e zoológicas:</b> <i>couve-flor, bem-te-vi, bem-me-quer, abóbora-menina, erva-doce, feijão-verde</i>.</li>
+            <li><b>Com os elementos além, aquém, recém, sem:</b> <i>além-mar, aquém-fronteira, recém-nascido, sem-número, recém-casado</i>.</li>
+            <li><b>Locuções consagradas:</b> <i>cor-de-rosa, arco-da-velha, mais-que-perfeito, pé-de-meia, água-de-colônia, queima-roupa, deus-dará</i>. (Demais locuções NÃO: <i>fim de semana, sala de aula</i>).</li>
+            <li><b>Encadeamentos de vocábulos:</b> <i>ponte Rio-Niterói, percurso Lisboa-Coimbra-Porto, Áustria-Hungria</i>.</li>
+            <li><b>Prefixos hiper-, inter-, super- com segundo elemento iniciado por R:</b> <i>hiper-resistente, inter-racial, super-racional</i>.</li>
+            <li><b>Prefixos ex- (cessação) e vice-:</b> <i>ex-diretor, ex-presidente, vice-governador, vice-prefeito</i>.</li>
+            <li><b>Prefixos pós-, pré-, pró- (tônicos e acentuados):</b> <i>pré-natal, pré-escolar, pró-europeu, pós-graduação</i>.</li>
+            <li><b>Ênclise e Mesóclise:</b> <i>amá-lo, deixá-lo, dá-se, falar-lhe-ei</i>.</li>
+            <li><b>Prefixos diante de palavras iniciadas por H:</b> <i>sub-hepático, geo-história, neo-helênico, extra-humano, semi-hospitalar, super-homem</i>.</li>
+            <li><b>Prefixo terminado com a MESMA VOGAL que inicia o segundo elemento:</b> <i>micro-ondas, eletro-ótica, semi-interno, auto-observação, anti-inflamatório</i>.</li>
+        </ol>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 5: Polissemia                                        -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="5">
-        <h2>MÓDULO IV – POLISSEMIA</h2>
-        <h3>5.1. Conceito</h3>
-        <p>A <b>polissemia</b> é a propriedade que uma mesma palavra tem de apresentar <b>múltiplos significados</b>, que estão relacionados entre si por uma rede de sentidos que se estende a partir de um significado básico ou central.</p>
-        <p>Diferentemente da homonímia (onde os significados são independentes), na polissemia os sentidos têm uma relação histórica ou metafórica.</p>
+        <h3>Casos em que NÃO SE USA o Hífen</h3>
+        <ol>
+            <li><b>Prefixo em vogal + segundo elemento com R ou S:</b> hífen suprimido e consoante DOBRADA (RR ou SS): <i>antirreligioso, contrarregra, infrassom, microssistema, minissaia, antissocial, ultrassom</i>.</li>
+            <li><b>Prefixo em vogal + segundo elemento iniciado por VOGAL DIFERENTE:</b> <i>antiaéreo, extraescolar, coeducação, autoestrada, autoaprendizagem, hidroelétrico, plurianual, autoescola, infraestrutura, autoajuda, autoelogio, autoestima</i>.</li>
+            <li><b>Prefixos des- e in- quando o segundo elemento perdeu o H:</b> <i>desumano, inábil, desabilitar</i>.</li>
+            <li><b>Prefixo co- (mesmo seguido de O):</b> hífen suprimido e vogais se aglutinam: <i>cooperação, coobrigação, coordenar, coocupante, coautor, coedição, coexistir</i>.</li>
+            <li><b>Palavras que perderam a noção de composição:</b> <i>pontapé, girassol, paraquedas, paraquedista</i>.</li>
+            <li><b>Formas átonas de pos-, pre-, pro- (sem acento):</b> <i>pospor, predeterminar, pressuposto, propor</i>.</li>
+        </ol>
 
-        <h3>5.2. Exemplos de Palavras Polissêmicas</h3>
-        <ul>
-            <li><b>Banco:</b> instituição financeira / assento / conjunto de peixes / reservatório.</li>
-            <li><b>Pé:</b> parte do corpo / base de uma planta / parte de um móvel / unidade de medida.</li>
-            <li><b>Cabeça:</b> parte do corpo / líder / extremidade de uma ferramenta / capacidade mental.</li>
-            <li><b>Ponto:</b> sinal gráfico / local / momento / costura / pontuação em um jogo.</li>
-        </ul>
+        <h3>Translineação</h3>
+        <p>Ao separar palavra no fim de linha, se o vocábulo já possui hífen, <b>repete-se o hífen na linha seguinte</b>: <i>escrevendo "anti-" ao final, a próxima linha inicia com "-inflamatório"</i>.</p>
 
-        <h3>5.3. Diferença entre Homonímia e Polissemia</h3>
-        <ul>
-            <li><b>Homonímia:</b> palavras com origens etimológicas distintas que convergiram para a mesma forma (ex.: "manga" – fruta, do árabe; "manga" – parte da roupa, do latim).</li>
-            <li><b>Polissemia:</b> uma única palavra, com um núcleo de sentido, que se ramificou em vários significados por extensão metafórica ou metonímica (ex.: "pé" – da cadeira, da montanha, do ser humano).</li>
-        </ul>
         <div class="dica">
-            <b>💡 Dica:</b> Em provas, a distinção entre homonímia e polissemia é cobrada pela capacidade de identificar se os múltiplos sentidos têm ou não relação etimológica.
+            <b>✅ Regra dos Opostos:</b>
+            <ul>
+                <li>Vogais iguais → <b>SEPARAM-SE com hífen</b> (<i>micro-ondas</i>).</li>
+                <li>Vogais diferentes → <b>JUNTA-SE sem hífen</b> (<i>autoescola</i>).</li>
+                <li>Vogal + R ou S → <b>JUNTA-SE e DOBRA a consoante</b> (<i>minissaia, antirreflexo</i>).</li>
+                <li>Prefixo <b>CO-</b> atrai tudo sem hífen (<i>coordenar</i>, <i>coautor</i>).</li>
+            </ul>
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> <i>Paraquedas</i> e <i>paraquedista</i> NÃO têm mais hífen. E <i>coordenar</i>, <i>cooperação</i> são exceções à regra das vogais iguais.
         </div>
     </div>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 6: Consolidação e Dicas Finais                       -->
+    <!-- PÁGINA 5: Cap 2 - Acentuação Gráfica - Regras Fundamentais   -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>ACENTUAÇÃO GRÁFICA – REGRAS FUNDAMENTAIS</h2>
+
+        <h3>Classificação das Palavras Quanto à Tonicidade</h3>
+        <ul>
+            <li><b>Oxítonas:</b> sílaba tônica na última (<i>ca-fé, co-ra-ção, Be-lém, a-tum, ca-ju, pa-pel</i>).</li>
+            <li><b>Paroxítonas:</b> sílaba tônica na penúltima (<i>ú-til, tó-rax, tá-xi, le-que, sa-pa-to, pas-sí-vel</i>).</li>
+            <li><b>Proparoxítonas:</b> sílaba tônica na antepenúltima (<i>lâm-pa-da, câ-ma-ra, tím-pa-no, mé-di-co, ô-ni-bus</i>).</li>
+        </ul>
+
+        <h3>Regras Fundamentais</h3>
+        <table>
+            <tr><th>Classificação</th><th>Regra</th><th>Exemplos</th></tr>
+            <tr><td><b>Proparoxítonas</b></td><td>TODAS são acentuadas</td><td><i>árvore, paralelepípedo, cárcere, lâmpada</i></td></tr>
+            <tr><td><b>Oxítonas</b></td><td>Terminadas em A(S), E(S), O(S), EM, ENS</td><td><i>Pará, café(s), cipó(s), Belém, parabéns, armazém</i></td></tr>
+            <tr><td><b>Monossílabos tônicos</b></td><td>Terminados em A(S), E(S), O(S)</td><td><i>pá, há, pé, fé, pó, dó, ré</i></td></tr>
+            <tr><td><b>Paroxítonas</b></td><td>Terminadas em L, I(S), N, U(S), R, X, PS, Ã(S), ÃO(S), UM, UNS, DITONGO</td><td><i>automóvel, táxi, lápis, elétron, vírus, fórum, álbuns, cadáver, tórax, fórceps, ímã, órfão, água, pônei, história, Bíblia</i></td></tr>
+        </table>
+
+        <div class="dica">
+            <b>✅ Mnemônico LINURXÃO para Paroxítonas:</b> Memorize a palavra <b>LINURXÃO</b>. Suas letras indicam as principais terminações das paroxítonas acentuadas: <b>L</b>, <b>I(s)</b>, <b>N</b>, <b>U(s)/UM</b>, <b>R</b>, <b>X</b>, <b>Ã(s)</b>, <b>ÃO(s)</b>.
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> <i>Hífen</i> é acentuada (paroxítona terminada em N), mas seu plural <b>hifens</b> NÃO leva acento (paroxítonas terminadas em -ENS não são acentuadas: <i>hifens, jovens, imagens</i>).
+        </div>
+
+        <h3>Regras Especiais – Hiatos I e U</h3>
+        <p>Acentuam-se <b>I</b> e <b>U</b> tônicos quando formam hiato com a vogal anterior, desde que:</p>
+        <ul>
+            <li>Estejam <b>sozinhos na sílaba</b> ou seguidos apenas de <b>S</b>.</li>
+            <li>Não sejam seguidos pelo grupo <b>NH</b>.</li>
+        </ul>
+        <div class="exemplo">
+            <p><b>Acentuados:</b> <i>sa-ú-de, sa-í-da, a-í, ba-ú, pa-ís, ca-í, ba-ú-s.</i></p>
+            <p><b>Sem acento:</b> <i>ra-i-nha, mo-i-nho (seguido de NH), ju-iz (seguido de Z), a-in-da (seguido de N).</i></p>
+        </div>
+
+        <h4>Alteração do Acordo Ortográfico nos Hiatos</h4>
+        <p><b>NÃO</b> são mais acentuados o I e U tônicos formando hiato quando vierem <b>precedidos de ditongo em palavras paroxítonas</b>:</p>
+        <ul>
+            <li><b>Antes:</b> <i>bocaiúva, feiúra, Sauípe</i>.</li>
+            <li><b>Agora:</b> <i>bocaiuva, feiura, Sauipe</i>.</li>
+            <li><b>Atenção:</b> se o hiato precedido de ditongo estiver em palavra <b>oxítona</b>, o acento permanece (<i>Piauí, tuiuiú</i>).</li>
+        </ul>
+
+        <h3>Regra dos Ditongos Abertos (ÉI, ÓI, ÉU)</h3>
+        <ul>
+            <li><b>PERDERAM o acento nas paroxítonas:</b> <i>assembleia, ideia, geleia, jiboia, apoia, paranoico</i>.</li>
+            <li><b>MANTÊM o acento nas oxítonas e monossílabos tônicos:</b> <i>herói, anéis, papéis, anzóis, remói, céu, dói, réu, troféu, escarcéu</i>.</li>
+        </ul>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> <i>Herói</i> tem acento (oxítona), mas <i>jiboia</i> não tem (paroxítona). <i>Saída</i> tem acento (hiato isolado), mas <i>feiura</i> não tem (hiato precedido de ditongo).
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Cap 2 - Acento Diferencial e CREDELEVÊ            -->
     <!-- ============================================================ -->
     <div class="page" data-page="6">
-        <h2>MÓDULO V – CONSOLIDAÇÃO E DICAS FINAIS</h2>
-        <h3>6.1. Resumo das Regras de Acentuação</h3>
+        <h2>ACENTO DIFERENCIAL E REGRA CREDELEVÊ</h2>
+
+        <h3>Acento Diferencial Mantido</h3>
         <ul>
-            <li><b>Proparoxítonas:</b> acentuam-se todas.</li>
-            <li><b>Oxítonas:</b> acentuam-se as terminadas em A(s), E(s), O(s), EM, ENS.</li>
-            <li><b>Paroxítonas:</b> acentuam-se as terminadas em L, N, R, X, PS, Ã, Õ, UM, US, I, IS, Ã(S), Õ(S).</li>
+            <li><b>PÔR (verbo) x POR (preposição):</b> <i>"Vou pôr os livros na mesa." / "Faço isso por você."</i></li>
+            <li><b>PÔDE (passado) x PODE (presente):</b> <i>"Ele não pôde vir ontem." / "Ele pode vir hoje."</i></li>
         </ul>
 
-        <h3>6.2. Principais Homônimos e Parônimos para Concursos</h3>
+        <h3>Fim do Acento nos Encontros "OO" e "EE"</h3>
+        <p>O acento circunflexo dos encontros "oo" e "ee" foi <b>totalmente abolido</b>.</p>
         <ul>
-            <li><b>Ortografia:</b> "ratificar" (confirmar) ≠ "retificar" (corrigir).</li>
-            <li><b>Gramática:</b> "por que" (motivo) ≠ "porque" (causa) ≠ "porquê" (substantivo) ≠ "por quê" (final de frase).</li>
-            <li><b>Vocabulário:</b> "descrição" (descrever) ≠ "discrição" (moderação, sigilo).</li>
-            <li><b>Direito/Adm:</b> "imigrante" (que entra) ≠ "emigrante" (que sai).</li>
+            <li><b>Palavras com "OO":</b> <i>voo</i> (antes <i>vôo</i>), <i>enjoo</i> (antes <i>enjôo</i>), <i>abençoo</i> (antes <i>abençôo</i>).</li>
+            <li><b>Verbos CREDELEVÊ (CRER, DAR, LER e VER):</b>
+                <ul>
+                    <li>Ele crê → Eles <b>creem</b> (antes <i>crêem</i>)</li>
+                    <li>Que ele dê → Que eles <b>deem</b> (antes <i>dêem</i>)</li>
+                    <li>Ele lê → Eles <b>leem</b> (antes <i>lêem</i>)</li>
+                    <li>Ele vê → Eles <b>veem</b> (antes <i>vêem</i>)</li>
+                </ul>
+            </li>
         </ul>
 
-        <h3>6.3. Dica Final</h3>
-        <p>A melhor forma de fixar as regras de ortografia e acentuação é a <b>leitura atenta</b> e a <b>prática com exercícios</b>. Familiarize-se com a escrita das palavras que aparecem com frequência no seu dia a dia e em provas anteriores.</p>
+        <h3>Verbos TER e VIR (e derivados)</h3>
+        <p>MANTÊM o acento diferencial de número:</p>
+        <ul>
+            <li><b>Ter e Vir:</b> Ele <b>tem</b> / Eles <b>têm</b> (com circunflexo); Ele <b>vem</b> / Eles <b>vêm</b> (com circunflexo).</li>
+            <li><b>Derivados (conter, obter, reter, deter, abster, intervir, provir):</b>
+                <ul>
+                    <li>Singular: acento <b>agudo</b> (´) → <i>Ele contém, obtém, retém, convém.</i></li>
+                    <li>Plural: acento <b>circunflexo</b> (^) → <i>Eles contêm, obtêm, retêm, convêm.</i></li>
+                </ul>
+            </li>
+        </ul>
 
-        <div class="exemplo">
-            <p><b>Verbos terminados em -ear e -iar:</b></p>
+        <div class="dica">
+            <b>✅ Mnemônico do Pôr:</b> Dá para substituir por "colocar" na frase? Se sim, é verbo e leva circunflexo (<b>pôr</b>): <i>"Posso pôr (colocar) meus livros aqui?"</i>
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b>
             <ul>
-                <li>Verbos terminados em <b>-ear</b>: eu <b>receio</b>, tu receias, ele receia (não se usa "eu receio" com acento? Na verdade, "receio" é paroxítona? Não, "receio" tem acento? Vamos simplificar: "eu receio" – a forma correta é "eu receio" (sem acento no 'i'?) – na verdade, "recear" é regular. A dica aqui é que muitos verbos em -ear são irregulares: eu receio, tu receias, ele receia. Acentua-se o 'e'? Não, o acento recai no 'e' do radical? Exemplo: "eu passeio" (de passear) – o acento é no 'e'? Na verdade, "passeio" tem acento no 'e' (pás-seio)? Não, a palavra é paroxítona terminada em 'o', não se acentua. A pronúncia é "passeio" com o 'e' fechado. Enfim, não vou alongar. Vou deixar apenas a dica geral de que o Novo Acordo mudou algumas acentuações, como "ideia" (sem acento), "plateia", "assembleia".</li>
+                <li><b>Veem</b> (do verbo VER) NÃO tem acento. <b>Vêm</b> (do verbo VIR) TEM acento no plural.</li>
+                <li><b>Contém</b> (singular) usa agudo; <b>contêm</b> (plural) usa circunflexo.</li>
             </ul>
         </div>
     </div>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- PÁGINA 7: Cap 3 - Homônimos e Parônimos                       -->
     <!-- ============================================================ -->
     <div class="page" data-page="7">
-        <h2>📝 QUESTÕES (1 a 14)</h2>
-        <p><i>Responda com base no conteúdo estudado.</i></p>
+        <h2>HOMÔNIMOS E PARÔNIMOS</h2>
+
+        <h3>Classificação dos Homônimos</h3>
+        <ul>
+            <li><b>Homógrafos:</b> iguais na escrita, diferentes na pronúncia e no sentido.
+                <br><i>rego (substantivo /ê/) x rego (verbo regar /é/); colher (substantivo /ê/) x colher (verbo /é/); jogo (substantivo /ô/) x jogo (verbo /ó/).</i></li>
+            <li><b>Homófonos:</b> iguais na pronúncia, diferentes na escrita e no sentido.
+                <br><i>acender (atear fogo) x ascender (subir); concertar (harmonizar) x consertar (reparar); cela (prisão) x sela (arreio); censo (IBGE) x senso (juízo); paço (palácio) x passo (andar); sessão x seção x cessão.</i></li>
+            <li><b>Homônimos perfeitos:</b> iguais na escrita e na pronúncia, com sentidos diferentes.
+                <br><i>caminho (substantivo) x caminho (verbo); cedo (advérbio) x cedo (verbo ceder); livre (adjetivo) x livre (verbo livrar).</i></li>
+        </ul>
+
+        <h3>Parônimos de Alta Incidência</h3>
+        <table>
+            <tr><th>Par</th><th>Significado</th></tr>
+            <tr><td><b>Absolver x Absorver</b></td><td>Absolver = perdoar/inocentar; Absorver = aspirar/reter líquido</td></tr>
+            <tr><td><b>Aprender x Apreender</b></td><td>Aprender = adquirir conhecimento; Apreender = assimilar/apoderar-se/confiscar</td></tr>
+            <tr><td><b>Autuar x Atuar</b></td><td>Autuar = lavrar auto/processar; Atuar = agir/desempenhar papel</td></tr>
+            <tr><td><b>Cesta x Sesta x Sexta</b></td><td>Cesta = receptáculo; Sesta = descanso após almoço; Sexta = numeral/dia</td></tr>
+            <tr><td><b>Comprimento x Cumprimento</b></td><td>Comprimento = extensão; Cumprimento = saudação/cumprir</td></tr>
+            <tr><td><b>Deferir x Diferir</b></td><td>Deferir = atender/conceder; Diferir = divergir/adiar</td></tr>
+            <tr><td><b>Delatar x Dilatar</b></td><td>Delatar = denunciar; Dilatar = expandir</td></tr>
+            <tr><td><b>Emergir x Imergir</b></td><td>Emergir = vir à tona; Imergir = mergulhar</td></tr>
+            <tr><td><b>Eminente x Iminente</b></td><td>Eminente = ilustre; Iminente = prestes a ocorrer</td></tr>
+            <tr><td><b>Infligir x Infringir</b></td><td>Infligir = aplicar pena; Infringir = violar lei</td></tr>
+            <tr><td><b>Mandado x Mandato</b></td><td>Mandado = ordem judicial; Mandato = cargo político</td></tr>
+            <tr><td><b>Soar x Suar</b></td><td>Soar = emitir som; Suar = transpirar</td></tr>
+            <tr><td><b>Tráfego x Tráfico</b></td><td>Tráfego = trânsito; Tráfico = comércio ilegal</td></tr>
+        </table>
+
+        <h3>Sessão / Seção / Cessão</h3>
+        <ul>
+            <li><b>Sessão</b> (3 S) = Duração de reunião, filme ou assembleia (<i>Sessão de cinema</i>).</li>
+            <li><b>Seção</b> ou <b>Secção</b> = Setor, divisão (<i>Seção de brinquedos</i>).</li>
+            <li><b>Cessão</b> (C + SS) = Ato de ceder, doação (<i>Cessão de direitos</i>).</li>
+        </ul>
+
+        <div class="dica">
+            <b>✅ Mnemônicos:</b>
+            <ul>
+                <li><b>E</b>mergir = <b>E</b>xterior (subir). <b>I</b>mergir = <b>I</b>nterior (afundar).</li>
+                <li><b>E</b>minente = <b>E</b>levado. <b>I</b>minente = <b>I</b>nstante (prestes a ocorrer).</li>
+                <li>In<b>f</b>ligir = Aplicar <b>P</b>ena. In<b>f</b>ringir = <b>F</b>altar com a lei.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Cap 4 - Polissemia                                  -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>POLISSEMIA, AMBIGUIDADE E RELAÇÕES SEMÂNTICAS</h2>
+
+        <h3>Polissemia</h3>
+        <p><b>Polissemia</b> é a propriedade de uma <b>única palavra</b> apresentar múltiplos significados dependendo do contexto. Todos os significados estão interligados por um traço semântico comum ou pela mesma raiz conceitual.</p>
+
+        <h4>Exemplos Práticos</h4>
+        <ul>
+            <li><b>CABO:</b> cabo da enxada / cabo (acidente geográfico) / cabo militar / cabo eleitoral. <i>Traço comum: extremidade ou ponto de ligação.</i></li>
+            <li><b>BICO:</b> bico da ave / bico (trabalho informal) / bico (formato dos lábios).</li>
+            <li><b>XADREZ:</b> xadrez (prisão) / xadrez (tecido) / xadrez (jogo). <i>Traço comum: padrão quadriculado.</i></li>
+            <li><b>REDE:</b> rede de dormir / rede de computadores / rede elétrica / rede de TV.</li>
+        </ul>
+
+        <h3>Polissemia x Homonímia</h3>
+        <table>
+            <tr><th>Critério</th><th>Polissemia</th><th>Homonímia</th></tr>
+            <tr><td><b>Etimologia</b></td><td>Mesma palavra com sentidos que se expandiram</td><td>Palavras diferentes que coincidiram na forma</td></tr>
+            <tr><td><b>Relação</b></td><td>Sentidos mantêm elo semântico</td><td>Sentidos completamente desconectados</td></tr>
+            <tr><td><b>Dicionário</b></td><td>Único verbete com várias acepções</td><td>Verbetes separados</td></tr>
+            <tr><td><b>Exemplo</b></td><td><i>Letra</i> (do alfabeto / da música / caligrafia)</td><td><i>Manga</i> (fruta / parte da camisa)</td></tr>
+        </table>
+
+        <h3>Hiperonímia e Hiponímia</h3>
+        <ul>
+            <li><b>HIPERÔNIMO:</b> palavra de sentido abrangente, genérico (<i>veículo</i>, <i>doença</i>).</li>
+            <li><b>HIPÔNIMO:</b> palavra de sentido específico (<i>carro</i>, <i>moto</i>, <i>dengue</i>, <i>gripe</i>).</li>
+        </ul>
+        <p>O hiperônimo pode substituir o hipônimo para evitar repetições: <i>"Comprei um carro. O veículo é novo."</i></p>
+
+        <div class="dica">
+            <b>✅ Aplicação textual:</b> O uso de hiperônimos é um recurso de coesão referencial que evita a repetição de palavras no texto.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 9: Cap 5 - Quadros Síntese                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="9">
+        <h2>REVISÃO GERAL – QUADROS SÍNTESE</h2>
+
+        <h3>Tabela 1: Ortografia das Consoantes</h3>
+        <table>
+            <tr><th>Fonema/Caso</th><th>Regra de Uso</th><th>Exemplos</th></tr>
+            <tr><td><b>Grafia com S</b></td><td>Verbos com radical em -nd, -rg, -rt, -pel, -corr, -sent</td><td>pretensão, expansão, inversão, compulsório, sensível</td></tr>
+            <tr><td><b>Grafia com SS</b></td><td>Verbos com radical em -gred, -ced, -prim, -tir, -meter</td><td>agressivo, impressão, admissão, cessão, excesso, submissão</td></tr>
+            <tr><td><b>Verbos em -ISAR</b></td><td>Palavra primitiva CONTÉM "S"</td><td>pesquisa → pesquisar; análise → analisar</td></tr>
+            <tr><td><b>Verbos em -IZAR</b></td><td>Palavra primitiva NÃO CONTÉM "S"</td><td>útil → utilizar; concreto → concretizar</td></tr>
+        </table>
+
+        <h3>Tabela 2: Guia Rápido de Acentuação</h3>
+        <table>
+            <tr><th>Classificação</th><th>Regra</th><th>Exemplos</th></tr>
+            <tr><td><b>Proparoxítonas</b></td><td>TODAS são acentuadas</td><td>árvore, médico, ônibus, cárcere</td></tr>
+            <tr><td><b>Oxítonas</b></td><td>Terminadas em -a(s), -e(s), -o(s), -em(ens)</td><td>Pará, café, cipó, Belém, parabéns</td></tr>
+            <tr><td><b>Monossílabos</b></td><td>Tônicos em -a(s), -e(s), -o(s)</td><td>pá, há, pé, fé, pó, dó</td></tr>
+            <tr><td><b>Paroxítonas (LINURXÃO)</b></td><td>Terminadas em L, I(s), N, U(s), R, X, PS, Ã(s), ÃO(s), DITONGO</td><td>fácil, lápis, tórax, órfão, memória</td></tr>
+            <tr><td><b>Ditongos Abertos (EI/OI/EU)</b></td><td>Perdem acento em paroxítonas; mantêm em oxítonas e monossílabos</td><td>ideia, jiboia (SEM); herói, troféu, céu (COM)</td></tr>
+            <tr><td><b>Regra CREDELEVÊ</b></td><td>Crer, Dar, Ler, Ver no plural perdem acento no "ee"</td><td>creem, deem, leem, veem (SEM acento)</td></tr>
+            <tr><td><b>Verbos TER e VIR</b></td><td>Singular sem acento; plural com circunflexo</td><td>Ele tem / Eles têm; Ele vem / Eles vêm</td></tr>
+        </table>
+
+        <h3>Tabela 3: Parônimos Frequentes</h3>
+        <table>
+            <tr><th>Parônimos</th><th>Diferenciação</th></tr>
+            <tr><td><b>Infligir x Infringir</b></td><td>INFLIGIR = Aplicar pena/castigo | INFRINGIR = Violar a lei</td></tr>
+            <tr><td><b>Mandado x Mandato</b></td><td>MANDADO = Ordem judicial | MANDATO = Cargo político</td></tr>
+            <tr><td><b>Eminente x Iminente</b></td><td>EMINENTE = Ilustre/Elevado | IMINENTE = Prestes a ocorrer</td></tr>
+            <tr><td><b>Emergir x Imergir</b></td><td>EMERGIR = Vir à tona (sair) | IMERGIR = Afundar (entrar)</td></tr>
+            <tr><td><b>Deferir x Diferir</b></td><td>DEFERIR = Aprovar/Conceder | DIFERIR = Divergir/Adiar</td></tr>
+        </table>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 10: Simulado - Questões 1 a 9                          -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="10">
+        <h2>📝 SIMULADO FINAL (1 a 9)</h2>
 
         <div class="questao-item">
-            <p><b>Questão 1</b> (Ortografia) – Com o Novo Acordo Ortográfico, o trema (¨) foi:</p>
+            <p><b>Questão 1</b> (IBDO) – Em um memorando administrativo: <i>"O novo funcionário foi ___ instruído sobre o fluxo de acolhimento, o que gerou um ___ entendimento entre os setores"</i>. As lacunas devem ser preenchidas por:</p>
             <div class="alternativas">
-                a) Mantido em todas as palavras.<br>
-                b) Abolido nas palavras da língua portuguesa, permanecendo em nomes próprios e estrangeirismos.<br>
-                c) Substituído pelo acento agudo.<br>
-                d) Mantido apenas nos verbos.<br>
-                e) Eliminado completamente.
+                a) mal / mau<br>
+                b) mau / mal<br>
+                c) mal / mal<br>
+                d) mau / mau
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 2</b> (Acentuação) – Assinale a palavra que é acentuada pela regra das <b>paroxítonas</b>:</p>
+            <p><b>Questão 2</b> (IBDO) – Conforme a regra CREDELEVÊ, assinale a grafia oficial: <i>"Os auxiliares de arquivo ___ os prontuários para que os médicos ___ as inconsistências."</i></p>
             <div class="alternativas">
-                a) Café.<br>
-                b) Médico.<br>
-                c) Tórax.<br>
-                d) Ninguém.<br>
-                e) Amém.
+                a) lêem / vêem<br>
+                b) leem / veem<br>
+                c) lêem / veem<br>
+                d) leem / vêem
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 3</b> (Homônimos) – As palavras "sessão", "seção" e "cessão" são exemplos de:</p>
+            <p><b>Questão 3</b> (IBDO) – Em relação ao uso dos porquês, assinale a opção CORRETA:</p>
             <div class="alternativas">
-                a) Parônimos.<br>
-                b) Homônimos homófonos.<br>
-                c) Homônimos homógrafos.<br>
-                d) Polissêmicos.<br>
-                e) Sinônimos.
+                a) Não sei porque o edital do concurso foi suspenso.<br>
+                b) Você não compareceu ao plantão de sábado. Por que?<br>
+                c) O motivo por que o candidato faltou não foi justificado.<br>
+                d) A diretora explicou o por quê de sua decisão.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 4</b> (Parônimos) – "O juiz deve <b>_______</b> a sentença" e "O réu precisa <b>_______</b> a acusação". As palavras que completam corretamente as lacunas são, respectivamente:</p>
+            <p><b>Questão 4</b> (IBDO) – A frase em que o uso do hífen está em PERFEITA conformidade com as regras ortográficas é:</p>
             <div class="alternativas">
-                a) Retificar / Ratificar.<br>
-                b) Ratificar / Retificar.<br>
-                c) Retificar / Retificar.<br>
-                d) Ratificar / Ratificar.<br>
-                e) Ratificar / Retificar.
+                a) O candidato comprou um micro-ondas e um auto-forno para a copa.<br>
+                b) A minissaia da candidata chamou a atenção na sala de aula.<br>
+                c) O servidor público tomou um anti-inflamatório após o treino.<br>
+                d) A auto-escola credenciou novos instrutores para o exame.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 5</b> (Polissemia) – A palavra "ponto" pode significar: sinal gráfico, local, momento, costura, etc. Esse fenômeno é chamado de:</p>
+            <p><b>Questão 5</b> (AOCP) – A palavra destacada foi empregada em sentido DENOTATIVO em:</p>
             <div class="alternativas">
-                a) Homonímia.<br>
-                b) Paronímia.<br>
-                c) Polissemia.<br>
-                d) Sinonímia.<br>
-                e) Antonímia.
+                a) O funcionário tinha um coração de pedra para com os usuários.<br>
+                b) O médico enxergou uma luz no fim do túnel durante a cirurgia.<br>
+                c) O estagiário colheu os frutos de seu esforço ao ser contratado.<br>
+                d) O enfermeiro aplicou a vacina no braço esquerdo do paciente.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 6</b> (Ortografia) – Assinale a alternativa em que todas as palavras estão corretamente grafadas:</p>
+            <p><b>Questão 6</b> (IBFC) – Assinale a opção cuja palavra seja acentuada pela MESMA regra do vocábulo "automóvel":</p>
             <div class="alternativas">
-                a) Exceção, ascenção, compreensão.<br>
-                b) Exceção, ascensão, compreensão.<br>
-                c) Exceção, ascensão, compreção.<br>
-                d) Exceção, ascenção, compreção.<br>
-                e) Excesão, ascensão, compreensão.
+                a) cascavel<br>
+                b) açúcar<br>
+                c) hipótese<br>
+                d) língua
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 7</b> (Acentuação) – A palavra "herói", segundo o Novo Acordo Ortográfico, é acentuada porque:</p>
+            <p><b>Questão 7</b> (VUNESP) – Complete o trecho: <i>"A diretoria recusou-se a __________ a pena ao funcionário que __________ as regras de segurança da empresa."</i></p>
             <div class="alternativas">
-                a) É proparoxítona.<br>
-                b) É oxítona terminada em "i".<br>
-                c) É paroxítona terminada em ditongo aberto.<br>
-                d) É oxítona terminada em ditongo aberto (ói).<br>
-                e) Não é acentuada.
+                a) infligir / infringiu<br>
+                b) infringir / infligiu<br>
+                c) infligir / infligiu<br>
+                d) infringir / infringiu
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 8</b> (Homônimos) – "Ele foi à <b>______</b> da empresa" e "A <b>______</b> do documento é de 10 páginas". As palavras que preenchem corretamente as lacunas são:</p>
+            <p><b>Questão 8</b> (CESPE/CEBRASPE) – Julgue: <i>"As palavras 'saúde', 'país' e 'baú' são acentuadas pela mesma regra gramatical."</i></p>
             <div class="alternativas">
-                a) Sede / sede.<br>
-                b) Sede / cede.<br>
-                c) Sede / seção.<br>
-                d) Seção / sessão.<br>
-                e) Cessão / seção.
+                a) CERTO<br>
+                b) ERRADO
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 9</b> (Acentuação) – Assinale a alternativa em que <b>todas</b> as palavras estão corretamente acentuadas:</p>
+            <p><b>Questão 9</b> (FGV) – Sobre o pronome CUJO em <i>"A decisão do juiz veio trazer consolo ao paciente, em cuja certidão constava a decisão do processo"</i>, assinale a correta:</p>
             <div class="alternativas">
-                a) Pólen, hífen, tórax, ônus.<br>
-                b) Pólen, hifen, torax, onus.<br>
-                c) Polen, hífen, torax, ônus.<br>
-                d) Polen, hifen, torax, onus.<br>
-                e) Pólen, hífen, tórax, onus.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 10</b> (Parônimos) – O trânsito intenso nas grandes cidades é chamado de:</p>
-            <div class="alternativas">
-                a) Tráfico.<br>
-                b) Tráfego.<br>
-                c) Tráfico de pessoas.<br>
-                d) Tráfego de drogas.<br>
-                e) Tráfego de influência.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 11</b> (Polissemia) – A palavra "banco" é polissêmica. Qual dos significados abaixo NÃO está relacionado à mesma raiz semântica de "banco" (assento)?</p>
-            <div class="alternativas">
-                a) Instituição financeira.<br>
-                b) Assento de praça.<br>
-                c) Conjunto de peixes.<br>
-                d) Reservatório de sangue.<br>
-                e) Base de apoio.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 12</b> (Ortografia) – A palavra "compreensão" é grafada com "SS" porque:</p>
-            <div class="alternativas">
-                a) Deriva de um verbo terminado em -der.<br>
-                b) Deriva de um verbo terminado em -ter.<br>
-                c) Deriva de um verbo terminado em -ver.<br>
-                d) É uma palavra de origem estrangeira.<br>
-                e) É uma exceção à regra.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 13</b> (Acentuação) – Assinale a alternativa em que o acento diferencial foi utilizado corretamente:</p>
-            <div class="alternativas">
-                a) Ele pode ir à festa.<br>
-                b) Ele pôde ir à festa.<br>
-                c) Ele pode ir à festa?<br>
-                d) Ele pôde vir, mas não veio.<br>
-                e) Ele pode vir, mas não pôde.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 14</b> (V/F – Ortografia) – Analise as afirmativas:</p>
-            <p>(   ) O trema foi abolido do português, exceto em nomes próprios.<br>
-            (   ) O alfabeto brasileiro passou a ter 26 letras com o Novo Acordo.<br>
-            (   ) Usa-se "X" após ditongo (ex.: caixa, peixe).<br>
-            (   ) A palavra "asseio" é grafada com "SS".</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) V – V – V – F<br>b) F – V – F – V<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – F – F
+                a) Admite a anteposição de artigo definido feminino (cuja a).<br>
+                b) Concorda em gênero e número com o termo antecedente.<br>
+                c) Estabelece relação de posse entre antecedente e consequente.<br>
+                d) Pode ser substituído por "onde" para indicar lugar.
             </div>
         </div>
     </div>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- PÁGINA 11: Simulado - Questões 10 a 17                        -->
     <!-- ============================================================ -->
-    <div class="page" data-page="8">
-        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+    <div class="page" data-page="11">
+        <h2>📝 SIMULADO FINAL (10 a 17)</h2>
 
         <div class="questao-item">
-            <p><b>Questão 15</b> (V/F – Acentuação) – Analise as afirmativas:</p>
-            <p>(   ) Todas as proparoxítonas são acentuadas.<br>
-            (   ) As oxítonas terminadas em "A", "E", "O" são acentuadas.<br>
-            (   ) As paroxítonas terminadas em "R" são acentuadas.<br>
-            (   ) O acento diferencial foi totalmente abolido.</p>
-            <p>Assinale a sequência correta:</p>
+            <p><b>Questão 10</b> (IBFC) – Assinale a alternativa em que a palavra é PAROXÍTONA:</p>
             <div class="alternativas">
-                a) V – V – V – F<br>b) V – F – V – F<br>c) F – V – F – V<br>d) V – V – F – F<br>e) F – F – V – V
+                a) Rubrica<br>
+                b) Lâmpada<br>
+                c) Café<br>
+                d) Coração
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 16</b> (V/F – Homônimos e Parônimos) – Analise as afirmativas:</p>
-            <p>(   ) "Descrição" e "discrição" são parônimos.<br>
-            (   ) "Sessão", "seção" e "cessão" são homônimos homógrafos.<br>
-            (   ) Homônimos perfeitos têm mesma grafia e mesma pronúncia.<br>
-            (   ) Parônimos têm grafia e pronúncia semelhantes, mas significados diferentes.</p>
-            <p>Assinale a sequência correta:</p>
+            <p><b>Questão 11</b> (AOCP) – Assinale a alternativa em que TODAS as palavras perderam o acento gráfico com o Novo Acordo Ortográfico:</p>
             <div class="alternativas">
-                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+                a) heroi, assembleia, ideia<br>
+                b) feiura, jiboia, creem<br>
+                c) saude, voo, papéis<br>
+                d) bau, ideia, paranoico
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 17</b> (Polissemia) – A palavra "cabeça" pode significar parte do corpo, líder, extremidade de ferramenta, capacidade mental. Esse fenômeno é classificado como:</p>
+            <p><b>Questão 12</b> (IBDO) – Observe as palavras destacadas: 1. <i>A <b>seção</b> de pessoal concluiu a folha.</i> 2. <i>Assistimos a uma <b>sessão</b> de cinema.</i> 3. <i>A <b>cessão</b> do terreno foi aprovada.</i> Quanto à homonímia, classificam-se como:</p>
             <div class="alternativas">
-                a) Homonímia.<br>
-                b) Paronímia.<br>
-                c) Polissemia.<br>
-                d) Sinonímia.<br>
-                e) Antonímia.
+                a) Homógrafas<br>
+                b) Homófonas<br>
+                c) Homônimos perfeitos<br>
+                d) Parônimos
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 18</b> (Ortografia) – A palavra "ascensão" é grafada com "SC" e não com "SS" porque:</p>
+            <p><b>Questão 13</b> (FADESP) – Aponte a opção em que a palavra apresenta erro de grafia:</p>
             <div class="alternativas">
-                a) Deriva de um verbo terminado em -der.<br>
-                b) Deriva de um verbo terminado em -ter.<br>
-                c) Deriva de um verbo terminado em -ver.<br>
-                d) É uma palavra de origem grega.<br>
-                e) É uma exceção à regra.
+                a) Exceção<br>
+                b) Paralisação<br>
+                c) Banalisação<br>
+                d) Obsessão
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 19</b> (Acentuação) – Assinale a alternativa em que a palavra <b>NÃO</b> é acentuada:</p>
+            <p><b>Questão 14</b> (VUNESP) – Assinale a alternativa em que o pronome ONDE está empregado corretamente segundo a norma culta:</p>
             <div class="alternativas">
-                a) Pólen.<br>
-                b) Hífen.<br>
-                c) Tórax.<br>
-                d) Item.<br>
-                e) Ônus.
+                a) Não concordo com o relatório onde o auditor fez críticas.<br>
+                b) A cidade onde nasci passou por grande modernização hospitalar.<br>
+                c) O projeto onde trabalhamos foi suspenso pela secretaria.<br>
+                d) A reunião onde debatemos as metas foi muito produtiva.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 20</b> (Parônimos) – "O professor fez a <b>______</b> do fenômeno" e "É necessário <b>______</b> entre o certo e o errado". As palavras que completam corretamente as lacunas são:</p>
+            <p><b>Questão 15</b> (CESGRANRIO) – Aponte a frase gramaticalmente correta em relação à acentuação gráfica:</p>
             <div class="alternativas">
-                a) Descrição / discrição.<br>
-                b) Descrição / descrição.<br>
-                c) Discrição / descrição.<br>
-                d) Discrição / discrição.<br>
-                e) Descrição / discriminação.
+                a) O médico não pôde atender ontem, mas pode atender hoje.<br>
+                b) Os diretores tem certeza de que os arquivos contem dados seguros.<br>
+                c) A assembléia aprovou a nova idéia da coordenação.<br>
+                d) O carro azul tinha uma feiúra impressionante.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 21</b> (V/F – Consolidação) – Analise as afirmativas:</p>
-            <p>(   ) A palavra "têm" é acentuada para indicar a terceira pessoa do plural.<br>
-            (   ) "Por que" (separado e sem acento) é usado em perguntas.<br>
-            (   ) "Ratificar" significa "corrigir".<br>
-            (   ) A polissemia ocorre quando uma palavra tem vários significados relacionados.</p>
-            <p>Assinale a sequência correta:</p>
+            <p><b>Questão 16</b> (IBFC) – Assinale o vocábulo com sufixo -ZINHO cuja grafia com Z justifica-se por NÃO haver "S" no radical da primitiva:</p>
             <div class="alternativas">
-                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
+                a) Lapisinho<br>
+                b) Rosinha<br>
+                c) Cãozinho<br>
+                d) Luisinho
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 22</b> (Ortografia) – A palavra "exceção" é grafada com "CE" e "ÇÃO". Qual a forma correta?</p>
+            <p><b>Questão 17</b> (AOCP) – O antônimo correto de "Eminente" e o sinônimo correto de "Delatar" são, respectivamente:</p>
             <div class="alternativas">
-                a) Exceção.<br>
-                b) Exceção.<br>
-                c) Exseção.<br>
-                d) Exceção.<br>
-                e) Exceção.
+                a) Iminente / Denunciar<br>
+                b) Vulgar / Expandir<br>
+                c) Desconhecido / Denunciar<br>
+                d) Iminente / Adiar
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 12: Simulado - Questões 18 a 25 + Gabarito            -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="12">
+        <h2>📝 SIMULADO FINAL (18 a 25)</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> (IBDO) – Marque a opção em que todas as palavras são PROPAROXÍTONAS:</p>
+            <div class="alternativas">
+                a) Íris, taxi, lápis<br>
+                b) Hábito, poética, século<br>
+                c) Caráter, cadáver, tórax<br>
+                d) Urubu, caju, fofoca
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 23</b> (Acentuação) – A palavra "ideia", segundo o Novo Acordo Ortográfico:</p>
+            <p><b>Questão 19</b> (VUNESP) – Preencha: <i>"O advogado deu um parecer __________ sobre o processo do servidor, alegando que o recurso era __________ ao interesse público."</i></p>
             <div class="alternativas">
-                a) Não é acentuada.<br>
-                b) É acentuada por ser proparoxítona.<br>
-                c) É acentuada por ser oxítona.<br>
-                d) É acentuada por ser paroxítona terminada em ditongo.<br>
-                e) É acentuada com acento diferencial.
+                a) favorável / nocivo<br>
+                b) favoravel / nocivo<br>
+                c) favorável / nocívo<br>
+                d) favoravel / nocivo
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 24</b> (Homônimos) – "A <b>______</b> de documentos foi autorizada" e "A <b>______</b> de cinema foi emocionante". As palavras são, respectivamente:</p>
+            <p><b>Questão 20</b> (CESPE/CEBRASPE) – Julgue: <i>"Na frase 'A polícia civil apreendeu dois caminhões com carga roubada', o verbo destacado é parônimo de 'aprender' e significa confiscar/apoderar-se legalmente."</i></p>
             <div class="alternativas">
-                a) Cessão / sessão.<br>
-                b) Sessão / cessão.<br>
-                c) Seção / sessão.<br>
-                d) Cessão / seção.<br>
-                e) Sessão / seção.
+                a) CERTO<br>
+                b) ERRADO
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 25</b> (V/F – Geral) – Analise as afirmativas:</p>
-            <p>(   ) A palavra "beneficiente" é grafada com "C" ou "Ç"? A forma correta é "beneficiente" (com C).<br>
-            (   ) Os parônimos têm significados iguais.<br>
-            (   ) A acentuação das oxítonas terminadas em "U" não ocorre.<br>
-            (   ) A polissemia é um recurso muito usado em textos literários e propagandas.</p>
-            <p>Assinale a sequência correta:</p>
+            <p><b>Questão 21</b> (IBFC) – Assinale a palavra cuja acentuação se JUSTIFICA pelo mesmo motivo de "ímã":</p>
             <div class="alternativas">
-                a) V – F – V – V<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+                a) Órfão<br>
+                b) Táxi<br>
+                c) Café<br>
+                d) Baú
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> (IBDO) – Escolha a alternativa em que o uso do HÍFEN está INCORRETO:</p>
+            <div class="alternativas">
+                a) Guarda-roupa<br>
+                b) Segunda-feira<br>
+                c) Beija-flor<br>
+                d) Girassol-amarelo
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> (AOCP) – O termo "POLISSEMIA" pode ser definido como:</p>
+            <div class="alternativas">
+                a) A propriedade de uma palavra ter exatamente o mesmo significado de outra.<br>
+                b) O fenômeno em que palavras com grafias diferentes têm o mesmo som.<br>
+                c) A propriedade de uma mesma palavra assumir vários significados no contexto.<br>
+                d) A ocorrência de erros de concordância em frases formais.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> (VUNESP) – Assinale a opção em que a palavra está grafada INCORRETAMENTE:</p>
+            <div class="alternativas">
+                a) Ele expressou sua intenção de participar do concurso.<br>
+                b) A pretensão do candidato era obter a primeira colocação.<br>
+                c) O funcionário pediu a recessão do contrato de trabalho.<br>
+                d) A admissão dos novos aprovados ocorrerá em maio.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> (IBDO) – Indique a alternativa em que a palavra deve ser acentuada por ser PAROXÍTONA TERMINADA EM DITONGO:</p>
+            <div class="alternativas">
+                a) Memória<br>
+                b) Paraná<br>
+                c) Saúde<br>
+                d) Tênis
             </div>
         </div>
 
@@ -695,11 +886,39 @@
 
         <h2>✅ GABARITO OFICIAL</h2>
         <div class="gabarito-box">
-            <p><b>1-B</b> | <b>2-C</b> | <b>3-B</b> | <b>4-A</b> | <b>5-C</b> | <b>6-B</b> | <b>7-D</b> | <b>8-A</b> | <b>9-A</b> | <b>10-B</b></p>
-            <p><b>11-C</b> | <b>12-B</b> | <b>13-E</b> | <b>14-A</b> | <b>15-A</b> | <b>16-A</b> | <b>17-C</b> | <b>18-A</b> | <b>19-D</b> | <b>20-A</b></p>
-            <p><b>21-A</b> | <b>22-A</b> | <b>23-A</b> | <b>24-A</b> | <b>25-A</b></p>
+            <p><b>1-A</b> | <b>2-B</b> | <b>3-C</b> | <b>4-C</b> | <b>5-D</b> | <b>6-B</b> | <b>7-A</b> | <b>8-A</b> | <b>9-C</b> | <b>10-A</b></p>
+            <p><b>11-B</b> | <b>12-B</b> | <b>13-C</b> | <b>14-B</b> | <b>15-A</b> | <b>16-C</b> | <b>17-C</b> | <b>18-B</b> | <b>19-A</b> | <b>20-A</b></p>
+            <p><b>21-A</b> | <b>22-D</b> | <b>23-C</b> | <b>24-C</b> | <b>25-A</b></p>
         </div>
-        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,V,V,F); Q15 (V,V,V,F); Q16 (V,F,V,V); Q21 (V,V,F,V); Q25 (V,F,V,V).</p>
+
+        <h3>📚 Comentários Resumidos</h3>
+        <ul>
+            <li><b>Q1:</b> "Mal instruído" (advérbio) / "mau entendimento" (adjetivo).</li>
+            <li><b>Q2:</b> CREDELEVÊ: <i>leem</i> e <i>veem</i> sem acento.</li>
+            <li><b>Q3:</b> "Por que" separado = "pelo qual" (motivo).</li>
+            <li><b>Q4:</b> "Anti-inflamatório" tem hífen (vogais iguais).</li>
+            <li><b>Q5:</b> Sentido denotativo (literal) = "aplicou a vacina no braço".</li>
+            <li><b>Q6:</b> "Automóvel" e "açúcar" são paroxítonas terminadas em consoante L e R.</li>
+            <li><b>Q7:</b> Infligir (pena) / infringir (regra).</li>
+            <li><b>Q8:</b> CERTO – todas são hiato.</li>
+            <li><b>Q9:</b> "Cujo" = posse entre antecedente e consequente.</li>
+            <li><b>Q10:</b> Rubrica é paroxítona.</li>
+            <li><b>Q11:</b> Feiura, jiboia e creem perderam o acento.</li>
+            <li><b>Q12:</b> Sessão/seção/cessão = homônimos homófonos.</li>
+            <li><b>Q13:</b> Banalização (com Z).</li>
+            <li><b>Q14:</b> "Onde" só para lugar físico.</li>
+            <li><b>Q15:</b> Pôde x pode (acento diferencial).</li>
+            <li><b>Q16:</b> Cãozinho (sem S no radical).</li>
+            <li><b>Q17:</b> Eminente (antônimo: desconhecido) / Delatar (sinônimo: denunciar).</li>
+            <li><b>Q18:</b> Hábito, poética, século são proparoxítonas.</li>
+            <li><b>Q19:</b> Favorável (paroxítona em L) / nocivo (sem acento).</li>
+            <li><b>Q20:</b> CERTO – apreender = confiscar.</li>
+            <li><b>Q21:</b> Ímã e órfão são paroxítonas terminadas em -ã/-ão.</li>
+            <li><b>Q22:</b> Girassol é grafado sem hífen.</li>
+            <li><b>Q23:</b> Polissemia = múltiplos significados da mesma palavra.</li>
+            <li><b>Q24:</b> O correto é <i>rescisão</i> (não "recessão").</li>
+            <li><b>Q25:</b> Memória (paroxítona terminada em ditongo).</li>
+        </ul>
     </div>
 
     <!-- ============================================================ -->
@@ -712,7 +931,7 @@
             <button class="nav-btn menu-btn">🏠 Menu</button>
         </a>
 
-        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <span class="page-indicator" id="pageIndicator">Página 1 de 12</span>
         <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
     </div>
     <div class="footer-note">

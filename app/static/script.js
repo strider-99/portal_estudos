@@ -59,7 +59,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 const isCorrect = userAnswer === gabarito && userAnswer !== '';
                 if (isCorrect) acertos++;
 
-                detalhes.push({ index: idx+1, gabarito, resposta: userAnswer, correto: isCorrect });
+                const enunciadoEl = q.querySelector('p b + *') || q.querySelector('p');
+                const enunciado = enunciadoEl ? enunciadoEl.textContent.replace(/^\d+\.\s*/, '').trim() : '';
+                const altLabels = q.querySelectorAll('.alternativas label');
+                const alternativas = [];
+                altLabels.forEach(label => {
+                    const txt = label.textContent.trim();
+                    if (txt) alternativas.push(txt);
+                });
+
+                detalhes.push({ index: idx+1, enunciado, alternativas, gabarito, resposta: userAnswer, correto: isCorrect });
 
                 const labels = q.querySelectorAll('.alternativas label');
                 labels.forEach(label => {

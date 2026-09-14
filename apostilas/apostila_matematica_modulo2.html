@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Matemática: Razão, Proporção, Regra de Três e Porcentagem</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f4ff;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a3c6e;
+            text-align: center;
+            border-bottom: 3px solid #3f51b5;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a3c6e;
+            background-color: #e8eaf6;
+            padding: 10px 15px;
+            border-left: 6px solid #3f51b5;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #283593;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p { line-height: 1.7; margin-bottom: 12px; text-align: justify; }
+        ul, ol { margin: 10px 0 15px 30px; }
+        li { margin-bottom: 6px; line-height: 1.6; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th { background-color: #dde1f0; font-weight: bold; }
+        .dica {
+            background-color: #e8f5e9;
+            border-left: 6px solid #2e7d32;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b { color: #1b5e20; }
+        .pegadinha {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .pegadinha b { color: #922b21; }
+        .exemplo {
+            background-color: #f0f8ff;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #3f51b5;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5f6fc;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #3f51b5;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p { margin-bottom: 6px; }
+        .alternativas { margin-left: 20px; font-size: 15px; }
+
+        .page { display: none; animation: fadeIn 0.3s ease; }
+        .page.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0.5; } to { opacity: 1; } }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a3c6e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover { background-color: #3f51b5; }
+        .nav-btn:active { transform: scale(0.97); }
+        .nav-btn:disabled { background-color: #adb5bd; cursor: not-allowed; box-shadow: none; }
+        .nav-btn.secondary { background-color: #6c757d; }
+        .nav-btn.secondary:hover { background-color: #5a6268; }
+        .nav-btn.menu-btn { background-color: #28a745; min-width: 100px; }
+        .nav-btn.menu-btn:hover { background-color: #218838; }
+
+        .footer-note { text-align: center; margin-top: 15px; font-size: 13px; color: #868e96; }
+        hr { margin: 30px 0 15px 0; border: 1px solid #dee2e6; }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>📐 MATEMÁTICA – MÓDULO 2</h1>
+    <p style="text-align:center; font-size:18px; color:#1a3c6e;"><b>Razão, Proporção, Regra de Três e Porcentagem</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>Os conceitos de <b>razão, proporção, regra de três e porcentagem</b> são os mais cobrados em provas de concursos, pois estão presentes em praticamente todos os problemas do cotidiano administrativo: cálculo de tributos, rateio de despesas, distribuição de recursos, descontos, reajustes, entre outros.</p>
+        <p>Este módulo traz <b>dicas de resolução</b>, <b>pegadinhas clássicas de banca</b> e <b>35 questões em nível de concurso</b>, com contexto e múltiplas etapas.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Dominar razão e proporção, grandezas direta e inversamente proporcionais, regra de três simples e composta, e porcentagem (incluindo variações sucessivas), com 35 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Razão e Proporção – pág. 2</li>
+            <li><b>Módulo II:</b> Grandezas Proporcionais e Regra de Três – pág. 3</li>
+            <li><b>Módulo III:</b> Regra de Três Composta – pág. 4</li>
+            <li><b>Módulo IV:</b> Porcentagem – pág. 5</li>
+            <li><b>Módulo V:</b> Variações Sucessivas e Dicas Finais – pág. 6</li>
+            <li><b>Questões:</b> 35 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Razão e Proporção                                  -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – RAZÃO E PROPORÇÃO</h2>
+
+        <h3>2.1. Razão</h3>
+        <p><b>Razão</b> é o quociente entre dois números (a/b, com b ≠ 0). Ex: a razão entre 6 e 3 é 6/3 = 2.</p>
+        <p><b>Aplicação comum:</b> escalas, densidade, velocidade média, consumo médio, razão entre grandezas diferentes.</p>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> Em uma repartição, a razão entre servidores do sexo masculino e feminino é 3/5. Se há 60 mulheres, quantos homens há?</p>
+            <ul>
+                <li>3/5 = x/60</li>
+                <li>5x = 180 → x = 36 homens</li>
+            </ul>
+        </div>
+
+        <h3>2.2. Proporção</h3>
+        <p><b>Proporção</b> é a igualdade entre duas razões: a/b = c/d. Numa proporção, o produto dos extremos é igual ao produto dos meios:</p>
+        <p style="text-align:center; font-weight:bold;">a × d = b × c</p>
+
+        <h3>2.3. Propriedades das Proporções</h3>
+        <ul>
+            <li><b>Propriedade fundamental:</b> a × d = b × c</li>
+            <li><b>Soma dos antecedentes / soma dos consequentes:</b> a/b = c/d = (a+c)/(b+d)</li>
+            <li><b>Inversão:</b> b/a = d/c</li>
+            <li><b>Alternância:</b> a/c = b/d</li>
+        </ul>
+
+        <h3>2.4. Divisão em Partes Proporcionais</h3>
+        <p>Dividir um valor em partes proporcionais a números dados é uma aplicação muito comum.</p>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> Dividir R$ 3.600,00 em partes proporcionais a 2, 3 e 4:</p>
+            <ul>
+                <li>Soma das partes: 2 + 3 + 4 = 9</li>
+                <li>Valor de cada parte: 3600 / 9 = 400</li>
+                <li>Partes: 2×400 = 800; 3×400 = 1200; 4×400 = 1600</li>
+            </ul>
+        </div>
+
+        <div class="dica">
+            <b>✅ Dica:</b> Em problemas de "divisão em partes proporcionais", sempre calcule o <b>valor da unidade</b> (total dividido pela soma das partes) e depois multiplique.
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> Cuidado com problemas de <b>divisão em partes inversamente proporcionais</b>. Nesse caso, some os <b>inversos</b> das partes, não os números diretamente. Ex: partes inversamente proporcionais a 2, 3 e 6 → some 1/2 + 1/3 + 1/6 = 1, e use os inversos para distribuir.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Grandezas Proporcionais e Regra de Três            -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – GRANDEZAS PROPORCIONAIS E REGRA DE TRÊS</h2>
+
+        <h3>3.1. Grandezas Diretamente Proporcionais</h3>
+        <p>Duas grandezas são <b>diretamente proporcionais</b> quando, ao aumentar uma, a outra também aumenta na mesma razão. Ex: número de trabalhadores × serviço realizado.</p>
+        <p><b>Regra:</b> multiplica-se em cruz (as setas apontam para o mesmo sentido).</p>
+
+        <h3>3.2. Grandezas Inversamente Proporcionais</h3>
+        <p>Duas grandezas são <b>inversamente proporcionais</b> quando, ao aumentar uma, a outra diminui na mesma razão. Ex: número de trabalhadores × tempo para executar a obra.</p>
+        <p><b>Regra:</b> multiplica-se em linha reta (inverte-se uma das grandezas).</p>
+
+        <h3>3.3. Regra de Três Simples</h3>
+        <p>Usada quando temos <b>duas grandezas</b> e uma incógnita. Passos:</p>
+        <ol>
+            <li>Identifique as grandezas envolvidas.</li>
+            <li>Verifique se são direta ou inversamente proporcionais (coloque setas).</li>
+            <li>Monte a proporção (mantenha ou inverta).</li>
+            <li>Resolva.</li>
+        </ol>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo (diretamente proporcional):</b> Se 5 servidores arquivam 200 processos em um dia, quantos processos 8 servidores arquivarão nas mesmas condições?</p>
+            <ul>
+                <li>Mais servidores → mais processos (direta)</li>
+                <li>5/8 = 200/x → 5x = 1600 → x = 320 processos</li>
+            </ul>
+        </div>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo (inversamente proporcional):</b> Se 6 máquinas produzem um lote em 10 dias, em quantos dias 15 máquinas produzirão o mesmo lote?</p>
+            <ul>
+                <li>Mais máquinas → menos dias (inversa)</li>
+                <li>6/15 = x/10 → 15x = 60 → x = 4 dias</li>
+            </ul>
+        </div>
+
+        <div class="dica">
+            <b>✅ Dica:</b> Sempre pergunte: "Se eu aumentar essa grandeza, a outra aumenta ou diminui?". Se aumentar → <b>direta</b>. Se diminuir → <b>inversa</b>.
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> Nunca monte a regra de três direto sem colocar as <b>setas</b>. Muitos candidatos erram por não perceber que uma das grandezas é inversamente proporcional.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Regra de Três Composta                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – REGRA DE TRÊS COMPOSTA</h2>
+
+        <p>Usada quando temos <b>três ou mais grandezas</b> envolvidas e uma incógnita.</p>
+
+        <h3>4.1. Passos para Resolver</h3>
+        <ol>
+            <li>Organize as grandezas em uma tabela.</li>
+            <li>Coloque uma seta na coluna que contém a incógnita (referência).</li>
+            <li>Compare cada outra grandeza com a referência: se for direta, mesma direção; se inversa, direção oposta.</li>
+            <li>Monte a proporção e resolva.</li>
+        </ol>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> Se 4 máquinas, trabalhando 6 horas por dia, produzem 1200 peças em 5 dias, quantas peças 6 máquinas, trabalhando 8 horas por dia, produzirão em 3 dias?</p>
+            <ul>
+                <li><b>Máquinas:</b> 4 → 6 (mais máquinas → mais peças, direta)</li>
+                <li><b>Horas/dia:</b> 6 → 8 (mais horas → mais peças, direta)</li>
+                <li><b>Dias:</b> 5 → 3 (menos dias → menos peças, direta)</li>
+                <li>Proporção: 1200/x = (4/6) × (6/8) × (5/3)</li>
+                <li>1200/x = (4 × 6 × 5)/(6 × 8 × 3) = 120/144 = 5/6</li>
+                <li>5x = 7200 → x = 1440 peças</li>
+            </ul>
+        </div>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo (com inversa):</b> Se 8 operários, trabalhando 7 horas por dia, constroem um muro em 12 dias, quantos dias levarão 6 operários, trabalhando 8 horas por dia, para construir o mesmo muro?</p>
+            <ul>
+                <li><b>Operários:</b> 8 → 6 (menos operários → mais dias, inversa)</li>
+                <li><b>Horas/dia:</b> 7 → 8 (mais horas → menos dias, inversa)</li>
+                <li>12/x = (6/8) × (8/7)</li>
+                <li>12/x = 48/56 = 6/7 → 6x = 84 → x = 14 dias</li>
+            </ul>
+        </div>
+
+        <div class="dica">
+            <b>✅ Dica:</b> Na regra de três composta, sempre monte a tabela com <b>cabeçalhos claros</b>. Isso evita erros de inversão.
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> Quando a grandeza com a incógnita é o <b>tempo</b>, geralmente as demais são <b>inversas</b> em relação a ela (mais operários → menos dias). Fique atento!
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Porcentagem                                        -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – PORCENTAGEM</h2>
+
+        <h3>5.1. Conceito</h3>
+        <p><b>Porcentagem</b> é uma razão com denominador 100. Ex: 25% = 25/100 = 0,25.</p>
+
+        <h3>5.2. Fatores Multiplicativos</h3>
+        <p>Usar <b>fatores multiplicativos</b> é a forma mais rápida e segura de resolver problemas de porcentagem.</p>
+        <ul>
+            <li><b>Aumento de x%:</b> multiplique por (1 + x/100). Ex: aumento de 20% → fator 1,20.</li>
+            <li><b>Desconto de x%:</b> multiplique por (1 − x/100). Ex: desconto de 15% → fator 0,85.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> Uma mercadoria de R$ 250,00 teve aumento de 12%. Qual o novo preço?</p>
+            <ul>
+                <li>Fator: 1 + 0,12 = 1,12</li>
+                <li>250 × 1,12 = R$ 280,00</li>
+            </ul>
+        </div>
+
+        <h3>5.3. Variações Sucessivas</h3>
+        <p>Quando há <b>aumentos e/ou descontos sucessivos</b>, devemos multiplicar os fatores (NUNCA somar ou subtrair as porcentagens).</p>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> Uma mercadoria teve aumento de 20% e, em seguida, desconto de 10%. Qual a variação final?</p>
+            <ul>
+                <li>Fator final: 1,20 × 0,90 = 1,08</li>
+                <li>Variação: 8% de aumento</li>
+            </ul>
+        </div>
+
+        <h3>5.4. Cálculo de Aumento e Desconto Percentual</h3>
+        <ul>
+            <li><b>Aumento percentual:</b> (valor final − valor inicial) / valor inicial × 100</li>
+            <li><b>Desconto percentual:</b> (valor inicial − valor final) / valor inicial × 100</li>
+        </ul>
+
+        <div class="dica">
+            <b>✅ Dica:</b> Memorize os fatores mais usados:
+            <ul>
+                <li>10% → 1,10 (aumento) / 0,90 (desconto)</li>
+                <li>20% → 1,20 / 0,80</li>
+                <li>25% → 1,25 / 0,75</li>
+                <li>50% → 1,50 / 0,50</li>
+            </ul>
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> <b>Aumento de 20% seguido de desconto de 20% NÃO volta ao valor original!</b> Fator final: 1,20 × 0,80 = 0,96 → na verdade, houve <b>redução de 4%</b>.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Variações Sucessivas e Dicas Finais                -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – VARIAÇÕES SUCESSIVAS E DICAS FINAIS</h2>
+
+        <h3>6.1. Porcentagem sobre Porcentagem</h3>
+        <p>Quando há aumentos compostos, como "aumento de 10% sobre um valor que já havia sido aumentado em 20%", os fatores se multiplicam.</p>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> Preço inicial = 100. Após dois aumentos sucessivos de 10% e 20%, qual o valor final?</p>
+            <ul>
+                <li>Fator: 1,10 × 1,20 = 1,32</li>
+                <li>Valor final: 100 × 1,32 = 132 (aumento de 32%)</li>
+            </ul>
+        </div>
+
+        <h3>6.2. Aumento e Redução: Achar o Valor Original</h3>
+        <p>Muitas questões dão o valor <b>após</b> o aumento/desconto e pedem o valor <b>original</b>. Nesse caso, use a divisão pelo fator:</p>
+        <ul>
+            <li>Valor original = valor final / fator</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> Após um aumento de 25%, uma mercadoria passou a custar R$ 250,00. Qual era o preço original?</p>
+            <ul>
+                <li>Fator: 1,25</li>
+                <li>Preço original = 250 / 1,25 = R$ 200,00</li>
+            </ul>
+        </div>
+
+        <h3>6.3. Dicas Finais</h3>
+        <ul>
+            <li>Sempre use <b>fatores multiplicativos</b> em vez de regra de três para porcentagem.</li>
+            <li>Em <b>variações sucessivas</b>, multiplique os fatores; nunca some ou subtraia as porcentagens.</li>
+            <li>Para achar o valor original, divida pelo fator.</li>
+            <li>Atenção à unidade (%, decimal, fração): converta corretamente.</li>
+        </ul>
+
+        <h3>6.4. Pegadinhas Clássicas</h3>
+        <table>
+            <tr><th>Pegadinha</th><th>Como evitar</th></tr>
+            <tr><td>Somar/subtrair porcentagens em variações sucessivas</td><td>Multiplique os fatores</td></tr>
+            <tr><td>Confundir aumento com desconto</td><td>Use 1+x para aumento, 1−x para desconto</td></tr>
+            <tr><td>Achar que "aumento de 20% + desconto de 20% = 0%"</td><td>Fator 1,20 × 0,80 = 0,96 → redução de 4%</td></tr>
+            <tr><td>Confundir "porcentagem de" com "porcentagem sobre"</td><td>Leia com atenção o referencial</td></tr>
+            <tr><td>Esquecer que porcentagem é uma razão com denominador 100</td><td>Converta sempre para decimal</td></tr>
+        </table>
+
+        <div class="dica">
+            <b>✅ Dica Final:</b> Pratique muito! Porcentagem é o tópico mais cobrado em provas de concurso. Dominar os fatores multiplicativos economiza tempo e evita erros.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 18                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 18)</h2>
+        <p><i>Questões no nível de concurso, com contexto e pegadinhas típicas.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> – Em uma repartição, a razão entre o número de servidores do sexo masculino e feminino é 3/4. Se há 48 mulheres, quantos homens há?</p>
+            <div class="alternativas">
+                a) 24<br>
+                b) 32<br>
+                c) 36<br>
+                d) 40<br>
+                e) 44
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> – Dividindo R$ 4.200,00 em partes diretamente proporcionais a 2, 3 e 5, qual é o maior valor?</p>
+            <div class="alternativas">
+                a) R$ 840,00<br>
+                b) R$ 1.260,00<br>
+                c) R$ 1.680,00<br>
+                d) R$ 2.100,00<br>
+                e) R$ 2.400,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> – Se 4 máquinas produzem 600 peças em 6 horas, quantas peças 6 máquinas produzirão em 4 horas, mantendo o mesmo ritmo?</p>
+            <div class="alternativas">
+                a) 500<br>
+                b) 550<br>
+                c) 600<br>
+                d) 650<br>
+                e) 700
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> – Se 8 operários constroem um muro em 10 dias, em quantos dias 5 operários construirão o mesmo muro, trabalhando no mesmo ritmo?</p>
+            <div class="alternativas">
+                a) 12<br>
+                b) 14<br>
+                c) 16<br>
+                d) 18<br>
+                e) 20
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> – Um produto de R$ 480,00 sofre um aumento de 15%. Qual o novo preço?</p>
+            <div class="alternativas">
+                a) R$ 495,00<br>
+                b) R$ 505,00<br>
+                c) R$ 552,00<br>
+                d) R$ 565,00<br>
+                e) R$ 575,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> – Um produto de R$ 250,00 sofreu desconto de 8%. Qual o valor final?</p>
+            <div class="alternativas">
+                a) R$ 220,00<br>
+                b) R$ 225,00<br>
+                c) R$ 230,00<br>
+                d) R$ 235,00<br>
+                e) R$ 240,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> – Uma mercadoria teve aumento de 20% e, em seguida, desconto de 20%. Qual foi a variação final?</p>
+            <div class="alternativas">
+                a) Sem variação<br>
+                b) Aumento de 4%<br>
+                c) Desconto de 4%<br>
+                d) Aumento de 20%<br>
+                e) Desconto de 20%
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> – Após um aumento de 25%, uma mercadoria passou a custar R$ 250,00. Qual era o preço original?</p>
+            <div class="alternativas">
+                a) R$ 180,00<br>
+                b) R$ 190,00<br>
+                c) R$ 200,00<br>
+                d) R$ 210,00<br>
+                e) R$ 220,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> – Uma pessoa tinha R$ 1.200,00 e gastou 35% desse valor. Quanto sobrou?</p>
+            <div class="alternativas">
+                a) R$ 720,00<br>
+                b) R$ 750,00<br>
+                c) R$ 780,00<br>
+                d) R$ 800,00<br>
+                e) R$ 820,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> – Se 15% de um número é 90, qual é esse número?</p>
+            <div class="alternativas">
+                a) 450<br>
+                b) 500<br>
+                c) 550<br>
+                d) 600<br>
+                e) 650
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> – Em uma turma de 40 alunos, 25% faltaram à prova. Quantos alunos compareceram?</p>
+            <div class="alternativas">
+                a) 25<br>
+                b) 28<br>
+                c) 30<br>
+                d) 32<br>
+                e) 35
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> – Um investidor aplicou R$ 5.000,00 a uma taxa de 2% ao mês. Qual o valor dos juros após 3 meses (juros simples)?</p>
+            <div class="alternativas">
+                a) R$ 200,00<br>
+                b) R$ 250,00<br>
+                c) R$ 300,00<br>
+                d) R$ 350,00<br>
+                e) R$ 400,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> – A razão entre 0,5 e 0,25 é:</p>
+            <div class="alternativas">
+                a) 0,5<br>
+                b) 1<br>
+                c) 2<br>
+                d) 2,5<br>
+                e) 4
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> – Dividindo 720 em partes inversamente proporcionais a 2, 3 e 6, qual o menor valor?</p>
+            <div class="alternativas">
+                a) 120<br>
+                b) 180<br>
+                c) 240<br>
+                d) 300<br>
+                e) 360
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> – Se 5 pedreiros constroem uma casa em 90 dias, quantos dias levarão 15 pedreiros, nas mesmas condições?</p>
+            <div class="alternativas">
+                a) 20<br>
+                b) 25<br>
+                c) 30<br>
+                d) 35<br>
+                e) 45
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> – Uma compra de R$ 800,00 foi paga com desconto de 10%. Qual foi o valor pago?</p>
+            <div class="alternativas">
+                a) R$ 680,00<br>
+                b) R$ 700,00<br>
+                c) R$ 710,00<br>
+                d) R$ 720,00<br>
+                e) R$ 750,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> – Um salário de R$ 2.400,00 foi reajustado em 12%. Qual o novo salário?</p>
+            <div class="alternativas">
+                a) R$ 2.588,00<br>
+                b) R$ 2.640,00<br>
+                c) R$ 2.688,00<br>
+                d) R$ 2.700,00<br>
+                e) R$ 2.750,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> – Se 3 kg de um produto custam R$ 24,00, quanto custarão 7 kg?</p>
+            <div class="alternativas">
+                a) R$ 48,00<br>
+                b) R$ 52,00<br>
+                c) R$ 54,00<br>
+                d) R$ 56,00<br>
+                e) R$ 60,00
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 19 a 35 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (19 a 35) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> – Três torneiras enchem um tanque em 4, 6 e 12 horas, respectivamente. Trabalhando juntas, em quanto tempo encherão o tanque?</p>
+            <div class="alternativas">
+                a) 1 hora<br>
+                b) 2 horas<br>
+                c) 3 horas<br>
+                d) 4 horas<br>
+                e) 6 horas
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> – Se 6 impressoras imprimem 1.200 páginas em 8 minutos, quantas páginas 10 impressoras imprimirão em 12 minutos?</p>
+            <div class="alternativas">
+                a) 2.000<br>
+                b) 2.400<br>
+                c) 2.800<br>
+                d) 3.000<br>
+                e) 3.200
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> – Um valor de R$ 1.500,00 foi aumentado em 30%. Em seguida, o novo valor sofreu desconto de 10%. Qual o valor final?</p>
+            <div class="alternativas">
+                a) R$ 1.700,00<br>
+                b) R$ 1.725,00<br>
+                c) R$ 1.750,00<br>
+                d) R$ 1.775,00<br>
+                e) R$ 1.800,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> – Um produto custava R$ 400,00. Após dois aumentos sucessivos de 10%, passou a custar:</p>
+            <div class="alternativas">
+                a) R$ 440,00<br>
+                b) R$ 460,00<br>
+                c) R$ 480,00<br>
+                d) R$ 484,00<br>
+                e) R$ 500,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> – A razão entre dois números é 2/5. Se o maior é 35, qual é o menor?</p>
+            <div class="alternativas">
+                a) 12<br>
+                b) 14<br>
+                c) 15<br>
+                d) 16<br>
+                e) 18
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> – Dividindo R$ 900,00 em partes diretamente proporcionais a 1, 2 e 3, qual o menor valor?</p>
+            <div class="alternativas">
+                a) R$ 100,00<br>
+                b) R$ 150,00<br>
+                c) R$ 200,00<br>
+                d) R$ 250,00<br>
+                e) R$ 300,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> – Se 10 kg de um produto custam R$ 80,00, quanto custarão 12 kg?</p>
+            <div class="alternativas">
+                a) R$ 88,00<br>
+                b) R$ 92,00<br>
+                c) R$ 96,00<br>
+                d) R$ 100,00<br>
+                e) R$ 104,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 26</b> – Um empréstimo de R$ 3.000,00 será pago com juros simples de 3% ao mês, após 4 meses. Quanto será pago no total?</p>
+            <div class="alternativas">
+                a) R$ 3.240,00<br>
+                b) R$ 3.360,00<br>
+                c) R$ 3.480,00<br>
+                d) R$ 3.520,00<br>
+                e) R$ 3.600,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 27</b> – Em uma empresa, 30% dos funcionários são mulheres. Se há 210 homens, quantos funcionários há no total?</p>
+            <div class="alternativas">
+                a) 250<br>
+                b) 280<br>
+                c) 300<br>
+                d) 320<br>
+                e) 350
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 28</b> – Um carro percorre 240 km em 3 horas. Mantendo a mesma velocidade, quantos km percorrerá em 5 horas?</p>
+            <div class="alternativas">
+                a) 320<br>
+                b) 360<br>
+                c) 400<br>
+                d) 420<br>
+                e) 480
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 29</b> – Se 5 caminhões transportam 100 toneladas de carga em 4 viagens, quantas viagens serão necessárias para 8 caminhões transportarem 200 toneladas?</p>
+            <div class="alternativas">
+                a) 3<br>
+                b) 4<br>
+                c) 5<br>
+                d) 6<br>
+                e) 7
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 30</b> – Um comerciante comprou um produto por R$ 80,00 e quer vendê-lo com 25% de lucro. Por quanto deve vender?</p>
+            <div class="alternativas">
+                a) R$ 90,00<br>
+                b) R$ 95,00<br>
+                c) R$ 100,00<br>
+                d) R$ 105,00<br>
+                e) R$ 110,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 31</b> – Se um produto custa R$ 120,00 e tem um desconto de 25%, quanto passará a custar?</p>
+            <div class="alternativas">
+                a) R$ 85,00<br>
+                b) R$ 88,00<br>
+                c) R$ 90,00<br>
+                d) R$ 92,00<br>
+                e) R$ 95,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 32</b> – Uma pessoa gastou 40% de seu salário com aluguel e 25% com alimentação. Se o salário é R$ 2.500,00, quanto sobrou?</p>
+            <div class="alternativas">
+                a) R$ 750,00<br>
+                b) R$ 800,00<br>
+                c) R$ 850,00<br>
+                d) R$ 875,00<br>
+                e) R$ 900,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 33</b> – Um investimento de R$ 8.000,00 rendeu R$ 640,00 em juros simples. Qual foi a taxa mensal, sabendo que o prazo foi de 4 meses?</p>
+            <div class="alternativas">
+                a) 1%<br>
+                b) 1,5%<br>
+                c) 2%<br>
+                d) 2,5%<br>
+                e) 3%
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 34</b> – Se x/5 = 12/20, qual é o valor de x?</p>
+            <div class="alternativas">
+                a) 2<br>
+                b) 3<br>
+                c) 4<br>
+                d) 5<br>
+                e) 6
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 35</b> – Uma mercadoria foi vendida por R$ 276,00, com lucro de 15% sobre o preço de custo. Qual foi o preço de custo?</p>
+            <div class="alternativas">
+                a) R$ 230,00<br>
+                b) R$ 235,00<br>
+                c) R$ 240,00<br>
+                d) R$ 245,00<br>
+                e) R$ 250,00
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-C</b> | <b>2-D</b> | <b>3-C</b> | <b>4-C</b> | <b>5-C</b> | <b>6-C</b> | <b>7-C</b> | <b>8-C</b> | <b>9-C</b> | <b>10-D</b></p>
+            <p><b>11-C</b> | <b>12-C</b> | <b>13-C</b> | <b>14-C</b> | <b>15-C</b> | <b>16-D</b> | <b>17-C</b> | <b>18-D</b> | <b>19-B</b> | <b>20-D</b></p>
+            <p><b>21-C</b> | <b>22-D</b> | <b>23-B</b> | <b>24-B</b> | <b>26-B</b> | <b>27-C</b> | <b>28-C</b> | <b>29-C</b> | <b>30-C</b> | <b>31-C</b></p>
+            <p><b>32-D</b> | <b>33-C</b> | <b>34-B</b> | <b>35-C</b></p>
+        </div>
+
+        <div class="dica" style="margin-top:20px;">
+            <b>📚 Resoluções comentadas (amostra):</b>
+            <ul>
+                <li><b>Q1:</b> 3/4 = x/48 → 4x = 144 → x = 36.</li>
+                <li><b>Q7:</b> 1,20 × 0,80 = 0,96 → desconto de 4%.</li>
+                <li><b>Q8:</b> 250 / 1,25 = 200.</li>
+                <li><b>Q19:</b> 1/4 + 1/6 + 1/12 = 3/12 + 2/12 + 1/12 = 6/12 = 1/2 → 2 horas.</li>
+                <li><b>Q22:</b> 400 × 1,10 × 1,10 = 400 × 1,21 = 484.</li>
+                <li><b>Q35:</b> 276 / 1,15 = 240.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

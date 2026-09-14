@@ -1,37 +1,188 @@
 [
-  {"enunciado":"O princípio da Administração Pública que exige que o agente público só faça o que a lei permite é a:","alternativas":["a) Legalidade","b) Impessoalidade","c) Moralidade","d) Publicidade","e) Eficiência"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"O princípio da Administração Pública que veda o nepotismo é a:","alternativas":["a) Legalidade","b) Impessoalidade","c) Moralidade","d) Publicidade","e) Eficiência"],"gabarito":"B","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"O princípio que exige a divulgação dos atos administrativos para controle social é a:","alternativas":["a) Legalidade","b) Impessoalidade","c) Moralidade","d) Publicidade","e) Eficiência"],"gabarito":"D","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"O princípio da eficiência foi incluído no art. 37 da CF/88 por qual emenda?","alternativas":["a) EC 19/1998","b) EC 45/2004","c) EC 91/2016","d) EC 103/2019","e) EC 122/2022"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"A Administração Direta é composta por:","alternativas":["a) União, Estados, DF e Municípios","b) Autarquias e fundações públicas","c) Empresas públicas e sociedades de economia mista","d) Organizações sociais","e) Serviços sociais autônomos"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"As autarquias são pessoas jurídicas de:","alternativas":["a) Direito privado","b) Direito público","c) Direito empresarial","d) Direito civil","e) Direito internacional"],"gabarito":"B","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"Qual dos seguintes NÃO é um atributo do ato administrativo?","alternativas":["a) Presunção de legitimidade","b) Imperatividade","c) Autoexecutoriedade","d) Discricionariedade","e) Vinculação"],"gabarito":"E","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"Os requisitos (elementos) do ato administrativo são:","alternativas":["a) Competência, finalidade, forma, motivo, objeto","b) Competência, legalidade, moralidade, publicidade","c) Finalidade, forma, motivo, objeto, eficiência","d) Legalidade, impessoalidade, moralidade, publicidade, eficiência","e) Competência, finalidade, forma, motivo, discricionariedade"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"O poder administrativo que permite à Administração estruturar e coordenar seus órgãos é o:","alternativas":["a) Poder hierárquico","b) Poder disciplinar","c) Poder de polícia","d) Poder normativo","e) Poder de punição"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"O poder de polícia é caracterizado por, EXCETO:","alternativas":["a) Discricionariedade","b) Coercibilidade","c) Autoexecutoriedade","d) Vinculação total à lei","e) Limitação de direitos individuais"],"gabarito":"D","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"A Administração Indireta é composta por:","alternativas":["a) União, Estados, DF e Municípios","b) Autarquias, fundações públicas, empresas públicas e sociedades de economia mista","c) Ministérios e Secretarias","d) Órgãos da administração direta","e) Poderes Executivo, Legislativo e Judiciário"],"gabarito":"B","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"Qual princípio da Administração Pública está relacionado à transparência e ao controle social?","alternativas":["a) Legalidade","b) Impessoalidade","c) Moralidade","d) Publicidade","e) Eficiência"],"gabarito":"D","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"A presunção de legitimidade e veracidade é um atributo que significa que:","alternativas":["a) O ato é válido até prova em contrário","b) O ato deve ser publicado","c) O ato não pode ser questionado","d) O ato é irrecorrível","e) O ato depende de aprovação judicial"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"A Petrobras é um exemplo de:","alternativas":["a) Autarquia","b) Fundação pública","c) Empresa pública","d) Sociedade de economia mista","e) Organização social"],"gabarito":"D","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"A autoexecutoriedade do ato administrativo significa que:","alternativas":["a) O ato pode ser executado diretamente pela Administração","b) O ato depende de autorização judicial","c) O ato é definitivo e não pode ser anulado","d) O ato deve ser publicado em diário oficial","e) O ato é discricionário"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"Os atos administrativos normativos são aqueles que:","alternativas":["a) Organizam o funcionamento interno","b) São gerais e abstratos (ex: decretos)","c) Declaram situações (ex: certidões)","d) Aplicam sanções (ex: multas)","e) Manifestam vontade (ex: licenças)"],"gabarito":"B","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"O poder disciplinar permite à Administração:","alternativas":["a) Editar decretos e regulamentos","b) Aplicar sanções a servidores públicos","c) Limitar direitos individuais","d) Estruturar seus órgãos","e) Delegar competências"],"gabarito":"B","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"A finalidade do ato administrativo deve ser sempre:","alternativas":["a) O interesse público","b) O interesse privado","c) O interesse do agente","d) O interesse político","e) O interesse econômico"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"O princípio da moralidade administrativa exige que o agente público atue com:","alternativas":["a) Honestidade, lealdade e boa-fé","b) Rapidez e eficiência","c) Transparência e publicidade","d) Impessoalidade e neutralidade","e) Legalidade e formalismo"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"A Administração Pública em sentido estrito refere-se ao:","alternativas":["a) Poder Executivo","b) Poder Legislativo","c) Poder Judiciário","d) Ministério Público","e) Tribunal de Contas"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"As fundações públicas podem ser de direito:","alternativas":["a) Público ou privado","b) Apenas público","c) Apenas privado","d) Apenas empresarial","e) Apenas civil"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"O poder normativo (regulamentar) é exercido por meio de:","alternativas":["a) Decretos e regulamentos","b) Ordens de serviço","c) Licenças e autorizações","d) Certidões e atestados","e) Multas e advertências"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"A empresa pública é uma pessoa jurídica de:","alternativas":["a) Direito público, com capital público","b) Direito privado, com capital público","c) Direito público, com capital misto","d) Direito privado, com capital misto","e) Direito empresarial, com capital privado"],"gabarito":"B","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"A imperatividade do ato administrativo significa que:","alternativas":["a) O ato é obrigatório e pode impor deveres unilateralmente","b) O ato é válido até prova em contrário","c) O ato é executado diretamente pela Administração","d) O ato deve ser publicado","e) O ato é discricionário"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"O princípio da impessoalidade está relacionado à:","alternativas":["a) Vedação ao nepotismo","b) Divulgação dos atos","c) Eficiência administrativa","d) Moralidade dos agentes","e) Legalidade dos atos"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"Os atos administrativos enunciativos incluem:","alternativas":["a) Regulamentos e decretos","b) Certidões e atestados","c) Licenças e autorizações","d) Multas e advertências","e) Instruções e ordens de serviço"],"gabarito":"B","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"O poder de polícia é exercido para:","alternativas":["a) Limitar direitos individuais em benefício do interesse público","b) Aplicar sanções a servidores","c) Estruturar a administração","d) Editar decretos","e) Delegar competências"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"A regra geral na Administração Pública é que:","alternativas":["a) O agente pode fazer tudo o que a lei não proíbe","b) O agente só pode fazer o que a lei autoriza","c) O agente tem liberdade total","d) O agente não precisa de lei para agir","e) O agente pode agir discricionariamente sempre"],"gabarito":"B","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"O INSS é um exemplo de:","alternativas":["a) Autarquia","b) Fundação pública","c) Empresa pública","d) Sociedade de economia mista","e) Organização social"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"A forma do ato administrativo deve obedecer a:","alternativas":["a) Procedimentos legais","b) Interesse público","c) Vontade do agente","d) Discricionariedade","e) Eficiência"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"O poder hierárquico permite, EXCETO:","alternativas":["a) Dar ordens","b) Delegar competências","c) Avocar funções","d) Aplicar sanções a servidores","e) Fiscalizar atuação de órgãos subordinados"],"gabarito":"D","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"O princípio da publicidade admite exceções, como:","alternativas":["a) Segurança nacional","b) Eficiência administrativa","c) Moralidade","d) Legalidade","e) Impessoalidade"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"As sociedades de economia mista têm capital:","alternativas":["a) Público e privado","b) Apenas público","c) Apenas privado","d) Apenas estrangeiro","e) Apenas municipal"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"A competência do ato administrativo refere-se ao:","alternativas":["a) Sujeito que pratica o ato","b) Conteúdo do ato","c) Motivo do ato","d) Forma do ato","e) Finalidade do ato"],"gabarito":"A","slug_materia":"apostila_administracao_publica"},
-  {"enunciado":"O mnemônico COFIFO, utilizado para memorizar os elementos do ato administrativo, significa:","alternativas":["a) Competência, Objeto, Forma, Finalidade, Motivo","b) Competência, Obrigação, Forma, Finalidade, Objeto","c) Controle, Objetivo, Função, Finalidade, Ordem","d) Coerência, Objeto, Forma, Foco, Objetivo","e) Competência, Objeto, Função, Finalidade, Ordem"],"gabarito":"A","slug_materia":"apostila_administracao_publica"}
+  {
+    "enunciado": "Sobre as fontes do Direito Administrativo, julgue as assertivas: I. A Lei é considerada a fonte primária e de observância imediata. II. O Direito Administrativo brasileiro é codificado, facilitando a consulta normativa. III. O costume administrativo não exerce influência na formação do Direito Administrativo.",
+    "alternativas": ["A) Apenas I é verdadeira.", "B) I e II são verdadeiras.", "C) Todas são falsas."],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "O Regime Jurídico Administrativo fundamenta-se na desigualdade jurídica entre Estado e particular. Esse conceito refere-se à:",
+    "alternativas": ["A) Restrição administrativa absoluta.", "B) Supremacia do Interesse Público sobre o Privado.", "C) Ausência de prerrogativas estatais."],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "Analise as seguintes afirmações sobre os princípios administrativos: I. O Princípio da Impessoalidade impede que constem nomes ou símbolos que caracterizem promoção pessoal de autoridades em publicidade oficial. II. A Autotutela é o dever de a Administração fiscalizar seus atos, podendo anulá-los por ilegalidade. III. O Princípio da Eficiência foi previsto no texto original da Constituição de 1988.",
+    "alternativas": ["A) I e II apenas.", "B) II e III apenas.", "C) I, II e III."],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "Sobre a organização administrativa, julgue as assertivas: I. Autarquias são criadas por lei específica para exercer funções típicas de Estado. II. Empresas Públicas possuem capital integralmente público. III. Sociedades de Economia Mista podem adotar qualquer forma societária.",
+    "alternativas": ["A) I e II.", "B) II e III.", "C) I e III."],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "A Administração Pública, ao detectar um vício sanável em um requisito de um ato administrativo, poderá realizar a:",
+    "alternativas": ["A) Revogação por mérito.", "B) Convalidação.", "C) Anulação vinculada."],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "O poder que a Administração possui para limitar o exercício de direitos individuais em benefício do interesse público, como a apreensão de mercadorias vencidas, é o:",
+    "alternativas": ["A) Poder Hierárquico.", "B) Poder de Polícia.", "C) Poder Regulamentar."],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "Sobre o conceito e fontes: I. O Direito Administrativo é um ramo do Direito Privado. II. Jurisprudência é a reiteração de julgados em um mesmo sentido. III. O Direito Administrativo brasileiro não é codificado.",
+    "alternativas": ["A) Apenas II e III são verdadeiras.", "B) Apenas I é verdadeira.", "C) Todas são verdadeiras."],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "Sobre o Regime Jurídico Administrativo: I. Prerrogativas são privilégios do administrador para fins pessoais. II. O Poder de Império permite ao Estado coagir o administrado. III. A Supremacia do Interesse Público justifica a desapropriação.",
+    "alternativas": ["A) Apenas I é falsa.", "B) Apenas II e III são falsas.", "C) I, II e III são verdadeiras."],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "Sobre os princípios expressos: I. O Princípio da Eficiência exige avaliação periódica de desempenho. II. A Publicidade é requisito de eficácia dos atos administrativos. III. A Legalidade administrativa é idêntica à legalidade para particulares.",
+    "alternativas": ["A) Apenas I e II são verdadeiras.", "B) I, II e III são verdadeiras.", "C) Apenas III é verdadeira."],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "Sobre a organização administrativa: I. Órgãos públicos possuem personalidade jurídica própria. II. Autarquias são criadas diretamente por lei específica. III. Sociedades de Economia Mista exploradoras de atividade econômica são regidas pelo direito privado.",
+    "alternativas": ["A) Apenas II e III são verdadeiras.", "B) Apenas I é verdadeira.", "C) Todas são falsas."],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "Sobre Atos Administrativos: I. O motivo é a situação de fato que autoriza a prática do ato. II. Atos discricionários não possuem requisitos vinculados. III. A anulação de um ato ilegal produz efeitos retroativos (ex tunc).",
+    "alternativas": ["A) Apenas I e III são verdadeiras.", "B) Apenas II é verdadeira.", "C) Todas são verdadeiras."],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "Sobre o terceiro setor: I. Organizações Sociais (OS) celebram Contrato de Gestão. II. O Sistema 'S' integra a Administração Pública Indireta. III. OSCIPs celebram Termo de Parceria.",
+    "alternativas": ["A) Apenas I e III são verdadeiras.", "B) Apenas II é falsa.", "C) I, II e III são verdadeiras."],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "Sobre os Poderes: I. O Poder Disciplinar é derivado do Poder Hierárquico na relação interna. II. O Poder de Polícia é sempre vinculado em todas as suas etapas. III. Avocação é chamar para si competência de subordinado.",
+    "alternativas": ["A) Apenas I e III são verdadeiras.", "B) Todas são verdadeiras.", "C) Apenas II é verdadeira."],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "Sobre Agentes Públicos: I. Mesários eleitorais são agentes honoríficos. II. Cargos em comissão são de livre nomeação e exoneração. III. Servidor celetista ocupa emprego público.",
+    "alternativas": ["A) I, II e III são verdadeiras.", "B) Apenas I e II são verdadeiras.", "C) Apenas III é verdadeira."],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "Sobre Acumulação de Cargos: I. É permitida a acumulação de dois cargos de professor. II. É permitida a acumulação de um cargo de professor com outro técnico. III. A regra geral na CF é a proibição de acumulação.",
+    "alternativas": ["A) I, II e III são verdadeiras.", "B) Apenas III é verdadeira.", "C) Todas são falsas."],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "Sobre Convalidação: I. Vício de finalidade é sempre sanável. II. Vício de competência em razão da matéria é insanável. III. A convalidação tem efeito retroativo.",
+    "alternativas": ["A) Apenas II e III são verdadeiras.", "B) Apenas I é verdadeira.", "C) Todas são falsas."],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "As Agências Reguladoras são autarquias sob regime especial?",
+    "alternativas": ["A) Verdadeiro", "B) Falso"],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "O silêncio administrativo é sempre considerado ato administrativo?",
+    "alternativas": ["A) Verdadeiro", "B) Falso"],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "A revogação de ato administrativo pode ser feita pelo Judiciário?",
+    "alternativas": ["A) Verdadeiro", "B) Falso"],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "A desapropriação exige indenização prévia e justa?",
+    "alternativas": ["A) Verdadeiro", "B) Falso"],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "O princípio da moralidade permite anular atos que, embora legais, sejam antiéticos?",
+    "alternativas": ["A) Verdadeiro", "B) Falso"],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "A desconcentração gera hierarquia?",
+    "alternativas": ["A) Verdadeiro", "B) Falso"],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "Fundações públicas de direito público são equivalentes a autarquias?",
+    "alternativas": ["A) Verdadeiro", "B) Falso"],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "O servidor em estágio probatório pode ser exonerado?",
+    "alternativas": ["A) Verdadeiro", "B) Falso"],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "A licitação é obrigatória para Empresas Públicas? (com regime próprio)",
+    "alternativas": ["A) Verdadeiro", "B) Falso"],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "O Poder Regulamentar permite ao Chefe do Executivo criar obrigações não previstas em lei?",
+    "alternativas": ["A) Verdadeiro", "B) Falso"],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "A imperatividade é atributo de todos os atos administrativos?",
+    "alternativas": ["A) Verdadeiro", "B) Falso"],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "A presunção de legitimidade é absoluta?",
+    "alternativas": ["A) Verdadeiro", "B) Falso"],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "O Princípio da Publicidade é absoluto?",
+    "alternativas": ["A) Verdadeiro", "B) Falso"],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "Militares podem fazer greve?",
+    "alternativas": ["A) Verdadeiro", "B) Falso"],
+    "gabarito": "B",
+    "slug_materia": "apostila_administracao_publica"
+  },
+  {
+    "enunciado": "A Administração pode anular seus próprios atos de ofício?",
+    "alternativas": ["A) Verdadeiro", "B) Falso"],
+    "gabarito": "A",
+    "slug_materia": "apostila_administracao_publica"
+  }
 ]

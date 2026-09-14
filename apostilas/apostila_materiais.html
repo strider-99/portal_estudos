@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apostila - Administração de Materiais</title>
+    <title>Apostila - Administração de Recursos Materiais (ARM)</title>
     <style>
         * {
             margin: 0;
@@ -107,6 +107,18 @@
             margin-left: 20px;
             font-size: 15px;
         }
+        .comentario {
+            background-color: #eef6ff;
+            border-left: 5px solid #3b82f6;
+            padding: 10px 14px;
+            margin-top: 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #1e3a5f;
+        }
+        .comentario b {
+            color: #1d4ed8;
+        }
 
         .page {
             display: none;
@@ -197,467 +209,654 @@
 <body>
 <div class="book-container" id="book">
 
-    <h1>📦 ADMINISTRAÇÃO DE MATERIAIS</h1>
-    <p style="text-align:center; font-size:18px; color:#1a4d2e;"><b>Compras, Organização, Requisição, Armazenamento, Reposição, Estoques e Conservação</b></p>
+    <h1>📦 ADMINISTRAÇÃO DE RECURSOS MATERIAIS (ARM)</h1>
+    <p style="text-align:center; font-size:18px; color:#1a4d2e;"><b>Apostila de Alta Performance — Fundamentos, Classificação, Critérios e Simulado</b></p>
     <hr>
 
     <!-- ============================================================ -->
     <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
     <!-- ============================================================ -->
     <div class="page active" data-page="1">
-        <h2>1. INTRODUÇÃO À ADMINISTRAÇÃO DE MATERIAIS</h2>
-        <p>A <b>Administração de Materiais</b> é a função organizacional responsável pelo planejamento, coordenação e controle do fluxo de materiais, desde a aquisição (compras) até a utilização final (consumo) ou destinação (descarte). Seu objetivo principal é <b>garantir o abastecimento adequado</b> no momento certo, na quantidade certa, com a qualidade certa e ao menor custo possível.</p>
-        <p>Uma gestão eficiente de materiais impacta diretamente a liquidez da empresa (reduzindo estoques parados), a continuidade das operações (evitando faltas) e a satisfação dos clientes (cumprindo prazos).</p>
+        <h2>1. INTRODUÇÃO À ADMINISTRAÇÃO DE RECURSOS MATERIAIS</h2>
+        <p>A <b>Administração de Recursos Materiais (ARM)</b> transcende a simples guarda de itens; ela representa o núcleo estratégico da eficiência operacional. Em organizações públicas, como na <b>SEA-SC</b>, e em entidades privadas, a alocação de recursos escassos (humanos, financeiros e tecnológicos) exige uma visão integrada para evitar a descontinuidade de serviços essenciais.</p>
+        <p>O impacto da ARM é sentido diretamente no fluxo de caixa e no nível de serviço: uma gestão falha resulta em estoques obsoletos ou na interrupção do ciclo produtivo. Para o gestor, a maestria começa na distinção técnica entre o que é consumido e o que é patrimoniado, garantindo que a governança de bens siga preceitos de economicidade e transparência.</p>
 
         <div class="dica">
-            <b>🎯 Objetivo do Módulo:</b> Compreender todas as etapas do ciclo de vida dos materiais, desde a requisição até a conservação, com foco em processos, ferramentas de gestão e boas práticas.
+            <b>🎯 Objetivo do Módulo:</b> Dominar os fundamentos da ARM, a tipologia de recursos, as funções essenciais, os atributos e etapas da classificação de materiais, os critérios ABC/XYZ e as classificações específicas, com foco em provas de concursos (IBADE, IBDO e afins).
         </div>
 
         <h2>2. SUMÁRIO</h2>
         <ul>
-            <li><b>Módulo I:</b> Compras e Aquisição – pág. 2</li>
-            <li><b>Módulo II:</b> Requisição e Organização Interna – pág. 3</li>
-            <li><b>Módulo III:</b> Armazenagem e Movimentação – pág. 4</li>
-            <li><b>Módulo IV:</b> Reposição e Gestão de Estoques – pág. 5</li>
-            <li><b>Módulo V:</b> Conservação e Manutenção – pág. 6</li>
-            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+            <li><b>Módulo I:</b> Fundamentos da ARM – pág. 2</li>
+            <li><b>Módulo II:</b> Atributos e Etapas da Classificação – pág. 3</li>
+            <li><b>Módulo III:</b> Critérios e Tipos de Classificação – pág. 4</li>
+            <li><b>Módulo IV:</b> Questões Comentadas de Capítulos – pág. 5</li>
+            <li><b>Módulo V:</b> Revisão Geral e Resumo – pág. 6</li>
+            <li><b>Simulado Final:</b> 25 questões (págs. 7 e 8) + Gabarito e Comentários</li>
         </ul>
     </div>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 2: Compras e Aquisição                                -->
+    <!-- PÁGINA 2: Fundamentos da ARM                                 -->
     <!-- ============================================================ -->
     <div class="page" data-page="2">
-        <h2>MÓDULO I – COMPRAS E AQUISIÇÃO</h2>
-        <h3>2.1. Conceito e Importância</h3>
-        <p>A <b>função compras</b> consiste em adquirir materiais, insumos e serviços necessários às operações da organização, nas condições mais vantajosas (preço, prazo, qualidade e forma de pagamento). Uma compra bem-sucedida equilibra o <b>custo total</b> (não apenas o preço unitário, mas também fretes, impostos, armazenagem e perdas).</p>
+        <h2>MÓDULO I – FUNDAMENTOS DA ADMINISTRAÇÃO DE RECURSOS MATERIAIS</h2>
 
-        <h3>2.2. Etapas do Processo de Compras</h3>
-        <ol>
-            <li><b>Identificação da necessidade:</b> originada por uma requisição interna ou pela reposição automática de estoques.</li>
-            <li><b>Pesquisa e seleção de fornecedores:</b> análise do mercado, cotações e cadastro de fornecedores confiáveis.</li>
-            <li><b>Negociação:</b> definição de preços, prazos, condições de pagamento e frete.</li>
-            <li><b>Emissão do pedido de compra:</b> documento formal que oficializa a aquisição.</li>
-            <li><b>Acompanhamento do pedido:</b> monitoramento do prazo de entrega (follow-up).</li>
-            <li><b>Recebimento e conferência:</b> verificação quantitativa (contagem) e qualitativa (inspeção) dos itens.</li>
-            <li><b>Pagamento e encerramento:</b> liquidação financeira e arquivamento dos documentos.</li>
-        </ol>
+        <h3>1.1. Introdução à Gestão de Recursos</h3>
+        <p>A ARM é o núcleo estratégico da eficiência operacional. A alocação de recursos escassos exige visão integrada para evitar descontinuidade de serviços essenciais. O impacto é sentido no fluxo de caixa e no nível de serviço: gestão falha gera estoques obsoletos ou interrupção do ciclo produtivo. A maestria começa na distinção técnica entre o que é <b>consumido</b> e o que é <b>patrimoniado</b>.</p>
 
-        <h3>2.3. Modalidades de Compra no Setor Público (Noções)</h3>
-        <p>Embora o foco seja rotinas administrativas, é importante saber que no serviço público as compras são regidas pela Lei 14.133/2021 (Nova Lei de Licitações), com modalidades como <b>Pregão</b> (eletrônico/presencial), <b>Concorrência</b>, <b>Diálogo Competitivo</b> e <b>Leilão</b>.</p>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- PÁGINA 3: Requisição e Organização Interna                   -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="3">
-        <h2>MÓDULO II – REQUISIÇÃO E ORGANIZAÇÃO INTERNA</h2>
-        <h3>3.1. Requisição de Compras</h3>
-        <p>A <b>requisição de compras</b> é o documento interno que formaliza o pedido de um item ao setor de compras. Ela contém informações como:</p>
+        <h3>1.2. Tipologia de Recursos (Humanos, Financeiros, Tecnológicos, Materiais e Patrimoniais)</h3>
+        <p>A doutrina clássica e as bancas (especialmente IBADE e IBDO) separam os recursos físicos em duas categorias principais com base na permanência:</p>
         <ul>
-            <li>Descrição detalhada do material (especificações técnicas).</li>
-            <li>Quantidade solicitada.</li>
-            <li>Justificativa para a compra.</li>
-            <li>Centro de custo ou setor solicitante.</li>
-            <li>Data prevista para a necessidade.</li>
-        </ul>
-        <p>Esse documento deve passar por <b>aprovação hierárquica</b> (chefias) antes de ser enviado ao setor de compras, garantindo o controle orçamentário.</p>
-
-        <h3>3.2. Organização do Almoxarifado</h3>
-        <p>A organização física dos materiais é essencial para a eficiência. Os princípios básicos de organização incluem:</p>
-        <ul>
-            <li><b>Classificação dos materiais:</b> agrupar itens similares (ex.: matérias-primas, produtos acabados, materiais de escritório).</li>
-            <li><b>Endereçamento:</b> atribuir localizações fixas (estantes, prateleiras, boxes) para facilitar a localização.</li>
-            <li><b>Codificação:</b> utilizar códigos (numéricos ou alfanuméricos) para identificar cada item de forma única.</li>
-            <li><b>Layout funcional:</b> dispor os itens de maior rotatividade próximos à saída (expedição) e os mais pesados em prateleiras baixas.</li>
+            <li><b>Recursos Materiais:</b> elementos físicos não permanentes, utilizados no funcionamento ou incorporados ao produto final.</li>
+            <li><b>Recursos Patrimoniais:</b> conjunto de bens, valores e direitos de caráter permanente, destinados à manutenção das atividades da organização (ex.: imóveis, veículos, máquinas).</li>
         </ul>
 
-        <div class="dica">
-            <b>📋 Boa prática:</b> O almoxarifado deve ser organizado de modo que qualquer colaborador consiga localizar um item rapidamente, sem depender de uma única pessoa.
-        </div>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- PÁGINA 4: Armazenagem e Movimentação                         -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="4">
-        <h2>MÓDULO III – ARMAZENAGEM E MOVIMENTAÇÃO</h2>
-        <h3>4.1. Armazenagem</h3>
-        <p>A <b>armazenagem</b> envolve a guarda e a preservação dos materiais até o momento de sua utilização ou expedição. Seus objetivos são:</p>
-        <ul>
-            <li>Proteger os materiais contra danos físicos, roubos e intempéries.</li>
-            <li>Otimizar o espaço físico.</li>
-            <li>Facilitar o acesso e a movimentação.</li>
-        </ul>
-
-        <h3>4.2. Métodos de Armazenagem</h3>
-        <ul>
-            <li><b>PEPS (Primeiro que Entra, Primeiro que Sai):</b> Utilizado para itens perecíveis ou com prazo de validade. Garante que os materiais mais antigos sejam utilizados primeiro.</li>
-            <li><b>UEPS (Último que Entra, Primeiro que Sai):</b> Mais usado para fins fiscais em algumas situações, mas menos recomendado para conservação física.</li>
-            <li><b>Estocagem por classificação (ABC):</b> os itens de maior valor/giro (classe A) ficam em locais de fácil acesso e maior segurança.</li>
-        </ul>
-
-        <h3>4.3. Recebimento e Conferência</h3>
-        <p>O recebimento é a etapa crítica em que se confronta o pedido com o material entregue. Divide-se em:</p>
-        <ul>
-            <li><b>Conferência quantitativa:</b> verificação da quantidade entregue (contagem, pesagem ou medição).</li>
-            <li><b>Conferência qualitativa:</b> inspeção visual, testes e verificação de especificações técnicas (qualidade, validade, integridade).</li>
-        </ul>
-        <p>Qualquer divergência deve ser registrada imediatamente (ex.: notas fiscais com desacordo).</p>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- PÁGINA 5: Reposição e Gestão de Estoques                     -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="5">
-        <h2>MÓDULO IV – REPOSIÇÃO E GESTÃO DE ESTOQUES</h2>
-        <h3>5.1. Conceitos Fundamentais de Estoques</h3>
-        <ul>
-            <li><b>Estoque máximo:</b> limite superior de itens que a empresa deseja manter (evita excessos e custos de armazenagem).</li>
-            <li><b>Estoque mínimo (ou de segurança):</b> quantidade extra para cobrir imprevistos (atrasos de fornecedores, aumento inesperado de consumo).</li>
-            <li><b>Ponto de pedido (PP):</b> nível de estoque que dispara uma nova compra. Fórmula básica: <b>PP = (Consumo Médio × Tempo de Reposição) + Estoque de Segurança</b>.</li>
-            <li><b>Lote Econômico de Compra (LEC):</b> quantidade ideal a ser comprada que minimiza o custo total (soma dos custos de pedido e de armazenagem).</li>
-        </ul>
-
-        <h3>5.2. Curva ABC (Classificação de Estoques)</h3>
-        <p>A Curva ABC é uma ferramenta de gestão que classifica os itens com base em seu <b>valor financeiro</b> ou importância operacional:</p>
+        <p><b>Memorização Estratégica:</b></p>
         <table>
-            <tr><th>Classe</th><th>Característica</th><th>Controle</th></tr>
-            <tr><td><b>A</b></td><td>Itens de alto valor / baixa quantidade (20% dos itens representam 80% do valor)</td><td>Controle rigoroso, estoques mínimos, acompanhamento frequente</td></tr>
-            <tr><td><b>B</b></td><td>Itens de valor médio / quantidade média (30% dos itens representam 15% do valor)</td><td>Controle intermediário</td></tr>
-            <tr><td><b>C</b></td><td>Itens de baixo valor / grande quantidade (50% dos itens representam 5% do valor)</td><td>Controle simplificado, estoques maiores</td></tr>
+            <tr>
+                <th>Recurso</th>
+                <th>Natureza</th>
+                <th>Vida Útil / Identidade</th>
+                <th>Exemplos</th>
+            </tr>
+            <tr>
+                <td><b>Material</b></td>
+                <td>Consumo</td>
+                <td>&lt; 2 anos / Perde identidade no uso</td>
+                <td>Resmas de papel, reagentes, parafusos.</td>
+            </tr>
+            <tr>
+                <td><b>Patrimonial</b></td>
+                <td>Permanente</td>
+                <td>&gt; 2 anos / Mantém identidade física</td>
+                <td>Impressoras, frotas, mobiliário, patentes.</td>
+            </tr>
         </table>
 
-        <h3>5.3. Giro de Estoques</h3>
-        <p>O <b>giro de estoques</b> indica quantas vezes o estoque se renovou em um período. Quanto maior o giro, mais eficiente é a gestão (desde que não haja faltas). Fórmula: <b>Giro = Consumo Total / Estoque Médio</b>.</p>
+        <div class="dica">
+            <b>⚠️ Cobrança em Prova:</b> O "divisor de águas" para a banca IBADE é o critério temporal de <b>2 anos</b>. Itens com durabilidade superior a este marco e que não perdem sua identidade ao serem incorporados a outros bens são classificados como <b>permanentes</b>.
+        </div>
+
+        <div class="dica">
+            <b>🪤 Pegadinhas do Professor:</b> O examinador tentará confundir <b>Materiais Auxiliares</b> com <b>Materiais de Consumo Geral</b>.<br>
+            • <b>Auxiliares (Improdutivos):</b> itens de limpeza ou escritório que não se incorporam ao produto fabricado.<br>
+            • <b>Consumo Geral:</b> itens de uso repetitivo em diversos setores, mas que não se destinam especificamente à manutenção.<br><br>
+            <b>Dica Objetiva:</b> "Material incorporado a outro bem ou durável &gt; 2 anos = Permanente. Lembre-se: o óleo lubrificante é material de consumo; a engrenagem que ele lubrifica é patrimônio."
+        </div>
+
+        <h3>1.3. Atividades e Funções da ARM</h3>
+        <p>A ARM deve assegurar que a produção não sofra solução de continuidade. Suas funções essenciais são:</p>
+        <ol>
+            <li><b>Aquisição (Compras):</b> identificação de fornecedores e negociação.</li>
+            <li><b>Transporte e Distribuição:</b> gestão do fluxo entre fornecedor, empresa e cliente.</li>
+            <li><b>Almoxarifado:</b> guarda física e controle de entrada/saída.</li>
+            <li><b>Gestão de Estoques:</b> políticas de ressuprimento e previsão de consumo.</li>
+        </ol>
+
+        <p><b>Interface Organizacional:</b> a logística moderna divide as atividades para otimizar custos. As <b>Atividades Primárias</b> são o "coração" dos custos logísticos.</p>
+        <table>
+            <tr>
+                <th>Categoria</th>
+                <th>Atividades</th>
+                <th>Nota do Especialista</th>
+            </tr>
+            <tr>
+                <td><b>Primárias</b></td>
+                <td>Transporte, Manutenção de Estoques, Processamento de Pedidos</td>
+                <td>Representam a maior parcela do custo logístico total.</td>
+            </tr>
+            <tr>
+                <td><b>Secundárias</b></td>
+                <td>Armazenagem, Manuseio, Embalagem, Suprimentos, Planejamento</td>
+                <td>Servem de apoio essencial para a execução das primárias.</td>
+            </tr>
+        </table>
     </div>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 6: Conservação e Manutenção                          -->
+    <!-- PÁGINA 3: Atributos e Etapas da Classificação                -->
     <!-- ============================================================ -->
-    <div class="page" data-page="6">
-        <h2>MÓDULO V – CONSERVAÇÃO E MANUTENÇÃO</h2>
-        <h3>6.1. Conceito de Conservação</h3>
-        <p>A <b>conservação</b> de materiais envolve todas as atividades destinadas a manter as condições originais e a utilidade dos itens armazenados, prolongando sua vida útil e evitando perdas.</p>
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – ATRIBUTOS E ETAPAS DA CLASSIFICAÇÃO DE MATERIAIS</h2>
 
-        <h3>6.2. Práticas de Conservação</h3>
+        <h3>2.1. O Sistema de Classificação de João José Viana</h3>
+        <p>Viana (2010) estabelece que a classificação é o processo metódico de ordenar itens para facilitar a gestão. Sem padronização, a organização incorre em <b>duplicidade de itens</b> e <b>erros de inventário</b>.</p>
+
+        <h3>2.2. Os Três Atributos (Abrangência, Flexibilidade, Praticidade)</h3>
         <ul>
-            <li><b>Controle de validade:</b> monitorar prazos de vencimento, especialmente para alimentos, medicamentos e produtos químicos.</li>
-            <li><b>Condições ambientais:</b> controle de temperatura, umidade, ventilação e luminosidade conforme a necessidade do material.</li>
-            <li><b>Empilhamento e acondicionamento:</b> respeitar pesos máximos, utilizar paletes adequados, evitar contato direto com o chão.</li>
-            <li><b>Prevenção contra incêndios e furtos:</b> instalação de extintores, sensores de fumaça, câmeras e controle de acesso.</li>
-            <li><b>Manutenção preventiva:</b> revisões periódicas em equipamentos de movimentação (empilhadeiras, esteiras) para evitar acidentes e danos aos materiais.</li>
+            <li><b>Abrangência:</b> capacidade de incluir uma vasta gama de itens (peso, forma, dimensões). Não confunda com complexidade; é sobre <b>variedade</b>.</li>
+            <li><b>Flexibilidade:</b> permite a adaptação do sistema e o inter-relacionamento entre classes, aceitando novos itens sem quebrar a lógica.</li>
+            <li><b>Praticidade:</b> o sistema deve ser simples e direto.</li>
         </ul>
 
-        <h3>6.3. Obsolescência e Descarte</h3>
-        <p>Materiais tornam-se <b>obsoletos</b> quando perdem utilidade por avanço tecnológico, mudanças em processos ou deterioração. O descarte deve ser planejado (venda como sucata, doação, reciclagem ou descarte ambientalmente correto), respeitando a legislação ambiental.</p>
-
-        <h3>6.4. Segurança no Armazenamento</h3>
-        <p>Itens perigosos (inflamáveis, corrosivos, tóxicos) exigem cuidados especiais: áreas isoladas, sinalização adequada, equipamentos de proteção individual (EPIs) e procedimentos de emergência.</p>
         <div class="dica">
-            <b>🛡️ Lembre-se:</b> A conservação não é apenas um custo, mas um investimento em segurança e redução de perdas.
+            <b>🪤 Pegadinha:</b> Se a questão mencionar a necessidade de "julgamentos subjetivos" ou "análises complexas" para classificar um item, ela está descrevendo uma falha no atributo da <b>Praticidade</b>.<br><br>
+            <b>Dica Objetiva:</b> "Abrangência = Cabe tudo; Flexibilidade = Aceita mudança; Praticidade = É simples."
+        </div>
+
+        <h3>2.3. Etapas do Processo de Classificação</h3>
+        <p>Para uma classificação de alta performance, siga a sequência rigorosa de Viana:</p>
+        <ol>
+            <li><b>Catalogação:</b> arrolamento/lista completa de todos os itens em estoque.</li>
+            <li><b>Simplificação:</b> redução da diversidade de itens que servem para o mesmo fim.</li>
+            <li><b>Especificação:</b> descrição minuciosa (forma, peso, finalidade). Também chamada de identificação.</li>
+            <li><b>Normalização:</b> normas técnicas e regras de segurança para o uso/compra.</li>
+            <li><b>Padronização:</b> uniformização de medidas e formatos. Objetivo crucial: <b>reduzir o número de itens em estoque</b> e minimizar a variedade.</li>
+            <li><b>Codificação:</b> atribuição de símbolos. O <b>Sistema Numérico (Decimal)</b> é o mais utilizado por facilitar o processamento eletrônico.</li>
+        </ol>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Critérios e Tipos de Classificação                 -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – CRITÉRIOS E TIPOS DE CLASSIFICAÇÃO DE MATERIAIS</h2>
+
+        <h3>3.1. Introdução aos Critérios Gerenciais</h3>
+        <p>O gestor utiliza classificações distintas para fins específicos: a <b>Curva ABC</b> foca no impacto financeiro, enquanto a <b>XYZ</b> foca na continuidade operacional.</p>
+
+        <h3>3.2. Curva ABC (Valor de Consumo)</h3>
+        <p>Baseia-se no <b>Princípio de Pareto</b>: a minoria dos itens representa a maioria do valor.</p>
+        <table>
+            <tr>
+                <th>Classe</th>
+                <th>% de Itens</th>
+                <th>% do Valor de Consumo</th>
+                <th>Controle Gerencial</th>
+            </tr>
+            <tr>
+                <td><b>A</b></td>
+                <td>20%</td>
+                <td>80%</td>
+                <td>Rigoroso / Estoque Mínimo.</td>
+            </tr>
+            <tr>
+                <td><b>B</b></td>
+                <td>30%</td>
+                <td>15%</td>
+                <td>Intermediário.</td>
+            </tr>
+            <tr>
+                <td><b>C</b></td>
+                <td>50%</td>
+                <td>5%</td>
+                <td>Simples / Grandes Lotes.</td>
+            </tr>
+        </table>
+
+        <div class="dica">
+            <b>🪤 Pegadinha:</b> Itens Classe A <b>não são necessariamente os mais caros unitariamente</b>. Sua posição na curva depende do <b>Consumo Anual Total</b> (Quantidade × Preço Unitário).
+        </div>
+
+        <h3>3.3. Classificação XYZ (Criticidade/Importância Operacional)</h3>
+        <ul>
+            <li><b>Classe X:</b> baixa criticidade. A falta não para a produção. Fácil substituição.</li>
+            <li><b>Classe Y:</b> criticidade média. Importantes, mas substituíveis com relativa facilidade.</li>
+            <li><b>Classe Z:</b> criticidade máxima. Sua falta interrompe a produção imediatamente. Não possuem similares.</li>
+        </ul>
+
+        <div class="dica">
+            <b>💡 Professor's Insight:</b> "O segredo da aprovação é entender a integração: Um item pode ser Classe C (barato) e Classe Z (vital). Exemplo: uma junta de vedação de 2 reais (C) que, se falhar, explode uma turbina (Z). Foque no bolso (ABC) e na linha (XYZ) simultaneamente."
+        </div>
+
+        <h3>3.4. Classificações Específicas e Técnicas</h3>
+        <ul>
+            <li><b>Aplicação (Distinção Técnica):</b>
+                <ul>
+                    <li><b>Materiais em Processamento:</b> estão sendo transformados nas seções produtivas ("em vias").</li>
+                    <li><b>Materiais Semiacabados:</b> estágio intermediário; estão "quase prontos" ou parcialmente acabados.</li>
+                </ul>
+            </li>
+            <li><b>Possibilidade de Fazer ou Comprar:</b>
+                <ol>
+                    <li>Fazer internamente.</li>
+                    <li>Comprar.</li>
+                    <li>Decidir entre fazer ou comprar (análise de custo-benefício).</li>
+                    <li>Recondicionar: itens que podem ser recuperados internamente após desgaste.</li>
+                </ol>
+            </li>
+            <li><b>Mercado Fornecedor:</b> Nacional, Estrangeiro ou Em processo de nacionalização (fornecedores locais em desenvolvimento).</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Questões Comentadas de Capítulos                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – QUESTÕES COMENTADAS DE CAPÍTULOS</h2>
+        <p><i>Questões inéditas com comentários estratégicos para fixação do conteúdo.</i></p>
+
+        <div class="questao-item">
+            <p><b>1.</b> (Inédita) Segundo Viana (2010), a etapa que visa reduzir a diversidade de itens destinados ao mesmo fim, visando a economicidade, é a:</p>
+            <div class="alternativas">
+                A) Codificação.<br>
+                B) Especificação.<br>
+                C) Simplificação.<br>
+                D) Catalogação.<br>
+                E) Normalização.
+            </div>
+            <div class="comentario">
+                <b>Comentário:</b> Alternativa <b>C</b>. Simplificar é diminuir a variedade para o mesmo propósito. Padronização vem depois, para uniformizar o que restou.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>2.</b> (Inédita) Na classificação por aplicação, materiais que se encontram em estágio intermediário de acabamento, sendo descritos como "quase prontos", são os:</p>
+            <div class="alternativas">
+                A) Em processamento.<br>
+                B) Auxiliares.<br>
+                C) Semiacabados.<br>
+                D) Acabados.<br>
+                E) Insumos.
+            </div>
+            <div class="comentario">
+                <b>Comentário:</b> Alternativa <b>C</b>. O material "em processamento" está nas seções sendo transformado. O "semiacabado" já passou por fases e está quase finalizado.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>3.</b> (Inédita) Um item que representa 80% do valor total de consumo anual, mas cujas propriedades permitem substituição imediata sem parar a produção, é classificado como:</p>
+            <div class="alternativas">
+                A) Classe A e Classe Z.<br>
+                B) Classe C e Classe X.<br>
+                C) Classe B e Classe Y.<br>
+                D) Classe A e Classe X.<br>
+                E) Classe C e Classe Z.
+            </div>
+            <div class="comentario">
+                <b>Comentário:</b> Alternativa <b>D</b>. 80% do valor = Classe A. Não para a produção/fácil substituição = Classe X.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>4.</b> (Inédita) A possibilidade de recuperar internamente materiais após o uso e desgaste refere-se ao critério de:</p>
+            <div class="alternativas">
+                A) Fazer internamente.<br>
+                B) Recondicionar.<br>
+                C) Nacionalizar.<br>
+                D) Comprar.<br>
+                E) Processamento.
+            </div>
+            <div class="comentario">
+                <b>Comentário:</b> Alternativa <b>B</b>. Conforme o resumo técnico, "Recondicionar" é a recuperação após uso.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>5.</b> (Inédita) Itens de limpeza e escritório, não incorporados ao produto final, são classificados como materiais:</p>
+            <div class="alternativas">
+                A) De manutenção.<br>
+                B) Auxiliares ou improdutivos.<br>
+                C) Em processo.<br>
+                D) De consumo geral.<br>
+                E) Permanentes.
+            </div>
+            <div class="comentario">
+                <b>Comentário:</b> Alternativa <b>B</b>. Materiais auxiliares são aqueles que não compõem a estrutura física do produto final.
+            </div>
         </div>
     </div>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 7: Questões 1 a 14                                    -->
+    <!-- PÁGINA 6: Revisão Geral e Resumo                             -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – REVISÃO GERAL E RESUMO "PONTO A PONTO"</h2>
+
+        <ul>
+            <li><b>Regra dos 2 Anos:</b> limite entre Material (Consumo) e Patrimonial (Permanente).</li>
+            <li><b>Atividades Primárias:</b> Transporte, Estoque, Pedidos (Gasto Logístico Elevado).</li>
+            <li><b>Padronização:</b> foco em reduzir o número de itens e variedade em estoque.</li>
+            <li><b>Mercado:</b> Nacional, Estrangeiro e Em Processo de Nacionalização.</li>
+            <li><b>Atributos Viana:</b> Abrangência (Variedade), Flexibilidade (Adaptação), Praticidade (Simplicidade).</li>
+            <li><b>Etapas de Viana:</b> Catalogação → Simplificação → Especificação → Normalização → Padronização → Codificação.</li>
+            <li><b>Curva ABC:</b> A (20% itens / 80% valor), B (30% / 15%), C (50% / 5%).</li>
+            <li><b>Classificação XYZ:</b> X (baixa criticidade), Y (média), Z (máxima — paralisa a produção).</li>
+            <li><b>Codificação:</b> o Sistema Numérico (Decimal) é o mais utilizado.</li>
+        </ul>
+
+        <div class="dica">
+            <b>🧠 Mnemônico das Etapas:</b> <b>C</b>atálogo, <b>S</b>implifico, <b>E</b>specifico, <b>N</b>ormalizo, <b>P</b>adronizo, <b>C</b>odifico → "<b>C S E N P C</b>".
+        </div>
+
+        <div class="dica">
+            <b>🧠 Mnemônico das Atividades Primárias:</b> <b>T</b>ransporte, <b>M</b>anutenção de Estoques, <b>P</b>rocessamento de Pedidos → "<b>T M P</b>".
+        </div>
+
+        <p style="margin-top:20px;">Na próxima página inicia-se o <b>Simulado Final com 25 questões</b>, seguido do gabarito integral e dos comentários estratégicos das 10 questões mais desafiadoras.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Simulado Final (1 a 13)                             -->
     <!-- ============================================================ -->
     <div class="page" data-page="7">
-        <h2>📝 QUESTÕES (1 a 14)</h2>
-        <p><i>Responda com base no conteúdo estudado.</i></p>
+        <h2>📝 SIMULADO FINAL (1 a 13)</h2>
+        <p><i>Responda com base no conteúdo estudado. Gabarito e comentários ao final.</i></p>
 
         <div class="questao-item">
-            <p><b>Questão 1</b> (Conceito geral) – A Administração de Materiais tem como objetivo principal:</p>
+            <p><b>1.</b> A atividade logística que resulta no controle físico dos materiais armazenados é a:</p>
             <div class="alternativas">
-                a) Maximizar os lucros da empresa por meio da redução de impostos.<br>
-                b) Garantir o abastecimento adequado no momento certo e com o menor custo possível.<br>
-                c) Reduzir o quadro de funcionários do almoxarifado.<br>
-                d) Aumentar os preços de venda dos produtos finais.<br>
-                e) Centralizar todas as decisões no setor financeiro.
+                A) Gestão de Compras.<br>
+                B) Gestão de Estoques.<br>
+                C) Gestão dos Centros de Distribuição.<br>
+                D) Processamento de Pedidos.<br>
+                E) Manutenção de Equipamentos.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 2</b> (Compras) – A etapa inicial do processo de compras é:</p>
+            <p><b>2.</b> O atributo de Viana que exige que o sistema de classificação seja maleável e adaptável é a:</p>
             <div class="alternativas">
-                a) Emissão do pedido.<br>
-                b) Negociação com fornecedores.<br>
-                c) Identificação da necessidade.<br>
-                d) Recebimento e conferência.<br>
-                e) Pagamento ao fornecedor.
+                A) Praticidade.<br>
+                B) Flexibilidade.<br>
+                C) Abrangência.<br>
+                D) Codificação.<br>
+                E) Normalização.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 3</b> (Requisição) – A requisição de compras é um documento que deve conter, entre outros itens:</p>
+            <p><b>3.</b> Materiais de criticidade máxima, cuja falta paralisa a produção, são de classe:</p>
             <div class="alternativas">
-                a) Apenas o nome do fornecedor.<br>
-                b) A descrição do material, quantidade e justificativa.<br>
-                c) O valor total da nota fiscal.<br>
-                d) A data de entrega já confirmada pelo fornecedor.<br>
-                e) O número do contrato de trabalho do solicitante.
+                A) X.<br>
+                B) Y.<br>
+                C) Z.<br>
+                D) A.<br>
+                E) C.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 4</b> (Curva ABC) – Na curva ABC, os itens da classe ________ representam alto valor e baixa quantidade, exigindo controle rigoroso.</p>
+            <p><b>4.</b> O estágio da classificação que consiste em uma descrição minuciosa do material é a:</p>
             <div class="alternativas">
-                a) A<br>b) B<br>c) C<br>d) D<br>e) E
+                A) Catalogação.<br>
+                B) Simplificação.<br>
+                C) Especificação.<br>
+                D) Normalização.<br>
+                E) Padronização.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 5</b> (Estoques) – O ponto de pedido é calculado com base em:</p>
+            <p><b>5.</b> No sistema ABC, itens que representam 5% do valor total e 50% da quantidade são:</p>
             <div class="alternativas">
-                a) Estoque máximo + Estoque mínimo.<br>
-                b) (Consumo médio × Tempo de reposição) + Estoque de segurança.<br>
-                c) Vendas totais / Número de fornecedores.<br>
-                d) Custos fixos + Custos variáveis.<br>
-                e) Receita total – Despesas totais.
+                A) Classe A.<br>
+                B) Classe B.<br>
+                C) Classe C.<br>
+                D) Classe X.<br>
+                E) Classe Z.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 6</b> (Conservação) – O controle de validade e as condições de temperatura e umidade são práticas relacionadas à função de:</p>
+            <p><b>6.</b> Materiais consumidos rotineiramente e que possuem critérios automáticos de ressuprimento são de:</p>
             <div class="alternativas">
-                a) Compras.<br>
-                b) Requisição.<br>
-                c) Conservação.<br>
-                d) Reposição.<br>
-                e) Distribuição.
+                A) Estocagem Temporária.<br>
+                B) Estocagem Permanente.<br>
+                C) Não estoque.<br>
+                D) Baixa demanda.<br>
+                E) Ordem especial.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 7</b> (Armazenagem) – O método que prioriza a utilização dos materiais mais antigos em estoque é conhecido como:</p>
+            <p><b>7.</b> Itens fabricados fora do país, mesmo com fornecedor local instalado, pertencem ao Mercado:</p>
             <div class="alternativas">
-                a) UEPS.<br>
-                b) PEPS.<br>
-                c) Curva ABC.<br>
-                d) Lote econômico.<br>
-                e) Just-in-time.
+                A) Nacional.<br>
+                B) Em processo de nacionalização.<br>
+                C) Estrangeiro.<br>
+                D) Misto.<br>
+                E) Secundário.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 8</b> (Organização) – Atribuir localizações fixas (prateleiras, boxes) para facilitar a localização dos materiais é chamado de:</p>
+            <p><b>8.</b> Qual atividade é considerada secundária ou de apoio na Administração de Materiais?</p>
             <div class="alternativas">
-                a) Endereçamento.<br>
-                b) Codificação.<br>
-                c) Classificação por valor.<br>
-                d) Layout funcional.<br>
-                e) Inventário.
+                A) Transporte.<br>
+                B) Manutenção de estoques.<br>
+                C) Processamento de pedidos.<br>
+                D) Embalagem.<br>
+                E) Negociação de preços.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 9</b> (Compras) – A verificação da qualidade e das especificações técnicas do material recebido é denominada conferência:</p>
+            <p><b>9.</b> Materiais que podem perder suas características químicas devido à umidade são classificados por:</p>
             <div class="alternativas">
-                a) Quantitativa.<br>
-                b) Qualitativa.<br>
-                c) Fiscal.<br>
-                d) Contábil.<br>
-                e) Documental.
+                A) Periculosidade.<br>
+                B) Perecibilidade.<br>
+                C) Criticidade.<br>
+                D) Demanda.<br>
+                E) Aplicabilidade.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 10</b> (Estoques) – O indicador que mede a frequência de renovação dos estoques em um período é o:</p>
+            <p><b>10.</b> O sistema de codificação que utiliza uma composição lógica de números é o:</p>
             <div class="alternativas">
-                a) Ponto de pedido.<br>
-                b) Estoque mínimo.<br>
-                c) Giro de estoques.<br>
-                d) Lote econômico.<br>
-                e) Custo de armazenagem.
+                A) Alfabético.<br>
+                B) Mnemônico.<br>
+                C) Numérico ou Decimal.<br>
+                D) Alfanumérico.<br>
+                E) Binário.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 11</b> (Armazenagem) – Na conferência de recebimento, a contagem física dos itens entregues corresponde à conferência:</p>
+            <p><b>11.</b> A etapa de classificação que estabelece regras mínimas de segurança e execução é a:</p>
             <div class="alternativas">
-                a) Qualitativa.<br>
-                b) Documental.<br>
-                c) Quantitativa.<br>
-                d) Técnica.<br>
-                e) Ambiental.
+                A) Normalização.<br>
+                B) Especificação.<br>
+                C) Codificação.<br>
+                D) Catalogação.<br>
+                E) Simplificação.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 12</b> (Conservação) – Materiais inflamáveis, corrosivos ou tóxicos exigem, além dos cuidados normais, procedimentos especiais de:</p>
+            <p><b>12.</b> Um computador com vida útil estimada de 4 anos é tecnicamente um:</p>
             <div class="alternativas">
-                a) Compra.<br>
-                b) Armazenagem e segurança.<br>
-                c) Negociação.<br>
-                d) Avaliação de desempenho.<br>
-                e) Marketing.
+                A) Recurso Material.<br>
+                B) Material de Consumo.<br>
+                C) Recurso Patrimonial.<br>
+                D) Material Auxiliar.<br>
+                E) Insumo Produtivo.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 13</b> (Lote Econômico) – O Lote Econômico de Compra (LEC) busca equilibrar:</p>
+            <p><b>13.</b> A classificação baseada no impacto financeiro anual (Pareto) é a:</p>
             <div class="alternativas">
-                a) Os custos de pedido e os custos de armazenagem.<br>
-                b) Os custos fixos e os custos variáveis.<br>
-                c) O preço de compra e o preço de venda.<br>
-                d) A quantidade em estoque e o número de fornecedores.<br>
-                e) O prazo de entrega e a qualidade do material.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 14</b> (V/F – Processo de compras) – Analise as afirmativas:</p>
-            <p>(   ) A negociação com fornecedores ocorre antes da emissão do pedido de compra.<br>
-            (   ) A identificação da necessidade é a última etapa do ciclo de compras.<br>
-            (   ) O acompanhamento do pedido (follow-up) é dispensável se o fornecedor for confiável.<br>
-            (   ) O pagamento ao fornecedor encerra o processo de compras.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) V – F – F – V<br>b) F – V – V – F<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – V – F
+                A) XYZ.<br>
+                B) ABC.<br>
+                C) 123.<br>
+                D) Alfabética.<br>
+                E) Por perecibilidade.
             </div>
         </div>
     </div>
 
     <!-- ============================================================ -->
-    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
+    <!-- PÁGINA 8: Simulado Final (14 a 25) + Gabarito + Comentários   -->
     <!-- ============================================================ -->
     <div class="page" data-page="8">
-        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+        <h2>📝 SIMULADO FINAL (14 a 25)</h2>
 
         <div class="questao-item">
-            <p><b>Questão 15</b> (V/F – Estoques e Curva ABC) – Analise as afirmativas:</p>
-            <p>(   ) O estoque de segurança serve para cobrir variações no consumo ou atrasos na entrega.<br>
-            (   ) Na Curva ABC, a classe C é a que merece o controle mais rigoroso.<br>
-            (   ) O estoque máximo é o limite superior que a empresa deseja manter.<br>
-            (   ) O giro de estoques é calculado dividindo o estoque médio pelo consumo total.</p>
-            <p>Assinale a sequência correta:</p>
+            <p><b>14.</b> Materiais utilizados em manutenção com uso repetitivo são chamados de:</p>
             <div class="alternativas">
-                a) V – F – V – F<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+                A) Materiais de consumo geral.<br>
+                B) Materiais de manutenção.<br>
+                C) Materiais improdutivos.<br>
+                D) Materiais acabados.<br>
+                E) Materiais semiacabados.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 16</b> (V/F – Armazenagem e Conservação) – Analise as afirmativas:</p>
-            <p>(   ) O método PEPS é recomendado para materiais com prazo de validade.<br>
-            (   ) A conservação envolve apenas a limpeza dos materiais.<br>
-            (   ) O controle de umidade é uma prática de conservação de materiais.<br>
-            (   ) Itens pesados devem ser armazenados nas prateleiras mais altas para economizar espaço.</p>
-            <p>Assinale a sequência correta:</p>
+            <p><b>15.</b> A decisão de "Fazer ou Comprar" baseia-se fundamentalmente na análise de:</p>
             <div class="alternativas">
-                a) V – F – V – F<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+                A) Perecibilidade.<br>
+                B) Custo-benefício.<br>
+                C) Codificação.<br>
+                D) Catalogação.<br>
+                E) Abrangência.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 17</b> (Organização) – A codificação de materiais tem como principal finalidade:</p>
+            <p><b>16.</b> O atributo "Abrangência" na classificação de materiais refere-se à:</p>
             <div class="alternativas">
-                a) Aumentar o custo dos produtos.<br>
-                b) Identificar de forma única cada item, facilitando o controle e a localização.<br>
-                c) Substituir a descrição dos materiais nos documentos fiscais.<br>
-                d) Reduzir o número de fornecedores.<br>
-                e) Classificar os materiais por cor.
+                A) Simplicidade de uso.<br>
+                B) Variedade de características suportadas.<br>
+                C) Mudança de códigos.<br>
+                D) Redução de itens.<br>
+                E) Segurança do almoxarifado.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 18</b> (Compras) – No setor público, a Lei 14.133/2021 regula as compras por meio de modalidades como:</p>
+            <p><b>17.</b> Materiais com risco de explosão ou incêndio são classificados quanto à:</p>
             <div class="alternativas">
-                a) Concorrência e Pregão.<br>
-                b) PEPS e UEPS.<br>
-                c) Curva ABC e Just-in-time.<br>
-                d) Lote econômico e ponto de pedido.<br>
-                e) Endereçamento e codificação.
+                A) Perecibilidade.<br>
+                B) Periculosidade.<br>
+                C) Criticidade.<br>
+                D) Demanda.<br>
+                E) Aplicação.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 19</b> (Requisição) – A requisição de compras, antes de ser enviada ao setor de compras, deve passar pela:</p>
+            <p><b>18.</b> Materiais que não têm previsão de utilização e demanda irregular são materiais:</p>
             <div class="alternativas">
-                a) Aprovação do fornecedor.<br>
-                b) Aprovação hierárquica (chefia).<br>
-                c) Conferência qualitativa.<br>
-                d) Emissão da nota fiscal.<br>
-                e) Cotação de preços.
+                A) De estoque.<br>
+                B) Não de estoque.<br>
+                C) Classe Z.<br>
+                D) Classe A.<br>
+                E) Permanentes.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 20</b> (Conservação) – A obsolescência de um material ocorre quando ele:</p>
+            <p><b>19.</b> Na SEA-SC, a responsabilidade de estabelecer indicadores para monitorar a Política de Saúde da População Negra recai sobre o:</p>
             <div class="alternativas">
-                a) É consumido rapidamente.<br>
-                b) Perde utilidade devido a avanços tecnológicos ou mudanças de processo.<br>
-                c) Tem seu preço reduzido no mercado.<br>
-                d) É transferido para outro almoxarifado.<br>
-                e) É adquirido em grande quantidade.
+                A) Gestor Federal.<br>
+                B) Gestor Estadual.<br>
+                C) Gestor Municipal.<br>
+                D) Comitê de Bioética.<br>
+                E) Diretor do Almoxarifado.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 21</b> (Estoques) – O estoque mínimo (de segurança) tem a função de:</p>
+            <p><b>20.</b> O sistema alfanumérico de codificação caracteriza-se por:</p>
             <div class="alternativas">
-                a) Aumentar o lucro da empresa.<br>
-                b) Cobrir imprevistos como atrasos de fornecedores ou aumento de consumo.<br>
-                c) Substituir o estoque máximo.<br>
-                d) Reduzir a necessidade de compras.<br>
-                e) Aumentar o giro de estoques.
+                A) Usar apenas letras.<br>
+                B) Usar apenas números.<br>
+                C) Mesclar números e letras.<br>
+                D) Usar cores e formas.<br>
+                E) Ser puramente mnemônico.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 22</b> (V/F – Módulo completo) – Analise as afirmativas:</p>
-            <p>(   ) O layout do almoxarifado deve colocar os itens de maior rotatividade próximos à saída.<br>
-            (   ) O ponto de pedido dispensa o uso de estoque de segurança.<br>
-            (   ) A conferência qualitativa verifica se a quantidade entregue está correta.<br>
-            (   ) A manutenção preventiva de equipamentos evita acidentes e danos aos materiais.</p>
-            <p>Assinale a sequência correta:</p>
+            <p><b>21.</b> A etapa que busca a redução do número de itens em estoque minimizando a variedade é a:</p>
             <div class="alternativas">
-                a) V – F – F – V<br>b) F – V – V – F<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – V – F
+                A) Padronização.<br>
+                B) Catalogação.<br>
+                C) Codificação.<br>
+                D) Especificação.<br>
+                E) Normalização.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 23</b> (Reposição) – O sistema de reposição que dispara a compra com base em intervalos de tempo fixos (ex.: a cada 30 dias) é chamado de:</p>
+            <p><b>22.</b> Materiais em estágio "quase pronto" são:</p>
             <div class="alternativas">
-                a) Reposição contínua.<br>
-                b) Reposição periódica.<br>
-                c) Curva ABC.<br>
-                d) Lote econômico.<br>
-                e) PEPS.
+                A) Em vias.<br>
+                B) Em processamento.<br>
+                C) Semiacabados.<br>
+                D) Acabados.<br>
+                E) Auxiliares.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 24</b> (Compras) – No processo de compras, a etapa de "pesquisa e seleção de fornecedores" ocorre:</p>
+            <p><b>23.</b> Itens de criticidade média que podem ser substituídos com relativa facilidade são:</p>
             <div class="alternativas">
-                a) Após o recebimento do material.<br>
-                b) Antes da emissão do pedido de compra.<br>
-                c) Durante a conferência qualitativa.<br>
-                d) No momento do pagamento.<br>
-                e) Após a identificação da necessidade e antes da negociação.
+                A) Classe X.<br>
+                B) Classe Y.<br>
+                C) Classe Z.<br>
+                D) Classe A.<br>
+                E) Classe C.
             </div>
         </div>
 
         <div class="questao-item">
-            <p><b>Questão 25</b> (V/F – Consolidação) – Analise as afirmativas sobre Administração de Materiais:</p>
-            <p>(   ) O giro de estoques elevado indica que a empresa está vendendo ou consumindo rapidamente seus materiais.<br>
-            (   ) Na Curva ABC, a classe A deve ter o controle mais simplificado.<br>
-            (   ) A conservação de materiais envolve controle de validade, umidade e temperatura.<br>
-            (   ) O lote econômico de compra não considera os custos de armazenagem.</p>
-            <p>Assinale a sequência correta:</p>
+            <p><b>24.</b> Um fornecedor nacional que está sendo desenvolvido pela organização faz parte do mercado:</p>
             <div class="alternativas">
-                a) V – F – V – F<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
+                A) Estrangeiro.<br>
+                B) Em processo de nacionalização.<br>
+                C) Global.<br>
+                D) Permanente.<br>
+                E) Regional.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>25.</b> Materiais que não perdem sua identidade física quando incorporados a outro bem são:</p>
+            <div class="alternativas">
+                A) Materiais de consumo.<br>
+                B) Materiais permanentes.<br>
+                C) Materiais perecíveis.<br>
+                D) Materiais perigosos.<br>
+                E) Materiais de manutenção.
             </div>
         </div>
 
         <hr>
 
-        <h2>✅ GABARITO OFICIAL</h2>
+        <h2>✅ GABARITO INTEGRAL</h2>
         <div class="gabarito-box">
-            <p><b>1-B</b> | <b>2-C</b> | <b>3-B</b> | <b>4-A</b> | <b>5-B</b> | <b>6-C</b> | <b>7-B</b> | <b>8-A</b> | <b>9-B</b> | <b>10-C</b></p>
-            <p><b>11-C</b> | <b>12-B</b> | <b>13-A</b> | <b>14-A</b> | <b>15-A</b> | <b>16-A</b> | <b>17-B</b> | <b>18-A</b> | <b>19-B</b> | <b>20-B</b></p>
-            <p><b>21-B</b> | <b>22-A</b> | <b>23-B</b> | <b>24-E</b> | <b>25-A</b></p>
+            <p><b>1-C</b> | <b>2-B</b> | <b>3-C</b> | <b>4-C</b> | <b>5-C</b> | <b>6-B</b> | <b>7-C</b> | <b>8-D</b> | <b>9-B</b> | <b>10-C</b></p>
+            <p><b>11-A</b> | <b>12-C</b> | <b>13-B</b> | <b>14-B</b> | <b>15-B</b> | <b>16-B</b> | <b>17-B</b> | <b>18-B</b> | <b>19-C</b> | <b>20-C</b></p>
+            <p><b>21-A</b> | <b>22-C</b> | <b>23-B</b> | <b>24-B</b> | <b>25-B</b></p>
         </div>
-        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,F,F,V); Q15 (V,F,V,F); Q16 (V,F,V,F); Q22 (V,F,F,V); Q25 (V,F,V,F).</p>
+
+        <h2>💬 COMENTÁRIOS ESTRATÉGICOS (TOP 10)</h2>
+
+        <div class="dica">
+            <b>Questão 1:</b> Cuidado! A "Gestão dos CDs" (Distribuição) é que resulta no controle físico, enquanto a Gestão de Estoque cuida das políticas (quanto/quando).
+        </div>
+        <div class="dica">
+            <b>Questão 8:</b> As atividades primárias são transporte, estoque e pedidos. Embalagem é secundária (apoio).
+        </div>
+        <div class="dica">
+            <b>Questão 12:</b> Regra de ouro da IBADE: Passou de 2 anos de vida útil e mantém a forma? É Recurso Patrimonial (Permanente).
+        </div>
+        <div class="dica">
+            <b>Questão 14:</b> Materiais de manutenção são para... manutenção. Materiais de consumo geral são para fins administrativos/diversos.
+        </div>
+        <div class="dica">
+            <b>Questão 18:</b> "Não de estoque" = Demanda imprevisível. São comprados apenas quando solicitados.
+        </div>
+        <div class="dica">
+            <b>Questão 19:</b> O "Gestor Municipal" tem a responsabilidade específica de estabelecer instrumentos de gestão e indicadores locais.
+        </div>
+        <div class="dica">
+            <b>Questão 21:</b> Padronização é a palavra-chave para "diminuição do número de itens em estoque".
+        </div>
+        <div class="dica">
+            <b>Questão 22:</b> "Quase pronto" = Semiacabado. "Sendo processado nas seções" = Em processamento.
+        </div>
+        <div class="dica">
+            <b>Questão 23:</b> Lembre-se do semáforo: X (verde - suave), Y (amarelo - atenção/substituível), Z (vermelho - para tudo).
+        </div>
+        <div class="dica">
+            <b>Questão 24:</b> Nacionalização não é só o que é feito aqui, mas o processo de desenvolver fornecedores locais para substituir importados.
+        </div>
     </div>
 
     <!-- ============================================================ -->

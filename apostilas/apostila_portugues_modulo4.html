@@ -3,742 +3,781 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apostila - Português Módulo 4: Sintaxe, Período Composto, Pronomes e Verbos</title>
+    <title>Apostila - Português: Sintaxe, Período Composto, Pronomes e Verbos</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f5f2eb;
-            display: flex;
-            justify-content: center;
-            padding: 30px 10px;
-        }
-        .book-container {
-            max-width: 1000px;
-            width: 100%;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-            padding: 30px 35px;
-            position: relative;
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-            font-size: 28px;
-        }
-        h2 {
-            color: #2c3e50;
-            background-color: #eaf2f8;
-            padding: 10px 15px;
-            border-left: 6px solid #3498db;
-            margin: 25px 0 15px 0;
-            font-size: 22px;
-        }
-        h3 {
-            color: #1a5276;
-            margin: 18px 0 10px 0;
-            font-size: 19px;
-        }
-        p {
-            line-height: 1.7;
-            margin-bottom: 12px;
-            text-align: justify;
-        }
-        ul, ol {
-            margin: 10px 0 15px 30px;
-        }
-        li {
-            margin-bottom: 6px;
-            line-height: 1.6;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-            font-size: 15px;
-        }
-        th, td {
-            border: 1px solid #333;
-            padding: 10px 12px;
-            text-align: left;
-            vertical-align: top;
-        }
-        th {
-            background-color: #d6eaf8;
-            font-weight: bold;
-        }
-        .dica {
-            background-color: #fef3e2;
-            border-left: 6px solid #e67e22;
-            padding: 14px 18px;
-            margin: 15px 0;
-            border-radius: 4px;
-        }
-        .dica b {
-            color: #a04000;
-        }
-        .exemplo {
-            background-color: #f0f8ff;
-            padding: 12px 18px;
-            border-radius: 6px;
-            margin: 10px 0;
-            border: 1px dashed #3498db;
-        }
-        .gabarito-box {
-            background-color: #e8f5e9;
-            border: 2px solid #2e7d32;
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin: 10px 0;
-        }
-        .questao-item {
-            background-color: #f7f9fb;
-            padding: 15px 18px;
-            margin: 12px 0;
-            border-radius: 6px;
-            border-left: 4px solid #3498db;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-        .questao-item p {
-            margin-bottom: 6px;
-        }
-        .alternativas {
-            margin-left: 20px;
-            font-size: 15px;
-        }
-
-        .page {
-            display: none;
-            animation: fadeIn 0.3s ease;
-        }
-        .page.active {
-            display: block;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0.5; }
-            to { opacity: 1; }
-        }
-
-        .nav-area {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 35px;
-            padding-top: 20px;
-            border-top: 2px solid #dee2e6;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .page-indicator {
-            font-size: 15px;
-            font-weight: bold;
-            color: #495057;
-            background: #f1f3f5;
-            padding: 6px 18px;
-            border-radius: 30px;
-        }
-        .nav-btn {
-            background-color: #2c3e50;
-            color: white;
-            border: none;
-            padding: 10px 28px;
-            border-radius: 30px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.2s, transform 0.1s;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-            min-width: 120px;
-        }
-        .nav-btn:hover {
-            background-color: #3498db;
-            color: white;
-        }
-        .nav-btn:active {
-            transform: scale(0.97);
-        }
-        .nav-btn:disabled {
-            background-color: #adb5bd;
-            cursor: not-allowed;
-            box-shadow: none;
-        }
-        .nav-btn.secondary {
-            background-color: #6c757d;
-        }
-        .nav-btn.secondary:hover {
-            background-color: #5a6268;
-            color: white;
-        }
-        .nav-btn.menu-btn {
-            background-color: #28a745;
-            min-width: 100px;
-        }
-        .nav-btn.menu-btn:hover {
-            background-color: #218838;
-            color: white;
-        }
-
-        .footer-note {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 13px;
-            color: #868e96;
-        }
-        hr {
-            margin: 30px 0 15px 0;
-            border: 1px solid #dee2e6;
-        }
-
-        @media (max-width: 600px) {
-            .book-container { padding: 15px; }
-            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
-            h1 { font-size: 22px; }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f2eb; display: flex; justify-content: center; padding: 30px 10px; }
+        .book-container { max-width: 1000px; width: 100%; background: #fff; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); padding: 30px 35px; position: relative; }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 3px solid #3498db; padding-bottom: 15px; margin-bottom: 20px; font-size: 24px; }
+        h2 { color: #2c3e50; background-color: #eaf2f8; padding: 10px 15px; border-left: 6px solid #3498db; margin: 25px 0 15px 0; font-size: 22px; }
+        h3 { color: #1a5276; margin: 18px 0 10px 0; font-size: 19px; }
+        h4 { color: #2c3e50; margin: 15px 0 8px 0; font-size: 17px; }
+        p { line-height: 1.7; margin-bottom: 12px; text-align: justify; }
+        ul, ol { margin: 10px 0 15px 30px; }
+        li { margin-bottom: 6px; line-height: 1.6; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px; }
+        th, td { border: 1px solid #333; padding: 8px 10px; text-align: left; vertical-align: top; }
+        th { background-color: #d6eaf8; font-weight: bold; }
+        pre { background: #f4f6f9; border-left: 4px solid #3498db; padding: 15px; border-radius: 6px; overflow-x: auto; font-size: 12px; line-height: 1.4; margin: 15px 0; font-family: 'Consolas', 'Monaco', monospace; }
+        code { background: #eef2f7; padding: 2px 6px; border-radius: 4px; font-family: 'Consolas', monospace; font-size: 13px; color: #c0392b; }
+        .dica { background-color: #e8f5e9; border-left: 6px solid #2e7d32; padding: 14px 18px; margin: 15px 0; border-radius: 4px; }
+        .dica b { color: #1b5e20; }
+        .pegadinha { background-color: #fce4e4; border-left: 6px solid #c0392b; padding: 14px 18px; margin: 15px 0; border-radius: 4px; }
+        .pegadinha b { color: #922b21; }
+        .exemplo { background-color: #f0f8ff; padding: 12px 18px; border-radius: 6px; margin: 10px 0; border: 1px dashed #3498db; }
+        .gabarito-box { background-color: #e8f5e9; border: 2px solid #2e7d32; padding: 15px 20px; border-radius: 8px; margin: 10px 0; }
+        .questao-item { background-color: #f7f9fb; padding: 15px 18px; margin: 12px 0; border-radius: 6px; border-left: 4px solid #3498db; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .questao-item p { margin-bottom: 6px; }
+        .alternativas { margin-left: 20px; font-size: 14px; }
+        .comentario { background: #fef9e7; border-left: 3px solid #f39c12; padding: 8px 14px; margin-top: 8px; font-size: 14px; border-radius: 4px; }
+        .page { display: none; animation: fadeIn 0.3s ease; }
+        .page.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0.5; } to { opacity: 1; } }
+        .nav-area { display: flex; justify-content: space-between; align-items: center; margin-top: 35px; padding-top: 20px; border-top: 2px solid #dee2e6; flex-wrap: wrap; gap: 10px; }
+        .page-indicator { font-size: 15px; font-weight: bold; color: #495057; background: #f1f3f5; padding: 6px 18px; border-radius: 30px; }
+        .nav-btn { background-color: #2c3e50; color: white; border: none; padding: 10px 28px; border-radius: 30px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.2s, transform 0.1s; box-shadow: 0 2px 6px rgba(0,0,0,0.15); min-width: 120px; }
+        .nav-btn:hover { background-color: #3498db; }
+        .nav-btn:active { transform: scale(0.97); }
+        .nav-btn:disabled { background-color: #adb5bd; cursor: not-allowed; box-shadow: none; }
+        .nav-btn.secondary { background-color: #6c757d; }
+        .nav-btn.secondary:hover { background-color: #5a6268; }
+        .nav-btn.menu-btn { background-color: #28a745; min-width: 100px; }
+        .nav-btn.menu-btn:hover { background-color: #218838; }
+        .footer-note { text-align: center; margin-top: 15px; font-size: 13px; color: #868e96; }
+        hr { margin: 30px 0 15px 0; border: 1px solid #dee2e6; }
+        @media (max-width: 600px) { .book-container { padding: 15px; } .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; } h1 { font-size: 19px; } pre { font-size: 10px; padding: 10px; } }
     </style>
 </head>
 <body>
 <div class="book-container" id="book">
 
-    <h1>📝 LÍNGUA PORTUGUESA – MÓDULO 4</h1>
-    <p style="text-align:center; font-size:18px; color:#2c3e50;"><b>Sintaxe, Período Composto, Pronomes e Tempos/Modos Verbais</b></p>
+    <h1>📚 SINTAXE, PERÍODO COMPOSTO, PRONOMES E VERBOS</h1>
+    <p style="text-align:center; font-size:18px; color:#2c3e50;"><b>Apostila completa para concursos públicos</b></p>
     <hr>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
-    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Sumário -->
     <div class="page active" data-page="1">
-        <h2>1. INTRODUÇÃO</h2>
-        <p>A <b>Sintaxe</b> é a parte da gramática que estuda a organização das palavras na frase e as relações entre elas. Neste módulo, vamos compreender a estrutura da oração, os períodos compostos por coordenação e subordinação, o emprego dos pronomes (incluindo colocação) e o uso adequado dos tempos e modos verbais.</p>
-        <p>Este é um dos módulos mais cobrados em concursos, pois exige que o candidato compreenda a lógica da língua e saiba aplicar as regras de concordância, regência e coerência textual.</p>
-
+        <h2>📖 APRESENTAÇÃO</h2>
+        <p>Esta apostila cobre os tópicos avançados de Morfologia e Sintaxe: pronomes e colocação pronominal, verbos (estrutura, flexões, tempos, modos e vozes), sintaxe do período simples (termos da oração) e período composto (coordenação e subordinação).</p>
         <div class="dica">
-            <b>🎯 Objetivo do Módulo:</b> Analisar a estrutura da oração, classificar os períodos compostos (coordenação e subordinação), dominar o emprego e a colocação dos pronomes, e aplicar corretamente os tempos e modos verbais, com 25 questões ao final.
+            <b>🎯 Como usar:</b> Estude cada tópico, memorize os quadros-resumo, analise as pegadinhas e resolva o simulado final.
         </div>
-
-        <h2>2. SUMÁRIO</h2>
+        <h2>📋 SUMÁRIO</h2>
         <ul>
-            <li><b>Módulo I:</b> Termos da Oração – pág. 2</li>
-            <li><b>Módulo II:</b> Período Composto – Coordenação – pág. 3</li>
-            <li><b>Módulo III:</b> Período Composto – Subordinação (Substantivas, Adjetivas, Adverbiais) – pág. 4</li>
-            <li><b>Módulo IV:</b> Pronomes – Emprego, Formas de Tratamento e Colocação – pág. 5</li>
-            <li><b>Módulo V:</b> Tempos e Modos Verbais – Valores Semânticos – pág. 6</li>
-            <li><b>Questões:</b> 25 questões (págs. 7 e 8)</li>
+            <li><b>Cap 1:</b> Pronomes e Colocação Pronominal – pág. 2-5</li>
+            <li><b>Cap 2:</b> Verbos (Estrutura, Flexões, Tempos e Modos) – pág. 6-9</li>
+            <li><b>Cap 3:</b> Sintaxe do Período Simples – pág. 10-13</li>
+            <li><b>Cap 4:</b> Sintaxe do Período Composto – pág. 14-16</li>
+            <li><b>Cap 5:</b> Revisão Geral – pág. 17</li>
+            <li><b>Simulado:</b> 25 questões (págs. 18-19)</li>
         </ul>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 2: Termos da Oração                                   -->
-    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Cap 1 - Pronomes pessoais -->
     <div class="page" data-page="2">
-        <h2>MÓDULO I – TERMOS DA ORAÇÃO</h2>
-        <p>Os termos da oração são as funções sintáticas que as palavras exercem na frase. Dividem-se em três grupos:</p>
-
-        <h3>2.1. Termos Essenciais</h3>
+        <h2>CAP 1: PRONOMES – CLASSIFICAÇÃO E PESSOAIS</h2>
+        <p>O <b>pronome</b> é a palavra variável que substitui ou acompanha um substantivo, qualificando-o ou determinando-o. Relaciona-se com as pessoas do discurso (1ª, 2ª e 3ª).</p>
         <ul>
-            <li><b>Sujeito:</b> termo sobre o qual se declara algo. Ex.: "O menino <b>estudou</b>."</li>
-            <li><b>Predicado:</b> termo que contém a informação sobre o sujeito. Ex.: "O menino <b>estudou para a prova</b>."</li>
+            <li><b>Pronome substantivo:</b> substitui o nome. <i>Ele virá à aula.</i></li>
+            <li><b>Pronome adjetivo:</b> acompanha o nome. <i>Minha carteira estava vazia.</i></li>
         </ul>
 
-        <h3>2.2. Termos Integrantes</h3>
+        <h3>Pronomes Pessoais</h3>
+        <table>
+            <tr><th>Tipo</th><th>Pronomes</th><th>Função</th></tr>
+            <tr><td><b>Caso Reto</b></td><td>eu, tu, ele/ela, nós, vós, eles/elas</td><td>Sujeito</td></tr>
+            <tr><td><b>Oblíquos Átonos</b></td><td>me, te, o, a, lhe, nos, vos, os, as, lhes</td><td>Complemento sem preposição</td></tr>
+            <tr><td><b>Oblíquos Tônicos</b></td><td>mim, comigo, ti, contigo, si, consigo, ele, ela, nós, conosco, vós, convosco, eles, elas</td><td>Complemento com preposição</td></tr>
+        </table>
+
+        <h3>Reflexivos e Recíprocos</h3>
         <ul>
-            <li><b>Complemento verbal (objeto direto e indireto):</b> completa o sentido do verbo transitivo. Ex.: "Ele comprou <b>um carro</b>" (OD). "Gosto <b>de música</b>" (OI).</li>
-            <li><b>Complemento nominal:</b> termo que completa o sentido de um nome (substantivo, adjetivo, advérbio). Ex.: "Temos confiança <b>em você</b>."</li>
-            <li><b>Agente da passiva:</b> termo que pratica a ação na voz passiva. Ex.: "O livro foi escrito <b>pelo autor</b>."</li>
+            <li><b>Reflexivo:</b> sujeito pratica e sofre a ação. <i>Eu me feri.</i></li>
+            <li><b>Recíproco:</b> ação mútua. <i>Nós nos amamos.</i></li>
         </ul>
 
-        <h3>2.3. Termos Acessórios</h3>
-        <ul>
-            <li><b>Adjunto adnominal:</b> termo que caracteriza ou determina o substantivo (artigos, adjetivos, locuções adjetivas). Ex.: "O <b>novo</b> professor."</li>
-            <li><b>Adjunto adverbial:</b> termo que indica circunstância (tempo, lugar, modo, etc.). Ex.: "Chegou <b>cedo</b>."</li>
-            <li><b>Aposto:</b> termo que explica, esclarece ou resume outro termo. Ex.: "São Paulo, <b>a capital paulista</b>."</li>
-            <li><b>Vocativo:</b> termo que chama ou invoca o interlocutor. Ex.: "<b>João</b>, venha aqui."</li>
-        </ul>
+        <h3>Pronomes de Tratamento</h3>
+        <p>Usados no tratamento formal (Vossa Excelência, Vossa Senhoria, Vossa Eminência). Embora se dirijam à 2ª pessoa, a concordância é feita em <b>3ª pessoa</b>:</p>
         <div class="exemplo">
-            <p><b>Análise da oração:</b> "O novo professor, João, deu a aula ontem."</p>
+            <b>Errado:</b> <i>Vossa Excelência trouxe <b>vossos</b> documentos?</i><br>
+            <b>Correto:</b> <i>Vossa Excelência trouxe <b>seus</b> documentos?</i>
+        </div>
+
+        <h3>Dica: EU x MIM antes de Infinitivo</h3>
+        <ul>
+            <li><b>EU:</b> quando o pronome é o sujeito do verbo no infinitivo. <i>Trouxeram para <b>eu</b> experimentar.</i></li>
+            <li><b>MIM:</b> quando o pronome é complemento do termo anterior. <i>Isso foi fácil para <b>mim</b>.</i></li>
+        </ul>
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> <i>"Para mim fazer"</i> está ERRADO. O correto é <i>"para eu fazer"</i> (o pronome é o sujeito do infinitivo).
+        </div>
+    </div>
+
+    <!-- PÁGINA 3: Cap 1 - Demonstrativos e Relativos -->
+    <div class="page" data-page="3">
+        <h2>PRONOMES DEMONSTRATIVOS, INDEFINIDOS E RELATIVOS</h2>
+
+        <h3>Demonstrativos – Espaço, Tempo e Discurso</h3>
+        <table>
+            <tr><th>Pronome</th><th>Espaço</th><th>Tempo</th><th>Discurso</th></tr>
+            <tr><td><b>ESTE/ESTA/ISTO</b></td><td>Perto de quem fala</td><td>Presente/futuro próximo</td><td>Último citado em dupla; anuncia</td></tr>
+            <tr><td><b>ESSE/ESSA/ISSO</b></td><td>Perto de quem ouve</td><td>Passado/futuro próximo</td><td>Retoma algo já dito</td></tr>
+            <tr><td><b>AQUELE/AQUELA/AQUILO</b></td><td>Distante de ambos</td><td>Passado distante</td><td>Primeiro citado em dupla</td></tr>
+        </table>
+
+        <h3>Pronomes Relativos</h3>
+        <table>
+            <tr><th>Pronome</th><th>Uso</th><th>Exemplo</th></tr>
+            <tr><td><b>Que</b></td><td>Neutro, pessoas ou coisas</td><td>O trabalho <b>que</b> fiz.</td></tr>
+            <tr><td><b>O qual / A qual</b></td><td>Evita ambiguidade; obrigatório após preposição com 2+ sílabas</td><td>As conclusões sobre <b>as quais</b> pairam dúvidas.</td></tr>
+            <tr><td><b>Quem</b></td><td>Só pessoas; precedido de preposição</td><td>O professor a <b>quem</b> devemos.</td></tr>
+            <tr><td><b>Cujo/Cuja</b></td><td>Posse; <b>NUNCA</b> aceita artigo depois</td><td>O autor <b>cujo</b> livro foi premiado.</td></tr>
+            <tr><td><b>Onde</b></td><td>Exclusivamente lugar físico</td><td>A casa <b>onde</b> moro.</td></tr>
+            <tr><td><b>Quanto</b></td><td>Antecedido de "tudo" ou "tanto"</td><td>Fez tudo <b>quanto</b> queria.</td></tr>
+        </table>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinhas:</b>
             <ul>
-                <li><b>Sujeito:</b> O novo professor, João (núcleo: professor).</li>
-                <li><b>Predicado:</b> deu a aula ontem.</li>
-                <li><b>Objeto direto:</b> a aula.</li>
-                <li><b>Adjunto adverbial:</b> ontem.</li>
-                <li><b>Aposto:</b> João.</li>
+                <li><b>Cujo o / Cuja a:</b> ERRO GRAVE! O correto é <i>cujo livro</i>.</li>
+                <li><b>"Onde" para situações abstratas:</b> ERRADO (<i>"a reunião onde discutimos"</i>). Use <b>em que</b> ou <b>na qual</b>.</li>
+            </ul>
+        </div>
+
+        <h3>Todo x Todo o</h3>
+        <ul>
+            <li><b>Todo</b> (sem artigo) = qualquer. <i>Toda cidade tem problemas.</i></li>
+            <li><b>Todo o</b> (com artigo) = inteiro. <i>Toda a cidade parou.</i></li>
+        </ul>
+
+        <h3>Bastante x Bastantes</h3>
+        <ul>
+            <li><b>Bastante</b> (= muito): advérbio invariável. <i>Estudei bastante.</i></li>
+            <li><b>Bastantes</b> (= muitos): pronome indefinido variável. <i>Estudei bastantes capítulos.</i></li>
+        </ul>
+    </div>
+
+    <!-- PÁGINA 4: Cap 1 - Colocação pronominal -->
+    <div class="page" data-page="4">
+        <h2>COLOCAÇÃO PRONOMINAL</h2>
+
+        <h3>PRÓCLISE – Pronome ANTES do verbo</h3>
+        <p>Obrigatória com <b>palavras atrativas</b>:</p>
+        <ul>
+            <li><b>Negativas:</b> não, nunca, jamais, ninguém, nada. <i>Não se desespere!</i></li>
+            <li><b>Advérbios:</b> agora, aqui, ontem. <i>Aqui se estuda muito.</i></li>
+            <li><b>Conjunções subordinativas:</b> que, se, quando. <i>Espero que me expliquem.</i></li>
+            <li><b>Pronomes relativos/indefinidos/demonstrativos:</b> que, alguém, isso. <i>Poucos te deram oportunidade.</i></li>
+            <li><b>Frases interrogativas/exclamativas/optativas:</b> <i>Quem lhe disse isso?</i> / <i>Que Deus o ajude!</i></li>
+            <li><b>Com sujeito expresso:</b> <i>Eu lhe entregarei o material.</i></li>
+        </ul>
+
+        <h3>MESÓCLISE – Pronome NO MEIO do verbo</h3>
+        <ul>
+            <li>Usada com verbos no <b>Futuro do Presente</b> ou <b>Futuro do Pretérito</b>, sem palavra atrativa antes.</li>
+            <li><b>Exemplo:</b> <i>Realizar-se-á o evento.</i> / <i>Acompanhar-te-ia se pudesse.</i></li>
+            <li>Se houver palavra atrativa, a próclise prevalece: <i>Não se realizará o evento.</i></li>
+        </ul>
+
+        <h3>ÊNCLISE – Pronome DEPOIS do verbo</h3>
+        <ul>
+            <li><b>Regra geral</b> quando próclise e mesóclise não se aplicam.</li>
+            <li><b>Imperativo afirmativo:</b> <i>Silenciem-se!</i></li>
+            <li><b>Infinitivo impessoal:</b> <i>Não era minha intenção machucá-la.</i></li>
+            <li><b>Início de frase:</b> OBRIGATÓRIA, pois é <b>proibido iniciar frase com pronome oblíquo</b>. <i>Levanto-me às 6h.</i></li>
+            <li><b>Após pausa (vírgula):</b> <i>Se eu passar, mudo-me hoje.</i></li>
+        </ul>
+
+        <h3>Formas Especiais dos Oblíquos (O, A, OS, AS)</h3>
+        <ul>
+            <li><b>Verbos terminados em -R, -S, -Z:</b> corta-se a consoante final e o pronome vira <b>lo, la, los, las</b>. <i>fiz + o = fi-lo</i> / <i>dizer + a = dizê-la</i>.</li>
+            <li><b>Verbos terminados em som nasal (-am, -em, -ão, -õe):</b> pronome vira <b>no, na, nos, nas</b>. <i>viram + o = viram-no</i> / <i>põe + a = põe-na</i>.</li>
+        </ul>
+
+        <h3>Locuções Verbais</h3>
+        <p>Com particípio, o pronome <b>NUNCA</b> vem depois do particípio. Use antes do auxiliar ou após o auxiliar:</p>
+        <div class="exemplo">
+            <b>Correto:</b> <i>Tenho-me deliciado</i> ou <i>Eu me tenho deliciado.</i><br>
+            <b>Errado:</b> <i>Tenho deliciado-me.</i>
+        </div>
+
+        <div class="dica">
+            <b>✅ Mnemônico PRÓ-MÉ-EN:</b> <b>PRÓ</b>clise = <b>PRÉ</b> (antes) | <b>MESÓ</b>clise = <b>MEIO</b> | <b>ÊN</b>clise = <b>FIM</b> (depois).
+        </div>
+    </div>
+
+    <!-- PÁGINA 5: Cap 1 - Questões comentadas -->
+    <div class="page" data-page="5">
+        <h2>QUESTÕES COMENTADAS – CAP 1</h2>
+
+        <div class="questao-item">
+            <p><b>Q1</b> (LIQUIGÁS – CESGRANRIO) – "perde-se o dinheiro e o amigo". A colocação do pronome átono está de acordo com a norma-padrão. O mesmo ocorre em:</p>
+            <div class="alternativas">
+                a) Não se perde nem o dinheiro nem o amigo.<br>
+                b) Perderia-se o dinheiro e o amigo.<br>
+                c) O dinheiro e o amigo tinham perdido-se.<br>
+                d) Se perdeu o dinheiro, mas não o amigo.<br>
+                e) Se o amigo que perdeu-se voltasse, ficaria feliz.
+            </div>
+            <div class="comentario">
+                <b>Gabarito: A</b><br>
+                <b>A)</b> CORRETA – O "Não" é fator atrativo, exigindo próclise.<br>
+                <b>B)</b> ERRADA – Futuro do pretérito exige mesóclise: <i>Perder-se-ia</i>.<br>
+                <b>C)</b> ERRADA – Não se usa pronome após particípio.<br>
+                <b>D)</b> ERRADA – Não se inicia frase com pronome oblíquo.<br>
+                <b>E)</b> ERRADA – O pronome relativo "que" exige próclise: <i>que se perdeu</i>.
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q2</b> (PC-SP – VUNESP) – "...que cercam o sentido da existência humana..." A substituição por pronome está correta em:</p>
+            <div class="alternativas">
+                a) que cercam-lo<br>
+                b) que cercam-no<br>
+                c) que o cercam<br>
+                d) que lhe cercam<br>
+                e) que cercam-lhe
+            </div>
+            <div class="comentario">
+                <b>Gabarito: C</b><br>
+                O pronome relativo <b>que</b> atrai obrigatoriamente o pronome (próclise). O verbo <i>cercar</i> é VTD, exigindo <b>o</b> como objeto direto. Logo: <i>que o cercam</i>.
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 6: Cap 2 - Estrutura verbal e classificação -->
+    <div class="page" data-page="6">
+        <h2>CAP 2: VERBOS – ESTRUTURA E CLASSIFICAÇÃO</h2>
+        <p>O <b>verbo</b> é a classe variável que se flexiona em pessoa, número, tempo e modo, indicando ação, estado, fenômeno, ocorrência ou desejo.</p>
+
+        <h3>Estrutura Morfológica</h3>
+        <ul>
+            <li><b>Radical:</b> parte irredutível. <i>fal-ar, vend-er, part-ir.</i></li>
+            <li><b>Vogal Temática:</b> -A- (1ª conj.), -E- (2ª conj. – inclui pôr), -I- (3ª conj.).</li>
+            <li><b>Tema:</b> radical + vogal temática.</li>
+            <li><b>Desinência Modo-Temporal:</b> -va-, -sse-, -ria-.</li>
+            <li><b>Desinência Número-Pessoal:</b> -mos, -is, -m.</li>
+        </ul>
+
+        <h3>Classificação</h3>
+        <ul>
+            <li><b>Regulares:</b> radical inalterado. <i>cantar, vender, partir.</i></li>
+            <li><b>Irregulares:</b> alterações no radical/desinência. <i>fazer → faço, fiz.</i></li>
+            <li><b>Anômalos:</b> radicais distintos. <i>ser (sou, fui); ir (vou, fui).</i></li>
+            <li><b>Abundantes:</b> duas formas equivalentes, geralmente no particípio.
+                <ul>
+                    <li><b>Particípio Regular (-ado, -ido):</b> com <b>TER/HAVER</b>. <i>Tinha aceitado.</i></li>
+                    <li><b>Particípio Irregular (curto):</b> com <b>SER/ESTAR/FICAR</b>. <i>Foi aceito.</i></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Verbos Impessoais</h3>
+        <p>Não possuem sujeito; ficam sempre na <b>3ª pessoa do singular</b>:</p>
+        <ul>
+            <li><b>Haver</b> (sentido de existir, acontecer, tempo decorrido). <i>Havia muitos candidatos.</i></li>
+            <li><b>Fazer, ser, estar</b> indicando tempo ou clima. <i>Faz dez anos.</i></li>
+            <li><b>Fenômenos da natureza.</b> <i>Chovia forte.</i></li>
+        </ul>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> <i>"Houveram problemas"</i> está ERRADO. Como <b>haver</b> (existir) é impessoal, fica no singular: <b>Houve problemas</b>. Se trocássemos por <b>existir</b> (verbo pessoal), aí sim iria ao plural: <i>Existiram problemas</i>.
+        </div>
+    </div>
+
+    <!-- PÁGINA 7: Cap 2 - Modos, tempos, formas nominais -->
+    <div class="page" data-page="7">
+        <h2>MODOS, TEMPOS E FORMAS NOMINAIS</h2>
+
+        <h3>Modos Verbais</h3>
+        <ul>
+            <li><b>Indicativo:</b> Certeza. <i>Eu estudo.</i></li>
+            <li><b>Subjuntivo:</b> Dúvida/hipótese. <i>Talvez eu estude.</i></li>
+            <li><b>Imperativo:</b> Ordem/pedido. <i>Estude!</i></li>
+        </ul>
+
+        <h3>Tempos do Indicativo</h3>
+        <ul>
+            <li><b>Presente:</b> Fato atual. <i>Estudo neste colégio.</i></li>
+            <li><b>Pretérito Perfeito:</b> Concluído. <i>Estudei ontem.</i></li>
+            <li><b>Pretérito Imperfeito:</b> Habitual no passado (-VA-, -IA-). <i>Estudava sempre.</i></li>
+            <li><b>Pretérito Mais-que-perfeito:</b> Passado do passado (-RA-). <i>Já estudara quando chegou.</i></li>
+            <li><b>Futuro do Presente:</b> Posterior ao presente. <i>Estudarei amanhã.</i></li>
+            <li><b>Futuro do Pretérito:</b> Condicional. <i>Estudaria se pudesse.</i></li>
+        </ul>
+
+        <h3>Formas Nominais</h3>
+        <ul>
+            <li><b>Infinitivo:</b> <i>Viver é lutar.</i></li>
+            <li><b>Gerúndio:</b> <i>Trabalhando, aprenderás.</i> (Evite gerundismo: <i>"vou estar transferindo"</i>).</li>
+            <li><b>Particípio:</b> <i>Terminados os exames, saíram.</i></li>
+        </ul>
+
+        <h3>Formação do Imperativo</h3>
+        <ul>
+            <li><b>Afirmativo:</b> "Tu" e "vós" vêm do presente do indicativo <b>sem o -S</b>; demais pessoas vêm do presente do subjuntivo.</li>
+            <li><b>Negativo:</b> TODAS as pessoas vêm do presente do subjuntivo, precedidas de "não".</li>
+        </ul>
+
+        <h3>Mnemônico CREDELEVÊ</h3>
+        <p>Verbos <b>CR</b>er, <b>D</b>ar, <b>L</b>er, <b>V</b>er dobram o "e" no plural do presente do indicativo e <b>perderam o acento</b> com o Acordo Ortográfico:</p>
+        <div class="exemplo">
+            <b>Eles CREEM, DEEM, LEEM, VEEM</b> (sem acento)<br>
+            Não confundir com <b>VÊM</b> (verbo VIR, com acento).
+        </div>
+    </div>
+
+    <!-- PÁGINA 8: Cap 2 - Vozes verbais -->
+    <div class="page" data-page="8">
+        <h2>VOZES VERBAIS</h2>
+        <p>A <b>voz verbal</b> indica a relação entre o sujeito e a ação expressa pelo verbo.</p>
+
+        <h3>1. Voz Ativa</h3>
+        <p>O sujeito é <b>agente</b> (pratica a ação). <i>O concurseiro comprou a apostila.</i></p>
+
+        <h3>2. Voz Passiva</h3>
+        <p>O sujeito é <b>paciente</b> (recebe a ação). Divide-se em:</p>
+        <ul>
+            <li><b>Analítica:</b> SER + Particípio + (agente da passiva). <i>A apostila foi comprada pelo concurseiro.</i></li>
+            <li><b>Sintética (Pronominal):</b> Verbo na 3ª pessoa + SE apassivador. <i>Vendem-se casas.</i></li>
+        </ul>
+
+        <h3>3. Voz Reflexiva</h3>
+        <p>O sujeito é agente e paciente ao mesmo tempo. <i>O menino feriu-se.</i></p>
+
+        <h3>Regra de Ouro: SE Apassivador x Índice de Indeterminação</h3>
+        <table>
+            <tr><th>Estrutura</th><th>Função do SE</th><th>Concordância</th></tr>
+            <tr><td><b>VTD / VTDI + SE</b></td><td>Partícula Apassivadora</td><td>Verbo <b>CONCORDA</b> com o sujeito paciente. <i>Vendem-se casas.</i></td></tr>
+            <tr><td><b>VTI / VI / VL + SE</b></td><td>Índice de Indeterminação do Sujeito</td><td>Verbo obrigatoriamente no <b>SINGULAR</b>. <i>Precisa-se de funcionários.</i></td></tr>
+        </table>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinhas clássicas:</b>
+            <ul>
+                <li><i>"Vende-se casas"</i> → ERRADO. O correto é <b>Vendem-se casas</b> (casas = sujeito paciente plural).</li>
+                <li><i>"Precisam-se de funcionários"</i> → ERRADO. O correto é <b>Precisa-se de funcionários</b> (SE = índice de indeterminação).</li>
+                <li><i>"Tratam-se de questões complexas"</i> → ERRADO. O correto é <b>Trata-se de questões complexas</b>.</li>
+            </ul>
+        </div>
+
+        <div class="dica">
+            <b>✅ Teste do "SER":</b> Viu verbo + SE? Tente passar para a voz passiva analítica com SER. Se der certo, é apassivador e o verbo concorda. <i>Vendem-se casas → Casas são vendidas</i> (deu certo).
+        </div>
+    </div>
+    <!-- PÁGINA 9: Cap 2 - Questões comentadas -->
+    <div class="page" data-page="9">
+        <h2>QUESTÕES COMENTADAS – CAP 2</h2>
+
+        <div class="questao-item">
+            <p><b>Q1</b> (LIQUIGÁS – CESGRANRIO) – "perde-se o dinheiro e o amigo". Assinale a opção em que a concordância com o pronome SE atende à norma-padrão:</p>
+            <div class="alternativas">
+                a) Alugam-se salas comerciais no centro.<br>
+                b) Precisa-se de novos secretários.<br>
+                c) Tratavam-se de assuntos graves.<br>
+                d) Vivem-se muito bem no interior.<br>
+                e) Esperam-se que venham todos.
+            </div>
+            <div class="comentario">
+                <b>Gabarito: A</b><br>
+                <b>A)</b> CORRETA – <i>Alugar</i> é VTD → SE apassivador → verbo concorda com sujeito plural <i>salas comerciais</i>.<br>
+                <b>B)</b> <i>Precisa-se de...</i> é VTI → SE indetermina → verbo fica no singular (já está correto, mas o enunciado destaca apassivador).<br>
+                <b>C)</b> ERRADA – <i>Trata-se de</i> (VTI) fica no singular.<br>
+                <b>D)</b> ERRADA – <i>Vive-se</i> (VI) fica no singular.<br>
+                <b>E)</b> ERRADA – Sujeito oracional exige verbo no singular: <i>Espera-se que...</i>
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q2</b> (PM-SP – VUNESP) – Verbos em "associe, memorize, rabisque" estão no mesmo modo em:</p>
+            <div class="alternativas">
+                a) ...o acesso rápido e a quantidade de textos fazem com que...<br>
+                b) Na internet, basta um clique para vasculhar...<br>
+                c) ...não precisamos mais dele...<br>
+                d) Pense rápido: qual o número de telefone da casa em que morou?<br>
+                e) É o que mostra também uma pesquisa recente...
+            </div>
+            <div class="comentario">
+                <b>Gabarito: D</b><br>
+                Os verbos do enunciado estão no <b>Modo Imperativo</b>. A opção D também traz verbo imperativo: <i>Pense rápido!</i>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 10: Cap 3 - Frase, oração, período, sujeito -->
+    <div class="page" data-page="10">
+        <h2>CAP 3: SINTAXE DO PERÍODO SIMPLES</h2>
+
+        <h3>Conceitos Fundamentais</h3>
+        <ul>
+            <li><b>Frase:</b> enunciado de sentido completo. Pode ser nominal (sem verbo) ou verbal (com verbo).</li>
+            <li><b>Oração:</b> enunciado estruturado ao redor de um verbo ou locução verbal.</li>
+            <li><b>Período:</b> frase constituída por uma ou mais orações.
+                <ul>
+                    <li><b>Simples:</b> uma oração (absoluta).</li>
+                    <li><b>Composto:</b> duas ou mais orações.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Termos Essenciais – SUJEITO</h3>
+        <p>É o termo com o qual o verbo concorda em número e pessoa. Seu núcleo é a palavra principal.</p>
+        <table>
+            <tr><th>Tipo</th><th>Característica</th><th>Exemplo</th></tr>
+            <tr><td><b>Simples</b></td><td>Um só núcleo</td><td>As crianças precisam de alimentos.</td></tr>
+            <tr><td><b>Composto</b></td><td>Dois ou mais núcleos</td><td>Alimentos e roupas custam caro.</td></tr>
+            <tr><td><b>Implícito/Desinencial</b></td><td>Núcleo não expresso (identificado pela desinência)</td><td>Abolimos todas as regras (nós).</td></tr>
+            <tr><td><b>Indeterminado</b></td><td>Não se identifica o sujeito</td><td>Bateram à porta. / Precisa-se de mentes criativas.</td></tr>
+            <tr><td><b>Inexistente</b></td><td>Verbo impessoal (sem sujeito)</td><td>Amanheceu. / Há muitos concursos. / Faz frio.</td></tr>
+        </table>
+
+        <h3>Sujeito Indeterminado – Duas Formas</h3>
+        <ol>
+            <li>Verbo na <b>3ª pessoa do plural</b> sem referente anterior. <i>Andam espalhando boatos.</i></li>
+            <li>Verbo na <b>3ª pessoa do singular + SE</b> (índice de indeterminação) com VTI/VI/VL. <i>Precisa-se de mentes criativas.</i></li>
+        </ol>
+    </div>
+
+    <!-- PÁGINA 11: Cap 3 - Predicado -->
+    <div class="page" data-page="11">
+        <h2>TIPOS DE PREDICADO</h2>
+        <p>O <b>predicado</b> é a informação sobre o sujeito. Classifica-se conforme a natureza do seu núcleo.</p>
+
+        <h3>1. Predicado Verbal</h3>
+        <p>Núcleo significativo = verbo de ação (nocional). <i>O menino limpou a sala.</i></p>
+
+        <h3>2. Predicado Nominal</h3>
+        <p>Núcleo = nome (predicativo do sujeito), unido por <b>verbo de ligação</b> (ser, estar, parecer, permanecer, ficar, continuar, andar).</p>
+        <div class="exemplo">
+            <i>A prova <b>foi</b> <b>fácil</b>.</i><br>
+            <b>foi</b> = verbo de ligação | <b>fácil</b> = predicativo do sujeito (núcleo do predicado nominal).
+        </div>
+
+        <h3>3. Predicado Verbo-Nominal</h3>
+        <p>Apresenta <b>dois núcleos</b>: verbo de ação + nome (predicativo do sujeito ou do objeto).</p>
+        <div class="exemplo">
+            <i>O dia amanheceu <b>ensolarado</b>.</i> (núcleos: <b>amanheceu</b> + <b>ensolarado</b>)<br>
+            <i>As mulheres julgam os homens <b>inconstantes</b>.</i> (núcleos: <b>julgam</b> + <b>inconstantes</b> = predicativo do objeto)
+        </div>
+
+        <h3>Predicativo do Sujeito x Predicativo do Objeto</h3>
+        <ul>
+            <li><b>Predicativo do Sujeito:</b> atribui qualidade ao sujeito. <i>A aluna é estudiosa.</i></li>
+            <li><b>Predicativo do Objeto:</b> atribui qualidade ao objeto direto. <i>Nomearam João diretor.</i></li>
+        </ul>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> Verbos como <i>andar, viver, estar</i> só são de ligação se houver predicativo.
+            <ul>
+                <li><i>Ela anda devagar.</i> → <b>andar</b> é VI (ação/modo).</li>
+                <li><i>Ela anda triste.</i> → <b>andar</b> é VL + predicativo <i>triste</i>.</li>
             </ul>
         </div>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 3: Período Composto – Coordenação                    -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="3">
-        <h2>MÓDULO II – PERÍODO COMPOSTO POR COORDENAÇÃO</h2>
-        <p>O período composto por coordenação é formado por <b>orações independentes</b> sintaticamente, ligadas por conjunções coordenativas ou por vírgulas.</p>
+    <!-- PÁGINA 12: Cap 3 - Termos integrantes e acessórios -->
+    <div class="page" data-page="12">
+        <h2>TERMOS INTEGRANTES E ACESSÓRIOS</h2>
 
-        <h3>3.1. Orações Coordenadas Assindéticas</h3>
-        <p>Orações ligadas apenas por vírgulas ou outros sinais, sem conjunção. Ex.: "Cheguei, vi, venci."</p>
-
-        <h3>3.2. Orações Coordenadas Sindéticas</h3>
-        <p>Orações ligadas por conjunções coordenativas. Classificam-se em:</p>
+        <h3>Termos Integrantes</h3>
         <ul>
-            <li><b>Aditivas:</b> e, nem, não só... mas também. Ex.: "Estudou <b>e</b> passou."</li>
-            <li><b>Adversativas:</b> mas, porém, contudo, entretanto, no entanto. Ex.: "Estudou, <b>mas</b> não passou."</li>
-            <li><b>Alternativas:</b> ou, ora... ora, quer... quer. Ex.: "Ou você estuda <b>ou</b> trabalha."</li>
-            <li><b>Conclusivas:</b> logo, portanto, por isso, assim. Ex.: "Estudou, <b>portanto</b> passou."</li>
-            <li><b>Explicativas:</b> porque, que, pois (antes do verbo). Ex.: "Estude, <b>porque</b> a prova é difícil."</li>
+            <li><b>Objeto Direto (OD):</b> complemento sem preposição obrigatória. <i>Queremos sua ajuda.</i>
+                <ul>
+                    <li><b>OD Preposicionado:</b> estilo/clareza. <i>Amar a Deus.</i></li>
+                    <li><b>OD Pleonástico:</b> repetido por ênfase. <i>Aos fracos, não os posso proteger.</i></li>
+                </ul>
+            </li>
+            <li><b>Objeto Indireto (OI):</b> complemento com preposição obrigatória. <i>Gosto de música.</i></li>
+            <li><b>Complemento Nominal (CN):</b> completa substantivo abstrato, adjetivo ou advérbio com preposição. <i>Temos medo de barata.</i></li>
         </ul>
-        <div class="dica">
-            <b>💡 Dica:</b> As conjunções coordenativas não estabelecem relação de dependência entre as orações; cada uma tem sentido completo sozinha.
+
+        <h3>CN x Adjunto Adnominal – Diferenciação Crucial</h3>
+        <table>
+            <tr><th>Termo</th><th>Liga-se a</th><th>Valor</th><th>Exemplo</th></tr>
+            <tr><td><b>Complemento Nominal</b></td><td>Subst. abstrato, adjetivo, advérbio</td><td>Paciente/Alvo</td><td>A resposta <b>ao aluno</b> (o aluno recebeu)</td></tr>
+            <tr><td><b>Adjunto Adnominal</b></td><td>Substantivo (concreto ou abstrato)</td><td>Agente/Possuidor</td><td>A resposta <b>do aluno</b> (o aluno respondeu)</td></tr>
+        </table>
+
+        <h3>Termos Acessórios</h3>
+        <ul>
+            <li><b>Adjunto Adnominal:</b> caracteriza substantivo. <i>O poeta inovador.</i></li>
+            <li><b>Adjunto Adverbial:</b> circunstância (tempo, lugar, modo, causa). <i>Chegou cedo.</i></li>
+            <li><b>Aposto:</b> explica, enumera, resume ou compara.
+                <ul>
+                    <li><b>Explicativo:</b> <i>São Paulo, metrópole brasileira, ...</i></li>
+                    <li><b>Enumerativo:</b> <i>A vida compõe-se de: amor, arte, ação.</i></li>
+                    <li><b>Resumidor:</b> <i>Fantasias, suor e sonho, tudo forma o carnaval.</i></li>
+                    <li><b>Comparativo:</b> <i>Seus olhos, indagadores holofotes, ...</i></li>
+                </ul>
+            </li>
+            <li><b>Vocativo:</b> termo independente, isolado por vírgula(s). <i>João, venha cá!</i></li>
+        </ul>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinhas:</b>
+            <ul>
+                <li><b>Aposto x Vocativo:</b> <i>Maria, a professora, chegou</i> (aposto) x <i>Maria, venha cá!</i> (vocativo).</li>
+                <li><b>OI x CN:</b> OI completa VERBO; CN completa NOME.</li>
+            </ul>
         </div>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 4: Período Composto – Subordinação  (CORRIGIDA)      -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="4">
-        <h2>MÓDULO III – PERÍODO COMPOSTO POR SUBORDINAÇÃO</h2>
-        <p>No período composto por subordinação, uma oração (subordinada) exerce uma função sintática em relação à outra (oração principal). Classificam-se em substantivas, adjetivas e adverbiais.</p>
+    <!-- PÁGINA 13: Cap 3 - Questões comentadas -->
+    <div class="page" data-page="13">
+        <h2>QUESTÕES COMENTADAS – CAP 3</h2>
 
-        <h3>4.1. Orações Subordinadas Substantivas</h3>
-        <p>Exercem as mesmas funções sintáticas que um <b>substantivo</b> ou pronome substantivo. São introduzidas, em geral, por conjunções integrantes (<b>que, se</b>) e classificam-se em seis tipos:</p>
-        <ul>
-            <li><b>Subjetiva:</b> exerce função de <b>sujeito</b> da oração principal. Ex.: "É necessário <b>que você estude</b>."</li>
-            <li><b>Objetiva Direta:</b> exerce função de <b>objeto direto</b> do verbo principal. Ex.: "Espero <b>que você venha</b>."</li>
-            <li><b>Objetiva Indireta:</b> exerce função de <b>objeto indireto</b> (exige preposição). Ex.: "Lembre-se <b>de que você é importante</b>."</li>
-            <li><b>Completiva Nominal:</b> exerce função de <b>complemento nominal</b> de um nome. Ex.: "Tenho certeza <b>de que você vai passar</b>."</li>
-            <li><b>Predicativa:</b> exerce função de <b>predicativo do sujeito</b>. Ex.: "A verdade é <b>que ele não veio</b>."</li>
-            <li><b>Apositiva:</b> exerce função de <b>aposto</b>. Ex.: "Só quero uma coisa: <b>que você seja feliz</b>."</li>
-        </ul>
+        <div class="questao-item">
+            <p><b>Q1</b> (IBFC – Prefeitura de Cuiabá) – "Todo esforço tem a sua recompensa". As lacunas são:</p>
+            <div class="alternativas">
+                a) predicado / verbo intransitivo / complemento nominal<br>
+                b) substantivo / verbo de ligação / complemento verbal<br>
+                c) predicativo / verbo transitivo indireto / objeto indireto<br>
+                d) sujeito / verbo transitivo direto / objeto direto
+            </div>
+            <div class="comentario">
+                <b>Gabarito: D</b><br>
+                <i>Todo esforço</i> = sujeito simples | <i>tem</i> = VTD (sentido de possuir) | <i>a sua recompensa</i> = objeto direto.
+            </div>
+        </div>
 
-        <h4>Quadro-resumo das Substantivas</h4>
+        <div class="questao-item">
+            <p><b>Q2</b> (TRE-AC – AOCP) – "...morava em Minas Gerais, sua terra natal...". A expressão "sua terra natal":</p>
+            <div class="alternativas">
+                a) é vocativo (termo essencial)<br>
+                b) é aposto (termo acessório) e pode ser excluída<br>
+                c) é aposto (termo essencial)<br>
+                d) é adjunto adnominal<br>
+                e) é adjunto adverbial
+            </div>
+            <div class="comentario">
+                <b>Gabarito: B</b><br>
+                "Sua terra natal" explica o antecedente "Minas Gerais" = aposto explicativo, que é termo acessório.
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 14: Cap 4 - Coordenação -->
+    <div class="page" data-page="14">
+        <h2>CAP 4: PERÍODO COMPOSTO POR COORDENAÇÃO</h2>
+        <p>O período composto por coordenação é formado por orações sintaticamente <b>independentes</b>.</p>
+
+        <h3>Orações Coordenadas Assindéticas</h3>
+        <p>Sem conjunção; apenas vírgulas ou pontuação. <i>Entrei na sala, deitei-me no sofá, adormeci.</i></p>
+
+        <h3>Orações Coordenadas Sindéticas</h3>
+        <table>
+            <tr><th>Tipo</th><th>Conjunções</th><th>Exemplo</th></tr>
+            <tr><td><b>Aditivas</b></td><td>e, nem, não só... mas também, bem como</td><td>Comprei o livro e fui à praia.</td></tr>
+            <tr><td><b>Adversativas</b></td><td>mas, porém, contudo, todavia, entretanto, no entanto</td><td>Fiquei cansado, contudo me diverti.</td></tr>
+            <tr><td><b>Alternativas</b></td><td>ou... ou, ora... ora, quer... quer, seja... seja</td><td>Ou estudo, ou fico sem presente.</td></tr>
+            <tr><td><b>Conclusivas</b></td><td>logo, portanto, por isso, assim, pois (posposto)</td><td>Passei, portanto comemorarei.</td></tr>
+            <tr><td><b>Explicativas</b></td><td>que, porque, pois (anteposto), porquanto</td><td>Não demore, que o filme vai começar.</td></tr>
+        </table>
+
+        <div class="dica">
+            <b>✅ O duplo valor do POIS:</b>
+            <ul>
+                <li><b>Antes do verbo</b> = Explicativo. <i>Não fui, pois queria descansar.</i></li>
+                <li><b>Depois do verbo</b> (entre vírgulas) = Conclusivo. <i>Estudou muito; terá, pois, aprovação.</i></li>
+            </ul>
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> A conjunção <b>E</b> pode assumir valor adversativo em contextos específicos. <i>Estudou muito, e não passou</i> (= mas não passou).
+        </div>
+    </div>
+
+    <!-- PÁGINA 15: Cap 4 - Subordinação Substantivas e Adjetivas -->
+    <div class="page" data-page="15">
+        <h2>PERÍODO COMPOSTO POR SUBORDINAÇÃO</h2>
+
+        <h3>Orações Subordinadas Substantivas</h3>
+        <p>Introduzidas por conjunções integrantes <b>QUE</b> ou <b>SE</b>. Podem ser substituídas por <b>ISSO</b>.</p>
         <table>
             <tr><th>Tipo</th><th>Função</th><th>Exemplo</th></tr>
-            <tr><td><b>Subjetiva</b></td><td>Sujeito</td><td>É necessário <b>que você estude</b>.</td></tr>
+            <tr><td><b>Subjetiva</b></td><td>Sujeito</td><td>É bom <b>que você venha</b>.</td></tr>
             <tr><td><b>Objetiva Direta</b></td><td>Objeto direto</td><td>Espero <b>que você venha</b>.</td></tr>
-            <tr><td><b>Objetiva Indireta</b></td><td>Objeto indireto</td><td>Lembre-se <b>de que você é importante</b>.</td></tr>
-            <tr><td><b>Completiva Nominal</b></td><td>Complemento nominal</td><td>Tenho certeza <b>de que você vai passar</b>.</td></tr>
-            <tr><td><b>Predicativa</b></td><td>Predicativo do sujeito</td><td>A verdade é <b>que ele não veio</b>.</td></tr>
-            <tr><td><b>Apositiva</b></td><td>Aposto</td><td>Só quero uma coisa: <b>que você seja feliz</b>.</td></tr>
+            <tr><td><b>Objetiva Indireta</b></td><td>Objeto indireto</td><td>Insisto <b>em que estude</b>.</td></tr>
+            <tr><td><b>Completiva Nominal</b></td><td>Complemento nominal</td><td>Tenho orgulho <b>de que se comportou</b>.</td></tr>
+            <tr><td><b>Predicativa</b></td><td>Predicativo</td><td>Meu desejo era <b>que desistisse</b>.</td></tr>
+            <tr><td><b>Apositiva</b></td><td>Aposto</td><td>Tinha um sonho: <b>ser feliz</b>.</td></tr>
         </table>
-        <div class="dica">
-            <b>💡 Dica para identificar:</b> Substitua a oração subordinada por <b>"isso"</b> ou <b>"disto"</b>. Se a frase continuar fazendo sentido, é uma substantiva. Ex.: "É necessário <b>isso</b>." / "Espero <b>isso</b>." / "Lembre-se <b>disso</b>."
-        </div>
 
-        <h3>4.2. Orações Subordinadas Adjetivas</h3>
-        <p>Exercem função de <b>adjunto adnominal</b> (caracterizam um substantivo).</p>
+        <h3>Orações Subordinadas Adjetivas</h3>
+        <p>Introduzidas por <b>pronome relativo</b>. Caracterizam um substantivo antecedente.</p>
         <ul>
-            <li><b>Restritiva:</b> restringe o sentido do substantivo. Ex.: "O aluno <b>que estudou</b> passou." (apenas os que estudaram).</li>
-            <li><b>Explicativa:</b> acrescenta uma explicação, isolada por vírgulas. Ex.: "O aluno, <b>que estudou</b>, passou." (todos estudaram).</li>
+            <li><b>Restritiva:</b> SEM vírgulas. Restringe o sentido. <i>Os alunos <b>que estudaram</b> passaram.</i></li>
+            <li><b>Explicativa:</b> COM vírgulas. Explica o antecedente. <i>O homem, <b>que é racional</b>, pensa.</i></li>
         </ul>
 
-        <h3>4.3. Orações Subordinadas Adverbiais</h3>
-        <p>Exercem função de <b>adjunto adverbial</b>, indicando circunstâncias. Principais tipos:</p>
-        <ul>
-            <li><b>Causais:</b> porque, visto que, já que. Ex.: "Não fui <b>porque</b> estava doente."</li>
-            <li><b>Concessivas:</b> embora, ainda que, mesmo que. Ex.: "<b>Embora</b> doente, ele foi."</li>
-            <li><b>Condicionais:</b> se, caso, desde que. Ex.: "<b>Se</b> estudar, passará."</li>
-            <li><b>Finais:</b> para que, a fim de que. Ex.: "Estudou <b>para que</b> passasse."</li>
-            <li><b>Temporais:</b> quando, enquanto, logo que. Ex.: "<b>Quando</b> chegou, todos se levantaram."</li>
-            <li><b>Comparativas:</b> como, tal qual. Ex.: "Ela é mais alta <b>que</b> você."</li>
-            <li><b>Consecutivas:</b> tão... que, tal... que. Ex.: "Falou <b>tanto que</b> se cansou."</li>
-            <li><b>Proporcionais:</b> à medida que, quanto mais... mais. Ex.: "<b>Quanto mais</b> estudo, <b>mais</b> aprendo."</li>
-        </ul>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- PÁGINA 5: Pronomes – Emprego e Colocação                     -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="5">
-        <h2>MÓDULO IV – PRONOMES: EMPREGO, FORMAS DE TRATAMENTO E COLOCAÇÃO</h2>
-        <h3>5.1. Emprego dos Pronomes</h3>
-        <ul>
-            <li><b>Pronomes pessoais retos:</b> eu, tu, ele, nós, vós, eles (sujeito).</li>
-            <li><b>Pronomes pessoais oblíquos átonos:</b> me, te, se, o, a, lhe, nos, vos, os, as, lhes (complementos verbais).</li>
-            <li><b>Pronomes pessoais oblíquos tônicos:</b> mim, comigo, ti, contigo, si, consigo, nós, conosco, vós, convosco, eles/elas, com eles.</li>
-        </ul>
-
-        <h3>5.2. Formas de Tratamento</h3>
-        <ul>
-            <li><b>Vossa Excelência (V. Ex.ª):</b> para altas autoridades (Presidente, Ministros, Deputados, etc.).</li>
-            <li><b>Vossa Senhoria (V. S.ª):</b> tratamento formal geral.</li>
-            <li><b>Vossa Magnificência:</b> Reitores de universidades.</li>
-            <li><b>Vossa Reverendíssima:</b> autoridades religiosas.</li>
-        </ul>
-
-        <h3>5.3. Colocação Pronominal</h3>
-        <ul>
-            <li><b>Próclise:</b> pronome <b>antes</b> do verbo. Usa-se com palavras atrativas (negativas, advérbios, pronomes relativos, conjunções subordinativas). Ex.: "Não <b>me</b> diga."</li>
-            <li><b>Mesóclise:</b> pronome <b>no meio</b> do verbo (futuro do presente e futuro do pretérito). Ex.: "Falar-<b>lhe</b>-ei."</li>
-            <li><b>Ênclise:</b> pronome <b>depois</b> do verbo. Usa-se no início do período e com verbos no imperativo afirmativo. Ex.: "Diga-<b>me</b> a verdade."</li>
-        </ul>
-        <div class="exemplo">
-            <p><b>Resumo da colocação:</b></p>
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha das vírgulas:</b> A presença ou ausência de vírgula <b>muda o sentido</b>:
             <ul>
-                <li>Próclise: palavras atrativas (não, que, quando, se, etc.).</li>
-                <li>Mesóclise: futuro do presente ou do pretérito (sem palavra atrativa).</li>
-                <li>Ênclise: início da frase ou imperativo afirmativo.</li>
+                <li><i>Os alunos que estudaram passaram.</i> (apenas alguns passaram – restritiva)</li>
+                <li><i>Os alunos, que estudaram, passaram.</i> (todos passaram – explicativa)</li>
             </ul>
         </div>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 6: Tempos e Modos Verbais                             -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="6">
-        <h2>MÓDULO V – TEMPOS E MODOS VERBAIS – VALORES SEMÂNTICOS</h2>
-        <h3>6.1. Modo Indicativo</h3>
-        <ul>
-            <li><b>Presente:</b> fato atual ou habitual. Ex.: "Ele <b>estuda</b> todos os dias."</li>
-            <li><b>Pretérito Perfeito:</b> fato concluído no passado. Ex.: "Ele <b>estudou</b> ontem."</li>
-            <li><b>Pretérito Imperfeito:</b> fato habitual ou inconcluso no passado. Ex.: "Ele <b>estudava</b> quando era jovem."</li>
-            <li><b>Pretérito Mais-que-perfeito:</b> fato anterior a outro passado. Ex.: "Ele já <b>estudara</b> quando a prova começou."</li>
-            <li><b>Futuro do Presente:</b> fato que vai acontecer. Ex.: "Ele <b>estudará</b> amanhã."</li>
-            <li><b>Futuro do Pretérito:</b> fato que poderia ter acontecido. Ex.: "Ele <b>estudaria</b> se tivesse tempo."</li>
-        </ul>
+    <!-- PÁGINA 16: Cap 4 - Adverbiais, reduzidas e questões -->
+    <div class="page" data-page="16">
+        <h2>SUBORDINADAS ADVERBIAIS E REDUZIDAS</h2>
 
-        <h3>6.2. Modo Subjuntivo</h3>
-        <ul>
-            <li><b>Presente:</b> desejo, possibilidade presente. Ex.: "Espero que ele <b>estude</b>."</li>
-            <li><b>Pretérito Imperfeito:</b> possibilidade, dúvida no passado. Ex.: "Se ele <b>estudasse</b>, passaria."</li>
-            <li><b>Futuro:</b> fato futuro incerto. Ex.: "Quando ele <b>estudar</b>, passará."</li>
-        </ul>
+        <h3>Orações Subordinadas Adverbiais</h3>
+        <table>
+            <tr><th>Tipo</th><th>Conjunções</th><th>Exemplo</th></tr>
+            <tr><td><b>Causal</b></td><td>porque, como, visto que, já que</td><td>Não veio porque choveu.</td></tr>
+            <tr><td><b>Consecutiva</b></td><td>tão/tal/tanto... que, de modo que</td><td>Estudou tanto que dormiu.</td></tr>
+            <tr><td><b>Condicional</b></td><td>se, caso, desde que</td><td>Se precisar, telefone.</td></tr>
+            <tr><td><b>Concessiva</b></td><td>embora, ainda que, mesmo que</td><td>Embora fizesse calor, levei agasalho.</td></tr>
+            <tr><td><b>Conformativa</b></td><td>conforme, como, segundo</td><td>Fiz como o mestre mandou.</td></tr>
+            <tr><td><b>Final</b></td><td>para que, a fim de que</td><td>Estudarei para que passe.</td></tr>
+            <tr><td><b>Proporcional</b></td><td>à medida que, à proporção que</td><td>À medida que estudava, acertava.</td></tr>
+            <tr><td><b>Temporal</b></td><td>quando, assim que, enquanto</td><td>Assim que chegou, saiu.</td></tr>
+            <tr><td><b>Comparativa</b></td><td>como, tal como, mais... do que</td><td>É forte como um touro.</td></tr>
+        </table>
 
-        <h3>6.3. Modo Imperativo</h3>
-        <ul>
-            <li><b>Afirmativo:</b> ordem, pedido. Ex.: "<b>Estude</b> agora!"</li>
-            <li><b>Negativo:</b> proibição. Ex.: "<b>Não estude</b> agora!"</li>
-        </ul>
-        <div class="dica">
-            <b>💡 Dica:</b> O futuro do subjuntivo é usado com "quando", "se" (futuro incerto), enquanto o pretérito imperfeito do subjuntivo é usado com "se" (condição passada).
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha do "COMO":</b>
+            <ul>
+                <li><i>Como não estudou, reprovou</i> → <b>Causal</b> (= porque).</li>
+                <li><i>Fiz como o mestre mandou</i> → <b>Conformativa</b> (= conforme).</li>
+                <li><i>É forte como um touro</i> → <b>Comparativa</b>.</li>
+            </ul>
+        </div>
+
+        <h3>Orações Reduzidas</h3>
+        <p>Não são introduzidas por conectivo; trazem verbo em <b>forma nominal</b> (infinitivo, gerúndio, particípio).</p>
+        <div class="exemplo">
+            <b>Desenvolvida:</b> <i>É preciso que se estude.</i><br>
+            <b>Reduzida:</b> <i>É preciso estudar</i> (de infinitivo).<br><br>
+            <b>Desenvolvida:</b> <i>Quando vi o mar, senti emoção.</i><br>
+            <b>Reduzida:</b> <i>Ao ver o mar, senti emoção.</i>
+        </div>
+
+        <h3>Questões Comentadas</h3>
+        <div class="questao-item">
+            <p><b>Q1</b> (BANESTES – FGV) – "Talvez um dia seja bom relembrar este dia." Forma desenvolvida:</p>
+            <div class="alternativas">
+                a) relembrarmos este dia<br>
+                b) a relembrança deste dia<br>
+                c) que relembremos este dia<br>
+                d) que relembrássemos este dia<br>
+                e) uma nova lembrança
+            </div>
+            <div class="comentario"><b>Gabarito: C</b> – "Relembrar" = reduzida de infinitivo → desenvolvida: <i>que relembremos</i>.</div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Q2</b> (IBGE – FGV) – "Atentados matam 44 no Egito e país decreta emergência." Relação lógica:</p>
+            <div class="alternativas">
+                a) causa e consequência<br>
+                b) informação e comprovação<br>
+                c) fato e exemplificação<br>
+                d) afirmação e explicação<br>
+                e) tese e argumentação
+            </div>
+            <div class="comentario"><b>Gabarito: A</b> – Atentados (causa) → decretação de emergência (consequência).</div>
         </div>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 7: Questões 1 a 14                                    -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="7">
-        <h2>📝 QUESTÕES (1 a 14)</h2>
-        <p><i>Responda com base no conteúdo estudado.</i></p>
+    <!-- PÁGINA 17: Cap 5 - Revisão Geral -->
+    <div class="page" data-page="17">
+        <h2>CAP 5: REVISÃO GERAL – RESUMO PRÁTICO</h2>
 
-        <div class="questao-item">
-            <p><b>Questão 1</b> (Sintaxe) – Na oração "O livro foi comprado por mim", o termo "por mim" exerce a função de:</p>
-            <div class="alternativas">
-                a) Sujeito.<br>
-                b) Objeto direto.<br>
-                c) Agente da passiva.<br>
-                d) Adjunto adverbial.<br>
-                e) Complemento nominal.
-            </div>
-        </div>
+        <h3>Tabela 1: Pronomes e Colocação</h3>
+        <table>
+            <tr><th>Situação</th><th>Regra</th></tr>
+            <tr><td><b>Preposição + Infinitivo</b></td><td>EU (sujeito) x MIM (complemento)</td></tr>
+            <tr><td><b>Palavras atrativas</b></td><td>Próclise obrigatória</td></tr>
+            <tr><td><b>Futuro do Indicativo</b></td><td>Mesóclise (sem atrativo)</td></tr>
+            <tr><td><b>Início de frase</b></td><td>NUNCA com pronome oblíquo</td></tr>
+        </table>
 
-        <div class="questao-item">
-            <p><b>Questão 2</b> (Coordenação) – A oração "Estudou, <b>pois</b> queria passar" apresenta uma conjunção coordenativa:</p>
-            <div class="alternativas">
-                a) Aditiva.<br>
-                b) Adversativa.<br>
-                c) Alternativa.<br>
-                d) Conclusiva.<br>
-                e) Explicativa.
-            </div>
-        </div>
+        <h3>Tabela 2: Verbos</h3>
+        <table>
+            <tr><th>Situação</th><th>Regra</th></tr>
+            <tr><td><b>Haver (existir)</b></td><td>Impessoal → fica no SINGULAR</td></tr>
+            <tr><td><b>Existir</b></td><td>Pessoal → concorda normalmente</td></tr>
+            <tr><td><b>Particípio</b></td><td>TER/HAVER + REGULAR | SER/ESTAR + IRREGULAR</td></tr>
+            <tr><td><b>CREDELEVÊ</b></td><td>creem, deem, leem, veem (sem acento)</td></tr>
+        </table>
 
-        <div class="questao-item">
-            <p><b>Questão 3</b> (Subordinação – Adjetiva) – Na frase "O aluno <b>que estudou</b> passou", a oração em destaque é:</p>
-            <div class="alternativas">
-                a) Subordinada substantiva objetiva direta.<br>
-                b) Subordinada adjetiva restritiva.<br>
-                c) Subordinada adjetiva explicativa.<br>
-                d) Subordinada adverbial causal.<br>
-                e) Subordinada substantiva subjetiva.
-            </div>
-        </div>
+        <h3>Tabela 3: Sintaxe</h3>
+        <table>
+            <tr><th>Situação</th><th>Regra</th></tr>
+            <tr><td><b>VTD + SE</b></td><td>Apassivador → verbo CONCORDA</td></tr>
+            <tr><td><b>VTI + SE</b></td><td>Indetermina → verbo no SINGULAR</td></tr>
+            <tr><td><b>CN x AA</b></td><td>CN = paciente | AA = agente</td></tr>
+            <tr><td><b>Vocativo</b></td><td>Sempre isolado por vírgula(s)</td></tr>
+        </table>
 
-        <div class="questao-item">
-            <p><b>Questão 4</b> (Colocação) – A frase em que a colocação pronominal está correta é:</p>
-            <div class="alternativas">
-                a) Não se esqueça de mim.<br>
-                b) Não esqueça-se de mim.<br>
-                c) Não esqueça de mim-se.<br>
-                d) Se não esqueça de mim.<br>
-                e) Não esqueça de se mim.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 5</b> (Tempos Verbais) – O verbo "cantava" está no pretérito:</p>
-            <div class="alternativas">
-                a) Perfeito.<br>
-                b) Imperfeito.<br>
-                c) Mais-que-perfeito.<br>
-                d) Futuro do presente.<br>
-                e) Futuro do pretérito.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 6</b> (Subordinação – Adverbial) – A oração "Embora estivesse doente, ele foi trabalhar" é uma subordinada adverbial:</p>
-            <div class="alternativas">
-                a) Causal.<br>
-                b) Concessiva.<br>
-                c) Condicional.<br>
-                d) Final.<br>
-                e) Temporal.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 7</b> (Termos) – Na frase "Entreguei o relatório ao chefe", o termo "ao chefe" é um:</p>
-            <div class="alternativas">
-                a) Objeto direto.<br>
-                b) Objeto indireto.<br>
-                c) Adjunto adnominal.<br>
-                d) Adjunto adverbial.<br>
-                e) Complemento nominal.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 8</b> (Coordenação) – A conjunção "mas" é classificada como coordenativa:</p>
-            <div class="alternativas">
-                a) Aditiva.<br>
-                b) Adversativa.<br>
-                c) Alternativa.<br>
-                d) Conclusiva.<br>
-                e) Explicativa.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 9</b> (Pronomes) – O pronome de tratamento utilizado para se dirigir a um Ministro de Estado é:</p>
-            <div class="alternativas">
-                a) Vossa Senhoria.<br>
-                b) Vossa Excelência.<br>
-                c) Vossa Magnificência.<br>
-                d) Vossa Reverendíssima.<br>
-                e) Vossa Alteza.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 10</b> (Subordinação – Substantiva) – "Farei o que for necessário" – a oração "o que for necessário" é uma subordinada substantiva:</p>
-            <div class="alternativas">
-                a) Subjetiva.<br>
-                b) Objetiva direta.<br>
-                c) Objetiva indireta.<br>
-                d) Completiva nominal.<br>
-                e) Predicativa.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 11</b> (Colocação) – A mesóclise ocorre com o pronome colocado no meio do verbo, em tempos como:</p>
-            <div class="alternativas">
-                a) Presente do indicativo.<br>
-                b) Pretérito perfeito.<br>
-                c) Futuro do presente e futuro do pretérito.<br>
-                d) Imperativo afirmativo.<br>
-                e) Subjuntivo presente.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 12</b> (Tempos) – O verbo "teria estudado" está no:</p>
-            <div class="alternativas">
-                a) Pretérito mais-que-perfeito.<br>
-                b) Futuro do presente.<br>
-                c) Futuro do pretérito composto.<br>
-                d) Pretérito perfeito composto.<br>
-                e) Presente do indicativo.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 13</b> (Termos) – Na frase "O carro, que era vermelho, foi vendido", a oração "que era vermelho" é um:</p>
-            <div class="alternativas">
-                a) Adjunto adverbial.<br>
-                b) Adjunto adnominal.<br>
-                c) Aposto.<br>
-                d) Vocativo.<br>
-                e) Objeto direto.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 14</b> (V/F – Sintaxe e Período) – Analise as afirmativas:</p>
-            <p>(   ) No período composto por coordenação, as orações são independentes sintaticamente.<br>
-            (   ) O sujeito é um termo integrante da oração.<br>
-            (   ) A oração subordinada adverbial condicional indica uma condição.<br>
-            (   ) O adjunto adnominal indica uma circunstância de tempo.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) V – F – V – F<br>b) F – V – F – V<br>c) V – V – F – F<br>d) F – F – V – V<br>e) V – F – F – V
-            </div>
-        </div>
+        <h3>Tabela 4: Período Composto</h3>
+        <table>
+            <tr><th>Tipo</th><th>Como identificar</th></tr>
+            <tr><td><b>Substantiva</b></td><td>Substituir por ISSO</td></tr>
+            <tr><td><b>Adjetiva</b></td><td>Substituir por O QUAL / A QUAL</td></tr>
+            <tr><td><b>Adjetiva Explicativa</b></td><td>COM vírgulas</td></tr>
+            <tr><td><b>Adjetiva Restritiva</b></td><td>SEM vírgulas</td></tr>
+            <tr><td><b>Adverbial</b></td><td>Indica circunstância</td></tr>
+        </table>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- PÁGINA 8: Questões 15 a 25 + Gabarito                       -->
-    <!-- ============================================================ -->
-    <div class="page" data-page="8">
-        <h2>📝 QUESTÕES (15 a 25) – Continuação</h2>
+    <!-- PÁGINA 18: Simulado Q1-Q13 -->
+    <div class="page" data-page="18">
+        <h2>📝 SIMULADO FINAL (1 a 13)</h2>
 
-        <div class="questao-item">
-            <p><b>Questão 15</b> (V/F – Pronomes e Colocação) – Analise as afirmativas:</p>
-            <p>(   ) A ênclise é a colocação do pronome depois do verbo.<br>
-            (   ) A próclise é usada com palavras atrativas como "não" e "que".<br>
-            (   ) "Vossa Senhoria" é um pronome de tratamento para o Presidente da República.<br>
-            (   ) A mesóclise é usada no futuro do pretérito.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
-            </div>
-        </div>
+        <div class="questao-item"><p><b>Q1</b> (IBFC) – "Embora fosse tarde, fomos visitá-lo". A oração destacada expressa:</p><div class="alternativas">a) Causa | b) Concessão | c) Condição | d) Consequência</div></div>
+        <div class="questao-item"><p><b>Q2</b> (IBFC) – "Maria chorou porque seus olhos estão vermelhos". A oração é coordenada sindética:</p><div class="alternativas">a) Aditiva | b) Adversativa | c) Explicativa | d) Conclusiva</div></div>
+        <div class="questao-item"><p><b>Q3</b> (VUNESP) – Pronome oblíquo empregado corretamente:</p><div class="alternativas">a) Me disseram que a prova seria fácil. | b) Não informou-me sobre a mudança. | c) Entreguei os relatórios e solicitei que os analisassem. | d) Quando ver a proposta, assine-a.</div></div>
+        <div class="questao-item"><p><b>Q4</b> (FGV) – "Não faltam, também, os arautos do quanto pior, melhor...". O termo "os arautos" é:</p><div class="alternativas">a) Objeto direto | b) Objeto indireto | c) Sujeito | d) Predicativo do sujeito</div></div>
+        <div class="questao-item"><p><b>Q5</b> (CESPE) – "...não eram identificadas as esferas de abrangência dos poderes". O plural justifica-se por concordar com:</p><div class="alternativas">a) Montesquieu | b) esferas de abrangência dos poderes | c) poderes políticos | d) clareza</div></div>
+        <div class="questao-item"><p><b>Q6</b> (VUNESP) – "A casa onde morava foi vendida". O "onde" é pronome relativo que indica:</p><div class="alternativas">a) Tempo | b) Modo | c) Lugar físico | d) Causa</div></div>
+        <div class="questao-item"><p><b>Q7</b> (CESGRANRIO) – Regência de "preferir" em conformidade com a norma:</p><div class="alternativas">a) Prefiro mais cinema do que teatro. | b) Prefiro mil vezes estudar do que trabalhar. | c) Prefiro cinema a teatro. | d) Prefiro antes o estudo que o lazer.</div></div>
+        <div class="questao-item"><p><b>Q8</b> (IBFC) – "Sabe-se que Aline não gosta de Pedro". A oração destacada é substantiva:</p><div class="alternativas">a) Objetiva direta | b) Subjetiva | c) Completiva nominal | d) Adjetiva restritiva</div></div>
+        <div class="questao-item"><p><b>Q9</b> (VUNESP) – "Ela é a aluna escolhida pela turma". O termo "escolhida":</p><div class="alternativas">a) Gerúndio com valor de advérbio | b) Particípio com função de adjetivo | c) Infinitivo pessoal | d) Verbo de ligação</div></div>
+        <div class="questao-item"><p><b>Q10</b> (IBFC) – "Comprei o livro e li dois capítulos". A conjunção "e" introduz coordenada sindética:</p><div class="alternativas">a) Adversativa | b) Aditiva | c) Conclusiva | d) Explicativa</div></div>
+        <div class="questao-item"><p><b>Q11</b> (FGV) – Pronome demonstrativo INCORRETO:</p><div class="alternativas">a) Esta caneta em minha mão é azul. | b) Esse livro que você lê é bom? | c) Aquele prédio lá longe é o fórum. | d) Comprei este livro que está com você.</div></div>
+        <div class="questao-item"><p><b>Q12</b> (AOCP) – "Fui eu que paguei a conta". O verbo "paguei" justifica-se por concordar com:</p><div class="alternativas">a) o pronome "que" | b) o pronome "eu" | c) obrigatoriamente 3ª pessoa | d) forma impessoal</div></div>
+        <div class="questao-item"><p><b>Q13</b> (VUNESP) – Ocorre PREDICADO VERBO-NOMINAL em:</p><div class="alternativas">a) A candidata estava nervosa. | b) Os alunos estudaram bastante. | c) Os alunos saíram da sala entusiasmados. | d) O dia foi ensolarado.</div></div>
+    </div>
 
-        <div class="questao-item">
-            <p><b>Questão 16</b> (V/F – Tempos Verbais) – Analise as afirmativas:</p>
-            <p>(   ) O pretérito imperfeito indica um fato concluído no passado.<br>
-            (   ) O futuro do subjuntivo é usado com "se" ou "quando" para fatos futuros incertos.<br>
-            (   ) O imperativo afirmativo é usado para dar ordens ou pedidos.<br>
-            (   ) O presente do indicativo pode expressar um fato atual ou habitual.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) F – V – V – V<br>b) V – F – F – V<br>c) F – V – F – V<br>d) V – V – V – F<br>e) F – F – V – V
-            </div>
-        </div>
+    <!-- PÁGINA 19: Simulado Q14-Q25 + Gabarito -->
+    <div class="page" data-page="19">
+        <h2>📝 SIMULADO FINAL (14 a 25)</h2>
 
-        <div class="questao-item">
-            <p><b>Questão 17</b> (Sintaxe) – Na frase "Eu o vi ontem", o termo "o" exerce a função de:</p>
-            <div class="alternativas">
-                a) Sujeito.<br>
-                b) Objeto direto.<br>
-                c) Objeto indireto.<br>
-                d) Adjunto adnominal.<br>
-                e) Complemento nominal.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 18</b> (Coordenação) – A conjunção "portanto" é coordenativa:</p>
-            <div class="alternativas">
-                a) Aditiva.<br>
-                b) Adversativa.<br>
-                c) Alternativa.<br>
-                d) Conclusiva.<br>
-                e) Explicativa.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 19</b> (Subordinação – Adverbial) – "Quando você chegar, avise-me" – a oração "Quando você chegar" é uma subordinada adverbial:</p>
-            <div class="alternativas">
-                a) Causal.<br>
-                b) Concessiva.<br>
-                c) Condicional.<br>
-                d) Final.<br>
-                e) Temporal.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 20</b> (Colocação) – A frase com a colocação pronominal correta (segundo a norma culta) é:</p>
-            <div class="alternativas">
-                a) Me empresta o livro?<br>
-                b) Empresta-me o livro?<br>
-                c) Empresta o livro-me?<br>
-                d) Me empresta o livro? (informal, mas aceita em alguns contextos, porém a norma culta exige a ênclise).<br>
-                e) Empresta-me o livro? (sim, esta é a correta segundo a norma culta para início de frase com verbo no imperativo).
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 21</b> (V/F – Geral) – Analise as afirmativas:</p>
-            <p>(   ) O vocativo é um termo que chama o interlocutor.<br>
-            (   ) A oração subordinada substantiva objetiva direta complementa um verbo transitivo direto.<br>
-            (   ) O adjunto adverbial indica uma circunstância.<br>
-            (   ) O aposto é um termo essencial da oração.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) V – V – V – F<br>b) F – V – F – V<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – F – F
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 22</b> (Tempos) – O verbo "cantaremos" está no:</p>
-            <div class="alternativas">
-                a) Pretérito perfeito.<br>
-                b) Futuro do presente.<br>
-                c) Futuro do pretérito.<br>
-                d) Pretérito imperfeito.<br>
-                e) Presente do subjuntivo.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 23</b> (Subordinação – Adverbial) – "Ele fez o possível <b>para que todos ficassem felizes</b>". A oração em destaque é uma subordinada adverbial:</p>
-            <div class="alternativas">
-                a) Causal.<br>
-                b) Concessiva.<br>
-                c) Condicional.<br>
-                d) Final.<br>
-                e) Temporal.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 24</b> (Pronomes) – O pronome "lhes" é um pronome pessoal oblíquo átono que exerce a função de:</p>
-            <div class="alternativas">
-                a) Objeto direto.<br>
-                b) Objeto indireto.<br>
-                c) Sujeito.<br>
-                d) Adjunto adnominal.<br>
-                e) Complemento nominal.
-            </div>
-        </div>
-
-        <div class="questao-item">
-            <p><b>Questão 25</b> (V/F – Consolidação) – Analise as afirmativas:</p>
-            <p>(   ) A oração subordinada adjetiva explicativa é isolada por vírgulas.<br>
-            (   ) O pretérito mais-que-perfeito indica um fato anterior a outro passado.<br>
-            (   ) A mesóclise é a colocação do pronome antes do verbo.<br>
-            (   ) O adjunto adnominal caracteriza o substantivo.</p>
-            <p>Assinale a sequência correta:</p>
-            <div class="alternativas">
-                a) V – V – F – V<br>b) F – V – V – F<br>c) V – F – V – F<br>d) F – F – V – V<br>e) V – V – V – F
-            </div>
-        </div>
+        <div class="questao-item"><p><b>Q14</b> (CESGRANRIO) – "Trata-se de questões complexas" – verbo no singular porque:</p><div class="alternativas">a) sujeito é "questões complexas" | b) SE é apassivador | c) SE é índice de indeterminação (VTI) | d) verbo impessoal</div></div>
+        <div class="questao-item"><p><b>Q15</b> (IBFC) – "João, traga os documentos!" O termo "João" é:</p><div class="alternativas">a) Sujeito simples | b) Aposto explicativo | c) Vocativo | d) Adjunto adnominal</div></div>
+        <div class="questao-item"><p><b>Q16</b> (FGV) – "Embora fizesse calor, levei agasalho". Substituição sem alterar sentido:</p><div class="alternativas">a) Como fazia calor | b) Apesar de fazer calor | c) Conforme fazia calor | d) Para fazer calor</div></div>
+        <div class="questao-item"><p><b>Q17</b> (VUNESP) – Ocorre PREDICATIVO DO OBJETO em:</p><div class="alternativas">a) O juiz julgou o réu culpado. | b) O réu permaneceu calado. | c) A testemunha falou calmamente. | d) O advogado apresentou a defesa.</div></div>
+        <div class="questao-item"><p><b>Q18</b> (CESPE) – "Amanheceu um dia lindo". O verbo "amanhecer" foi empregado:</p><div class="alternativas">a) impessoal, sem sujeito | b) pessoal, com sujeito "um dia lindo" | c) verbo de ligação | d) transitivo indireto</div></div>
+        <div class="questao-item"><p><b>Q19</b> (IBFC) – "A professora verificou se os alunos estavam presentes". Oração substantiva:</p><div class="alternativas">a) Subjetiva | b) Objetiva Direta | c) Objetiva Indireta | d) Completiva Nominal</div></div>
+        <div class="questao-item"><p><b>Q20</b> (AOCP) – Hífen CORRETO com pronomes:</p><div class="alternativas">a) Ofereceram me um café. | b) Vou me embora. | c) Deixá-lo-ei informado. | d) Não diga me nada.</div></div>
+        <div class="questao-item"><p><b>Q21</b> (VUNESP) – "Bastante" como PRONOME INDEFINIDO:</p><div class="alternativas">a) estudaram bastante | b) bastantes motivos para comemorar | c) bastante confiantes | d) bastante proveitoso</div></div>
+        <div class="questao-item"><p><b>Q22</b> (FGV) – "O aluno de cujo livro te falei foi aprovado". O "cujo" indica:</p><div class="alternativas">a) Causa | b) Posse entre antecedente e consequente | c) Tempo | d) Consequência</div></div>
+        <div class="questao-item"><p><b>Q23</b> (IBFC) – "Não fui à festa, pois estava chovendo". A oração é coordenada sindética:</p><div class="alternativas">a) Conclusiva | b) Explicativa | c) Adversativa | d) Alternativa</div></div>
+        <div class="questao-item"><p><b>Q24</b> (CESGRANRIO) – Verbo "haver" em conformidade com a norma:</p><div class="alternativas">a) Haviam muitos alunos. | b) Hão de haver soluções. | c) Houve dois acidentes. | d) Houveram modificações.</div></div>
+        <div class="questao-item"><p><b>Q25</b> (VUNESP) – ORAÇÃO REDUZIDA DE INFINITIVO:</p><div class="alternativas">a) É preciso que todos colaborem. | b) Ao chegar em casa, descansou. | c) Vi o menino que corria. | d) Terminada a aula, saíram.</div></div>
 
         <hr>
-
         <h2>✅ GABARITO OFICIAL</h2>
         <div class="gabarito-box">
-            <p><b>1-C</b> | <b>2-E</b> | <b>3-B</b> | <b>4-A</b> | <b>5-B</b> | <b>6-B</b> | <b>7-B</b> | <b>8-B</b> | <b>9-B</b> | <b>10-B</b></p>
-            <p><b>11-C</b> | <b>12-C</b> | <b>13-B</b> | <b>14-A</b> | <b>15-A</b> | <b>16-A</b> | <b>17-B</b> | <b>18-D</b> | <b>19-E</b> | <b>20-B</b></p>
-            <p><b>21-A</b> | <b>22-B</b> | <b>23-D</b> | <b>24-B</b> | <b>25-A</b></p>
+            <p><b>1-B</b> | <b>2-C</b> | <b>3-C</b> | <b>4-C</b> | <b>5-B</b> | <b>6-C</b> | <b>7-C</b> | <b>8-B</b> | <b>9-B</b> | <b>10-B</b></p>
+            <p><b>11-D</b> | <b>12-B</b> | <b>13-C</b> | <b>14-C</b> | <b>15-C</b> | <b>16-B</b> | <b>17-A</b> | <b>18-B</b> | <b>19-B</b> | <b>20-C</b></p>
+            <p><b>21-B</b> | <b>22-B</b> | <b>23-B</b> | <b>24-C</b> | <b>25-B</b></p>
         </div>
-        <p style="margin-top:10px;"><b>Justificativa das V/F:</b> Q14 (V,F,V,F); Q15 (V,V,F,V); Q16 (F,V,V,V); Q21 (V,V,V,F); Q25 (V,V,F,V).</p>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- ÁREA DE NAVEGAÇÃO                                            -->
-    <!-- ============================================================ -->
+    <!-- NAVEGAÇÃO -->
     <div class="nav-area">
         <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
-
         <a href="index.html" style="text-decoration:none;">
             <button class="nav-btn menu-btn">🏠 Menu</button>
         </a>
-
-        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <span class="page-indicator" id="pageIndicator">Página 1 de 19</span>
         <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
     </div>
-    <div class="footer-note">
-        📖 Material para concursos – Navegue pelas páginas usando os botões.
-    </div>
+    <div class="footer-note">📖 Material para concursos – Navegue pelas páginas usando os botões.</div>
 </div>
 
 <script>
@@ -746,25 +785,17 @@
         const pages = document.querySelectorAll('.page');
         let current = 0;
         const total = pages.length;
-
         function updatePage() {
-            pages.forEach((p, i) => {
-                p.classList.toggle('active', i === current);
-            });
+            pages.forEach((p, i) => { p.classList.toggle('active', i === current); });
             document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
             document.getElementById('prevBtn').disabled = (current === 0);
             document.getElementById('nextBtn').disabled = (current === total - 1);
             document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-
         window.changePage = function(delta) {
             const newIndex = current + delta;
-            if (newIndex >= 0 && newIndex < total) {
-                current = newIndex;
-                updatePage();
-            }
+            if (newIndex >= 0 && newIndex < total) { current = newIndex; updatePage(); }
         };
-
         updatePage();
     })();
 </script>

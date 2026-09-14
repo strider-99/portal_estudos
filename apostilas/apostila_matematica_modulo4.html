@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila - Matemática: Cálculo Algébrico</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f4ff;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+        .book-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px 35px;
+            position: relative;
+        }
+        h1 {
+            color: #1a3c6e;
+            text-align: center;
+            border-bottom: 3px solid #3f51b5;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #1a3c6e;
+            background-color: #e8eaf6;
+            padding: 10px 15px;
+            border-left: 6px solid #3f51b5;
+            margin: 25px 0 15px 0;
+            font-size: 22px;
+        }
+        h3 {
+            color: #283593;
+            margin: 18px 0 10px 0;
+            font-size: 19px;
+        }
+        p { line-height: 1.7; margin-bottom: 12px; text-align: justify; }
+        ul, ol { margin: 10px 0 15px 30px; }
+        li { margin-bottom: 6px; line-height: 1.6; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th { background-color: #dde1f0; font-weight: bold; }
+        .dica {
+            background-color: #e8f5e9;
+            border-left: 6px solid #2e7d32;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .dica b { color: #1b5e20; }
+        .pegadinha {
+            background-color: #fce4e4;
+            border-left: 6px solid #c0392b;
+            padding: 14px 18px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .pegadinha b { color: #922b21; }
+        .exemplo {
+            background-color: #f0f8ff;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px dashed #3f51b5;
+        }
+        .gabarito-box {
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .questao-item {
+            background-color: #f5f6fc;
+            padding: 15px 18px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border-left: 4px solid #3f51b5;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .questao-item p { margin-bottom: 6px; }
+        .alternativas { margin-left: 20px; font-size: 15px; }
+
+        .page { display: none; animation: fadeIn 0.3s ease; }
+        .page.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0.5; } to { opacity: 1; } }
+
+        .nav-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #dee2e6;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-indicator {
+            font-size: 15px;
+            font-weight: bold;
+            color: #495057;
+            background: #f1f3f5;
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+        .nav-btn {
+            background-color: #1a3c6e;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .nav-btn:hover { background-color: #3f51b5; }
+        .nav-btn:active { transform: scale(0.97); }
+        .nav-btn:disabled { background-color: #adb5bd; cursor: not-allowed; box-shadow: none; }
+        .nav-btn.secondary { background-color: #6c757d; }
+        .nav-btn.secondary:hover { background-color: #5a6268; }
+        .nav-btn.menu-btn { background-color: #28a745; min-width: 100px; }
+        .nav-btn.menu-btn:hover { background-color: #218838; }
+
+        .footer-note { text-align: center; margin-top: 15px; font-size: 13px; color: #868e96; }
+        hr { margin: 30px 0 15px 0; border: 1px solid #dee2e6; }
+
+        @media (max-width: 600px) {
+            .book-container { padding: 15px; }
+            .nav-btn { padding: 8px 16px; min-width: 80px; font-size: 14px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="book-container" id="book">
+
+    <h1>🧮 MATEMÁTICA – MÓDULO 4</h1>
+    <p style="text-align:center; font-size:18px; color:#1a3c6e;"><b>Cálculo Algébrico: Expressões, Produtos Notáveis, Fatoração, Equações, Inequações e Sistemas</b></p>
+    <hr>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 1: Capa / Introdução / Sumário                        -->
+    <!-- ============================================================ -->
+    <div class="page active" data-page="1">
+        <h2>1. INTRODUÇÃO</h2>
+        <p>O <b>Cálculo Algébrico</b> é um dos pilares da matemática e está presente em quase todas as provas de concurso. Ele engloba desde a manipulação de expressões algébricas até a resolução de equações, inequações e sistemas.</p>
+        <p>Este módulo traz <b>dicas de resolução</b>, <b>pegadinhas clássicas de banca</b> e <b>45 questões em nível de concurso</b>, com contexto e múltiplas etapas.</p>
+
+        <div class="dica">
+            <b>🎯 Objetivo do Módulo:</b> Dominar expressões algébricas, produtos notáveis, fatoração, equações e inequações do 1º e 2º grau, e sistemas de equações com duas variáveis, com 45 questões ao final.
+        </div>
+
+        <h2>2. SUMÁRIO</h2>
+        <ul>
+            <li><b>Módulo I:</b> Expressões Algébricas – pág. 2</li>
+            <li><b>Módulo II:</b> Produtos Notáveis e Fatoração – pág. 3</li>
+            <li><b>Módulo III:</b> Equações e Inequações do 1º Grau – pág. 4</li>
+            <li><b>Módulo IV:</b> Sistemas de Equações do 1º Grau – pág. 5</li>
+            <li><b>Módulo V:</b> Equações do 2º Grau – pág. 6</li>
+            <li><b>Questões:</b> 45 questões (págs. 7 e 8)</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 2: Expressões Algébricas                              -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="2">
+        <h2>MÓDULO I – EXPRESSÕES ALGÉBRICAS</h2>
+
+        <h3>2.1. Monômios</h3>
+        <p><b>Monômio</b> é o produto de um número (coeficiente) por uma ou mais letras (parte literal). Ex: 3x², −5ab, 7.</p>
+        <ul>
+            <li><b>Grau de um monômio:</b> soma dos expoentes da parte literal. Ex: 3x²y tem grau 3.</li>
+            <li><b>Monômios semelhantes:</b> mesma parte literal. Ex: 3x² e −5x².</li>
+        </ul>
+
+        <h3>2.2. Polinômios</h3>
+        <p><b>Polinômio</b> é a soma algébrica de monômios. Ex: 3x² + 2x − 5.</p>
+        <ul>
+            <li><b>Grau do polinômio:</b> maior grau dos monômios que o compõem.</li>
+            <li><b>Termo independente:</b> monômio sem parte literal.</li>
+        </ul>
+
+        <h3>2.3. Operações com Polinômios</h3>
+        <ul>
+            <li><b>Adição/Subtração:</b> reduza os termos semelhantes.</li>
+            <li><b>Multiplicação:</b> distributiva. Ex: (x+2)(x+3) = x² + 3x + 2x + 6 = x² + 5x + 6.</li>
+            <li><b>Divisão:</b> divide-se cada termo do dividendo pelo divisor (para monômios).</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> Simplifique 5x² + 3x − 2x² + 4x − 7:</p>
+            <ul>
+                <li>Termos semelhantes: 5x² − 2x² = 3x²; 3x + 4x = 7x; −7</li>
+                <li>Resultado: <b>3x² + 7x − 7</b></li>
+            </ul>
+        </div>
+
+        <div class="dica">
+            <b>✅ Dica:</b> Para somar ou subtrair polinômios, sempre agrupe os <b>termos semelhantes</b> antes de calcular. Isso evita erros.
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> Sinais negativos antes de parênteses! Ex: −(2x − 3) = <b>−2x + 3</b> (o sinal de menos troca TODOS os sinais internos).
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 3: Produtos Notáveis e Fatoração                      -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="3">
+        <h2>MÓDULO II – PRODUTOS NOTÁVEIS E FATORAÇÃO</h2>
+
+        <h3>3.1. Produtos Notáveis</h3>
+        <table>
+            <tr><th>Nome</th><th>Fórmula</th></tr>
+            <tr><td>Quadrado da soma</td><td>(a + b)² = a² + 2ab + b²</td></tr>
+            <tr><td>Quadrado da diferença</td><td>(a − b)² = a² − 2ab + b²</td></tr>
+            <tr><td>Produto da soma pela diferença</td><td>(a + b)(a − b) = a² − b²</td></tr>
+            <tr><td>Cubo da soma</td><td>(a + b)³ = a³ + 3a²b + 3ab² + b³</td></tr>
+            <tr><td>Cubo da diferença</td><td>(a − b)³ = a³ − 3a²b + 3ab² − b³</td></tr>
+        </table>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> (x + 5)² = x² + 2·x·5 + 5² = <b>x² + 10x + 25</b></p>
+            <p><b>📌 Exemplo:</b> (3a − 2)(3a + 2) = (3a)² − 2² = <b>9a² − 4</b></p>
+        </div>
+
+        <h3>3.2. Fatoração</h3>
+        <p>Fatorar é transformar uma expressão em produto. Principais casos:</p>
+        <ul>
+            <li><b>Fator comum em evidência:</b> ax + ay = a(x + y)</li>
+            <li><b>Agrupamento:</b> ax + ay + bx + by = a(x + y) + b(x + y) = (x + y)(a + b)</li>
+            <li><b>Diferença de quadrados:</b> a² − b² = (a + b)(a − b)</li>
+            <li><b>Trinômio quadrado perfeito:</b> a² + 2ab + b² = (a + b)²; a² − 2ab + b² = (a − b)²</li>
+            <li><b>Soma/diferença de cubos:</b> a³ ± b³ = (a ± b)(a² ∓ ab + b²)</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> Fatore x² − 9:</p>
+            <ul>
+                <li>É uma diferença de quadrados: x² − 3²</li>
+                <li>x² − 9 = <b>(x + 3)(x − 3)</b></li>
+            </ul>
+        </div>
+
+        <div class="dica">
+            <b>✅ Dica:</b> Reconhecer produtos notáveis economiza tempo. Decore as fórmulas e pratique a identificação.
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> <b>(a + b)² ≠ a² + b²</b>! Esse é o erro mais comum em provas. Nunca esqueça o termo <b>2ab</b> do meio.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 4: Equações e Inequações do 1º Grau                   -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="4">
+        <h2>MÓDULO III – EQUAÇÕES E INEQUAÇÕES DO 1º GRAU</h2>
+
+        <h3>4.1. Equações do 1º Grau</h3>
+        <p>Forma geral: <b>ax + b = 0</b>, com a ≠ 0. A solução é x = −b/a.</p>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> Resolver 3x + 5 = 20:</p>
+            <ul>
+                <li>3x = 20 − 5 = 15</li>
+                <li>x = 15/3 = <b>5</b></li>
+            </ul>
+        </div>
+
+        <h3>4.2. Equações com Frações</h3>
+        <p>Multiplique todos os termos pelo MMC dos denominadores para eliminar as frações.</p>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> Resolver x/2 + x/3 = 10:</p>
+            <ul>
+                <li>MMC(2,3) = 6. Multiplicando tudo por 6: 3x + 2x = 60</li>
+                <li>5x = 60 → x = <b>12</b></li>
+            </ul>
+        </div>
+
+        <h3>4.3. Inequações do 1º Grau</h3>
+        <p>São resolvidas como equações, mas com <b>atenção ao sinal</b>:</p>
+        <ul>
+            <li>Ao multiplicar ou dividir por número <b>negativo</b>, o sinal da desigualdade se <b>inverte</b>.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> Resolver −2x + 4 > 10:</p>
+            <ul>
+                <li>−2x > 10 − 4 = 6</li>
+                <li>Dividindo por −2 (negativo): x < −3</li>
+            </ul>
+        </div>
+
+        <div class="dica">
+            <b>✅ Dica:</b> Sempre isole a incógnita em um dos lados da equação/inequação e simplifique passo a passo.
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> Na <b>inequação</b>, esquecer de inverter o sinal ao multiplicar/dividir por número negativo é o erro mais comum. Sempre verifique o sinal do coeficiente de x.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 5: Sistemas de Equações do 1º Grau                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="5">
+        <h2>MÓDULO IV – SISTEMAS DE EQUAÇÕES DO 1º GRAU</h2>
+
+        <h3>5.1. Conceito</h3>
+        <p>Um <b>sistema de equações do 1º grau</b> com duas variáveis possui duas equações e duas incógnitas. Forma geral:</p>
+        <ul>
+            <li>a₁x + b₁y = c₁</li>
+            <li>a₂x + b₂y = c₂</li>
+        </ul>
+
+        <h3>5.2. Métodos de Resolução</h3>
+        <ul>
+            <li><b>Substituição:</b> isolar uma variável em uma equação e substituir na outra.</li>
+            <li><b>Adição (ou eliminação):</b> somar as equações após multiplicá-las para eliminar uma variável.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo (substituição):</b> Resolver:</p>
+            <ul>
+                <li>x + y = 10</li>
+                <li>x − y = 4</li>
+            </ul>
+            <p>Somando as equações: 2x = 14 → x = 7. Substituindo: 7 + y = 10 → y = 3.</p>
+            <p>Solução: <b>(7, 3)</b></p>
+        </div>
+
+        <h3>5.3. Interpretação Gráfica</h3>
+        <p>Cada equação representa uma reta. A solução do sistema é o <b>ponto de interseção</b> das retas.</p>
+        <ul>
+            <li><b>Sistema possível e determinado:</b> retas concorrentes (uma solução).</li>
+            <li><b>Sistema possível e indeterminado:</b> retas coincidentes (infinitas soluções).</li>
+            <li><b>Sistema impossível:</b> retas paralelas (nenhuma solução).</li>
+        </ul>
+
+        <div class="dica">
+            <b>✅ Dica:</b> Em problemas de contexto (ex: "quantos carros e motos há em um estacionamento"), monte o sistema com base nos dados e resolva pelo método da <b>adição</b>, que costuma ser mais rápido.
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> Cuidado com problemas em que as unidades estão misturadas (ex: valores em reais e centavos, ou horas e minutos). Uniformize antes de montar o sistema.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 6: Equações do 2º Grau                                -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="6">
+        <h2>MÓDULO V – EQUAÇÕES DO 2º GRAU</h2>
+
+        <h3>6.1. Forma Geral</h3>
+        <p><b>ax² + bx + c = 0</b>, com a ≠ 0.</p>
+
+        <h3>6.2. Fórmula de Bhaskara</h3>
+        <p>Para resolver, use:</p>
+        <ul>
+            <li><b>Δ (delta):</b> Δ = b² − 4ac</li>
+            <li><b>Raízes:</b> x = (−b ± √Δ) / 2a</li>
+        </ul>
+
+        <h3>6.3. Análise do Discriminante (Δ)</h3>
+        <ul>
+            <li><b>Δ > 0:</b> duas raízes reais e distintas.</li>
+            <li><b>Δ = 0:</b> uma única raiz real (raiz dupla).</li>
+            <li><b>Δ < 0:</b> nenhuma raiz real.</li>
+        </ul>
+
+        <div class="exemplo">
+            <p><b>📌 Exemplo:</b> Resolver x² − 5x + 6 = 0:</p>
+            <ul>
+                <li>Δ = (−5)² − 4·1·6 = 25 − 24 = 1</li>
+                <li>x = (5 ± √1) / 2 = (5 ± 1)/2</li>
+                <li>x₁ = 6/2 = 3; x₂ = 4/2 = 2</li>
+                <li>Raízes: <b>2 e 3</b></li>
+            </ul>
+        </div>
+
+        <h3>6.4. Relações de Girard (Soma e Produto)</h3>
+        <ul>
+            <li><b>Soma das raízes:</b> S = −b/a</li>
+            <li><b>Produto das raízes:</b> P = c/a</li>
+        </ul>
+        <p>Útil quando se conhece a soma e o produto das raízes (ex: montar uma equação do 2º grau a partir das raízes).</p>
+
+        <h3>6.5. Equações Incompletas</h3>
+        <ul>
+            <li><b>b = 0:</b> ax² + c = 0 → x² = −c/a → x = ±√(−c/a)</li>
+            <li><b>c = 0:</b> ax² + bx = 0 → x(ax + b) = 0 → x = 0 ou x = −b/a</li>
+        </ul>
+
+        <div class="dica">
+            <b>✅ Dica:</b> Antes de aplicar Bhaskara, verifique se a equação é incompleta (b=0 ou c=0). Nesses casos, resolva por <b>fatoração</b> ou <b>isolamento</b>, que é mais rápido.
+        </div>
+
+        <div class="pegadinha">
+            <b>⚠️ Pegadinha:</b> Sempre identifique os coeficientes a, b e c com seus <b>sinais</b>. Um erro clássico é esquecer que "−5x" significa b = −5. Além disso, cuidado com o sinal do Δ: se b é negativo, b² é positivo.
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 7: Questões 1 a 23                                    -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="7">
+        <h2>📝 QUESTÕES (1 a 23)</h2>
+        <p><i>Questões no nível de concurso, com contexto e pegadinhas típicas.</i></p>
+
+        <div class="questao-item">
+            <p><b>Questão 1</b> – Simplificando a expressão 4x² + 3x − 2x² + 5x − 8, obtemos:</p>
+            <div class="alternativas">
+                a) 2x² + 8x − 8<br>
+                b) 2x² + 8x + 8<br>
+                c) 6x² + 8x − 8<br>
+                d) 2x² − 8x − 8<br>
+                e) 6x² + 2x − 8
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 2</b> – O grau do monômio 5x³y² é:</p>
+            <div class="alternativas">
+                a) 2<br>
+                b) 3<br>
+                c) 5<br>
+                d) 6<br>
+                e) 10
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 3</b> – Desenvolvendo (x + 7)², obtemos:</p>
+            <div class="alternativas">
+                a) x² + 49<br>
+                b) x² + 7x + 49<br>
+                c) x² + 14x + 49<br>
+                d) x² − 14x + 49<br>
+                e) x² + 14x − 49
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 4</b> – Desenvolvendo (2a − 3)², obtemos:</p>
+            <div class="alternativas">
+                a) 4a² − 9<br>
+                b) 4a² + 12a + 9<br>
+                c) 4a² − 12a + 9<br>
+                d) 4a² − 6a + 9<br>
+                e) 2a² − 12a + 9
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 5</b> – O produto (x + 8)(x − 8) é igual a:</p>
+            <div class="alternativas">
+                a) x² − 16<br>
+                b) x² + 64<br>
+                c) x² − 64<br>
+                d) x² − 8x + 64<br>
+                e) x² + 8x − 64
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 6</b> – Fatorando x² − 25, obtemos:</p>
+            <div class="alternativas">
+                a) (x − 5)²<br>
+                b) (x + 5)²<br>
+                c) (x + 5)(x − 5)<br>
+                d) (x − 25)(x + 1)<br>
+                e) x(x − 25)
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 7</b> – A forma fatorada de x² + 8x + 16 é:</p>
+            <div class="alternativas">
+                a) (x + 4)²<br>
+                b) (x − 4)²<br>
+                c) (x + 8)(x + 2)<br>
+                d) (x + 16)(x + 1)<br>
+                e) x(x + 8) + 16
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 8</b> – Resolvendo a equação 5x − 12 = 3x + 8, obtemos:</p>
+            <div class="alternativas">
+                a) x = 2<br>
+                b) x = 5<br>
+                c) x = 8<br>
+                d) x = 10<br>
+                e) x = 20
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 9</b> – A solução da equação x/3 + x/4 = 7 é:</p>
+            <div class="alternativas">
+                a) x = 6<br>
+                b) x = 8<br>
+                c) x = 12<br>
+                d) x = 14<br>
+                e) x = 21
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 10</b> – Resolvendo a inequação 3x + 5 < 20, temos:</p>
+            <div class="alternativas">
+                a) x < 5<br>
+                b) x > 5<br>
+                c) x < 15<br>
+                d) x > 15<br>
+                e) x = 5
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 11</b> – Resolvendo a inequação −4x + 8 > 24, temos:</p>
+            <div class="alternativas">
+                a) x > 4<br>
+                b) x < 4<br>
+                c) x > −4<br>
+                d) x < −4<br>
+                e) x = −4
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 12</b> – Em um estacionamento há carros e motos, totalizando 30 veículos e 90 rodas. Quantas motos há?</p>
+            <div class="alternativas">
+                a) 10<br>
+                b) 12<br>
+                c) 15<br>
+                d) 18<br>
+                e) 20
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 13</b> – Resolvendo o sistema x + y = 12 e x − y = 4, o valor de x é:</p>
+            <div class="alternativas">
+                a) 4<br>
+                b) 6<br>
+                c) 8<br>
+                d) 10<br>
+                e) 12
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 14</b> – As raízes da equação x² − 7x + 12 = 0 são:</p>
+            <div class="alternativas">
+                a) 1 e 12<br>
+                b) 2 e 6<br>
+                c) 3 e 4<br>
+                d) −3 e −4<br>
+                e) 0 e 7
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 15</b> – O valor do discriminante Δ da equação x² − 4x + 5 = 0 é:</p>
+            <div class="alternativas">
+                a) −4<br>
+                b) 0<br>
+                c) 4<br>
+                d) −16<br>
+                e) 16
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 16</b> – A equação x² − 4x + 5 = 0 possui:</p>
+            <div class="alternativas">
+                a) Duas raízes reais e distintas<br>
+                b) Uma raiz dupla<br>
+                c) Nenhuma raiz real<br>
+                d) Três raízes<br>
+                e) Infinitas raízes
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 17</b> – A soma das raízes da equação x² − 9x + 20 = 0 é:</p>
+            <div class="alternativas">
+                a) 5<br>
+                b) 9<br>
+                c) 11<br>
+                d) 20<br>
+                e) −9
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 18</b> – O produto das raízes da equação x² − 6x + 8 = 0 é:</p>
+            <div class="alternativas">
+                a) 2<br>
+                b) 4<br>
+                c) 6<br>
+                d) 8<br>
+                e) 14
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 19</b> – Resolvendo a equação x² − 16 = 0, obtemos:</p>
+            <div class="alternativas">
+                a) x = 4 apenas<br>
+                b) x = −4 apenas<br>
+                c) x = 4 ou x = −4<br>
+                d) x = 16 apenas<br>
+                e) Nenhuma solução real
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 20</b> – Resolvendo a equação x² − 5x = 0, obtemos:</p>
+            <div class="alternativas">
+                a) x = 5 apenas<br>
+                b) x = 0 apenas<br>
+                c) x = 0 ou x = 5<br>
+                d) x = −5 ou x = 5<br>
+                e) Nenhuma solução
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 21</b> – Se (x + 3)² = 49, os valores de x são:</p>
+            <div class="alternativas">
+                a) 4 e −10<br>
+                b) 4 e 10<br>
+                c) −4 e 10<br>
+                d) −4 e −10<br>
+                e) 3 e −3
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 22</b> – Fatore completamente a expressão 3x² − 12:</p>
+            <div class="alternativas">
+                a) 3(x² − 4)<br>
+                b) 3(x + 2)(x − 2)<br>
+                c) (3x + 6)(x − 2)<br>
+                d) (x + 2)(3x − 6)<br>
+                e) 3x(x − 4)
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 23</b> – Um terreno retangular tem área de 60 m² e perímetro de 34 m. Quais são as dimensões?</p>
+            <div class="alternativas">
+                a) 5 m e 12 m<br>
+                b) 6 m e 10 m<br>
+                c) 3 m e 20 m<br>
+                d) 4 m e 15 m<br>
+                e) 2 m e 30 m
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PÁGINA 8: Questões 24 a 45 + Gabarito                       -->
+    <!-- ============================================================ -->
+    <div class="page" data-page="8">
+        <h2>📝 QUESTÕES (24 a 45) – Continuação</h2>
+
+        <div class="questao-item">
+            <p><b>Questão 24</b> – Simplifique a expressão (a + b)² − (a − b)²:</p>
+            <div class="alternativas">
+                a) 2a² + 2b²<br>
+                b) 4ab<br>
+                c) 2ab<br>
+                d) 4a²<br>
+                e) 0
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 25</b> – Fatorando x³ − 8, obtemos:</p>
+            <div class="alternativas">
+                a) (x − 2)³<br>
+                b) (x − 2)(x² + 2x + 4)<br>
+                c) (x − 2)(x² − 2x + 4)<br>
+                d) (x + 2)(x² − 2x + 4)<br>
+                e) (x − 8)(x² + 8x + 64)
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 26</b> – O valor numérico da expressão 3x² − 2x + 5 para x = 2 é:</p>
+            <div class="alternativas">
+                a) 11<br>
+                b) 13<br>
+                c) 15<br>
+                d) 17<br>
+                e) 19
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 27</b> – Se 2x + 3 = 15, o valor de x é:</p>
+            <div class="alternativas">
+                a) 4<br>
+                b) 5<br>
+                c) 6<br>
+                d) 7<br>
+                e) 9
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 28</b> – Um servidor recebeu R$ 2.500,00 e aplicou parte em poupança e o restante em um fundo. Se ele aplicou R$ 800,00 a mais na poupança, quanto aplicou em cada?</p>
+            <div class="alternativas">
+                a) R$ 1.650,00 e R$ 850,00<br>
+                b) R$ 1.700,00 e R$ 800,00<br>
+                c) R$ 1.750,00 e R$ 750,00<br>
+                d) R$ 1.800,00 e R$ 700,00<br>
+                e) R$ 1.550,00 e R$ 950,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 29</b> – Se a soma de dois números é 40 e a diferença é 12, o maior deles é:</p>
+            <div class="alternativas">
+                a) 14<br>
+                b) 20<br>
+                c) 26<br>
+                d) 28<br>
+                e) 32
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 30</b> – Em uma prova com 20 questões, cada acerto vale 3 pontos e cada erro desconta 1 ponto. Se um candidato obteve 40 pontos, quantas questões ele acertou?</p>
+            <div class="alternativas">
+                a) 12<br>
+                b) 13<br>
+                c) 14<br>
+                d) 15<br>
+                e) 16
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 31</b> – A idade de um pai é o triplo da idade do filho. Se juntos têm 60 anos, qual a idade do filho?</p>
+            <div class="alternativas">
+                a) 10<br>
+                b) 12<br>
+                c) 15<br>
+                d) 18<br>
+                e) 20
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 32</b> – Resolvendo o sistema 3x + y = 15 e x − y = 1, o valor de y é:</p>
+            <div class="alternativas">
+                a) 2<br>
+                b) 3<br>
+                c) 4<br>
+                d) 5<br>
+                e) 6
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 33</b> – Se x² − 3x − 10 = 0, as raízes são:</p>
+            <div class="alternativas">
+                a) 2 e −5<br>
+                b) −2 e 5<br>
+                c) 2 e 5<br>
+                d) −2 e −5<br>
+                e) 0 e 3
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 34</b> – A equação 2x² − 8 = 0 tem como soluções:</p>
+            <div class="alternativas">
+                a) x = 2 apenas<br>
+                b) x = −2 apenas<br>
+                c) x = 2 e x = −2<br>
+                d) x = 4 e x = −4<br>
+                e) Nenhuma solução real
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 35</b> – O valor mínimo da função f(x) = x² − 6x + 5 é:</p>
+            <div class="alternativas">
+                a) −4<br>
+                b) −3<br>
+                c) 0<br>
+                d) 1<br>
+                e) 5
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 36</b> – Se x + 1/x = 4, o valor de x² + 1/x² é:</p>
+            <div class="alternativas">
+                a) 12<br>
+                b) 14<br>
+                c) 16<br>
+                d) 18<br>
+                e) 20
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 37</b> – O número real x que satisfaz a equação (x + 2)(x − 3) = 0 é:</p>
+            <div class="alternativas">
+                a) Apenas 2<br>
+                b) Apenas 3<br>
+                c) −2 ou 3<br>
+                d) 2 ou −3<br>
+                e) −2 ou −3
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 38</b> – Uma empresa tem um custo fixo de R$ 5.000,00 e um custo variável de R$ 8,00 por unidade produzida. Se cada unidade é vendida por R$ 12,00, quantas unidades devem ser vendidas para que a empresa comece a ter lucro?</p>
+            <div class="alternativas">
+                a) 1000<br>
+                b) 1100<br>
+                c) 1200<br>
+                d) 1250<br>
+                e) 1500
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 39</b> – A média aritmética das raízes da equação x² − 10x + 21 = 0 é:</p>
+            <div class="alternativas">
+                a) 3<br>
+                b) 5<br>
+                c) 7<br>
+                d) 10<br>
+                e) 21
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 40</b> – A soma dos inversos das raízes da equação 2x² − 8x + 6 = 0 é:</p>
+            <div class="alternativas">
+                a) 1/3<br>
+                b) 4/3<br>
+                c) 3/4<br>
+                d) 2<br>
+                e) 3
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 41</b> – O conjunto solução da inequação x² − 5x + 6 > 0 é:</p>
+            <div class="alternativas">
+                a) 2 < x < 3<br>
+                b) x < 2 ou x > 3<br>
+                c) x > 3<br>
+                d) x < 2<br>
+                e) 0 < x < 5
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 42</b> – Simplificando (x² − 9)/(x − 3) para x ≠ 3, obtemos:</p>
+            <div class="alternativas">
+                a) x − 3<br>
+                b) x + 3<br>
+                c) x² + 3<br>
+                d) x/3<br>
+                e) 3x
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 43</b> – Se um número somado ao seu quadrado resulta em 20, esse número pode ser:</p>
+            <div class="alternativas">
+                a) 4 ou −5<br>
+                b) 2 ou −10<br>
+                c) 5 ou −4<br>
+                d) 10 ou −2<br>
+                e) 20 ou −1
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 44</b> – Um servidor gasta 1/3 do salário com aluguel e 1/4 com alimentação. Se ainda lhe restam R$ 1.000,00, qual é o salário?</p>
+            <div class="alternativas">
+                a) R$ 2.000,00<br>
+                b) R$ 2.200,00<br>
+                c) R$ 2.400,00<br>
+                d) R$ 2.500,00<br>
+                e) R$ 3.000,00
+            </div>
+        </div>
+
+        <div class="questao-item">
+            <p><b>Questão 45</b> – O valor de k para que a equação x² − 6x + k = 0 tenha duas raízes reais e distintas é:</p>
+            <div class="alternativas">
+                a) k = 9<br>
+                b) k > 9<br>
+                c) k < 9<br>
+                d) k = 0<br>
+                e) k < 0
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ GABARITO OFICIAL</h2>
+        <div class="gabarito-box">
+            <p><b>1-A</b> | <b>2-C</b> | <b>3-C</b> | <b>4-C</b> | <b>5-C</b> | <b>6-C</b> | <b>7-A</b> | <b>8-D</b> | <b>9-C</b> | <b>10-A</b></p>
+            <p><b>11-D</b> | <b>12-C</b> | <b>13-C</b> | <b>14-C</b> | <b>15-A</b> | <b>16-C</b> | <b>17-B</b> | <b>18-D</b> | <b>19-C</b> | <b>20-C</b></p>
+            <p><b>21-A</b> | <b>22-B</b> | <b>23-A</b> | <b>24-B</b> | <b>25-B</b> | <b>26-B</b> | <b>27-C</b> | <b>28-A</b> | <b>29-C</b> | <b>30-D</b></p>
+            <p><b>31-C</b> | <b>32-B</b> | <b>33-B</b> | <b>34-C</b> | <b>35-A</b> | <b>36-B</b> | <b>37-C</b> | <b>38-D</b> | <b>39-B</b> | <b>40-B</b></p>
+            <p><b>41-B</b> | <b>42-B</b> | <b>43-A</b> | <b>44-C</b> | <b>45-C</b></p>
+        </div>
+
+        <div class="dica" style="margin-top:20px;">
+            <b>📚 Resoluções comentadas (amostra):</b>
+            <ul>
+                <li><b>Q1:</b> 4x² − 2x² = 2x²; 3x + 5x = 8x; −8 → 2x² + 8x − 8.</li>
+                <li><b>Q12:</b> c + m = 30; 4c + 2m = 90 → 4(30−m) + 2m = 90 → 120 − 4m + 2m = 90 → −2m = −30 → m = 15.</li>
+                <li><b>Q23:</b> 2(a+b) = 34 → a+b = 17; ab = 60 → raízes de x² − 17x + 60 = 0 → 5 e 12.</li>
+                <li><b>Q36:</b> (x + 1/x)² = x² + 2 + 1/x² = 16 → x² + 1/x² = 14.</li>
+                <li><b>Q38:</b> Lucro = 12q − (5000 + 8q) = 4q − 5000 > 0 → q > 1250 → 1250 unidades.</li>
+                <li><b>Q44:</b> 1 − 1/3 − 1/4 = 5/12; 5/12 × S = 1000 → S = 2400.</li>
+                <li><b>Q45:</b> Δ = 36 − 4k > 0 → k &lt; 9.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE NAVEGAÇÃO                                            -->
+    <!-- ============================================================ -->
+    <div class="nav-area">
+        <button class="nav-btn secondary" id="prevBtn" onclick="changePage(-1)">⬅ Voltar</button>
+
+        <a href="index.html" style="text-decoration:none;">
+            <button class="nav-btn menu-btn">🏠 Menu</button>
+        </a>
+
+        <span class="page-indicator" id="pageIndicator">Página 1 de 8</span>
+        <button class="nav-btn" id="nextBtn" onclick="changePage(1)">Avançar ➡</button>
+    </div>
+    <div class="footer-note">
+        📖 Material para concursos – Navegue pelas páginas usando os botões.
+    </div>
+</div>
+
+<script>
+    (function() {
+        const pages = document.querySelectorAll('.page');
+        let current = 0;
+        const total = pages.length;
+
+        function updatePage() {
+            pages.forEach((p, i) => {
+                p.classList.toggle('active', i === current);
+            });
+            document.getElementById('pageIndicator').textContent = `Página ${current+1} de ${total}`;
+            document.getElementById('prevBtn').disabled = (current === 0);
+            document.getElementById('nextBtn').disabled = (current === total - 1);
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        window.changePage = function(delta) {
+            const newIndex = current + delta;
+            if (newIndex >= 0 && newIndex < total) {
+                current = newIndex;
+                updatePage();
+            }
+        };
+
+        updatePage();
+    })();
+</script>
+
+</body>
+</html>

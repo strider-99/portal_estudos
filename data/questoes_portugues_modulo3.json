@@ -1,362 +1,42 @@
 [
-  {
-    "enunciado": "Na palavra 'infelizmente', a sequência dos elementos mórficos é:",
-    "alternativas": [
-      "a) Prefixo + radical + vogal temática + sufixo",
-      "b) Radical + sufixo + prefixo",
-      "c) Prefixo + radical + sufixo",
-      "d) Radical + desinência + sufixo",
-      "e) Prefixo + vogal temática + radical"
-    ],
-    "gabarito": "C",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "A palavra 'planalto' é formada pelo processo de:",
-    "alternativas": [
-      "a) Derivação prefixal",
-      "b) Derivação sufixal",
-      "c) Composição por justaposição",
-      "d) Composição por aglutinação",
-      "e) Onomatopeia"
-    ],
-    "gabarito": "D",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "A palavra 'felicidade' pertence à classe dos:",
-    "alternativas": [
-      "a) Adjetivos",
-      "b) Substantivos",
-      "c) Verbos",
-      "d) Advérbios",
-      "e) Pronomes"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "A derivação que ocorre quando uma palavra muda de classe gramatical sem alteração de forma é chamada de:",
-    "alternativas": [
-      "a) Derivação prefixal",
-      "b) Derivação sufixal",
-      "c) Derivação parassintética",
-      "d) Derivação regressiva",
-      "e) Derivação imprópria"
-    ],
-    "gabarito": "E",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "A flexão verbal indica, entre outros aspectos:",
-    "alternativas": [
-      "a) Gênero e número",
-      "b) Número, pessoa, tempo e modo",
-      "c) Grau e número",
-      "d) Gênero e grau",
-      "e) Apenas o modo"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "O radical da palavra 'pedreiro' é:",
-    "alternativas": [
-      "a) pedr-",
-      "b) pedre-",
-      "c) -eiro",
-      "d) pedr-eiro",
-      "e) pedr- + -eiro"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "A palavra 'muito' pode ser classificada como:",
-    "alternativas": [
-      "a) Substantivo",
-      "b) Advérbio",
-      "c) Adjetivo",
-      "d) Pronome indefinido",
-      "e) Todas as anteriores, dependendo do contexto"
-    ],
-    "gabarito": "E",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "A palavra 'desleal' é formada por:",
-    "alternativas": [
-      "a) Derivação sufixal",
-      "b) Derivação prefixal",
-      "c) Derivação parassintética",
-      "d) Composição por justaposição",
-      "e) Composição por aglutinação"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "A palavra 'meninos' apresenta as seguintes desinências:",
-    "alternativas": [
-      "a) '-o' (masculino) e '-s' (plural)",
-      "b) '-a' (feminino) e '-s' (plural)",
-      "c) '-o' (masculino) e '-os' (plural)",
-      "d) '-a' (feminino) e '-as' (plural)",
-      "e) '-ino' e '-os'"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "A palavra 'porque' (causal) pertence à classe das:",
-    "alternativas": [
-      "a) Preposições",
-      "b) Conjunções",
-      "c) Advérbios",
-      "d) Pronomes",
-      "e) Substantivos"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "'Girassol' é um exemplo de:",
-    "alternativas": [
-      "a) Derivação sufixal",
-      "b) Derivação prefixal",
-      "c) Composição por justaposição",
-      "d) Composição por aglutinação",
-      "e) Hibridismo"
-    ],
-    "gabarito": "C",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "No verbo 'cantávamos', a desinência 'mos' indica:",
-    "alternativas": [
-      "a) 1ª pessoa do plural",
-      "b) 3ª pessoa do plural",
-      "c) 2ª pessoa do singular",
-      "d) 3ª pessoa do singular",
-      "e) 1ª pessoa do singular"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "A palavra 'ou' é uma conjunção:",
-    "alternativas": [
-      "a) Aditiva",
-      "b) Adversativa",
-      "c) Alternativa",
-      "d) Conclusiva",
-      "e) Explicativa"
-    ],
-    "gabarito": "C",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "Analise as afirmativas sobre estrutura de palavras e assinale a sequência correta: ( ) Radical é a parte da palavra que contém seu significado básico. ( ) A vogal temática do verbo 'partir' é 'e'. ( ) Prefixos são elementos colocados depois do radical. ( ) As desinências nominais indicam gênero e número.",
-    "alternativas": [
-      "a) V – F – F – V",
-      "b) F – V – F – V",
-      "c) V – V – F – F",
-      "d) F – F – V – V",
-      "e) V – F – V – F"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "Analise as afirmativas sobre formação de palavras e assinale a sequência correta: ( ) A derivação parassintética ocorre quando se adiciona prefixo e sufixo simultaneamente. ( ) A onomatopeia é um processo de composição. ( ) A composição por aglutinação ocorre quando os radicais se juntam sem alteração. ( ) O hibridismo é a formação de palavras com elementos de línguas diferentes.",
-    "alternativas": [
-      "a) V – F – F – V",
-      "b) F – V – V – F",
-      "c) V – V – F – F",
-      "d) F – F – V – V",
-      "e) V – F – V – F"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "Assinale a alternativa em que a palavra sublinhada é um pronome:",
-    "alternativas": [
-      "a) Ele chegou tarde",
-      "b) Feliz aniversário",
-      "c) Dois livros foram lidos",
-      "d) Correndo, ele chegou",
-      "e) Muito obrigado"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "A palavra 'ameaça' (substantivo derivado do verbo ameaçar) é formada por:",
-    "alternativas": [
-      "a) Derivação prefixal",
-      "b) Derivação sufixal",
-      "c) Derivação regressiva",
-      "d) Derivação parassintética",
-      "e) Composição por aglutinação"
-    ],
-    "gabarito": "C",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "A flexão de grau do adjetivo 'alto' em 'altíssimo' é um exemplo de superlativo:",
-    "alternativas": [
-      "a) Relativo",
-      "b) Absoluto sintético",
-      "c) Absoluto analítico",
-      "d) Relativo de inferioridade",
-      "e) Relativo de superioridade"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "'Excelência' em 'Vossa Excelência' é um pronome de tratamento, mas originalmente é um:",
-    "alternativas": [
-      "a) Substantivo",
-      "b) Adjetivo",
-      "c) Verbo",
-      "d) Advérbio",
-      "e) Conjunção"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "Analise as afirmativas sobre classes de palavras e assinale a sequência correta: ( ) A interjeição expressa emoções. ( ) A preposição liga dois termos e é variável. ( ) O artigo define ou indefere o substantivo. ( ) O numeral indica quantidade, ordem, fração ou multiplicação.",
-    "alternativas": [
-      "a) V – F – V – V",
-      "b) F – V – F – V",
-      "c) V – V – F – F",
-      "d) F – F – V – V",
-      "e) V – F – F – V"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "Na palavra 'desagradável', os elementos 'des-' e '-ável' são, respectivamente:",
-    "alternativas": [
-      "a) Prefixo e sufixo",
-      "b) Sufixo e prefixo",
-      "c) Radical e desinência",
-      "d) Vogal temática e radical",
-      "e) Ambos são prefixos"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "A palavra 'cidadão' e 'cidadania' são, respectivamente:",
-    "alternativas": [
-      "a) Primitiva e derivada",
-      "b) Derivada e primitiva",
-      "c) Ambas primitivas",
-      "d) Ambas derivadas",
-      "e) Não há relação entre elas"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "Assinale a alternativa com o verbo corretamente flexionado no pretérito perfeito:",
-    "alternativas": [
-      "a) Ele cantou",
-      "b) Ele cantava",
-      "c) Ele cantará",
-      "d) Ele cante",
-      "e) Ele cantasse"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "Analise as afirmativas sobre morfologia e assinale a sequência correta: ( ) A derivação imprópria ocorre quando a palavra muda de classe gramatical. ( ) Os advérbios são palavras invariáveis. ( ) A conjugação verbal é composta por radical, vogal temática e desinências. ( ) A palavra 'cardume' é um substantivo concreto.",
-    "alternativas": [
-      "a) V – V – V – V",
-      "b) V – F – V – F",
-      "c) F – V – F – V",
-      "d) V – V – F – F",
-      "e) F – F – V – V"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "A vogal temática do verbo 'estudar' é:",
-    "alternativas": [
-      "a) A",
-      "b) E",
-      "c) I",
-      "d) O",
-      "e) U"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "O tema da palavra 'amávamos' é:",
-    "alternativas": [
-      "a) am-",
-      "b) amá-",
-      "c) amava-",
-      "d) am- + -a-",
-      "e) -vamos"
-    ],
-    "gabarito": "B",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "A palavra 'giz' é um exemplo de:",
-    "alternativas": [
-      "a) Substantivo concreto",
-      "b) Substantivo abstrato",
-      "c) Adjetivo",
-      "d) Advérbio",
-      "e) Interjeição"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "O sufixo '-mente' é utilizado para formar:",
-    "alternativas": [
-      "a) Substantivos",
-      "b) Adjetivos",
-      "c) Advérbios",
-      "d) Verbos",
-      "e) Pronomes"
-    ],
-    "gabarito": "C",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "A palavra 'livro' e 'livreto' são, respectivamente:",
-    "alternativas": [
-      "a) Primitiva e derivada",
-      "b) Derivada e primitiva",
-      "c) Ambas primitivas",
-      "d) Ambas derivadas",
-      "e) Não há relação entre elas"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo3"
-  },
-  {
-    "enunciado": "A desinência nominal '-a' em 'casa' indica:",
-    "alternativas": [
-      "a) Gênero feminino",
-      "b) Gênero masculino",
-      "c) Número plural",
-      "d) Grau aumentativo",
-      "e) Grau diminutivo"
-    ],
-    "gabarito": "A",
-    "slug_materia": "apostila_portugues_modulo3"
-  }
+  {"enunciado":"No trecho 'O amar faz bem', a palavra destacada pertence originalmente à classe dos verbos, mas funciona como substantivo. Esse processo denomina-se:","alternativas":["a) Derivação parassintética","b) Derivação regressiva","c) Derivação imprópria","d) Composição por aglutinação"],"gabarito":"C","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"O verbo 'pôr' e seus derivados (como 'compor' e 'repor') pertencem à segunda conjugação verbal.","alternativas":["a) CERTO","b) ERRADO"],"gabarito":"A","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"Assinale a alternativa que apresenta um substantivo COMPOSTO:","alternativas":["a) Limoeiro","b) Girassol","c) Pedreiro","d) Dentista"],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"Dos substantivos abaixo, aquele que deve ser classificado, quanto ao gênero, como SOBRECOMUM, é:","alternativas":["a) artista","b) vítima","c) pianista","d) cliente"],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"A concordância do adjetivo destacado atende às exigências da norma-padrão em:","alternativas":["a) Roupas azuis-marinhas foram compradas.","b) As candidatas usavam blusas rosa-claras.","c) As alunas usavam saias azul-marinho e sapatos pretos.","d) Foram adquiridos tecidos azuis-celestes."],"gabarito":"C","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"Assinale a leitura correta dos numerais nas expressões 'Artigo 9.º' e 'Artigo 12':","alternativas":["a) Artigo nono e Artigo décimo segundo.","b) Artigo nove e Artigo doze.","c) Artigo nono e Artigo doze.","d) Artigo nove e Artigo décimo segundo."],"gabarito":"C","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"Sobre colocação pronominal, assinale a sequência correta (C=Certo, I=Incorreto): ( ) Alguém me disse. ( ) Dir-te-ei toda a verdade. ( ) Aqui, se estuda muito. ( ) Sentei-me para aguardar.","alternativas":["a) C – C – I – C","b) C – C – C – C","c) I – C – C – I","d) C – I – C – I"],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"A substituição do termo destacado pelo pronome entre parênteses está INCORRETA em:","alternativas":["a) impregna a vida cotidiana / impregna-a","b) entender os debates / entendê-los","c) supõe um conhecimento / supõe-lo","d) marcaram sua história / marcaram-na"],"gabarito":"C","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"A concordância das palavras destacadas atende à norma-padrão em:","alternativas":["a) As candidatas ficaram meias nervosas.","b) Havia bastantes motivos para comemorar.","c) Os guardas permaneceram alertas.","d) Elas saíram só do recinto."],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"Em 'Pense rápido: qual o número de telefone da sua casa?', o verbo destacado encontra-se flexionado no modo:","alternativas":["a) Indicativo","b) Subjuntivo","c) Imperativo","d) Infinitivo"],"gabarito":"C","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"No trecho 'perde-se o dinheiro e o amigo', a conversão para a voz passiva analítica correspondente no presente é:","alternativas":["a) O dinheiro e o amigo são perdidos.","b) Perderia-se o dinheiro e o amigo.","c) Tinha-se perdido o dinheiro e o amigo.","d) O dinheiro e o amigo perdeu-se."],"gabarito":"A","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"Assinale a alternativa que apresenta um verbo no Pretérito Imperfeito do Indicativo:","alternativas":["a) Ele falou tudo na reunião.","b) Ele falava muito quando era criança.","c) Ele falara com o diretor antes do evento.","d) Se ele falasse, todos ouviriam."],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"'Aos poucos, contudo, fui chegando à constatação de que o concurso exige dedicação.' O elemento destacado pode ser substituído, mantendo-se a correção e o sentido, por:","alternativas":["a) ademais","b) conquanto","c) porquanto","d) entretanto"],"gabarito":"D","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"Na frase 'falei muito, pois não gosto do silêncio', a palavra POIS classifica-se como:","alternativas":["a) Conjunção Coordenativa Adversativa","b) Conjunção Coordenativa Explicativa","c) Conjunção Subordinativa Causal","d) Conjunção Coordenativa Conclusiva"],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"Em 'O médico atendeu os pacientes COM dedicação e combateu a doença POR meio de novos remédios', as preposições destacadas indicam, respectivamente:","alternativas":["a) causa e instrumento","b) modo e meio","c) companhia e lugar","d) finalidade e causa"],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 1) Dos substantivos abaixo, aquele que deve ser classificado, quanto ao gênero, como SOBRECOMUM, é:","alternativas":["a) artista","b) vítima","c) pianista","d) cliente"],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 2) No trecho 'Sentimentos que precisam ficar escondidos muitas vezes...', a palavra QUE é classificada morfologicamente como:","alternativas":["a) Pronome relativo","b) Pronome demonstrativo","c) Conjunção integrante","d) Conjunção adverbial"],"gabarito":"A","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 3) Assinale a alternativa em que a palavra destacada pertence à classe dos ADJETIVOS:","alternativas":["a) Existe grande confusão.","b) causa ativamente a melhora.","c) Prolonga o processo com paciência.","d) E como seria a verdadeira boa morte?"],"gabarito":"D","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 4) Na frase 'quebrou o cabo da enxada / o navio contornou o cabo', a palavra CABO apresenta múltiplos significados dentro do mesmo contexto cultural. Esse fenômeno denomina-se:","alternativas":["a) Antonímia","b) Homonímia","c) Polissemia","d) Sinonímia"],"gabarito":"C","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 5) A concordância do adjetivo destacado atende às exigências da norma-padrão em:","alternativas":["a) Plantas da caatinga e frutos pouco conhecidos foram elogiados.","b) Alimentos saudáveis e prática constante são necessárias.","c) Notícias falsas e boatos não deveriam ser reproduzidas.","d) Pesquisas e profissionais precisam ser estimuladas."],"gabarito":"A","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 6) 'Atentados contra cristãos matam 44 no Egito e país decreta emergência.' As duas orações mantêm entre si uma relação lógica de:","alternativas":["a) causa e consequência","b) informação e comprovação","c) fato e exemplificação","d) tese e argumentação"],"gabarito":"A","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 7) A frase em que o uso do acento indicativo de crase está EMPREGADO CORRETAMENTE é:","alternativas":["a) O médico referiu-se à vontade de cuidar dos pacientes.","b) Chegaram à sofrer com dores intensas.","c) Voltar à episódios do passado.","d) Dedicado à determinadas pessoas."],"gabarito":"A","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 8) Assinale a opção que apresenta um substantivo cujo plural se faz da MESMA forma de 'couve-flor' (flexionando os dois elementos):","alternativas":["a) Guarda-roupa","b) Amor-perfeito","c) Alto-falante","d) Água-de-colônia"],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 9) As palavras 'metálica', 'acúmulo' e 'imóveis' são acentuadas graficamente pela mesma regra de acentuação.","alternativas":["a) CERTO","b) ERRADO"],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 10) Na frase 'Não se sabe por que o candidato faltou', o termo 'por que' foi escrito separado e sem acento porque:","alternativas":["a) Está no final da frase.","b) Equivale a 'por qual razão' em uma interrogação indireta.","c) Funciona como substantivo antecedido de artigo.","d) É uma conjunção explicativa equivalente a pois."],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 11) 'Precisamos de um treinador que nos ajude...' O verbo flexionado nos mesmos tempo e modo do sublinhado está em:","alternativas":["a) ...assim que conseguissem se virar...","b) ...mesmo que se esforcem muito...","c) ...país que transformou a infância...","d) Hoje há algo novo no cenário..."],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 12) Assinale a opção em que a palavra 'bastante' funciona como ADVÉRBIO (invariável):","alternativas":["a) Havia bastantes candidatos na sala.","b) Os servidores trabalharam bastante durante a semana.","c) Ele fez bastantes elogios ao relatório.","d) Compramos bastantes livros novos."],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 13) Assinale a opção em que a colocação pronominal atende à norma-padrão:","alternativas":["a) Não se esqueça de estudar a matéria.","b) Me disseram que a prova foi adiada.","c) O aluno entregou o teste e retirou-se sem falar nada.","d) Apenas A e C estão corretas."],"gabarito":"D","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 14) 'Guardar uma coisa não é escondê-la...' O pronome 'la' assume essa forma porque:","alternativas":["a) O verbo termina em som nasal.","b) O verbo no infinitivo perdeu a consoante final 'r'.","c) O pronome é do caso reto.","d) É um caso obrigatório de mesóclise."],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 15) Na frase 'Ele é um mau funcionário, mas foi bem na prova', as palavras 'mau' e 'bem' são antônimos de, respectivamente:","alternativas":["a) mal / mau","b) bom / mal","c) ruim / péssimo","d) bom / ruim"],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 16) Assinale a alternativa que apresenta a flexão de plural correta do adjetivo composto 'surdo-mudo':","alternativas":["a) Crianças surdo-mudas","b) Crianças surdas-mudas","c) Crianças surdo-mudos","d) Crianças surdas-mudo"],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 17) No período 'Embora estivesse cansado, o candidato continuou estudando', a conjunção EMBORA estabelece relação de:","alternativas":["a) Causa","b) Condição","c) Concessão","d) Conformidade"],"gabarito":"C","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 18) A palavra 'cânon' faz o plural 'cânones', e a palavra 'caráter' faz o plural 'caracteres'.","alternativas":["a) CERTO","b) ERRADO"],"gabarito":"A","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 19) O plural do substantivo diminutivo 'pãozinho' é:","alternativas":["a) Pãozinhos","b) Pãesinhos","c) Pãezinhos","d) Pãezinhos-s"],"gabarito":"C","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 20) 'O passeio ocorreu como havíamos planejado.' A conjunção COMO possui valor semântico de:","alternativas":["a) Causa","b) Comparação","c) Conformidade","d) Consequência"],"gabarito":"C","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 21) Assinale a alternativa em que a palavra MEIO funciona como ADJETIVO:","alternativas":["a) A porta estava meio aberta.","b) Pedi meia porção de batatas.","c) Ela ficou meio chocada com a notícia.","d) Os alunos estavam meio cansados."],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 22) Na frase 'Comprei camisas azul-marinho e vestidos cor-de-rosa', as formas adjetivas estão:","alternativas":["a) Incorretas, pois deveriam ser azuis-marinho e cores-de-rosa.","b) Corretas, pois ambas as expressões adjetivas de cor são invariáveis.","c) Incorretas, pois apenas o último elemento deveria flexionar.","d) Incorretas, pois azul-marinho varia para azuis-marinhas."],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 23) O verbo da oração 'Ocorreram vários acidentes na rodovia' está no plural porque concorda com o sujeito 'vários acidentes'.","alternativas":["a) CERTO","b) ERRADO"],"gabarito":"A","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 24) Na leitura do Decreto Municipal, a referência ao 'Artigo 1.º' e ao 'Artigo 15' deve ser feita como:","alternativas":["a) Artigo um e Artigo décimo quinto.","b) Artigo primeiro e Artigo quinze.","c) Artigo primeiro e Artigo décimo quinto.","d) Artigo um e Artigo quinze."],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"},
+  {"enunciado":"(Simulado 25) Assinale a frase em que o pronome relativo ONDE está empregado de acordo com a norma culta:","alternativas":["a) Foi uma reunião onde discutimos vários problemas.","b) Visitei a cidade onde meus avós nasceram.","c) Um projeto onde todos participaram ativamente.","d) A tese onde o autor defende a educação pública."],"gabarito":"B","slug_materia":"apostila_portugues_modulo3"}
 ]

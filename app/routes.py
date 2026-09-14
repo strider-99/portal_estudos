@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, abort, request, redirect, url_for, flash, jsonify, current_app
 from flask_login import login_user, logout_user, login_required, current_user
 from werkzeug.utils import secure_filename
-from .models import get_materias, get_materia_by_slug, get_areas, User, get_questoes_por_materia, salvar_tentativa, get_progresso_map
+from .models import get_materias, get_materia_by_slug, get_areas, User, get_questoes_por_materia, salvar_tentativa, get_progresso_map, reset_progresso_usuario, get_questoes_para_revisar, get_revisao_por_materia
 from . import mongo
 import re
 import json
@@ -33,6 +33,7 @@ def health():
 
 # ---------- Páginas públicas ----------
 @bp.route("/")
+@login_required
 def index():
     try:
         materias = list(mongo.db.materias.find())
@@ -59,6 +60,7 @@ def index():
     return render_template("index.html", materias_por_area=materias_por_area, progresso_map=progresso_map)
 
 @bp.route("/materia/<slug>")
+@login_required
 def materia(slug):
     try:
         materia = mongo.db.materias.find_one({"slug": slug})
@@ -173,6 +175,22 @@ def dashboard():
     # Materias estudadas detalhadas
     materias_estudadas = [m for m in materias if m["slug"] in concluidas_slugs]
 
+    # Questões erradas para revisão
+    revisao = get_questoes_para_revisar(current_user.get_id(), limit=50)
+    for r in revisao:
+        r["titulo_materia"] = slug_to_titulo.get(r["slug_materia"], r["slug_materia"])
+
+    # Revisão agrupada por matéria
+    revisao_por_materia = get_revisao_por_materia(current_user.get_id())
+    revisao_links = []
+    for slug, questoes in revisao_por_materia.items():
+        revisao_links.append({
+            "slug": slug,
+            "titulo": slug_to_titulo.get(slug, slug),
+            "qtd_erros": len(questoes),
+        })
+    revisao_links.sort(key=lambda x: x["qtd_erros"], reverse=True)
+
     return render_template("dashboard.html",
                            total_materias=total_materias,
                            qtd_concluidas=qtd_concluidas,
@@ -180,6 +198,7 @@ def dashboard():
                            progresso_por_area=progresso_por_area,
                            historico=historico,
                            materias_estudadas=materias_estudadas,
+                           revisao_links=revisao_links,
                            progresso_map={p["slug_materia"]: p for p in progresso_list})
 
 # ---------- Progresso API ----------
@@ -192,6 +211,28 @@ def toggle_progresso(slug):
     from .models import toggle_progresso as tp
     concluida = tp(current_user.get_id(), slug)
     return jsonify({"slug": slug, "concluida": concluida})
+
+@bp.route("/api/progresso/reset", methods=["POST"])
+@login_required
+def reset_progresso():
+    """Apaga todo o progresso + histórico do usuário logado."""
+    try:
+        resultado = reset_progresso_usuario(current_user.get_id())
+        return jsonify({"ok": True, **resultado})
+    except Exception as e:
+        current_app.logger.error(f"Erro ao resetar progresso: {e}")
+        return jsonify({"erro": "Falha ao resetar progresso"}), 500
+
+# ---------- Revisão por matéria ----------
+@bp.route("/revisao/<slug>")
+@login_required
+def revisao_materia(slug):
+    """Página com as questões erradas de uma matéria específica."""
+    materia = mongo.db.materias.find_one({"slug": slug})
+    if not materia:
+        abort(404)
+    questoes_erradas = get_questoes_para_revisar(current_user.get_id(), slug_materia=slug, limit=100)
+    return render_template("revisao.html", materia=materia, questoes_erradas=questoes_erradas)
 
 @bp.route("/api/questoes/responder", methods=["POST"])
 @login_required
@@ -220,15 +261,8 @@ def responder_questoes():
 
 # ---------- Importar Questões ----------
 @bp.route("/importar_questoes", methods=["POST"])
-@login_required
+@admin_required
 def importar_questoes():
-    if not getattr(current_user, "is_admin", False):
-        # retorna JSON se for AJAX, senão flash
-        if request.is_json or request.headers.get("Accept") == "application/json":
-            return jsonify({"erro": "Acesso restrito a administradores"}), 403
-        flash("Acesso restrito a administradores.", "danger")
-        return redirect(url_for("main.index"))
-
     # Aceita upload de arquivo ou JSON raw
     questoes_data = None
     erros = []

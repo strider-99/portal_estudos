@@ -38,6 +38,9 @@ MAPEAMENTO_AREA = {
     "portugues_modulo5": "portugues",
     "portugues_modulo6": "portugues",
     "matematica_modulo1": "matematica",
+    "matematica_modulo2": "matematica",
+    "matematica_modulo3": "matematica",
+    "matematica_modulo4": "matematica",
     "sus_cf": "sus",
     "sus_lei8080": "sus",
     "sus_humanizasus": "sus",
@@ -68,12 +71,13 @@ def extrair_dados(arquivo_path):
     subtitulo_tag = soup.find('p', style=lambda v: v and 'font-size:18px' in v) or soup.find('p', class_='subtitle')
     subtitulo = subtitulo_tag.get_text(strip=True) if subtitulo_tag else ""
 
-    # Páginas (APENAS CONTEÚDO TEÓRICO) - remove páginas 7 e 8 com questões estáticas
+    # Páginas (APENAS CONTEÚDO TEÓRICO) - remove apenas simulado final (questões estáticas sem comentário)
+    # Mantém questões comentadas inline (ex: Módulos com "Questões Comentadas" + <div class="comentario">)
     paginas = []
     for page_div in soup.find_all('div', class_='page'):
         html_str = str(page_div)
-        # Filtra apenas páginas que realmente contêm questões (marcadas por questao-item)
-        if 'questao-item' in html_str:
+        if 'questao-item' in html_str and 'comentario' not in html_str:
+            # página de simulado puro (7-8) -> remover, será substituída por questões dinâmicas
             continue
         html_interno = str(page_div.decode_contents())
         paginas.append(html_interno)
